@@ -1,1 +1,126 @@
-IiIiU2hhcmVkIGhlbHBlcnMgZm9yIENMSS1iYXNlZCBhZGFwdGVycyAoVDQpLgoKQWxsIENMSSBhZGFwdGVycyBydW4gdmlhIGBgYXN5bmNpby5jcmVhdGVfc3VicHJvY2Vzc19leGVjYGAgKG5vIHNoZWxsKSwKd2l0aCBgYGN3ZGBgL2BgdGltZW91dGBgIHRha2VuIGZyb20gYGBjdHhgYC4KIiIiCgpmcm9tIF9fZnV0dXJlX18gaW1wb3J0IGFubm90YXRpb25zCgppbXBvcnQgYXN5bmNpbwppbXBvcnQganNvbgppbXBvcnQgc2h1dGlsCmltcG9ydCBzdWJwcm9jZXNzCgpmcm9tIC5iYXNlIGltcG9ydCBBZGFwdGVyRXJyb3IsIFJlcGx5CgpfVEVYVF9GSUVMRFMgPSAoInRleHQiLCAib3V0cHV0IiwgInJlc3VsdCIsICJyZXNwb25zZSIsICJjb250ZW50IikKCgpkZWYgX2V4dHJhY3RfdGV4dChyYXc6IHN0cikgLT4gc3RyOgogICAgIiIiUHVsbCB0aGUgcmVwbHkgdGV4dCBvdXQgb2YgcmF3IHN0ZG91dC4KCiAgICBUcmllcyBKU09OIGZpcnN0IChmaWVsZHMgYGB0ZXh0YGAvYGBvdXRwdXRgYC9gYHJlc3VsdGBgL2BgcmVzcG9uc2VgYC8KICAgIGBgY29udGVudGBgLCBpbmNsdWRpbmcgbmVzdGVkIGBgeyJyZXN1bHQiOiB7Li4ufX1gYCksIGZhbGxzIGJhY2sgdG8KICAgIHRoZSByYXcgc3RyaW5nLgogICAgIiIiCiAgICByYXcgPSByYXcuc3RyaXAoKQogICAgaWYgbm90IHJhdzoKICAgICAgICByZXR1cm4gIiIKICAgIHRyeToKICAgICAgICBkYXRhID0ganNvbi5sb2FkcyhyYXcpCiAgICBleGNlcHQgKFZhbHVlRXJyb3IsIFR5cGVFcnJvcik6CiAgICAgICAgcmV0dXJuIHJhdwogICAgaWYgaXNpbnN0YW5jZShkYXRhLCBzdHIpOgogICAgICAgIHJldHVybiBkYXRhCiAgICBpZiBpc2luc3RhbmNlKGRhdGEsIGRpY3QpOgogICAgICAgIGZvciBrZXkgaW4gX1RFWFRfRklFTERTOgogICAgICAgICAgICB2YWx1ZSA9IGRhdGEuZ2V0KGtleSkKICAgICAgICAgICAgaWYgaXNpbnN0YW5jZSh2YWx1ZSwgc3RyKSBhbmQgdmFsdWUuc3RyaXAoKToKICAgICAgICAgICAgICAgIHJldHVybiB2YWx1ZQogICAgICAgICAgICBpZiBpc2luc3RhbmNlKHZhbHVlLCBkaWN0KToKICAgICAgICAgICAgICAgIGZvciBzdWIgaW4gX1RFWFRfRklFTERTOgogICAgICAgICAgICAgICAgICAgIGlubmVyID0gdmFsdWUuZ2V0KHN1YikKICAgICAgICAgICAgICAgICAgICBpZiBpc2luc3RhbmNlKGlubmVyLCBzdHIpIGFuZCBpbm5lci5zdHJpcCgpOgogICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gaW5uZXIKICAgICAgICAjIFNvbWUgQ0xJcyBlbWl0IHsidHlwZSI6ICJyZXN1bHQiLCAicmVzdWx0IjogIi4uLiJ9IGV0Yy4KICAgICAgICBmb3IgdmFsdWUgaW4gZGF0YS52YWx1ZXMoKToKICAgICAgICAgICAgaWYgaXNpbnN0YW5jZSh2YWx1ZSwgc3RyKSBhbmQgdmFsdWUuc3RyaXAoKToKICAgICAgICAgICAgICAgIHJldHVybiB2YWx1ZQogICAgcmV0dXJuIHJhdwoKCmFzeW5jIGRlZiBydW5fY2xpKG5hbWU6IHN0ciwgZmFtaWx5OiBzdHIsIGNtZDogbGlzdFtzdHJdLAogICAgICAgICAgICAgICAgICBjdHg6IGRpY3QgfCBOb25lKSAtPiBSZXBseToKICAgICIiIlJ1biBhIENMSSBjb21tYW5kIGFuZCByZXR1cm4gaXRzIFJlcGx5LiBSYWlzZXMgQWRhcHRlckVycm9yLgoKICAgIEF1ZGl0IHB1dGFyYW4gMiAoTjgpOiBhZ2VuIENMSSBkaWphbGFua2FuIGRpIHdvcmt0cmVlL3NhbmRib3gg4oCUCiAgICBgYGN3ZGBgIGRpYW1iaWwgZGFyaSBgYGN0eFsiY3dkIl1gYCBhdGF1IGBgY3R4WyJ3b3JrdHJlZSJdYGAKICAgIChwaXBlbGluZSBtZW5naXNpIGtlZHVhbnlhIGRlbmdhbiB3b3JrdHJlZSBydW4pLiBgYGN3ZGBgIGVrc3BsaXNpdAogICAgRElUT0xBSyBiaWxhIHNhbWEgZGVuZ2FuIEhPTUUgLyBsZWx1aHVybnlhLCBhdGF1IGJpbGEgYmVyaXNpIERCCiAgICBhcHByb3ZhbCB1dGFtYSAoYGBydW5zL2FwcHJvdmFscy5kYmBgKTogYWdlbiBkZW5nYW4gc2hlbGwgZGkgcmVwbwogICAgdXRhbWEgdGlkYWsgYm9sZWggbWVuY2FwYWkgREIgYXBwcm92YWwgYXRhdSBtZW5qYWxhbmthbgogICAgYGBtdWZha2F0IGFwcHJvdmVgYCBkYXJpIHNhbmEuIFRhbnBhIGBgY3dkYGAvYGB3b3JrdHJlZWBgIGRpIGN0eCwKICAgIHBlcmlsYWt1IGxhbWEgZGlwZXJ0YWhhbmthbiAobWV3YXJpc2kgY3dkIHByb3NlcyBwZW1hbmdnaWwpLgogICAgIiIiCiAgICBjdHggPSBjdHggb3Ige30KICAgIGN3ZCA9IGN0eC5nZXQoImN3ZCIpIG9yIGN0eC5nZXQoIndvcmt0cmVlIikKICAgIGlmIGN3ZDoKICAgICAgICBmcm9tIHBhdGhsaWIgaW1wb3J0IFBhdGggYXMgX1BhdGgKCiAgICAgICAgcmVzb2x2ZWQgPSBfUGF0aChjd2QpLnJlc29sdmUoKQogICAgICAgIGhvbWUgPSBfUGF0aC5ob21lKCkucmVzb2x2ZSgpCiAgICAgICAgaWYgcmVzb2x2ZWQgPT0gaG9tZSBvciByZXNvbHZlZCBpbiBob21lLnBhcmVudHM6CiAgICAgICAgICAgIHJhaXNlIEFkYXB0ZXJFcnJvcigKICAgICAgICAgICAgICAgIGYie25hbWV9OiBjd2QgdGlkYWsgYm9sZWggSE9NRSBhdGF1IGxlbHVodXJueWE6IHtjd2R9IikKICAgICAgICBpZiAocmVzb2x2ZWQgLyAicnVucyIgLyAiYXBwcm92YWxzLmRiIikuaXNfZmlsZSgpOgogICAgICAgICAgICByYWlzZSBBZGFwdGVyRXJyb3IoCiAgICAgICAgICAgICAgICBmIntuYW1lfTogY3dkIGJlcmlzaSBEQiBhcHByb3ZhbCB1dGFtYSAiCiAgICAgICAgICAgICAgICBmIih7cmVzb2x2ZWQgLyAncnVucycgLyAnYXBwcm92YWxzLmRiJ30pIOKAlCBqYWxhbmthbiBhZ2VuICIKICAgICAgICAgICAgICAgICJDTEkgZGkgd29ya3RyZWUvc2FuZGJveCwgYnVrYW4gZGkgcmVwbyB1dGFtYS4iKQogICAgdGltZW91dCA9IGZsb2F0KGN0eC5nZXQoInRpbWVvdXQiLCAzMDApKQogICAgdHJ5OgogICAgICAgIHByb2MgPSBhd2FpdCBhc3luY2lvLmNyZWF0ZV9zdWJwcm9jZXNzX2V4ZWMoCiAgICAgICAgICAgICpjbWQsCiAgICAgICAgICAgIHN0ZGluPWFzeW5jaW8uc3VicHJvY2Vzcy5ERVZOVUxMLAogICAgICAgICAgICBzdGRvdXQ9YXN5bmNpby5zdWJwcm9jZXNzLlBJUEUsCiAgICAgICAgICAgIHN0ZGVycj1hc3luY2lvLnN1YnByb2Nlc3MuUElQRSwKICAgICAgICAgICAgY3dkPWN3ZCwKICAgICAgICApCiAgICBleGNlcHQgRmlsZU5vdEZvdW5kRXJyb3IgYXMgZXhjOgogICAgICAgIHJhaXNlIEFkYXB0ZXJFcnJvcihmIntuYW1lfTogYmluYXJ5IG5vdCBmb3VuZDoge2NtZFswXX0iKSBmcm9tIGV4YwogICAgZXhjZXB0IE9TRXJyb3IgYXMgZXhjOgogICAgICAgIHJhaXNlIEFkYXB0ZXJFcnJvcihmIntuYW1lfTogZmFpbGVkIHRvIHN0YXJ0OiB7ZXhjfSIpIGZyb20gZXhjCgogICAgdHJ5OgogICAgICAgIG91dCwgZXJyID0gYXdhaXQgYXN5bmNpby53YWl0X2Zvcihwcm9jLmNvbW11bmljYXRlKCksIHRpbWVvdXQ9dGltZW91dCkKICAgIGV4Y2VwdCBhc3luY2lvLlRpbWVvdXRFcnJvciBhcyBleGM6CiAgICAgICAgcHJvYy5raWxsKCkKICAgICAgICBhd2FpdCBwcm9jLndhaXQoKQogICAgICAgIHJhaXNlIEFkYXB0ZXJFcnJvcihmIntuYW1lfTogdGltZWQgb3V0IGFmdGVyIHt0aW1lb3V0fXMiKSBmcm9tIGV4YwoKICAgIHN0ZG91dCA9IG91dC5kZWNvZGUoInV0Zi04IiwgZXJyb3JzPSJyZXBsYWNlIikKICAgIHN0ZGVyciA9IGVyci5kZWNvZGUoInV0Zi04IiwgZXJyb3JzPSJyZXBsYWNlIikKICAgIGlmIHByb2MucmV0dXJuY29kZSAhPSAwOgogICAgICAgIHJhaXNlIEFkYXB0ZXJFcnJvcigKICAgICAgICAgICAgZiJ7bmFtZX06IGV4aXQge3Byb2MucmV0dXJuY29kZX06IHtzdGRlcnIuc3RyaXAoKVs6NTAwXX0iKQogICAgdGV4dCA9IF9leHRyYWN0X3RleHQoc3Rkb3V0KQogICAgcmV0dXJuIFJlcGx5KHRleHQ9dGV4dCwgdXNhZ2U9eyJ0b2tlbnNfaW4iOiAwLCAidG9rZW5zX291dCI6IDAsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgImNvc3RfdXNkIjogMC4wfSwKICAgICAgICAgICAgICAgICBwcm92aWRlcj1uYW1lLCBmYW1pbHk9ZmFtaWx5LCByYXc9c3Rkb3V0KQoKCmRlZiBjaGVja19iaW5hcnkoYmluYXJ5OiBzdHIsIHByb2JlOiBsaXN0W3N0cl0gfCBOb25lID0gTm9uZSwKICAgICAgICAgICAgICAgICB0aW1lb3V0OiBpbnQgPSA1KSAtPiBib29sOgogICAgIiIiUmV0dXJuIFRydWUgaWZmICpiaW5hcnkqIGlzIG9uIFBBVEggYW5kIChpZiAqcHJvYmUqIGdpdmVuKSB0aGUKICAgIHByb2JlIGNvbW1hbmQgZXhpdHMgMCB3aXRoaW4gKnRpbWVvdXQqIHNlY29uZHMuIE5ldmVyIHJhaXNlcy4iIiIKICAgIHRyeToKICAgICAgICBpZiBzaHV0aWwud2hpY2goYmluYXJ5KSBpcyBOb25lOgogICAgICAgICAgICByZXR1cm4gRmFsc2UKICAgICAgICBpZiBwcm9iZSBpcyBOb25lOgogICAgICAgICAgICByZXR1cm4gVHJ1ZQogICAgICAgIHJlc3VsdCA9IHN1YnByb2Nlc3MucnVuKAogICAgICAgICAgICBwcm9iZSwgY2FwdHVyZV9vdXRwdXQ9VHJ1ZSwgdGltZW91dD10aW1lb3V0LAogICAgICAgICAgICBzdGRpbj1zdWJwcm9jZXNzLkRFVk5VTEwpCiAgICAgICAgcmV0dXJuIHJlc3VsdC5yZXR1cm5jb2RlID09IDAKICAgIGV4Y2VwdCBFeGNlcHRpb246CiAgICAgICAgcmV0dXJuIEZhbHNlCg==
+"""Shared helpers for CLI-based adapters (T4).
+
+All CLI adapters run via ``asyncio.create_subprocess_exec`` (no shell),
+with ``cwd``/``timeout`` taken from ``ctx``.
+"""
+
+from __future__ import annotations
+
+import asyncio
+import json
+import shutil
+import subprocess
+
+from .base import AdapterError, Reply
+
+_TEXT_FIELDS = ("text", "output", "result", "response", "content")
+
+
+def _extract_text(raw: str) -> str:
+    """Pull the reply text out of raw stdout.
+
+    Tries JSON first (fields ``text``/``output``/``result``/``response``/
+    ``content``, including nested ``{"result": {...}}``), falls back to
+    the raw string.
+    """
+    raw = raw.strip()
+    if not raw:
+        return ""
+    try:
+        data = json.loads(raw)
+    except (ValueError, TypeError):
+        return raw
+    if isinstance(data, str):
+        return data
+    if isinstance(data, dict):
+        for key in _TEXT_FIELDS:
+            value = data.get(key)
+            if isinstance(value, str) and value.strip():
+                return value
+            if isinstance(value, dict):
+                for sub in _TEXT_FIELDS:
+                    inner = value.get(sub)
+                    if isinstance(inner, str) and inner.strip():
+                        return inner
+        # Some CLIs emit {"type": "result", "result": "..."} etc.
+        for value in data.values():
+            if isinstance(value, str) and value.strip():
+                return value
+    return raw
+
+
+async def run_cli(name: str, family: str, cmd: list[str],
+                  ctx: dict | None) -> Reply:
+    """Run a CLI command and return its Reply. Raises AdapterError.
+
+    Audit putaran 2 (N8): agen CLI dijalankan di worktree/sandbox —
+    ``cwd`` diambil dari ``ctx["cwd"]`` atau ``ctx["worktree"]``
+    (pipeline mengisi keduanya dengan worktree run). ``cwd`` eksplisit
+    DITOLAK bila sama dengan HOME / leluhurnya, atau bila berisi DB
+    approval utama (``runs/approvals.db``): agen dengan shell di repo
+    utama tidak boleh mencapai DB approval atau menjalankan
+    ``mufakat approve`` dari sana. Tanpa ``cwd``/``worktree`` di ctx,
+    perilaku lama dipertahankan (mewarisi cwd proses pemanggil).
+    """
+    ctx = ctx or {}
+    cwd = ctx.get("cwd") or ctx.get("worktree")
+    if cwd:
+        from pathlib import Path as _Path
+
+        resolved = _Path(cwd).resolve()
+        home = _Path.home().resolve()
+        if resolved == home or resolved in home.parents:
+            raise AdapterError(
+                f"{name}: cwd tidak boleh HOME atau leluhurnya: {cwd}")
+        if (resolved / "runs" / "approvals.db").is_file():
+            raise AdapterError(
+                f"{name}: cwd berisi DB approval utama "
+                f"({resolved / 'runs' / 'approvals.db'}) — jalankan agen "
+                "CLI di worktree/sandbox, bukan di repo utama.")
+    timeout = float(ctx.get("timeout", 300))
+    try:
+        proc = await asyncio.create_subprocess_exec(
+            *cmd,
+            stdin=asyncio.subprocess.DEVNULL,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE,
+            cwd=cwd,
+        )
+    except FileNotFoundError as exc:
+        raise AdapterError(f"{name}: binary not found: {cmd[0]}") from exc
+    except OSError as exc:
+        raise AdapterError(f"{name}: failed to start: {exc}") from exc
+
+    try:
+        out, err = await asyncio.wait_for(proc.communicate(), timeout=timeout)
+    except asyncio.TimeoutError as exc:
+        proc.kill()
+        await proc.wait()
+        raise AdapterError(f"{name}: timed out after {timeout}s") from exc
+
+    stdout = out.decode("utf-8", errors="replace")
+    stderr = err.decode("utf-8", errors="replace")
+    if proc.returncode != 0:
+        raise AdapterError(
+            f"{name}: exit {proc.returncode}: {stderr.strip()[:500]}")
+    text = _extract_text(stdout)
+    return Reply(text=text, usage={"tokens_in": 0, "tokens_out": 0,
+                                   "cost_usd": 0.0},
+                 provider=name, family=family, raw=stdout)
+
+
+def check_binary(binary: str, probe: list[str] | None = None,
+                 timeout: int = 5) -> bool:
+    """Return True iff *binary* is on PATH and (if *probe* given) the
+    probe command exits 0 within *timeout* seconds. Never raises."""
+    try:
+        if shutil.which(binary) is None:
+            return False
+        if probe is None:
+            return True
+        result = subprocess.run(
+            probe, capture_output=True, timeout=timeout,
+            stdin=subprocess.DEVNULL)
+        return result.returncode == 0
+    except Exception:
+        return False
