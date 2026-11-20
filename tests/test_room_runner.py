@@ -1,1 +1,66 @@
-IiIiVGVzdCBMb2NhbCBSdW5uZXIgZGFyaSBzdWl0ZSB1dGFtYSAocGFrZXQgbXVmYWthdF9ydW5uZXIgZGkgbXVmYWthdC1yb29tL3J1bm5lcikuCgpSdW5uZXIgZGl1amkgbGV3YXQgc3lzLnBhdGggYWdhciB0ZXRhcCBiaXNhIGphbGFuIHRhbnBhIGluc3RhbGFzaSB0ZXJwaXNhaC4KUGVyaW50YWggaG9zdCBiZXJiYXNpcyBgYHJ1bl9pZGBgIChhdWRpdCBDMiksIGJ1a2FuIHBhdGggYmViYXMuCiIiIgoKaW1wb3J0IHN5cwpmcm9tIHBhdGhsaWIgaW1wb3J0IFBhdGgKCnN5cy5wYXRoLmluc2VydCgwLCBzdHIoUGF0aChfX2ZpbGVfXykucmVzb2x2ZSgpLnBhcmVudC5wYXJlbnQgLyAibXVmYWthdC1yb29tIiAvICJydW5uZXIiKSkKCmltcG9ydCBweXRlc3QgICMgbm9xYTogRTQwMgpmcm9tIG11ZmFrYXRfcnVubmVyIGltcG9ydCBob3N0IGFzIGhvc3RfbW9kICAjIG5vcWE6IEU0MDIKZnJvbSBtdWZha2F0X3J1bm5lciBpbXBvcnQgd29ya3RyZWUgYXMgd29ya3RyZWVfbW9kICAjIG5vcWE6IEU0MDIKCgpkZWYgX3NldHVwX2hvc3QodG1wX3BhdGgsIG1vbmtleXBhdGNoKToKICAgICIiIkhvc3QgKyByZXBvIHRlcmRhZnRhciAoQzIsIE4zKTogcmVnaXN0cmFzaSBIQU5ZQSBsZXdhdCByZWdpc3RyeQogICAgKHNldGFyYSBDTEkgbG9rYWwgYG11ZmFrYXQtcm9vbS1ydW5uZXIgcmVnaXN0ZXJgKSDigJQgcGVyaW50YWgKICAgIG5hdGl2ZSBtZXNzYWdpbmcgYHJlZ2lzdGVyX3JlcG9gIHN1ZGFoIGRpaGFwdXMuIiIiCiAgICBmcm9tIG11ZmFrYXRfcnVubmVyIGltcG9ydCByZWdpc3RyeSBhcyByZWdpc3RyeV9tb2QKCiAgICBtb25rZXlwYXRjaC5zZXRlbnYoIk1VRkFLQVRfUlVOTkVSX1JFR0lTVFJZIiwKICAgICAgICAgICAgICAgICAgICAgICBzdHIodG1wX3BhdGggLyAicnVubmVyLmpzb24iKSkKICAgIHJlcG8gPSB0bXBfcGF0aCAvICJyZXBvIgogICAgcmVwby5ta2RpcihleGlzdF9vaz1UcnVlKQogICAgYXNzZXJ0IHJlZ2lzdHJ5X21vZC5yZWdpc3Rlcl9yZXBvKCJyIiwgc3RyKHJlcG8pKVsibmFtZSJdID09ICJyIgogICAgaG9zdCA9IGhvc3RfbW9kLlJ1bm5lckhvc3QoKQogICAgYXNzZXJ0IGhvc3QuaGFuZGxlX2NvbW1hbmQoCiAgICAgICAgeyJjb21tYW5kIjogImluaXRfd29ya3NwYWNlIiwgInJlcG8iOiAiciIsICJydW5faWQiOiAicjEifQogICAgKVsib2siXSBpcyBUcnVlCiAgICByZXR1cm4gaG9zdCwgcmVwbwoKCmRlZiB0ZXN0X3J1bm5lcl9wYXRoX3RyYXZlcnNhbF9kaXRvbGFrKCk6CiAgICBmb3IgYmFkIGluICgiLi4vLi4vZXRjL3Bhc3N3ZCIsICIvZXRjL3Bhc3N3ZCIsICIuLiIpOgogICAgICAgIHdpdGggcHl0ZXN0LnJhaXNlcyhWYWx1ZUVycm9yKToKICAgICAgICAgICAgd29ya3RyZWVfbW9kLnZhbGlkYXRlX3JlbF9wYXRoKGJhZCkKCgpkZWYgdGVzdF9ydW5uZXJfY29tbWl0X3RhbnBhX3Rva2VuX2RpdG9sYWsodG1wX3BhdGgsIG1vbmtleXBhdGNoKToKICAgIGhvc3QsIF9yZXBvID0gX3NldHVwX2hvc3QodG1wX3BhdGgsIG1vbmtleXBhdGNoKQogICAgcmVzdWx0ID0gaG9zdC5oYW5kbGVfY29tbWFuZCgKICAgICAgICB7ImNvbW1hbmQiOiAiY29tbWl0IiwgInJ1bl9pZCI6ICJyMSIsICJtZXNzYWdlIjogIngifQogICAgKQogICAgYXNzZXJ0IHJlc3VsdFsib2siXSBpcyBGYWxzZQoKCmRlZiB0ZXN0X3J1bm5lcl9zdGF0dXNfbW9kZV9tYW51YWwoKToKICAgIHJlc3VsdCA9IGhvc3RfbW9kLmhhbmRsZV9jb21tYW5kKHsiY29tbWFuZCI6ICJzdGF0dXMifSkKICAgIGFzc2VydCByZXN1bHRbIm9rIl0gaXMgVHJ1ZQogICAgYXNzZXJ0IHJlc3VsdFsibW9kZSJdID09ICJtYW51YWxfaGFuZG9mZiIKCgpkZWYgdGVzdF9ydW5uZXJfcGF0aF9iZWJhc19kaXRvbGFrKHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICAiIiJDMjogcGVyaW50YWggZGVuZ2FuIHBhdGggYmViYXMgKGJ1a2FuIHJ1bl9pZCkgZGl0b2xhay4iIiIKICAgIGhvc3QsIF9yZXBvID0gX3NldHVwX2hvc3QodG1wX3BhdGgsIG1vbmtleXBhdGNoKQogICAgdmljdGltID0gdG1wX3BhdGggLyAidmljdGltIgogICAgdmljdGltLm1rZGlyKCkKICAgIGFzc2VydCBob3N0LmhhbmRsZV9jb21tYW5kKAogICAgICAgIHsiY29tbWFuZCI6ICJhcHBseV9maWxlcyIsICJ3b3JrdHJlZSI6IHN0cih2aWN0aW0pLCAiZmlsZXMiOiBbXX0KICAgIClbIm9rIl0gaXMgRmFsc2UKICAgIGFzc2VydCBob3N0LmhhbmRsZV9jb21tYW5kKAogICAgICAgIHsiY29tbWFuZCI6ICJjbGVhbnVwIiwgIndvcmt0cmVlIjogc3RyKHZpY3RpbSl9CiAgICApWyJvayJdIGlzIEZhbHNlCiAgICBhc3NlcnQgdmljdGltLmV4aXN0cygpCg==
+"""Test Local Runner dari suite utama (paket mufakat_runner di mufakat-room/runner).
+
+Runner diuji lewat sys.path agar tetap bisa jalan tanpa instalasi terpisah.
+Perintah host berbasis ``run_id`` (audit C2), bukan path bebas.
+"""
+
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "mufakat-room" / "runner"))
+
+import pytest  # noqa: E402
+from mufakat_runner import host as host_mod  # noqa: E402
+from mufakat_runner import worktree as worktree_mod  # noqa: E402
+
+
+def _setup_host(tmp_path, monkeypatch):
+    """Host + repo terdaftar (C2, N3): registrasi HANYA lewat registry
+    (setara CLI lokal `mufakat-room-runner register`) — perintah
+    native messaging `register_repo` sudah dihapus."""
+    from mufakat_runner import registry as registry_mod
+
+    monkeypatch.setenv("MUFAKAT_RUNNER_REGISTRY",
+                       str(tmp_path / "runner.json"))
+    repo = tmp_path / "repo"
+    repo.mkdir(exist_ok=True)
+    assert registry_mod.register_repo("r", str(repo))["name"] == "r"
+    host = host_mod.RunnerHost()
+    assert host.handle_command(
+        {"command": "init_workspace", "repo": "r", "run_id": "r1"}
+    )["ok"] is True
+    return host, repo
+
+
+def test_runner_path_traversal_ditolak():
+    for bad in ("../../etc/passwd", "/etc/passwd", ".."):
+        with pytest.raises(ValueError):
+            worktree_mod.validate_rel_path(bad)
+
+
+def test_runner_commit_tanpa_token_ditolak(tmp_path, monkeypatch):
+    host, _repo = _setup_host(tmp_path, monkeypatch)
+    result = host.handle_command(
+        {"command": "commit", "run_id": "r1", "message": "x"}
+    )
+    assert result["ok"] is False
+
+
+def test_runner_status_mode_manual():
+    result = host_mod.handle_command({"command": "status"})
+    assert result["ok"] is True
+    assert result["mode"] == "manual_handoff"
+
+
+def test_runner_path_bebas_ditolak(tmp_path, monkeypatch):
+    """C2: perintah dengan path bebas (bukan run_id) ditolak."""
+    host, _repo = _setup_host(tmp_path, monkeypatch)
+    victim = tmp_path / "victim"
+    victim.mkdir()
+    assert host.handle_command(
+        {"command": "apply_files", "worktree": str(victim), "files": []}
+    )["ok"] is False
+    assert host.handle_command(
+        {"command": "cleanup", "worktree": str(victim)}
+    )["ok"] is False
+    assert victim.exists()
