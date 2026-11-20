@@ -1,0 +1,53 @@
+# MUFAKAT — konfigurasi provider (API + CLI).
+# env_key adalah NAMA variabel lingkungan, bukan nilai kuncinya.
+
+adapters:
+  deepseek:
+    kind: api
+    base_url: "https://api.deepseek.com/v1"
+    model: "deepseek-chat"
+    env_key: "DEEPSEEK_API_KEY"
+    max_cost_usd: 1.0
+  openrouter_free:
+    kind: api
+    base_url: "https://openrouter.ai/api/v1"
+    model: "openrouter/free"
+    env_key: "OPENROUTER_API_KEY"
+    max_cost_usd: 0.0
+    rpm: 20
+    rpd: 50
+  groq:
+    kind: api
+    base_url: "https://api.groq.com/openai/v1"
+    model: "llama-3.3-70b-versatile"
+    env_key: "GROQ_API_KEY"
+    max_cost_usd: 1.0
+  gemini_api:
+    kind: api
+    base_url: "https://generativelanguage.googleapis.com/v1beta/openai"
+    model: "gemini-2.0-flash"
+    env_key: "GEMINI_API_KEY"
+    max_cost_usd: 1.0
+  meta_api:
+    kind: api
+    base_url: "https://api.meta.ai/v1"
+    model: "llama-4-maverick"
+    env_key: "META_API_KEY"
+    max_cost_usd: 1.0
+
+cli:
+  codex:
+    kind: cli
+    command: "codex"
+  copilot:
+    kind: cli
+    command: "copilot"
+  antigravity:
+    kind: cli
+    command: "antigravity"
+  claude:
+    kind: cli
+    command: "claude"
+  opencode:
+    kind: cli
+    command: "opencode"
