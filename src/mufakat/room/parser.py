@@ -36,7 +36,16 @@ ALLOWED_PHASES = {
     "rebuttal",
 }
 
-_JSON_BLOCK_RE = re.compile(r"```(?:json)?\s*\n(.*?)```", re.DOTALL | re.IGNORECASE)
+VALID_DECISIONS = ("approve", "revise", "reject")
+
+# Satu fence: ``` + bahasa opsional + isi + ``` penutup. Bahasa ditangkap
+# agar fence ```python / ```bash / bare fence sesudah blok json tidak
+# salah diambil sebagai blok JSON (dulu regex lama mengambil fence
+# polos apa pun sebagai kandidat JSON terakhir).
+_FENCE_RE = re.compile(
+    r"```[ \t]*([A-Za-z0-9_+\-]*)[ \t]*(?:\n| )?(.*?)```",
+    re.DOTALL,
+)
 
 
 @dataclass(frozen=True)
@@ -49,10 +58,31 @@ class ParseResult:
     repair_attempted: bool = False
 
 
+def _fenced_blocks(text: str) -> list[tuple[str, str]]:
+    """Semua fence ```` ``` ```` sebagai (bahasa, isi); bahasa dinormalisasi kecil."""
+    blocks: list[tuple[str, str]] = []
+    for match in _FENCE_RE.finditer(text or ""):
+        lang = (match.group(1) or "").strip().lower()
+        content = match.group(2) or ""
+        blocks.append((lang, content.strip()))
+    return blocks
+
+
 def extract_last_json_block(text: str) -> str | None:
-    """Ambil isi blok ```json TERAKHIR dari ``text`` (None bila tak ada)."""
-    matches = _JSON_BLOCK_RE.findall(text or "")
-    return matches[-1].strip() if matches else None
+    """Ambil isi blok ```json TERAKHIR dari ``text`` (None bila tak ada).
+
+    Prioritas: blok berlabel ``json`` terakhir; bila tidak ada, blok
+    fence polos (tanpa bahasa) terakhir. Fence berlabel lain
+    (``python``, ``bash``, ...) tidak pernah dianggap blok JSON.
+    Mendukung blok satu baris (`` ```json {...} ``` ``) dan spasi
+    sesudah fence (`` ``` json ``) yang dulu gagal dikenali.
+    """
+    blocks = _fenced_blocks(text or "")
+    json_blocks = [content for lang, content in blocks if lang == "json"]
+    if json_blocks:
+        return json_blocks[-1]
+    bare_blocks = [content for lang, content in blocks if lang == ""]
+    return bare_blocks[-1] if bare_blocks else None
 
 
 def _validate(payload: object) -> str:
@@ -67,6 +97,22 @@ def _validate(payload: object) -> str:
         return "summary harus string."
     if summary is not None and len(summary) > 1200:
         return "summary lebih dari 1200 karakter."
+    vote = payload.get("vote")
+    if vote is not None:
+        if not isinstance(vote, dict):
+            return "vote harus object."
+        decision = vote.get("decision")
+        if decision is not None and decision not in VALID_DECISIONS:
+            return f"vote.decision tidak dikenal: {decision!r}."
+        ranking = vote.get("ranking")
+        if ranking is not None and (
+            not isinstance(ranking, list)
+            or any(not isinstance(c, str) for c in ranking)
+        ):
+            return "vote.ranking harus list string."
+    critiques = payload.get("critiques")
+    if critiques is not None and not isinstance(critiques, list):
+        return "critiques harus list."
     return ""
 
 
@@ -77,6 +123,18 @@ def parse_reply(text: str, repair_attempted: bool = False) -> ParseResult:
         return ParseResult(
             status="unparsed",
             error="Tidak ada blok ```json dalam jawaban.",
+            repair_attempted=repair_attempted,
+        )
+    if not block:
+        if repair_attempted:
+            return ParseResult(
+                status="unparsed",
+                error="Blok ```json kosong dan repair sudah dipakai 1x.",
+                repair_attempted=True,
+            )
+        return ParseResult(
+            status="repair_needed",
+            error="Blok ```json kosong.",
             repair_attempted=repair_attempted,
         )
     try:
