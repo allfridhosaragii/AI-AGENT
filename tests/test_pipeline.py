@@ -1,1 +1,85 @@
-IiIiVGVzdCBwaXBlbGluZSBueWF0YSBNVUZBS0FUOiBjb2RlIC0+IHJldmlldyAtPiBhdWRpdCAtPiB0ZXN0LgoKU2F0dSBydW4gbW9jayBlbmQtdG8tZW5kIGhhcnVzIG1lbnVsaXMsIGJ1a2FuIGhhbnlhIHRla3MgcmluZ2thc2FuOgotIHdvcmt0cmVlL21haW4ucHkgKyB3b3JrdHJlZS90ZXN0X21haW4ucHkgKGtvZGUgbnlhdGEpLAotIGRpZmYvaXRlci0wMS5wYXRjaCAodW5pZmllZCBkaWZmKSwKLSBnYXRlcy88dG9vbD4uanNvbiB1bnR1ayB0aWFwIGdhdGUgKyBnYXRlcy92ZXJkaWN0Lmpzb24sCi0gc3RhdHVzLmpzb24gZGVuZ2FuIHZlcmRpY3QgQU1BTiB1bnR1ayB0ZW1wbGF0ZSB5YW5nIGJlcnNpaC4KIiIiCgpmcm9tIF9fZnV0dXJlX18gaW1wb3J0IGFubm90YXRpb25zCgppbXBvcnQgYXN5bmNpbwppbXBvcnQganNvbgoKZnJvbSBtdWZha2F0LmdyYXBoLm5vZGVzLmNvZGUgaW1wb3J0IG5vZGUgYXMgY29kZV9ub2RlX2ZuCmZyb20gbXVmYWthdC5ncmFwaC5ub2Rlcy5yZXZpZXcgaW1wb3J0IG5vZGUgYXMgcmV2aWV3X25vZGVfZm4KZnJvbSBtdWZha2F0LmdyYXBoLm5vZGVzLnJldmlzZSBpbXBvcnQgbm9kZSBhcyByZXZpc2Vfbm9kZV9mbgpmcm9tIG11ZmFrYXQuZ3JhcGguc3RhdGUgaW1wb3J0IFJ1blN0YXRlCmZyb20gbXVmYWthdC5ydW5uZXIgaW1wb3J0IGNyZWF0ZV9ydW4sIHJlYWRfcnVuCgoKZGVmIHRlc3RfY29kZV9ub2RlX21lbnVsaXNfZmlsZV9ueWF0YSh0bXBfcGF0aCk6CiAgICB3b3JrdHJlZSA9IHRtcF9wYXRoIC8gInd0IgogICAgc3RhdGUgPSBSdW5TdGF0ZShydW5faWQ9InQxIiwgaWRlYT0iQnVhdCBSRVNUIEFQSSB0b2RvIGRlbmdhbiBGYXN0QVBJIikKICAgIHBhdGNoID0gYXN5bmNpby5ydW4oY29kZV9ub2RlX2ZuKHN0YXRlLCBhZGFwdGVycz17fSwgY3R4PXsid29ya3RyZWUiOiBzdHIod29ya3RyZWUpfSkpCiAgICBhc3NlcnQgKHdvcmt0cmVlIC8gIm1haW4ucHkiKS5pc19maWxlKCkKICAgIGFzc2VydCAod29ya3RyZWUgLyAidGVzdF9tYWluLnB5IikuaXNfZmlsZSgpCiAgICBhc3NlcnQgIkZhc3RBUEkiIGluICh3b3JrdHJlZSAvICJtYWluLnB5IikucmVhZF90ZXh0KGVuY29kaW5nPSJ1dGYtOCIpCiAgICBhc3NlcnQgcGF0Y2hbImRpZmZfaGFzaCJdCiAgICBhc3NlcnQgcGF0Y2hbInBoYXNlIl0gPT0gInJldmlldyIKCgpkZWYgdGVzdF9yZXZpZXdfbm9kZV90YW5wYV9ibG9ja2luZyh0bXBfcGF0aCk6CiAgICB3b3JrdHJlZSA9IHRtcF9wYXRoIC8gInd0IgogICAgd29ya3RyZWUubWtkaXIoKQogICAgKHdvcmt0cmVlIC8gIm1haW4ucHkiKS53cml0ZV90ZXh0KCJ4ID0gMVxuIiwgZW5jb2Rpbmc9InV0Zi04IikKICAgIHN0YXRlID0gUnVuU3RhdGUocnVuX2lkPSJ0MSIsIGlkZWE9ImlkZSIpCiAgICBwYXRjaCA9IGFzeW5jaW8ucnVuKHJldmlld19ub2RlX2ZuKHN0YXRlLCBhZGFwdGVycz17fSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGN0eD17Indvcmt0cmVlIjogc3RyKHdvcmt0cmVlKX0pKQogICAgYXNzZXJ0IHBhdGNoWyJwaGFzZSJdID09ICJhdWRpdCIKICAgIGFzc2VydCBub3QgW2YgZm9yIGYgaW4gcGF0Y2hbImZpbmRpbmdzIl0gaWYgZi5nZXQoInNldmVyaXR5IikgPT0gImJsb2NraW5nIl0KCgpkZWYgdGVzdF9yZXZpc2Vfbm9kZV90YW5wYV90ZW11YW5fc2VsZXNhaSgpOgogICAgc3RhdGUgPSBSdW5TdGF0ZShydW5faWQ9InQxIiwgaWRlYT0iaWRlIiwgZmluZGluZ3M9W10pCiAgICBwYXRjaCA9IGFzeW5jaW8ucnVuKHJldmlzZV9ub2RlX2ZuKHN0YXRlLCBhZGFwdGVycz17fSwgY3R4PXt9KSkKICAgIGFzc2VydCBwYXRjaFsic3RhdHVzIl0gPT0gImRvbmUiCiAgICBhc3NlcnQgcGF0Y2hbImFwcHJvdmVkX2NvbW1pdCJdIGlzIFRydWUKCgpkZWYgdGVzdF9jcmVhdGVfcnVuX21lbnVsaXNfZGlmZl9kYW5fZ2F0ZXModG1wX3BhdGgsIG1vbmtleXBhdGNoKToKICAgIG1vbmtleXBhdGNoLmNoZGlyKHRtcF9wYXRoKQogICAgcmVzdWx0ID0gY3JlYXRlX3J1bigiQnVhdCBSRVNUIEFQSSB0b2RvIGRlbmdhbiBGYXN0QVBJICsgdGVzdCArIGF1ZGl0IiwKICAgICAgICAgICAgICAgICAgICAgICAgb3V0cHV0PSJydW5zIikKICAgIHJ1bl9kaXIgPSB0bXBfcGF0aCAvICJydW5zIiAvIHJlc3VsdFsicnVuX2lkIl0KICAgIGFzc2VydCAocnVuX2RpciAvICJ3b3JrdHJlZSIgLyAibWFpbi5weSIpLmlzX2ZpbGUoKQogICAgYXNzZXJ0IChydW5fZGlyIC8gIndvcmt0cmVlIiAvICJ0ZXN0X21haW4ucHkiKS5pc19maWxlKCkKICAgIHBhdGNoID0gcnVuX2RpciAvICJkaWZmIiAvICJpdGVyLTAxLnBhdGNoIgogICAgYXNzZXJ0IHBhdGNoLmlzX2ZpbGUoKQogICAgYXNzZXJ0ICJtYWluLnB5IiBpbiBwYXRjaC5yZWFkX3RleHQoZW5jb2Rpbmc9InV0Zi04IikKICAgIHZlcmRpY3RfcGF0aCA9IHJ1bl9kaXIgLyAiZ2F0ZXMiIC8gInZlcmRpY3QuanNvbiIKICAgIGFzc2VydCB2ZXJkaWN0X3BhdGguaXNfZmlsZSgpCiAgICB2ZXJkaWN0ID0ganNvbi5sb2Fkcyh2ZXJkaWN0X3BhdGgucmVhZF90ZXh0KGVuY29kaW5nPSJ1dGYtOCIpKQogICAgIyBUYW5wYSBEb2NrZXIgZ2F0ZSBnYWdhbC10ZXJ0dXR1cCAtPiBCRUxVTV9URVJWRVJJRklLQVNJIChDMS9IMyk7CiAgICAjIGRlbmdhbiBEb2NrZXIsIHRlbXBsYXRlIGJlcnNpaCAtPiBBTUFOLgogICAgIyBONzogZGV0ZWtzaSBkYXJpIGRhZW1vbitpbWFnZSwgQlVLQU4gYmluYXJ5IChDTEkgdGFucGEgZGFlbW9uCiAgICAjIHlhbmcgaGlkdXAgZHVsdSBzYWxhaCBtYXN1ayBjYWJhbmcgIkRvY2tlciBhZGEiIGxhbHUgZ2FnYWwpLgogICAgZnJvbSBtdWZha2F0LnNhbmRib3guZG9ja2VyIGltcG9ydCBkb2NrZXJfYXZhaWxhYmxlCgogICAgaWYgbm90IGRvY2tlcl9hdmFpbGFibGUoKToKICAgICAgICBhc3NlcnQgdmVyZGljdFsic3RhdHVzIl0gPT0gIkJFTFVNX1RFUlZFUklGSUtBU0kiCiAgICBlbHNlOiAgIyBwcmFnbWE6IG5vIGNvdmVyIC0gRG9ja2VyIGFkYSBkaSBob3N0IGluaQogICAgICAgIGFzc2VydCB2ZXJkaWN0WyJzdGF0dXMiXSA9PSAiQU1BTiIKICAgIGZvciB0b29sIGluICgic2VtZ3JlcCIsICJiYW5kaXQiLCAiZ2l0bGVha3MiLCAicHl0ZXN0IiwgImxpbnQiKToKICAgICAgICBnYXRlX2ZpbGUgPSBydW5fZGlyIC8gImdhdGVzIiAvIGYie3Rvb2x9Lmpzb24iCiAgICAgICAgYXNzZXJ0IGdhdGVfZmlsZS5pc19maWxlKCksIHRvb2wKICAgICAgICByZWNvcmQgPSBqc29uLmxvYWRzKGdhdGVfZmlsZS5yZWFkX3RleHQoZW5jb2Rpbmc9InV0Zi04IikpCiAgICAgICAgaWYgbm90IGRvY2tlcl9hdmFpbGFibGUoKToKICAgICAgICAgICAgYXNzZXJ0IHJlY29yZFsicGFzc2VkIl0gaXMgRmFsc2UsIHRvb2wKICAgICAgICBlbHNlOiAgIyBwcmFnbWE6IG5vIGNvdmVyIC0gRG9ja2VyIGFkYSBkaSBob3N0IGluaQogICAgICAgICAgICBhc3NlcnQgcmVjb3JkWyJwYXNzZWQiXSBpcyBUcnVlLCB0b29sCiAgICBhc3NlcnQgcmVzdWx0WyJ2ZXJkaWN0Il0gPT0gdmVyZGljdFsic3RhdHVzIl0KICAgIGFzc2VydCByZXN1bHRbImRpZmYiXSBpcyBub3QgTm9uZQogICAgaW5mbyA9IHJlYWRfcnVuKHJlc3VsdFsicnVuX2lkIl0pCiAgICBhc3NlcnQgaW5mbyBpcyBub3QgTm9uZQo=
+"""Test pipeline nyata MUFAKAT: code -> review -> audit -> test.
+
+Satu run mock end-to-end harus menulis, bukan hanya teks ringkasan:
+- worktree/main.py + worktree/test_main.py (kode nyata),
+- diff/iter-01.patch (unified diff),
+- gates/<tool>.json untuk tiap gate + gates/verdict.json,
+- status.json dengan verdict AMAN untuk template yang bersih.
+"""
+
+from __future__ import annotations
+
+import asyncio
+import json
+
+from mufakat.graph.nodes.code import node as code_node_fn
+from mufakat.graph.nodes.review import node as review_node_fn
+from mufakat.graph.nodes.revise import node as revise_node_fn
+from mufakat.graph.state import RunState
+from mufakat.runner import create_run, read_run
+
+
+def test_code_node_menulis_file_nyata(tmp_path):
+    worktree = tmp_path / "wt"
+    state = RunState(run_id="t1", idea="Buat REST API todo dengan FastAPI")
+    patch = asyncio.run(code_node_fn(state, adapters={}, ctx={"worktree": str(worktree)}))
+    assert (worktree / "main.py").is_file()
+    assert (worktree / "test_main.py").is_file()
+    assert "FastAPI" in (worktree / "main.py").read_text(encoding="utf-8")
+    assert patch["diff_hash"]
+    assert patch["phase"] == "review"
+
+
+def test_review_node_tanpa_blocking(tmp_path):
+    worktree = tmp_path / "wt"
+    worktree.mkdir()
+    (worktree / "main.py").write_text("x = 1\n", encoding="utf-8")
+    state = RunState(run_id="t1", idea="ide")
+    patch = asyncio.run(review_node_fn(state, adapters={},
+                                        ctx={"worktree": str(worktree)}))
+    assert patch["phase"] == "audit"
+    assert not [f for f in patch["findings"] if f.get("severity") == "blocking"]
+
+
+def test_revise_node_tanpa_temuan_selesai():
+    state = RunState(run_id="t1", idea="ide", findings=[])
+    patch = asyncio.run(revise_node_fn(state, adapters={}, ctx={}))
+    assert patch["status"] == "done"
+    assert patch["approved_commit"] is True
+
+
+def test_create_run_menulis_diff_dan_gates(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    result = create_run("Buat REST API todo dengan FastAPI + test + audit",
+                        output="runs")
+    run_dir = tmp_path / "runs" / result["run_id"]
+    assert (run_dir / "worktree" / "main.py").is_file()
+    assert (run_dir / "worktree" / "test_main.py").is_file()
+    patch = run_dir / "diff" / "iter-01.patch"
+    assert patch.is_file()
+    assert "main.py" in patch.read_text(encoding="utf-8")
+    verdict_path = run_dir / "gates" / "verdict.json"
+    assert verdict_path.is_file()
+    verdict = json.loads(verdict_path.read_text(encoding="utf-8"))
+    # Tanpa Docker gate gagal-tertutup -> BELUM_TERVERIFIKASI (C1/H3);
+    # dengan Docker, template bersih -> AMAN.
+    # N7: deteksi dari daemon+image, BUKAN binary (CLI tanpa daemon
+    # yang hidup dulu salah masuk cabang "Docker ada" lalu gagal).
+    from mufakat.sandbox.docker import docker_available
+
+    if not docker_available():
+        assert verdict["status"] == "BELUM_TERVERIFIKASI"
+    else:  # pragma: no cover - Docker ada di host ini
+        assert verdict["status"] == "AMAN"
+    for tool in ("semgrep", "bandit", "gitleaks", "pytest", "lint"):
+        gate_file = run_dir / "gates" / f"{tool}.json"
+        assert gate_file.is_file(), tool
+        record = json.loads(gate_file.read_text(encoding="utf-8"))
+        if not docker_available():
+            assert record["passed"] is False, tool
+        else:  # pragma: no cover - Docker ada di host ini
+            assert record["passed"] is True, tool
+    assert result["verdict"] == verdict["status"]
+    assert result["diff"] is not None
+    info = read_run(result["run_id"])
+    assert info is not None
