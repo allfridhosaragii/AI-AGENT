@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import sqlite3
 import uuid
 from datetime import datetime, timezone
@@ -109,8 +110,8 @@ def _write_graph_artifacts(run_id: str, run_dir: Path, idea: str,
         f"{len(messages)} pesan debat). Ini run mock (tanpa provider AI nyata) — "
         "hasil debat berasal dari node dummy deterministik.\n\n"
         "## Batasan jujur\n\n"
-        "- Belum ada gate yang terverifikasi pada run ini; jalankan "
-        "`gate_report` di MCP atau pengujian & pemindai keamanan.\n"
+        "- Gate dijalankan atas worktree setelah graph selesai — "
+        "lihat bagian Gate & Diff di bawah laporan ini.\n"
         "- Jangan klaim hasil ini 100% aman.\n",
         encoding="utf-8",
     )
@@ -119,6 +120,11 @@ def _write_graph_artifacts(run_id: str, run_dir: Path, idea: str,
 def _try_graph_run(idea: str, provider: str, run_dir: Path, run_id: str,
                    mode: str = "run") -> bool:
     """Jalankan graph LangGraph bila tersedia; tulis artefaknya.
+
+    Graph dipanggil dengan adapter (API nyata bila ada key di env,
+    mock bila tidak) dan ctx bersama berisi ``worktree`` +
+    ``run_dir`` — node code menulis file nyata ke worktree, node
+    audit/test menjalankan gate atas file itu.
 
     Mengembalikan True bila graph berhasil dipakai, False bila tidak ada
     atau gagal — pemanggil lalu memakai fallback penulisan langsung.
@@ -132,7 +138,11 @@ def _try_graph_run(idea: str, provider: str, run_dir: Path, run_id: str,
     try:
         import asyncio
 
-        graph = build_graph()
+        worktree = run_dir / "worktree"
+        worktree.mkdir(parents=True, exist_ok=True)
+        adapters = _build_adapters()
+        ctx = {"worktree": str(worktree), "run_dir": str(run_dir)}
+        graph = build_graph(adapters=adapters, ctx=ctx)
         state_in = {"run_id": run_id, "idea": idea, "provider": provider,
                     "run_dir": str(run_dir)}
         # Node graph bersifat async -> pakai ainvoke (invoke sinkron
@@ -152,6 +162,200 @@ def _try_graph_run(idea: str, provider: str, run_dir: Path, run_id: str,
         return True
     except Exception:
         return False
+
+
+def _build_adapters() -> dict:
+    """Bangun dict adapter untuk node graph.
+
+    Bila ada API key / CLI di env (``config/providers.yaml``),
+    adapter nyata dipakai — node memanggil model sungguhan lewat
+    ``Adapter.ask``. Bila tidak ada, dipakai mock deterministik
+    yang mengembalikan teks/template lokal (dan dicatat sebagai
+    mock di pesan node). Tidak pernah membaca kredensial CLI
+    provider lain; key hanya dibaca dari env oleh
+    ``load_from_config``.
+    """
+    from mufakat.graph.nodes.code import TEMPLATE_MAIN
+
+    real: dict = {}
+    try:
+        from pathlib import Path as _Path
+
+        from mufakat.adapters.api_openai_compat import load_from_config
+
+        config_path = _Path(__file__).resolve().parents[2] / "config" / "providers.yaml"
+        if config_path.is_file():
+            real = load_from_config(config_path)
+    except Exception:
+        real = {}
+
+    # Adapter CLI (codex/copilot/antigravity/claude/opencode) hanya
+    # dipakai bila login-nya TERVERIFIK lewat ``is_available()``
+    # (probe `login status`, maks. 5 detik, stdin DEVNULL). Tanpa
+    # login terverifikasi, adapter CLI DIABAIKAN dan peran memakai
+    # mock deterministik — jangan pernah menjalankan CLI yang belum
+    # login: CLI akan menggantung menunggu input interaktif dan
+    # mengunci graph (ditemukan 20 Nov 2026: `codex` ada di PATH
+    # tetapi `codex login status` = "Not logged in").
+    cli_names = {"codex", "copilot", "antigravity", "claude", "opencode"}
+    usable: dict = {}
+    for _name, _adapter in real.items():
+        if _name in cli_names:
+            try:
+                if _adapter.is_available():
+                    usable[_name] = _adapter
+            except Exception:
+                continue
+        else:
+            usable[_name] = _adapter
+    real = usable
+
+    def _real_fn(adapter, role: str):
+        async def _fn(state):
+            idea = getattr(state, "idea", "")
+            reply = await adapter.ask(
+                f"{role}\n\nIde/topik: {idea}\n\n"
+                "Jawab singkat, konkret, dan dalam Bahasa Indonesia.",
+                system=f"Kamu adalah {role} dalam sistem MUFAKAT.",
+                ctx={"timeout": 120})
+            return reply.text
+        return _fn
+
+    def _mock_fn(text_fn):
+        async def _fn(state):
+            return text_fn(getattr(state, "idea", ""))
+        return _fn
+
+    adapters: dict = {}
+    # Debat: satu adapter per agen (deepseek/openrouter/gemini).
+    for agent in ("deepseek", "openrouter", "gemini"):
+        if agent in real:
+            adapters[f"debate_{agent}"] = _real_fn(
+                real[agent], f"debater {agent} (stance: pro/kontra/netral)")
+        else:
+            adapters[f"debate_{agent}"] = _mock_fn(
+                lambda idea, agent=agent: (
+                    f"Proposal {agent}: bangun solusi untuk '{idea}' dengan "
+                    f"pendekatan {agent} — sederhana, teruji, dan mudah dirawat."))
+
+    # Peran lain: pakai adapter nyata pertama bila ada (urutan rantai
+    # debat), bila tidak mock deterministik.
+    first_real = None
+    for name in ("deepseek", "openrouter_free", "groq", "gemini_api",
+                 "meta_api", "codex", "copilot", "antigravity", "claude",
+                 "opencode"):
+        if name in real:
+            first_real = real[name]
+            break
+    adapters["research"] = (
+        _real_fn(first_real, "researcher") if first_real else _mock_fn(
+            lambda idea: (
+                f"Riset awal untuk ide: '{idea}'. Temuan: (1) kebutuhan utama "
+                "pengguna perlu dipetakan; (2) ada pendekatan sederhana yang "
+                "sudah umum dipakai; (3) risiko utama adalah ruang lingkup "
+                "yang melebar. Riset ini dihasilkan secara lokal tanpa "
+                "memanggil API.")))
+    adapters["critique"] = (
+        _real_fn(first_real, "kritikus") if first_real else _mock_fn(
+            lambda idea: (
+                "Kritik: (1) Proposal A paling sederhana tetapi kurang "
+                "menangani kasus pinggir; (2) Proposal B paling lengkap "
+                "tetapi paling mahal; (3) Proposal C seimbang, namun perlu "
+                "penegasan ruang lingkup. Tidak ada kritik blocking; "
+                "rekomendasi: lanjutkan Proposal C dengan penyederhanaan "
+                "dari Proposal A.")))
+    adapters["spec"] = (
+        _real_fn(first_real, "arsitek (tulis spesifikasi)") if first_real
+        else _mock_fn(lambda idea: (
+            "# Spesifikasi (spec.md)\n\n"
+            f"## Ide\n{idea}\n\n"
+            "## Tujuan\nMembangun solusi yang sederhana, teruji, dan mudah "
+            "dirawat sesuai hasil mufakat debat.\n\n"
+            "## Kriteria Penerimaan\n"
+            "- Semua gate verifikasi lolos.\n"
+            "- Review menyetujui dengan rasio minimal 2/3.\n")))
+    adapters["review"] = (
+        _real_fn(first_real, "code reviewer independen") if first_real
+        else _mock_fn(lambda idea: "Review: tidak ada temuan."))
+    adapters["revise"] = (
+        _real_fn(first_real, "reviser kode") if first_real else _mock_fn(
+            lambda idea: "Revisi: perbaiki temuan dengan ruff --fix."))
+    adapters["code"] = (
+        _real_fn(first_real,
+                 "coder: tulis implementasi REST API todo FastAPI "
+                 "(main.py lengkap, kode Python saja dalam blok ```python)")
+        if first_real else _mock_fn(lambda idea: TEMPLATE_MAIN))
+    adapters["_real_provider"] = (
+        getattr(first_real, "name", "") if first_real else "mock")
+    return adapters
+
+
+def _finalize_worktree(run_dir: Path) -> dict:
+    """Tulis diff + hasil gate nyata atas worktree run.
+
+    Mengembalikan ringkasan ``{"diff": ..., "verdict": ..., "gates": [...]}``.
+    Bila worktree kosong/tidak ada, kembalikan status
+    ``belum terverifikasi`` yang jujur — bukan klaim lolos.
+    """
+    import difflib
+
+    worktree = run_dir / "worktree"
+    summary: dict = {"diff": None, "verdict": None, "gates": []}
+    if not worktree.is_dir():
+        return summary
+    files = sorted(p for p in worktree.iterdir() if p.is_file())
+    if not files:
+        return summary
+    diff_dir = run_dir / "diff"
+    diff_dir.mkdir(parents=True, exist_ok=True)
+    patch_lines: list[str] = []
+    for path in files:
+        content = path.read_text(encoding="utf-8").splitlines(keepends=True)
+        patch_lines.extend(difflib.unified_diff(
+            [], content, fromfile="/dev/null", tofile=path.name))
+    patch_path = diff_dir / "iter-01.patch"
+    patch_path.write_text("".join(patch_lines), encoding="utf-8")
+    summary["diff"] = str(patch_path)
+    gates_dir = run_dir / "gates"
+    gates_dir.mkdir(parents=True, exist_ok=True)
+    try:
+        from mufakat.gates.runner import run_all
+        from mufakat.gates.verdict import verdict as gate_verdict
+
+        results = run_all(worktree)
+        for result in results:
+            record = {"tool": result.tool, "passed": bool(result.passed),
+                      "findings": list(getattr(result, "findings", []) or [])}
+            (gates_dir / f"{result.tool}.json").write_text(
+                json.dumps(record, ensure_ascii=False, indent=2),
+                encoding="utf-8")
+            summary["gates"].append(record)
+        verdict_result = gate_verdict(results)
+        (gates_dir / "verdict.json").write_text(
+            json.dumps(verdict_result, ensure_ascii=False, indent=2),
+            encoding="utf-8")
+        summary["verdict"] = verdict_result
+    except Exception as exc:  # noqa: BLE001 — gate gagal = belum terverifikasi
+        summary["verdict"] = {"safe": False, "status": "belum terverifikasi",
+                              "summary": f"Gate tidak dapat dijalankan: {exc}",
+                              "categories": []}
+    report_path = run_dir / "final_report.md"
+    if report_path.is_file():
+        verdict_text = summary["verdict"] or {}
+        gate_lines = "\n".join(
+            f"- {g['tool']}: {'lolos' if g['passed'] else 'GAGAL'} "
+            f"({len(g['findings'])} temuan)"
+            for g in summary["gates"])
+        report_path.write_text(
+            report_path.read_text(encoding="utf-8")
+            + "\n## Gate & Diff (nyata, dijalankan atas worktree)\n\n"
+            f"Verdict: **{verdict_text.get('status', 'belum terverifikasi')}** — "
+            f"{verdict_text.get('summary', '')}\n\n"
+            f"{gate_lines}\n\n"
+            f"Diff: `{summary['diff']}`\n"
+            f"Worktree: `{worktree}`\n",
+            encoding="utf-8")
+    return summary
 
 
 def _write_mock_artifacts(
@@ -269,6 +473,9 @@ def create_run(
     if not used_graph:
         _write_mock_artifacts(run_id, run_dir, idea, provider, mode)
 
+    # Diff + gate nyata atas worktree (bila ada file yang dihasilkan).
+    finalize = _finalize_worktree(run_dir)
+
     status = {
         "run_id": run_id,
         "idea": idea,
@@ -278,6 +485,13 @@ def create_run(
         "graph_used": used_graph,
         "created_at": utcnow(),
         "dir": str(run_dir),
+        "diff": finalize.get("diff"),
+        "verdict": (finalize.get("verdict") or {}).get("status"),
+        "gates": [
+            {"tool": g["tool"], "passed": g["passed"],
+             "findings": len(g["findings"])}
+            for g in finalize.get("gates", [])
+        ],
     }
     (run_dir / "status.json").write_text(
         json.dumps(status, ensure_ascii=False, indent=2), encoding="utf-8"
@@ -346,6 +560,11 @@ def load_sqlite_table(db_path: str | Path, table: str) -> list[dict]:
     db_path = Path(db_path)
     if not db_path.is_file():
         return []
+    # Validasi identifier: nama tabel hanya boleh [A-Za-z_][A-Za-z0-9_]*.
+    # Nama tabel tidak bisa diparameterisasi di SQLite, jadi validasi
+    # ketat + pengecekan keberadaan di sqlite_master adalah mitigasinya.
+    if not re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*", table or ""):
+        return []
     try:
         conn = sqlite3.connect(f"file:{db_path}?mode=ro", uri=True)
         try:
@@ -355,7 +574,9 @@ def load_sqlite_table(db_path: str | Path, table: str) -> list[dict]:
             )
             if cur.fetchone() is None:
                 return []
-            cur = conn.execute(f"SELECT * FROM \"{table}\"")  # noqa: S608 — nama tabel internal
+            cur = conn.execute(
+                f'SELECT * FROM "{table}"'  # nosec B608 - identifier sudah divalidasi regex + sqlite_master
+            )
             cols = [d[0] for d in cur.description]
             return [dict(zip(cols, row)) for row in cur.fetchall()]
         finally:
