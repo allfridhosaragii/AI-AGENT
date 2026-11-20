@@ -16,8 +16,8 @@ def test_token_bucket_rpm20_60_request():
 
 
 def test_quota_manager_rpm20():
-    qm = QuotaManager({"openrouter_free": {"rpm": 20, "rpd": 50}})
-    assert sum(1 for _ in range(60) if qm.allow("openrouter_free")) == 20
+    qm = QuotaManager({"openrouter": {"rpm": 20, "rpd": 50}})
+    assert sum(1 for _ in range(60) if qm.allow("openrouter")) == 20
     assert qm.allow("provider_tak_dikenal") is True  # tanpa batas = lolos
 
 
