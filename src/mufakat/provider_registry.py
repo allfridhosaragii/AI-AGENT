@@ -35,6 +35,10 @@ class ProviderCapability:
 
     name: str
     capabilities: list[str] = field(default_factory=list)
+    # Status verifikasi: "verified" | "needs_policy_review".
+    # "needs_policy_review" = klaim provider/model belum terverifikasi
+    # (mis. meta_api/llama-4-maverick JANGAN diklaim sebagai Muse Spark).
+    status: str = "verified"
 
     def supports(self, capability: str) -> bool:
         """Kembalikan ``True`` bila provider mendukung ``capability``."""
@@ -88,7 +92,7 @@ def default_registry() -> ProviderRegistry:
                 "long_context",
             ),
             _provider(
-                "openrouter_free",
+                "openrouter",
                 "text_generation",
                 "streaming",
                 "structured_output",
@@ -102,7 +106,7 @@ def default_registry() -> ProviderRegistry:
                 "structured_output",
             ),
             _provider(
-                "gemini_api",
+                "gemini",
                 "text_generation",
                 "streaming",
                 "tool_calling",
@@ -110,12 +114,17 @@ def default_registry() -> ProviderRegistry:
                 "vision",
                 "long_context",
             ),
-            _provider(
-                "meta_api",
-                "text_generation",
-                "streaming",
-                "structured_output",
-                "long_context",
+            # Audit ChatGPT I: meta_api BELUM TERVERIFIKASI — model
+            # llama-4-maverick jangan diklaim sebagai Muse Spark 1.3.
+            ProviderCapability(
+                name="meta_api",
+                capabilities=[
+                    "text_generation",
+                    "streaming",
+                    "structured_output",
+                    "long_context",
+                ],
+                status="needs_policy_review",
             ),
             _provider(
                 "codex_cli",
