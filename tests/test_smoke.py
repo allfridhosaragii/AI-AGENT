@@ -146,7 +146,13 @@ def test_mcp_debate_start_and_gate(tmp_path, monkeypatch):
     status = debate_status(run_id)
     assert status["ok"] is True and status["run_id"] == run_id
     gate = gate_report(run_id)
-    assert gate["verified"] is False and gate["status"] == "belum terverifikasi"
+    # Per 20 Nov 2026 run nyata menulis gates/<tool>.json + verdict.json
+    # (dulu: belum terverifikasi). Verdict AMAN untuk template bersih.
+    assert gate["verified"] is True and gate["status"] == "terverifikasi"
+    names = {g["name"] for g in gate["gates"]}
+    assert "verdict.json" in names and "pytest.json" in names
+    verdict = next(g for g in gate["gates"] if g["name"] == "verdict.json")
+    assert verdict["data"]["status"] == "AMAN"
 
 
 # ---------------------------------------------------------------------------
