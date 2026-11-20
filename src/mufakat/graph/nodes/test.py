@@ -2,6 +2,12 @@
 
 Memakai ``gates.pytest.run`` bila worktree tersedia; bila tidak,
 temuan test dikosongkan (bukan gagal). Hasil dicatat di messages.
+
+Node ini JUGA mencatat riwayat anti-loop sebagai patch
+(``hash_history`` + ``finding_counts``): pencatatan HARUS di node,
+karena mutasi di dalam edge function LangGraph tidak disimpan ke
+checkpoint (ditemukan 20 Nov 2026 — riwayat yang dicatat di edge
+selalu hilang, sehingga eskalasi hash tidak pernah terjadi).
 """
 
 from __future__ import annotations
@@ -44,4 +50,21 @@ async def node(state, adapters=None, ctx=None):
     else:
         text = "Test selesai: tidak ada worktree, tidak ada test dijalankan."
     messages = append_message(state, "tester", text)
-    return {"messages": messages, "findings": findings, "phase": "revise"}
+    # Riwayat anti-loop (patch — disimpan LangGraph ke checkpoint).
+    try:
+        from mufakat.graph.edges import current_hash
+    except ImportError:  # pragma: no cover
+        try:
+            from ..edges import current_hash  # type: ignore
+        except ImportError:
+            current_hash = None  # type: ignore[assignment]
+    patch: dict = {"messages": messages, "findings": findings,
+                   "phase": "revise"}
+    if current_hash is not None:
+        history = list(getattr(state, "hash_history", []) or [])
+        history.append(current_hash(state, findings))
+        counts = list(getattr(state, "finding_counts", []) or [])
+        counts.append(len(findings))
+        patch["hash_history"] = history
+        patch["finding_counts"] = counts
+    return patch
