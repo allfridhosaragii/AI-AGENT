@@ -1,5 +1,12 @@
 """Dashboard web MUFAKAT (T15, FastAPI).
 
+LOCAL-ONLY secara default (audit ChatGPT tabel): tanpa autentikasi,
+dashboard ini HANYA boleh dijalankan di localhost untuk pemakaian
+pribadi — JANGAN expose ke internet/publik. Bila dipakai publik,
+set env ``MUFAKAT_WEB_TOKEN`` (token rahasia); endpoint tulis
+(``POST /api/debate``) lalu mewajibkan header
+``X-MUFAKAT-TOKEN: <token>`` dan menolak tanpa token (401).
+
 Endpoint:
 - GET  /                  dashboard HTML (static/index.html)
 - GET  /health
@@ -13,10 +20,11 @@ bila tidak ada, kembalikan list kosong + status ok.
 
 from __future__ import annotations
 
+import hmac
 import os
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, Header, HTTPException
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
@@ -55,6 +63,21 @@ class DebateRequest(BaseModel):
     provider: str = Field("mock", description="Provider debat (default: mock).")
 
 
+def _require_web_token(x_mufakat_token: str | None = Header(default=None)) -> None:
+    """Autentikasi endpoint tulis (audit ChatGPT tabel).
+
+    Bila env ``MUFAKAT_WEB_TOKEN`` diset, header ``X-MUFAKAT-TOKEN``
+    wajib cocok (perbandingan waktu-konstan). Bila env kosong,
+    dashboard dianggap local-only dan tidak ada auth — JANGAN
+    expose ke publik dalam kondisi itu.
+    """
+    expected = os.environ.get("MUFAKAT_WEB_TOKEN", "").strip()
+    if not expected:
+        return
+    if not x_mufakat_token or not hmac.compare_digest(x_mufakat_token, expected):
+        raise HTTPException(status_code=401, detail="Token web tidak valid.")
+
+
 def _db_items(table: str) -> list[dict]:
     """Item dari SQLite bila ada; else list kosong."""
     db_path = find_sqlite_db()
@@ -86,6 +109,9 @@ def health() -> dict:
         "runs_count": len(list_runs()),
         "sqlite": str(db_path) if db_path else None,
         "env": {"MUFAKAT_DB": bool(os.environ.get("MUFAKAT_DB"))},
+        # Local-only bila token web tidak diset (tanpa auth di endpoint tulis).
+        "local_only": not bool(os.environ.get("MUFAKAT_WEB_TOKEN", "").strip()),
+        "auth_required": bool(os.environ.get("MUFAKAT_WEB_TOKEN", "").strip()),
     }
 
 
@@ -111,6 +137,12 @@ def api_runs() -> dict:
 @app.get("/api/runs/{run_id}")
 def api_run_detail(run_id: str) -> dict:
     """Detail satu run."""
+    try:
+        from mufakat.sandbox.worktree import validate_run_id
+
+        validate_run_id(run_id)
+    except ValueError:
+        raise HTTPException(status_code=400, detail=f"run_id tidak valid: {run_id}")
     info = read_run(run_id)
     if info is None:
         raise HTTPException(status_code=404, detail=f"Run tidak ditemukan: {run_id}")
@@ -176,7 +208,12 @@ def api_audit() -> dict:
 # API write
 # ---------------------------------------------------------------------------
 @app.post("/api/debate", status_code=201)
-def api_debate(payload: DebateRequest) -> dict:
-    """Buat run debat baru — logika sama seperti `mufakat run` di CLI."""
+def api_debate(payload: DebateRequest,
+               x_mufakat_token: str | None = Header(default=None)) -> dict:
+    """Buat run debat baru — logika sama seperti `mufakat run` di CLI.
+
+    Bila ``MUFAKAT_WEB_TOKEN`` diset, wajib header ``X-MUFAKAT-TOKEN``.
+    """
+    _require_web_token(x_mufakat_token)
     result = create_run(payload.topic, provider=payload.provider, mode="debate")
     return {"status": "ok", **result}
