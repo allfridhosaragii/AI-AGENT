@@ -1,1 +1,79 @@
-{"lastVerified":"belum terverifikasi","note":"Selector HARUS diverifikasi manual di tiap situs dan diperbarui saat situs berubah. Nilai di bawah ini adalah tebakan awal yang BELUM diuji di halaman asli — jangan andalkan sebelum Selector Doctor menandainya OK. Bila selector rusak, extension otomatis jatuh ke mode Manual Copy.","sites":{"chatgpt":{"captchaIndicator":"[data-testid='captcha']","generatingIndicator":"[data-testid='stop-button']","input":"#prompt-textarea","lastMessage":"[data-message-author-role='assistant']","loginIndicator":"#prompt-textarea","matches":["https://chatgpt.com/*"]},"claude":{"captchaIndicator":null,"generatingIndicator":"[aria-label='Stop response']","input":"div[contenteditable='true']","lastMessage":"[data-testid='message-content']","loginIndicator":"div[contenteditable='true']","matches":["https://claude.ai/*"]},"deepseek":{"captchaIndicator":null,"generatingIndicator":".ds-stop-button","input":"textarea","lastMessage":".ds-message--assistant","loginIndicator":"textarea","matches":["https://chat.deepseek.com/*"]},"gemini":{"captchaIndicator":null,"generatingIndicator":"[aria-label='Stop']","input":"div[contenteditable='true']","lastMessage":"message-content","loginIndicator":"div[contenteditable='true']","matches":["https://gemini.google.com/*"]},"metaai":{"captchaIndicator":null,"generatingIndicator":"[aria-label='Stop']","input":"div[contenteditable='true']","lastMessage":"[data-testid='assistant-message']","loginIndicator":"div[contenteditable='true']","matches":["https://www.meta.ai/*"]},"qwen":{"captchaIndicator":null,"generatingIndicator":"[aria-label='Stop']","input":"textarea","lastMessage":".message-assistant","loginIndicator":"textarea","matches":["https://chat.qwen.ai/*"]}},"version":1}
+{
+  "lastVerified": "belum terverifikasi",
+  "note": "Selector HARUS diverifikasi manual di tiap situs dan diperbarui saat situs berubah. Nilai input/lastMessage/generatingIndicator di bawah ini adalah tebakan awal yang BELUM diuji di halaman asli. loginIndicator/loggedInIndicator/rateLimitIndicator sengaja null: nilai yang salah menyebabkan false positive (mis. loginIndicator = selector input membuat \"login\" dan \"input rusak\" tak bisa dibedakan, M9). Isi ketiganya hanya setelah diverifikasi di situs asli; sampai saat itu detectBlocker mengembalikan 'error' bila input tidak ditemukan, dan TIDAK PERNAH mengklaim logged_out/rate_limit tanpa bukti elemen.",
+  "sites": {
+    "chatgpt": {
+      "captchaIndicator": "[data-testid='captcha']",
+      "generatingIndicator": "[data-testid='stop-button']",
+      "input": "#prompt-textarea",
+      "lastMessage": "[data-message-author-role='assistant']",
+      "loginIndicator": null,
+      "matches": [
+        "https://chatgpt.com/*"
+      ],
+      "loggedInIndicator": null,
+      "rateLimitIndicator": null
+    },
+    "claude": {
+      "captchaIndicator": null,
+      "generatingIndicator": "[aria-label='Stop response']",
+      "input": "div[contenteditable='true']",
+      "lastMessage": "[data-testid='message-content']",
+      "loginIndicator": null,
+      "matches": [
+        "https://claude.ai/*"
+      ],
+      "loggedInIndicator": null,
+      "rateLimitIndicator": null
+    },
+    "deepseek": {
+      "captchaIndicator": null,
+      "generatingIndicator": ".ds-stop-button",
+      "input": "textarea",
+      "lastMessage": ".ds-message--assistant",
+      "loginIndicator": null,
+      "matches": [
+        "https://chat.deepseek.com/*"
+      ],
+      "loggedInIndicator": null,
+      "rateLimitIndicator": null
+    },
+    "gemini": {
+      "captchaIndicator": null,
+      "generatingIndicator": "[aria-label='Stop']",
+      "input": "div[contenteditable='true']",
+      "lastMessage": "message-content",
+      "loginIndicator": null,
+      "matches": [
+        "https://gemini.google.com/*"
+      ],
+      "loggedInIndicator": null,
+      "rateLimitIndicator": null
+    },
+    "metaai": {
+      "captchaIndicator": null,
+      "generatingIndicator": "[aria-label='Stop']",
+      "input": "div[contenteditable='true']",
+      "lastMessage": "[data-testid='assistant-message']",
+      "loginIndicator": null,
+      "matches": [
+        "https://www.meta.ai/*"
+      ],
+      "loggedInIndicator": null,
+      "rateLimitIndicator": null
+    },
+    "qwen": {
+      "captchaIndicator": null,
+      "generatingIndicator": "[aria-label='Stop']",
+      "input": "textarea",
+      "lastMessage": ".message-assistant",
+      "loginIndicator": null,
+      "matches": [
+        "https://chat.qwen.ai/*"
+      ],
+      "loggedInIndicator": null,
+      "rateLimitIndicator": null
+    }
+  },
+  "version": 2
+}
