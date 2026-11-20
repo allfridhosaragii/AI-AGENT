@@ -1,5 +1,5 @@
-// MUFAKAT Room — test engine (vitest). Dijalankan dengan `pnpm test`
-// setelah `pnpm install`. BELUM TERJALANKAN di VM ini (pnpm tidak tersedia).
+// MUFAKAT Room — test engine (vitest). Dijalankan dengan `npm test`
+// setelah `npm install`.
 import { describe, expect, it } from 'vitest';
 import { parseReply, extractLastJsonBlock } from '../src/engine/parser';
 import { bordaCount, decideConsensus, detectFalseConsensus } from '../src/engine/consensus';
@@ -45,6 +45,18 @@ describe('konsensus', () => {
   it('borda count', () => {
     expect(bordaCount([['A', 'B', 'C'], ['A', 'C', 'B']]).A).toBe(4);
   });
+  // T4 (regresi): vote malformed tidak boleh crash rapat.
+  it('vote tanpa ranking / ranking string dilewati, bukan crash', () => {
+    const malformed = [
+      { agentId: 'a', decision: 'approve', ranking: ['A', 'B'] },
+      { agentId: 'b', decision: 'approve' },
+      { agentId: 'c', decision: 'approve', ranking: 'A,B' },
+    ] as unknown as Parameters<typeof decideConsensus>[0];
+    expect(() => decideConsensus(malformed, [])).not.toThrow();
+    const result = decideConsensus(malformed, []);
+    expect(result.winner).toBe('A');
+    expect(bordaCount([['A', 'B'], undefined as unknown as string[], 'A,B' as unknown as string[]]).A).toBe(1);
+  });
   it('sepakat palsu terdeteksi', () => {
     expect(detectFalseConsensus(['pakai FastAPI saja', 'pakai FastAPI saja'])).toBe(true);
     expect(detectFalseConsensus(['pakai FastAPI', 'pakai Flask'])).toBe(false);
@@ -55,6 +67,13 @@ describe('secret scan', () => {
   it('memblokir api key dan private key', () => {
     expect(scanText('api_key = "sk-abcdefghijklmnopqrst"').length).toBeGreaterThan(0);
     expect(scanText('-----BEGIN PRIVATE KEY-----').length).toBeGreaterThan(0);
+  });
+  // T1 (regresi): 4 keluarga token telanjang yang dulu lolos di TS.
+  it('menangkap sk-proj-, github_pat_, AIza, dan xoxb- telanjang', () => {
+    expect(scanText(`key ${'sk-proj-' + 'a'.repeat(24)}`).length).toBeGreaterThan(0);
+    expect(scanText(`token ${'github_pat_' + 'A'.repeat(22)}`).length).toBeGreaterThan(0);
+    expect(scanText(`key ${'AIza' + 'A'.repeat(35)}`).length).toBeGreaterThan(0);
+    expect(scanText(`token ${'xoxb-' + '1234567890'}`).length).toBeGreaterThan(0);
   });
   it('teks bersih lolos', () => {
     expect(scanText('Buat REST API todo dengan FastAPI.')).toEqual([]);
