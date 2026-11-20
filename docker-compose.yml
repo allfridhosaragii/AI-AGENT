@@ -1,0 +1,63 @@
+# MUFAKAT — Postgres + Redis opsional (docker-compose).
+#
+# Jujur: compose ini HANYA menyediakan database dan cache untuk
+# pengembangan lokal. MUFAKAT tetap jalan tanpa compose ini
+# (default: SQLite + cache in-memory). Docker TIDAK terpasang di
+# semua mesin — bila `docker compose` tidak tersedia, abaikan file
+# ini dan pakai default SQLite.
+#
+# Cara pakai:
+#   docker compose up -d
+#   DATABASE_URL=postgresql://mufakat:mufakat@localhost:5432/mufakat \
+#   REDIS_URL=redis://localhost:6379/0 \
+#   mufakat run "Buat REST API todo dengan FastAPI + test + audit"
+#
+# Jangan commit file .env berisi password nyata; contoh di bawah
+# hanya untuk pengembangan lokal.
+
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: mufakat
+      POSTGRES_PASSWORD: mufakat
+      POSTGRES_DB: mufakat
+    ports:
+      - "5432:5432"
+    volumes:
+      - mufakat_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mufakat -d mufakat"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+    volumes:
+      - mufakat_redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # Layanan aplikasi (opsional, butuh build image sendiri):
+  # app:
+  #   build: .
+  #   depends_on:
+  #     db:
+  #       condition: service_healthy
+  #     redis:
+  #       condition: service_healthy
+  #   environment:
+  #     DATABASE_URL: postgresql://mufakat:mufakat@db:5432/mufakat
+  #     REDIS_URL: redis://redis:6379/0
+  #   volumes:
+  #     - ./runs:/app/runs
+
+volumes:
+  mufakat_pgdata:
+  mufakat_redisdata:
