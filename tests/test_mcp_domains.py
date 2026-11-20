@@ -12,7 +12,6 @@ import asyncio
 from mufakat.mcp_server.domains import DOMAINS, register_all, store
 from mufakat.mcp_server.domains.approval import (
     approval_get_status,
-    approval_record_decision,
     approval_request,
 )
 from mufakat.mcp_server.domains.git import git_commit
@@ -129,21 +128,74 @@ def test_project_adr():
     assert adr["title"] == "ADR-1"
 
 
-def test_git_commit_butuh_approval():
+def test_approval_record_decision_tidak_terdaftar_di_mcp():
+    """H1: AI tidak boleh memutuskan approval lewat MCP."""
+    assert "approval_record_decision" not in REGISTERED_TOOLS
+    from mufakat.mcp_server.domains.approval import CONTRACTS
+
+    assert {c["name"] for c in CONTRACTS} == {
+        "approval_request", "approval_get_status"}
+
+
+def test_git_commit_butuh_approval_manusia(tmp_path, monkeypatch):
+    """H1: commit butuh approval manusia (SQLite) + token sekali pakai
+    yang terikat hash diff; diff berubah -> ditolak; token hangus
+    setelah dipakai."""
+    import subprocess
+
+    from mufakat.mcp_server import approval_store
+    from mufakat.mcp_server.domains.approval import decide_approval
+
+    monkeypatch.setenv("MUFAKAT_APPROVALS_DB", str(tmp_path / "approvals.db"))
+    repo = tmp_path / "repo"
+    repo.mkdir()
+    subprocess.run(["git", "init", "-q", str(repo)], check=True)
+    subprocess.run(["git", "-C", str(repo), "config", "user.email", "t@t.t"],
+                   check=True)
+    subprocess.run(["git", "-C", str(repo), "config", "user.name", "Tes"],
+                   check=True)
+    (repo / "a.txt").write_text("satu\n", encoding="utf-8")
+    subprocess.run(["git", "-C", str(repo), "add", "-A"], check=True)
+    subprocess.run(["git", "-C", str(repo), "commit", "-qm", "awal"],
+                   check=True)
+    (repo / "a.txt").write_text("satu\ndua\n", encoding="utf-8")
+    subprocess.run(["git", "-C", str(repo), "add", "-A"], check=True)
+
     store.reset()
-    # Tanpa approval: ditolak.
-    assert git_commit(".", "pesan", approval_id="tidak-ada")["ok"] is False
-    # Approval yang ditolak juga tidak cukup.
+    # Tanpa approval/token: ditolak.
+    assert git_commit(str(repo), "pesan", approval_id="tidak-ada")["ok"] is False
     approval = approval_request("Commit tes")
-    approval_record_decision(approval["approval_id"], False, note="tidak")
-    assert git_commit(".", "pesan",
+    assert approval["ok"] is True
+    assert git_commit(str(repo), "pesan",
                       approval_id=approval["approval_id"])["ok"] is False
-    # Approval yang disetujui lolos gate approval (commit git-nya
-    # sendiri boleh gagal karena tidak ada perubahan — yang diuji
-    # di sini adalah gate-nya, bukan git).
-    approval2 = approval_request("Commit tes 2")
-    approval_record_decision(approval2["approval_id"], True)
-    assert approval_get_status(approval2["approval_id"])["status"] == "approved"
+    # Approval yang DITOLAK manusia juga tidak cukup.
+    rejected = approval_request("Commit tes ditolak")
+    decide_approval(rejected["approval_id"], False, decided_by="human-cli")
+    assert git_commit(str(repo), "pesan",
+                      approval_id=rejected["approval_id"],
+                      approval_token="apa-pun")["ok"] is False
+    # Disetujui manusia (CLI) -> token sekali pakai terikat hash diff.
+    diff_hash = approval_store.diff_hash_for_repo(str(repo))
+    decided = decide_approval(approval["approval_id"], True,
+                              decided_by="human-cli", diff_hash=diff_hash)
+    token = decided["approval_token"]
+    assert approval_get_status(approval["approval_id"])["status"] == "approved"
+    # Diff berubah setelah disetujui -> ditolak.
+    (repo / "a.txt").write_text("satu\ndua\ntiga\n", encoding="utf-8")
+    assert git_commit(str(repo), "pesan",
+                      approval_id=approval["approval_id"],
+                      approval_token=token)["ok"] is False
+    (repo / "a.txt").write_text("satu\ndua\n", encoding="utf-8")
+    ok_result = git_commit(str(repo), "pesan",
+                           approval_id=approval["approval_id"],
+                           approval_token=token)
+    assert ok_result["ok"] is True
+    # Token sekali pakai: pemakaian kedua ditolak.
+    (repo / "b.txt").write_text("baru\n", encoding="utf-8")
+    subprocess.run(["git", "-C", str(repo), "add", "-A"], check=True)
+    assert git_commit(str(repo), "pesan2",
+                      approval_id=approval["approval_id"],
+                      approval_token=token)["ok"] is False
 
 
 def test_filesystem_propose_patch_tidak_menulis(tmp_path):
@@ -151,7 +203,8 @@ def test_filesystem_propose_patch_tidak_menulis(tmp_path):
 
     target = tmp_path / "a.txt"
     target.write_text("lama\n", encoding="utf-8")
-    result = filesystem_propose_patch(str(target), "baru\n", reason="tes")
+    result = filesystem_propose_patch(str(target), "baru\n", reason="tes",
+                                      allowed_roots=[tmp_path])
     assert result["ok"] is True
     assert result["status"] == "proposed"
     assert target.read_text(encoding="utf-8") == "lama\n"
