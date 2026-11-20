@@ -1,1 +1,80 @@
-IiIiUmVnaXN0cnkgMTUgZG9tYWluIE1DUCBNVUZBS0FUIChDaGF0R1BUIMKnNykuCgpTYXR1IHNlcnZlciBGYXN0TUNQIGJlcm5hbWEgYGBtdWZha2F0YGAgdGV0YXAgbWVuamFkaSBnYXRld2F5CnR1bmdnYWwgKHRyYW5zcG9ydCBzdGRpbykuIFRpYXAgZG9tYWluIGFkYWxhaCBtb2R1bCB0ZXJwaXNhaCBkaQpwYWtldCBpbmkgZGFuIG1lbmRhZnRhcmthbiB0b29sLW55YSBzZW5kaXJpIGxld2F0IGBgcmVnaXN0ZXIobWNwKWBgLgoKRGFmdGFyIGRvbWFpbjogY29yZSwgY29tbXVuaWNhdGlvbiwgbWVldGluZywgdGFzaywgbWVtb3J5LCBwcm9qZWN0LApnaXQsIGZpbGVzeXN0ZW0sIHRlcm1pbmFsLCB0ZXN0aW5nLCBzZWN1cml0eSwgcmVzZWFyY2gsIGV2YWx1YXRpb24sCmFwcHJvdmFsLCBvYnNlcnZhYmlsaXR5LgoiIiIKCmZyb20gX19mdXR1cmVfXyBpbXBvcnQgYW5ub3RhdGlvbnMKCkRPTUFJTlMgPSAoCiAgICAiY29yZSIsCiAgICAiY29tbXVuaWNhdGlvbiIsCiAgICAibWVldGluZyIsCiAgICAidGFzayIsCiAgICAibWVtb3J5IiwKICAgICJwcm9qZWN0IiwKICAgICJnaXQiLAogICAgImZpbGVzeXN0ZW0iLAogICAgInRlcm1pbmFsIiwKICAgICJ0ZXN0aW5nIiwKICAgICJzZWN1cml0eSIsCiAgICAicmVzZWFyY2giLAogICAgImV2YWx1YXRpb24iLAogICAgImFwcHJvdmFsIiwKICAgICJvYnNlcnZhYmlsaXR5IiwKKQoKCmRlZiByZWdpc3Rlcl9hbGwobWNwKSAtPiBsaXN0W3N0cl06CiAgICAiIiJEYWZ0YXJrYW4gc2VtdWEgdG9vbCBkYXJpIDE1IGRvbWFpbiBrZSBgYG1jcGBgLgoKICAgIFNldGlhcCBgYG1jcC50b29sKGZuKWBgIGRpIGRhbGFtIGBgcmVnaXN0ZXIoKWBgIGRvbWFpbiBkaWJ1bmdrdXMKICAgIGR1bHUgb2xlaCBhdXRob3JpemF0aW9uIGxheWVyIChHUFQgNSk6IHBlcm1pc3Npb24gZGFyaQogICAgYGBDT05UUkFDVFNgYCBkaXRlZ2Fra2FuIFNFQkVMVU0gdG9vbCBkaWphbGFua2FuLiBQZW1idW5na3VzYW4KICAgIGRpbGFrdWthbiBkZW5nYW4gbWVudWthciBgYG1jcC50b29sYGAgc2VtZW50YXJhIGRpIHNpbmkgc3VwYXlhCiAgICBzZW11YSBkb21haW4g4oCUIHRlcm1hc3VrIHlhbmcgZGl0YW1iYWhrYW4gbmFudGkg4oCUIG90b21hdGlzCiAgICB0ZXJsaW5kdW5naSB0YW5wYSBtZW5ndWJhaCB0aWFwIGBgcmVnaXN0ZXIoKWBgLgoKICAgIE1lbmdlbWJhbGlrYW4gZGFmdGFyIG5hbWEgdG9vbCB5YW5nIHRlcmRhZnRhci4KICAgICIiIgogICAgaW1wb3J0IGltcG9ydGxpYgoKICAgIGZyb20gbXVmYWthdC5tY3Bfc2VydmVyLmF1dGhvcml6YXRpb24gaW1wb3J0IGF1dGhvcml6ZSwgcGVybWlzc2lvbl9mb3IKCiAgICByZWFsX3Rvb2wgPSBtY3AudG9vbAoKICAgIGRlZiBndWFyZGVkX3Rvb2woZm49Tm9uZSwgKiprd2FyZ3MpOgogICAgICAgICMgRGlwYWthaSBzZWJhZ2FpIG1jcC50b29sKGZuKSBkaSBzZW11YSBkb21haW4uCiAgICAgICAgaWYgZm4gaXMgTm9uZToKICAgICAgICAgICAgcmV0dXJuIHJlYWxfdG9vbCgqKmt3YXJncykKICAgICAgICByZXR1cm4gcmVhbF90b29sKGF1dGhvcml6ZShmbiwgcGVybWlzc2lvbl9mb3IoZm4uX19uYW1lX18pKSwgKiprd2FyZ3MpCgogICAgbWNwLnRvb2wgPSBndWFyZGVkX3Rvb2wKICAgIHRyeToKICAgICAgICBuYW1lczogbGlzdFtzdHJdID0gW10KICAgICAgICBmb3IgZG9tYWluIGluIERPTUFJTlM6CiAgICAgICAgICAgIG1vZHVsZSA9IGltcG9ydGxpYi5pbXBvcnRfbW9kdWxlKGYiLntkb21haW59IiwgX19wYWNrYWdlX18pCiAgICAgICAgICAgIG5hbWVzLmV4dGVuZChtb2R1bGUucmVnaXN0ZXIobWNwKSkKICAgICAgICByZXR1cm4gbmFtZXMKICAgIGZpbmFsbHk6CiAgICAgICAgbWNwLnRvb2wgPSByZWFsX3Rvb2wKCgpkZWYgY29udHJhY3RzKCkgLT4gbGlzdFtkaWN0XToKICAgICIiIktvbnRyYWsgc2VtdWEgdG9vbDogbmFtYSwgZGVza3JpcHNpLCBwZXJtaXNzaW9uLCBzY29wZS4iIiIKICAgIGltcG9ydCBpbXBvcnRsaWIKCiAgICBvdXQ6IGxpc3RbZGljdF0gPSBbXQogICAgZm9yIGRvbWFpbiBpbiBET01BSU5TOgogICAgICAgIG1vZHVsZSA9IGltcG9ydGxpYi5pbXBvcnRfbW9kdWxlKGYiLntkb21haW59IiwgX19wYWNrYWdlX18pCiAgICAgICAgZm9yIGNvbnRyYWN0IGluIGdldGF0dHIobW9kdWxlLCAiQ09OVFJBQ1RTIiwgW10pOgogICAgICAgICAgICBvdXQuYXBwZW5kKHsiZG9tYWluIjogZG9tYWluLCAqKmNvbnRyYWN0fSkKICAgIHJldHVybiBvdXQKCgpfX2FsbF9fID0gWyJET01BSU5TIiwgInJlZ2lzdGVyX2FsbCIsICJjb250cmFjdHMiXQo=
+"""Registry 15 domain MCP MUFAKAT (ChatGPT §7).
+
+Satu server FastMCP bernama ``mufakat`` tetap menjadi gateway
+tunggal (transport stdio). Tiap domain adalah modul terpisah di
+paket ini dan mendaftarkan tool-nya sendiri lewat ``register(mcp)``.
+
+Daftar domain: core, communication, meeting, task, memory, project,
+git, filesystem, terminal, testing, security, research, evaluation,
+approval, observability.
+"""
+
+from __future__ import annotations
+
+DOMAINS = (
+    "core",
+    "communication",
+    "meeting",
+    "task",
+    "memory",
+    "project",
+    "git",
+    "filesystem",
+    "terminal",
+    "testing",
+    "security",
+    "research",
+    "evaluation",
+    "approval",
+    "observability",
+)
+
+
+def register_all(mcp) -> list[str]:
+    """Daftarkan semua tool dari 15 domain ke ``mcp``.
+
+    Setiap ``mcp.tool(fn)`` di dalam ``register()`` domain dibungkus
+    dulu oleh authorization layer (GPT 5): permission dari
+    ``CONTRACTS`` ditegakkan SEBELUM tool dijalankan. Pembungkusan
+    dilakukan dengan menukar ``mcp.tool`` sementara di sini supaya
+    semua domain — termasuk yang ditambahkan nanti — otomatis
+    terlindungi tanpa mengubah tiap ``register()``.
+
+    Mengembalikan daftar nama tool yang terdaftar.
+    """
+    import importlib
+
+    from mufakat.mcp_server.authorization import authorize, permission_for
+
+    real_tool = mcp.tool
+
+    def guarded_tool(fn=None, **kwargs):
+        # Dipakai sebagai mcp.tool(fn) di semua domain.
+        if fn is None:
+            return real_tool(**kwargs)
+        return real_tool(authorize(fn, permission_for(fn.__name__)), **kwargs)
+
+    mcp.tool = guarded_tool
+    try:
+        names: list[str] = []
+        for domain in DOMAINS:
+            module = importlib.import_module(f".{domain}", __package__)
+            names.extend(module.register(mcp))
+        return names
+    finally:
+        mcp.tool = real_tool
+
+
+def contracts() -> list[dict]:
+    """Kontrak semua tool: nama, deskripsi, permission, scope."""
+    import importlib
+
+    out: list[dict] = []
+    for domain in DOMAINS:
+        module = importlib.import_module(f".{domain}", __package__)
+        for contract in getattr(module, "CONTRACTS", []):
+            out.append({"domain": domain, **contract})
+    return out
+
+
+__all__ = ["DOMAINS", "register_all", "contracts"]
