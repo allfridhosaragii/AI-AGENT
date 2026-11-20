@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mufakat"
+version = "0.1.0"
+description = "MUFAKAT — sistem multi-AI agent: debat, konsensus, dan verifikasi kode."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "MUFAKAT" }]
+dependencies = [
+    "langgraph",
+    "langgraph-checkpoint-sqlite",
+    "fastmcp",
+    "mcp",
+    "openai",
+    "pydantic>=2",
+    "typer",
+    "rich",
+    "sqlmodel",
+    "pyyaml",
+    "python-dotenv",
+    "fastapi",
+    "uvicorn",
+    "httpx",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "mypy",
+]
+
+[project.scripts]
+mufakat = "mufakat.cli:app"
+mufakat-mcp = "mufakat.mcp_server.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = false
+ignore_missing_imports = true
