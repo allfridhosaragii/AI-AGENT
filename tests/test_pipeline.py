@@ -61,13 +61,23 @@ def test_create_run_menulis_diff_dan_gates(tmp_path, monkeypatch):
     verdict_path = run_dir / "gates" / "verdict.json"
     assert verdict_path.is_file()
     verdict = json.loads(verdict_path.read_text(encoding="utf-8"))
-    assert verdict["status"] == "AMAN"
+    # Tanpa Docker gate gagal-tertutup -> BELUM_TERVERIFIKASI (C1/H3);
+    # dengan Docker, template bersih -> AMAN.
+    import shutil
+
+    if shutil.which("docker") is None:
+        assert verdict["status"] == "BELUM_TERVERIFIKASI"
+    else:  # pragma: no cover - Docker ada di host ini
+        assert verdict["status"] == "AMAN"
     for tool in ("semgrep", "bandit", "gitleaks", "pytest", "lint"):
         gate_file = run_dir / "gates" / f"{tool}.json"
         assert gate_file.is_file(), tool
         record = json.loads(gate_file.read_text(encoding="utf-8"))
-        assert record["passed"] is True, tool
-    assert result["verdict"] == "AMAN"
+        if shutil.which("docker") is None:
+            assert record["passed"] is False, tool
+        else:  # pragma: no cover - Docker ada di host ini
+            assert record["passed"] is True, tool
+    assert result["verdict"] == verdict["status"]
     assert result["diff"] is not None
     info = read_run(result["run_id"])
     assert info is not None
