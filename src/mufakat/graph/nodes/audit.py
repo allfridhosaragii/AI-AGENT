@@ -27,7 +27,7 @@ async def node(state, adapters=None, ctx=None):
             try:
                 from mufakat.gates.runner import run_all  # type: ignore
             except ImportError:
-                run_all = None
+                run_all = None  # type: ignore[assignment]
         if run_all is not None:
             try:
                 gate_results = run_all(worktree)
