@@ -1,1 +1,390 @@
-IiIiVGVzdCByZWdyZXNpIGF1ZGl0IHB1dGFyYW4gMiAoMjAgTm92IDIwMjYpIOKAlCBiYWdpYW4ga2VhbWFuYW4gTUNQIC8KYXBwcm92YWwgLyBydW5uZXIgUHl0aG9uIChwZWtlcmphIDIpLgoKLSBDMy1zaXNhOiByb290IHdvcmtzcGFjZSBla3NwbGlzaXQgKE1VRkFLQVRfV09SS1NQQUNFX1JPT1RTIHdhamliKSwKICBIT01FL2xlbHVodXIgSE9NRSBkaXRvbGFrLCBibG9ja2xpc3QgZGlwZXJsdWFzLgotIEdQVCAxOiBgYWxsb3dlZF9yb290c2AgZGloYXB1cyBkYXJpIHBhcmFtZXRlciBNQ1AgZmlsZXN5c3RlbV9yZWFkIC8KICBmaWxlc3lzdGVtX3Byb3Bvc2VfcGF0Y2guCi0gR1BUIDU6IGF1dGhvcml6YXRpb24gbGF5ZXIgZGl0ZWdha2thbiBTRUJFTFVNIHRvb2wgTUNQIGphbGFuOwogIG9wZXJhc2kgR2l0IGhhbnlhIHVudHVrIHJlcG8gdGVyZGFmdGFyLgotIE4xMiArIEdQVCAzOiBoYXNoIGtvc29uZyBkaXRvbGFrOyB2ZXJpZnkrY29uc3VtZSBhdG9taWs7CiAgZGVjaWRlX2FwcHJvdmFsIGF0b21pazsgYXBwcm92YWwgdGVyaWthdCByZXBvL2JyYW5jaC93b3JrdHJlZS4KLSBOODogYC0teWVzYCBkaWhhcHVzIGRhcmkgYG11ZmFrYXQgYXBwcm92ZWA7IENMSSB0YW1waWxrYW4gZGlmZgogIGxlbmdrYXA7IGFnZW4gQ0xJIGRpdG9sYWsgZGkgY3dkIHJlcG8gdXRhbWEgKERCIGFwcHJvdmFsKS4KLSBMNDogYWRhcHRlciBDTEkgbWVuZXJ1c2thbiBwcm9tcHQgZGVuZ2FuIGAtLWAuCiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IGFzeW5jaW8KaW1wb3J0IGluc3BlY3QKaW1wb3J0IHN1YnByb2Nlc3MKZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCgppbXBvcnQgcHl0ZXN0CgoKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyBDMy1zaXNhCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmRlZiB0ZXN0X2MzX3Npc2Ffcm9vdF9ob21lX2RpdG9sYWsodG1wX3BhdGgsIG1vbmtleXBhdGNoKToKICAgICIiIkMzLXNpc2EgKFBvQyk6IHNlcnZlciBqYWxhbiBkZW5nYW4gY3dkPUhPTUUgdGlkYWsgYm9sZWggbWVtYmFjYQogICAga3JlZGVuc2lhbCDigJQgcm9vdCBIT01FIC8gbGVsdWh1ciBIT01FIGRpdG9sYWsgbWVudGFoLW1lbnRhaC4iIiIKICAgIGZyb20gbXVmYWthdC5tY3Bfc2VydmVyLnRvb2xzIGltcG9ydCByZWFkX2ZpbGVfc2FmZSwgd29ya3NwYWNlX3Jvb3RzCgogICAgaG9tZSA9IFBhdGguaG9tZSgpCiAgICBtb25rZXlwYXRjaC5zZXRlbnYoIk1VRkFLQVRfV09SS1NQQUNFX1JPT1RTIiwgc3RyKGhvbWUpKQogICAgYXNzZXJ0IHdvcmtzcGFjZV9yb290cygpID09IFtdCiAgICBhc3NlcnQgcmVhZF9maWxlX3NhZmUoc3RyKGhvbWUgLyAiLmJhc2hyYyIpKVsib2siXSBpcyBGYWxzZQogICAgIyBMZWx1aHVyIEhPTUUgKC8pIGp1Z2EgZGl0b2xhay4KICAgIG1vbmtleXBhdGNoLnNldGVudigiTVVGQUtBVF9XT1JLU1BBQ0VfUk9PVFMiLCAiLyIpCiAgICBhc3NlcnQgd29ya3NwYWNlX3Jvb3RzKCkgPT0gW10KICAgICMgVGFucGEgZW52IHNhbWEgc2VrYWxpOiBmYWlsLWNsb3NlZC4KICAgIG1vbmtleXBhdGNoLmRlbGVudigiTVVGQUtBVF9XT1JLU1BBQ0VfUk9PVFMiKQogICAgYXNzZXJ0IHdvcmtzcGFjZV9yb290cygpID09IFtdCiAgICBhc3NlcnQgcmVhZF9maWxlX3NhZmUoc3RyKHRtcF9wYXRoIC8gIngudHh0IikpWyJvayJdIGlzIEZhbHNlCgoKZGVmIHRlc3RfYzNfc2lzYV9ibG9ja2xpc3RfZGlwZXJsdWFzX2RpdG9sYWsodG1wX3BhdGgsIG1vbmtleXBhdGNoKToKICAgICIiIkMzLXNpc2EgKFBvQyBhdWRpdCk6IC5ucG1yYywgLmRvY2tlci9jb25maWcuanNvbiwgLmJhc2hfaGlzdG9yeSwKICAgIC5nbnVwZywgLmt1YmUvY29uZmlnLCAucHlwaXJjLCAubXVmYWthdC9ydW5uZXIuanNvbiwKICAgIHJ1bnMvYXBwcm92YWxzLmRiLCAqLmRiLCAqLnNxbGl0ZTMsIENvb2tpZXMsIExvZ2luIERhdGEgZGl0b2xhawogICAgd2FsYXUgYmVyYWRhIGRpIGRhbGFtIHJvb3Qgd29ya3NwYWNlLiIiIgogICAgZnJvbSBtdWZha2F0Lm1jcF9zZXJ2ZXIudG9vbHMgaW1wb3J0IHJlYWRfZmlsZV9zYWZlCgogICAgbW9ua2V5cGF0Y2guc2V0ZW52KCJNVUZBS0FUX1dPUktTUEFDRV9ST09UUyIsIHN0cih0bXBfcGF0aCkpCiAgICBibG9ja2VkID0gWwogICAgICAgIHRtcF9wYXRoIC8gIi5ucG1yYyIsCiAgICAgICAgdG1wX3BhdGggLyAiLmRvY2tlciIgLyAiY29uZmlnLmpzb24iLAogICAgICAgIHRtcF9wYXRoIC8gIi5iYXNoX2hpc3RvcnkiLAogICAgICAgIHRtcF9wYXRoIC8gIi56c2hfaGlzdG9yeSIsCiAgICAgICAgdG1wX3BhdGggLyAiLmdudXBnIiAvICJwcml2YXRlLWtleXMtdjEuZCIgLyAia2V5IiwKICAgICAgICB0bXBfcGF0aCAvICIua3ViZSIgLyAiY29uZmlnIiwKICAgICAgICB0bXBfcGF0aCAvICIucHlwaXJjIiwKICAgICAgICB0bXBfcGF0aCAvICIubXVmYWthdCIgLyAicnVubmVyLmpzb24iLAogICAgICAgIHRtcF9wYXRoIC8gInJ1bnMiIC8gImFwcHJvdmFscy5kYiIsCiAgICAgICAgdG1wX3BhdGggLyAiZGF0YS5kYiIsCiAgICAgICAgdG1wX3BhdGggLyAiZGF0YS5zcWxpdGUzIiwKICAgICAgICB0bXBfcGF0aCAvICJDb29raWVzIiwKICAgICAgICB0bXBfcGF0aCAvICJMb2dpbiBEYXRhIiwKICAgICAgICB0bXBfcGF0aCAvICIubW96aWxsYSIgLyAicHJvZmlsZXMuaW5pIiwKICAgICAgICB0bXBfcGF0aCAvICIubG9jYWwiIC8gInNoYXJlIiAvICJ4IiwKICAgICAgICB0bXBfcGF0aCAvICJBcHBEYXRhIiAvICJ4IiwKICAgIF0KICAgIGZvciB0YXJnZXQgaW4gYmxvY2tlZDoKICAgICAgICB0YXJnZXQucGFyZW50Lm1rZGlyKHBhcmVudHM9VHJ1ZSwgZXhpc3Rfb2s9VHJ1ZSkKICAgICAgICB0YXJnZXQud3JpdGVfdGV4dCgicmFoYXNpYSIsIGVuY29kaW5nPSJ1dGYtOCIpCiAgICAgICAgYXNzZXJ0IHJlYWRfZmlsZV9zYWZlKHN0cih0YXJnZXQpKVsib2siXSBpcyBGYWxzZSwgdGFyZ2V0CiAgICBhbGxvd2VkID0gdG1wX3BhdGggLyAiYmlhc2EudHh0IgogICAgYWxsb3dlZC53cml0ZV90ZXh0KCJoYWxvIiwgZW5jb2Rpbmc9InV0Zi04IikKICAgIGFzc2VydCByZWFkX2ZpbGVfc2FmZShzdHIoYWxsb3dlZCkpWyJvayJdIGlzIFRydWUKCgpkZWYgdGVzdF9jM19zaXNhX2Vudl93YWppYl9idWthbl9jd2QodG1wX3BhdGgsIG1vbmtleXBhdGNoKToKICAgICIiIkMzLXNpc2E6IGN3ZCBCVUtBTiBsYWdpIHJvb3QgaW1wbGlzaXQg4oCUIGZpbGUgZGkgY3dkIHRhbnBhIGVudgogICAgZGl0b2xhaywgZGVuZ2FuIGVudiB5YW5nIG1lbnVuanVrIGN3ZCBkaWl6aW5rYW4uIiIiCiAgICBmcm9tIG11ZmFrYXQubWNwX3NlcnZlci50b29scyBpbXBvcnQgcmVhZF9maWxlX3NhZmUKCiAgICBtb25rZXlwYXRjaC5jaGRpcih0bXBfcGF0aCkKICAgIHRhcmdldCA9IHRtcF9wYXRoIC8gImEudHh0IgogICAgdGFyZ2V0LndyaXRlX3RleHQoIm9rIiwgZW5jb2Rpbmc9InV0Zi04IikKICAgIG1vbmtleXBhdGNoLmRlbGVudigiTVVGQUtBVF9XT1JLU1BBQ0VfUk9PVFMiLCByYWlzaW5nPUZhbHNlKQogICAgYXNzZXJ0IHJlYWRfZmlsZV9zYWZlKHN0cih0YXJnZXQpKVsib2siXSBpcyBGYWxzZQogICAgbW9ua2V5cGF0Y2guc2V0ZW52KCJNVUZBS0FUX1dPUktTUEFDRV9ST09UUyIsIHN0cih0bXBfcGF0aCkpCiAgICBhc3NlcnQgcmVhZF9maWxlX3NhZmUoc3RyKHRhcmdldCkpWyJvayJdIGlzIFRydWUKCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIEdQVCAxCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmRlZiB0ZXN0X2dwdDFfYWxsb3dlZF9yb290c19kaWhhcHVzX2RhcmlfcGFyYW1ldGVyX21jcCgpOgogICAgIiIiR1BUIDE6IGZpbGVzeXN0ZW1fcmVhZCAvIGZpbGVzeXN0ZW1fcHJvcG9zZV9wYXRjaCBUSURBSyBQVU5ZQQogICAgcGFyYW1ldGVyIGFsbG93ZWRfcm9vdHMg4oCUIHBlbWFuZ2dpbCBBSSB0aWRhayBiaXNhIG1lbWFuZ2dpbAogICAgZmlsZXN5c3RlbV9yZWFkKHBhdGg9Li4uLCBhbGxvd2VkX3Jvb3RzPVsiLyJdKS4iIiIKICAgIGZyb20gbXVmYWthdC5tY3Bfc2VydmVyLmRvbWFpbnMuZmlsZXN5c3RlbSBpbXBvcnQgKAogICAgICAgIGZpbGVzeXN0ZW1fcHJvcG9zZV9wYXRjaCwKICAgICAgICBmaWxlc3lzdGVtX3JlYWQsCiAgICApCgogICAgYXNzZXJ0ICJhbGxvd2VkX3Jvb3RzIiBub3QgaW4gaW5zcGVjdC5zaWduYXR1cmUoZmlsZXN5c3RlbV9yZWFkKS5wYXJhbWV0ZXJzCiAgICBhc3NlcnQgImFsbG93ZWRfcm9vdHMiIG5vdCBpbiBpbnNwZWN0LnNpZ25hdHVyZSgKICAgICAgICBmaWxlc3lzdGVtX3Byb3Bvc2VfcGF0Y2gpLnBhcmFtZXRlcnMKICAgIHdpdGggcHl0ZXN0LnJhaXNlcyhUeXBlRXJyb3IpOgogICAgICAgIGZpbGVzeXN0ZW1fcmVhZCgiL3NvbWUvcHJpdmF0ZS9maWxlIiwgYWxsb3dlZF9yb290cz1bIi8iXSkKICAgIHdpdGggcHl0ZXN0LnJhaXNlcyhUeXBlRXJyb3IpOgogICAgICAgIGZpbGVzeXN0ZW1fcHJvcG9zZV9wYXRjaCgiL3NvbWUvcHJpdmF0ZS9maWxlIiwgIngiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBhbGxvd2VkX3Jvb3RzPVsiLyJdKQoKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgR1BUIDUg4oCUIGF1dGhvcml6YXRpb24gbGF5ZXIgKyByZWdpc3RyeSByZXBvCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmRlZiBfZnJlc2hfbWNwKCk6CiAgICBmcm9tIGZhc3RtY3AgaW1wb3J0IEZhc3RNQ1AKCiAgICBmcm9tIG11ZmFrYXQubWNwX3NlcnZlci5kb21haW5zIGltcG9ydCByZWdpc3Rlcl9hbGwKCiAgICBtY3AgPSBGYXN0TUNQKCJtdWZha2F0LXRlc3QiKQogICAgcmVnaXN0ZXJfYWxsKG1jcCkKICAgIHJldHVybiBtY3AKCgphc3luYyBkZWYgX2NhbGwobWNwLCBuYW1lLCBhcmdzKToKICAgIHJlc3VsdCA9IGF3YWl0IG1jcC5jYWxsX3Rvb2wobmFtZSwgYXJncykKICAgIHJldHVybiByZXN1bHQuc3RydWN0dXJlZF9jb250ZW50IG9yIHt9CgoKZGVmIHRlc3RfZ3B0NV9naXRfdGFucGFfcmVnaXN0cnlfZGl0b2xha19tY3AodG1wX3BhdGgsIG1vbmtleXBhdGNoKToKICAgICIiIkdQVCA1OiBvcGVyYXNpIEdpdCBNQ1AgbWVub2xhayByZXBvIHlhbmcgdGlkYWsgdGVyZGFmdGFyIOKAlAogICAgU0VCRUxVTSB0b29sIGphbGFuIChhdXRob3JpemF0aW9uIGxheWVyKS4iIiIKICAgIG1vbmtleXBhdGNoLnNldGVudigiTVVGQUtBVF9SVU5ORVJfUkVHSVNUUlkiLAogICAgICAgICAgICAgICAgICAgICAgIHN0cih0bXBfcGF0aCAvICJydW5uZXIuanNvbiIpKQogICAgbW9ua2V5cGF0Y2guc2V0ZW52KCJNVUZBS0FUX1dPUktTUEFDRV9ST09UUyIsIHN0cih0bXBfcGF0aCkpCiAgICBtY3AgPSBfZnJlc2hfbWNwKCkKICAgIHJlcG8gPSB0bXBfcGF0aCAvICJyZXBvIgogICAgcmVwby5ta2RpcigpCiAgICBmb3IgdG9vbCBpbiAoImdpdF9zdGF0dXMiLCAiZ2l0X2RpZmYiLCAiZ2l0X2JyYW5jaCIpOgogICAgICAgIHJlcyA9IGFzeW5jaW8ucnVuKF9jYWxsKG1jcCwgdG9vbCwgeyJyZXBvX3BhdGgiOiBzdHIocmVwbyl9KSkKICAgICAgICBhc3NlcnQgcmVzLmdldCgib2siKSBpcyBGYWxzZSwgKHRvb2wsIHJlcykKICAgICAgICBhc3NlcnQgInRlcmRhZnRhciIgaW4gc3RyKHJlcy5nZXQoImVycm9yIiwgIiIpKSwgcmVzCgoKZGVmIHRlc3RfZ3B0NV9naXRfcmVwb190ZXJkYWZ0YXJfZGl0ZXJpbWEodG1wX3BhdGgsIG1vbmtleXBhdGNoKToKICAgICIiIkdQVCA1OiByZXBvIHRlcmRhZnRhciBsZXdhdCByZWdpc3RyeSBiaXNhIGRpcGFrYWkgZ2l0X3N0YXR1cy4iIiIKICAgIGZyb20gbXVmYWthdC5tY3Bfc2VydmVyIGltcG9ydCByZXBvX3JlZ2lzdHJ5CgogICAgbW9ua2V5cGF0Y2guc2V0ZW52KCJNVUZBS0FUX1JVTk5FUl9SRUdJU1RSWSIsCiAgICAgICAgICAgICAgICAgICAgICAgc3RyKHRtcF9wYXRoIC8gInJ1bm5lci5qc29uIikpCiAgICBtb25rZXlwYXRjaC5zZXRlbnYoIk1VRkFLQVRfV09SS1NQQUNFX1JPT1RTIiwgc3RyKHRtcF9wYXRoKSkKICAgIHJlcG8gPSB0bXBfcGF0aCAvICJyZXBvIgogICAgcmVwby5ta2RpcigpCiAgICBzdWJwcm9jZXNzLnJ1bihbImdpdCIsICJpbml0IiwgIi1xIiwgc3RyKHJlcG8pXSwgY2hlY2s9VHJ1ZSkKICAgIHJlcG9fcmVnaXN0cnkucmVnaXN0ZXJfcmVwbygiciIsIHN0cihyZXBvKSkKICAgIG1jcCA9IF9mcmVzaF9tY3AoKQogICAgcmVzID0gYXN5bmNpby5ydW4oX2NhbGwobWNwLCAiZ2l0X3N0YXR1cyIsIHsicmVwb19wYXRoIjogc3RyKHJlcG8pfSkpCiAgICBhc3NlcnQgcmVzLmdldCgib2siKSBpcyBUcnVlLCByZXMKCgpkZWYgdGVzdF9ncHQ1X3JlZ2lzdGVyX3JlcG9faG9tZV9kaXRvbGFrKHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICAiIiJOMzogSE9NRSB0aWRhayBiaXNhIGRpZGFmdGFya2FuIHNlYmFnYWkgcmVwby4iIiIKICAgIGZyb20gbXVmYWthdC5tY3Bfc2VydmVyIGltcG9ydCByZXBvX3JlZ2lzdHJ5CgogICAgbW9ua2V5cGF0Y2guc2V0ZW52KCJNVUZBS0FUX1JVTk5FUl9SRUdJU1RSWSIsCiAgICAgICAgICAgICAgICAgICAgICAgc3RyKHRtcF9wYXRoIC8gInJ1bm5lci5qc29uIikpCiAgICB3aXRoIHB5dGVzdC5yYWlzZXMoVmFsdWVFcnJvcik6CiAgICAgICAgcmVwb19yZWdpc3RyeS5yZWdpc3Rlcl9yZXBvKCJob21lIiwgc3RyKFBhdGguaG9tZSgpKSkKICAgIHdpdGggcHl0ZXN0LnJhaXNlcyhWYWx1ZUVycm9yKToKICAgICAgICByZXBvX3JlZ2lzdHJ5LnJlZ2lzdGVyX3JlcG8oInJvb3QiLCAiLyIpCgoKZGVmIHRlc3RfZ3B0NV9hcHByb3ZhbF9yZXF1aXJlZF90YW5wYV90b2tlbl9kaXRvbGFrX2R1bHUodG1wX3BhdGgsIG1vbmtleXBhdGNoKToKICAgICIiIkdQVCA1OiBnaXRfY29tbWl0IHRhbnBhIGFwcHJvdmFsX2lkL3Rva2VuIGRpdG9sYWsgYXV0aG9yaXphdGlvbgogICAgbGF5ZXIgc2ViZWx1bSB0b29sIGphbGFuLiIiIgogICAgbW9ua2V5cGF0Y2guc2V0ZW52KCJNVUZBS0FUX1JVTk5FUl9SRUdJU1RSWSIsCiAgICAgICAgICAgICAgICAgICAgICAgc3RyKHRtcF9wYXRoIC8gInJ1bm5lci5qc29uIikpCiAgICBtb25rZXlwYXRjaC5zZXRlbnYoIk1VRkFLQVRfV09SS1NQQUNFX1JPT1RTIiwgc3RyKHRtcF9wYXRoKSkKICAgIG1jcCA9IF9mcmVzaF9tY3AoKQogICAgcmVzID0gYXN5bmNpby5ydW4oX2NhbGwobWNwLCAiZ2l0X2NvbW1pdCIsIHsKICAgICAgICAicmVwb19wYXRoIjogc3RyKHRtcF9wYXRoKSwgIm1lc3NhZ2UiOiAieCJ9KSkKICAgIGFzc2VydCByZXMuZ2V0KCJvayIpIGlzIEZhbHNlLCByZXMKICAgIGFzc2VydCByZXMuZ2V0KCJhdXRob3JpemVkIikgaXMgRmFsc2UKCgpkZWYgdGVzdF9ncHQ1X3Rlcm1pbmFsX3J1bl9kaXRvbGFrX2xheWVyKHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICAiIiJHUFQgNTogdGVybWluYWxfcnVuIGRlbmdhbiBwZXJpbnRhaCBkaSBsdWFyIGFsbG93bGlzdCBkaXRvbGFrCiAgICBhdXRob3JpemF0aW9uIGxheWVyIChidWthbiBoYW55YSBkaSBkYWxhbSB0b29sKS4iIiIKICAgIG1vbmtleXBhdGNoLnNldGVudigiTVVGQUtBVF9XT1JLU1BBQ0VfUk9PVFMiLCBzdHIodG1wX3BhdGgpKQogICAgbWNwID0gX2ZyZXNoX21jcCgpCiAgICByZXMgPSBhc3luY2lvLnJ1bihfY2FsbChtY3AsICJ0ZXJtaW5hbF9ydW4iLCB7ImNvbW1hbmQiOiAicm0gLXJmIC8ifSkpCiAgICBhc3NlcnQgcmVzLmdldCgib2siKSBpcyBGYWxzZSwgcmVzCiAgICBhc3NlcnQgcmVzLmdldCgiYXV0aG9yaXplZCIpIGlzIEZhbHNlCiAgICByZXMgPSBhc3luY2lvLnJ1bihfY2FsbChtY3AsICJ0ZXJtaW5hbF9ydW4iLCB7ImNvbW1hbmQiOiAiZWNobyBoYWxvIn0pKQogICAgYXNzZXJ0IHJlcy5nZXQoIm9rIikgaXMgVHJ1ZSwgcmVzCgoKZGVmIHRlc3RfZ3B0NV9leGVjdXRlX2FwcHJvdmVkX3RhcmdldF9kaV9sdWFyX3dvcmtzcGFjZV9kaXRvbGFrKAogICAgICAgIHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICAiIiJHUFQgNTogdGVzdGluZ19ydW4gLyBzZWN1cml0eV9zY2FuX3NlY3JldHMgZGVuZ2FuIHRhcmdldCBkaSBsdWFyCiAgICB3b3Jrc3BhY2UgZGl0b2xhayBzZWJlbHVtIGVrc2VrdXNpLiIiIgogICAgbW9ua2V5cGF0Y2guc2V0ZW52KCJNVUZBS0FUX1dPUktTUEFDRV9ST09UUyIsIHN0cih0bXBfcGF0aCkpCiAgICBtb25rZXlwYXRjaC5zZXRlbnYoIk1VRkFLQVRfUlVOTkVSX1JFR0lTVFJZIiwKICAgICAgICAgICAgICAgICAgICAgICBzdHIodG1wX3BhdGggLyAicnVubmVyLmpzb24iKSkKICAgIG1jcCA9IF9mcmVzaF9tY3AoKQogICAgcmVzID0gYXN5bmNpby5ydW4oX2NhbGwobWNwLCAidGVzdGluZ19ydW4iLCB7InRhcmdldCI6ICIvZXRjIn0pKQogICAgYXNzZXJ0IHJlcy5nZXQoIm9rIikgaXMgRmFsc2UsIHJlcwogICAgYXNzZXJ0IHJlcy5nZXQoImF1dGhvcml6ZWQiKSBpcyBGYWxzZQoKCmRlZiB0ZXN0X2dwdDVfdG9vbF90aWRha19kaWtlbmFsX2RpdG9sYWsoKToKICAgICIiIkdQVCA1OiBmYWlsLWNsb3NlZCDigJQgdG9vbCB0YW5wYSBrb250cmFrIGRpdG9sYWsuIiIiCiAgICBmcm9tIG11ZmFrYXQubWNwX3NlcnZlci5hdXRob3JpemF0aW9uIGltcG9ydCBjaGVja19wZXJtaXNzaW9uCgogICAgYXNzZXJ0IGNoZWNrX3Blcm1pc3Npb24oInRvb2xfdGlkYWtfYWRhIiwgTm9uZSwge30pIGlzIG5vdCBOb25lCgoKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyBOMTIgKyBHUFQgMyDigJQgYXBwcm92YWwgc3RvcmUKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZGVmIF9hcHByb3ZlZCh0bXBfcGF0aCwgbW9ua2V5cGF0Y2gsIHJlcG89Tm9uZSwgYnJhbmNoPSJtYWluIik6CiAgICAiIiJBcHByb3ZhbCB5YW5nIGRpc2V0dWp1aSBkZW5nYW4gaWthdGFuIGhhc2gvcmVwby9icmFuY2guIiIiCiAgICBmcm9tIG11ZmFrYXQubWNwX3NlcnZlciBpbXBvcnQgYXBwcm92YWxfc3RvcmUKICAgIGZyb20gbXVmYWthdC5tY3Bfc2VydmVyLmRvbWFpbnMuYXBwcm92YWwgaW1wb3J0IGRlY2lkZV9hcHByb3ZhbAoKICAgIG1vbmtleXBhdGNoLnNldGVudigiTVVGQUtBVF9BUFBST1ZBTFNfREIiLCBzdHIodG1wX3BhdGggLyAiYXBwcm92YWxzLmRiIikpCiAgICBhcHByb3ZhbF9zdG9yZS5jcmVhdGVfYXBwcm92YWwoCiAgICAgICAgImFwcHItdGVzIiwgInRlcyIsIGRpZmZfaGFzaD0iYWJjMTIzIikKICAgIGRlY2lkZWQsIHRva2VuID0gYXBwcm92YWxfc3RvcmUuZGVjaWRlX2FwcHJvdmFsKAogICAgICAgICJhcHByLXRlcyIsIFRydWUsIGRlY2lkZWRfYnk9Imh1bWFuLWNsaSIsIGRpZmZfaGFzaD0iYWJjMTIzIiwKICAgICAgICByZXBvX3BhdGg9c3RyKHJlcG8pIGlmIHJlcG8gZWxzZSAiIiwKICAgICAgICBicmFuY2g9YnJhbmNoIGlmIHJlcG8gZWxzZSAiIikKICAgIGFzc2VydCBkZWNpZGVkIGlzIG5vdCBOb25lIGFuZCB0b2tlbgogICAgcmV0dXJuIGFwcHJvdmFsX3N0b3JlLCB0b2tlbiwgZGVjaWRlX2FwcHJvdmFsCgoKZGVmIHRlc3RfbjEyX2hhc2hfa29zb25nX2RpdG9sYWsodG1wX3BhdGgsIG1vbmtleXBhdGNoKToKICAgICIiIk4xMjogdmVyaWZ5X3Rva2VuIGRlbmdhbiBoYXNoIHNhYXQgaW5pIGtvc29uZyBESVRPTEFLIChkdWx1CiAgICBjZWsgZGlsZXdhdGkgYmlsYSBgaWYgY3VycmVudF9kaWZmX2hhc2ggYW5kIC4uLmApLiIiIgogICAgc3RvcmUsIHRva2VuLCBfID0gX2FwcHJvdmVkKHRtcF9wYXRoLCBtb25rZXlwYXRjaCkKICAgIHZhbGlkLCByZWFzb24gPSBzdG9yZS52ZXJpZnlfdG9rZW4oImFwcHItdGVzIiwgdG9rZW4sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGN1cnJlbnRfZGlmZl9oYXNoPSIiKQogICAgYXNzZXJ0IHZhbGlkIGlzIEZhbHNlCiAgICBhc3NlcnQgImtvc29uZyIgaW4gcmVhc29uCiAgICB2YWxpZCwgXyA9IHN0b3JlLnZlcmlmeV9hbmRfY29uc3VtZV90b2tlbigiYXBwci10ZXMiLCB0b2tlbiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGN1cnJlbnRfZGlmZl9oYXNoPSIiKQogICAgYXNzZXJ0IHZhbGlkIGlzIEZhbHNlCiAgICAjIFRva2VuIGJlbHVtIGhhbmd1cyBrYXJlbmEgdmVyaWZpa2FzaSBnYWdhbC4KICAgIGFzc2VydCBzdG9yZS5nZXRfYXBwcm92YWwoImFwcHItdGVzIilbInVzZWQiXSBpcyBGYWxzZQoKCmRlZiB0ZXN0X2dwdDNfdmVyaWZ5X2NvbnN1bWVfYXRvbWlrX3Rva2VuX2hhbnlhX3Nla2FsaSh0bXBfcGF0aCwgbW9ua2V5cGF0Y2gpOgogICAgIiIiR1BUIDM6IHZlcmlmeStjb25zdW1lIGF0b21payDigJQgcGVtYWthaWFuIGtlZHVhIHRva2VuIGRpdG9sYWsuIiIiCiAgICBzdG9yZSwgdG9rZW4sIF8gPSBfYXBwcm92ZWQodG1wX3BhdGgsIG1vbmtleXBhdGNoKQogICAgdmFsaWQsIF8gPSBzdG9yZS52ZXJpZnlfYW5kX2NvbnN1bWVfdG9rZW4oImFwcHItdGVzIiwgdG9rZW4sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjdXJyZW50X2RpZmZfaGFzaD0iYWJjMTIzIikKICAgIGFzc2VydCB2YWxpZCBpcyBUcnVlCiAgICB2YWxpZCwgcmVhc29uID0gc3RvcmUudmVyaWZ5X2FuZF9jb25zdW1lX3Rva2VuKCJhcHByLXRlcyIsIHRva2VuLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjdXJyZW50X2RpZmZfaGFzaD0iYWJjMTIzIikKICAgIGFzc2VydCB2YWxpZCBpcyBGYWxzZQogICAgYXNzZXJ0ICJkaXBha2FpIiBpbiByZWFzb24KCgpkZWYgdGVzdF9ncHQzX2FwcHJvdmFsX3RlcmlrYXRfcmVwb19kYW5fYnJhbmNoKHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICAiIiJHUFQgMzogYXBwcm92YWwgdGVyaWthdCByZXBvICsgYnJhbmNoIOKAlCBjb21taXQgZGFyaSByZXBvL2JyYW5jaAogICAgbGFpbiBkaXRvbGFrLiIiIgogICAgcmVwb19hID0gdG1wX3BhdGggLyAiYSIKICAgIHJlcG9fYiA9IHRtcF9wYXRoIC8gImIiCiAgICByZXBvX2EubWtkaXIoKQogICAgcmVwb19iLm1rZGlyKCkKICAgIHN0b3JlLCB0b2tlbiwgXyA9IF9hcHByb3ZlZCh0bXBfcGF0aCwgbW9ua2V5cGF0Y2gsIHJlcG89cmVwb19hLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyYW5jaD0ibWFpbiIpCiAgICB2YWxpZCwgXyA9IHN0b3JlLnZlcmlmeV90b2tlbigiYXBwci10ZXMiLCB0b2tlbiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGN1cnJlbnRfZGlmZl9oYXNoPSJhYmMxMjMiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmVwb19wYXRoPXN0cihyZXBvX2EpLCBicmFuY2g9Im1haW4iKQogICAgYXNzZXJ0IHZhbGlkIGlzIFRydWUKICAgIHZhbGlkLCByZWFzb24gPSBzdG9yZS52ZXJpZnlfdG9rZW4oImFwcHItdGVzIiwgdG9rZW4sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGN1cnJlbnRfZGlmZl9oYXNoPSJhYmMxMjMiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXBvX3BhdGg9c3RyKHJlcG9fYiksIGJyYW5jaD0ibWFpbiIpCiAgICBhc3NlcnQgdmFsaWQgaXMgRmFsc2UKICAgIGFzc2VydCAiUmVwbyIgaW4gcmVhc29uCiAgICB2YWxpZCwgcmVhc29uID0gc3RvcmUudmVyaWZ5X3Rva2VuKCJhcHByLXRlcyIsIHRva2VuLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjdXJyZW50X2RpZmZfaGFzaD0iYWJjMTIzIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmVwb19wYXRoPXN0cihyZXBvX2EpLCBicmFuY2g9ImxhaW4iKQogICAgYXNzZXJ0IHZhbGlkIGlzIEZhbHNlCiAgICBhc3NlcnQgIkJyYW5jaCIgaW4gcmVhc29uCgoKZGVmIHRlc3RfZ3B0M19kZWNpZGVfYXBwcm92YWxfaGFueWFfc2VrYWxpKHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICAiIiJHUFQgMzogZGVjaWRlX2FwcHJvdmFsIGF0b21payDigJQga2VwdXR1c2FuIGtlZHVhIHRpZGFrCiAgICBtZW5naGFzaWxrYW4gdG9rZW4gYmFydS4iIiIKICAgIGZyb20gbXVmYWthdC5tY3Bfc2VydmVyIGltcG9ydCBhcHByb3ZhbF9zdG9yZQoKICAgIG1vbmtleXBhdGNoLnNldGVudigiTVVGQUtBVF9BUFBST1ZBTFNfREIiLCBzdHIodG1wX3BhdGggLyAiYXBwcm92YWxzLmRiIikpCiAgICBhcHByb3ZhbF9zdG9yZS5jcmVhdGVfYXBwcm92YWwoImFwcHIteCIsICJ0ZXMiLCBkaWZmX2hhc2g9ImgxIikKICAgIHJlY29yZCwgdG9rZW4gPSBhcHByb3ZhbF9zdG9yZS5kZWNpZGVfYXBwcm92YWwoCiAgICAgICAgImFwcHIteCIsIFRydWUsIGRlY2lkZWRfYnk9Imh1bWFuLWNsaSIsIGRpZmZfaGFzaD0iaDEiKQogICAgYXNzZXJ0IHJlY29yZCBpcyBub3QgTm9uZSBhbmQgdG9rZW4KICAgIHJlY29yZDIsIHRva2VuMiA9IGFwcHJvdmFsX3N0b3JlLmRlY2lkZV9hcHByb3ZhbCgKICAgICAgICAiYXBwci14IiwgRmFsc2UsIGRlY2lkZWRfYnk9Imh1bWFuLWNsaSIsIGRpZmZfaGFzaD0iaDEiKQogICAgYXNzZXJ0IHRva2VuMiBpcyBOb25lCiAgICBhc3NlcnQgcmVjb3JkMlsic3RhdHVzIl0gPT0gImFwcHJvdmVkIgoKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgTjgg4oCUIGFnZW4gQ0xJIGRpIHdvcmt0cmVlL3NhbmRib3gKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZGVmIHRlc3RfbjhfcnVuX2NsaV90b2xha19jd2RfcmVwb191dGFtYSh0bXBfcGF0aCk6CiAgICAiIiJOODogYWdlbiBDTEkgZGl0b2xhayBiaWxhIGN3ZCBiZXJpc2kgREIgYXBwcm92YWwgdXRhbWEuIiIiCiAgICBmcm9tIG11ZmFrYXQuYWRhcHRlcnMuX2NsaSBpbXBvcnQgcnVuX2NsaQogICAgZnJvbSBtdWZha2F0LmFkYXB0ZXJzLmJhc2UgaW1wb3J0IEFkYXB0ZXJFcnJvcgoKICAgIG1haW5fcmVwbyA9IHRtcF9wYXRoIC8gInJlcG8iCiAgICAobWFpbl9yZXBvIC8gInJ1bnMiKS5ta2RpcihwYXJlbnRzPVRydWUpCiAgICAobWFpbl9yZXBvIC8gInJ1bnMiIC8gImFwcHJvdmFscy5kYiIpLndyaXRlX2J5dGVzKGIiU1FMaXRlIikKICAgIHdpdGggcHl0ZXN0LnJhaXNlcyhBZGFwdGVyRXJyb3IpOgogICAgICAgIGFzeW5jaW8ucnVuKHJ1bl9jbGkoInRlc3QiLCAidGVzdCIsIFsiZWNobyIsICJoaSJdLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgeyJjd2QiOiBzdHIobWFpbl9yZXBvKX0pKQogICAgIyBXb3JrdHJlZSB0YW5wYSBEQiBhcHByb3ZhbDogamFsYW4uCiAgICB3dCA9IHRtcF9wYXRoIC8gInd0IgogICAgd3QubWtkaXIoKQogICAgcmVwbHkgPSBhc3luY2lvLnJ1bihydW5fY2xpKCJ0ZXN0IiwgInRlc3QiLCBbImVjaG8iLCAiaGkiXSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7ImN3ZCI6IHN0cih3dCl9KSkKICAgIGFzc2VydCByZXBseS50ZXh0ID09ICJoaSIKCgpkZWYgdGVzdF9uOF9ydW5fY2xpX3RvbGFrX2N3ZF9ob21lKCk6CiAgICAiIiJOODogYWdlbiBDTEkgZGl0b2xhayBiaWxhIGN3ZCBhZGFsYWggSE9NRS4iIiIKICAgIGZyb20gbXVmYWthdC5hZGFwdGVycy5fY2xpIGltcG9ydCBydW5fY2xpCiAgICBmcm9tIG11ZmFrYXQuYWRhcHRlcnMuYmFzZSBpbXBvcnQgQWRhcHRlckVycm9yCgogICAgd2l0aCBweXRlc3QucmFpc2VzKEFkYXB0ZXJFcnJvcik6CiAgICAgICAgYXN5bmNpby5ydW4ocnVuX2NsaSgidGVzdCIsICJ0ZXN0IiwgWyJlY2hvIiwgImhpIl0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7ImN3ZCI6IHN0cihQYXRoLmhvbWUoKSl9KSkKCgpkZWYgdGVzdF9uOF9ydW5fY2xpX3Bha2FpX3dvcmt0cmVlX2RhcmlfY3R4KHRtcF9wYXRoKToKICAgICIiIk44OiBjdHggd29ya3RyZWUgZGlwYWthaSBzZWJhZ2FpIGN3ZCAocGlwZWxpbmUgbWVuZ2lzaSBjdHgKICAgIGRlbmdhbiB3b3JrdHJlZSBydW4pLiIiIgogICAgZnJvbSBtdWZha2F0LmFkYXB0ZXJzLl9jbGkgaW1wb3J0IHJ1bl9jbGkKCiAgICB3dCA9IHRtcF9wYXRoIC8gInd0IgogICAgd3QubWtkaXIoKQogICAgKHd0IC8gIm1hcmtlci50eHQiKS53cml0ZV90ZXh0KCJ4IiwgZW5jb2Rpbmc9InV0Zi04IikKICAgIHJlcGx5ID0gYXN5bmNpby5ydW4ocnVuX2NsaSgidGVzdCIsICJ0ZXN0IiwgWyJscyIsICJtYXJrZXIudHh0Il0sCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgeyJ3b3JrdHJlZSI6IHN0cih3dCl9KSkKICAgIGFzc2VydCAibWFya2VyLnR4dCIgaW4gcmVwbHkudGV4dAoKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgTDQg4oCUIHByb21wdCBkZW5nYW4gLS0KIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KQHB5dGVzdC5tYXJrLnBhcmFtZXRyaXplKCJtb2R1bGVfbmFtZSxhZGFwdGVyX2NscyIsIFsKICAgICgibXVmYWthdC5hZGFwdGVycy5jbGlfY29kZXgiLCAiQ29kZXhBZGFwdGVyIiksCiAgICAoIm11ZmFrYXQuYWRhcHRlcnMuY2xpX2NsYXVkZSIsICJDbGF1ZGVBZGFwdGVyIiksCiAgICAoIm11ZmFrYXQuYWRhcHRlcnMuY2xpX2NvcGlsb3QiLCAiQ29waWxvdEFkYXB0ZXIiKSwKICAgICgibXVmYWthdC5hZGFwdGVycy5jbGlfb3BlbmNvZGUiLCAiT3BlbkNvZGVBZGFwdGVyIiksCiAgICAoIm11ZmFrYXQuYWRhcHRlcnMuY2xpX2FudGlncmF2aXR5IiwgIkFudGlncmF2aXR5QWRhcHRlciIpLApdKQpkZWYgdGVzdF9sNF9hZGFwdGVyX3RlcnVza2FuX3Byb21wdF9kZW5nYW5fZGFzaGRhc2gobW9kdWxlX25hbWUsIGFkYXB0ZXJfY2xzLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbW9ua2V5cGF0Y2gpOgogICAgIiIiTDQ6IHByb21wdCAodGVybWFzdWsgeWFuZyBkaWF3YWxpIGAtYCkgZGl0ZXJ1c2thbiBzZXRlbGFoIGAtLWAKICAgIHNlaGluZ2dhIHRpZGFrIGRpYmFjYSBzZWJhZ2FpIG9wc2kgQ0xJLiIiIgogICAgaW1wb3J0IGltcG9ydGxpYgoKICAgIG1vZHVsZSA9IGltcG9ydGxpYi5pbXBvcnRfbW9kdWxlKG1vZHVsZV9uYW1lKQogICAgYWRhcHRlciA9IGdldGF0dHIobW9kdWxlLCBhZGFwdGVyX2NscykoKQogICAgY2FwdHVyZWQ6IGRpY3QgPSB7fQoKICAgIGFzeW5jIGRlZiBfZmFrZV9ydW5fY2xpKG5hbWUsIGZhbWlseSwgY21kLCBjdHgpOgogICAgICAgIGZyb20gbXVmYWthdC5hZGFwdGVycy5iYXNlIGltcG9ydCBSZXBseQoKICAgICAgICBjYXB0dXJlZFsiY21kIl0gPSBjbWQKICAgICAgICByZXR1cm4gUmVwbHkodGV4dD0ib2siLCBwcm92aWRlcj1uYW1lLCBmYW1pbHk9ZmFtaWx5LCByYXc9IiIpCgogICAgbW9ua2V5cGF0Y2guc2V0YXR0cihtb2R1bGUsICJydW5fY2xpIiwgX2Zha2VfcnVuX2NsaSkKICAgIGFzeW5jaW8ucnVuKGFkYXB0ZXIuYXNrKCItLWhlbHAgLS1ldmlsIiwgY3R4PXt9KSkKICAgIGNtZCA9IGNhcHR1cmVkWyJjbWQiXQogICAgYXNzZXJ0ICItLSIgaW4gY21kLCBjbWQKICAgIGRhc2hkYXNoID0gY21kLmluZGV4KCItLSIpCiAgICBwcm9tcHQgPSBjbWRbZGFzaGRhc2ggKyAxXQogICAgYXNzZXJ0IHByb21wdCA9PSAiLS1oZWxwIC0tZXZpbCIsIGNtZAogICAgYXNzZXJ0IGNtZFtkYXNoZGFzaCArIDE6XSA9PSBbIi0taGVscCAtLWV2aWwiXQo=
+"""Test regresi audit putaran 2 (20 Nov 2026) — bagian keamanan MCP /
+approval / runner Python (pekerja 2).
+
+- C3-sisa: root workspace eksplisit (MUFAKAT_WORKSPACE_ROOTS wajib),
+  HOME/leluhur HOME ditolak, blocklist diperluas.
+- GPT 1: `allowed_roots` dihapus dari parameter MCP filesystem_read /
+  filesystem_propose_patch.
+- GPT 5: authorization layer ditegakkan SEBELUM tool MCP jalan;
+  operasi Git hanya untuk repo terdaftar.
+- N12 + GPT 3: hash kosong ditolak; verify+consume atomik;
+  decide_approval atomik; approval terikat repo/branch/worktree.
+- N8: `--yes` dihapus dari `mufakat approve`; CLI tampilkan diff
+  lengkap; agen CLI ditolak di cwd repo utama (DB approval).
+- L4: adapter CLI meneruskan prompt dengan `--`.
+"""
+
+from __future__ import annotations
+
+import asyncio
+import inspect
+import subprocess
+from pathlib import Path
+
+import pytest
+
+
+# ---------------------------------------------------------------------------
+# C3-sisa
+# ---------------------------------------------------------------------------
+def test_c3_sisa_root_home_ditolak(tmp_path, monkeypatch):
+    """C3-sisa (PoC): server jalan dengan cwd=HOME tidak boleh membaca
+    kredensial — root HOME / leluhur HOME ditolak mentah-mentah."""
+    from mufakat.mcp_server.tools import read_file_safe, workspace_roots
+
+    home = Path.home()
+    monkeypatch.setenv("MUFAKAT_WORKSPACE_ROOTS", str(home))
+    assert workspace_roots() == []
+    assert read_file_safe(str(home / ".bashrc"))["ok"] is False
+    # Leluhur HOME (/) juga ditolak.
+    monkeypatch.setenv("MUFAKAT_WORKSPACE_ROOTS", "/")
+    assert workspace_roots() == []
+    # Tanpa env sama sekali: fail-closed.
+    monkeypatch.delenv("MUFAKAT_WORKSPACE_ROOTS")
+    assert workspace_roots() == []
+    assert read_file_safe(str(tmp_path / "x.txt"))["ok"] is False
+
+
+def test_c3_sisa_blocklist_diperluas_ditolak(tmp_path, monkeypatch):
+    """C3-sisa (PoC audit): .npmrc, .docker/config.json, .bash_history,
+    .gnupg, .kube/config, .pypirc, .mufakat/runner.json,
+    runs/approvals.db, *.db, *.sqlite3, Cookies, Login Data ditolak
+    walau berada di dalam root workspace."""
+    from mufakat.mcp_server.tools import read_file_safe
+
+    monkeypatch.setenv("MUFAKAT_WORKSPACE_ROOTS", str(tmp_path))
+    blocked = [
+        tmp_path / ".npmrc",
+        tmp_path / ".docker" / "config.json",
+        tmp_path / ".bash_history",
+        tmp_path / ".zsh_history",
+        tmp_path / ".gnupg" / "private-keys-v1.d" / "key",
+        tmp_path / ".kube" / "config",
+        tmp_path / ".pypirc",
+        tmp_path / ".mufakat" / "runner.json",
+        tmp_path / "runs" / "approvals.db",
+        tmp_path / "data.db",
+        tmp_path / "data.sqlite3",
+        tmp_path / "Cookies",
+        tmp_path / "Login Data",
+        tmp_path / ".mozilla" / "profiles.ini",
+        tmp_path / ".local" / "share" / "x",
+        tmp_path / "AppData" / "x",
+    ]
+    for target in blocked:
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text("rahasia", encoding="utf-8")
+        assert read_file_safe(str(target))["ok"] is False, target
+    allowed = tmp_path / "biasa.txt"
+    allowed.write_text("halo", encoding="utf-8")
+    assert read_file_safe(str(allowed))["ok"] is True
+
+
+def test_c3_sisa_env_wajib_bukan_cwd(tmp_path, monkeypatch):
+    """C3-sisa: cwd BUKAN lagi root implisit — file di cwd tanpa env
+    ditolak, dengan env yang menunjuk cwd diizinkan."""
+    from mufakat.mcp_server.tools import read_file_safe
+
+    monkeypatch.chdir(tmp_path)
+    target = tmp_path / "a.txt"
+    target.write_text("ok", encoding="utf-8")
+    monkeypatch.delenv("MUFAKAT_WORKSPACE_ROOTS", raising=False)
+    assert read_file_safe(str(target))["ok"] is False
+    monkeypatch.setenv("MUFAKAT_WORKSPACE_ROOTS", str(tmp_path))
+    assert read_file_safe(str(target))["ok"] is True
+
+
+# ---------------------------------------------------------------------------
+# GPT 1
+# ---------------------------------------------------------------------------
+def test_gpt1_allowed_roots_dihapus_dari_parameter_mcp():
+    """GPT 1: filesystem_read / filesystem_propose_patch TIDAK PUNYA
+    parameter allowed_roots — pemanggil AI tidak bisa memanggil
+    filesystem_read(path=..., allowed_roots=["/"])."""
+    from mufakat.mcp_server.domains.filesystem import (
+        filesystem_propose_patch,
+        filesystem_read,
+    )
+
+    assert "allowed_roots" not in inspect.signature(filesystem_read).parameters
+    assert "allowed_roots" not in inspect.signature(
+        filesystem_propose_patch).parameters
+    with pytest.raises(TypeError):
+        filesystem_read("/some/private/file", allowed_roots=["/"])
+    with pytest.raises(TypeError):
+        filesystem_propose_patch("/some/private/file", "x",
+                                 allowed_roots=["/"])
+
+
+# ---------------------------------------------------------------------------
+# GPT 5 — authorization layer + registry repo
+# ---------------------------------------------------------------------------
+def _fresh_mcp():
+    from fastmcp import FastMCP
+
+    from mufakat.mcp_server.domains import register_all
+
+    mcp = FastMCP("mufakat-test")
+    register_all(mcp)
+    return mcp
+
+
+async def _call(mcp, name, args):
+    result = await mcp.call_tool(name, args)
+    return result.structured_content or {}
+
+
+def test_gpt5_git_tanpa_registry_ditolak_mcp(tmp_path, monkeypatch):
+    """GPT 5: operasi Git MCP menolak repo yang tidak terdaftar —
+    SEBELUM tool jalan (authorization layer)."""
+    monkeypatch.setenv("MUFAKAT_RUNNER_REGISTRY",
+                       str(tmp_path / "runner.json"))
+    monkeypatch.setenv("MUFAKAT_WORKSPACE_ROOTS", str(tmp_path))
+    mcp = _fresh_mcp()
+    repo = tmp_path / "repo"
+    repo.mkdir()
+    for tool in ("git_status", "git_diff", "git_branch"):
+        res = asyncio.run(_call(mcp, tool, {"repo_path": str(repo)}))
+        assert res.get("ok") is False, (tool, res)
+        assert "terdaftar" in str(res.get("error", "")), res
+
+
+def test_gpt5_git_repo_terdaftar_diterima(tmp_path, monkeypatch):
+    """GPT 5: repo terdaftar lewat registry bisa dipakai git_status."""
+    from mufakat.mcp_server import repo_registry
+
+    monkeypatch.setenv("MUFAKAT_RUNNER_REGISTRY",
+                       str(tmp_path / "runner.json"))
+    monkeypatch.setenv("MUFAKAT_WORKSPACE_ROOTS", str(tmp_path))
+    repo = tmp_path / "repo"
+    repo.mkdir()
+    subprocess.run(["git", "init", "-q", str(repo)], check=True)
+    repo_registry.register_repo("r", str(repo))
+    mcp = _fresh_mcp()
+    res = asyncio.run(_call(mcp, "git_status", {"repo_path": str(repo)}))
+    assert res.get("ok") is True, res
+
+
+def test_gpt5_register_repo_home_ditolak(tmp_path, monkeypatch):
+    """N3: HOME tidak bisa didaftarkan sebagai repo."""
+    from mufakat.mcp_server import repo_registry
+
+    monkeypatch.setenv("MUFAKAT_RUNNER_REGISTRY",
+                       str(tmp_path / "runner.json"))
+    with pytest.raises(ValueError):
+        repo_registry.register_repo("home", str(Path.home()))
+    with pytest.raises(ValueError):
+        repo_registry.register_repo("root", "/")
+
+
+def test_gpt5_approval_required_tanpa_token_ditolak_dulu(tmp_path, monkeypatch):
+    """GPT 5: git_commit tanpa approval_id/token ditolak authorization
+    layer sebelum tool jalan."""
+    monkeypatch.setenv("MUFAKAT_RUNNER_REGISTRY",
+                       str(tmp_path / "runner.json"))
+    monkeypatch.setenv("MUFAKAT_WORKSPACE_ROOTS", str(tmp_path))
+    mcp = _fresh_mcp()
+    res = asyncio.run(_call(mcp, "git_commit", {
+        "repo_path": str(tmp_path), "message": "x"}))
+    assert res.get("ok") is False, res
+    assert res.get("authorized") is False
+
+
+def test_gpt5_terminal_run_ditolak_layer(tmp_path, monkeypatch):
+    """GPT 5: terminal_run dengan perintah di luar allowlist ditolak
+    authorization layer (bukan hanya di dalam tool)."""
+    monkeypatch.setenv("MUFAKAT_WORKSPACE_ROOTS", str(tmp_path))
+    mcp = _fresh_mcp()
+    res = asyncio.run(_call(mcp, "terminal_run", {"command": "rm -rf /"}))
+    assert res.get("ok") is False, res
+    assert res.get("authorized") is False
+    res = asyncio.run(_call(mcp, "terminal_run", {"command": "echo halo"}))
+    assert res.get("ok") is True, res
+
+
+def test_gpt5_execute_approved_target_di_luar_workspace_ditolak(
+        tmp_path, monkeypatch):
+    """GPT 5: testing_run / security_scan_secrets dengan target di luar
+    workspace ditolak sebelum eksekusi."""
+    monkeypatch.setenv("MUFAKAT_WORKSPACE_ROOTS", str(tmp_path))
+    monkeypatch.setenv("MUFAKAT_RUNNER_REGISTRY",
+                       str(tmp_path / "runner.json"))
+    mcp = _fresh_mcp()
+    res = asyncio.run(_call(mcp, "testing_run", {"target": "/etc"}))
+    assert res.get("ok") is False, res
+    assert res.get("authorized") is False
+
+
+def test_gpt5_tool_tidak_dikenal_ditolak():
+    """GPT 5: fail-closed — tool tanpa kontrak ditolak."""
+    from mufakat.mcp_server.authorization import check_permission
+
+    assert check_permission("tool_tidak_ada", None, {}) is not None
+
+
+# ---------------------------------------------------------------------------
+# N12 + GPT 3 — approval store
+# ---------------------------------------------------------------------------
+def _approved(tmp_path, monkeypatch, repo=None, branch="main"):
+    """Approval yang disetujui dengan ikatan hash/repo/branch."""
+    from mufakat.mcp_server import approval_store
+    from mufakat.mcp_server.domains.approval import decide_approval
+
+    monkeypatch.setenv("MUFAKAT_APPROVALS_DB", str(tmp_path / "approvals.db"))
+    approval_store.create_approval(
+        "appr-tes", "tes", diff_hash="abc123")
+    decided, token = approval_store.decide_approval(
+        "appr-tes", True, decided_by="human-cli", diff_hash="abc123",
+        repo_path=str(repo) if repo else "",
+        branch=branch if repo else "")
+    assert decided is not None and token
+    return approval_store, token, decide_approval
+
+
+def test_n12_hash_kosong_ditolak(tmp_path, monkeypatch):
+    """N12: verify_token dengan hash saat ini kosong DITOLAK (dulu
+    cek dilewati bila `if current_diff_hash and ...`)."""
+    store, token, _ = _approved(tmp_path, monkeypatch)
+    valid, reason = store.verify_token("appr-tes", token,
+                                       current_diff_hash="")
+    assert valid is False
+    assert "kosong" in reason
+    valid, _ = store.verify_and_consume_token("appr-tes", token,
+                                              current_diff_hash="")
+    assert valid is False
+    # Token belum hangus karena verifikasi gagal.
+    assert store.get_approval("appr-tes")["used"] is False
+
+
+def test_gpt3_verify_consume_atomik_token_hanya_sekali(tmp_path, monkeypatch):
+    """GPT 3: verify+consume atomik — pemakaian kedua token ditolak."""
+    store, token, _ = _approved(tmp_path, monkeypatch)
+    valid, _ = store.verify_and_consume_token("appr-tes", token,
+                                              current_diff_hash="abc123")
+    assert valid is True
+    valid, reason = store.verify_and_consume_token("appr-tes", token,
+                                                   current_diff_hash="abc123")
+    assert valid is False
+    assert "dipakai" in reason
+
+
+def test_gpt3_approval_terikat_repo_dan_branch(tmp_path, monkeypatch):
+    """GPT 3: approval terikat repo + branch — commit dari repo/branch
+    lain ditolak."""
+    repo_a = tmp_path / "a"
+    repo_b = tmp_path / "b"
+    repo_a.mkdir()
+    repo_b.mkdir()
+    store, token, _ = _approved(tmp_path, monkeypatch, repo=repo_a,
+                                branch="main")
+    valid, _ = store.verify_token("appr-tes", token,
+                                  current_diff_hash="abc123",
+                                  repo_path=str(repo_a), branch="main")
+    assert valid is True
+    valid, reason = store.verify_token("appr-tes", token,
+                                       current_diff_hash="abc123",
+                                       repo_path=str(repo_b), branch="main")
+    assert valid is False
+    assert "Repo" in reason
+    valid, reason = store.verify_token("appr-tes", token,
+                                       current_diff_hash="abc123",
+                                       repo_path=str(repo_a), branch="lain")
+    assert valid is False
+    assert "Branch" in reason
+
+
+def test_gpt3_decide_approval_hanya_sekali(tmp_path, monkeypatch):
+    """GPT 3: decide_approval atomik — keputusan kedua tidak
+    menghasilkan token baru."""
+    from mufakat.mcp_server import approval_store
+
+    monkeypatch.setenv("MUFAKAT_APPROVALS_DB", str(tmp_path / "approvals.db"))
+    approval_store.create_approval("appr-x", "tes", diff_hash="h1")
+    record, token = approval_store.decide_approval(
+        "appr-x", True, decided_by="human-cli", diff_hash="h1")
+    assert record is not None and token
+    record2, token2 = approval_store.decide_approval(
+        "appr-x", False, decided_by="human-cli", diff_hash="h1")
+    assert token2 is None
+    assert record2["status"] == "approved"
+
+
+# ---------------------------------------------------------------------------
+# N8 — agen CLI di worktree/sandbox
+# ---------------------------------------------------------------------------
+def test_n8_run_cli_tolak_cwd_repo_utama(tmp_path):
+    """N8: agen CLI ditolak bila cwd berisi DB approval utama."""
+    from mufakat.adapters._cli import run_cli
+    from mufakat.adapters.base import AdapterError
+
+    main_repo = tmp_path / "repo"
+    (main_repo / "runs").mkdir(parents=True)
+    (main_repo / "runs" / "approvals.db").write_bytes(b"SQLite")
+    with pytest.raises(AdapterError):
+        asyncio.run(run_cli("test", "test", ["echo", "hi"],
+                            {"cwd": str(main_repo)}))
+    # Worktree tanpa DB approval: jalan.
+    wt = tmp_path / "wt"
+    wt.mkdir()
+    reply = asyncio.run(run_cli("test", "test", ["echo", "hi"],
+                                {"cwd": str(wt)}))
+    assert reply.text == "hi"
+
+
+def test_n8_run_cli_tolak_cwd_home():
+    """N8: agen CLI ditolak bila cwd adalah HOME."""
+    from mufakat.adapters._cli import run_cli
+    from mufakat.adapters.base import AdapterError
+
+    with pytest.raises(AdapterError):
+        asyncio.run(run_cli("test", "test", ["echo", "hi"],
+                            {"cwd": str(Path.home())}))
+
+
+def test_n8_run_cli_pakai_worktree_dari_ctx(tmp_path):
+    """N8: ctx worktree dipakai sebagai cwd (pipeline mengisi ctx
+    dengan worktree run)."""
+    from mufakat.adapters._cli import run_cli
+
+    wt = tmp_path / "wt"
+    wt.mkdir()
+    (wt / "marker.txt").write_text("x", encoding="utf-8")
+    reply = asyncio.run(run_cli("test", "test", ["ls", "marker.txt"],
+                                {"worktree": str(wt)}))
+    assert "marker.txt" in reply.text
+
+
+# ---------------------------------------------------------------------------
+# L4 — prompt dengan --
+# ---------------------------------------------------------------------------
+@pytest.mark.parametrize("module_name,adapter_cls", [
+    ("mufakat.adapters.cli_codex", "CodexAdapter"),
+    ("mufakat.adapters.cli_claude", "ClaudeAdapter"),
+    ("mufakat.adapters.cli_copilot", "CopilotAdapter"),
+    ("mufakat.adapters.cli_opencode", "OpenCodeAdapter"),
+    ("mufakat.adapters.cli_antigravity", "AntigravityAdapter"),
+])
+def test_l4_adapter_teruskan_prompt_dengan_dashdash(module_name, adapter_cls,
+                                                    monkeypatch):
+    """L4: prompt (termasuk yang diawali `-`) diteruskan setelah `--`
+    sehingga tidak dibaca sebagai opsi CLI."""
+    import importlib
+
+    module = importlib.import_module(module_name)
+    adapter = getattr(module, adapter_cls)()
+    captured: dict = {}
+
+    async def _fake_run_cli(name, family, cmd, ctx):
+        from mufakat.adapters.base import Reply
+
+        captured["cmd"] = cmd
+        return Reply(text="ok", provider=name, family=family, raw="")
+
+    monkeypatch.setattr(module, "run_cli", _fake_run_cli)
+    asyncio.run(adapter.ask("--help --evil", ctx={}))
+    cmd = captured["cmd"]
+    assert "--" in cmd, cmd
+    dashdash = cmd.index("--")
+    prompt = cmd[dashdash + 1]
+    assert prompt == "--help --evil", cmd
+    assert cmd[dashdash + 1:] == ["--help --evil"]
