@@ -32,7 +32,12 @@ def validate_run_id(run_id: str) -> str:
 def _is_dangerous_target(target: Path, repo_path: Path | None) -> bool:
     """True bila ``target`` tidak boleh dihapus: root, home, repo itu
     sendiri, atau leluhur repo. Mencegah ``cleanup("/")`` / ``cleanup(home)``
-    menghapus sistem lewat ``shutil.rmtree``."""
+    menghapus sistem lewat ``shutil.rmtree``.
+
+    Bila ``repo_path`` diketahui, target JUGA harus berada di bawah
+    ``<repo>/runs/<run_id>/wt`` (audit C2) — worktree di luar pola
+    itu tidak boleh dihapus lewat sini.
+    """
     try:
         resolved = target.resolve()
     except OSError:
@@ -56,6 +61,15 @@ def _is_dangerous_target(target: Path, repo_path: Path | None) -> bool:
             resolved == repo_resolved or resolved in repo_resolved.parents
         ):
             return True
+        # C2: bila repo diketahui, hapus hanya di bawah runs/<id>/wt.
+        if repo_resolved is not None:
+            try:
+                rel = resolved.relative_to(repo_resolved / "runs")
+            except ValueError:
+                return True
+            parts = rel.parts
+            if len(parts) < 2 or parts[1] != "wt":
+                return True
     return False
 
 
