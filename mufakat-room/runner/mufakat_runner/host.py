@@ -28,6 +28,7 @@ Keamanan:
 
 from __future__ import annotations
 
+import hmac
 import json
 import struct
 import sys
@@ -39,6 +40,11 @@ from mufakat_runner import worktree as worktree_mod
 
 __all__ = ["encode_message", "decode_message", "handle_command", "serve", "main"]
 
+# Batas ukuran satu pesan native messaging (Chrome membatasi ~64 MB;
+# 16 MB sudah jauh di atas kebutuhan perintah worktree/gates dan
+# mencegah host membaca alokasi raksasa dari header yang dibuat-buat).
+MAX_MESSAGE_BYTES = 16 * 1024 * 1024
+
 
 def encode_message(payload: dict) -> bytes:
     """Encode satu pesan native messaging (length-prefixed)."""
@@ -49,11 +55,16 @@ def encode_message(payload: dict) -> bytes:
 def decode_message(buffer: bytes) -> tuple[dict, bytes]:
     """Decode satu pesan dari awal ``buffer``; kembalikan (pesan, sisa).
 
-    Melempar ``ValueError`` bila buffer belum berisi satu pesan lengkap.
+    Melempar ``ValueError`` bila buffer belum berisi satu pesan lengkap
+    atau panjang pesan melebihi :data:`MAX_MESSAGE_BYTES`.
     """
     if len(buffer) < 4:
         raise ValueError("Buffer belum berisi header panjang pesan.")
     (length,) = struct.unpack("<I", buffer[:4])
+    if length > MAX_MESSAGE_BYTES:
+        raise ValueError(
+            f"Panjang pesan {length} melebihi batas {MAX_MESSAGE_BYTES} byte."
+        )
     if len(buffer) < 4 + length:
         raise ValueError("Buffer belum berisi satu pesan lengkap.")
     payload = json.loads(buffer[4:4 + length].decode("utf-8"))
@@ -71,6 +82,8 @@ class RunnerHost:
 
     # -- dispatch --------------------------------------------------------
     def handle_command(self, message: dict) -> dict:
+        if not isinstance(message, dict):
+            return {"ok": False, "error": "Perintah harus object JSON."}
         command = message.get("command")
         handler = {
             "init_workspace": self._init_workspace,
@@ -85,34 +98,63 @@ class RunnerHost:
             return {"ok": False, "error": f"Perintah tidak dikenal: {command!r}"}
         try:
             return handler(message)
-        except (ValueError, OSError) as exc:
-            return {"ok": False, "error": str(exc)}
+        except Exception as exc:  # noqa: BLE001 - host tidak boleh mati
+            # Dulu hanya (ValueError, OSError) yang ditangkap: TypeError /
+            # AttributeError dari pesan bertipe salah (mis. files berupa
+            # string, repo_path berupa int) membunuh loop serve tanpa
+            # balasan apa pun ke ekstensi.
+            return {"ok": False, "error": f"{type(exc).__name__}: {exc}"}
+
+    @staticmethod
+    def _require_str(message: dict, key: str, default: str = "") -> str:
+        value = message.get(key, default)
+        if not isinstance(value, str):
+            raise ValueError(f"Field {key!r} harus string.")
+        return value
 
     # -- perintah ---------------------------------------------------------
     def _init_workspace(self, message: dict) -> dict:
         path = worktree_mod.init_workspace(
-            message.get("repo_path", "."), str(message.get("run_id", "room"))
+            self._require_str(message, "repo_path", "."),
+            self._require_str(message, "run_id", "room"),
         )
         return {"ok": True, "worktree": str(path)}
 
     def _apply_files(self, message: dict) -> dict:
+        files = message.get("files") or []
+        if not isinstance(files, list):
+            raise ValueError("Field 'files' harus list.")
         applied = worktree_mod.apply_files(
-            message.get("worktree", "."), message.get("files") or []
+            self._require_str(message, "worktree", "."), files
         )
         return {"ok": True, "applied": applied}
 
     def _run_gates(self, message: dict) -> dict:
         target = message.get("target_dir") or message.get("worktree") or "."
-        results = gates_mod.run_gates(target, profile=message.get("profile", "python"))
+        if not isinstance(target, str):
+            raise ValueError("Field 'target_dir' harus string.")
+        profile = message.get("profile", "python")
+        if not isinstance(profile, str):
+            raise ValueError("Field 'profile' harus string.")
+        results = gates_mod.run_gates(target, profile=profile)
         verdict_result = verdict_mod.apply_verdict(results)
         return {"ok": True, "results": results, "verdict": verdict_result}
 
     def _diff(self, message: dict) -> dict:
-        return {"ok": True, "diff": worktree_mod.diff(message.get("worktree", "."))}
+        return {
+            "ok": True,
+            "diff": worktree_mod.diff(self._require_str(message, "worktree", ".")),
+        }
 
     def _commit(self, message: dict) -> dict:
         token = message.get("approval_token")
-        if not self.approval_token or token != self.approval_token or self._approval_used:
+        # compare_digest: perbandingan token waktu-konstan.
+        token_ok = (
+            isinstance(token, str)
+            and self.approval_token is not None
+            and hmac.compare_digest(token, self.approval_token)
+        )
+        if not token_ok or self._approval_used:
             return {
                 "ok": False,
                 "error": "commit ditolak: butuh approval token yang valid dari UI.",
@@ -121,13 +163,17 @@ class RunnerHost:
         return {
             "ok": True,
             "committed": worktree_mod.commit(
-                message.get("worktree", "."), str(message.get("message", "MUFAKAT Room"))
+                self._require_str(message, "worktree", "."),
+                self._require_str(message, "message", "MUFAKAT Room"),
             ),
         }
 
     def _cleanup(self, message: dict) -> dict:
+        repo_path = message.get("repo_path")
+        if repo_path is not None and not isinstance(repo_path, str):
+            raise ValueError("Field 'repo_path' harus string.")
         removed = worktree_mod.cleanup(
-            message.get("worktree", "."), message.get("repo_path")
+            self._require_str(message, "worktree", "."), repo_path
         )
         return {"ok": True, "removed": removed}
 
@@ -154,6 +200,14 @@ def serve(approval_token: str | None = None) -> None:
         if len(header) < 4:
             break  # stdin ditutup (Chrome menutup host) -> keluar
         (length,) = struct.unpack("<I", header)
+        if length > MAX_MESSAGE_BYTES:
+            # Pesan raksasa tidak dibaca (stream tidak bisa di-resync
+            # dengan aman) — balas error lalu keluar; Chrome me-restart host.
+            stdout.write(encode_message(
+                {"ok": False, "error": f"Pesan melebihi batas {MAX_MESSAGE_BYTES} byte."}
+            ))
+            stdout.flush()
+            break
         data = stdin.read(length)
         if len(data) < length:
             break
