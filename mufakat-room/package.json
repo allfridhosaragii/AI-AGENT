@@ -1,1 +1,29 @@
-{"dependencies":{"dexie":"^4.0.0","react":"^18.3.0","react-dom":"^18.3.0","turndown":"^4.0.2","xstate":"^5.0.0","zod":"^3.23.0"},"description":"MUFAKAT Room — moderator rapat multi-AI via login browser (semi-manual, Assisted Fill opt-in Fase 2).","devDependencies":{"@types/react":"^18.3.0","@types/react-dom":"^18.3.0","@types/turndown":"^4.0.0","typescript":"^5.5.0","vitest":"^2.0.0","wxt":"^0.19.0"},"name":"mufakat-room","private":true,"scripts":{"build":"wxt build","dev":"wxt","test":"vitest run","typecheck":"tsc --noEmit"},"type":"module","version":"0.1.0"}
+{
+  "dependencies": {
+    "dexie": "^4.0.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "turndown": "^4.0.2",
+    "xstate": "^5.0.0",
+    "zod": "^3.23.0"
+  },
+  "description": "MUFAKAT Room — moderator rapat multi-AI via login browser (browser-only, Manual Handoff).",
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@types/turndown": "^5.0.5",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0",
+    "wxt": "^0.19.0"
+  },
+  "name": "mufakat-room",
+  "private": true,
+  "scripts": {
+    "build": "wxt build",
+    "dev": "wxt",
+    "test": "vitest run",
+    "typecheck": "wxt prepare && tsc --noEmit"
+  },
+  "type": "module",
+  "version": "0.1.0"
+}
