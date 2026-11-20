@@ -1,0 +1,7 @@
+#!/bin/sh
+# Wrapper executable Local Runner MUFAKAT Room (audit H6).
+# Chrome menjalankan `path` di manifest native messaging dengan argumen
+# `chrome-extension://<id>/` — wrapper ini yang memanggil host Python,
+# BUKAN interpreter Python langsung (dulu path = sys.executable sehingga
+# Python mencoba membuka file bernama chrome-extension://... dan keluar).
+exec python3 -m mufakat_runner.host "$@"
