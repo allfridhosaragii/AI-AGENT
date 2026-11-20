@@ -1,34 +1,43 @@
-"""Gate trivy (T10).
+"""Gate trivy (T10, diperbaiki audit 20 Nov 2026: C1 + H3).
 
-Bila binary trivy ada: jalankan ``trivy fs`` JSON dan laporkan CVE
-HIGH/CRITICAL yang fixable. Bila tidak ada: passed True dengan
-finding info "trivy tidak tersedia - belum terverifikasi" — tidak
-pernah raise bila tool hilang.
+Dijalankan HANYA di dalam sandbox Docker. Tanpa Docker: gagal
+tertutup (``sandbox-unavailable``) — dulu tool tidak ada justru
+``passed=True`` (fail-open). Bila binary trivy tidak ada di dalam
+sandbox: gagal-tertutup (``tool-missing``), bukan AMAN.
+Hanya CVE HIGH/CRITICAL yang fixable yang menggagalkan gate.
 """
 
 from __future__ import annotations
 
 import json
-import shutil
-import subprocess
 
 try:
+    from ._sandbox import run_gate_in_sandbox, tool_missing
     from .runner import GateResult
 except ImportError:  # pragma: no cover
+    from mufakat.gates._sandbox import run_gate_in_sandbox, tool_missing  # type: ignore
     from mufakat.gates.runner import GateResult  # type: ignore
 
 
-def _run_binary(target_dir) -> GateResult | None:
-    if shutil.which("trivy") is None:
-        return None
+def run(target_dir, sandbox_runner=None) -> GateResult:
+    """Jalankan gate trivy atas ``target_dir`` (di sandbox)."""
+    result = run_gate_in_sandbox(
+        "trivy", target_dir,
+        "command -v trivy >/dev/null 2>&1 || { echo TOOL_MISSING; exit 127; }; "
+        "trivy fs --format json --quiet .",
+        timeout=600, read_only=True, sandbox_runner=sandbox_runner)
+    if isinstance(result, GateResult):
+        return result
+    output = result.get("stdout") or ""
+    if "TOOL_MISSING" in output or result.get("exit_code") == 127:
+        return tool_missing("trivy", "trivy")
     try:
-        result = subprocess.run(
-            ["trivy", "fs", "--format", "json", "--quiet", str(target_dir)],
-            capture_output=True, text=True, timeout=600,
-        )
-        data = json.loads(result.stdout or "{}")
-    except (OSError, subprocess.SubprocessError, ValueError):
-        return None
+        data = json.loads(output or "{}")
+    except ValueError:
+        return GateResult(tool="trivy", passed=False, findings=[{
+            "severity": "HIGH", "file": "", "line": 0, "rule": "trivy-error",
+            "message": "Output trivy bukan JSON yang valid.",
+        }])
     findings = []
     for result_item in data.get("Results", []) or []:
         for vuln in result_item.get("Vulnerabilities", []) or []:
@@ -47,17 +56,3 @@ def _run_binary(target_dir) -> GateResult | None:
                     ),
                 })
     return GateResult(tool="trivy", passed=not findings, findings=findings)
-
-
-def run(target_dir) -> GateResult:
-    """Jalankan gate trivy atas ``target_dir``."""
-    try:
-        binary = _run_binary(target_dir)
-    except Exception:
-        binary = None
-    if binary is not None:
-        return binary
-    return GateResult(tool="trivy", passed=True, findings=[{
-        "severity": "INFO", "file": "", "line": 0, "rule": "trivy-missing",
-        "message": "trivy tidak tersedia - belum terverifikasi",
-    }])
