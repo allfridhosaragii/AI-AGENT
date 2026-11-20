@@ -1,1 +1,68 @@
-Ly8gTVVGQUtBVCBSb29tIOKAlCBTdG9yYWdlIERleGllIChDbGF1ZGUgwqdUMikuCi8vIHJ1bnMsIG1lc3NhZ2VzLCBnYXRlUmVzdWx0cywgdXNhZ2UuIFNlbXVhIGRhdGEgbG9rYWwgKEluZGV4ZWREQiArCi8vIGNocm9tZS5zdG9yYWdlLmxvY2FsKS4gVGlkYWsgYWRhIHNlcnZlciBla3N0ZXJuYWwgLyBhbmFseXRpY3MuCmltcG9ydCBEZXhpZSwgeyB0eXBlIFRhYmxlIH0gZnJvbSAnZGV4aWUnOwoKZXhwb3J0IGludGVyZmFjZSBSdW5SZWNvcmQgewogIGlkOiBzdHJpbmc7CiAgaWRlYTogc3RyaW5nOwogIHN0YXRlOiBzdHJpbmc7CiAgcm91bmRObzogbnVtYmVyOwogIHByb3ZpZGVyczogc3RyaW5nW107CiAgY3JlYXRlZEF0OiBudW1iZXI7CiAgLyoqIE41IChwdXRhcmFuIDIpOiBsYWJlbE1hcCBwZXIgcm9uZGUg4oCUIGxhYmVsIGFub25pbSAoQS9CL0MpIC0+IHByb3ZpZGVyLgogICAqICBEaWJ1YXQgU0VLQUxJIHNhYXQgbWFzdWsgZmFzZSBrcml0aWsgcm9uZGUgaXR1LCBsYWx1IGRpcGFrYWkgZGkKICAgKiAga3JpdGlrLCByYXBhdCwgZGFuIHNwZXNpZmlrYXNpLiBUYW5wYSBpbmkgbGFiZWwgYmVydWJhaCBzZXRpYXAKICAgKiAgIlN1c3VuIHByb21wdCIgZGFuIHBlbWVuYW5nIHZvdGluZyB0aWRhayBiaXNhIGRpcGV0YWthbiBiYWxpay4KICAgKiAgUHJvcGVydGkgYmFydSBwYWRhIHJlY29yZCBEZXhpZSB0aWRhayBidXR1aCBtaWdyYXNpIHNrZW1hIChidWthbgogICAqICBpbmRleCk7IHJlY29yZCBsYW1hIHlhbmcgYmVsdW0gcHVueWEgbGFiZWxNYXAgZGliYWNhIHNlYmFnYWkKICAgKiAgdW5kZWZpbmVkIGRhbiBkaXRhbmdhbmkgcGVtYW5nZ2lsIChzcGVzaWZpa2FzaSBtZW5vbGFrIGZhbGxiYWNrKS4gKi8KICBsYWJlbE1hcD86IFJlY29yZDxudW1iZXIsIFJlY29yZDxzdHJpbmcsIHN0cmluZz4+Owp9CgpleHBvcnQgaW50ZXJmYWNlIE1lc3NhZ2VSZWNvcmQgewogIGlkPzogbnVtYmVyOwogIHJ1bklkOiBzdHJpbmc7CiAgcm91bmQ6IG51bWJlcjsKICBwaGFzZTogc3RyaW5nOwogIHByb3ZpZGVyOiBzdHJpbmc7CiAgc291cmNlOiAndXNlciBpbXBvcnRlZCcgfCAnYXNzaXN0ZWQgZmlsbCByZXBseSc7CiAgcmF3VGV4dDogc3RyaW5nOwogIHBhcnNlU3RhdHVzOiAnb2snIHwgJ3JlcGFpcl9uZWVkZWQnIHwgJ3VucGFyc2VkJzsKICBpbXBvcnRlZEF0OiBudW1iZXI7Cn0KCmV4cG9ydCBpbnRlcmZhY2UgR2F0ZVJlc3VsdFJlY29yZCB7CiAgaWQ/OiBudW1iZXI7CiAgcnVuSWQ6IHN0cmluZzsKICB0b29sOiBzdHJpbmc7CiAgcGFzc2VkOiBib29sZWFuOwogIGZpbmRpbmdzOiBzdHJpbmc7CiAgY3JlYXRlZEF0OiBudW1iZXI7Cn0KCmV4cG9ydCBpbnRlcmZhY2UgVXNhZ2VSZWNvcmQgewogIGlkPzogbnVtYmVyOwogIHNpdGU6IHN0cmluZzsKICBkYXk6IHN0cmluZzsKICBwcm9tcHRzQ29waWVkOiBudW1iZXI7Cn0KCmV4cG9ydCBjbGFzcyBNdWZha2F0Um9vbURiIGV4dGVuZHMgRGV4aWUgewogIHJ1bnMhOiBUYWJsZTxSdW5SZWNvcmQsIHN0cmluZz47CiAgbWVzc2FnZXMhOiBUYWJsZTxNZXNzYWdlUmVjb3JkLCBudW1iZXI+OwogIGdhdGVSZXN1bHRzITogVGFibGU8R2F0ZVJlc3VsdFJlY29yZCwgbnVtYmVyPjsKICB1c2FnZSE6IFRhYmxlPFVzYWdlUmVjb3JkLCBudW1iZXI+OwoKICBjb25zdHJ1Y3RvcigpIHsKICAgIHN1cGVyKCdtdWZha2F0LXJvb20nKTsKICAgIHRoaXMudmVyc2lvbigxKS5zdG9yZXMoewogICAgICBydW5zOiAnaWQsIHN0YXRlLCBjcmVhdGVkQXQnLAogICAgICBtZXNzYWdlczogJysraWQsIHJ1bklkLCByb3VuZCwgcHJvdmlkZXInLAogICAgICBnYXRlUmVzdWx0czogJysraWQsIHJ1bklkLCB0b29sJywKICAgICAgdXNhZ2U6ICcrK2lkLCBzaXRlLCBkYXknLAogICAgfSk7CiAgfQp9CgpleHBvcnQgY29uc3QgZGIgPSBuZXcgTXVmYWthdFJvb21EYigpOwo=
+// MUFAKAT Room — Storage Dexie (Claude §T2).
+// runs, messages, gateResults, usage. Semua data lokal (IndexedDB +
+// chrome.storage.local). Tidak ada server eksternal / analytics.
+import Dexie, { type Table } from 'dexie';
+
+export interface RunRecord {
+  id: string;
+  idea: string;
+  state: string;
+  roundNo: number;
+  providers: string[];
+  createdAt: number;
+  /** N5 (putaran 2): labelMap per ronde — label anonim (A/B/C) -> provider.
+   *  Dibuat SEKALI saat masuk fase kritik ronde itu, lalu dipakai di
+   *  kritik, rapat, dan spesifikasi. Tanpa ini label berubah setiap
+   *  "Susun prompt" dan pemenang voting tidak bisa dipetakan balik.
+   *  Properti baru pada record Dexie tidak butuh migrasi skema (bukan
+   *  index); record lama yang belum punya labelMap dibaca sebagai
+   *  undefined dan ditangani pemanggil (spesifikasi menolak fallback). */
+  labelMap?: Record<number, Record<string, string>>;
+}
+
+export interface MessageRecord {
+  id?: number;
+  runId: string;
+  round: number;
+  phase: string;
+  provider: string;
+  source: 'user imported' | 'assisted fill reply';
+  rawText: string;
+  parseStatus: 'ok' | 'repair_needed' | 'unparsed';
+  importedAt: number;
+}
+
+export interface GateResultRecord {
+  id?: number;
+  runId: string;
+  tool: string;
+  passed: boolean;
+  findings: string;
+  createdAt: number;
+}
+
+export interface UsageRecord {
+  id?: number;
+  site: string;
+  day: string;
+  promptsCopied: number;
+}
+
+export class MufakatRoomDb extends Dexie {
+  runs!: Table<RunRecord, string>;
+  messages!: Table<MessageRecord, number>;
+  gateResults!: Table<GateResultRecord, number>;
+  usage!: Table<UsageRecord, number>;
+
+  constructor() {
+    super('mufakat-room');
+    this.version(1).stores({
+      runs: 'id, state, createdAt',
+      messages: '++id, runId, round, provider',
+      gateResults: '++id, runId, tool',
+      usage: '++id, site, day',
+    });
+  }
+}
+
+export const db = new MufakatRoomDb();
