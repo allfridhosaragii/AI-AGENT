@@ -31,10 +31,16 @@ def _set(state, key, value):
         setattr(state, key, value)
 
 
-def current_hash(state) -> str:
-    """Hash deterministik dari diff_hash + temuan saat ini."""
+def current_hash(state, findings=None) -> str:
+    """Hash deterministik dari diff_hash + temuan saat ini.
+
+    ``findings`` opsional: node ``test`` mengoper temuan yang baru
+    dihitung (state lama belum memuatnya saat patch dibuat).
+    """
     payload = json.dumps(
-        {"diff": _get(state, "diff_hash", ""), "findings": _get(state, "findings", [])},
+        {"diff": _get(state, "diff_hash", ""),
+         "findings": findings if findings is not None
+         else _get(state, "findings", [])},
         sort_keys=True,
         default=str,
     )
@@ -42,28 +48,25 @@ def current_hash(state) -> str:
 
 
 def track_hash(state, h: str) -> bool:
-    """Catat hash ``h``; kembalikan True bila hash sudah pernah dilihat.
+    """Kembalikan True bila hash ``h`` sudah pernah dilihat.
 
-    Riwayat disimpan di ``state.hash_history`` (field RunState).
+    PURE-READ: riwayat dibaca dari ``state.hash_history`` saja.
+    Riwayat DITULIS oleh node ``test`` (sebagai patch), BUKAN di
+    sini — mutasi di dalam edge function LangGraph TIDAK disimpan
+    ke checkpoint, sehingga pencatatan di edge selalu hilang
+    antar-langkah (ditemukan 20 Nov 2026).
     """
-    history = _get(state, "hash_history", None)
-    if history is None:
-        history = []
-        _set(state, "hash_history", history)
-    if h in history:
-        return True
-    history.append(h)
-    return False
+    history = _get(state, "hash_history", None) or []
+    return h in history
 
 
 def _findings_not_decreasing(state) -> bool:
     """True bila jumlah temuan tidak turun selama 2 iterasi terakhir.
 
-    Riwayat jumlah temuan disimpan di ``state.finding_counts``.
+    PURE-READ: ``state.finding_counts`` ditulis oleh node ``test``
+    (sebagai patch). Di sini hanya dibaca.
     """
     counts = list(_get(state, "finding_counts", []) or [])
-    counts.append(len(_get(state, "findings", []) or []))
-    _set(state, "finding_counts", counts)
     if len(counts) < 3:
         return False
     # Dua perbandingan terakhir: tidak ada penurunan sama sekali.
@@ -80,7 +83,14 @@ def should_continue_debate(state) -> str:
 
 
 def should_revise(state) -> str:
-    """``"revise"`` | ``"audit_final"`` | ``"escalate"``."""
+    """``"revise"`` | ``"audit_final"`` | ``"escalate"``.
+
+    PURE-READ: semua riwayat (``hash_history``, ``finding_counts``,
+    ``fix_iterations``) ditulis oleh node sebagai patch; edge ini
+    hanya membaca. Hash dianggap berulang bila muncul >= 2x di
+    riwayat — node ``test`` sudah menambahkan hash iterasi saat ini,
+    jadi 1x = baru, 2x = pernah dilihat di iterasi sebelumnya.
+    """
     findings = _get(state, "findings", []) or []
     if not findings:
         return "audit_final"
@@ -88,7 +98,8 @@ def should_revise(state) -> str:
         return "escalate"
     if _get(state, "total_iterations", 0) >= MAX_TOTAL_ITERATIONS:
         return "escalate"
-    if track_hash(state, current_hash(state)):
+    history = _get(state, "hash_history", None) or []
+    if history.count(current_hash(state)) >= 2:
         return "escalate"
     if _findings_not_decreasing(state):
         return "escalate"
