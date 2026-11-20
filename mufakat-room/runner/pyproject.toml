@@ -20,6 +20,7 @@ mcp = ["fastmcp"]
 
 [project.scripts]
 mufakat-room-runner = "mufakat_runner.host:main"
+mufakat-runner-host = "mufakat_runner.host:main"
 mufakat-room-mcp = "mufakat_runner.mcp_server:main"
 
 [tool.setuptools.packages.find]
