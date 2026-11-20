@@ -34,15 +34,53 @@ export interface ParseResult {
   repairAttempted: boolean;
 }
 
-const JSON_BLOCK_RE = /```(?:json)?\s*\n(.*?)```/gis;
+// M3: izinkan \s* (nol atau lebih) setelah "json" — blok ```json{...}```
+// tanpa newline dulu gagal parse. \n tetap didukung seperti sebelumnya.
+const JSON_BLOCK_RE = /```(?:json)?\s*(.*?)```/gis;
 
 export function extractLastJsonBlock(text: string): string | null {
   const matches = [...text.matchAll(JSON_BLOCK_RE)];
   return matches.length ? matches[matches.length - 1][1].trim() : null;
 }
 
+/** Fallback M3: teks hasil innerText kehilangan pagar ``` (DOM merender
+ *  blok kode tanpa backtick). Cari objek {...} TERAKHIR yang valid JSON
+ *  dengan pemindaian kurung seimbang yang sadar string. */
+export function extractLastJsonObject(text: string): string | null {
+  for (let start = text.lastIndexOf('{'); start >= 0; start = text.lastIndexOf('{', start - 1)) {
+    let depth = 0;
+    let inString = false;
+    let escaped = false;
+    for (let i = start; i < text.length; i++) {
+      const ch = text[i];
+      if (inString) {
+        if (escaped) escaped = false;
+        else if (ch === '\\') escaped = true;
+        else if (ch === '"') inString = false;
+        continue;
+      }
+      if (ch === '"') inString = true;
+      else if (ch === '{') depth++;
+      else if (ch === '}') {
+        depth--;
+        if (depth === 0) {
+          const candidate = text.slice(start, i + 1);
+          try {
+            JSON.parse(candidate);
+            return candidate;
+          } catch {
+            break; // objek ini rusak, coba '{' sebelumnya
+          }
+        }
+      }
+    }
+  }
+  return null;
+}
+
 export function parseReply(text: string, repairAttempted = false): ParseResult {
-  const block = extractLastJsonBlock(text);
+  // M3: dulu hanya blok berpagar; kini fallback ke objek {...} terakhir.
+  const block = extractLastJsonBlock(text) ?? extractLastJsonObject(text);
   if (block === null) {
     return { status: 'unparsed', payload: null, error: 'Tidak ada blok ```json dalam jawaban.', repairAttempted };
   }
