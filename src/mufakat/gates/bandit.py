@@ -1,20 +1,28 @@
-"""Gate bandit (T10).
+"""Gate bandit (T10, diperbaiki audit 20 Nov 2026: C1 + H3 + H4).
 
-Bila binary bandit ada: jalankan bandit JSON. Bila tidak ada:
-fallback regex deterministik (eval/exec, os.system, shell=True,
-pickle, yaml.load, SQL injection). Tidak pernah raise bila tool hilang.
+Dijalankan HANYA di dalam sandbox Docker. Tanpa Docker: gagal
+tertutup (``sandbox-unavailable``).
+
+- Hanya HIGH/CRITICAL yang menggagalkan gate; MEDIUM dicatat
+  (butuh justifikasi) tetapi tidak menggagalkan — sesuai ``gates.yaml``.
+- ``B101`` (assert) dikecualikan untuk file ``test_*.py`` /
+  ``*_test.py``: setiap test memakai ``assert``, jadi B101 di test
+  tidak boleh membuat AMAN mustahil tercapai.
+- Bila binary bandit tidak ada di dalam sandbox: gagal-tertutup
+  (``tool-missing``). Pemindai regex hanya info tambahan (severity
+  INFO) — BUKAN pengganti tool.
 """
 
 from __future__ import annotations
 
 import json
-import shutil
-import subprocess
 
 try:
+    from ._sandbox import run_gate_in_sandbox, tool_missing
     from ._scan import scan_patterns
     from .runner import GateResult
 except ImportError:  # pragma: no cover
+    from mufakat.gates._sandbox import run_gate_in_sandbox, tool_missing  # type: ignore
     from mufakat.gates._scan import scan_patterns  # type: ignore
     from mufakat.gates.runner import GateResult  # type: ignore
 
@@ -39,37 +47,65 @@ _PATTERNS = [
      "Hash lemah md5/sha1 (B303/B324)."),
 ]
 
+_FAIL_SEVERITIES = ("HIGH", "CRITICAL")
 
-def _run_binary(target_dir) -> GateResult | None:
-    if shutil.which("bandit") is None:
-        return None
+
+def _is_test_file(filename: str) -> bool:
+    base = filename.replace("\\", "/").rsplit("/", 1)[-1]
+    return base.startswith("test_") or base.endswith("_test.py")
+
+
+def _regex_info_findings(target_dir) -> list[dict]:
+    """Temuan regex HANYA sebagai info tambahan (severity INFO)."""
+    out = []
+    for finding in scan_patterns(target_dir, _PATTERNS, extensions={".py"}):
+        finding = dict(finding)
+        finding["severity"] = "INFO"
+        finding["message"] = "[regex-info, bukan pengganti bandit] " + finding["message"]
+        out.append(finding)
+    return out
+
+
+def _parse_bandit_json(stdout: str) -> list[dict]:
     try:
-        result = subprocess.run(
-            ["bandit", "-r", "-f", "json", "-q", str(target_dir)],
-            capture_output=True, text=True, timeout=300,
-        )
-        data = json.loads(result.stdout or "{}")
-    except (OSError, subprocess.SubprocessError, ValueError):
-        return None
+        data = json.loads(stdout or "{}")
+    except ValueError:
+        return []
     findings = []
     for item in data.get("results", []) or []:
+        rule = str(item.get("test_id", "bandit"))
+        filename = str(item.get("filename", ""))
+        # H4: B101 (assert) di file test dikecualikan.
+        if rule == "B101" and _is_test_file(filename):
+            continue
+        severity = str(item.get("issue_severity", "MEDIUM")).upper()
+        if severity == "MEDIUM":
+            message = str(item.get("issue_text", "Temuan bandit."))
+            message += " (MEDIUM — butuh justifikasi, tidak menggagalkan gate.)"
+        else:
+            message = str(item.get("issue_text", "Temuan bandit."))
         findings.append({
-            "severity": str(item.get("issue_severity", "MEDIUM")).upper(),
-            "file": str(item.get("filename", "")),
+            "severity": severity, "file": filename,
             "line": int(item.get("line_number", 0) or 0),
-            "rule": str(item.get("test_id", "bandit")),
-            "message": str(item.get("issue_text", "Temuan bandit.")),
+            "rule": rule, "message": message,
         })
-    return GateResult(tool="bandit", passed=not findings, findings=findings)
+    return findings
 
 
-def run(target_dir) -> GateResult:
-    """Jalankan gate bandit atas ``target_dir``."""
-    try:
-        binary = _run_binary(target_dir)
-    except Exception:
-        binary = None
-    if binary is not None:
-        return binary
-    findings = scan_patterns(target_dir, _PATTERNS, extensions={".py"})
-    return GateResult(tool="bandit", passed=not findings, findings=findings)
+def run(target_dir, sandbox_runner=None) -> GateResult:
+    """Jalankan gate bandit atas ``target_dir`` (di sandbox)."""
+    result = run_gate_in_sandbox(
+        "bandit", target_dir,
+        "command -v bandit >/dev/null 2>&1 || { echo TOOL_MISSING; exit 127; }; "
+        "bandit -r -f json -q .",
+        timeout=300, read_only=True, sandbox_runner=sandbox_runner)
+    if isinstance(result, GateResult):
+        return result
+    output = result.get("stdout") or ""
+    if "TOOL_MISSING" in output or result.get("exit_code") == 127:
+        failed = tool_missing("bandit", "bandit")
+        failed.findings.extend(_regex_info_findings(target_dir))
+        return failed
+    findings = _parse_bandit_json(output)
+    passed = not any(f["severity"] in _FAIL_SEVERITIES for f in findings)
+    return GateResult(tool="bandit", passed=passed, findings=findings)
