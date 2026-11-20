@@ -1,1 +1,80 @@
-IiIiR2F0ZSB0cml2eSAoVDEwLCBkaXBlcmJhaWtpIGF1ZGl0IDIwIE5vdiAyMDI2OiBDMSArIEgzOwpwdXRhcmFuIDI6IE4xKS4KCkRpamFsYW5rYW4gSEFOWUEgZGkgZGFsYW0gc2FuZGJveCBEb2NrZXIuIFRhbnBhIERvY2tlcjogZ2FnYWwKdGVydHV0dXAgKGBgc2FuZGJveC11bmF2YWlsYWJsZWBgKSDigJQgZHVsdSB0b29sIHRpZGFrIGFkYSBqdXN0cnUKYGBwYXNzZWQ9VHJ1ZWBgIChmYWlsLW9wZW4pLiBCaWxhIGJpbmFyeSB0cml2eSB0aWRhayBhZGEgZGkgZGFsYW0Kc2FuZGJveDogZ2FnYWwtdGVydHV0dXAgKGBgdG9vbC1taXNzaW5nYGApLCBidWthbiBBTUFOLgpIYW55YSBDVkUgSElHSC9DUklUSUNBTCB5YW5nIGZpeGFibGUgeWFuZyBtZW5nZ2FnYWxrYW4gZ2F0ZS4KCk4xIOKAlCBleGl0IGNvZGUgRElQRVJJS1NBIChkdWx1IGRpYWJhaWthbjsgb3V0cHV0IGtvc29uZy9ydXNhawpkaWFuZ2dhcCAiMCB0ZW11YW4iIC0+IEFNQU4gcGFsc3UpOgotIHRyaXZ5IGBgZnNgYCBrZWx1YXIgMCBiaWxhIHBlbWluZGFpYW4gc2VsZXNhaSAodGVtdWFuIENWRSB0aWRhawogIG1lbmd1YmFoIGV4aXQgY29kZSB0YW5wYSBgYC0tZXhpdC1jb2RlYGApOyBzZWxhaW4gMCAtPiBgYHRvb2wtZXJyb3JgYC4KLSBzdGRvdXQga29zb25nIC8gYnVrYW4gSlNPTiAtPiBgYHRvb2wtZXJyb3JgYCAodHJpdnkgYGAtLWZvcm1hdCBqc29uYGAKICBzZWxhbHUgbWVuZ2VsdWFya2FuIEpTT04gYmlsYSBwZW1pbmRhaWFuIHNlbGVzYWkpLgotIERCIENWRSBUSURBSyBkaXVuZHVoIHNhYXQgamFsYW4gKGNvbnRhaW5lciBgYC0tbmV0d29yayBub25lYGApOgogIGRpcGFrYWkgYGAtLXNraXAtZGItdXBkYXRlIC0tb2ZmbGluZS1zY2FuYGAgZGVuZ2FuIERCIHlhbmcgc3VkYWgKICBkaW1hc3Vra2FuIGtlIGltYWdlIHNhYXQgYnVpbGQgKGBgVFJJVllfQ0FDSEVfRElSPS92YXIvbGliL3RyaXZ5YGAsCiAgbGloYXQgYGBkb2NrZXIvc2FuZGJveC5Eb2NrZXJmaWxlYGApLgoiIiIKCmZyb20gX19mdXR1cmVfXyBpbXBvcnQgYW5ub3RhdGlvbnMKCmltcG9ydCBqc29uCgp0cnk6CiAgICBmcm9tIC5fc2FuZGJveCBpbXBvcnQgcnVuX2dhdGVfaW5fc2FuZGJveCwgdG9vbF9lcnJvciwgdG9vbF9taXNzaW5nCiAgICBmcm9tIC5ydW5uZXIgaW1wb3J0IEdhdGVSZXN1bHQKZXhjZXB0IEltcG9ydEVycm9yOiAgIyBwcmFnbWE6IG5vIGNvdmVyCiAgICBmcm9tIG11ZmFrYXQuZ2F0ZXMuX3NhbmRib3ggaW1wb3J0IHJ1bl9nYXRlX2luX3NhbmRib3gsIHRvb2xfZXJyb3IsIHRvb2xfbWlzc2luZyAgIyB0eXBlOiBpZ25vcmUKICAgIGZyb20gbXVmYWthdC5nYXRlcy5ydW5uZXIgaW1wb3J0IEdhdGVSZXN1bHQgICMgdHlwZTogaWdub3JlCgoKZGVmIHJ1bih0YXJnZXRfZGlyLCBzYW5kYm94X3J1bm5lcj1Ob25lKSAtPiBHYXRlUmVzdWx0OgogICAgIiIiSmFsYW5rYW4gZ2F0ZSB0cml2eSBhdGFzIGBgdGFyZ2V0X2RpcmBgIChkaSBzYW5kYm94KS4iIiIKICAgIHJlc3VsdCA9IHJ1bl9nYXRlX2luX3NhbmRib3goCiAgICAgICAgInRyaXZ5IiwgdGFyZ2V0X2RpciwKICAgICAgICAiY29tbWFuZCAtdiB0cml2eSA+L2Rldi9udWxsIDI+JjEgfHwgeyBlY2hvIFRPT0xfTUlTU0lORzsgZXhpdCAxMjc7IH07ICIKICAgICAgICAidHJpdnkgZnMgLS1mb3JtYXQganNvbiAtLXF1aWV0IC0tc2tpcC1kYi11cGRhdGUgLS1vZmZsaW5lLXNjYW4gLiIsCiAgICAgICAgdGltZW91dD02MDAsIHJlYWRfb25seT1UcnVlLCBzYW5kYm94X3J1bm5lcj1zYW5kYm94X3J1bm5lcikKICAgIGlmIGlzaW5zdGFuY2UocmVzdWx0LCBHYXRlUmVzdWx0KToKICAgICAgICByZXR1cm4gcmVzdWx0CiAgICBvdXRwdXQgPSByZXN1bHQuZ2V0KCJzdGRvdXQiKSBvciAiIgogICAgZXhpdF9jb2RlID0gcmVzdWx0LmdldCgiZXhpdF9jb2RlIikKICAgIGlmICJUT09MX01JU1NJTkciIGluIG91dHB1dCBvciBleGl0X2NvZGUgPT0gMTI3OgogICAgICAgIHJldHVybiB0b29sX21pc3NpbmcoInRyaXZ5IiwgInRyaXZ5IikKICAgIGlmIGV4aXRfY29kZSAhPSAwOgogICAgICAgIHJldHVybiB0b29sX2Vycm9yKAogICAgICAgICAgICAidHJpdnkiLAogICAgICAgICAgICBmInRyaXZ5IGdhZ2FsIChleGl0IGNvZGUge2V4aXRfY29kZX0sIGJ1a2FuIDApIOKAlCBoYXNpbCAiCiAgICAgICAgICAgICJ0aWRhayBkYXBhdCBkaXBlcmNheWEsIGJ1a2FuIEFNQU4uIikKICAgIGlmIG5vdCBvdXRwdXQuc3RyaXAoKToKICAgICAgICByZXR1cm4gdG9vbF9lcnJvcigKICAgICAgICAgICAgInRyaXZ5IiwKICAgICAgICAgICAgInRyaXZ5IHRpZGFrIG1lbmdlbHVhcmthbiBvdXRwdXQgKHN0ZG91dCBrb3NvbmcpIHBhZGFoYWwgIgogICAgICAgICAgICAic2VoYXJ1c255YSBKU09OIOKAlCBoYXNpbCB0aWRhayBkYXBhdCBkaXBlcmNheWEsIGJ1a2FuIEFNQU4uIikKICAgIHRyeToKICAgICAgICBkYXRhID0ganNvbi5sb2FkcyhvdXRwdXQpCiAgICBleGNlcHQgVmFsdWVFcnJvcjoKICAgICAgICByZXR1cm4gdG9vbF9lcnJvcigKICAgICAgICAgICAgInRyaXZ5IiwgIk91dHB1dCB0cml2eSBidWthbiBKU09OIHlhbmcgdmFsaWQg4oCUIGhhc2lsIHRpZGFrICIKICAgICAgICAgICAgICAgICAgICAgImRhcGF0IGRpcGVyY2F5YSwgYnVrYW4gQU1BTi4iKQogICAgZmluZGluZ3MgPSBbXQogICAgZm9yIHJlc3VsdF9pdGVtIGluIGRhdGEuZ2V0KCJSZXN1bHRzIiwgW10pIG9yIFtdOgogICAgICAgIGZvciB2dWxuIGluIHJlc3VsdF9pdGVtLmdldCgiVnVsbmVyYWJpbGl0aWVzIiwgW10pIG9yIFtdOgogICAgICAgICAgICBzZXZlcml0eSA9IHN0cih2dWxuLmdldCgiU2V2ZXJpdHkiLCAiIikpLnVwcGVyKCkKICAgICAgICAgICAgZml4ZWQgPSB2dWxuLmdldCgiRml4ZWRWZXJzaW9uIikKICAgICAgICAgICAgaWYgc2V2ZXJpdHkgaW4gKCJISUdIIiwgIkNSSVRJQ0FMIikgYW5kIGZpeGVkOgogICAgICAgICAgICAgICAgZmluZGluZ3MuYXBwZW5kKHsKICAgICAgICAgICAgICAgICAgICAic2V2ZXJpdHkiOiBzZXZlcml0eSwKICAgICAgICAgICAgICAgICAgICAiZmlsZSI6IHN0cihyZXN1bHRfaXRlbS5nZXQoIlRhcmdldCIsICIiKSksCiAgICAgICAgICAgICAgICAgICAgImxpbmUiOiAwLAogICAgICAgICAgICAgICAgICAgICJydWxlIjogc3RyKHZ1bG4uZ2V0KCJWdWxuZXJhYmlsaXR5SUQiLCAidHJpdnkiKSksCiAgICAgICAgICAgICAgICAgICAgIm1lc3NhZ2UiOiAoCiAgICAgICAgICAgICAgICAgICAgICAgIGYiQ1ZFIGZpeGFibGU6IHt2dWxuLmdldCgnUGtnTmFtZScsICcnKX0gIgogICAgICAgICAgICAgICAgICAgICAgICBmInt2dWxuLmdldCgnSW5zdGFsbGVkVmVyc2lvbicsICcnKX0gLT4ge2ZpeGVkfSAiCiAgICAgICAgICAgICAgICAgICAgICAgIGYiKHt2dWxuLmdldCgnVGl0bGUnLCAnJyl9KSIKICAgICAgICAgICAgICAgICAgICApLAogICAgICAgICAgICAgICAgfSkKICAgIHJldHVybiBHYXRlUmVzdWx0KHRvb2w9InRyaXZ5IiwgcGFzc2VkPW5vdCBmaW5kaW5ncywgZmluZGluZ3M9ZmluZGluZ3MpCg==
+"""Gate trivy (T10, diperbaiki audit 20 Nov 2026: C1 + H3;
+putaran 2: N1).
+
+Dijalankan HANYA di dalam sandbox Docker. Tanpa Docker: gagal
+tertutup (``sandbox-unavailable``) — dulu tool tidak ada justru
+``passed=True`` (fail-open). Bila binary trivy tidak ada di dalam
+sandbox: gagal-tertutup (``tool-missing``), bukan AMAN.
+Hanya CVE HIGH/CRITICAL yang fixable yang menggagalkan gate.
+
+N1 — exit code DIPERIKSA (dulu diabaikan; output kosong/rusak
+dianggap "0 temuan" -> AMAN palsu):
+- trivy ``fs`` keluar 0 bila pemindaian selesai (temuan CVE tidak
+  mengubah exit code tanpa ``--exit-code``); selain 0 -> ``tool-error``.
+- stdout kosong / bukan JSON -> ``tool-error`` (trivy ``--format json``
+  selalu mengeluarkan JSON bila pemindaian selesai).
+- DB CVE TIDAK diunduh saat jalan (container ``--network none``):
+  dipakai ``--skip-db-update --offline-scan`` dengan DB yang sudah
+  dimasukkan ke image saat build (``TRIVY_CACHE_DIR=/var/lib/trivy``,
+  lihat ``docker/sandbox.Dockerfile``).
+"""
+
+from __future__ import annotations
+
+import json
+
+try:
+    from ._sandbox import run_gate_in_sandbox, tool_error, tool_missing
+    from .runner import GateResult
+except ImportError:  # pragma: no cover
+    from mufakat.gates._sandbox import run_gate_in_sandbox, tool_error, tool_missing  # type: ignore
+    from mufakat.gates.runner import GateResult  # type: ignore
+
+
+def run(target_dir, sandbox_runner=None) -> GateResult:
+    """Jalankan gate trivy atas ``target_dir`` (di sandbox)."""
+    result = run_gate_in_sandbox(
+        "trivy", target_dir,
+        "command -v trivy >/dev/null 2>&1 || { echo TOOL_MISSING; exit 127; }; "
+        "trivy fs --format json --quiet --skip-db-update --offline-scan .",
+        timeout=600, read_only=True, sandbox_runner=sandbox_runner)
+    if isinstance(result, GateResult):
+        return result
+    output = result.get("stdout") or ""
+    exit_code = result.get("exit_code")
+    if "TOOL_MISSING" in output or exit_code == 127:
+        return tool_missing("trivy", "trivy")
+    if exit_code != 0:
+        return tool_error(
+            "trivy",
+            f"trivy gagal (exit code {exit_code}, bukan 0) — hasil "
+            "tidak dapat dipercaya, bukan AMAN.")
+    if not output.strip():
+        return tool_error(
+            "trivy",
+            "trivy tidak mengeluarkan output (stdout kosong) padahal "
+            "seharusnya JSON — hasil tidak dapat dipercaya, bukan AMAN.")
+    try:
+        data = json.loads(output)
+    except ValueError:
+        return tool_error(
+            "trivy", "Output trivy bukan JSON yang valid — hasil tidak "
+                     "dapat dipercaya, bukan AMAN.")
+    findings = []
+    for result_item in data.get("Results", []) or []:
+        for vuln in result_item.get("Vulnerabilities", []) or []:
+            severity = str(vuln.get("Severity", "")).upper()
+            fixed = vuln.get("FixedVersion")
+            if severity in ("HIGH", "CRITICAL") and fixed:
+                findings.append({
+                    "severity": severity,
+                    "file": str(result_item.get("Target", "")),
+                    "line": 0,
+                    "rule": str(vuln.get("VulnerabilityID", "trivy")),
+                    "message": (
+                        f"CVE fixable: {vuln.get('PkgName', '')} "
+                        f"{vuln.get('InstalledVersion', '')} -> {fixed} "
+                        f"({vuln.get('Title', '')})"
+                    ),
+                })
+    return GateResult(tool="trivy", passed=not findings, findings=findings)
