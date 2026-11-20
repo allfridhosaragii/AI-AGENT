@@ -36,6 +36,8 @@ def room_status(room_dir: str = "runs/room-mock") -> dict:
         data = json.loads(room_file.read_text(encoding="utf-8"))
     except (json.JSONDecodeError, OSError) as exc:
         return {"ok": False, "room_found": False, "error": f"room.json rusak: {exc}"}
+    if not isinstance(data, dict):
+        return {"ok": False, "room_found": False, "error": "room.json rusak: isi harus object."}
     return {
         "ok": True,
         "room_found": True,
@@ -50,6 +52,8 @@ def room_status(room_dir: str = "runs/room-mock") -> dict:
 
 def run_gates(target_dir: str = ".", profile: str = "python") -> dict:
     """Jalankan gates + verdict; kembalikan hasil terstruktur."""
+    if not isinstance(target_dir, str) or not isinstance(profile, str):
+        return {"ok": False, "error": "target_dir dan profile harus string."}
     results = gates_mod.run_gates(target_dir, profile=profile)
     return {"ok": True, "results": results, "verdict": verdict_mod.apply_verdict(results)}
 
@@ -68,6 +72,8 @@ def gate_report(run_dir: str = ".") -> dict:
         data = json.loads(verdict_file.read_text(encoding="utf-8"))
     except (json.JSONDecodeError, OSError) as exc:
         return {"ok": False, "found": False, "error": f"verdict.json rusak: {exc}"}
+    if not isinstance(data, dict):
+        return {"ok": False, "found": False, "error": "verdict.json rusak: isi harus object."}
     return {"ok": True, "found": True, "verdict": data}
 
 
