@@ -146,10 +146,12 @@ def list_agents() -> dict:
     """Daftar definisi agen (mock — dari provider_registry bila tersedia)."""
     agents: list[dict] = []
     try:
-        from mufakat.provider_registry import list_providers  # type: ignore
+        from mufakat.provider_registry import default_registry
 
-        for provider in list_providers():
-            agents.append({"agent_id": str(provider), "provider": str(provider)})
+        for provider in default_registry().list_all():
+            agents.append({"agent_id": provider.name,
+                           "provider": provider.name,
+                           "capabilities": provider.capabilities})
     except Exception:
         pass
     if not agents:
