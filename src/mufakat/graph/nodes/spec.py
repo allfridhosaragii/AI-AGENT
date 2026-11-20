@@ -41,6 +41,20 @@ async def node(state, adapters=None, ctx=None):
             Path(worktree, "spec.md").write_text(text, encoding="utf-8")
         except OSError:
             pass
+    # M10: human-in-the-loop — bila ctx meminta persetujuan manusia,
+    # jeda graph di sini sampai manusia menyetujui spek (resume dengan
+    # Command(resume=...)). Tanpa flag ini graph jalan seperti biasa.
+    # GraphInterrupt TIDAK ditangkap: ia harus naik ke Pregel supaya
+    # graph benar-benar jeda.
+    if (ctx or {}).get("require_human_approval"):
+        try:
+            from langgraph.types import interrupt
+        except ImportError:
+            interrupt = None  # type: ignore[assignment]
+        if interrupt is not None:
+            interrupt({"type": "approve_spec",
+                       "spec": text,
+                       "message": "Setujui spesifikasi ini sebelum lanjut ke code."})
     messages = append_message(state, "spec", "Spesifikasi ditulis (spec.md).")
     return {"messages": messages, "spec": text, "phase": "code",
             "approved_spec": True}
