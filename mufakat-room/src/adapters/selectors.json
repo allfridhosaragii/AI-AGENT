@@ -1,1 +1,79 @@
-ewogICJsYXN0VmVyaWZpZWQiOiAiYmVsdW0gdGVydmVyaWZpa2FzaSIsCiAgIm5vdGUiOiAiU2VsZWN0b3IgSEFSVVMgZGl2ZXJpZmlrYXNpIG1hbnVhbCBkaSB0aWFwIHNpdHVzIGRhbiBkaXBlcmJhcnVpIHNhYXQgc2l0dXMgYmVydWJhaC4gTmlsYWkgaW5wdXQvbGFzdE1lc3NhZ2UvZ2VuZXJhdGluZ0luZGljYXRvciBkaSBiYXdhaCBpbmkgYWRhbGFoIHRlYmFrYW4gYXdhbCB5YW5nIEJFTFVNIGRpdWppIGRpIGhhbGFtYW4gYXNsaS4gbG9naW5JbmRpY2F0b3IvbG9nZ2VkSW5JbmRpY2F0b3IvcmF0ZUxpbWl0SW5kaWNhdG9yIHNlbmdhamEgbnVsbDogbmlsYWkgeWFuZyBzYWxhaCBtZW55ZWJhYmthbiBmYWxzZSBwb3NpdGl2ZSAobWlzLiBsb2dpbkluZGljYXRvciA9IHNlbGVjdG9yIGlucHV0IG1lbWJ1YXQgXCJsb2dpblwiIGRhbiBcImlucHV0IHJ1c2FrXCIgdGFrIGJpc2EgZGliZWRha2FuLCBNOSkuIElzaSBrZXRpZ2FueWEgaGFueWEgc2V0ZWxhaCBkaXZlcmlmaWthc2kgZGkgc2l0dXMgYXNsaTsgc2FtcGFpIHNhYXQgaXR1IGRldGVjdEJsb2NrZXIgbWVuZ2VtYmFsaWthbiAnZXJyb3InIGJpbGEgaW5wdXQgdGlkYWsgZGl0ZW11a2FuLCBkYW4gVElEQUsgUEVSTkFIIG1lbmdrbGFpbSBsb2dnZWRfb3V0L3JhdGVfbGltaXQgdGFucGEgYnVrdGkgZWxlbWVuLiIsCiAgInNpdGVzIjogewogICAgImNoYXRncHQiOiB7CiAgICAgICJjYXB0Y2hhSW5kaWNhdG9yIjogIltkYXRhLXRlc3RpZD0nY2FwdGNoYSddIiwKICAgICAgImdlbmVyYXRpbmdJbmRpY2F0b3IiOiAiW2RhdGEtdGVzdGlkPSdzdG9wLWJ1dHRvbiddIiwKICAgICAgImlucHV0IjogIiNwcm9tcHQtdGV4dGFyZWEiLAogICAgICAibGFzdE1lc3NhZ2UiOiAiW2RhdGEtbWVzc2FnZS1hdXRob3Itcm9sZT0nYXNzaXN0YW50J10iLAogICAgICAibG9naW5JbmRpY2F0b3IiOiBudWxsLAogICAgICAibWF0Y2hlcyI6IFsKICAgICAgICAiaHR0cHM6Ly9jaGF0Z3B0LmNvbS8qIgogICAgICBdLAogICAgICAibG9nZ2VkSW5JbmRpY2F0b3IiOiBudWxsLAogICAgICAicmF0ZUxpbWl0SW5kaWNhdG9yIjogbnVsbAogICAgfSwKICAgICJjbGF1ZGUiOiB7CiAgICAgICJjYXB0Y2hhSW5kaWNhdG9yIjogbnVsbCwKICAgICAgImdlbmVyYXRpbmdJbmRpY2F0b3IiOiAiW2FyaWEtbGFiZWw9J1N0b3AgcmVzcG9uc2UnXSIsCiAgICAgICJpbnB1dCI6ICJkaXZbY29udGVudGVkaXRhYmxlPSd0cnVlJ10iLAogICAgICAibGFzdE1lc3NhZ2UiOiAiW2RhdGEtdGVzdGlkPSdtZXNzYWdlLWNvbnRlbnQnXSIsCiAgICAgICJsb2dpbkluZGljYXRvciI6IG51bGwsCiAgICAgICJtYXRjaGVzIjogWwogICAgICAgICJodHRwczovL2NsYXVkZS5haS8qIgogICAgICBdLAogICAgICAibG9nZ2VkSW5JbmRpY2F0b3IiOiBudWxsLAogICAgICAicmF0ZUxpbWl0SW5kaWNhdG9yIjogbnVsbAogICAgfSwKICAgICJkZWVwc2VlayI6IHsKICAgICAgImNhcHRjaGFJbmRpY2F0b3IiOiBudWxsLAogICAgICAiZ2VuZXJhdGluZ0luZGljYXRvciI6ICIuZHMtc3RvcC1idXR0b24iLAogICAgICAiaW5wdXQiOiAidGV4dGFyZWEiLAogICAgICAibGFzdE1lc3NhZ2UiOiAiLmRzLW1lc3NhZ2UtLWFzc2lzdGFudCIsCiAgICAgICJsb2dpbkluZGljYXRvciI6IG51bGwsCiAgICAgICJtYXRjaGVzIjogWwogICAgICAgICJodHRwczovL2NoYXQuZGVlcHNlZWsuY29tLyoiCiAgICAgIF0sCiAgICAgICJsb2dnZWRJbkluZGljYXRvciI6IG51bGwsCiAgICAgICJyYXRlTGltaXRJbmRpY2F0b3IiOiBudWxsCiAgICB9LAogICAgImdlbWluaSI6IHsKICAgICAgImNhcHRjaGFJbmRpY2F0b3IiOiBudWxsLAogICAgICAiZ2VuZXJhdGluZ0luZGljYXRvciI6ICJbYXJpYS1sYWJlbD0nU3RvcCddIiwKICAgICAgImlucHV0IjogImRpdltjb250ZW50ZWRpdGFibGU9J3RydWUnXSIsCiAgICAgICJsYXN0TWVzc2FnZSI6ICJtZXNzYWdlLWNvbnRlbnQiLAogICAgICAibG9naW5JbmRpY2F0b3IiOiBudWxsLAogICAgICAibWF0Y2hlcyI6IFsKICAgICAgICAiaHR0cHM6Ly9nZW1pbmkuZ29vZ2xlLmNvbS8qIgogICAgICBdLAogICAgICAibG9nZ2VkSW5JbmRpY2F0b3IiOiBudWxsLAogICAgICAicmF0ZUxpbWl0SW5kaWNhdG9yIjogbnVsbAogICAgfSwKICAgICJtdXNlIjogewogICAgICAiY2FwdGNoYUluZGljYXRvciI6IG51bGwsCiAgICAgICJnZW5lcmF0aW5nSW5kaWNhdG9yIjogIlthcmlhLWxhYmVsPSdTdG9wJ10iLAogICAgICAiaW5wdXQiOiAiZGl2W2NvbnRlbnRlZGl0YWJsZT0ndHJ1ZSddIiwKICAgICAgImxhc3RNZXNzYWdlIjogIltkYXRhLXRlc3RpZD0nYXNzaXN0YW50LW1lc3NhZ2UnXSIsCiAgICAgICJsb2dpbkluZGljYXRvciI6IG51bGwsCiAgICAgICJtYXRjaGVzIjogWwogICAgICAgICJodHRwczovL3d3dy5tZXRhLmFpLyoiCiAgICAgIF0sCiAgICAgICJsb2dnZWRJbkluZGljYXRvciI6IG51bGwsCiAgICAgICJyYXRlTGltaXRJbmRpY2F0b3IiOiBudWxsCiAgICB9LAogICAgInF3ZW4iOiB7CiAgICAgICJjYXB0Y2hhSW5kaWNhdG9yIjogbnVsbCwKICAgICAgImdlbmVyYXRpbmdJbmRpY2F0b3IiOiAiW2FyaWEtbGFiZWw9J1N0b3AnXSIsCiAgICAgICJpbnB1dCI6ICJ0ZXh0YXJlYSIsCiAgICAgICJsYXN0TWVzc2FnZSI6ICIubWVzc2FnZS1hc3Npc3RhbnQiLAogICAgICAibG9naW5JbmRpY2F0b3IiOiBudWxsLAogICAgICAibWF0Y2hlcyI6IFsKICAgICAgICAiaHR0cHM6Ly9jaGF0LnF3ZW4uYWkvKiIKICAgICAgXSwKICAgICAgImxvZ2dlZEluSW5kaWNhdG9yIjogbnVsbCwKICAgICAgInJhdGVMaW1pdEluZGljYXRvciI6IG51bGwKICAgIH0KICB9LAogICJ2ZXJzaW9uIjogMgp9Cg==
+{
+  "lastVerified": "belum terverifikasi",
+  "note": "Selector HARUS diverifikasi manual di tiap situs dan diperbarui saat situs berubah. Nilai input/lastMessage/generatingIndicator di bawah ini adalah tebakan awal yang BELUM diuji di halaman asli. loginIndicator/loggedInIndicator/rateLimitIndicator sengaja null: nilai yang salah menyebabkan false positive (mis. loginIndicator = selector input membuat \"login\" dan \"input rusak\" tak bisa dibedakan, M9). Isi ketiganya hanya setelah diverifikasi di situs asli; sampai saat itu detectBlocker mengembalikan 'error' bila input tidak ditemukan, dan TIDAK PERNAH mengklaim logged_out/rate_limit tanpa bukti elemen.",
+  "sites": {
+    "chatgpt": {
+      "captchaIndicator": "[data-testid='captcha']",
+      "generatingIndicator": "[data-testid='stop-button']",
+      "input": "#prompt-textarea",
+      "lastMessage": "[data-message-author-role='assistant']",
+      "loginIndicator": null,
+      "matches": [
+        "https://chatgpt.com/*"
+      ],
+      "loggedInIndicator": null,
+      "rateLimitIndicator": null
+    },
+    "claude": {
+      "captchaIndicator": null,
+      "generatingIndicator": "[aria-label='Stop response']",
+      "input": "div[contenteditable='true']",
+      "lastMessage": "[data-testid='message-content']",
+      "loginIndicator": null,
+      "matches": [
+        "https://claude.ai/*"
+      ],
+      "loggedInIndicator": null,
+      "rateLimitIndicator": null
+    },
+    "deepseek": {
+      "captchaIndicator": null,
+      "generatingIndicator": ".ds-stop-button",
+      "input": "textarea",
+      "lastMessage": ".ds-message--assistant",
+      "loginIndicator": null,
+      "matches": [
+        "https://chat.deepseek.com/*"
+      ],
+      "loggedInIndicator": null,
+      "rateLimitIndicator": null
+    },
+    "gemini": {
+      "captchaIndicator": null,
+      "generatingIndicator": "[aria-label='Stop']",
+      "input": "div[contenteditable='true']",
+      "lastMessage": "message-content",
+      "loginIndicator": null,
+      "matches": [
+        "https://gemini.google.com/*"
+      ],
+      "loggedInIndicator": null,
+      "rateLimitIndicator": null
+    },
+    "muse": {
+      "captchaIndicator": null,
+      "generatingIndicator": "[aria-label='Stop']",
+      "input": "div[contenteditable='true']",
+      "lastMessage": "[data-testid='assistant-message']",
+      "loginIndicator": null,
+      "matches": [
+        "https://www.meta.ai/*"
+      ],
+      "loggedInIndicator": null,
+      "rateLimitIndicator": null
+    },
+    "qwen": {
+      "captchaIndicator": null,
+      "generatingIndicator": "[aria-label='Stop']",
+      "input": "textarea",
+      "lastMessage": ".message-assistant",
+      "loginIndicator": null,
+      "matches": [
+        "https://chat.qwen.ai/*"
+      ],
+      "loggedInIndicator": null,
+      "rateLimitIndicator": null
+    }
+  },
+  "version": 2
+}
