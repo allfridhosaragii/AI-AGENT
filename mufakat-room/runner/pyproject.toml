@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mufakat-room-runner"
+version = "0.1.0"
+description = "MUFAKAT Room Local Runner — native messaging host, worktree, sandbox, gates, MCP."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+# Tanpa dependensi wajib: stdlib saja. Bila paket `mufakat` terpasang,
+# gates/sandbox didelegasikan ke modul MUFAKAT yang sudah ada; bila tidak,
+# runner memakai fallback lokal dan melaporkannya dengan jujur.
+# fastmcp bersifat opsional (hanya untuk server MCP stdio).
+dependencies = []
+
+[project.optional-dependencies]
+mcp = ["fastmcp"]
+
+[project.scripts]
+mufakat-room-runner = "mufakat_runner.host:main"
+mufakat-room-mcp = "mufakat_runner.mcp_server:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mufakat_runner*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
