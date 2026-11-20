@@ -1,1 +1,23 @@
-IiIiVGVzdCBtb2NrIGVuZC10by1lbmQgTVVGQUtBVCBSb29tIChkZW1vKTogaGFuZG9mZiBtb2NrICsga29uc2Vuc3VzICsgZ2F0ZXMgbnlhdGEuIiIiCgpmcm9tIG11ZmFrYXQucm9vbS5kZW1vIGltcG9ydCBydW5fbW9ja19kZW1vCgoKZGVmIHRlc3RfbW9ja19kZW1vX2VuZF90b19lbmQodG1wX3BhdGgpOgogICAgc3VtbWFyeSA9IHJ1bl9tb2NrX2RlbW8oIkJ1YXQgUkVTVCBBUEkgdG9kbyBkZW5nYW4gRmFzdEFQSSArIHRlc3QgKyBhdWRpdCIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBvdXRwdXRfZGlyPXRtcF9wYXRoIC8gInJvb20tbW9jayIpCiAgICBhc3NlcnQgc3VtbWFyeVsic3RhdGUiXSA9PSAiRklOQUxfUkVWSUVXIgogICAgYXNzZXJ0IHN1bW1hcnlbImNvbnNlbnN1cyJdWyJkZWNpc2lvbiJdID09ICJtdWZha2F0IgogICAgIyBUYW5wYSBEb2NrZXIgZ2F0ZSBnYWdhbC10ZXJ0dXR1cCAtPiBCRUxVTV9URVJWRVJJRklLQVNJIChDMS9IMykuCiAgICAjIE43OiBkZXRla3NpIGRhcmkgZGFlbW9uK2ltYWdlLCBCVUtBTiBiaW5hcnkuCiAgICBmcm9tIG11ZmFrYXQuc2FuZGJveC5kb2NrZXIgaW1wb3J0IGRvY2tlcl9hdmFpbGFibGUKCiAgICBpZiBub3QgZG9ja2VyX2F2YWlsYWJsZSgpOgogICAgICAgIGFzc2VydCBzdW1tYXJ5WyJnYXRlX3ZlcmRpY3QiXSA9PSAiQkVMVU1fVEVSVkVSSUZJS0FTSSIKICAgIGVsc2U6ICAjIHByYWdtYTogbm8gY292ZXIgLSBEb2NrZXIgYWRhIGRpIGhvc3QgaW5pCiAgICAgICAgYXNzZXJ0IHN1bW1hcnlbImdhdGVfdmVyZGljdCJdIGluICgiQU1BTiIsICJUSURBSyBBTUFOIikKICAgIHJlcG9ydCA9ICh0bXBfcGF0aCAvICJyb29tLW1vY2siIC8gImZpbmFsX3JlcG9ydC5tZCIpLnJlYWRfdGV4dChlbmNvZGluZz0idXRmLTgiKQogICAgYXNzZXJ0ICJtYW51YWxfaGFuZG9mZiIgaW4gcmVwb3J0CiAgICBhc3NlcnQgIk1PQ0siIGluIHJlcG9ydAogICAgYXNzZXJ0ICh0bXBfcGF0aCAvICJyb29tLW1vY2siIC8gInJvb20iIC8gInJvb20uanNvbiIpLmlzX2ZpbGUoKQogICAgYXNzZXJ0ICh0bXBfcGF0aCAvICJyb29tLW1vY2siIC8gInJvb20iIC8gInRyYW5zY3JpcHQuanNvbmwiKS5pc19maWxlKCkK
+"""Test mock end-to-end MUFAKAT Room (demo): handoff mock + konsensus + gates nyata."""
+
+from mufakat.room.demo import run_mock_demo
+
+
+def test_mock_demo_end_to_end(tmp_path):
+    summary = run_mock_demo("Buat REST API todo dengan FastAPI + test + audit",
+                            output_dir=tmp_path / "room-mock")
+    assert summary["state"] == "FINAL_REVIEW"
+    assert summary["consensus"]["decision"] == "mufakat"
+    # Tanpa Docker gate gagal-tertutup -> BELUM_TERVERIFIKASI (C1/H3).
+    # N7: deteksi dari daemon+image, BUKAN binary.
+    from mufakat.sandbox.docker import docker_available
+
+    if not docker_available():
+        assert summary["gate_verdict"] == "BELUM_TERVERIFIKASI"
+    else:  # pragma: no cover - Docker ada di host ini
+        assert summary["gate_verdict"] in ("AMAN", "TIDAK AMAN")
+    report = (tmp_path / "room-mock" / "final_report.md").read_text(encoding="utf-8")
+    assert "manual_handoff" in report
+    assert "MOCK" in report
+    assert (tmp_path / "room-mock" / "room" / "room.json").is_file()
+    assert (tmp_path / "room-mock" / "room" / "transcript.jsonl").is_file()
