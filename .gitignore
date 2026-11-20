@@ -1,1 +1,16 @@
-LmVudgouZW52LioKIS5lbnYuZXhhbXBsZQpydW5zLwoqLnNxbGl0ZQpfX3B5Y2FjaGVfXy8KLnZlbnYvCioucHljCi5weXRlc3RfY2FjaGUvCi5teXB5X2NhY2hlLwoucnVmZl9jYWNoZS8Kc3JjL211ZmFrYXQuZWdnLWluZm8vCiouZWdnLWluZm8vCm5vZGVfbW9kdWxlcy8KLm91dHB1dC8KLnd4dC8K
+.env
+.env.*
+!.env.example
+runs/
+*.sqlite
+__pycache__/
+.venv/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+src/mufakat.egg-info/
+*.egg-info/
+node_modules/
+.output/
+.wxt/
