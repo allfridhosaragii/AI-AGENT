@@ -11,10 +11,9 @@ from __future__ import annotations
 import subprocess
 from pathlib import Path
 
+from mufakat.mcp_server import approval_store
 from mufakat.mcp_server.tools import err, git_status_safe, ok
 from mufakat.runner import utcnow
-
-from . import store
 
 DOMAIN = "git"
 
@@ -104,14 +103,25 @@ def git_create_worktree(repo_path: str, worktree_path: str,
     return ok(repo_path=repo_path, worktree_path=str(resolved), branch=branch)
 
 
-def git_commit(repo_path: str, message: str, approval_id: str = "") -> dict:
-    """Commit — ditolak kecuali ada approval yang tercatat dan disetujui."""
-    approval = store.approvals.get(approval_id) if approval_id else None
-    if approval is None or approval.get("status") != "approved":
+def git_commit(repo_path: str, message: str, approval_id: str = "",
+               approval_token: str = "") -> dict:
+    """Commit — ditolak kecuali ada approval manusia yang disetujui.
+
+    Syarat (H1): approval berstatus ``approved`` di SQLite, token
+    sekali pakai valid & belum dipakai & belum kedaluwarsa, dan hash
+    ``git diff`` saat ini sama dengan hash saat disetujui. Token
+    hangus setelah commit berhasil.
+    """
+    current_hash = approval_store.diff_hash_for_repo(repo_path)
+    valid, reason = approval_store.verify_token(
+        approval_id, approval_token, current_diff_hash=current_hash)
+    if not valid:
         return err(
-            "Commit memerlukan approval yang tercatat dan disetujui. "
+            "Commit memerlukan approval manusia yang disetujui. "
             "Minta approval lewat approval_request, setujui lewat "
-            "approval_record_decision, lalu ulangi dengan approval_id.",
+            "`mufakat approve <id>` (manusia, di TTY), lalu ulangi "
+            "dengan approval_id + approval_token sekali pakai. "
+            f"Alasan: {reason}",
             approval_id=approval_id)
     try:
         proc = subprocess.run(
@@ -122,6 +132,7 @@ def git_commit(repo_path: str, message: str, approval_id: str = "") -> dict:
     if proc.returncode != 0:
         return err("git commit gagal.", stderr=proc.stderr[:2000],
                    stdout=proc.stdout[:2000])
+    approval_store.consume_token(approval_id)
     return ok(repo_path=repo_path, message=message,
               approval_id=approval_id, output=proc.stdout[:2000],
               committed_at=utcnow())
