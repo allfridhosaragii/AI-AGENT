@@ -147,3 +147,155 @@ def test_mcp_room_status_tidak_ada_room(tmp_path):
     result = mcp_server.room_status(str(tmp_path))
     assert result["room_found"] is False
     assert result["mode"] == "manual_handoff"
+
+
+# -- Regresi audit ekstrem Putaran 1 (20 Nov 2026) -----------------------
+def test_path_drive_windows_dan_nul_ditolak():
+    for bad in ("C:\\Windows\\x.txt", "C:/Windows/x.txt", "a\x00b"):
+        with pytest.raises(ValueError):
+            worktree_mod.validate_rel_path(bad)
+
+
+def test_apply_files_symlink_dir_ditolak(tmp_path):
+    outside = tmp_path / "outside"
+    outside.mkdir()
+    (tmp_path / "link").symlink_to(outside, target_is_directory=True)
+    with pytest.raises(ValueError):
+        worktree_mod.apply_files(
+            tmp_path, [{"path": "link/evil.txt", "mode": "replace", "content": "x"}]
+        )
+    assert not (outside / "evil.txt").exists()
+
+
+def test_apply_files_symlink_file_ditolak(tmp_path):
+    target = tmp_path / "target.txt"
+    target.write_text("asli")
+    (tmp_path / "f.txt").symlink_to(target)
+    with pytest.raises(ValueError):
+        worktree_mod.apply_files(
+            tmp_path, [{"path": "f.txt", "mode": "replace", "content": "x"}]
+        )
+    assert target.read_text() == "asli"
+
+
+def test_apply_files_atomik_semua_divalidasi_dulu(tmp_path):
+    with pytest.raises(ValueError):
+        worktree_mod.apply_files(
+            tmp_path,
+            [{"path": "good.txt", "mode": "replace", "content": "g"},
+             {"path": "../../etc/passwd", "mode": "replace", "content": "x"}],
+        )
+    assert not (tmp_path / "good.txt").exists()
+    with pytest.raises(ValueError):
+        worktree_mod.apply_files(
+            tmp_path,
+            [{"path": "good2.txt", "mode": "tidak_ada", "content": "g"}],
+        )
+    assert not (tmp_path / "good2.txt").exists()
+
+
+def test_apply_patch_konteks_salah_ditolak(tmp_path):
+    (tmp_path / "a.txt").write_text("satu\ndua\n")
+    patch = "@@ -1,2 +1,2 @@\n SALAH_KONTEKS\n-dua\n+dua-baru\n"
+    with pytest.raises(ValueError):
+        worktree_mod.apply_files(tmp_path, [{"path": "a.txt", "mode": "patch", "content": patch}])
+    assert (tmp_path / "a.txt").read_text() == "satu\ndua\n"
+
+
+def test_apply_patch_hapus_salah_ditolak(tmp_path):
+    (tmp_path / "a.txt").write_text("satu\ndua\n")
+    patch = "@@ -1,2 +1,2 @@\n satu\n-TIDAK_ADA\n+baru\n"
+    with pytest.raises(ValueError):
+        worktree_mod.apply_files(tmp_path, [{"path": "a.txt", "mode": "patch", "content": patch}])
+    assert (tmp_path / "a.txt").read_text() == "satu\ndua\n"
+
+
+def test_apply_patch_jumlah_baris_tidak_cocok_ditolak(tmp_path):
+    (tmp_path / "a.txt").write_text("satu\ndua\n")
+    # Header bilang 2 baris lama, isi hanya 1 baris konteks.
+    patch = "@@ -1,2 +1,1 @@\n satu\n"
+    with pytest.raises(ValueError):
+        worktree_mod.apply_files(tmp_path, [{"path": "a.txt", "mode": "patch", "content": patch}])
+
+
+def test_apply_patch_kosong_ditolak(tmp_path):
+    (tmp_path / "a.txt").write_text("satu\n")
+    with pytest.raises(ValueError):
+        worktree_mod.apply_files(tmp_path, [{"path": "a.txt", "mode": "patch", "content": "  "}])
+    assert (tmp_path / "a.txt").read_text() == "satu\n"
+
+
+def test_apply_patch_penanda_no_newline_diterima(tmp_path):
+    (tmp_path / "a.txt").write_text("satu\ndua\n")
+    patch = "@@ -1,2 +1,2 @@\n satu\n-dua\n+dua\n\\ No newline at end of file\n"
+    worktree_mod.apply_files(tmp_path, [{"path": "a.txt", "mode": "patch", "content": patch}])
+    assert (tmp_path / "a.txt").read_text() == "satu\ndua\n"
+
+
+def test_host_pesan_tipe_salah_tidak_crash(tmp_path):
+    assert host_mod.handle_command(
+        {"command": "apply_files", "worktree": str(tmp_path), "files": "bukan-list"}
+    )["ok"] is False
+    assert host_mod.handle_command(
+        {"command": "init_workspace", "repo_path": 123, "run_id": "x"}
+    )["ok"] is False
+    assert host_mod.handle_command(
+        {"command": "apply_files", "worktree": str(tmp_path)}
+    )["ok"] is True
+
+
+def test_host_init_workspace_run_id_traversal_ditolak(tmp_path):
+    result = host_mod.handle_command(
+        {"command": "init_workspace", "repo_path": str(tmp_path), "run_id": "../../evil"}
+    )
+    assert result["ok"] is False
+
+
+def test_decode_message_pesan_raksasa_ditolak():
+    import struct
+
+    with pytest.raises(ValueError):
+        host_mod.decode_message(struct.pack("<I", 0xFFFFFFFF) + b"x")
+
+
+def test_cleanup_path_berbahaya_ditolak():
+    from pathlib import Path as _P
+
+    assert worktree_mod.cleanup("/") is False
+    assert worktree_mod.cleanup(str(_P.home())) is False
+
+
+def test_install_host_manifest_id_tidak_valid_ditolak():
+    for bad in ("chrome-extension://abc/extra", "chrome-extension://",
+                "https://evil.example/", "chrome-extension://ABC/"):
+        with pytest.raises(ValueError):
+            _install_host.host_manifest(bad, "/usr/bin/python3")
+
+
+def test_mcp_room_status_json_bukan_object(tmp_path):
+    from mufakat_runner import mcp_server
+
+    (tmp_path / "room.json").write_text("[1, 2]")
+    result = mcp_server.room_status(str(tmp_path))
+    assert result["ok"] is False
+    assert result["room_found"] is False
+
+
+def test_round2_cleanup_worktree_sah_dalam_repo_boleh(tmp_path):
+    repo = tmp_path / "repo"
+    wt = repo / "runs" / "r1" / "wt"
+    wt.mkdir(parents=True)
+    assert worktree_mod.cleanup(wt, repo) is True
+    assert not wt.exists()
+
+
+def test_round2_cleanup_leluhur_repo_ditolak(tmp_path):
+    repo = tmp_path / "repo"
+    repo.mkdir()
+    assert worktree_mod.cleanup(tmp_path, repo) is False
+    assert tmp_path.exists()
+
+
+def test_round2_install_host_path_kosong_ditolak():
+    with pytest.raises(ValueError):
+        _install_host.host_manifest("chrome-extension://abcdef/", "")
