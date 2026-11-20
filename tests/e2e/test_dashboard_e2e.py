@@ -28,9 +28,16 @@ def test_e2e_dashboard_alur_penuh(tmp_path, monkeypatch):
     body = created.json()
     run_id = body["run_id"]
     # Run nyata menulis diff + verdict gate (bukan hanya ringkasan).
-    assert body["verdict"] == "AMAN"
+    # Tanpa Docker gate gagal-tertutup -> BELUM_TERVERIFIKASI (C1/H3);
+    # dengan Docker, template bersih -> AMAN.
+    import shutil
+
+    if shutil.which("docker") is None:
+        assert body["verdict"] == "BELUM_TERVERIFIKASI"
+    else:  # pragma: no cover - Docker ada di host ini
+        assert body["verdict"] == "AMAN"
+        assert any(g["tool"] == "pytest" and g["passed"] for g in body["gates"])
     assert body["diff"] is not None
-    assert any(g["tool"] == "pytest" and g["passed"] for g in body["gates"])
 
     detail = client.get(f"/api/runs/{run_id}")
     assert detail.status_code == 200
