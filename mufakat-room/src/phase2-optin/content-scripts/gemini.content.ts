@@ -1,1 +1,19 @@
-Ly8gTVVGQUtBVCBSb29tIOKAlCBjb250ZW50IHNjcmlwdCBnZW1pbmkgKENsYXVkZSDCpzQpIOKAlCBPUFQtSU4gRkFTRSAyLCBUSURBSyBBS1RJRiBESSBNVlAuCi8vIEFkYXB0ZXIgc2l0dXM6IGZpbGxJbnB1dCBIQU5ZQSBtZW5naXNpIHRla3MgKFRJREFLIGtpcmltKSwgcmVhZExhc3RSZXBseQovLyBoYW55YSBtZW1iYWNhIERPTSB5YW5nIHRhbXBpbC4gU2VsZWN0b3IgZGFyaSBzZWxlY3RvcnMuanNvbiAodmVyc2lvbmVkKS4KLy8gQmlsYSBzZWxlY3RvciBnYWdhbCAtPiBmYWxsYmFjayBjbGlwYm9hcmQgKyBtb2RlIE1hbnVhbCBDb3B5LgovLyBKYWx1ciBBc3Npc3RlZCBGaWxsIChvcHQtaW4gRmFzZSAyKTsgYWx1ciB1dGFtYSBSb29tIGFkYWxhaCBNYW51YWwgSGFuZG9mZi4KLy8gRmlsZSBpbmkgVElEQUsgdGVyZGFmdGFyIHNlYmFnYWkgZW50cnlwb2ludCBXWFQgKGRpIGx1YXIgc3JjL2VudHJ5cG9pbnRzLykKLy8gc2VoaW5nZ2EgVElEQUsgZGktYnVpbGQga2UgbWFuaWZlc3QgTVZQIOKAlCBsaWhhdCAuLi9SRUFETUUubWQuCmltcG9ydCB7IGNyZWF0ZUFkYXB0ZXIsIHJlZ2lzdGVyQWRhcHRlck1lc3NhZ2VzLCB0eXBlIFNpdGVTZWxlY3RvcnMgfSBmcm9tICcuLi8uLi9hZGFwdGVycy9iYXNlJzsKaW1wb3J0IHNlbGVjdG9yc0pzb24gZnJvbSAnLi4vLi4vYWRhcHRlcnMvc2VsZWN0b3JzLmpzb24nOwoKY29uc3Qgc2VsZWN0b3JzID0gKHNlbGVjdG9yc0pzb24uc2l0ZXMgYXMgUmVjb3JkPHN0cmluZywgU2l0ZVNlbGVjdG9ycz4pWydnZW1pbmknXTsKCmV4cG9ydCBkZWZhdWx0IGRlZmluZUNvbnRlbnRTY3JpcHQoewogIG1hdGNoZXM6IHNlbGVjdG9ycy5tYXRjaGVzLAogIG1haW4oKSB7CiAgICBjb25zdCBhZGFwdGVyID0gY3JlYXRlQWRhcHRlcignZ2VtaW5pJywgJ2dvb2dsZScsIHNlbGVjdG9ycyk7CiAgICByZWdpc3RlckFkYXB0ZXJNZXNzYWdlcyhhZGFwdGVyLCBzZWxlY3RvcnMpOwogIH0sCn0pOwo=
+// MUFAKAT Room — content script gemini (Claude §4) — OPT-IN FASE 2, TIDAK AKTIF DI MVP.
+// Adapter situs: fillInput HANYA mengisi teks (TIDAK kirim), readLastReply
+// hanya membaca DOM yang tampil. Selector dari selectors.json (versioned).
+// Bila selector gagal -> fallback clipboard + mode Manual Copy.
+// Jalur Assisted Fill (opt-in Fase 2); alur utama Room adalah Manual Handoff.
+// File ini TIDAK terdaftar sebagai entrypoint WXT (di luar src/entrypoints/)
+// sehingga TIDAK di-build ke manifest MVP — lihat ../README.md.
+import { createAdapter, registerAdapterMessages, type SiteSelectors } from '../../adapters/base';
+import selectorsJson from '../../adapters/selectors.json';
+
+const selectors = (selectorsJson.sites as Record<string, SiteSelectors>)['gemini'];
+
+export default defineContentScript({
+  matches: selectors.matches,
+  main() {
+    const adapter = createAdapter('gemini', 'google', selectors);
+    registerAdapterMessages(adapter, selectors);
+  },
+});
