@@ -1,1 +1,220 @@
-IiIiVGVzdCByZWdyZXNpIGF1ZGl0IHB1dGFyYW4gMiDigJQgTjIgKHJ1bm5lciB3b3JrdHJlZSBkaWZmL2NvbW1pdCkKKyBONyAoc3RhdHVzIHJ1bm5lciBqdWp1cikuCgpQb0MgTjIgKGxhcG9yYW4gYXVkaXQpOiBgYGFwcGx5X2ZpbGVzYGAgbWVuZ3ViYWggYGBhcHAucHlgYCArCm1lbmFtYmFoIGBgYmFja2Rvb3IucHlgYC4gRHVsdSBkaWZmIHlhbmcgZGl0YW1waWxrYW4gVElEQUsgbWVtdWF0CmBgYmFja2Rvb3IucHlgYCAoYGBnaXQgZGlmZiBIRUFEYGAgbWVsZXdhdGthbiB1bnRyYWNrZWQpLCB0YXBpCmBgY29tbWl0YGAgKGBgZ2l0IGFkZCAtQWBgKSBpa3V0IG1lbmctY29tbWl0LW55YS4gU2VrYXJhbmc6CgotIGBgZGlmZigpYGAgc3RhZ2UgZHVsdSAoYGBnaXQgYWRkIC1BYGApIGxhbHUKICBgYGdpdCBkaWZmIC0tY2FjaGVkIEhFQURgYCDigJQgZmlsZSBiYXJ1IFdBSklCIG11bmN1bCBkaSBkaWZmCiAgeWFuZyBkaXNldHVqdWkuCi0gYGBjb21taXQoKWBgIFRBTlBBIGBgZ2l0IGFkZCAtQWBgIGxhZ2ksIG1lbXZlcmlmaWthc2kgdWxhbmcgaGFzaAogIGBgLS1jYWNoZWRgYCB5YW5nIGRpc2V0dWp1aSwgZGFuIG1lbWVyaWtzYSBzdGFnZWQgZGlmZiBrb3NvbmcKICBzZXRlbGFoIGNvbW1pdC4KLSBBcnRlZmFrIGdhdGUgKGBgY292ZXJhZ2UuanNvbmBgIGRray4pIGRpdHVsaXMgZGkgbHVhciB3b3JrdHJlZQogIChONCwgZ2F0ZSBweXRlc3QpIHNlaGluZ2dhIHRpZGFrIGlrdXQgdGVyLXN0YWdlL3Rlci1jb21taXQuCgpONzogYGBzdGF0dXNgYCBydW5uZXIgbWVsYXBvciBgYGRvY2tlcl9hdmFpbGFibGVgYCBqdWp1ciDigJQgRmFsc2UKYmlsYSBkYWVtb24gbWF0aSAvIGltYWdlIHRpZGFrIGFkYSAobW9jaywgYnVrYW4gYGBzaHV0aWwud2hpY2hgYCkuCiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IHN1YnByb2Nlc3MKCmZyb20gbXVmYWthdF9ydW5uZXIgaW1wb3J0IGhvc3QgYXMgaG9zdF9tb2QKZnJvbSBtdWZha2F0X3J1bm5lciBpbXBvcnQgc2FuZGJveCBhcyBzYW5kYm94X21vZApmcm9tIG11ZmFrYXRfcnVubmVyIGltcG9ydCB3b3JrdHJlZSBhcyB3b3JrdHJlZV9tb2QKCgpkZWYgX2dpdCgqYXJncywgY3dkKToKICAgIHN1YnByb2Nlc3MucnVuKFsiZ2l0IiwgKmFyZ3NdLCBjd2Q9c3RyKGN3ZCksIGNoZWNrPVRydWUsCiAgICAgICAgICAgICAgICAgICBjYXB0dXJlX291dHB1dD1UcnVlLCB0ZXh0PVRydWUpCgoKZGVmIF9pbml0X3JlcG8odG1wX3BhdGgpOgogICAgIiIiUmVwbyBnaXQgZGVuZ2FuIHNhdHUgY29tbWl0IGF3YWw7IGtlbWJhbGlrYW4gcGF0aCByZXBvLiIiIgogICAgcmVwbyA9IHRtcF9wYXRoIC8gInJlcG8iCiAgICByZXBvLm1rZGlyKCkKICAgIF9naXQoImluaXQiLCAiLXEiLCBjd2Q9cmVwbykKICAgIF9naXQoImNvbmZpZyIsICJ1c2VyLmVtYWlsIiwgInRAdC50IiwgY3dkPXJlcG8pCiAgICBfZ2l0KCJjb25maWciLCAidXNlci5uYW1lIiwgIlRlcyIsIGN3ZD1yZXBvKQogICAgKHJlcG8gLyAiYXBwLnB5Iikud3JpdGVfdGV4dCgicHJpbnQoJ3YxJylcbiIsIGVuY29kaW5nPSJ1dGYtOCIpCiAgICBfZ2l0KCJhZGQiLCAiLUEiLCBjd2Q9cmVwbykKICAgIF9naXQoImNvbW1pdCIsICItcW0iLCAiYXdhbCIsIGN3ZD1yZXBvKQogICAgcmV0dXJuIHJlcG8KCgpkZWYgX2NvbW1pdHRlZF9maWxlcyh3b3JrdHJlZSk6CiAgICBvdXQgPSBzdWJwcm9jZXNzLnJ1bigKICAgICAgICBbImdpdCIsICJzaG93IiwgIi0tbmFtZS1vbmx5IiwgIi0tZm9ybWF0PSIsICJIRUFEIl0sCiAgICAgICAgY3dkPXN0cih3b3JrdHJlZSksIGNhcHR1cmVfb3V0cHV0PVRydWUsIHRleHQ9VHJ1ZSwgY2hlY2s9VHJ1ZSkKICAgIHJldHVybiBzb3J0ZWQobiBmb3IgbiBpbiBvdXQuc3Rkb3V0LnNwbGl0bGluZXMoKSBpZiBuLnN0cmlwKCkpCgoKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyBOMiDigJQgZGlmZiBtZW11YXQgZmlsZSBiYXJ1OyBjb21taXQgaGFueWEgeWFuZyBkaXNldHVqdWkKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZGVmIHRlc3RfbjJfZGlmZl9tZW11YXRfZmlsZV9iYXJ1X3VudHJhY2tlZCh0bXBfcGF0aCk6CiAgICAiIiJQb0MgTjI6IGJhY2tkb29yLnB5ICh1bnRyYWNrZWQpIFdBSklCIG11bmN1bCBkaSBkaWZmLiIiIgogICAgcmVwbyA9IF9pbml0X3JlcG8odG1wX3BhdGgpCiAgICB3dCA9IHJlcG8gLyAicnVucyIgLyAicjEiIC8gInd0IgogICAgd29ya3RyZWVfbW9kLmluaXRfd29ya3NwYWNlKHJlcG8sICJyMSIpCiAgICB3b3JrdHJlZV9tb2QuYXBwbHlfZmlsZXMod3QsIFsKICAgICAgICB7InBhdGgiOiAiYXBwLnB5IiwgIm1vZGUiOiAicmVwbGFjZSIsCiAgICAgICAgICJjb250ZW50IjogInByaW50KCd2MicpXG4ifSwKICAgICAgICB7InBhdGgiOiAiYmFja2Rvb3IucHkiLCAibW9kZSI6ICJyZXBsYWNlIiwKICAgICAgICAgImNvbnRlbnQiOiAiaW1wb3J0IG9zXG5vcy5zeXN0ZW0oJ2lkJylcbiJ9LAogICAgXSkKICAgIGRpZmYgPSB3b3JrdHJlZV9tb2QuZGlmZih3dCkKICAgIGFzc2VydCAiYmFja2Rvb3IucHkiIGluIGRpZmYKICAgIGFzc2VydCAiYXBwLnB5IiBpbiBkaWZmCiAgICBhc3NlcnQgIm9zLnN5c3RlbSIgaW4gZGlmZgogICAgYXNzZXJ0IHdvcmt0cmVlX21vZC5kaWZmX2hhc2god3QpCgoKZGVmIHRlc3RfbjJfY29tbWl0X2hhbnlhX2ZpbGVfeWFuZ19hZGFfZGlfZGlmZih0bXBfcGF0aCk6CiAgICAiIiJZYW5nIGRpLWNvbW1pdCA9IHlhbmcgYWRhIGRpIGRpZmYgeWFuZyBkaXNldHVqdWksIHRpZGFrIGxlYmloLiIiIgogICAgcmVwbyA9IF9pbml0X3JlcG8odG1wX3BhdGgpCiAgICB3b3JrdHJlZV9tb2QuaW5pdF93b3Jrc3BhY2UocmVwbywgInIxIikKICAgIHd0ID0gcmVwbyAvICJydW5zIiAvICJyMSIgLyAid3QiCiAgICB3b3JrdHJlZV9tb2QuYXBwbHlfZmlsZXMod3QsIFsKICAgICAgICB7InBhdGgiOiAiYXBwLnB5IiwgIm1vZGUiOiAicmVwbGFjZSIsICJjb250ZW50IjogInByaW50KCd2MicpXG4ifSwKICAgICAgICB7InBhdGgiOiAiYmFja2Rvb3IucHkiLCAibW9kZSI6ICJyZXBsYWNlIiwKICAgICAgICAgImNvbnRlbnQiOiAiaW1wb3J0IG9zXG5vcy5zeXN0ZW0oJ2lkJylcbiJ9LAogICAgXSkKICAgIHNob3duX2hhc2ggPSB3b3JrdHJlZV9tb2QuZGlmZl9oYXNoKHd0KQogICAgYXNzZXJ0IHNob3duX2hhc2gKICAgIGFzc2VydCB3b3JrdHJlZV9tb2QuY29tbWl0KHd0LCAicGVydWJhaGFuIGRpc2V0dWp1aSIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBleHBlY3RlZF9kaWZmX2hhc2g9c2hvd25faGFzaCkgaXMgVHJ1ZQogICAgYXNzZXJ0IF9jb21taXR0ZWRfZmlsZXMod3QpID09IFsiYXBwLnB5IiwgImJhY2tkb29yLnB5Il0KCgpkZWYgdGVzdF9uMl9jb21taXRfdG9sYWtfYmlsYV9kaWZmX2JlcnViYWhfc2V0ZWxhaF9hcHByb3ZlKHRtcF9wYXRoKToKICAgICIiIkZpbGUgZGl0YW1iYWhrYW4gU0VURUxBSCBkaWZmIGRpc2V0dWp1aSAtPiBjb21taXQgZGl0b2xhay4iIiIKICAgIHJlcG8gPSBfaW5pdF9yZXBvKHRtcF9wYXRoKQogICAgd29ya3RyZWVfbW9kLmluaXRfd29ya3NwYWNlKHJlcG8sICJyMSIpCiAgICB3dCA9IHJlcG8gLyAicnVucyIgLyAicjEiIC8gInd0IgogICAgd29ya3RyZWVfbW9kLmFwcGx5X2ZpbGVzKHd0LCBbCiAgICAgICAgeyJwYXRoIjogImFwcC5weSIsICJtb2RlIjogInJlcGxhY2UiLCAiY29udGVudCI6ICJwcmludCgndjInKVxuIn0sCiAgICBdKQogICAgc2hvd25faGFzaCA9IHdvcmt0cmVlX21vZC5kaWZmX2hhc2god3QpCiAgICAjIFBlbnllbHVuZHVwYW4gc2V0ZWxhaCBBcHByb3ZlOiBmaWxlIGJhcnUgbXVuY3VsIGRpYW0tZGlhbS4KICAgICh3dCAvICJiYWNrZG9vci5weSIpLndyaXRlX3RleHQoImltcG9ydCBvc1xub3Muc3lzdGVtKCdpZCcpXG4iLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbmNvZGluZz0idXRmLTgiKQogICAgYXNzZXJ0IHdvcmt0cmVlX21vZC5jb21taXQod3QsICJ4IiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGV4cGVjdGVkX2RpZmZfaGFzaD1zaG93bl9oYXNoKSBpcyBGYWxzZQogICAgIyBUaWRhayBhZGEgY29tbWl0IGJhcnUgeWFuZyB0ZXJqYWRpLgogICAgb3V0ID0gc3VicHJvY2Vzcy5ydW4oWyJnaXQiLCAibG9nIiwgIi0tb25lbGluZSJdLCBjd2Q9c3RyKHd0KSwKICAgICAgICAgICAgICAgICAgICAgICAgIGNhcHR1cmVfb3V0cHV0PVRydWUsIHRleHQ9VHJ1ZSwgY2hlY2s9VHJ1ZSkKICAgIGFzc2VydCBsZW4ob3V0LnN0ZG91dC5zdHJpcCgpLnNwbGl0bGluZXMoKSkgPT0gMQoKCmRlZiB0ZXN0X24yX2NvbW1pdF90YW5wYV9kaWZmX2R1bHVfdGlkYWtfc3RhZ2luZ19kaWFtX2RpYW0odG1wX3BhdGgpOgogICAgIiIiY29tbWl0KCkgdGFucGEgZGlmZigpIHNlYmVsdW1ueWE6IHRpZGFrIGFkYSB5YW5nIHRlci1zdGFnZQogICAgLT4gZ2l0IGNvbW1pdCBnYWdhbCAoRmFsc2UpLCBidWthbiBjb21taXQgZGlhbS1kaWFtLiIiIgogICAgcmVwbyA9IF9pbml0X3JlcG8odG1wX3BhdGgpCiAgICB3b3JrdHJlZV9tb2QuaW5pdF93b3Jrc3BhY2UocmVwbywgInIxIikKICAgIHd0ID0gcmVwbyAvICJydW5zIiAvICJyMSIgLyAid3QiCiAgICAod3QgLyAiYXBwLnB5Iikud3JpdGVfdGV4dCgicHJpbnQoJ3YyJylcbiIsIGVuY29kaW5nPSJ1dGYtOCIpCiAgICBhc3NlcnQgd29ya3RyZWVfbW9kLmNvbW1pdCh3dCwgIngiKSBpcyBGYWxzZQoKCmRlZiB0ZXN0X24yX2FsdXJfaG9zdF9iYWNrZG9vcl90aWRha19sb2xvc19kaWFtX2RpYW0odG1wX3BhdGgsIG1vbmtleXBhdGNoKToKICAgICIiIkFsdXIgaG9zdCBsZW5na2FwOiBhcHBseSAtPiBkaWZmIChsaWhhdCBiYWNrZG9vcikgLT4gYXBwcm92ZQogICAgbWFudXNpYSAoa29kZSA2IGRpZ2l0KSAtPiB0b2tlbiAtPiBjb21taXQgYmVyaXNpIHRlcGF0IGRpZmYgaXR1LiIiIgogICAgaW1wb3J0IHJlIGFzIF9yZQoKICAgIGZyb20gbXVmYWthdF9ydW5uZXIgaW1wb3J0IHJlZ2lzdHJ5IGFzIHJlZ2lzdHJ5X21vZAoKICAgIG1vbmtleXBhdGNoLnNldGVudigiTVVGQUtBVF9SVU5ORVJfUkVHSVNUUlkiLAogICAgICAgICAgICAgICAgICAgICAgIHN0cih0bXBfcGF0aCAvICJydW5uZXIuanNvbiIpKQogICAgcmVwbyA9IF9pbml0X3JlcG8odG1wX3BhdGgpCiAgICBhc3NlcnQgcmVnaXN0cnlfbW9kLnJlZ2lzdGVyX3JlcG8oInIiLCBzdHIocmVwbykpWyJuYW1lIl0gPT0gInIiCiAgICBob3N0ID0gaG9zdF9tb2QuUnVubmVySG9zdCgpCiAgICBhc3NlcnQgaG9zdC5oYW5kbGVfY29tbWFuZCgKICAgICAgICB7ImNvbW1hbmQiOiAiaW5pdF93b3Jrc3BhY2UiLCAicmVwbyI6ICJyIiwgInJ1bl9pZCI6ICJyMSJ9CiAgICApWyJvayJdIGlzIFRydWUKICAgIHd0ID0gcmVwbyAvICJydW5zIiAvICJyMSIgLyAid3QiCiAgICBhc3NlcnQgaG9zdC5oYW5kbGVfY29tbWFuZCgKICAgICAgICB7ImNvbW1hbmQiOiAiYXBwbHlfZmlsZXMiLCAicnVuX2lkIjogInIxIiwKICAgICAgICAgImZpbGVzIjogWwogICAgICAgICAgICAgeyJwYXRoIjogImFwcC5weSIsICJtb2RlIjogInJlcGxhY2UiLAogICAgICAgICAgICAgICJjb250ZW50IjogInByaW50KCd2MicpXG4ifSwKICAgICAgICAgICAgIHsicGF0aCI6ICJiYWNrZG9vci5weSIsICJtb2RlIjogInJlcGxhY2UiLAogICAgICAgICAgICAgICJjb250ZW50IjogImltcG9ydCBvc1xub3Muc3lzdGVtKCdpZCcpXG4ifSwKICAgICAgICAgXX0pWyJvayJdIGlzIFRydWUKICAgIHNob3duID0gaG9zdC5oYW5kbGVfY29tbWFuZCh7ImNvbW1hbmQiOiAiZGlmZiIsICJydW5faWQiOiAicjEifSkKICAgIGFzc2VydCBzaG93blsib2siXSBpcyBUcnVlCiAgICAjIE1hbnVzaWEgSEFSVVMgbWVsaWhhdCBiYWNrZG9vci5weSBkaSBkaWZmIHNlYmVsdW0gbWVueWV0dWp1aS4KICAgIGFzc2VydCAiYmFja2Rvb3IucHkiIGluIHNob3duWyJkaWZmIl0KICAgIGNhcHR1cmVkOiBkaWN0ID0ge30KCiAgICBkZWYgX2Zha2VfZGlhbG9nKHRpdGxlLCBib2R5KToKICAgICAgICBjYXB0dXJlZFsiYm9keSJdID0gYm9keQogICAgICAgIHJldHVybiAiZGlhbG9nIgoKICAgIG1vbmtleXBhdGNoLnNldGF0dHIoaG9zdF9tb2QsICJfc2hvd19odW1hbl9jb2RlIiwgX2Zha2VfZGlhbG9nKQogICAgcmVxdWVzdGVkID0gaG9zdC5oYW5kbGVfY29tbWFuZCh7ImNvbW1hbmQiOiAicmVxdWVzdF9hcHByb3ZhbCIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAicnVuX2lkIjogInIxIn0pCiAgICBhc3NlcnQgcmVxdWVzdGVkWyJvayJdIGlzIFRydWUKICAgIGNvZGUgPSBfcmUuc2VhcmNoKHIiS09ERSBQRVJTRVRVSlVBTjogKFxkezZ9KSIsCiAgICAgICAgICAgICAgICAgICAgICBjYXB0dXJlZFsiYm9keSJdKS5ncm91cCgxKQogICAgYXNzZXJ0IGhvc3QuaGFuZGxlX2NvbW1hbmQoCiAgICAgICAgeyJjb21tYW5kIjogImNvbmZpcm1fYXBwcm92YWwiLCAicnVuX2lkIjogInIxIiwKICAgICAgICAgImFwcHJvdmFsX2lkIjogcmVxdWVzdGVkWyJhcHByb3ZhbF9pZCJdLCAiY29kZSI6IGNvZGV9CiAgICApWyJvayJdIGlzIFRydWUKICAgIGlzc3VlZCA9IGhvc3QuaGFuZGxlX2NvbW1hbmQoCiAgICAgICAgeyJjb21tYW5kIjogImlzc3VlX2FwcHJvdmFsX3Rva2VuIiwgInJ1bl9pZCI6ICJyMSIsCiAgICAgICAgICJkaWZmX2hhc2giOiBzaG93blsiZGlmZl9oYXNoIl19KQogICAgYXNzZXJ0IGlzc3VlZFsib2siXSBpcyBUcnVlCiAgICBjb21taXR0ZWQgPSBob3N0LmhhbmRsZV9jb21tYW5kKAogICAgICAgIHsiY29tbWFuZCI6ICJjb21taXQiLCAicnVuX2lkIjogInIxIiwgIm1lc3NhZ2UiOiAieCIsCiAgICAgICAgICJhcHByb3ZhbF90b2tlbiI6IGlzc3VlZFsiYXBwcm92YWxfdG9rZW4iXX0pCiAgICBhc3NlcnQgY29tbWl0dGVkWyJvayJdIGlzIFRydWUKICAgIGFzc2VydCBjb21taXR0ZWRbImNvbW1pdHRlZCJdIGlzIFRydWUKICAgIGFzc2VydCBfY29tbWl0dGVkX2ZpbGVzKHd0KSA9PSBbImFwcC5weSIsICJiYWNrZG9vci5weSJdCgoKZGVmIHRlc3RfbjJfYXJ0ZWZha19nYXRlX2RpX2x1YXJfd29ya3RyZWVfdGlkYWtfdGVyY29tbWl0KHRtcF9wYXRoKToKICAgICIiIkFydGVmYWsgZ2F0ZSB5YW5nICh0aWRhayBzZW5nYWphKSBhZGEgZGkgd29ya3RyZWUgVElEQUsgaWt1dAogICAgdGVyLWNvbW1pdCBiaWxhIGRpdHVsaXMgZGkgbHVhciB3b3JrdHJlZSDigJQgc2ltdWxhc2k6IGNvdmVyYWdlCiAgICBkaXR1bGlzIGtlIGZvbGRlciBnYXRlcyBkaSBsdWFyIHd0LCBkaWZmIHRpZGFrIG1lbXVhdG55YS4iIiIKICAgIHJlcG8gPSBfaW5pdF9yZXBvKHRtcF9wYXRoKQogICAgd29ya3RyZWVfbW9kLmluaXRfd29ya3NwYWNlKHJlcG8sICJyMSIpCiAgICB3dCA9IHJlcG8gLyAicnVucyIgLyAicjEiIC8gInd0IgogICAgZ2F0ZXNfZGlyID0gcmVwbyAvICJydW5zIiAvICJyMSIgLyAiZ2F0ZXMiCiAgICBnYXRlc19kaXIubWtkaXIocGFyZW50cz1UcnVlKQogICAgKGdhdGVzX2RpciAvICJjb3ZlcmFnZS5qc29uIikud3JpdGVfdGV4dCgneyJ0b3RhbHMiOiB7fX0nLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbmNvZGluZz0idXRmLTgiKQogICAgd29ya3RyZWVfbW9kLmFwcGx5X2ZpbGVzKHd0LCBbCiAgICAgICAgeyJwYXRoIjogImFwcC5weSIsICJtb2RlIjogInJlcGxhY2UiLCAiY29udGVudCI6ICJwcmludCgndjInKVxuIn0sCiAgICBdKQogICAgZGlmZiA9IHdvcmt0cmVlX21vZC5kaWZmKHd0KQogICAgYXNzZXJ0ICJjb3ZlcmFnZS5qc29uIiBub3QgaW4gZGlmZgogICAgc2hvd25faGFzaCA9IHdvcmt0cmVlX21vZC5kaWZmX2hhc2god3QpCiAgICBhc3NlcnQgd29ya3RyZWVfbW9kLmNvbW1pdCh3dCwgIngiLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZXhwZWN0ZWRfZGlmZl9oYXNoPXNob3duX2hhc2gpIGlzIFRydWUKICAgIGFzc2VydCBfY29tbWl0dGVkX2ZpbGVzKHd0KSA9PSBbImFwcC5weSJdCgoKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyBONyDigJQgc3RhdHVzIHJ1bm5lciBqdWp1ciAobW9jaykKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZGVmIHRlc3Rfbjdfc3RhdHVzX2RvY2tlcl9hdmFpbGFibGVfanVqdXJfZGFlbW9uX21hdGkobW9ua2V5cGF0Y2gpOgogICAgIiIiQ0xJIGFkYSB0YXBpIGRhZW1vbiBtYXRpIC0+IHN0YXR1cyBkb2NrZXJfYXZhaWxhYmxlIEZhbHNlLiIiIgogICAgaW1wb3J0IG11ZmFrYXQuc2FuZGJveC5kb2NrZXIgYXMgZG9ja2VyX21vZAoKICAgIG1vbmtleXBhdGNoLnNldGF0dHIoInNodXRpbC53aGljaCIsIGxhbWJkYSBuYW1lOiAiL3Vzci9iaW4vZG9ja2VyIikKCiAgICBkZWYgX2Zha2VfcnVuKGFyZ3MsICoqa3dhcmdzKToKICAgICAgICBjbWQgPSBsaXN0KGFyZ3MpCiAgICAgICAgcmMgPSAxIGlmIGNtZFs6Ml0gPT0gWyJkb2NrZXIiLCAiaW5mbyJdIGVsc2UgMAogICAgICAgIHJldHVybiBzdWJwcm9jZXNzLkNvbXBsZXRlZFByb2Nlc3MoY21kLCByYywgc3Rkb3V0PSIiLCBzdGRlcnI9IiIpCgogICAgbW9ua2V5cGF0Y2guc2V0YXR0cihkb2NrZXJfbW9kLnN1YnByb2Nlc3MsICJydW4iLCBfZmFrZV9ydW4pCiAgICBhc3NlcnQgc2FuZGJveF9tb2QuZG9ja2VyX2F2YWlsYWJsZSgpIGlzIEZhbHNlCiAgICByZXN1bHQgPSBob3N0X21vZC5oYW5kbGVfY29tbWFuZCh7ImNvbW1hbmQiOiAic3RhdHVzIn0pCiAgICBhc3NlcnQgcmVzdWx0WyJvayJdIGlzIFRydWUKICAgIGFzc2VydCByZXN1bHRbImRvY2tlcl9hdmFpbGFibGUiXSBpcyBGYWxzZQo=
+"""Test regresi audit putaran 2 — N2 (runner worktree diff/commit)
++ N7 (status runner jujur).
+
+PoC N2 (laporan audit): ``apply_files`` mengubah ``app.py`` +
+menambah ``backdoor.py``. Dulu diff yang ditampilkan TIDAK memuat
+``backdoor.py`` (``git diff HEAD`` melewatkan untracked), tapi
+``commit`` (``git add -A``) ikut meng-commit-nya. Sekarang:
+
+- ``diff()`` stage dulu (``git add -A``) lalu
+  ``git diff --cached HEAD`` — file baru WAJIB muncul di diff
+  yang disetujui.
+- ``commit()`` TANPA ``git add -A`` lagi, memverifikasi ulang hash
+  ``--cached`` yang disetujui, dan memeriksa staged diff kosong
+  setelah commit.
+- Artefak gate (``coverage.json`` dkk.) ditulis di luar worktree
+  (N4, gate pytest) sehingga tidak ikut ter-stage/ter-commit.
+
+N7: ``status`` runner melapor ``docker_available`` jujur — False
+bila daemon mati / image tidak ada (mock, bukan ``shutil.which``).
+"""
+
+from __future__ import annotations
+
+import subprocess
+
+from mufakat_runner import host as host_mod
+from mufakat_runner import sandbox as sandbox_mod
+from mufakat_runner import worktree as worktree_mod
+
+
+def _git(*args, cwd):
+    subprocess.run(["git", *args], cwd=str(cwd), check=True,
+                   capture_output=True, text=True)
+
+
+def _init_repo(tmp_path):
+    """Repo git dengan satu commit awal; kembalikan path repo."""
+    repo = tmp_path / "repo"
+    repo.mkdir()
+    _git("init", "-q", cwd=repo)
+    _git("config", "user.email", "t@t.t", cwd=repo)
+    _git("config", "user.name", "Tes", cwd=repo)
+    (repo / "app.py").write_text("print('v1')\n", encoding="utf-8")
+    _git("add", "-A", cwd=repo)
+    _git("commit", "-qm", "awal", cwd=repo)
+    return repo
+
+
+def _committed_files(worktree):
+    out = subprocess.run(
+        ["git", "show", "--name-only", "--format=", "HEAD"],
+        cwd=str(worktree), capture_output=True, text=True, check=True)
+    return sorted(n for n in out.stdout.splitlines() if n.strip())
+
+
+# ---------------------------------------------------------------------------
+# N2 — diff memuat file baru; commit hanya yang disetujui
+# ---------------------------------------------------------------------------
+def test_n2_diff_memuat_file_baru_untracked(tmp_path):
+    """PoC N2: backdoor.py (untracked) WAJIB muncul di diff."""
+    repo = _init_repo(tmp_path)
+    wt = repo / "runs" / "r1" / "wt"
+    worktree_mod.init_workspace(repo, "r1")
+    worktree_mod.apply_files(wt, [
+        {"path": "app.py", "mode": "replace",
+         "content": "print('v2')\n"},
+        {"path": "backdoor.py", "mode": "replace",
+         "content": "import os\nos.system('id')\n"},
+    ])
+    diff = worktree_mod.diff(wt)
+    assert "backdoor.py" in diff
+    assert "app.py" in diff
+    assert "os.system" in diff
+    assert worktree_mod.diff_hash(wt)
+
+
+def test_n2_commit_hanya_file_yang_ada_di_diff(tmp_path):
+    """Yang di-commit = yang ada di diff yang disetujui, tidak lebih."""
+    repo = _init_repo(tmp_path)
+    worktree_mod.init_workspace(repo, "r1")
+    wt = repo / "runs" / "r1" / "wt"
+    worktree_mod.apply_files(wt, [
+        {"path": "app.py", "mode": "replace", "content": "print('v2')\n"},
+        {"path": "backdoor.py", "mode": "replace",
+         "content": "import os\nos.system('id')\n"},
+    ])
+    shown_hash = worktree_mod.diff_hash(wt)
+    assert shown_hash
+    assert worktree_mod.commit(wt, "perubahan disetujui",
+                               expected_diff_hash=shown_hash) is True
+    assert _committed_files(wt) == ["app.py", "backdoor.py"]
+
+
+def test_n2_commit_tolak_bila_diff_berubah_setelah_approve(tmp_path):
+    """File ditambahkan SETELAH diff disetujui -> commit ditolak."""
+    repo = _init_repo(tmp_path)
+    worktree_mod.init_workspace(repo, "r1")
+    wt = repo / "runs" / "r1" / "wt"
+    worktree_mod.apply_files(wt, [
+        {"path": "app.py", "mode": "replace", "content": "print('v2')\n"},
+    ])
+    shown_hash = worktree_mod.diff_hash(wt)
+    # Penyelundupan setelah Approve: file baru muncul diam-diam.
+    (wt / "backdoor.py").write_text("import os\nos.system('id')\n",
+                                    encoding="utf-8")
+    assert worktree_mod.commit(wt, "x",
+                               expected_diff_hash=shown_hash) is False
+    # Tidak ada commit baru yang terjadi.
+    out = subprocess.run(["git", "log", "--oneline"], cwd=str(wt),
+                         capture_output=True, text=True, check=True)
+    assert len(out.stdout.strip().splitlines()) == 1
+
+
+def test_n2_commit_tanpa_diff_dulu_tidak_staging_diam_diam(tmp_path):
+    """commit() tanpa diff() sebelumnya: tidak ada yang ter-stage
+    -> git commit gagal (False), bukan commit diam-diam."""
+    repo = _init_repo(tmp_path)
+    worktree_mod.init_workspace(repo, "r1")
+    wt = repo / "runs" / "r1" / "wt"
+    (wt / "app.py").write_text("print('v2')\n", encoding="utf-8")
+    assert worktree_mod.commit(wt, "x") is False
+
+
+def test_n2_alur_host_backdoor_tidak_lolos_diam_diam(tmp_path, monkeypatch):
+    """Alur host lengkap: apply -> diff (lihat backdoor) -> approve
+    manusia (kode 6 digit) -> token -> commit berisi tepat diff itu."""
+    import re as _re
+
+    from mufakat_runner import registry as registry_mod
+
+    monkeypatch.setenv("MUFAKAT_RUNNER_REGISTRY",
+                       str(tmp_path / "runner.json"))
+    repo = _init_repo(tmp_path)
+    assert registry_mod.register_repo("r", str(repo))["name"] == "r"
+    host = host_mod.RunnerHost()
+    assert host.handle_command(
+        {"command": "init_workspace", "repo": "r", "run_id": "r1"}
+    )["ok"] is True
+    wt = repo / "runs" / "r1" / "wt"
+    assert host.handle_command(
+        {"command": "apply_files", "run_id": "r1",
+         "files": [
+             {"path": "app.py", "mode": "replace",
+              "content": "print('v2')\n"},
+             {"path": "backdoor.py", "mode": "replace",
+              "content": "import os\nos.system('id')\n"},
+         ]})["ok"] is True
+    shown = host.handle_command({"command": "diff", "run_id": "r1"})
+    assert shown["ok"] is True
+    # Manusia HARUS melihat backdoor.py di diff sebelum menyetujui.
+    assert "backdoor.py" in shown["diff"]
+    captured: dict = {}
+
+    def _fake_dialog(title, body):
+        captured["body"] = body
+        return "dialog"
+
+    monkeypatch.setattr(host_mod, "_show_human_code", _fake_dialog)
+    requested = host.handle_command({"command": "request_approval",
+                                     "run_id": "r1"})
+    assert requested["ok"] is True
+    code = _re.search(r"KODE PERSETUJUAN: (\d{6})",
+                      captured["body"]).group(1)
+    assert host.handle_command(
+        {"command": "confirm_approval", "run_id": "r1",
+         "approval_id": requested["approval_id"], "code": code}
+    )["ok"] is True
+    issued = host.handle_command(
+        {"command": "issue_approval_token", "run_id": "r1",
+         "diff_hash": shown["diff_hash"]})
+    assert issued["ok"] is True
+    committed = host.handle_command(
+        {"command": "commit", "run_id": "r1", "message": "x",
+         "approval_token": issued["approval_token"]})
+    assert committed["ok"] is True
+    assert committed["committed"] is True
+    assert _committed_files(wt) == ["app.py", "backdoor.py"]
+
+
+def test_n2_artefak_gate_di_luar_worktree_tidak_tercommit(tmp_path):
+    """Artefak gate yang (tidak sengaja) ada di worktree TIDAK ikut
+    ter-commit bila ditulis di luar worktree — simulasi: coverage
+    ditulis ke folder gates di luar wt, diff tidak memuatnya."""
+    repo = _init_repo(tmp_path)
+    worktree_mod.init_workspace(repo, "r1")
+    wt = repo / "runs" / "r1" / "wt"
+    gates_dir = repo / "runs" / "r1" / "gates"
+    gates_dir.mkdir(parents=True)
+    (gates_dir / "coverage.json").write_text('{"totals": {}}',
+                                             encoding="utf-8")
+    worktree_mod.apply_files(wt, [
+        {"path": "app.py", "mode": "replace", "content": "print('v2')\n"},
+    ])
+    diff = worktree_mod.diff(wt)
+    assert "coverage.json" not in diff
+    shown_hash = worktree_mod.diff_hash(wt)
+    assert worktree_mod.commit(wt, "x",
+                               expected_diff_hash=shown_hash) is True
+    assert _committed_files(wt) == ["app.py"]
+
+
+# ---------------------------------------------------------------------------
+# N7 — status runner jujur (mock)
+# ---------------------------------------------------------------------------
+def test_n7_status_docker_available_jujur_daemon_mati(monkeypatch):
+    """CLI ada tapi daemon mati -> status docker_available False."""
+    import mufakat.sandbox.docker as docker_mod
+
+    monkeypatch.setattr("shutil.which", lambda name: "/usr/bin/docker")
+
+    def _fake_run(args, **kwargs):
+        cmd = list(args)
+        rc = 1 if cmd[:2] == ["docker", "info"] else 0
+        return subprocess.CompletedProcess(cmd, rc, stdout="", stderr="")
+
+    monkeypatch.setattr(docker_mod.subprocess, "run", _fake_run)
+    assert sandbox_mod.docker_available() is False
+    result = host_mod.handle_command({"command": "status"})
+    assert result["ok"] is True
+    assert result["docker_available"] is False
