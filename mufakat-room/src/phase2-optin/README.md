@@ -1,1 +1,31 @@
-IyBNb2R1bCBPcHQtaW4gRmFzZSAyIOKAlCBjb250ZW50IHNjcmlwdCArIEFzc2lzdGVkIEZpbGwgKFRJREFLIEFLVElGIGRpIE1WUCkKCkRpcmVrdG9yaSBpbmkgYmVyaXNpIHNhdHUtc2F0dW55YSBrb2RlIE1VRkFLQVQgUm9vbSB5YW5nIG1lbWJhY2EgRE9NIHNpdHVzCkFJIChgcmVhZExhc3RSZXBseWApIGF0YXUgbWVuZ2lzaSBrb2xvbSBpbnB1dCAoYGZpbGxJbnB1dGApOgoKLSBgY29udGVudC1zY3JpcHRzLyouY29udGVudC50c2Ag4oCUIGNvbnRlbnQgc2NyaXB0IHBlciBzaXR1cyAoV1hUCiAgYGRlZmluZUNvbnRlbnRTY3JpcHRgKSwgZGVsZWdhc2kga2UgYHNyYy9hZGFwdGVycy9iYXNlLnRzYC4KLSBgc3JjL2FkYXB0ZXJzL2Jhc2UudHNgIOKAlCBpbnRlcmZhY2UgYFNpdGVBZGFwdGVyYCArIGBmaWxsSW5wdXRHZW5lcmljYCAvCiAgYHJlYWRMYXN0UmVwbHlHZW5lcmljYCAoZGlwYWthaSBoYW55YSBvbGVoIG1vZHVsIGluaTsgdGlkYWsgYWRhIGphbHVyCiAgbGFpbiB5YW5nIG1lbWFuZ2dpbG55YSBkaSBNVlApLgoKIyMgU3RhdHVzIE1WUCAoYnJvd3Nlci1vbmx5LCBNYW51YWwgSGFuZG9mZikKCi0gRmlsZS1maWxlIGluaSBCRVJBREEgREkgTFVBUiBgc3JjL2VudHJ5cG9pbnRzL2AsIHNlaGluZ2dhIFdYVCAqKnRpZGFrKioKICBtZW5lbXVrYW5ueWEgc2ViYWdhaSBlbnRyeXBvaW50IGRhbiAqKnRpZGFrKiogbWVtYXN1a2thbm55YSBrZSBtYW5pZmVzdAogIE1WUC4gRXh0ZW5zaW9uIE1WUCB0aWRhayBtZW55dW50aWtrYW4gc2tyaXAgYXBhIHB1biBrZSBzaXR1cyBBSSwgdGlkYWsKICBtZW1iYWNhIERPTSwgZGFuIHRpZGFrIG1lbmdpc2kgaW5wdXQuCi0gQmFja2dyb3VuZCBNVlAgdGlkYWsgbGFnaSBwdW55YSBoYW5kbGVyIGBGSUxMX0lOUFVUYCAvIGBSRUFEX0xBU1RfUkVQTFlgCiAgKGRpaGFwdXMgcHV0YXJhbiAyKS4gVG9tYm9sICJBbWJpbCBqYXdhYmFuIHRlcmFraGlyIGRhcmkgdGFiIiBkaWhhcHVzCiAgZGFyaSBzaWRlIHBhbmVsLgotIGBob3N0X3Blcm1pc3Npb25zYCB1bnR1ayA2IGRvbWFpbiBBSSBkaWhhcHVzIGRhcmkgYHd4dC5jb25maWcudHNgLgoKIyMgTWVuZ2FrdGlma2FuIChrZXB1dHVzYW4gZWtzcGxpc2l0LCBidWthbiBkZWZhdWx0KQoKMS4gUGluZGFoa2FuIGBjb250ZW50LXNjcmlwdHMvKi5jb250ZW50LnRzYCBrZW1iYWxpIGtlIGBzcmMvZW50cnlwb2ludHMvYC4KMi4gVGFtYmFoIGtlbWJhbGkgYGhvc3RfcGVybWlzc2lvbnNgIDYgZG9tYWluIGRpIGB3eHQuY29uZmlnLnRzYC4KMy4gVGFtYmFoIGtlbWJhbGkgaGFuZGxlciBgRklMTF9JTlBVVGAgLyBgUkVBRF9MQVNUX1JFUExZYCBkaSBiYWNrZ3JvdW5kCiAgIChkZW5nYW4gdmFsaWRhc2kgc2VuZGVyICsgc2VjcmV0IHNjYW4gKyBwYWNpbmcpLgo0LiBVamkgdWxhbmcgVG9TIHRpYXAgc2l0dXMgZGFuIFNlbGVjdG9yIERvY3RvciBzZWJlbHVtIGRpcGFrYWkuCgpUYW5wYSBsYW5na2FoIGRpIGF0YXMsIG1vZHVsIGluaSBoYW55YWxhaCBrb2RlIG1hdGkgeWFuZyB0aWRhayBkaWVrc2VrdXNpLgo=
+# Modul Opt-in Fase 2 — content script + Assisted Fill (TIDAK AKTIF di MVP)
+
+Direktori ini berisi satu-satunya kode MUFAKAT Room yang membaca DOM situs
+AI (`readLastReply`) atau mengisi kolom input (`fillInput`):
+
+- `content-scripts/*.content.ts` — content script per situs (WXT
+  `defineContentScript`), delegasi ke `src/adapters/base.ts`.
+- `src/adapters/base.ts` — interface `SiteAdapter` + `fillInputGeneric` /
+  `readLastReplyGeneric` (dipakai hanya oleh modul ini; tidak ada jalur
+  lain yang memanggilnya di MVP).
+
+## Status MVP (browser-only, Manual Handoff)
+
+- File-file ini BERADA DI LUAR `src/entrypoints/`, sehingga WXT **tidak**
+  menemukannya sebagai entrypoint dan **tidak** memasukkannya ke manifest
+  MVP. Extension MVP tidak menyuntikkan skrip apa pun ke situs AI, tidak
+  membaca DOM, dan tidak mengisi input.
+- Background MVP tidak lagi punya handler `FILL_INPUT` / `READ_LAST_REPLY`
+  (dihapus putaran 2). Tombol "Ambil jawaban terakhir dari tab" dihapus
+  dari side panel.
+- `host_permissions` untuk 6 domain AI dihapus dari `wxt.config.ts`.
+
+## Mengaktifkan (keputusan eksplisit, bukan default)
+
+1. Pindahkan `content-scripts/*.content.ts` kembali ke `src/entrypoints/`.
+2. Tambah kembali `host_permissions` 6 domain di `wxt.config.ts`.
+3. Tambah kembali handler `FILL_INPUT` / `READ_LAST_REPLY` di background
+   (dengan validasi sender + secret scan + pacing).
+4. Uji ulang ToS tiap situs dan Selector Doctor sebelum dipakai.
+
+Tanpa langkah di atas, modul ini hanyalah kode mati yang tidak dieksekusi.
