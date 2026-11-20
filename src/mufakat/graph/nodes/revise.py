@@ -1,1 +1,117 @@
-IiIiTm9kZSByZXZpc2UgKFQ3K1QxMSwgcHV0YXJhbiAyOiBOMTEgKyBydWZmIGRpIHNhbmRib3gpLgoKQmlsYSB0aWRhayBhZGEgdGVtdWFuOiB0YW5kYWkgc2VsZXNhaSAoYGBzdGF0dXM9ImRvbmUiYGAsCmBgYXBwcm92ZWRfY29tbWl0PVRydWVgYCkg4oCUIFRBUEkgYmlsYSBgYGN0eGBgIG1lbWludGEgcGVyc2V0dWp1YW4KbWFudXNpYSwgZ3JhcGggSkVEQSBkdWx1IGxld2F0IGBgaW50ZXJydXB0KClgYCAoTjExOiBhcHByb3ZlIGNvbW1pdCkKZGFuIGBgYXBwcm92ZWRfY29tbWl0YGAgaGFueWEgVHJ1ZSBiaWxhIG1hbnVzaWEgbWVueWV0dWp1aQooYGBDb21tYW5kKHJlc3VtZT1UcnVlKWBgKS4gUGVub2xha2FuIC0+IGBgc3RhdHVzPSJibG9ja2VkImBgLApgYGFwcHJvdmVkX2NvbW1pdD1GYWxzZWBgLgoKQmlsYSBtYXNpaCBhZGEgdGVtdWFuOiBjb2JhIHBlcmJhaWthbiBueWF0YSB5YW5nIGFtYW4g4oCUIGphbGFua2FuCmBgcnVmZiBjaGVjayAtLWZpeGBgIHBhZGEgd29ya3RyZWUg4oCUIGxhbHUgaGl0dW5nIHVsYW5nCmBgZGlmZl9oYXNoYGAgZGFuIG5haWtrYW4gYGBmaXhfaXRlcmF0aW9uc2BgIC8gYGB0b3RhbF9pdGVyYXRpb25zYGAuCkVkZ2UgYGBzaG91bGRfcmV2aXNlYGAgeWFuZyBtZW11dHVza2FuIGVza2FsYXNpIGJpbGEgYmVydWxhbmcuCgpSdWZmIC0tZml4IFRJREFLIFBFUk5BSCBqYWxhbiBkaSBob3N0IGF0YXMgd29ya3RyZWUgQUkgKHRlbXVhbgpSZW5kYWggcHV0YXJhbiAyKTogaWEgamFsYW4gREkgREFMQU0gc2FuZGJveCBEb2NrZXIKKGBgbXVmYWthdC5zYW5kYm94LmRvY2tlci5ydW5faW5fc2FuZGJveGBgLCByZWFkLXdyaXRlIG1vdW50LApgYC0tbmV0d29yayBub25lYGApIOKAlCBydWZmIHRpZGFrIG1lbmdla3Nla3VzaSBrb2RlLCB0YXBpIHRldGFwIHRpZGFrCmFkYSBhbGFzYW4gbWVuamFsYW5rYW5ueWEgZGkgaG9zdC4gVGFucGEgRG9ja2VyOiB0aWRhayBkaWphbGFua2FuCnNhbWEgc2VrYWxpIChgYGZpeGVkPUZhbHNlYGApLCBidWthbiBmYWxsYmFjayBob3N0LgoiIiIKCmZyb20gX19mdXR1cmVfXyBpbXBvcnQgYW5ub3RhdGlvbnMKCmZyb20gcGF0aGxpYiBpbXBvcnQgUGF0aAoKdHJ5OgogICAgZnJvbSAuY29tbW9uIGltcG9ydCBhcHBlbmRfbWVzc2FnZSwgcmVzdW1lX2FwcHJvdmVkLCBzaGEyNTZfdGV4dApleGNlcHQgSW1wb3J0RXJyb3I6ICAjIHByYWdtYTogbm8gY292ZXIKICAgIGZyb20gY29tbW9uIGltcG9ydCBhcHBlbmRfbWVzc2FnZSwgcmVzdW1lX2FwcHJvdmVkLCBzaGEyNTZfdGV4dCAgIyB0eXBlOiBpZ25vcmUKCgpkZWYgX3dvcmt0cmVlX2hhc2god29ya3RyZWU6IHN0cikgLT4gc3RyOgogICAgY29tYmluZWQgPSAiIgogICAgcm9vdCA9IFBhdGgod29ya3RyZWUpCiAgICBmb3IgbmFtZSBpbiBzb3J0ZWQocC5uYW1lIGZvciBwIGluIHJvb3QuaXRlcmRpcigpIGlmIHAuaXNfZmlsZSgpKToKICAgICAgICB0cnk6CiAgICAgICAgICAgIGNvbWJpbmVkICs9IChyb290IC8gbmFtZSkucmVhZF90ZXh0KGVuY29kaW5nPSJ1dGYtOCIpCiAgICAgICAgZXhjZXB0IE9TRXJyb3I6CiAgICAgICAgICAgIGNvbnRpbnVlCiAgICByZXR1cm4gc2hhMjU2X3RleHQoY29tYmluZWQpCgoKZGVmIF9ydWZmX2ZpeF9pbl9zYW5kYm94KHdvcmt0cmVlOiBzdHIsIGN0eDogZGljdCkgLT4gYm9vbDoKICAgICIiIkphbGFua2FuIGBgcnVmZiBjaGVjayAtLWZpeGBgIGF0YXMgd29ya3RyZWUgREkgREFMQU0gc2FuZGJveC4KCiAgICBgYGN0eFsic2FuZGJveF9ydW5uZXIiXWBgIChoYW55YSB1bnR1ayB0ZXN0KSBtZW5nZ2FudGlrYW4gcnVubmVyCiAgICBEb2NrZXIgYXNsaTsgZGkgcHJvZHVrc2kgc2VsYWx1IGBgTm9uZWBgLiBNZW5nZW1iYWxpa2FuIFRydWUKICAgIGhhbnlhIGJpbGEgcnVmZiBkaSBkYWxhbSBzYW5kYm94IGtlbHVhciAwLiBUYW5wYSBEb2NrZXIgLyBydWZmCiAgICB0aWRhayBhZGEgZGkgaW1hZ2UgLT4gRmFsc2UgKHRpZGFrIHBlcm5haCBmYWxsYmFjayBrZSBob3N0KS4KICAgICIiIgogICAgdHJ5OgogICAgICAgIGZyb20gbXVmYWthdC5zYW5kYm94LmRvY2tlciBpbXBvcnQgU0FOREJPWF9JTUFHRSwgcnVuX2luX3NhbmRib3gKICAgIGV4Y2VwdCBJbXBvcnRFcnJvcjoKICAgICAgICByZXR1cm4gRmFsc2UKICAgIHJ1bm5lciA9IGN0eC5nZXQoInNhbmRib3hfcnVubmVyIikgb3IgcnVuX2luX3NhbmRib3gKICAgIHRyeToKICAgICAgICByZXN1bHQgPSBydW5uZXIoCiAgICAgICAgICAgIFNBTkRCT1hfSU1BR0UsIHN0cih3b3JrdHJlZSksCiAgICAgICAgICAgICJjb21tYW5kIC12IHJ1ZmYgPi9kZXYvbnVsbCAyPiYxIHx8IGV4aXQgMTI3OyAiCiAgICAgICAgICAgICJydWZmIGNoZWNrIC0tZml4IC4iLAogICAgICAgICAgICB0aW1lb3V0PTEyMCwgbmV0d29ya19ub25lPVRydWUsIHJlYWRfb25seT1GYWxzZSkKICAgIGV4Y2VwdCBFeGNlcHRpb246CiAgICAgICAgcmV0dXJuIEZhbHNlCiAgICBpZiBub3QgaXNpbnN0YW5jZShyZXN1bHQsIGRpY3QpIG9yIHJlc3VsdC5nZXQoInNhbmRib3hfdW5hdmFpbGFibGUiKToKICAgICAgICByZXR1cm4gRmFsc2UKICAgIHJldHVybiByZXN1bHQuZ2V0KCJleGl0X2NvZGUiKSA9PSAwCgoKYXN5bmMgZGVmIG5vZGUoc3RhdGUsIGFkYXB0ZXJzPU5vbmUsIGN0eD1Ob25lKToKICAgICIiIlJldmlzaSAtPiBwYXRjaCBzdGF0ZS4iIiIKICAgIGZpbmRpbmdzID0gZ2V0YXR0cihzdGF0ZSwgImZpbmRpbmdzIiwgW10pIG9yIFtdCiAgICBpZiBub3QgZmluZGluZ3M6CiAgICAgICAgIyBOMTE6IHRpdGlrIGFwcHJvdmUgY29tbWl0IOKAlCBqZWRhIHVudHVrIG1hbnVzaWEgYmlsYSBkaW1pbnRhLgogICAgICAgICMgR3JhcGhJbnRlcnJ1cHQgVElEQUsgZGl0YW5na2FwOiBpYSBoYXJ1cyBuYWlrIGtlIFByZWdlbAogICAgICAgICMgc3VwYXlhIGdyYXBoIGJlbmFyLWJlbmFyIGplZGEuCiAgICAgICAgaWYgKGN0eCBvciB7fSkuZ2V0KCJyZXF1aXJlX2h1bWFuX2FwcHJvdmFsIik6CiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIGZyb20gbGFuZ2dyYXBoLnR5cGVzIGltcG9ydCBpbnRlcnJ1cHQKICAgICAgICAgICAgZXhjZXB0IEltcG9ydEVycm9yOgogICAgICAgICAgICAgICAgaW50ZXJydXB0ID0gTm9uZSAgIyB0eXBlOiBpZ25vcmVbYXNzaWdubWVudF0KICAgICAgICAgICAgaWYgaW50ZXJydXB0IGlzIG5vdCBOb25lOgogICAgICAgICAgICAgICAgZGVjaXNpb24gPSBpbnRlcnJ1cHQoewogICAgICAgICAgICAgICAgICAgICJ0eXBlIjogImFwcHJvdmVfY29tbWl0IiwKICAgICAgICAgICAgICAgICAgICAiZGlmZl9oYXNoIjogZ2V0YXR0cihzdGF0ZSwgImRpZmZfaGFzaCIsICIiKSwKICAgICAgICAgICAgICAgICAgICAibWVzc2FnZSI6ICJTZXR1anVpIGNvbW1pdCBoYXNpbCByZXZpc2kgaW5pICIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICIoc2VtdWEgZ2F0ZSBsb2xvcywgdGlkYWsgYWRhIHRlbXVhbikuIn0pCiAgICAgICAgICAgICAgICBpZiBub3QgcmVzdW1lX2FwcHJvdmVkKGRlY2lzaW9uKToKICAgICAgICAgICAgICAgICAgICBtZXNzYWdlcyA9IGFwcGVuZF9tZXNzYWdlKAogICAgICAgICAgICAgICAgICAgICAgICBzdGF0ZSwgInJldmlzZXIiLAogICAgICAgICAgICAgICAgICAgICAgICAiQ29tbWl0IERJVE9MQUsgbWFudXNpYSBkaSB0aXRpayBhcHByb3ZlIOKAlCAiCiAgICAgICAgICAgICAgICAgICAgICAgICJ0aWRhayBqYWRpIGNvbW1pdC4iKQogICAgICAgICAgICAgICAgICAgIHJldHVybiB7Im1lc3NhZ2VzIjogbWVzc2FnZXMsICJwaGFzZSI6ICJkb25lIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICJzdGF0dXMiOiAiYmxvY2tlZCIsICJhcHByb3ZlZF9jb21taXQiOiBGYWxzZX0KICAgICAgICBtZXNzYWdlcyA9IGFwcGVuZF9tZXNzYWdlKAogICAgICAgICAgICBzdGF0ZSwgInJldmlzZXIiLCAiVGlkYWsgYWRhIHRlbXVhbiB0ZXJzaXNhOyBzaWFwIGNvbW1pdC4iKQogICAgICAgIHJldHVybiB7Im1lc3NhZ2VzIjogbWVzc2FnZXMsICJwaGFzZSI6ICJkb25lIiwgInN0YXR1cyI6ICJkb25lIiwKICAgICAgICAgICAgICAgICJhcHByb3ZlZF9jb21taXQiOiBUcnVlfQogICAgY3R4ID0gY3R4IG9yIHt9CiAgICB3b3JrdHJlZSA9IGN0eC5nZXQoIndvcmt0cmVlIikKICAgIGZpeGVkID0gRmFsc2UKICAgIGlmIHdvcmt0cmVlOgogICAgICAgIGZpeGVkID0gX3J1ZmZfZml4X2luX3NhbmRib3goc3RyKHdvcmt0cmVlKSwgY3R4KQogICAgZGlmZl9oYXNoID0gZ2V0YXR0cihzdGF0ZSwgImRpZmZfaGFzaCIsICIiKQogICAgaWYgd29ya3RyZWUgYW5kIGZpeGVkOgogICAgICAgIGRpZmZfaGFzaCA9IF93b3JrdHJlZV9oYXNoKHdvcmt0cmVlKQogICAgbWVzc2FnZXMgPSBhcHBlbmRfbWVzc2FnZSgKICAgICAgICBzdGF0ZSwgInJldmlzZXIiLAogICAgICAgIGYiUGVyYmFpa2kge2xlbihmaW5kaW5ncyl9IHRlbXVhbiAoaXRlcmFzaSAiCiAgICAgICAgZiJ7Z2V0YXR0cihzdGF0ZSwgJ2ZpeF9pdGVyYXRpb25zJywgMCkgKyAxfTsgIgogICAgICAgIGYicnVmZiAtLWZpeCAoc2FuZGJveCk6IHsnYmVyaGFzaWwnIGlmIGZpeGVkIGVsc2UgJ3RpZGFrIGRpamFsYW5rYW4vZ2FnYWwnfSkuIikKICAgICMgTTEwOiByZXZpc2kga2VtYmFsaSBrZSBSRVZJRVcgKGJ1a2FuIGxhbmdzdW5nIGF1ZGl0KSDigJQgaGFzaWwKICAgICMgcGVyYmFpa2FuIGhhcnVzIGRpcmV2aWV3IG1hbnVzaWEvYWdlbiBkdWx1IHNlYmVsdW0gZGlhdWRpdCBsYWdpLgogICAgcmV0dXJuIHsibWVzc2FnZXMiOiBtZXNzYWdlcywgInBoYXNlIjogInJldmlldyIsCiAgICAgICAgICAgICJkaWZmX2hhc2giOiBkaWZmX2hhc2gsCiAgICAgICAgICAgICJmaXhfaXRlcmF0aW9ucyI6IGdldGF0dHIoc3RhdGUsICJmaXhfaXRlcmF0aW9ucyIsIDApICsgMSwKICAgICAgICAgICAgInRvdGFsX2l0ZXJhdGlvbnMiOiBnZXRhdHRyKHN0YXRlLCAidG90YWxfaXRlcmF0aW9ucyIsIDApICsgMX0K
+"""Node revise (T7+T11, putaran 2: N11 + ruff di sandbox).
+
+Bila tidak ada temuan: tandai selesai (``status="done"``,
+``approved_commit=True``) — TAPI bila ``ctx`` meminta persetujuan
+manusia, graph JEDA dulu lewat ``interrupt()`` (N11: approve commit)
+dan ``approved_commit`` hanya True bila manusia menyetujui
+(``Command(resume=True)``). Penolakan -> ``status="blocked"``,
+``approved_commit=False``.
+
+Bila masih ada temuan: coba perbaikan nyata yang aman — jalankan
+``ruff check --fix`` pada worktree — lalu hitung ulang
+``diff_hash`` dan naikkan ``fix_iterations`` / ``total_iterations``.
+Edge ``should_revise`` yang memutuskan eskalasi bila berulang.
+
+Ruff --fix TIDAK PERNAH jalan di host atas worktree AI (temuan
+Rendah putaran 2): ia jalan DI DALAM sandbox Docker
+(``mufakat.sandbox.docker.run_in_sandbox``, read-write mount,
+``--network none``) — ruff tidak mengeksekusi kode, tapi tetap tidak
+ada alasan menjalankannya di host. Tanpa Docker: tidak dijalankan
+sama sekali (``fixed=False``), bukan fallback host.
+"""
+
+from __future__ import annotations
+
+from pathlib import Path
+
+try:
+    from .common import append_message, resume_approved, sha256_text
+except ImportError:  # pragma: no cover
+    from common import append_message, resume_approved, sha256_text  # type: ignore
+
+
+def _worktree_hash(worktree: str) -> str:
+    combined = ""
+    root = Path(worktree)
+    for name in sorted(p.name for p in root.iterdir() if p.is_file()):
+        try:
+            combined += (root / name).read_text(encoding="utf-8")
+        except OSError:
+            continue
+    return sha256_text(combined)
+
+
+def _ruff_fix_in_sandbox(worktree: str, ctx: dict) -> bool:
+    """Jalankan ``ruff check --fix`` atas worktree DI DALAM sandbox.
+
+    ``ctx["sandbox_runner"]`` (hanya untuk test) menggantikan runner
+    Docker asli; di produksi selalu ``None``. Mengembalikan True
+    hanya bila ruff di dalam sandbox keluar 0. Tanpa Docker / ruff
+    tidak ada di image -> False (tidak pernah fallback ke host).
+    """
+    try:
+        from mufakat.sandbox.docker import SANDBOX_IMAGE, run_in_sandbox
+    except ImportError:
+        return False
+    runner = ctx.get("sandbox_runner") or run_in_sandbox
+    try:
+        result = runner(
+            SANDBOX_IMAGE, str(worktree),
+            "command -v ruff >/dev/null 2>&1 || exit 127; "
+            "ruff check --fix .",
+            timeout=120, network_none=True, read_only=False)
+    except Exception:
+        return False
+    if not isinstance(result, dict) or result.get("sandbox_unavailable"):
+        return False
+    return result.get("exit_code") == 0
+
+
+async def node(state, adapters=None, ctx=None):
+    """Revisi -> patch state."""
+    findings = getattr(state, "findings", []) or []
+    if not findings:
+        # N11: titik approve commit — jeda untuk manusia bila diminta.
+        # GraphInterrupt TIDAK ditangkap: ia harus naik ke Pregel
+        # supaya graph benar-benar jeda.
+        if (ctx or {}).get("require_human_approval"):
+            try:
+                from langgraph.types import interrupt
+            except ImportError:
+                interrupt = None  # type: ignore[assignment]
+            if interrupt is not None:
+                decision = interrupt({
+                    "type": "approve_commit",
+                    "diff_hash": getattr(state, "diff_hash", ""),
+                    "message": "Setujui commit hasil revisi ini "
+                               "(semua gate lolos, tidak ada temuan)."})
+                if not resume_approved(decision):
+                    messages = append_message(
+                        state, "reviser",
+                        "Commit DITOLAK manusia di titik approve — "
+                        "tidak jadi commit.")
+                    return {"messages": messages, "phase": "done",
+                            "status": "blocked", "approved_commit": False}
+        messages = append_message(
+            state, "reviser", "Tidak ada temuan tersisa; siap commit.")
+        return {"messages": messages, "phase": "done", "status": "done",
+                "approved_commit": True}
+    ctx = ctx or {}
+    worktree = ctx.get("worktree")
+    fixed = False
+    if worktree:
+        fixed = _ruff_fix_in_sandbox(str(worktree), ctx)
+    diff_hash = getattr(state, "diff_hash", "")
+    if worktree and fixed:
+        diff_hash = _worktree_hash(worktree)
+    messages = append_message(
+        state, "reviser",
+        f"Perbaiki {len(findings)} temuan (iterasi "
+        f"{getattr(state, 'fix_iterations', 0) + 1}; "
+        f"ruff --fix (sandbox): {'berhasil' if fixed else 'tidak dijalankan/gagal'}).")
+    # M10: revisi kembali ke REVIEW (bukan langsung audit) — hasil
+    # perbaikan harus direview manusia/agen dulu sebelum diaudit lagi.
+    return {"messages": messages, "phase": "review",
+            "diff_hash": diff_hash,
+            "fix_iterations": getattr(state, "fix_iterations", 0) + 1,
+            "total_iterations": getattr(state, "total_iterations", 0) + 1}
