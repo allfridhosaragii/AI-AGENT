@@ -1,1 +1,296 @@
-IiIiVGVzdCBnYXRlcyBNVUZBS0FUIChUMTAtVDExLCBkaXBlcmJhaWtpIGF1ZGl0IDIwIE5vdiAyMDI2OiBDMStIMytINCkuCgpSZXBvIGNvbnRvaCBiZXJpc2kgc2VjcmV0IHBhbHN1ICsgU1FMIGluamVjdGlvbiArIHRlc3QgZ2FnYWwgSEFSVVMKbWVuZ2hhc2lsa2FuIHZlcmRpY3QgVElEQUsgQU1BTiBkZW5nYW4gMyBrYXRlZ29yaQooc2VjcmV0LCBzcWwtaW5qZWN0aW9uLCB0ZXN0LWdhZ2FsKS4gUmVwbyBiZXJzaWggSEFSVVMgQU1BTi4KClNlbXVhIGdhdGUgamFsYW4gSEFOWUEgbGV3YXQgc2FuZGJveCBEb2NrZXIuIEthcmVuYSBEb2NrZXIgdGlkYWsKdGVyc2VkaWEgZGkgc2VtdWEgbWVzaW4sIHRlc3QgbWVtYWthaSBgYGZha2Vfc2FuZGJveF9ydW5uZXJgYCDigJQKc2ltdWxhc2kgc2FuZGJveCB5YW5nIHRvb2wtbnlhIGxlbmdrYXA6IHB5dGVzdC9iYW5kaXQvcnVmZiBkaWphbGFua2FuCnN1bmdndWhhbiBkaSBob3N0IChoYW55YSBvbGVoIHRlc3QgaW5pKSwgc2VkYW5na2FuIHNlbWdyZXAvZ2l0bGVha3MvCnRyaXZ5IHlhbmcgdGlkYWsgdGVycGFzYW5nIGRpIGhvc3QgZGllbXVsYXNpa2FuIGRhcmkgcG9sYSByZWdleCByZXBvCnNlbmRpcmkgKGVtdWxhc2kgaW5pIEhBTllBIGFkYSBkaSB0ZXN0IOKAlCBrb2RlIHByb2R1a3NpIHRpZGFrIHBlcm5haAptZW1ha2FpIHJlZ2V4IHNlYmFnYWkgcGVuZ2dhbnRpIHRvb2wpLiBUYW5wYSBmYWtlIHJ1bm5lciAoRG9ja2VyCnRpZGFrIGFkYSksIHNlbXVhIGdhdGUgSEFSVVMgZ2FnYWwtdGVydHV0dXAgYGBzYW5kYm94LXVuYXZhaWxhYmxlYGAKZGFuIHZlcmRpY3QgYGBCRUxVTV9URVJWRVJJRklLQVNJYGAuCiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IGpzb24KaW1wb3J0IHNodXRpbAppbXBvcnQgc3VicHJvY2VzcwppbXBvcnQgc3lzCmZyb20gcGF0aGxpYiBpbXBvcnQgUGF0aAoKZnJvbSBtdWZha2F0LmdhdGVzIGltcG9ydCBiYW5kaXQgYXMgYmFuZGl0X2dhdGUKZnJvbSBtdWZha2F0LmdhdGVzIGltcG9ydCBnaXRsZWFrcyBhcyBnaXRsZWFrc19nYXRlCmZyb20gbXVmYWthdC5nYXRlcyBpbXBvcnQgcHl0ZXN0IGFzIHB5dGVzdF9nYXRlCmZyb20gbXVmYWthdC5nYXRlcyBpbXBvcnQgc2VtZ3JlcCBhcyBzZW1ncmVwX2dhdGUKZnJvbSBtdWZha2F0LmdhdGVzLnJ1bm5lciBpbXBvcnQgcnVuX2FsbApmcm9tIG11ZmFrYXQuZ2F0ZXMudmVyZGljdCBpbXBvcnQgdmVyZGljdApmcm9tIG11ZmFrYXQuc2FuZGJveC5kb2NrZXIgaW1wb3J0IGRvY2tlcl9hdmFpbGFibGUKCkJBRF9BUFAgPSAnJyciIiJDb250b2ggcmVwbyBiZXJtYXNhbGFoIChzZW5nYWphIGRpYnVhdCB1bnR1ayB0ZXN0KS4iIiIKaW1wb3J0IHNxbGl0ZTMKCkFQSV9LRVkgPSAiQUtJQUlPU0ZPRE5ON0VYQU1QTEUiCgoKZGVmIGdldF91c2VyKGNvbm4sIHVzZXJfaWQpOgogICAgcmV0dXJuIGNvbm4uZXhlY3V0ZSgiU0VMRUNUICogRlJPTSB1c2VycyBXSEVSRSBpZCA9ICIgKyB1c2VyX2lkKS5mZXRjaG9uZSgpCgoKZGVmIHJ1bl9pdChkYXRhKToKICAgIGltcG9ydCBwaWNrbGUKCiAgICByZXR1cm4gcGlja2xlLmxvYWRzKGRhdGEpCgoKZGVmIHJ1bl9zaGVsbChjbWQpOgogICAgaW1wb3J0IHN1YnByb2Nlc3MKCiAgICByZXR1cm4gc3VicHJvY2Vzcy5ydW4oY21kLCBzaGVsbD1UcnVlKQoKCmRlZiBjb25uZWN0KCk6CiAgICByZXR1cm4gc3FsaXRlMy5jb25uZWN0KCI6bWVtb3J5OiIpCicnJwoKQkFEX0NPTkZJRyA9ICcnJyMgS29uZmlndXJhc2kgY29udG9oIChzZWNyZXQgcGFsc3UgdW50dWsgdGVzdCkuCmFwaV9rZXkgPSAiQUtJQUlPU0ZPRE5ON0VYQU1QTEUiCnBhc3N3b3JkID0gImNvbnRvaC1zYW5kaS1wYWxzdSIKJycnCgpCQURfVEVTVCA9ICcnJyIiIlRlc3QgY29udG9oIHlhbmcgc2VuZ2FqYSBnYWdhbC4iIiIKCgpkZWYgdGVzdF9jb250b2hfZ2FnYWwoKToKICAgIGFzc2VydCAxID09IDIsICJjb250b2ggdGVzdCBnYWdhbCIKJycnCgpHT09EX0FQUCA9ICcnJyIiIkNvbnRvaCByZXBvIGJlcnNpaC4iIiIKCgpkZWYgZ2V0X3VzZXIoY29ubiwgdXNlcl9pZDogaW50KToKICAgIGN1ciA9IGNvbm4uZXhlY3V0ZSgiU0VMRUNUIGlkLCBuYW1lIEZST00gdXNlcnMgV0hFUkUgaWQgPSA/IiwgKHVzZXJfaWQsKSkKICAgIHJldHVybiBjdXIuZmV0Y2hvbmUoKQonJycKCkdPT0RfVEVTVCA9ICcnJyIiIlRlc3QgY29udG9oIHlhbmcgbG9sb3MuIiIiCmltcG9ydCBzcWxpdGUzCgpmcm9tIGFwcCBpbXBvcnQgZ2V0X3VzZXIKCgpkZWYgdGVzdF9nZXRfdXNlcl90aWRha19hZGEoKToKICAgIGNvbm4gPSBzcWxpdGUzLmNvbm5lY3QoIjptZW1vcnk6IikKICAgIGNvbm4uZXhlY3V0ZSgiQ1JFQVRFIFRBQkxFIHVzZXJzIChpZCBJTlRFR0VSLCBuYW1lIFRFWFQpIikKICAgIGFzc2VydCBnZXRfdXNlcihjb25uLCAxKSBpcyBOb25lCicnJwoKCmRlZiBfd3JpdGUocGF0aCwgbmFtZSwgY29udGVudCk6CiAgICAocGF0aCAvIG5hbWUpLndyaXRlX3RleHQoY29udGVudCwgZW5jb2Rpbmc9InV0Zi04IikKCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIEZha2Ugc2FuZGJveCBydW5uZXIgKEhBTllBIHVudHVrIHRlc3Qg4oCUIGxpaGF0IGRvY3N0cmluZyBtb2R1bCkuCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmRlZiBfZW11bGF0ZV9zZW1ncmVwKHdvcmtkaXI6IHN0cikgLT4gZGljdDoKICAgIGZyb20gbXVmYWthdC5nYXRlcy5fc2NhbiBpbXBvcnQgc2Nhbl9wYXR0ZXJucwoKICAgIGZpbmRpbmdzID0gc2Nhbl9wYXR0ZXJucyhQYXRoKHdvcmtkaXIpLCBzZW1ncmVwX2dhdGUuX1BBVFRFUk5TLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIGV4dGVuc2lvbnM9eyIucHkiLCAiLmpzIiwgIi50cyJ9KQogICAgcmVzdWx0cyA9IFt7CiAgICAgICAgInBhdGgiOiBmWyJmaWxlIl0sICJzdGFydCI6IHsibGluZSI6IGZbImxpbmUiXX0sCiAgICAgICAgImNoZWNrX2lkIjogZlsicnVsZSJdLAogICAgICAgICJleHRyYSI6IHsic2V2ZXJpdHkiOiAiRVJST1IiIGlmIGZbInNldmVyaXR5Il0gPT0gIkhJR0giIGVsc2UgIldBUk5JTkciLAogICAgICAgICAgICAgICAgICAibWVzc2FnZSI6IGZbIm1lc3NhZ2UiXX0sCiAgICB9IGZvciBmIGluIGZpbmRpbmdzXQogICAgcmV0dXJuIHsiZXhpdF9jb2RlIjogMCwgInN0ZG91dCI6IGpzb24uZHVtcHMoeyJyZXN1bHRzIjogcmVzdWx0c30pLAogICAgICAgICAgICAic3RkZXJyIjogIiIsICJzYW5kYm94X3VuYXZhaWxhYmxlIjogRmFsc2V9CgoKZGVmIF9lbXVsYXRlX2dpdGxlYWtzKHdvcmtkaXI6IHN0cikgLT4gZGljdDoKICAgIGZyb20gbXVmYWthdC5nYXRlcy5fc2NhbiBpbXBvcnQgc2Nhbl9wYXR0ZXJucwoKICAgIGZpbmRpbmdzID0gc2Nhbl9wYXR0ZXJucyhQYXRoKHdvcmtkaXIpLCBnaXRsZWFrc19nYXRlLl9QQVRURVJOUykKICAgIGl0ZW1zID0gW3siRmlsZSI6IGZbImZpbGUiXSwgIlN0YXJ0TGluZSI6IGZbImxpbmUiXSwKICAgICAgICAgICAgICAiUnVsZUlEIjogZlsicnVsZSJdLCAiRGVzY3JpcHRpb24iOiBmWyJtZXNzYWdlIl19CiAgICAgICAgICAgICBmb3IgZiBpbiBmaW5kaW5nc10KICAgIHJldHVybiB7ImV4aXRfY29kZSI6IDEgaWYgaXRlbXMgZWxzZSAwLCAic3Rkb3V0IjoganNvbi5kdW1wcyhpdGVtcyksCiAgICAgICAgICAgICJzdGRlcnIiOiAiIiwgInNhbmRib3hfdW5hdmFpbGFibGUiOiBGYWxzZX0KCgpkZWYgZmFrZV9zYW5kYm94X3J1bm5lcihpbWFnZSwgd29ya2RpciwgY29tbWFuZCwgdGltZW91dD0zMDAsCiAgICAgICAgICAgICAgICAgICAgICAgIG5ldHdvcmtfbm9uZT1UcnVlLCByZWFkX29ubHk9RmFsc2UsCiAgICAgICAgICAgICAgICAgICAgICAgIGV4dHJhX3ZvbHVtZXM9Tm9uZSwgKipfa3dhcmdzKSAtPiBkaWN0OgogICAgIiIiU2ltdWxhc2kgc2FuZGJveCBiZXItdG9vbCBsZW5na2FwIChoYW55YSB1bnR1ayB0ZXN0KS4KCiAgICBgYGV4dHJhX3ZvbHVtZXNgYCAoTjQpOiBtb3VudCBgYChob3N0LCBjb250YWluZXIpYGAg4oCUIGRpcmVrdG9yaQogICAgaG9zdCBkaWJ1YXQsIGxhbHUgcGF0aCBjb250YWluZXIgZGkgcGVyaW50YWggZGl0dWxpcyB1bGFuZyBrZQogICAgcGF0aCBob3N0IChlbXVsYXNpIG1vdW50IERvY2tlcjogZ2F0ZSBweXRlc3QgbWVudWxpcyBjb3ZlcmFnZQogICAga2UgYGAvb3V0L2NvdmVyYWdlLmpzb25gYCBkaSBjb250YWluZXIpLgogICAgIiIiCiAgICBjb21tYW5kID0gc3RyKGNvbW1hbmQpCiAgICBmb3Igdm9sdW1lIGluIGV4dHJhX3ZvbHVtZXMgb3IgW106CiAgICAgICAgaWYgaXNpbnN0YW5jZSh2b2x1bWUsIChsaXN0LCB0dXBsZSkpOgogICAgICAgICAgICBob3N0X3BhdGgsIGNvbnRhaW5lcl9wYXRoID0gc3RyKHZvbHVtZVswXSksIHN0cih2b2x1bWVbMV0pCiAgICAgICAgZWxzZToKICAgICAgICAgICAgaG9zdF9wYXRoLCBjb250YWluZXJfcGF0aCA9IHN0cih2b2x1bWUpLnNwbGl0KCI6IiwgMSkKICAgICAgICBQYXRoKGhvc3RfcGF0aCkubWtkaXIocGFyZW50cz1UcnVlLCBleGlzdF9vaz1UcnVlKQogICAgICAgIGNvbW1hbmQgPSBjb21tYW5kLnJlcGxhY2UoY29udGFpbmVyX3BhdGggKyAiLyIsIGhvc3RfcGF0aCArICIvIikKICAgIGlmICJzZW1ncmVwIiBpbiBjb21tYW5kIGFuZCBzaHV0aWwud2hpY2goInNlbWdyZXAiKSBpcyBOb25lOgogICAgICAgIHJldHVybiBfZW11bGF0ZV9zZW1ncmVwKHN0cih3b3JrZGlyKSkKICAgIGlmICJnaXRsZWFrcyIgaW4gY29tbWFuZCBhbmQgc2h1dGlsLndoaWNoKCJnaXRsZWFrcyIpIGlzIE5vbmU6CiAgICAgICAgcmV0dXJuIF9lbXVsYXRlX2dpdGxlYWtzKHN0cih3b3JrZGlyKSkKICAgIGlmICJ0cml2eSIgaW4gY29tbWFuZCBhbmQgc2h1dGlsLndoaWNoKCJ0cml2eSIpIGlzIE5vbmU6CiAgICAgICAgcmV0dXJuIHsiZXhpdF9jb2RlIjogMCwgInN0ZG91dCI6IGpzb24uZHVtcHMoeyJSZXN1bHRzIjogW119KSwKICAgICAgICAgICAgICAgICJzdGRlcnIiOiAiIiwgInNhbmRib3hfdW5hdmFpbGFibGUiOiBGYWxzZX0KICAgIGNtZCA9IGNvbW1hbmQucmVwbGFjZSgicHl0aG9uIC1tIHB5dGVzdCIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgZiJ7c3lzLmV4ZWN1dGFibGV9IC1tIHB5dGVzdCIpCiAgICAjIFRvb2wgKGJhbmRpdC9ydWZmL3B5dGVzdCkgaGlkdXAgZGkgZGlyZWt0b3JpIHlhbmcgc2FtYSBkZW5nYW4KICAgICMgaW50ZXJwcmV0ZXIgdGVzdCDigJQgbWFzdWtrYW4ga2UgUEFUSCBzdXBheWEgYGNvbW1hbmQgLXZgIGRpCiAgICAjIHBlcmludGFoIGdhdGUgbWVuZW11a2FubnlhIChzZXBlcnRpIGRpIGRhbGFtIGltYWdlIHNhbmRib3gpLgogICAgaW1wb3J0IG9zCgogICAgZW52ID0gZGljdChvcy5lbnZpcm9uKQogICAgYmluX2RpciA9IHN0cihQYXRoKHN5cy5leGVjdXRhYmxlKS5wYXJlbnQpCiAgICBlbnZbIlBBVEgiXSA9IGJpbl9kaXIgKyBvcy5wYXRoc2VwICsgZW52LmdldCgiUEFUSCIsICIiKQogICAgcmVzdWx0ID0gc3VicHJvY2Vzcy5ydW4oY21kLCBzaGVsbD1UcnVlLCBjd2Q9c3RyKHdvcmtkaXIpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FwdHVyZV9vdXRwdXQ9VHJ1ZSwgdGV4dD1UcnVlLCB0aW1lb3V0PXRpbWVvdXQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbnY9ZW52KQogICAgcmV0dXJuIHsiZXhpdF9jb2RlIjogcmVzdWx0LnJldHVybmNvZGUsICJzdGRvdXQiOiByZXN1bHQuc3Rkb3V0LAogICAgICAgICAgICAic3RkZXJyIjogcmVzdWx0LnN0ZGVyciwgInNhbmRib3hfdW5hdmFpbGFibGUiOiBGYWxzZX0KCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIFRlc3QgcGVyaWxha3UgZ2F0ZSAoZGVuZ2FuIHNhbmRib3ggc2ltdWxhc2kpCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmRlZiB0ZXN0X3JlcG9fYnVydWtfdGlkYWtfYW1hbl90aWdhX2thdGVnb3JpKHRtcF9wYXRoKToKICAgICIiIlNlY3JldCArIFNRTGkgKyB0ZXN0IGdhZ2FsIC0+IFRJREFLIEFNQU4sIDMga2F0ZWdvcmkuIiIiCiAgICBfd3JpdGUodG1wX3BhdGgsICJhcHAucHkiLCBCQURfQVBQKQogICAgX3dyaXRlKHRtcF9wYXRoLCAiY29uZmlnLnB5IiwgQkFEX0NPTkZJRykKICAgIF93cml0ZSh0bXBfcGF0aCwgInRlc3RfYXBwLnB5IiwgQkFEX1RFU1QpCgogICAgcmVzdWx0cyA9IHJ1bl9hbGwodG1wX3BhdGgsIHNhbmRib3hfcnVubmVyPWZha2Vfc2FuZGJveF9ydW5uZXIpCiAgICBhc3NlcnQgbGVuKHJlc3VsdHMpID09IDYKICAgIGJ5X3Rvb2wgPSB7ci50b29sOiByIGZvciByIGluIHJlc3VsdHN9CiAgICBhc3NlcnQgYnlfdG9vbFsic2VtZ3JlcCJdLnBhc3NlZCBpcyBGYWxzZQogICAgYXNzZXJ0IGJ5X3Rvb2xbImJhbmRpdCJdLnBhc3NlZCBpcyBGYWxzZQogICAgYXNzZXJ0IGJ5X3Rvb2xbImdpdGxlYWtzIl0ucGFzc2VkIGlzIEZhbHNlCiAgICBhc3NlcnQgYnlfdG9vbFsicHl0ZXN0Il0ucGFzc2VkIGlzIEZhbHNlCgogICAgb3V0ID0gdmVyZGljdChyZXN1bHRzKQogICAgYXNzZXJ0IG91dFsic2FmZSJdIGlzIEZhbHNlCiAgICBhc3NlcnQgb3V0WyJzdGF0dXMiXSA9PSAiVElEQUsgQU1BTiIKICAgICMgVGlnYSBrYXRlZ29yaSB3YWppYiBhZGE7IGthdGVnb3JpIHRhbWJhaGFuIChsaW50IFBMUjAxMzMgZGkgdGVzdAogICAgIyBnYWdhbCwgY292ZXJhZ2UgcmVuZGFoIGthcmVuYSB0ZXN0IGdhZ2FsLCBrZWFtYW5hbi1rb2RlIGRhcmkKICAgICMgYmFuZGl0IEhJR0gpIGp1Z2EgYmVuYXIgYWRhbnlhLgogICAgYXNzZXJ0IHsic2VjcmV0IiwgInNxbC1pbmplY3Rpb24iLCAidGVzdC1nYWdhbCJ9IDw9IHNldChvdXRbImNhdGVnb3JpZXMiXSkKCgpkZWYgdGVzdF9yZXBvX2JlcnNpaF9hbWFuKHRtcF9wYXRoKToKICAgICIiIlJlcG8gYmVyc2loIChxdWVyeSBiZXJwYXJhbWV0ZXIgKyB0ZXN0IGxvbG9zKSAtPiBBTUFOLiIiIgogICAgX3dyaXRlKHRtcF9wYXRoLCAiYXBwLnB5IiwgR09PRF9BUFApCiAgICBfd3JpdGUodG1wX3BhdGgsICJ0ZXN0X2FwcC5weSIsIEdPT0RfVEVTVCkKCiAgICByZXN1bHRzID0gcnVuX2FsbCh0bXBfcGF0aCwgc2FuZGJveF9ydW5uZXI9ZmFrZV9zYW5kYm94X3J1bm5lcikKICAgIG91dCA9IHZlcmRpY3QocmVzdWx0cykKICAgIGFzc2VydCBvdXRbInNhZmUiXSBpcyBUcnVlCiAgICBhc3NlcnQgb3V0WyJzdGF0dXMiXSA9PSAiQU1BTiIKICAgIGFzc2VydCBvdXRbImNhdGVnb3JpZXMiXSA9PSBbXQoKCmRlZiB0ZXN0X2NvdmVyYWdlX255YXRhX3RlcnVrdXIodG1wX3BhdGgpOgogICAgIiIiR2F0ZSBweXRlc3QgbWVuZ3VrdXIgY292ZXJhZ2UgbnlhdGEgKGJ1a2FuIGRhcmkgY29uZmlnKS4iIiIKICAgIF93cml0ZSh0bXBfcGF0aCwgImFwcC5weSIsIEdPT0RfQVBQKQogICAgX3dyaXRlKHRtcF9wYXRoLCAidGVzdF9hcHAucHkiLCBHT09EX1RFU1QpCiAgICByZXN1bHQgPSBweXRlc3RfZ2F0ZS5ydW4odG1wX3BhdGgsIHNhbmRib3hfcnVubmVyPWZha2Vfc2FuZGJveF9ydW5uZXIpCiAgICBhc3NlcnQgcmVzdWx0LnBhc3NlZCBpcyBUcnVlCiAgICBhc3NlcnQgcmVzdWx0LmNvdmVyYWdlIGlzIG5vdCBOb25lCiAgICBhc3NlcnQgMC4wIDw9IHJlc3VsdC5jb3ZlcmFnZSA8PSAxLjAKICAgIG91dCA9IHZlcmRpY3QoW3Jlc3VsdF0pCiAgICBhc3NlcnQgb3V0WyJzYWZlIl0gaXMgVHJ1ZQoKCmRlZiB0ZXN0X3B5dGVzdF90YW5wYV90ZXN0X2dhZ2FsKHRtcF9wYXRoKToKICAgICIiIkgzOiB0aWRhayBhZGEgdGVzdCB1bnR1ayBrb2RlIC0+IGdhdGUgcHl0ZXN0IEdBR0FMIChmYWlsLWNsb3NlZCkuIiIiCiAgICBfd3JpdGUodG1wX3BhdGgsICJhcHAucHkiLCBHT09EX0FQUCkKICAgIHJlc3VsdCA9IHB5dGVzdF9nYXRlLnJ1bih0bXBfcGF0aCwgc2FuZGJveF9ydW5uZXI9ZmFrZV9zYW5kYm94X3J1bm5lcikKICAgIGFzc2VydCByZXN1bHQucGFzc2VkIGlzIEZhbHNlCiAgICBhc3NlcnQgYW55KGZbInJ1bGUiXSA9PSAibm8tdGVzdHMiIGZvciBmIGluIHJlc3VsdC5maW5kaW5ncykKCgpkZWYgdGVzdF9iYW5kaXRfbWVkaXVtX3RpZGFrX2dhZ2FsX2Rhbl9iMTAxX3Rlc3RfZGlrZWN1YWxpa2FuKHRtcF9wYXRoKToKICAgICIiIkg0OiBiYW5kaXQgaGFueWEgZ2FnYWwgdW50dWsgSElHSC9DUklUSUNBTDsgQjEwMSBkaSB0ZXN0IGRpa2VjdWFsaWthbi4iIiIKICAgIF93cml0ZSh0bXBfcGF0aCwgImFwcC5weSIsCiAgICAgICAgICAgImltcG9ydCB5YW1sXG5cblxuZGVmIGxvYWQodGV4dDogc3RyKTpcbiIKICAgICAgICAgICAiICAgIHJldHVybiB5YW1sLmxvYWQodGV4dCwgTG9hZGVyPXlhbWwuTG9hZGVyKVxuIikKICAgIF93cml0ZSh0bXBfcGF0aCwgInRlc3RfYXBwLnB5IiwKICAgICAgICAgICAiZnJvbSBhcHAgaW1wb3J0IGxvYWRcblxuXG5kZWYgdGVzdF9sb2FkKCk6XG4iCiAgICAgICAgICAgIiAgICBhc3NlcnQgbG9hZCgnYTogMScpID09IHsnYSc6IDF9XG4iKQogICAgcmVzdWx0ID0gYmFuZGl0X2dhdGUucnVuKHRtcF9wYXRoLCBzYW5kYm94X3J1bm5lcj1mYWtlX3NhbmRib3hfcnVubmVyKQogICAgYXNzZXJ0IHJlc3VsdC5wYXNzZWQgaXMgVHJ1ZSAgIyBoYW55YSBNRURJVU0gKEI1MDYpICsgQjEwMSBkaSB0ZXN0CiAgICBhc3NlcnQgYW55KGZbInNldmVyaXR5Il0gPT0gIk1FRElVTSIgZm9yIGYgaW4gcmVzdWx0LmZpbmRpbmdzKQogICAgYXNzZXJ0IG5vdCBhbnkoZlsicnVsZSJdID09ICJCMTAxIiBmb3IgZiBpbiByZXN1bHQuZmluZGluZ3MpCiAgICAjIEhJR0ggdGV0YXAgbWVuZ2dhZ2Fsa2FuIChCNjAyIHN1YnByb2Nlc3Mgc2hlbGw9VHJ1ZSA9IEhJR0gpLgogICAgX3dyaXRlKHRtcF9wYXRoLCAiZXZpbC5weSIsCiAgICAgICAgICAgImltcG9ydCBzdWJwcm9jZXNzXG5cblxuZGVmIHJ1bihjbWQpOlxuIgogICAgICAgICAgICIgICAgcmV0dXJuIHN1YnByb2Nlc3MucnVuKGNtZCwgc2hlbGw9VHJ1ZSlcbiIpCiAgICByZXN1bHQyID0gYmFuZGl0X2dhdGUucnVuKHRtcF9wYXRoLCBzYW5kYm94X3J1bm5lcj1mYWtlX3NhbmRib3hfcnVubmVyKQogICAgYXNzZXJ0IHJlc3VsdDIucGFzc2VkIGlzIEZhbHNlCgoKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyBUZXN0IGZhaWwtY2xvc2VkIHRhbnBhIERvY2tlciAoQzEgKyBIMykg4oCUIFBvQyBhdWRpdAojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpkZWYgdGVzdF90YW5wYV9kb2NrZXJfc2VtdWFfZ2F0ZV9iZWx1bV90ZXJ2ZXJpZmlrYXNpKHRtcF9wYXRoKToKICAgICIiIlRhbnBhIERvY2tlcjogc2VtdWEgZ2F0ZSBwYXNzZWQ9RmFsc2UsIHZlcmRpY3QgQkVMVU1fVEVSVkVSSUZJS0FTSS4iIiIKICAgIGlmIGRvY2tlcl9hdmFpbGFibGUoKToKICAgICAgICByZXR1cm4gICMgcHJhZ21hOiBubyBjb3ZlciAtIERvY2tlciBhZGEgZGkgaG9zdCBpbmkKICAgIF93cml0ZSh0bXBfcGF0aCwgImFwcC5weSIsIEdPT0RfQVBQKQogICAgX3dyaXRlKHRtcF9wYXRoLCAidGVzdF9hcHAucHkiLCBHT09EX1RFU1QpCiAgICByZXN1bHRzID0gcnVuX2FsbCh0bXBfcGF0aCkKICAgIGFzc2VydCBsZW4ocmVzdWx0cykgPT0gNgogICAgYXNzZXJ0IGFsbChyLnBhc3NlZCBpcyBGYWxzZSBmb3IgciBpbiByZXN1bHRzKQogICAgYXNzZXJ0IGFsbChhbnkoZlsicnVsZSJdID09ICJzYW5kYm94LXVuYXZhaWxhYmxlIiBmb3IgZiBpbiByLmZpbmRpbmdzKQogICAgICAgICAgICAgICBmb3IgciBpbiByZXN1bHRzKQogICAgb3V0ID0gdmVyZGljdChyZXN1bHRzKQogICAgYXNzZXJ0IG91dFsic2FmZSJdIGlzIEZhbHNlCiAgICBhc3NlcnQgb3V0WyJzdGF0dXMiXSA9PSAiQkVMVU1fVEVSVkVSSUZJS0FTSSIKCgpkZWYgdGVzdF9jb25mdGVzdF9qYWhhdF90aWRha19tZW55ZW50dWhfaG9zdCh0bXBfcGF0aCk6CiAgICAiIiJDMSAoUG9DIGF1ZGl0KTogY29uZnRlc3QucHkgamFoYXQgdGlkYWsgYm9sZWggbWVtYnVhdCBmaWxlIGRpIGhvc3QuCgogICAgVGFucGEgRG9ja2VyLCBnYXRlIHB5dGVzdCBtZW5vbGFrIGJlcmphbGFuIChzYW5kYm94LXVuYXZhaWxhYmxlKQogICAgc2VoaW5nZ2EgY29uZnRlc3QgdGlkYWsgcGVybmFoIGRpZWtzZWt1c2kgZGkgaG9zdC4KICAgICIiIgogICAgaWYgZG9ja2VyX2F2YWlsYWJsZSgpOgogICAgICAgIHJldHVybiAgIyBwcmFnbWE6IG5vIGNvdmVyIC0gRG9ja2VyIGFkYSBkaSBob3N0IGluaQogICAgbWFya2VyID0gdG1wX3BhdGgucGFyZW50IC8gIlBXTkVEX3B5dGVzdF9nYXRlIgogICAgYXNzZXJ0IG5vdCBtYXJrZXIuZXhpc3RzKCkKICAgIF93cml0ZSh0bXBfcGF0aCwgInRlc3RfYXBwLnB5IiwKICAgICAgICAgICAiZGVmIHRlc3Rfb2soKTpcbiAgICBhc3NlcnQgVHJ1ZVxuIikKICAgIF93cml0ZSh0bXBfcGF0aCwgImNvbmZ0ZXN0LnB5IiwKICAgICAgICAgICBmImZyb20gcGF0aGxpYiBpbXBvcnQgUGF0aFxuIgogICAgICAgICAgIGYiUGF0aCh7c3RyKG1hcmtlcikhcn0pLndyaXRlX3RleHQoJ3B3bmVkJylcbiIpCiAgICByZXN1bHQgPSBweXRlc3RfZ2F0ZS5ydW4odG1wX3BhdGgpCiAgICBhc3NlcnQgcmVzdWx0LnBhc3NlZCBpcyBGYWxzZQogICAgYXNzZXJ0IGFueShmWyJydWxlIl0gPT0gInNhbmRib3gtdW5hdmFpbGFibGUiIGZvciBmIGluIHJlc3VsdC5maW5kaW5ncykKICAgIGFzc2VydCBub3QgbWFya2VyLmV4aXN0cygpCgogICAgIyB0ZXJtaW5hbF9ydW4gcHl0ZXN0IGp1Z2EgZGl0b2xhayBtZW50YWgtbWVudGFoIChDMSkuCiAgICBmcm9tIG11ZmFrYXQubWNwX3NlcnZlci50b29scyBpbXBvcnQgcnVuX3Rlcm1pbmFsX2NvbW1hbmQKCiAgICBkZW5pZWQgPSBydW5fdGVybWluYWxfY29tbWFuZChmInB5dGVzdCB7dG1wX3BhdGh9IikKICAgIGFzc2VydCBkZW5pZWRbIm9rIl0gaXMgRmFsc2UKICAgIGFzc2VydCBub3QgbWFya2VyLmV4aXN0cygpCiAgICAjIERvbWFpbiB0ZXN0aW5nIGp1Z2EgbWVub2xhayB0YW5wYSBzYW5kYm94IChjb25mdGVzdCB0ZXRhcCBkaWVrc2VrdXNpCiAgICAjIHNhYXQgLS1jb2xsZWN0LW9ubHksIGphZGkgdGlkYWsgYm9sZWggamFsYW4gZGkgaG9zdCkuCiAgICBmcm9tIG11ZmFrYXQubWNwX3NlcnZlci5kb21haW5zLnRlc3RpbmcgaW1wb3J0IHRlc3RpbmdfcnVuCgogICAgYXNzZXJ0IHRlc3RpbmdfcnVuKHN0cih0bXBfcGF0aCkpWyJvayJdIGlzIEZhbHNlCiAgICBhc3NlcnQgbm90IG1hcmtlci5leGlzdHMoKQo=
+"""Test gates MUFAKAT (T10-T11, diperbaiki audit 20 Nov 2026: C1+H3+H4).
+
+Repo contoh berisi secret palsu + SQL injection + test gagal HARUS
+menghasilkan verdict TIDAK AMAN dengan 3 kategori
+(secret, sql-injection, test-gagal). Repo bersih HARUS AMAN.
+
+Semua gate jalan HANYA lewat sandbox Docker. Karena Docker tidak
+tersedia di semua mesin, test memakai ``fake_sandbox_runner`` —
+simulasi sandbox yang tool-nya lengkap: pytest/bandit/ruff dijalankan
+sungguhan di host (hanya oleh test ini), sedangkan semgrep/gitleaks/
+trivy yang tidak terpasang di host diemulasikan dari pola regex repo
+sendiri (emulasi ini HANYA ada di test — kode produksi tidak pernah
+memakai regex sebagai pengganti tool). Tanpa fake runner (Docker
+tidak ada), semua gate HARUS gagal-tertutup ``sandbox-unavailable``
+dan verdict ``BELUM_TERVERIFIKASI``.
+"""
+
+from __future__ import annotations
+
+import json
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+from mufakat.gates import bandit as bandit_gate
+from mufakat.gates import gitleaks as gitleaks_gate
+from mufakat.gates import pytest as pytest_gate
+from mufakat.gates import semgrep as semgrep_gate
+from mufakat.gates.runner import run_all
+from mufakat.gates.verdict import verdict
+from mufakat.sandbox.docker import docker_available
+
+BAD_APP = '''"""Contoh repo bermasalah (sengaja dibuat untuk test)."""
+import sqlite3
+
+API_KEY = "AKIAIOSFODNN7EXAMPLE"
+
+
+def get_user(conn, user_id):
+    return conn.execute("SELECT * FROM users WHERE id = " + user_id).fetchone()
+
+
+def run_it(data):
+    import pickle
+
+    return pickle.loads(data)
+
+
+def run_shell(cmd):
+    import subprocess
+
+    return subprocess.run(cmd, shell=True)
+
+
+def connect():
+    return sqlite3.connect(":memory:")
+'''
+
+BAD_CONFIG = '''# Konfigurasi contoh (secret palsu untuk test).
+api_key = "AKIAIOSFODNN7EXAMPLE"
+password = "contoh-sandi-palsu"
+'''
+
+BAD_TEST = '''"""Test contoh yang sengaja gagal."""
+
+
+def test_contoh_gagal():
+    assert 1 == 2, "contoh test gagal"
+'''
+
+GOOD_APP = '''"""Contoh repo bersih."""
+
+
+def get_user(conn, user_id: int):
+    cur = conn.execute("SELECT id, name FROM users WHERE id = ?", (user_id,))
+    return cur.fetchone()
+'''
+
+GOOD_TEST = '''"""Test contoh yang lolos."""
+import sqlite3
+
+from app import get_user
+
+
+def test_get_user_tidak_ada():
+    conn = sqlite3.connect(":memory:")
+    conn.execute("CREATE TABLE users (id INTEGER, name TEXT)")
+    assert get_user(conn, 1) is None
+'''
+
+
+def _write(path, name, content):
+    (path / name).write_text(content, encoding="utf-8")
+
+
+# ---------------------------------------------------------------------------
+# Fake sandbox runner (HANYA untuk test — lihat docstring modul).
+# ---------------------------------------------------------------------------
+def _emulate_semgrep(workdir: str) -> dict:
+    from mufakat.gates._scan import scan_patterns
+
+    findings = scan_patterns(Path(workdir), semgrep_gate._PATTERNS,
+                             extensions={".py", ".js", ".ts"})
+    results = [{
+        "path": f["file"], "start": {"line": f["line"]},
+        "check_id": f["rule"],
+        "extra": {"severity": "ERROR" if f["severity"] == "HIGH" else "WARNING",
+                  "message": f["message"]},
+    } for f in findings]
+    return {"exit_code": 0, "stdout": json.dumps({"results": results}),
+            "stderr": "", "sandbox_unavailable": False}
+
+
+def _emulate_gitleaks(workdir: str) -> dict:
+    from mufakat.gates._scan import scan_patterns
+
+    findings = scan_patterns(Path(workdir), gitleaks_gate._PATTERNS)
+    items = [{"File": f["file"], "StartLine": f["line"],
+              "RuleID": f["rule"], "Description": f["message"]}
+             for f in findings]
+    return {"exit_code": 1 if items else 0, "stdout": json.dumps(items),
+            "stderr": "", "sandbox_unavailable": False}
+
+
+def fake_sandbox_runner(image, workdir, command, timeout=300,
+                        network_none=True, read_only=False,
+                        extra_volumes=None, **_kwargs) -> dict:
+    """Simulasi sandbox ber-tool lengkap (hanya untuk test).
+
+    ``extra_volumes`` (N4): mount ``(host, container)`` — direktori
+    host dibuat, lalu path container di perintah ditulis ulang ke
+    path host (emulasi mount Docker: gate pytest menulis coverage
+    ke ``/out/coverage.json`` di container).
+    """
+    command = str(command)
+    for volume in extra_volumes or []:
+        if isinstance(volume, (list, tuple)):
+            host_path, container_path = str(volume[0]), str(volume[1])
+        else:
+            host_path, container_path = str(volume).split(":", 1)
+        Path(host_path).mkdir(parents=True, exist_ok=True)
+        command = command.replace(container_path + "/", host_path + "/")
+    if "semgrep" in command and shutil.which("semgrep") is None:
+        return _emulate_semgrep(str(workdir))
+    if "gitleaks" in command and shutil.which("gitleaks") is None:
+        return _emulate_gitleaks(str(workdir))
+    if "trivy" in command and shutil.which("trivy") is None:
+        return {"exit_code": 0, "stdout": json.dumps({"Results": []}),
+                "stderr": "", "sandbox_unavailable": False}
+    cmd = command.replace("python -m pytest",
+                          f"{sys.executable} -m pytest")
+    # Tool (bandit/ruff/pytest) hidup di direktori yang sama dengan
+    # interpreter test — masukkan ke PATH supaya `command -v` di
+    # perintah gate menemukannya (seperti di dalam image sandbox).
+    import os
+
+    env = dict(os.environ)
+    bin_dir = str(Path(sys.executable).parent)
+    env["PATH"] = bin_dir + os.pathsep + env.get("PATH", "")
+    result = subprocess.run(cmd, shell=True, cwd=str(workdir),
+                            capture_output=True, text=True, timeout=timeout,
+                            env=env)
+    return {"exit_code": result.returncode, "stdout": result.stdout,
+            "stderr": result.stderr, "sandbox_unavailable": False}
+
+
+# ---------------------------------------------------------------------------
+# Test perilaku gate (dengan sandbox simulasi)
+# ---------------------------------------------------------------------------
+def test_repo_buruk_tidak_aman_tiga_kategori(tmp_path):
+    """Secret + SQLi + test gagal -> TIDAK AMAN, 3 kategori."""
+    _write(tmp_path, "app.py", BAD_APP)
+    _write(tmp_path, "config.py", BAD_CONFIG)
+    _write(tmp_path, "test_app.py", BAD_TEST)
+
+    results = run_all(tmp_path, sandbox_runner=fake_sandbox_runner)
+    assert len(results) == 6
+    by_tool = {r.tool: r for r in results}
+    assert by_tool["semgrep"].passed is False
+    assert by_tool["bandit"].passed is False
+    assert by_tool["gitleaks"].passed is False
+    assert by_tool["pytest"].passed is False
+
+    out = verdict(results)
+    assert out["safe"] is False
+    assert out["status"] == "TIDAK AMAN"
+    # Tiga kategori wajib ada; kategori tambahan (lint PLR0133 di test
+    # gagal, coverage rendah karena test gagal, keamanan-kode dari
+    # bandit HIGH) juga benar adanya.
+    assert {"secret", "sql-injection", "test-gagal"} <= set(out["categories"])
+
+
+def test_repo_bersih_aman(tmp_path):
+    """Repo bersih (query berparameter + test lolos) -> AMAN."""
+    _write(tmp_path, "app.py", GOOD_APP)
+    _write(tmp_path, "test_app.py", GOOD_TEST)
+
+    results = run_all(tmp_path, sandbox_runner=fake_sandbox_runner)
+    out = verdict(results)
+    assert out["safe"] is True
+    assert out["status"] == "AMAN"
+    assert out["categories"] == []
+
+
+def test_coverage_nyata_terukur(tmp_path):
+    """Gate pytest mengukur coverage nyata (bukan dari config)."""
+    _write(tmp_path, "app.py", GOOD_APP)
+    _write(tmp_path, "test_app.py", GOOD_TEST)
+    result = pytest_gate.run(tmp_path, sandbox_runner=fake_sandbox_runner)
+    assert result.passed is True
+    assert result.coverage is not None
+    assert 0.0 <= result.coverage <= 1.0
+    out = verdict([result])
+    assert out["safe"] is True
+
+
+def test_pytest_tanpa_test_gagal(tmp_path):
+    """H3: tidak ada test untuk kode -> gate pytest GAGAL (fail-closed)."""
+    _write(tmp_path, "app.py", GOOD_APP)
+    result = pytest_gate.run(tmp_path, sandbox_runner=fake_sandbox_runner)
+    assert result.passed is False
+    assert any(f["rule"] == "no-tests" for f in result.findings)
+
+
+def test_bandit_medium_tidak_gagal_dan_b101_test_dikecualikan(tmp_path):
+    """H4: bandit hanya gagal untuk HIGH/CRITICAL; B101 di test dikecualikan."""
+    _write(tmp_path, "app.py",
+           "import yaml\n\n\ndef load(text: str):\n"
+           "    return yaml.load(text, Loader=yaml.Loader)\n")
+    _write(tmp_path, "test_app.py",
+           "from app import load\n\n\ndef test_load():\n"
+           "    assert load('a: 1') == {'a': 1}\n")
+    result = bandit_gate.run(tmp_path, sandbox_runner=fake_sandbox_runner)
+    assert result.passed is True  # hanya MEDIUM (B506) + B101 di test
+    assert any(f["severity"] == "MEDIUM" for f in result.findings)
+    assert not any(f["rule"] == "B101" for f in result.findings)
+    # HIGH tetap menggagalkan (B602 subprocess shell=True = HIGH).
+    _write(tmp_path, "evil.py",
+           "import subprocess\n\n\ndef run(cmd):\n"
+           "    return subprocess.run(cmd, shell=True)\n")
+    result2 = bandit_gate.run(tmp_path, sandbox_runner=fake_sandbox_runner)
+    assert result2.passed is False
+
+
+# ---------------------------------------------------------------------------
+# Test fail-closed tanpa Docker (C1 + H3) — PoC audit
+# ---------------------------------------------------------------------------
+def test_tanpa_docker_semua_gate_belum_terverifikasi(tmp_path):
+    """Tanpa Docker: semua gate passed=False, verdict BELUM_TERVERIFIKASI."""
+    if docker_available():
+        return  # pragma: no cover - Docker ada di host ini
+    _write(tmp_path, "app.py", GOOD_APP)
+    _write(tmp_path, "test_app.py", GOOD_TEST)
+    results = run_all(tmp_path)
+    assert len(results) == 6
+    assert all(r.passed is False for r in results)
+    assert all(any(f["rule"] == "sandbox-unavailable" for f in r.findings)
+               for r in results)
+    out = verdict(results)
+    assert out["safe"] is False
+    assert out["status"] == "BELUM_TERVERIFIKASI"
+
+
+def test_conftest_jahat_tidak_menyentuh_host(tmp_path):
+    """C1 (PoC audit): conftest.py jahat tidak boleh membuat file di host.
+
+    Tanpa Docker, gate pytest menolak berjalan (sandbox-unavailable)
+    sehingga conftest tidak pernah dieksekusi di host.
+    """
+    if docker_available():
+        return  # pragma: no cover - Docker ada di host ini
+    marker = tmp_path.parent / "PWNED_pytest_gate"
+    assert not marker.exists()
+    _write(tmp_path, "test_app.py",
+           "def test_ok():\n    assert True\n")
+    _write(tmp_path, "conftest.py",
+           f"from pathlib import Path\n"
+           f"Path({str(marker)!r}).write_text('pwned')\n")
+    result = pytest_gate.run(tmp_path)
+    assert result.passed is False
+    assert any(f["rule"] == "sandbox-unavailable" for f in result.findings)
+    assert not marker.exists()
+
+    # terminal_run pytest juga ditolak mentah-mentah (C1).
+    from mufakat.mcp_server.tools import run_terminal_command
+
+    denied = run_terminal_command(f"pytest {tmp_path}")
+    assert denied["ok"] is False
+    assert not marker.exists()
+    # Domain testing juga menolak tanpa sandbox (conftest tetap dieksekusi
+    # saat --collect-only, jadi tidak boleh jalan di host).
+    from mufakat.mcp_server.domains.testing import testing_run
+
+    assert testing_run(str(tmp_path))["ok"] is False
+    assert not marker.exists()
