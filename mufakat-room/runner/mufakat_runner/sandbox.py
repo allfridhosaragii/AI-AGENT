@@ -47,6 +47,8 @@ def run_in_sandbox(image, workdir, command, timeout: int = 300,
         from mufakat.sandbox.docker import run_in_sandbox as _run
 
         result = _run(image, workdir, command, timeout=timeout, network_none=network_none)
+        if not isinstance(result, dict):
+            raise ValueError("run_in_sandbox mengembalikan tipe tak dikenal.")
         result["verified"] = result.get("exit_code") != 127
         return result
     except ImportError:
@@ -54,5 +56,12 @@ def run_in_sandbox(image, workdir, command, timeout: int = 300,
             "exit_code": 127,
             "stdout": "",
             "stderr": "Modul sandbox mufakat tidak terpasang — sandbox belum terverifikasi.",
+            "verified": False,
+        }
+    except Exception as exc:  # noqa: BLE001 - jangan pura-pura terverifikasi
+        return {
+            "exit_code": 127,
+            "stdout": "",
+            "stderr": f"sandbox gagal dijalankan: {exc}",
             "verified": False,
         }
