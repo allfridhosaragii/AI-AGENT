@@ -1,1 +1,140 @@
-IiIiR2F0ZSBiYW5kaXQgKFQxMCwgZGlwZXJiYWlraSBhdWRpdCAyMCBOb3YgMjAyNjogQzEgKyBIMyArIEg0OwpwdXRhcmFuIDI6IE4xKS4KCkRpamFsYW5rYW4gSEFOWUEgZGkgZGFsYW0gc2FuZGJveCBEb2NrZXIuIFRhbnBhIERvY2tlcjogZ2FnYWwKdGVydHV0dXAgKGBgc2FuZGJveC11bmF2YWlsYWJsZWBgKS4KCi0gSGFueWEgSElHSC9DUklUSUNBTCB5YW5nIG1lbmdnYWdhbGthbiBnYXRlOyBNRURJVU0gZGljYXRhdAogIChidXR1aCBqdXN0aWZpa2FzaSkgdGV0YXBpIHRpZGFrIG1lbmdnYWdhbGthbiDigJQgc2VzdWFpIGBgZ2F0ZXMueWFtbGBgLgotIGBgQjEwMWBgIChhc3NlcnQpIGRpa2VjdWFsaWthbiB1bnR1ayBmaWxlIGBgdGVzdF8qLnB5YGAgLwogIGBgKl90ZXN0LnB5YGA6IHNldGlhcCB0ZXN0IG1lbWFrYWkgYGBhc3NlcnRgYCwgamFkaSBCMTAxIGRpIHRlc3QKICB0aWRhayBib2xlaCBtZW1idWF0IEFNQU4gbXVzdGFoaWwgdGVyY2FwYWkuCi0gQmlsYSBiaW5hcnkgYmFuZGl0IHRpZGFrIGFkYSBkaSBkYWxhbSBzYW5kYm94OiBnYWdhbC10ZXJ0dXR1cAogIChgYHRvb2wtbWlzc2luZ2BgKS4gUGVtaW5kYWkgcmVnZXggaGFueWEgaW5mbyB0YW1iYWhhbiAoc2V2ZXJpdHkKICBJTkZPKSDigJQgQlVLQU4gcGVuZ2dhbnRpIHRvb2wuCgpOMSDigJQgZXhpdCBjb2RlIERJUEVSSUtTQSAoZHVsdSBkaWFiYWlrYW47IG91dHB1dCBub24tSlNPTiBsZXdhdApgYGV4Y2VwdCBWYWx1ZUVycm9yOiByZXR1cm4gW11gYCBkaWFuZ2dhcCAiMCB0ZW11YW4iIC0+IEFNQU4gcGFsc3UpOgotIGV4aXQgMCA9IGJlcnNpaCwgZXhpdCAxID0gYWRhIHRlbXVhbjsgc2VsYWluIGl0dSAtPiBgYHRvb2wtZXJyb3JgYC4KLSBzdGRvdXQga29zb25nIC8gYnVrYW4gSlNPTiAtPiBgYHRvb2wtZXJyb3JgYCAoYmFuZGl0IGBgLWYganNvbmBgCiAgc2VsYWx1IG1lbmdlbHVhcmthbiBKU09OLCBiYWhrYW4gc2FhdCBiZXJzaWgpLgoiIiIKCmZyb20gX19mdXR1cmVfXyBpbXBvcnQgYW5ub3RhdGlvbnMKCmltcG9ydCBqc29uCgp0cnk6CiAgICBmcm9tIC5fc2FuZGJveCBpbXBvcnQgcnVuX2dhdGVfaW5fc2FuZGJveCwgdG9vbF9lcnJvciwgdG9vbF9taXNzaW5nCiAgICBmcm9tIC5fc2NhbiBpbXBvcnQgc2Nhbl9wYXR0ZXJucwogICAgZnJvbSAucnVubmVyIGltcG9ydCBHYXRlUmVzdWx0CmV4Y2VwdCBJbXBvcnRFcnJvcjogICMgcHJhZ21hOiBubyBjb3ZlcgogICAgZnJvbSBtdWZha2F0LmdhdGVzLl9zYW5kYm94IGltcG9ydCBydW5fZ2F0ZV9pbl9zYW5kYm94LCB0b29sX2Vycm9yLCB0b29sX21pc3NpbmcgICMgdHlwZTogaWdub3JlCiAgICBmcm9tIG11ZmFrYXQuZ2F0ZXMuX3NjYW4gaW1wb3J0IHNjYW5fcGF0dGVybnMgICMgdHlwZTogaWdub3JlCiAgICBmcm9tIG11ZmFrYXQuZ2F0ZXMucnVubmVyIGltcG9ydCBHYXRlUmVzdWx0ICAjIHR5cGU6IGlnbm9yZQoKX1BBVFRFUk5TID0gWwogICAgKCJzcWwtaW5qZWN0aW9uIiwgIkhJR0giLCByImV4ZWN1dGVccypcKC4qXCsiLAogICAgICJRdWVyeSBTUUwgZGliYW5ndW4gZGVuZ2FuIGtvbmthdGVuYXNpIHN0cmluZyAocmF3YW4gU1FMIGluamVjdGlvbikuIiksCiAgICAoInNxbC1pbmplY3Rpb24iLCAiSElHSCIsIHIiZXhlY3V0ZVxzKlwoZltcIiddLipTRUxFQ1QiLAogICAgICJRdWVyeSBTUUwgZi1zdHJpbmcgZGVuZ2FuIFNFTEVDVCAocmF3YW4gU1FMIGluamVjdGlvbikuIiksCiAgICAoImV2YWwtZXhlYyIsICJISUdIIiwgciJcYmV2YWxccypcKCIsCiAgICAgIlBlbmdndW5hYW4gZXZhbCgpIChCMzA3KS4iKSwKICAgICgiZXZhbC1leGVjIiwgIkhJR0giLCByIlxiZXhlY1xzKlwoIiwKICAgICAiUGVuZ2d1bmFhbiBleGVjKCkgKEIxMDIpLiIpLAogICAgKCJjb21tYW5kLWluamVjdGlvbiIsICJISUdIIiwgciJvc1wuc3lzdGVtXHMqXCgiLAogICAgICJQZW5nZ3VuYWFuIG9zLnN5c3RlbSgpIChCNjA1KS4iKSwKICAgICgiY29tbWFuZC1pbmplY3Rpb24iLCAiTUVESVVNIiwgciJzdWJwcm9jZXNzXC5bYS16X10rXHMqXCguKnNoZWxsXHMqPVxzKlRydWUiLAogICAgICJzdWJwcm9jZXNzIGRlbmdhbiBzaGVsbD1UcnVlIChCNjAyKS4iKSwKICAgICgiZGVzZXJpYWxpemF0aW9uIiwgIkhJR0giLCByInBpY2tsZVwubG9hZHM/XHMqXCgiLAogICAgICJEZXNlcmlhbGlzYXNpIHBpY2tsZSB0aWRhayBhbWFuIChCMzAxKS4iKSwKICAgICgiZGVzZXJpYWxpemF0aW9uIiwgIk1FRElVTSIsIHIieWFtbFwubG9hZFxzKlwoIiwKICAgICAieWFtbC5sb2FkIHRhbnBhIFNhZmVMb2FkZXIgKEI1MDYpLiIpLAogICAgKCJ3ZWFrLWNyeXB0byIsICJNRURJVU0iLCByImhhc2hsaWJcLihtZDV8c2hhMSlccypcKCIsCiAgICAgIkhhc2ggbGVtYWggbWQ1L3NoYTEgKEIzMDMvQjMyNCkuIiksCl0KCl9GQUlMX1NFVkVSSVRJRVMgPSAoIkhJR0giLCAiQ1JJVElDQUwiKQoKIyBFeGl0IGNvZGUgYmFuZGl0OiAwIGJlcnNpaCwgMSBhZGEgdGVtdWFuLgpfT0tfRVhJVF9DT0RFUyA9ICgwLCAxKQoKCmRlZiBfaXNfdGVzdF9maWxlKGZpbGVuYW1lOiBzdHIpIC0+IGJvb2w6CiAgICBiYXNlID0gZmlsZW5hbWUucmVwbGFjZSgiXFwiLCAiLyIpLnJzcGxpdCgiLyIsIDEpWy0xXQogICAgcmV0dXJuIGJhc2Uuc3RhcnRzd2l0aCgidGVzdF8iKSBvciBiYXNlLmVuZHN3aXRoKCJfdGVzdC5weSIpCgoKZGVmIF9yZWdleF9pbmZvX2ZpbmRpbmdzKHRhcmdldF9kaXIpIC0+IGxpc3RbZGljdF06CiAgICAiIiJUZW11YW4gcmVnZXggSEFOWUEgc2ViYWdhaSBpbmZvIHRhbWJhaGFuIChzZXZlcml0eSBJTkZPKS4iIiIKICAgIG91dCA9IFtdCiAgICBmb3IgZmluZGluZyBpbiBzY2FuX3BhdHRlcm5zKHRhcmdldF9kaXIsIF9QQVRURVJOUywgZXh0ZW5zaW9ucz17Ii5weSJ9KToKICAgICAgICBmaW5kaW5nID0gZGljdChmaW5kaW5nKQogICAgICAgIGZpbmRpbmdbInNldmVyaXR5Il0gPSAiSU5GTyIKICAgICAgICBmaW5kaW5nWyJtZXNzYWdlIl0gPSAiW3JlZ2V4LWluZm8sIGJ1a2FuIHBlbmdnYW50aSBiYW5kaXRdICIgKyBmaW5kaW5nWyJtZXNzYWdlIl0KICAgICAgICBvdXQuYXBwZW5kKGZpbmRpbmcpCiAgICByZXR1cm4gb3V0CgoKZGVmIF9wYXJzZV9iYW5kaXRfanNvbihzdGRvdXQ6IHN0cikgLT4gbGlzdFtkaWN0XToKICAgICIiIlBhcnNlIG91dHB1dCBKU09OIGJhbmRpdDsgVmFsdWVFcnJvciBiaWxhIGJ1a2FuIEpTT04gKE4xKS4KCiAgICBEdWx1IGBgZXhjZXB0IFZhbHVlRXJyb3I6IHJldHVybiBbXWBgIOKAlCBvdXRwdXQgcnVzYWsgZGlhbmdnYXAKICAgICIwIHRlbXVhbiIgZGFuIGdhdGUgbG9sb3MuIFNla2FyYW5nIGVycm9yIGRpdGVydXNrYW4ga2UgcGVtYW5nZ2lsCiAgICBkYW4gbWVuamFkaSBgYHRvb2wtZXJyb3JgYCAoZ2FnYWwtdGVydHV0dXApLgogICAgIiIiCiAgICBkYXRhID0ganNvbi5sb2FkcyhzdGRvdXQpCiAgICBmaW5kaW5ncyA9IFtdCiAgICBmb3IgaXRlbSBpbiBkYXRhLmdldCgicmVzdWx0cyIsIFtdKSBvciBbXToKICAgICAgICBydWxlID0gc3RyKGl0ZW0uZ2V0KCJ0ZXN0X2lkIiwgImJhbmRpdCIpKQogICAgICAgIGZpbGVuYW1lID0gc3RyKGl0ZW0uZ2V0KCJmaWxlbmFtZSIsICIiKSkKICAgICAgICAjIEg0OiBCMTAxIChhc3NlcnQpIGRpIGZpbGUgdGVzdCBkaWtlY3VhbGlrYW4uCiAgICAgICAgaWYgcnVsZSA9PSAiQjEwMSIgYW5kIF9pc190ZXN0X2ZpbGUoZmlsZW5hbWUpOgogICAgICAgICAgICBjb250aW51ZQogICAgICAgIHNldmVyaXR5ID0gc3RyKGl0ZW0uZ2V0KCJpc3N1ZV9zZXZlcml0eSIsICJNRURJVU0iKSkudXBwZXIoKQogICAgICAgIGlmIHNldmVyaXR5ID09ICJNRURJVU0iOgogICAgICAgICAgICBtZXNzYWdlID0gc3RyKGl0ZW0uZ2V0KCJpc3N1ZV90ZXh0IiwgIlRlbXVhbiBiYW5kaXQuIikpCiAgICAgICAgICAgIG1lc3NhZ2UgKz0gIiAoTUVESVVNIOKAlCBidXR1aCBqdXN0aWZpa2FzaSwgdGlkYWsgbWVuZ2dhZ2Fsa2FuIGdhdGUuKSIKICAgICAgICBlbHNlOgogICAgICAgICAgICBtZXNzYWdlID0gc3RyKGl0ZW0uZ2V0KCJpc3N1ZV90ZXh0IiwgIlRlbXVhbiBiYW5kaXQuIikpCiAgICAgICAgZmluZGluZ3MuYXBwZW5kKHsKICAgICAgICAgICAgInNldmVyaXR5Ijogc2V2ZXJpdHksICJmaWxlIjogZmlsZW5hbWUsCiAgICAgICAgICAgICJsaW5lIjogaW50KGl0ZW0uZ2V0KCJsaW5lX251bWJlciIsIDApIG9yIDApLAogICAgICAgICAgICAicnVsZSI6IHJ1bGUsICJtZXNzYWdlIjogbWVzc2FnZSwKICAgICAgICB9KQogICAgcmV0dXJuIGZpbmRpbmdzCgoKZGVmIHJ1bih0YXJnZXRfZGlyLCBzYW5kYm94X3J1bm5lcj1Ob25lKSAtPiBHYXRlUmVzdWx0OgogICAgIiIiSmFsYW5rYW4gZ2F0ZSBiYW5kaXQgYXRhcyBgYHRhcmdldF9kaXJgYCAoZGkgc2FuZGJveCkuIiIiCiAgICByZXN1bHQgPSBydW5fZ2F0ZV9pbl9zYW5kYm94KAogICAgICAgICJiYW5kaXQiLCB0YXJnZXRfZGlyLAogICAgICAgICJjb21tYW5kIC12IGJhbmRpdCA+L2Rldi9udWxsIDI+JjEgfHwgeyBlY2hvIFRPT0xfTUlTU0lORzsgZXhpdCAxMjc7IH07ICIKICAgICAgICAiYmFuZGl0IC1yIC1mIGpzb24gLXEgLiIsCiAgICAgICAgdGltZW91dD0zMDAsIHJlYWRfb25seT1UcnVlLCBzYW5kYm94X3J1bm5lcj1zYW5kYm94X3J1bm5lcikKICAgIGlmIGlzaW5zdGFuY2UocmVzdWx0LCBHYXRlUmVzdWx0KToKICAgICAgICByZXR1cm4gcmVzdWx0CiAgICBvdXRwdXQgPSByZXN1bHQuZ2V0KCJzdGRvdXQiKSBvciAiIgogICAgZXhpdF9jb2RlID0gcmVzdWx0LmdldCgiZXhpdF9jb2RlIikKICAgIGlmICJUT09MX01JU1NJTkciIGluIG91dHB1dCBvciBleGl0X2NvZGUgPT0gMTI3OgogICAgICAgIGZhaWxlZCA9IHRvb2xfbWlzc2luZygiYmFuZGl0IiwgImJhbmRpdCIpCiAgICAgICAgZmFpbGVkLmZpbmRpbmdzLmV4dGVuZChfcmVnZXhfaW5mb19maW5kaW5ncyh0YXJnZXRfZGlyKSkKICAgICAgICByZXR1cm4gZmFpbGVkCiAgICBpZiBleGl0X2NvZGUgbm90IGluIF9PS19FWElUX0NPREVTOgogICAgICAgIHJldHVybiB0b29sX2Vycm9yKAogICAgICAgICAgICAiYmFuZGl0IiwKICAgICAgICAgICAgZiJiYW5kaXQgZ2FnYWwgKGV4aXQgY29kZSB7ZXhpdF9jb2RlfSwgYnVrYW4gMC8xKSDigJQgaGFzaWwgIgogICAgICAgICAgICAidGlkYWsgZGFwYXQgZGlwZXJjYXlhLCBidWthbiBBTUFOLiIpCiAgICBpZiBub3Qgb3V0cHV0LnN0cmlwKCk6CiAgICAgICAgcmV0dXJuIHRvb2xfZXJyb3IoCiAgICAgICAgICAgICJiYW5kaXQiLAogICAgICAgICAgICAiYmFuZGl0IHRpZGFrIG1lbmdlbHVhcmthbiBvdXRwdXQgKHN0ZG91dCBrb3NvbmcpIHBhZGFoYWwgIgogICAgICAgICAgICAic2VoYXJ1c255YSBKU09OIOKAlCBoYXNpbCB0aWRhayBkYXBhdCBkaXBlcmNheWEsIGJ1a2FuIEFNQU4uIikKICAgIHRyeToKICAgICAgICBmaW5kaW5ncyA9IF9wYXJzZV9iYW5kaXRfanNvbihvdXRwdXQpCiAgICBleGNlcHQgVmFsdWVFcnJvcjoKICAgICAgICByZXR1cm4gdG9vbF9lcnJvcigKICAgICAgICAgICAgImJhbmRpdCIsICJPdXRwdXQgYmFuZGl0IGJ1a2FuIEpTT04geWFuZyB2YWxpZCDigJQgaGFzaWwgdGlkYWsgIgogICAgICAgICAgICAgICAgICAgICAgImRhcGF0IGRpcGVyY2F5YSwgYnVrYW4gQU1BTi4iKQogICAgcGFzc2VkID0gbm90IGFueShmWyJzZXZlcml0eSJdIGluIF9GQUlMX1NFVkVSSVRJRVMgZm9yIGYgaW4gZmluZGluZ3MpCiAgICByZXR1cm4gR2F0ZVJlc3VsdCh0b29sPSJiYW5kaXQiLCBwYXNzZWQ9cGFzc2VkLCBmaW5kaW5ncz1maW5kaW5ncykK
+"""Gate bandit (T10, diperbaiki audit 20 Nov 2026: C1 + H3 + H4;
+putaran 2: N1).
+
+Dijalankan HANYA di dalam sandbox Docker. Tanpa Docker: gagal
+tertutup (``sandbox-unavailable``).
+
+- Hanya HIGH/CRITICAL yang menggagalkan gate; MEDIUM dicatat
+  (butuh justifikasi) tetapi tidak menggagalkan — sesuai ``gates.yaml``.
+- ``B101`` (assert) dikecualikan untuk file ``test_*.py`` /
+  ``*_test.py``: setiap test memakai ``assert``, jadi B101 di test
+  tidak boleh membuat AMAN mustahil tercapai.
+- Bila binary bandit tidak ada di dalam sandbox: gagal-tertutup
+  (``tool-missing``). Pemindai regex hanya info tambahan (severity
+  INFO) — BUKAN pengganti tool.
+
+N1 — exit code DIPERIKSA (dulu diabaikan; output non-JSON lewat
+``except ValueError: return []`` dianggap "0 temuan" -> AMAN palsu):
+- exit 0 = bersih, exit 1 = ada temuan; selain itu -> ``tool-error``.
+- stdout kosong / bukan JSON -> ``tool-error`` (bandit ``-f json``
+  selalu mengeluarkan JSON, bahkan saat bersih).
+"""
+
+from __future__ import annotations
+
+import json
+
+try:
+    from ._sandbox import run_gate_in_sandbox, tool_error, tool_missing
+    from ._scan import scan_patterns
+    from .runner import GateResult
+except ImportError:  # pragma: no cover
+    from mufakat.gates._sandbox import run_gate_in_sandbox, tool_error, tool_missing  # type: ignore
+    from mufakat.gates._scan import scan_patterns  # type: ignore
+    from mufakat.gates.runner import GateResult  # type: ignore
+
+_PATTERNS = [
+    ("sql-injection", "HIGH", r"execute\s*\(.*\+",
+     "Query SQL dibangun dengan konkatenasi string (rawan SQL injection)."),
+    ("sql-injection", "HIGH", r"execute\s*\(f[\"'].*SELECT",
+     "Query SQL f-string dengan SELECT (rawan SQL injection)."),
+    ("eval-exec", "HIGH", r"\beval\s*\(",
+     "Penggunaan eval() (B307)."),
+    ("eval-exec", "HIGH", r"\bexec\s*\(",
+     "Penggunaan exec() (B102)."),
+    ("command-injection", "HIGH", r"os\.system\s*\(",
+     "Penggunaan os.system() (B605)."),
+    ("command-injection", "MEDIUM", r"subprocess\.[a-z_]+\s*\(.*shell\s*=\s*True",
+     "subprocess dengan shell=True (B602)."),
+    ("deserialization", "HIGH", r"pickle\.loads?\s*\(",
+     "Deserialisasi pickle tidak aman (B301)."),
+    ("deserialization", "MEDIUM", r"yaml\.load\s*\(",
+     "yaml.load tanpa SafeLoader (B506)."),
+    ("weak-crypto", "MEDIUM", r"hashlib\.(md5|sha1)\s*\(",
+     "Hash lemah md5/sha1 (B303/B324)."),
+]
+
+_FAIL_SEVERITIES = ("HIGH", "CRITICAL")
+
+# Exit code bandit: 0 bersih, 1 ada temuan.
+_OK_EXIT_CODES = (0, 1)
+
+
+def _is_test_file(filename: str) -> bool:
+    base = filename.replace("\\", "/").rsplit("/", 1)[-1]
+    return base.startswith("test_") or base.endswith("_test.py")
+
+
+def _regex_info_findings(target_dir) -> list[dict]:
+    """Temuan regex HANYA sebagai info tambahan (severity INFO)."""
+    out = []
+    for finding in scan_patterns(target_dir, _PATTERNS, extensions={".py"}):
+        finding = dict(finding)
+        finding["severity"] = "INFO"
+        finding["message"] = "[regex-info, bukan pengganti bandit] " + finding["message"]
+        out.append(finding)
+    return out
+
+
+def _parse_bandit_json(stdout: str) -> list[dict]:
+    """Parse output JSON bandit; ValueError bila bukan JSON (N1).
+
+    Dulu ``except ValueError: return []`` — output rusak dianggap
+    "0 temuan" dan gate lolos. Sekarang error diteruskan ke pemanggil
+    dan menjadi ``tool-error`` (gagal-tertutup).
+    """
+    data = json.loads(stdout)
+    findings = []
+    for item in data.get("results", []) or []:
+        rule = str(item.get("test_id", "bandit"))
+        filename = str(item.get("filename", ""))
+        # H4: B101 (assert) di file test dikecualikan.
+        if rule == "B101" and _is_test_file(filename):
+            continue
+        severity = str(item.get("issue_severity", "MEDIUM")).upper()
+        if severity == "MEDIUM":
+            message = str(item.get("issue_text", "Temuan bandit."))
+            message += " (MEDIUM — butuh justifikasi, tidak menggagalkan gate.)"
+        else:
+            message = str(item.get("issue_text", "Temuan bandit."))
+        findings.append({
+            "severity": severity, "file": filename,
+            "line": int(item.get("line_number", 0) or 0),
+            "rule": rule, "message": message,
+        })
+    return findings
+
+
+def run(target_dir, sandbox_runner=None) -> GateResult:
+    """Jalankan gate bandit atas ``target_dir`` (di sandbox)."""
+    result = run_gate_in_sandbox(
+        "bandit", target_dir,
+        "command -v bandit >/dev/null 2>&1 || { echo TOOL_MISSING; exit 127; }; "
+        "bandit -r -f json -q .",
+        timeout=300, read_only=True, sandbox_runner=sandbox_runner)
+    if isinstance(result, GateResult):
+        return result
+    output = result.get("stdout") or ""
+    exit_code = result.get("exit_code")
+    if "TOOL_MISSING" in output or exit_code == 127:
+        failed = tool_missing("bandit", "bandit")
+        failed.findings.extend(_regex_info_findings(target_dir))
+        return failed
+    if exit_code not in _OK_EXIT_CODES:
+        return tool_error(
+            "bandit",
+            f"bandit gagal (exit code {exit_code}, bukan 0/1) — hasil "
+            "tidak dapat dipercaya, bukan AMAN.")
+    if not output.strip():
+        return tool_error(
+            "bandit",
+            "bandit tidak mengeluarkan output (stdout kosong) padahal "
+            "seharusnya JSON — hasil tidak dapat dipercaya, bukan AMAN.")
+    try:
+        findings = _parse_bandit_json(output)
+    except ValueError:
+        return tool_error(
+            "bandit", "Output bandit bukan JSON yang valid — hasil tidak "
+                      "dapat dipercaya, bukan AMAN.")
+    passed = not any(f["severity"] in _FAIL_SEVERITIES for f in findings)
+    return GateResult(tool="bandit", passed=passed, findings=findings)
