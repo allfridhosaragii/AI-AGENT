@@ -241,7 +241,7 @@ def _build_adapters() -> dict:
     # Peran lain: pakai adapter nyata pertama bila ada (urutan rantai
     # debat), bila tidak mock deterministik.
     first_real = None
-    for name in ("deepseek", "openrouter_free", "groq", "gemini_api",
+    for name in ("deepseek", "openrouter", "groq", "gemini",
                  "meta_api", "codex", "copilot", "antigravity", "claude",
                  "opencode"):
         if name in real:
@@ -500,7 +500,17 @@ def create_run(
 
 
 def read_run(run_id: str, output: str | None = None) -> dict | None:
-    """Baca satu run dari runs/<run_id>/. None bila tidak ditemukan."""
+    """Baca satu run dari runs/<run_id>/. None bila tidak ditemukan.
+
+    M12: ``run_id`` tidak valid (mis. ``".."``) langsung None — tidak
+    boleh membaca folder di luar ``runs/``.
+    """
+    try:
+        from mufakat.sandbox.worktree import validate_run_id
+
+        validate_run_id(run_id)
+    except (ValueError, ImportError):
+        return None
     run_dir = runs_dir(output) / run_id
     if not run_dir.is_dir():
         return None
