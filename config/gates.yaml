@@ -1,0 +1,19 @@
+# MUFAKAT — konfigurasi gate verifikasi. Run lolos hanya bila semua gate lolos.
+gates:
+  tests:
+    min_coverage: 0.80
+  semgrep:
+    block: ["ERROR"]
+  bandit:
+    block: ["HIGH"]
+  gitleaks:
+    block_any: true
+  trivy:
+    block: ["HIGH", "CRITICAL"]
+    only_fixable: true
+  lint:
+    ruff: true
+    mypy: true
+  review:
+    min_approve_ratio: 0.67
+    block_on: ["blocking"]
