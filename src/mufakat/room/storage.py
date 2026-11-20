@@ -51,7 +51,10 @@ class RoomStore:
     def __init__(self, path: str | Path) -> None:
         self.path = Path(path)
         self.path.parent.mkdir(parents=True, exist_ok=True)
-        self._conn = sqlite3.connect(str(self.path))
+        try:
+            self._conn = sqlite3.connect(str(self.path))
+        except sqlite3.Error as exc:
+            raise ValueError(f"Tidak bisa membuka database Room di {self.path}: {exc}") from exc
         self._conn.executescript(_SCHEMA)
         self._conn.commit()
 
@@ -78,6 +81,11 @@ class RoomStore:
 
     def save_response(self, room_id: str, record: dict) -> int:
         """Simpan satu respons impor; kembalikan id baris."""
+        if not isinstance(record, dict):
+            raise ValueError("record respons harus dict.")
+        for key in ("provider", "round", "raw_text"):
+            if key not in record:
+                raise ValueError(f"record respons kehilangan kunci {key!r}.")
         cursor = self._conn.execute(
             "INSERT INTO responses(room_id, provider, round_no, phase, source,"
             " imported_at, raw_text, parse_status, parsed_json)"
@@ -96,6 +104,8 @@ class RoomStore:
             ),
         )
         self._conn.commit()
+        if cursor.lastrowid is None:
+            raise ValueError("Gagal menyimpan respons: tidak ada id baris.")
         return int(cursor.lastrowid)
 
     def record_usage(self, room_id: str, site: str, day: str) -> None:
@@ -123,7 +133,9 @@ class RoomStore:
             "SELECT prompts_copied FROM usage WHERE room_id=? AND site=? AND day=?",
             (room_id, site, day),
         ).fetchone()
-        return int(row[0]) if row else 0
+        if row is None or row[0] is None:
+            return 0
+        return int(row[0])
 
     def list_responses(self, room_id: str) -> list[dict]:
         rows = self._conn.execute(
@@ -144,7 +156,14 @@ class RoomStore:
         ]
 
     def export_markdown(self, room_id: str) -> str:
-        """Ekspor transkrip room ke Markdown (per ronde, tanpa rahasia)."""
+        """Ekspor transkrip room ke Markdown (per ronde, tanpa rahasia).
+
+        Teks mentah respons bisa mengandung secret yang ditempel pengguna
+        — diekspor dalam bentuk ter-redaksi (dulu verbatim, sehingga
+        secret bocor ke file laporan).
+        """
+        from mufakat.room.secret_scan import redact_matches
+
         room_row = self._conn.execute(
             "SELECT idea, state, round_no FROM rooms WHERE room_id=?", (room_id,)
         ).fetchone()
@@ -162,7 +181,7 @@ class RoomStore:
                 f"## Ronde {round_no} — {provider} ({phase})",
                 f"Sumber: {source} | Diimpor: {imported_at} | Parse: {status}",
                 "",
-                raw,
+                redact_matches(raw),
                 "",
             ]
         return "\n".join(lines)
