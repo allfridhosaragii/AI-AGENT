@@ -1,1 +1,88 @@
-Ly8gTVVGQUtBVCBSb29tIOKAlCBCYWNrZ3JvdW5kIFNlcnZpY2UgV29ya2VyIChvcmtlc3RyYXRvcikuCi8vIFN0YXRlIG1hY2hpbmUgKyBwZW55dXN1biBwcm9tcHQgKyBwYWNpbmcvbGltaXQgKyBwYXJzZXIgamF3YWJhbi4KLy8gVElEQUsgQURBIGF1dG8tc2VuZDogYmFja2dyb3VuZCB0aWRhayBwZXJuYWggbWVuZ2tsaWsgdG9tYm9sIEtpcmltIGF0YXUKLy8gbWVuLWRpc3BhdGNoIGV2ZW50IEVudGVyLiBUSURBSyBBREEgcG9sbGluZyBiYWNrZ3JvdW5kLgovLyBNNTogc3RhdGUgbWFjaGluZSBkaXNpbXBhbiBQRVJTSVNURU4gKGNocm9tZS5zdG9yYWdlLnNlc3Npb24gKyBsb2NhbAovLyB2aWEgc3RvcmFnZS9yb29tU3RhdGUudHMpLCBidWthbiB2YXJpYWJlbCBtb2R1bCDigJQgU1cgTVYzIHRpZHVyIHNldGVsYWgKLy8gwrEzMCBkZXRpayBpZGxlLgovLyBQdXRhcmFuIDIgKEdQVC02KTogaGFuZGxlciBGSUxMX0lOUFVUIGRhbiBSRUFEX0xBU1RfUkVQTFkgRElIQVBVUyBkYXJpCi8vIE1WUCDigJQgY29udGVudCBzY3JpcHQgdGlkYWsgbGFnaSB0ZXJkYWZ0YXIgKG1vZHVsIG9wdC1pbiBGYXNlIDIgZGkKLy8gc3JjL3BoYXNlMi1vcHRpbi8sIHRpZGFrIGFrdGlmKSwgamFkaSBiYWNrZ3JvdW5kIHRpZGFrIHBlcm5haCBtZW1iYWNhCi8vIERPTSBzaXR1cyBBSSBhdGF1IG1lbmdpc2kgaW5wdXQuIEphbHVyIE1WUDogTWFudWFsIEhhbmRvZmYgc2FqYS4KLy8gVGFiZWwgdGFtYmFoYW4gKHB1dGFyYW4gMik6IFJPT01fVFJBTlNJVElPTiBoYW55YSBkaXRlcmltYSBkYXJpIGhhbGFtYW4KLy8gZXh0ZW5zaW9uIChzaWRlIHBhbmVsKSDigJQgcGVzYW4gZGFyaSBjb250ZW50IHNjcmlwdCAoc2VuZGVyLnRhYikgRElUT0xBSwovLyB2aWEgaXNUcnVzdGVkUm9vbVNlbmRlci4KaW1wb3J0IHsgY3JlYXRlRGViYXRlTWFjaGluZSwgdHlwZSBEZWJhdGVNYWNoaW5lIH0gZnJvbSAnLi4vZW5naW5lL3N0YXRlTWFjaGluZSc7CmltcG9ydCB7IHBhcnNlUmVwbHkgfSBmcm9tICcuLi9lbmdpbmUvcGFyc2VyJzsKaW1wb3J0IHsgY2hlY2tQYWNpbmcgfSBmcm9tICcuLi9lbmdpbmUvcGFjaW5nJzsKaW1wb3J0IHsgc2NhblRleHQgfSBmcm9tICcuLi9lbmdpbmUvc2VjcmV0U2Nhbic7CmltcG9ydCB7IGlzVHJ1c3RlZFJvb21TZW5kZXIgfSBmcm9tICcuLi9lbmdpbmUvc2VuZGVyR3VhcmQnOwppbXBvcnQgeyBsb2FkUm9vbVN0YXRlLCBzYXZlUm9vbVN0YXRlIH0gZnJvbSAnLi4vc3RvcmFnZS9yb29tU3RhdGUnOwoKY29uc3QgbWFjaGluZTogRGViYXRlTWFjaGluZSA9IGNyZWF0ZURlYmF0ZU1hY2hpbmUoKTsKbGV0IG1hY2hpbmVSZWFkeTogUHJvbWlzZTx2b2lkPiB8IG51bGwgPSBudWxsOwoKZnVuY3Rpb24gZW5zdXJlTWFjaGluZUxvYWRlZCgpOiBQcm9taXNlPHZvaWQ+IHsKICBpZiAoIW1hY2hpbmVSZWFkeSkgewogICAgbWFjaGluZVJlYWR5ID0gbG9hZFJvb21TdGF0ZSgpCiAgICAgIC50aGVuKChzbmFwc2hvdCkgPT4gewogICAgICAgIGlmIChzbmFwc2hvdCkgbWFjaGluZS5yZXN0b3JlKHNuYXBzaG90KTsKICAgICAgfSkKICAgICAgLmNhdGNoKChlcnJvcikgPT4gY29uc29sZS5lcnJvcignR2FnYWwgbWVtdWF0IHN0YXRlIHJhcGF0OicsIGVycm9yKSk7CiAgfQogIHJldHVybiBtYWNoaW5lUmVhZHk7Cn0KCmFzeW5jIGZ1bmN0aW9uIHBlcnNpc3RNYWNoaW5lKCk6IFByb21pc2U8dm9pZD4gewogIGF3YWl0IHNhdmVSb29tU3RhdGUobWFjaGluZS5nZXRTbmFwc2hvdCgpKTsKfQoKZXhwb3J0IGRlZmF1bHQgZGVmaW5lQmFja2dyb3VuZCgoKSA9PiB7CiAgdm9pZCBlbnN1cmVNYWNoaW5lTG9hZGVkKCk7CgogIGNocm9tZS5ydW50aW1lLm9uTWVzc2FnZS5hZGRMaXN0ZW5lcigobWVzc2FnZSwgc2VuZGVyLCBzZW5kUmVzcG9uc2UpID0+IHsKICAgIGlmIChtZXNzYWdlPy50eXBlID09PSAnUk9PTV9TVEFURScpIHsKICAgICAgdm9pZCBlbnN1cmVNYWNoaW5lTG9hZGVkKCkudGhlbigoKSA9PiB7CiAgICAgICAgc2VuZFJlc3BvbnNlKHsgc3RhdGU6IG1hY2hpbmUuZ2V0U3RhdGUoKSwgcm91bmQ6IG1hY2hpbmUuZ2V0Um91bmQoKSwgZGlzc2VudDogbWFjaGluZS5nZXREaXNzZW50KCkgfSk7CiAgICAgIH0pOwogICAgICByZXR1cm4gdHJ1ZTsKICAgIH0KICAgIGlmIChtZXNzYWdlPy50eXBlID09PSAnUk9PTV9UUkFOU0lUSU9OJykgewogICAgICAvLyBWYWxpZGFzaSBzZW5kZXI6IGhhbnlhIGhhbGFtYW4gZXh0ZW5zaW9uIChzaWRlIHBhbmVsKSB5YW5nIGJvbGVoCiAgICAgIC8vIG1lbmdnZXJha2thbiBzdGF0ZSBtYWNoaW5lOyBjb250ZW50IHNjcmlwdCBkaSBzaXR1cyBBSSBkaXRvbGFrLgogICAgICBpZiAoIWlzVHJ1c3RlZFJvb21TZW5kZXIoc2VuZGVyKSkgewogICAgICAgIHNlbmRSZXNwb25zZSh7CiAgICAgICAgICBvazogZmFsc2UsCiAgICAgICAgICBlcnJvcjogJ1JPT01fVFJBTlNJVElPTiBkaXRvbGFrOiBoYW55YSBoYWxhbWFuIGV4dGVuc2lvbiB5YW5nIGJvbGVoIG1lbmdpcmltIHRyYW5zaXNpIChidWthbiBjb250ZW50IHNjcmlwdCkuJywKICAgICAgICB9KTsKICAgICAgICByZXR1cm4gdHJ1ZTsKICAgICAgfQogICAgICB2b2lkIGVuc3VyZU1hY2hpbmVMb2FkZWQoKQogICAgICAgIC50aGVuKGFzeW5jICgpID0+IHsKICAgICAgICAgIGNvbnN0IG5leHQgPSBtYWNoaW5lLnRyYW5zaXRpb24oU3RyaW5nKG1lc3NhZ2UuZXZlbnQgPz8gJycpLCBtZXNzYWdlLm5vdGUgPyBTdHJpbmcobWVzc2FnZS5ub3RlKSA6IHVuZGVmaW5lZCk7CiAgICAgICAgICBhd2FpdCBwZXJzaXN0TWFjaGluZSgpOwogICAgICAgICAgc2VuZFJlc3BvbnNlKHsgb2s6IHRydWUsIHN0YXRlOiBuZXh0LCByb3VuZDogbWFjaGluZS5nZXRSb3VuZCgpLCBkaXNzZW50OiBtYWNoaW5lLmdldERpc3NlbnQoKSB9KTsKICAgICAgICB9KQogICAgICAgIC5jYXRjaCgoZXJyb3I6IHVua25vd24pID0+IHNlbmRSZXNwb25zZSh7IG9rOiBmYWxzZSwgZXJyb3I6IFN0cmluZyhlcnJvcikgfSkpOwogICAgICByZXR1cm4gdHJ1ZTsKICAgIH0KICAgIGlmIChtZXNzYWdlPy50eXBlID09PSAnU0VDUkVUX1NDQU4nKSB7CiAgICAgIHNlbmRSZXNwb25zZSh7IGZpbmRpbmdzOiBzY2FuVGV4dChTdHJpbmcobWVzc2FnZS50ZXh0ID8/ICcnKSkgfSk7CiAgICAgIHJldHVybiB0cnVlOwogICAgfQogICAgaWYgKG1lc3NhZ2U/LnR5cGUgPT09ICdQQUNJTkdfQ0hFQ0snKSB7CiAgICAgIHZvaWQgY2hlY2tQYWNpbmcoU3RyaW5nKG1lc3NhZ2Uuc2l0ZSA/PyAnJykpLnRoZW4oKGRlY2lzaW9uKSA9PiBzZW5kUmVzcG9uc2UoZGVjaXNpb24pKTsKICAgICAgcmV0dXJuIHRydWU7CiAgICB9CiAgICBpZiAobWVzc2FnZT8udHlwZSA9PT0gJ1BBUlNFX1JFUExZJykgewogICAgICBzZW5kUmVzcG9uc2UocGFyc2VSZXBseShTdHJpbmcobWVzc2FnZS50ZXh0ID8/ICcnKSwgQm9vbGVhbihtZXNzYWdlLnJlcGFpckF0dGVtcHRlZCkpKTsKICAgICAgcmV0dXJuIHRydWU7CiAgICB9CiAgICByZXR1cm4gZmFsc2U7CiAgfSk7CgogIC8vIFNpZGUgcGFuZWwgZGlidWthIGxld2F0IGtsaWsgaWtvbiBla3N0ZW5zaS4KICBjaHJvbWUuc2lkZVBhbmVsCiAgICAuc2V0UGFuZWxCZWhhdmlvcih7IG9wZW5QYW5lbE9uQWN0aW9uQ2xpY2s6IHRydWUgfSkKICAgIC5jYXRjaCgoZXJyb3IpID0+IGNvbnNvbGUuZXJyb3IoJ3NpZGVQYW5lbCBiZWhhdmlvciBnYWdhbDonLCBlcnJvcikpOwp9KTsK
+// MUFAKAT Room — Background Service Worker (orkestrator).
+// State machine + penyusun prompt + pacing/limit + parser jawaban.
+// TIDAK ADA auto-send: background tidak pernah mengklik tombol Kirim atau
+// men-dispatch event Enter. TIDAK ADA polling background.
+// M5: state machine disimpan PERSISTEN (chrome.storage.session + local
+// via storage/roomState.ts), bukan variabel modul — SW MV3 tidur setelah
+// ±30 detik idle.
+// Putaran 2 (GPT-6): handler FILL_INPUT dan READ_LAST_REPLY DIHAPUS dari
+// MVP — content script tidak lagi terdaftar (modul opt-in Fase 2 di
+// src/phase2-optin/, tidak aktif), jadi background tidak pernah membaca
+// DOM situs AI atau mengisi input. Jalur MVP: Manual Handoff saja.
+// Tabel tambahan (putaran 2): ROOM_TRANSITION hanya diterima dari halaman
+// extension (side panel) — pesan dari content script (sender.tab) DITOLAK
+// via isTrustedRoomSender.
+import { createDebateMachine, type DebateMachine } from '../engine/stateMachine';
+import { parseReply } from '../engine/parser';
+import { checkPacing } from '../engine/pacing';
+import { scanText } from '../engine/secretScan';
+import { isTrustedRoomSender } from '../engine/senderGuard';
+import { loadRoomState, saveRoomState } from '../storage/roomState';
+
+const machine: DebateMachine = createDebateMachine();
+let machineReady: Promise<void> | null = null;
+
+function ensureMachineLoaded(): Promise<void> {
+  if (!machineReady) {
+    machineReady = loadRoomState()
+      .then((snapshot) => {
+        if (snapshot) machine.restore(snapshot);
+      })
+      .catch((error) => console.error('Gagal memuat state rapat:', error));
+  }
+  return machineReady;
+}
+
+async function persistMachine(): Promise<void> {
+  await saveRoomState(machine.getSnapshot());
+}
+
+export default defineBackground(() => {
+  void ensureMachineLoaded();
+
+  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message?.type === 'ROOM_STATE') {
+      void ensureMachineLoaded().then(() => {
+        sendResponse({ state: machine.getState(), round: machine.getRound(), dissent: machine.getDissent() });
+      });
+      return true;
+    }
+    if (message?.type === 'ROOM_TRANSITION') {
+      // Validasi sender: hanya halaman extension (side panel) yang boleh
+      // menggerakkan state machine; content script di situs AI ditolak.
+      if (!isTrustedRoomSender(sender)) {
+        sendResponse({
+          ok: false,
+          error: 'ROOM_TRANSITION ditolak: hanya halaman extension yang boleh mengirim transisi (bukan content script).',
+        });
+        return true;
+      }
+      void ensureMachineLoaded()
+        .then(async () => {
+          const next = machine.transition(String(message.event ?? ''), message.note ? String(message.note) : undefined);
+          await persistMachine();
+          sendResponse({ ok: true, state: next, round: machine.getRound(), dissent: machine.getDissent() });
+        })
+        .catch((error: unknown) => sendResponse({ ok: false, error: String(error) }));
+      return true;
+    }
+    if (message?.type === 'SECRET_SCAN') {
+      sendResponse({ findings: scanText(String(message.text ?? '')) });
+      return true;
+    }
+    if (message?.type === 'PACING_CHECK') {
+      void checkPacing(String(message.site ?? '')).then((decision) => sendResponse(decision));
+      return true;
+    }
+    if (message?.type === 'PARSE_REPLY') {
+      sendResponse(parseReply(String(message.text ?? ''), Boolean(message.repairAttempted)));
+      return true;
+    }
+    return false;
+  });
+
+  // Side panel dibuka lewat klik ikon ekstensi.
+  chrome.sidePanel
+    .setPanelBehavior({ openPanelOnActionClick: true })
+    .catch((error) => console.error('sidePanel behavior gagal:', error));
+});
