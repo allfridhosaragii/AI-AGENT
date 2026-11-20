@@ -1,1 +1,115 @@
-IiIiR2F0ZSBzZW1ncmVwIChUMTAsIGRpcGVyYmFpa2kgYXVkaXQgMjAgTm92IDIwMjY6IEMxICsgSDM7CnB1dGFyYW4gMjogTjEpLgoKRGlqYWxhbmthbiBIQU5ZQSBkaSBkYWxhbSBzYW5kYm94IERvY2tlci4gVGFucGEgRG9ja2VyOiBnYWdhbAp0ZXJ0dXR1cCAoYGBzYW5kYm94LXVuYXZhaWxhYmxlYGApLiBCaWxhIGJpbmFyeSBzZW1ncmVwIHRpZGFrIGFkYQpkaSBkYWxhbSBzYW5kYm94OiBnYWdhbC10ZXJ0dXR1cCAoYGB0b29sLW1pc3NpbmdgYCkuIFBlbWluZGFpIHJlZ2V4CmhhbnlhIGluZm8gdGFtYmFoYW4gKHNldmVyaXR5IElORk8pIOKAlCBCVUtBTiBwZW5nZ2FudGkgdG9vbC4KCk4xIOKAlCBleGl0IGNvZGUgRElQRVJJS1NBIChkdWx1IGRpYWJhaWthbjogdG9vbCBjcmFzaCAvIG91dHB1dCBrb3NvbmcKZGlhbmdnYXAgIjAgdGVtdWFuIiAtPiBBTUFOIHBhbHN1KToKLSBleGl0IDAgPSBiZXJzaWgsIGV4aXQgMSA9IGFkYSB0ZW11YW4gKGRlbmdhbiBgYC0tZXJyb3JgYCk7CiAgc2VsYWluIGl0dSAoMiwgMTI0LCAxMjcsIC4uLikgLT4gYGBwYXNzZWQ9RmFsc2VgYCwKICBgYHJ1bGU9InRvb2wtZXJyb3IiYGAuCi0gc3Rkb3V0IGtvc29uZyAvIGJ1a2FuIEpTT04gLT4gYGB0b29sLWVycm9yYGAgKHNlbWdyZXAgYGAtLWpzb25gYAogIHNlbGFsdSBtZW5nZWx1YXJrYW4gSlNPTiwgYmFoa2FuIHNhYXQgYmVyc2loKS4KLSBBdHVyYW4gVElEQUsgZGl1bmR1aCBzYWF0IGphbGFuIChgYC0tY29uZmlnIGF1dG9gYCBidXR1aCBqYXJpbmdhbgogIHBhZGFoYWwgY29udGFpbmVyIGBgLS1uZXR3b3JrIG5vbmVgYCk6IGRpcGFrYWkgYGAtLWNvbmZpZyAvcnVsZXNgYAogIOKAlCBzYWxpbmFuIGBgcC9weXRob25gYCArIGBgcC9zZWNyZXRzYGAgeWFuZyBkaS1waW4gZGkgZGFsYW0gaW1hZ2UKICAobGloYXQgYGBkb2NrZXIvc2FuZGJveC5Eb2NrZXJmaWxlYGApLiBgYC0tbWV0cmljcyBvZmZgYCBzdXBheWEKICB0aWRhayBhZGEgdGVsZW1ldHJpIC8gdHVsaXMga2UgSE9NRS4KIiIiCgpmcm9tIF9fZnV0dXJlX18gaW1wb3J0IGFubm90YXRpb25zCgppbXBvcnQganNvbgoKdHJ5OgogICAgZnJvbSAuX3NhbmRib3ggaW1wb3J0IHJ1bl9nYXRlX2luX3NhbmRib3gsIHRvb2xfZXJyb3IsIHRvb2xfbWlzc2luZwogICAgZnJvbSAuX3NjYW4gaW1wb3J0IHNjYW5fcGF0dGVybnMKICAgIGZyb20gLnJ1bm5lciBpbXBvcnQgR2F0ZVJlc3VsdApleGNlcHQgSW1wb3J0RXJyb3I6ICAjIHByYWdtYTogbm8gY292ZXIKICAgIGZyb20gbXVmYWthdC5nYXRlcy5fc2FuZGJveCBpbXBvcnQgcnVuX2dhdGVfaW5fc2FuZGJveCwgdG9vbF9lcnJvciwgdG9vbF9taXNzaW5nICAjIHR5cGU6IGlnbm9yZQogICAgZnJvbSBtdWZha2F0LmdhdGVzLl9zY2FuIGltcG9ydCBzY2FuX3BhdHRlcm5zICAjIHR5cGU6IGlnbm9yZQogICAgZnJvbSBtdWZha2F0LmdhdGVzLnJ1bm5lciBpbXBvcnQgR2F0ZVJlc3VsdCAgIyB0eXBlOiBpZ25vcmUKCl9QQVRURVJOUyA9IFsKICAgICgic3FsLWluamVjdGlvbiIsICJISUdIIiwgciJleGVjdXRlXHMqXCguKlwrIiwKICAgICAiUXVlcnkgU1FMIGRpYmFuZ3VuIGRlbmdhbiBrb25rYXRlbmFzaSBzdHJpbmcgKHJhd2FuIFNRTCBpbmplY3Rpb24pLiIpLAogICAgKCJzcWwtaW5qZWN0aW9uIiwgIkhJR0giLCByImV4ZWN1dGVccypcKGZbXCInXS4qU0VMRUNUIiwKICAgICAiUXVlcnkgU1FMIGYtc3RyaW5nIGRlbmdhbiBTRUxFQ1QgKHJhd2FuIFNRTCBpbmplY3Rpb24pLiIpLAogICAgKCJzcWwtaW5qZWN0aW9uIiwgIkhJR0giLCByIlNFTEVDVC4qXC5mb3JtYXRccypcKCIsCiAgICAgIlF1ZXJ5IFNRTCBkaWJhbmd1biBkZW5nYW4gLmZvcm1hdCgpIChyYXdhbiBTUUwgaW5qZWN0aW9uKS4iKSwKICAgICgiZXZhbC1leGVjIiwgIkhJR0giLCByIlxiZXZhbFxzKlwoIiwKICAgICAiUGVuZ2d1bmFhbiBldmFsKCkg4oCUIGVrc2VrdXNpIGtvZGUgYXJiaXRyZXIuIiksCiAgICAoImV2YWwtZXhlYyIsICJISUdIIiwgciJcYmV4ZWNccypcKCIsCiAgICAgIlBlbmdndW5hYW4gZXhlYygpIOKAlCBla3Nla3VzaSBrb2RlIGFyYml0cmVyLiIpLAogICAgKCJjb21tYW5kLWluamVjdGlvbiIsICJISUdIIiwgciJvc1wuc3lzdGVtXHMqXCgiLAogICAgICJQZW5nZ3VuYWFuIG9zLnN5c3RlbSgpIOKAlCByYXdhbiBjb21tYW5kIGluamVjdGlvbi4iKSwKICAgICgiY29tbWFuZC1pbmplY3Rpb24iLCAiTUVESVVNIiwgciJvc1wucG9wZW5ccypcKCIsCiAgICAgIlBlbmdndW5hYW4gb3MucG9wZW4oKSDigJQgcmF3YW4gY29tbWFuZCBpbmplY3Rpb24uIiksCiAgICAoImNvbW1hbmQtaW5qZWN0aW9uIiwgIk1FRElVTSIsIHIic3VicHJvY2Vzc1wuW2Etel9dK1xzKlwoLipzaGVsbFxzKj1ccypUcnVlIiwKICAgICAic3VicHJvY2VzcyBkZW5nYW4gc2hlbGw9VHJ1ZSDigJQgcmF3YW4gY29tbWFuZCBpbmplY3Rpb24uIiksCl0KCl9TRVZFUklUWSA9IHsiRVJST1IiOiAiSElHSCIsICJXQVJOSU5HIjogIk1FRElVTSIsICJJTkZPIjogIkxPVyJ9CgojIEV4aXQgY29kZSBzZW1ncmVwIChkZW5nYW4gLS1lcnJvcik6IDAgYmVyc2loLCAxIGFkYSB0ZW11YW4uCl9PS19FWElUX0NPREVTID0gKDAsIDEpCgoKZGVmIF9yZWdleF9pbmZvX2ZpbmRpbmdzKHRhcmdldF9kaXIpIC0+IGxpc3RbZGljdF06CiAgICBvdXQgPSBbXQogICAgZm9yIGZpbmRpbmcgaW4gc2Nhbl9wYXR0ZXJucyh0YXJnZXRfZGlyLCBfUEFUVEVSTlMsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGV4dGVuc2lvbnM9eyIucHkiLCAiLmpzIiwgIi50cyJ9KToKICAgICAgICBmaW5kaW5nID0gZGljdChmaW5kaW5nKQogICAgICAgIGZpbmRpbmdbInNldmVyaXR5Il0gPSAiSU5GTyIKICAgICAgICBmaW5kaW5nWyJtZXNzYWdlIl0gPSAiW3JlZ2V4LWluZm8sIGJ1a2FuIHBlbmdnYW50aSBzZW1ncmVwXSAiICsgZmluZGluZ1sibWVzc2FnZSJdCiAgICAgICAgb3V0LmFwcGVuZChmaW5kaW5nKQogICAgcmV0dXJuIG91dAoKCmRlZiBydW4odGFyZ2V0X2Rpciwgc2FuZGJveF9ydW5uZXI9Tm9uZSkgLT4gR2F0ZVJlc3VsdDoKICAgICIiIkphbGFua2FuIGdhdGUgc2VtZ3JlcCBhdGFzIGBgdGFyZ2V0X2RpcmBgIChkaSBzYW5kYm94KS4iIiIKICAgIHJlc3VsdCA9IHJ1bl9nYXRlX2luX3NhbmRib3goCiAgICAgICAgInNlbWdyZXAiLCB0YXJnZXRfZGlyLAogICAgICAgICJjb21tYW5kIC12IHNlbWdyZXAgPi9kZXYvbnVsbCAyPiYxIHx8IHsgZWNobyBUT09MX01JU1NJTkc7IGV4aXQgMTI3OyB9OyAiCiAgICAgICAgInNlbWdyZXAgLS1qc29uIC0tY29uZmlnIC9ydWxlcyAtLWVycm9yIC0tbWV0cmljcyBvZmYgLS1xdWlldCAuIiwKICAgICAgICB0aW1lb3V0PTMwMCwgcmVhZF9vbmx5PVRydWUsIHNhbmRib3hfcnVubmVyPXNhbmRib3hfcnVubmVyKQogICAgaWYgaXNpbnN0YW5jZShyZXN1bHQsIEdhdGVSZXN1bHQpOgogICAgICAgIHJldHVybiByZXN1bHQKICAgIG91dHB1dCA9IHJlc3VsdC5nZXQoInN0ZG91dCIpIG9yICIiCiAgICBleGl0X2NvZGUgPSByZXN1bHQuZ2V0KCJleGl0X2NvZGUiKQogICAgaWYgIlRPT0xfTUlTU0lORyIgaW4gb3V0cHV0IG9yIGV4aXRfY29kZSA9PSAxMjc6CiAgICAgICAgZmFpbGVkID0gdG9vbF9taXNzaW5nKCJzZW1ncmVwIiwgInNlbWdyZXAiKQogICAgICAgIGZhaWxlZC5maW5kaW5ncy5leHRlbmQoX3JlZ2V4X2luZm9fZmluZGluZ3ModGFyZ2V0X2RpcikpCiAgICAgICAgcmV0dXJuIGZhaWxlZAogICAgaWYgZXhpdF9jb2RlIG5vdCBpbiBfT0tfRVhJVF9DT0RFUzoKICAgICAgICByZXR1cm4gdG9vbF9lcnJvcigKICAgICAgICAgICAgInNlbWdyZXAiLAogICAgICAgICAgICBmInNlbWdyZXAgZ2FnYWwgKGV4aXQgY29kZSB7ZXhpdF9jb2RlfSwgYnVrYW4gMC8xKSDigJQgIgogICAgICAgICAgICAiaGFzaWwgdGlkYWsgZGFwYXQgZGlwZXJjYXlhLCBidWthbiBBTUFOLiIpCiAgICBpZiBub3Qgb3V0cHV0LnN0cmlwKCk6CiAgICAgICAgcmV0dXJuIHRvb2xfZXJyb3IoCiAgICAgICAgICAgICJzZW1ncmVwIiwKICAgICAgICAgICAgInNlbWdyZXAgdGlkYWsgbWVuZ2VsdWFya2FuIG91dHB1dCAoc3Rkb3V0IGtvc29uZykgcGFkYWhhbCAiCiAgICAgICAgICAgICJzZWhhcnVzbnlhIEpTT04g4oCUIGhhc2lsIHRpZGFrIGRhcGF0IGRpcGVyY2F5YSwgYnVrYW4gQU1BTi4iKQogICAgdHJ5OgogICAgICAgIGRhdGEgPSBqc29uLmxvYWRzKG91dHB1dCkKICAgIGV4Y2VwdCBWYWx1ZUVycm9yOgogICAgICAgIHJldHVybiB0b29sX2Vycm9yKAogICAgICAgICAgICAic2VtZ3JlcCIsICJPdXRwdXQgc2VtZ3JlcCBidWthbiBKU09OIHlhbmcgdmFsaWQg4oCUIGhhc2lsICIKICAgICAgICAgICAgICAgICAgICAgICAidGlkYWsgZGFwYXQgZGlwZXJjYXlhLCBidWthbiBBTUFOLiIpCiAgICBmaW5kaW5ncyA9IFtdCiAgICBmb3IgaXRlbSBpbiBkYXRhLmdldCgicmVzdWx0cyIsIFtdKSBvciBbXToKICAgICAgICBleHRyYSA9IGl0ZW0uZ2V0KCJleHRyYSIsIHt9KSBvciB7fQogICAgICAgIHNldmVyaXR5ID0gX1NFVkVSSVRZLmdldChzdHIoZXh0cmEuZ2V0KCJzZXZlcml0eSIsICJXQVJOSU5HIikpLnVwcGVyKCksICJNRURJVU0iKQogICAgICAgIGZpbmRpbmdzLmFwcGVuZCh7CiAgICAgICAgICAgICJzZXZlcml0eSI6IHNldmVyaXR5LAogICAgICAgICAgICAiZmlsZSI6IGl0ZW0uZ2V0KCJwYXRoIiwgIiIpLAogICAgICAgICAgICAibGluZSI6IGludCgoaXRlbS5nZXQoInN0YXJ0Iikgb3Ige30pLmdldCgibGluZSIsIDApIG9yIDApLAogICAgICAgICAgICAicnVsZSI6IHN0cihpdGVtLmdldCgiY2hlY2tfaWQiLCAic2VtZ3JlcCIpKSwKICAgICAgICAgICAgIm1lc3NhZ2UiOiBzdHIoZXh0cmEuZ2V0KCJtZXNzYWdlIiwgIlRlbXVhbiBzZW1ncmVwLiIpKSwKICAgICAgICB9KQogICAgcGFzc2VkID0gbm90IGFueShmWyJzZXZlcml0eSJdIGluICgiSElHSCIsICJDUklUSUNBTCIpIGZvciBmIGluIGZpbmRpbmdzKQogICAgcmV0dXJuIEdhdGVSZXN1bHQodG9vbD0ic2VtZ3JlcCIsIHBhc3NlZD1wYXNzZWQsIGZpbmRpbmdzPWZpbmRpbmdzKQo=
+"""Gate semgrep (T10, diperbaiki audit 20 Nov 2026: C1 + H3;
+putaran 2: N1).
+
+Dijalankan HANYA di dalam sandbox Docker. Tanpa Docker: gagal
+tertutup (``sandbox-unavailable``). Bila binary semgrep tidak ada
+di dalam sandbox: gagal-tertutup (``tool-missing``). Pemindai regex
+hanya info tambahan (severity INFO) — BUKAN pengganti tool.
+
+N1 — exit code DIPERIKSA (dulu diabaikan: tool crash / output kosong
+dianggap "0 temuan" -> AMAN palsu):
+- exit 0 = bersih, exit 1 = ada temuan (dengan ``--error``);
+  selain itu (2, 124, 127, ...) -> ``passed=False``,
+  ``rule="tool-error"``.
+- stdout kosong / bukan JSON -> ``tool-error`` (semgrep ``--json``
+  selalu mengeluarkan JSON, bahkan saat bersih).
+- Aturan TIDAK diunduh saat jalan (``--config auto`` butuh jaringan
+  padahal container ``--network none``): dipakai ``--config /rules``
+  — salinan ``p/python`` + ``p/secrets`` yang di-pin di dalam image
+  (lihat ``docker/sandbox.Dockerfile``). ``--metrics off`` supaya
+  tidak ada telemetri / tulis ke HOME.
+"""
+
+from __future__ import annotations
+
+import json
+
+try:
+    from ._sandbox import run_gate_in_sandbox, tool_error, tool_missing
+    from ._scan import scan_patterns
+    from .runner import GateResult
+except ImportError:  # pragma: no cover
+    from mufakat.gates._sandbox import run_gate_in_sandbox, tool_error, tool_missing  # type: ignore
+    from mufakat.gates._scan import scan_patterns  # type: ignore
+    from mufakat.gates.runner import GateResult  # type: ignore
+
+_PATTERNS = [
+    ("sql-injection", "HIGH", r"execute\s*\(.*\+",
+     "Query SQL dibangun dengan konkatenasi string (rawan SQL injection)."),
+    ("sql-injection", "HIGH", r"execute\s*\(f[\"'].*SELECT",
+     "Query SQL f-string dengan SELECT (rawan SQL injection)."),
+    ("sql-injection", "HIGH", r"SELECT.*\.format\s*\(",
+     "Query SQL dibangun dengan .format() (rawan SQL injection)."),
+    ("eval-exec", "HIGH", r"\beval\s*\(",
+     "Penggunaan eval() — eksekusi kode arbitrer."),
+    ("eval-exec", "HIGH", r"\bexec\s*\(",
+     "Penggunaan exec() — eksekusi kode arbitrer."),
+    ("command-injection", "HIGH", r"os\.system\s*\(",
+     "Penggunaan os.system() — rawan command injection."),
+    ("command-injection", "MEDIUM", r"os\.popen\s*\(",
+     "Penggunaan os.popen() — rawan command injection."),
+    ("command-injection", "MEDIUM", r"subprocess\.[a-z_]+\s*\(.*shell\s*=\s*True",
+     "subprocess dengan shell=True — rawan command injection."),
+]
+
+_SEVERITY = {"ERROR": "HIGH", "WARNING": "MEDIUM", "INFO": "LOW"}
+
+# Exit code semgrep (dengan --error): 0 bersih, 1 ada temuan.
+_OK_EXIT_CODES = (0, 1)
+
+
+def _regex_info_findings(target_dir) -> list[dict]:
+    out = []
+    for finding in scan_patterns(target_dir, _PATTERNS,
+                                 extensions={".py", ".js", ".ts"}):
+        finding = dict(finding)
+        finding["severity"] = "INFO"
+        finding["message"] = "[regex-info, bukan pengganti semgrep] " + finding["message"]
+        out.append(finding)
+    return out
+
+
+def run(target_dir, sandbox_runner=None) -> GateResult:
+    """Jalankan gate semgrep atas ``target_dir`` (di sandbox)."""
+    result = run_gate_in_sandbox(
+        "semgrep", target_dir,
+        "command -v semgrep >/dev/null 2>&1 || { echo TOOL_MISSING; exit 127; }; "
+        "semgrep --json --config /rules --error --metrics off --quiet .",
+        timeout=300, read_only=True, sandbox_runner=sandbox_runner)
+    if isinstance(result, GateResult):
+        return result
+    output = result.get("stdout") or ""
+    exit_code = result.get("exit_code")
+    if "TOOL_MISSING" in output or exit_code == 127:
+        failed = tool_missing("semgrep", "semgrep")
+        failed.findings.extend(_regex_info_findings(target_dir))
+        return failed
+    if exit_code not in _OK_EXIT_CODES:
+        return tool_error(
+            "semgrep",
+            f"semgrep gagal (exit code {exit_code}, bukan 0/1) — "
+            "hasil tidak dapat dipercaya, bukan AMAN.")
+    if not output.strip():
+        return tool_error(
+            "semgrep",
+            "semgrep tidak mengeluarkan output (stdout kosong) padahal "
+            "seharusnya JSON — hasil tidak dapat dipercaya, bukan AMAN.")
+    try:
+        data = json.loads(output)
+    except ValueError:
+        return tool_error(
+            "semgrep", "Output semgrep bukan JSON yang valid — hasil "
+                       "tidak dapat dipercaya, bukan AMAN.")
+    findings = []
+    for item in data.get("results", []) or []:
+        extra = item.get("extra", {}) or {}
+        severity = _SEVERITY.get(str(extra.get("severity", "WARNING")).upper(), "MEDIUM")
+        findings.append({
+            "severity": severity,
+            "file": item.get("path", ""),
+            "line": int((item.get("start") or {}).get("line", 0) or 0),
+            "rule": str(item.get("check_id", "semgrep")),
+            "message": str(extra.get("message", "Temuan semgrep.")),
+        })
+    passed = not any(f["severity"] in ("HIGH", "CRITICAL") for f in findings)
+    return GateResult(tool="semgrep", passed=passed, findings=findings)
