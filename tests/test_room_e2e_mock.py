@@ -8,7 +8,13 @@ def test_mock_demo_end_to_end(tmp_path):
                             output_dir=tmp_path / "room-mock")
     assert summary["state"] == "FINAL_REVIEW"
     assert summary["consensus"]["decision"] == "mufakat"
-    assert summary["gate_verdict"] in ("AMAN", "TIDAK AMAN")
+    # Tanpa Docker gate gagal-tertutup -> BELUM_TERVERIFIKASI (C1/H3).
+    import shutil
+
+    if shutil.which("docker") is None:
+        assert summary["gate_verdict"] == "BELUM_TERVERIFIKASI"
+    else:  # pragma: no cover - Docker ada di host ini
+        assert summary["gate_verdict"] in ("AMAN", "TIDAK AMAN")
     report = (tmp_path / "room-mock" / "final_report.md").read_text(encoding="utf-8")
     assert "manual_handoff" in report
     assert "MOCK" in report
