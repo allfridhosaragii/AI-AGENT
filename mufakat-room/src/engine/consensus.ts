@@ -1,1 +1,164 @@
-Ly8gTVVGQUtBVCBSb29tIOKAlCBLb25zZW5zdXMgKENsYXVkZSDCpzIuMSwgwqdUMykuCi8vIEFub25pbWlzYXNpIGxhYmVsIGFjYWssIEJvcmRhIGNvdW50LCBhdHVyYW4gPj0gMi8zICsgYmxvY2tpbmcsCi8vIHBlbWlsaWhhbiBtb2RlcmF0b3IgKGtlbHVhcmdhIG1pbm9yaXRhcyksIGRldGVrc2kga2VtaXJpcGFuID4gMCw5Ci8vIC0+IGRldmlsJ3MgYWR2b2NhdGUuIFBvcnRpbmcgcG9sYSBkYXJpIG11ZmFrYXQuY29uc2Vuc3VzIChQeXRob24pLgpleHBvcnQgdHlwZSBTZXZlcml0eSA9ICdpbmZvJyB8ICdtaW5vcicgfCAnbWFqb3InIHwgJ2Jsb2NraW5nJzsKZXhwb3J0IHR5cGUgVm90ZURlY2lzaW9uID0gJ2FwcHJvdmUnIHwgJ3JldmlzZScgfCAncmVqZWN0JzsKCmV4cG9ydCBpbnRlcmZhY2UgVm90ZSB7CiAgYWdlbnRJZDogc3RyaW5nOwogIGRlY2lzaW9uOiBWb3RlRGVjaXNpb247CiAgcmFua2luZzogc3RyaW5nW107Cn0KCmV4cG9ydCBpbnRlcmZhY2UgQ3JpdGlxdWUgewogIHNldmVyaXR5OiBTZXZlcml0eTsKICB0ZXh0OiBzdHJpbmc7CiAgLyoqIE03OiBrcml0aWsgYmxvY2tpbmcgeWFuZyBzdWRhaCBkaWphd2FiL2RpYXRhc2kgdGlkYWsgbGFnaQogICAqICBtZW5naGFsYW5naSBtdWZha2F0LiBUYW5wYSBpbmkgbXVmYWthdCBtdXN0YWhpbCBzZXRlbGFoIHNhdHUKICAgKiAga3JpdGlrIGJsb2NraW5nIHBlcm5haCBtdW5jdWwuICovCiAgcmVzb2x2ZWQ/OiBib29sZWFuOwp9CgpleHBvcnQgZnVuY3Rpb24gYm9yZGFDb3VudChyYW5raW5nczogc3RyaW5nW11bXSk6IFJlY29yZDxzdHJpbmcsIG51bWJlcj4gewogIGNvbnN0IHNjb3JlczogUmVjb3JkPHN0cmluZywgbnVtYmVyPiA9IHt9OwogIGZvciAoY29uc3QgcmFua2luZyBvZiByYW5raW5ncykgewogICAgLy8gVDQ6IHNhdHUgcmFua2luZyBtYWxmb3JtZWQgKGJ1a2FuIGFycmF5IC8gYmVyaXNpIG5vbi1zdHJpbmcpIHRpZGFrCiAgICAvLyBib2xlaCBtZXJ1c2FrIHNlbHVydWggcmFwYXQg4oCUIGxld2F0aSByYW5raW5nIGl0dS4KICAgIGlmICghQXJyYXkuaXNBcnJheShyYW5raW5nKSkgY29udGludWU7CiAgICByYW5raW5nLmZvckVhY2goKGNhbmRpZGF0ZSwgcG9zaXRpb24pID0+IHsKICAgICAgaWYgKHR5cGVvZiBjYW5kaWRhdGUgIT09ICdzdHJpbmcnKSByZXR1cm47CiAgICAgIHNjb3Jlc1tjYW5kaWRhdGVdID0gKHNjb3Jlc1tjYW5kaWRhdGVdID8/IDApICsgKHJhbmtpbmcubGVuZ3RoIC0gMSAtIHBvc2l0aW9uKTsKICAgIH0pOwogIH0KICByZXR1cm4gc2NvcmVzOwp9CgovKiogVm90ZSBoYW55YSB2YWxpZCBiaWxhIGByYW5raW5nYC1ueWEgYXJyYXkgc3RyaW5nOyB2b3RlIG1hbGZvcm1lZAogKiAgKG1pcy4gdGFucGEgcmFua2luZywgYXRhdSByYW5raW5nIGJlcnVwYSBzdHJpbmcpIGRpbGV3YXRpLCBidWthbiBjcmFzaC4gKi8KZnVuY3Rpb24gdmFsaWRWb3Rlcyh2b3RlczogVm90ZVtdKTogVm90ZVtdIHsKICByZXR1cm4gKHZvdGVzID8/IFtdKS5maWx0ZXIoCiAgICAodikgPT4gdiAmJiBBcnJheS5pc0FycmF5KHYucmFua2luZykgJiYgdi5yYW5raW5nLmV2ZXJ5KChjKSA9PiB0eXBlb2YgYyA9PT0gJ3N0cmluZycpLAogICk7Cn0KCi8qKiBNdWZha2F0ID0gdXN1bGFuIHBlbWVuYW5nIEJvcmRhIGRpZHVrdW5nID49IDIvMyBwZXNlcnRhIGRlbmdhbiBhcHByb3ZlCiAqICBEQU4gdGlkYWsgYWRhIGtyaXRpayBibG9ja2luZyB5YW5nIEJFTFVNIGRpamF3YWIgKHJlc29sdmVkPXRydWUgdGlkYWsKICogIGRpaGl0dW5nKS4gYXBwcm92ZVJhdGlvIHRlcmlrYXQga2UgcGVtZW5hbmc6IGhhbnlhIHZvdGUgJ2FwcHJvdmUnIHlhbmcKICogIG1lbmFydWggcGVtZW5hbmcgZGkgcGVyaW5na2F0IHBlcnRhbWEgeWFuZyBkaWhpdHVuZyAoTTcpLiAqLwpleHBvcnQgZnVuY3Rpb24gZGVjaWRlQ29uc2Vuc3VzKHZvdGVzOiBWb3RlW10sIGNyaXRpcXVlczogQ3JpdGlxdWVbXSk6IHsKICBkZWNpc2lvbjogJ211ZmFrYXQnIHwgJ2JlbHVtX211ZmFrYXQnIHwgJ3RpZSc7CiAgYXBwcm92ZVJhdGlvOiBudW1iZXI7CiAgYmxvY2tpbmc6IG51bWJlcjsKICBib3JkYTogUmVjb3JkPHN0cmluZywgbnVtYmVyPjsKICB3aW5uZXI6IHN0cmluZyB8IG51bGw7CiAgd2lubmVyQXBwcm92YWxzOiBudW1iZXI7Cn0gewogIC8vIFQ0OiBoaXR1bmcgaGFueWEgZGFyaSB2b3RlIHZhbGlkOyB2b3RlIG1hbGZvcm1lZCBkaWxld2F0aS4KICBjb25zdCBjb3VudGVkID0gdmFsaWRWb3Rlcyh2b3Rlcyk7CiAgY29uc3QgdG90YWwgPSBjb3VudGVkLmxlbmd0aDsKICAvLyBNNzogaGFueWEga3JpdGlrIGJsb2NraW5nIHlhbmcgYmVsdW0gcmVzb2x2ZWQgeWFuZyBtZW5naGFsYW5naS4KICBjb25zdCBibG9ja2luZyA9IChjcml0aXF1ZXMgPz8gW10pLmZpbHRlcigoYykgPT4gYy5zZXZlcml0eSA9PT0gJ2Jsb2NraW5nJyAmJiAhYy5yZXNvbHZlZCkubGVuZ3RoOwogIGNvbnN0IGJvcmRhID0gYm9yZGFDb3VudChjb3VudGVkLm1hcCgodikgPT4gdi5yYW5raW5nKSk7CiAgbGV0IHdpbm5lcjogc3RyaW5nIHwgbnVsbCA9IG51bGw7CiAgbGV0IGRlY2lzaW9uOiAnbXVmYWthdCcgfCAnYmVsdW1fbXVmYWthdCcgfCAndGllJyA9ICdiZWx1bV9tdWZha2F0JzsKICBsZXQgd2lubmVyQXBwcm92YWxzID0gMDsKICBsZXQgYXBwcm92ZVJhdGlvID0gMDsKICBjb25zdCBlbnRyaWVzID0gT2JqZWN0LmVudHJpZXMoYm9yZGEpOwogIGlmIChlbnRyaWVzLmxlbmd0aCkgewogICAgY29uc3QgdG9wID0gTWF0aC5tYXgoLi4uZW50cmllcy5tYXAoKFssIHNjb3JlXSkgPT4gc2NvcmUpKTsKICAgIGNvbnN0IGxlYWRlcnMgPSBlbnRyaWVzLmZpbHRlcigoWywgc2NvcmVdKSA9PiBzY29yZSA9PT0gdG9wKS5tYXAoKFtuYW1lXSkgPT4gbmFtZSk7CiAgICBpZiAobGVhZGVycy5sZW5ndGggPiAxKSB7CiAgICAgIGRlY2lzaW9uID0gJ3RpZSc7CiAgICB9IGVsc2UgewogICAgICB3aW5uZXIgPSBsZWFkZXJzWzBdOwogICAgICAvLyBNNzogYXBwcm92ZVJhdGlvIHRlcmlrYXQga2UgcGVtZW5hbmcg4oCUIGFwcHJvdmUgeWFuZyByYW5raW5nWzBdLW55YQogICAgICAvLyBCVUtBTiBwZW1lbmFuZyB0aWRhayBtZW5haWtrYW4gcmFzaW8gcGVtZW5hbmcuCiAgICAgIHdpbm5lckFwcHJvdmFscyA9IGNvdW50ZWQuZmlsdGVyKCh2KSA9PiB2LmRlY2lzaW9uID09PSAnYXBwcm92ZScgJiYgdi5yYW5raW5nWzBdID09PSB3aW5uZXIpLmxlbmd0aDsKICAgICAgYXBwcm92ZVJhdGlvID0gdG90YWwgPyB3aW5uZXJBcHByb3ZhbHMgLyB0b3RhbCA6IDA7CiAgICAgIGRlY2lzaW9uID0gYXBwcm92ZVJhdGlvID49IDIgLyAzICYmIGJsb2NraW5nID09PSAwID8gJ211ZmFrYXQnIDogJ2JlbHVtX211ZmFrYXQnOwogICAgfQogIH0KICByZXR1cm4geyBkZWNpc2lvbiwgYXBwcm92ZVJhdGlvLCBibG9ja2luZywgYm9yZGEsIHdpbm5lciwgd2lubmVyQXBwcm92YWxzIH07Cn0KCi8qKiBBbm9uaW1pc2FzaTogYWNhayB1cnV0YW4gdXN1bGFuLCBiZXJpIGxhYmVsIEEvQi9DLCBzZW1idW55aWthbiBuYW1hIEFJLgogKiAgTTY6IGJpbGEgc2VlZCBUSURBSyBkaWJlcmlrYW4sIHNlZWQgZGlhbWJpbCBkYXJpIGNyeXB0by5nZXRSYW5kb21WYWx1ZXMKICogIHBlciBwYW5nZ2lsYW4gKHBlciByb25kZSkg4oCUIGxhYmVsIEEvQi9DIHRpZGFrIGxhZ2kgYmlzYSBkaXRlYmFrCiAqICAoc2ViZWx1bW55YSBzZWVkIGRlZmF1bHQgZGV0ZXJtaW5pc3RpayBzZWxhbHUgQT1nZW1pbmksIEI9Y2hhdGdwdCwKICogIEM9Y2xhdWRlKS4gU2VlZCBla3NwbGlzaXQgdGV0YXAgZGlkdWt1bmcgYWdhciBoYXNpbCBiaXNhIGRpcmVwcm9kdWtzaQogKiAgZGkgdGVzdC4gKi8KZXhwb3J0IGZ1bmN0aW9uIGFub255bWl6ZTxUIGV4dGVuZHMgeyBhZ2VudElkOiBzdHJpbmcgfT4ocHJvcG9zYWxzOiBUW10sIHNlZWQ/OiBudW1iZXIpOiB7IGl0ZW1zOiBBcnJheTxPbWl0PFQsICdhZ2VudElkJz4gJiB7IGxhYmVsOiBzdHJpbmcgfT47IG1hcHBpbmc6IFJlY29yZDxzdHJpbmcsIHN0cmluZz4gfSB7CiAgY29uc3Qgc2h1ZmZsZWQgPSBbLi4ucHJvcG9zYWxzXTsKICBsZXQgczogbnVtYmVyOwogIGlmIChzZWVkID09PSB1bmRlZmluZWQpIHsKICAgIC8vIFNlZWQgYWNhayBwZXIgcm9uZGUgZGFyaSBjcnlwdG87IGZhbGxiYWNrIGtlIHdha3R1ICsgTWF0aC5yYW5kb20KICAgIC8vIGJpbGEgY3J5cHRvIHRpZGFrIHRlcnNlZGlhIChidWthbiBkZWZhdWx0IGRldGVybWluaXN0aWspLgogICAgY29uc3QgYnVmID0gbmV3IFVpbnQzMkFycmF5KDEpOwogICAgaWYgKHR5cGVvZiBnbG9iYWxUaGlzLmNyeXB0bz8uZ2V0UmFuZG9tVmFsdWVzID09PSAnZnVuY3Rpb24nKSB7CiAgICAgIGdsb2JhbFRoaXMuY3J5cHRvLmdldFJhbmRvbVZhbHVlcyhidWYpOwogICAgICBzID0gYnVmWzBdIHx8IDE7CiAgICB9IGVsc2UgewogICAgICBzID0gKERhdGUubm93KCkgJSAyICoqIDMxKSArIE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIDIgKiogMzEpIHx8IDE7CiAgICB9CiAgfSBlbHNlIHsKICAgIHMgPSBzZWVkIHx8IDE7CiAgfQogIGNvbnN0IHJhbmQgPSAoKSA9PiAocyA9IChzICogMTEwMzUxNTI0NSArIDEyMzQ1KSAlIDIgKiogMzEpIC8gMiAqKiAzMTsKICBmb3IgKGxldCBpID0gc2h1ZmZsZWQubGVuZ3RoIC0gMTsgaSA+IDA7IGktLSkgewogICAgY29uc3QgaiA9IE1hdGguZmxvb3IocmFuZCgpICogKGkgKyAxKSk7CiAgICBbc2h1ZmZsZWRbaV0sIHNodWZmbGVkW2pdXSA9IFtzaHVmZmxlZFtqXSwgc2h1ZmZsZWRbaV1dOwogIH0KICBjb25zdCBtYXBwaW5nOiBSZWNvcmQ8c3RyaW5nLCBzdHJpbmc+ID0ge307CiAgY29uc3QgaXRlbXMgPSBzaHVmZmxlZC5tYXAoKHByb3Bvc2FsLCBpbmRleCkgPT4gewogICAgY29uc3QgbGFiZWwgPSBTdHJpbmcuZnJvbUNoYXJDb2RlKDY1ICsgaW5kZXgpOwogICAgbWFwcGluZ1tsYWJlbF0gPSBwcm9wb3NhbC5hZ2VudElkOwogICAgY29uc3QgeyBhZ2VudElkOiBfYWdlbnRJZCwgLi4ucmVzdCB9ID0gcHJvcG9zYWw7CiAgICByZXR1cm4geyAuLi5yZXN0LCBsYWJlbCB9OwogIH0pOwogIHJldHVybiB7IGl0ZW1zLCBtYXBwaW5nIH07Cn0KCi8qKiBONSAocHV0YXJhbiAyKTogcGV0YWthbiBsYWJlbCBwZW1lbmFuZyBCb3JkYSAoQS9CL0MpIGtlIHByb3ZpZGVyIGxld2F0CiAqICBsYWJlbE1hcCByb25kZSBpdHUg4oCUIGxhYmVsTWFwIGRpYnVhdCBTRUtBTEkgc2FhdCBtYXN1ayBmYXNlIGtyaXRpayBkYW4KICogIGRpc2ltcGFuIGRpIERleGllIChydW5zLmxhYmVsTWFwW3JvdW5kXSkuIFRhbnBhIGxhYmVsTWFwLCBwZW1lbmFuZwogKiAgVElEQUsgYmlzYSBkaXBldGFrYW4gZGFuIGZ1bmdzaSBtZW5nZW1iYWxpa2FuIG51bGw6IHBlbWFuZ2dpbCBXQUpJQgogKiAgbWVuYW1waWxrYW4gZXJyb3IsIEpBTkdBTiBmYWxsYmFjayBrZSBwcm9wb3NhbCBwZXJ0YW1hIChidWcgbGFtYToKICogIHByb3Bvc2Fscy5maW5kKG0gPT4gbS5wcm92aWRlciA9PT0gd2lubmVyKSB0aWRhayBwZXJuYWggY29jb2sga2FyZW5hCiAqICB3aW5uZXIgYWRhbGFoIGxhYmVsLCBidWthbiBwcm92aWRlcikuICovCmV4cG9ydCBmdW5jdGlvbiByZXNvbHZlV2lubmVyUHJvdmlkZXIoCiAgbGFiZWxNYXA6IFJlY29yZDxzdHJpbmcsIHN0cmluZz4gfCB1bmRlZmluZWQgfCBudWxsLAogIHdpbm5lckxhYmVsOiBzdHJpbmcgfCBudWxsLAopOiBzdHJpbmcgfCBudWxsIHsKICBpZiAoIXdpbm5lckxhYmVsIHx8ICFsYWJlbE1hcCkgcmV0dXJuIG51bGw7CiAgcmV0dXJuIGxhYmVsTWFwW3dpbm5lckxhYmVsXSA/PyBudWxsOwp9CgpleHBvcnQgZnVuY3Rpb24gcmVzb2x2ZVdpbm5lclByb3Bvc2FsPFQgZXh0ZW5kcyB7IHByb3ZpZGVyOiBzdHJpbmcgfT4oCiAgbGFiZWxNYXA6IFJlY29yZDxzdHJpbmcsIHN0cmluZz4gfCB1bmRlZmluZWQgfCBudWxsLAogIHdpbm5lckxhYmVsOiBzdHJpbmcgfCBudWxsLAogIHByb3Bvc2FsczogVFtdLAopOiBUIHwgbnVsbCB7CiAgY29uc3QgcHJvdmlkZXIgPSByZXNvbHZlV2lubmVyUHJvdmlkZXIobGFiZWxNYXAsIHdpbm5lckxhYmVsKTsKICBpZiAoIXByb3ZpZGVyKSByZXR1cm4gbnVsbDsKICByZXR1cm4gcHJvcG9zYWxzLmZpbmQoKHApID0+IHAucHJvdmlkZXIgPT09IHByb3ZpZGVyKSA/PyBudWxsOwp9CgovKiogS2VtaXJpcGFuIHRla3Mgc2VkZXJoYW5hIChKYWNjYXJkIGF0YXMga2F0YSkgdW50dWsgZGV0ZWtzaSBzZXBha2F0IHBhbHN1LiAqLwpleHBvcnQgZnVuY3Rpb24gdGV4dFNpbWlsYXJpdHkoYTogc3RyaW5nLCBiOiBzdHJpbmcpOiBudW1iZXIgewogIGNvbnN0IHdvcmRzQSA9IG5ldyBTZXQoYS50b0xvd2VyQ2FzZSgpLnNwbGl0KC9cVysvKS5maWx0ZXIoQm9vbGVhbikpOwogIGNvbnN0IHdvcmRzQiA9IG5ldyBTZXQoYi50b0xvd2VyQ2FzZSgpLnNwbGl0KC9cVysvKS5maWx0ZXIoQm9vbGVhbikpOwogIGNvbnN0IGludGVyc2VjdGlvbiA9IFsuLi53b3Jkc0FdLmZpbHRlcigodykgPT4gd29yZHNCLmhhcyh3KSkubGVuZ3RoOwogIGNvbnN0IHVuaW9uID0gbmV3IFNldChbLi4ud29yZHNBLCAuLi53b3Jkc0JdKS5zaXplOwogIHJldHVybiB1bmlvbiA9PT0gMCA/IDEgOiBpbnRlcnNlY3Rpb24gLyB1bmlvbjsKfQoKZXhwb3J0IGZ1bmN0aW9uIGRldGVjdEZhbHNlQ29uc2Vuc3VzKHRleHRzOiBzdHJpbmdbXSk6IGJvb2xlYW4gewogIGlmICh0ZXh0cy5sZW5ndGggPCAyKSByZXR1cm4gZmFsc2U7CiAgZm9yIChsZXQgaSA9IDA7IGkgPCB0ZXh0cy5sZW5ndGg7IGkrKykgewogICAgZm9yIChsZXQgaiA9IGkgKyAxOyBqIDwgdGV4dHMubGVuZ3RoOyBqKyspIHsKICAgICAgaWYgKHRleHRTaW1pbGFyaXR5KHRleHRzW2ldLCB0ZXh0c1tqXSkgPD0gMC45KSByZXR1cm4gZmFsc2U7CiAgICB9CiAgfQogIHJldHVybiB0cnVlOwp9Cg==
+// MUFAKAT Room — Konsensus (Claude §2.1, §T3).
+// Anonimisasi label acak, Borda count, aturan >= 2/3 + blocking,
+// pemilihan moderator (keluarga minoritas), deteksi kemiripan > 0,9
+// -> devil's advocate. Porting pola dari mufakat.consensus (Python).
+export type Severity = 'info' | 'minor' | 'major' | 'blocking';
+export type VoteDecision = 'approve' | 'revise' | 'reject';
+
+export interface Vote {
+  agentId: string;
+  decision: VoteDecision;
+  ranking: string[];
+}
+
+export interface Critique {
+  severity: Severity;
+  text: string;
+  /** M7: kritik blocking yang sudah dijawab/diatasi tidak lagi
+   *  menghalangi mufakat. Tanpa ini mufakat mustahil setelah satu
+   *  kritik blocking pernah muncul. */
+  resolved?: boolean;
+}
+
+export function bordaCount(rankings: string[][]): Record<string, number> {
+  const scores: Record<string, number> = {};
+  for (const ranking of rankings) {
+    // T4: satu ranking malformed (bukan array / berisi non-string) tidak
+    // boleh merusak seluruh rapat — lewati ranking itu.
+    if (!Array.isArray(ranking)) continue;
+    ranking.forEach((candidate, position) => {
+      if (typeof candidate !== 'string') return;
+      scores[candidate] = (scores[candidate] ?? 0) + (ranking.length - 1 - position);
+    });
+  }
+  return scores;
+}
+
+/** Vote hanya valid bila `ranking`-nya array string; vote malformed
+ *  (mis. tanpa ranking, atau ranking berupa string) dilewati, bukan crash. */
+function validVotes(votes: Vote[]): Vote[] {
+  return (votes ?? []).filter(
+    (v) => v && Array.isArray(v.ranking) && v.ranking.every((c) => typeof c === 'string'),
+  );
+}
+
+/** Mufakat = usulan pemenang Borda didukung >= 2/3 peserta dengan approve
+ *  DAN tidak ada kritik blocking yang BELUM dijawab (resolved=true tidak
+ *  dihitung). approveRatio terikat ke pemenang: hanya vote 'approve' yang
+ *  menaruh pemenang di peringkat pertama yang dihitung (M7). */
+export function decideConsensus(votes: Vote[], critiques: Critique[]): {
+  decision: 'mufakat' | 'belum_mufakat' | 'tie';
+  approveRatio: number;
+  blocking: number;
+  borda: Record<string, number>;
+  winner: string | null;
+  winnerApprovals: number;
+} {
+  // T4: hitung hanya dari vote valid; vote malformed dilewati.
+  const counted = validVotes(votes);
+  const total = counted.length;
+  // M7: hanya kritik blocking yang belum resolved yang menghalangi.
+  const blocking = (critiques ?? []).filter((c) => c.severity === 'blocking' && !c.resolved).length;
+  const borda = bordaCount(counted.map((v) => v.ranking));
+  let winner: string | null = null;
+  let decision: 'mufakat' | 'belum_mufakat' | 'tie' = 'belum_mufakat';
+  let winnerApprovals = 0;
+  let approveRatio = 0;
+  const entries = Object.entries(borda);
+  if (entries.length) {
+    const top = Math.max(...entries.map(([, score]) => score));
+    const leaders = entries.filter(([, score]) => score === top).map(([name]) => name);
+    if (leaders.length > 1) {
+      decision = 'tie';
+    } else {
+      winner = leaders[0];
+      // M7: approveRatio terikat ke pemenang — approve yang ranking[0]-nya
+      // BUKAN pemenang tidak menaikkan rasio pemenang.
+      winnerApprovals = counted.filter((v) => v.decision === 'approve' && v.ranking[0] === winner).length;
+      approveRatio = total ? winnerApprovals / total : 0;
+      decision = approveRatio >= 2 / 3 && blocking === 0 ? 'mufakat' : 'belum_mufakat';
+    }
+  }
+  return { decision, approveRatio, blocking, borda, winner, winnerApprovals };
+}
+
+/** Anonimisasi: acak urutan usulan, beri label A/B/C, sembunyikan nama AI.
+ *  M6: bila seed TIDAK diberikan, seed diambil dari crypto.getRandomValues
+ *  per panggilan (per ronde) — label A/B/C tidak lagi bisa ditebak
+ *  (sebelumnya seed default deterministik selalu A=gemini, B=chatgpt,
+ *  C=claude). Seed eksplisit tetap didukung agar hasil bisa direproduksi
+ *  di test. */
+export function anonymize<T extends { agentId: string }>(proposals: T[], seed?: number): { items: Array<Omit<T, 'agentId'> & { label: string }>; mapping: Record<string, string> } {
+  const shuffled = [...proposals];
+  let s: number;
+  if (seed === undefined) {
+    // Seed acak per ronde dari crypto; fallback ke waktu + Math.random
+    // bila crypto tidak tersedia (bukan default deterministik).
+    const buf = new Uint32Array(1);
+    if (typeof globalThis.crypto?.getRandomValues === 'function') {
+      globalThis.crypto.getRandomValues(buf);
+      s = buf[0] || 1;
+    } else {
+      s = (Date.now() % 2 ** 31) + Math.floor(Math.random() * 2 ** 31) || 1;
+    }
+  } else {
+    s = seed || 1;
+  }
+  const rand = () => (s = (s * 1103515245 + 12345) % 2 ** 31) / 2 ** 31;
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  const mapping: Record<string, string> = {};
+  const items = shuffled.map((proposal, index) => {
+    const label = String.fromCharCode(65 + index);
+    mapping[label] = proposal.agentId;
+    const { agentId: _agentId, ...rest } = proposal;
+    return { ...rest, label };
+  });
+  return { items, mapping };
+}
+
+/** N5 (putaran 2): petakan label pemenang Borda (A/B/C) ke provider lewat
+ *  labelMap ronde itu — labelMap dibuat SEKALI saat masuk fase kritik dan
+ *  disimpan di Dexie (runs.labelMap[round]). Tanpa labelMap, pemenang
+ *  TIDAK bisa dipetakan dan fungsi mengembalikan null: pemanggil WAJIB
+ *  menampilkan error, JANGAN fallback ke proposal pertama (bug lama:
+ *  proposals.find(m => m.provider === winner) tidak pernah cocok karena
+ *  winner adalah label, bukan provider). */
+export function resolveWinnerProvider(
+  labelMap: Record<string, string> | undefined | null,
+  winnerLabel: string | null,
+): string | null {
+  if (!winnerLabel || !labelMap) return null;
+  return labelMap[winnerLabel] ?? null;
+}
+
+export function resolveWinnerProposal<T extends { provider: string }>(
+  labelMap: Record<string, string> | undefined | null,
+  winnerLabel: string | null,
+  proposals: T[],
+): T | null {
+  const provider = resolveWinnerProvider(labelMap, winnerLabel);
+  if (!provider) return null;
+  return proposals.find((p) => p.provider === provider) ?? null;
+}
+
+/** Kemiripan teks sederhana (Jaccard atas kata) untuk deteksi sepakat palsu. */
+export function textSimilarity(a: string, b: string): number {
+  const wordsA = new Set(a.toLowerCase().split(/\W+/).filter(Boolean));
+  const wordsB = new Set(b.toLowerCase().split(/\W+/).filter(Boolean));
+  const intersection = [...wordsA].filter((w) => wordsB.has(w)).length;
+  const union = new Set([...wordsA, ...wordsB]).size;
+  return union === 0 ? 1 : intersection / union;
+}
+
+export function detectFalseConsensus(texts: string[]): boolean {
+  if (texts.length < 2) return false;
+  for (let i = 0; i < texts.length; i++) {
+    for (let j = i + 1; j < texts.length; j++) {
+      if (textSimilarity(texts[i], texts[j]) <= 0.9) return false;
+    }
+  }
+  return true;
+}
