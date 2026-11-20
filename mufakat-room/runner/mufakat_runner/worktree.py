@@ -12,6 +12,7 @@ path absolut atau mengandung ``..`` DITOLAK dengan ``ValueError``
 
 from __future__ import annotations
 
+import re
 import shutil
 import subprocess
 from pathlib import Path
@@ -25,17 +26,24 @@ __all__ = [
     "cleanup",
 ]
 
+_DRIVE_RE = re.compile(r"^[A-Za-z]:")
+
 
 def validate_rel_path(path: str) -> Path:
     """Validasi path relatif di dalam worktree; tolak traversal/absolut.
 
     Periksa juga separator Windows (``\\``) agar ``..\\..\\win.ini``
-    ditolak meski host-nya Linux.
+    ditolak meski host-nya Linux, drive Windows (``C:\\...`` / ``C:/...``)
+    agar tidak jadi path absolut di host Windows, dan byte NUL.
     """
     raw = str(path or "")
+    if "\x00" in raw:
+        raise ValueError("Path mengandung byte NUL.")
     candidate = Path(raw)
     if candidate.is_absolute() or raw.startswith(("/", "\\")):
         raise ValueError(f"Path absolut ditolak: {raw!r}")
+    if _DRIVE_RE.match(raw):
+        raise ValueError(f"Path absolut Windows ditolak: {raw!r}")
     parts = raw.replace("\\", "/").split("/")
     if ".." in parts:
         raise ValueError(f"Path traversal ditolak: {raw!r}")
@@ -44,8 +52,39 @@ def validate_rel_path(path: str) -> Path:
     return candidate
 
 
+def _resolve_within_root(root: Path, rel: Path) -> Path:
+    """Kembalikan target absolut di bawah ``root``; tolak symlink escape.
+
+    Setiap komponen path yang sudah ada diperiksa: bila ada symlink di
+    tengah jalan (``link -> /etc``) atau target itu sendiri symlink,
+    tulis ditolak — dulu ``write_text`` mengikuti symlink dan menulis
+    ke luar worktree.
+    """
+    root_resolved = root.resolve()
+    current = root_resolved
+    for part in rel.parts:
+        if part in ("", "."):
+            continue
+        current = current / part
+        if current.is_symlink():
+            raise ValueError(f"Path melewati symlink ditolak: {rel!r}")
+    target = root_resolved / rel
+    if target.is_symlink():
+        raise ValueError(f"Path symlink ditolak: {rel!r}")
+    return target
+
+
 def init_workspace(repo_path: str | Path, run_id: str) -> Path:
     """Buat worktree ``runs/<run_id>/wt`` di branch ``mufakat/<run_id>``."""
+    # Validasi run_id sebelum delegasi: run_id traversal (../../x)
+    # dulu lolos ke create_worktree dan membuat folder di luar repo.
+    try:
+        from mufakat.sandbox.worktree import validate_run_id
+
+        validate_run_id(run_id)
+    except ImportError:
+        if not re.match(r"^[A-Za-z0-9][A-Za-z0-9._-]*$", str(run_id)) or ".." in str(run_id):
+            raise ValueError(f"run_id tidak valid: {run_id!r}")
     try:
         from mufakat.sandbox.worktree import create_worktree
 
@@ -62,23 +101,43 @@ def apply_files(worktree: str | Path, files: list[dict]) -> list[str]:
     ``files``: ``[{"path": "src/app.py", "mode": "replace"|"patch",
     "content": "..."}]``. Mode ``patch`` memakai unified diff dan
     diterapkan secara kering dulu (validasi) sebelum ditulis.
+
+    Atomik per panggilan: SEMUA item divalidasi dulu (path, mode,
+    isi, symlink) sebelum file pertama ditulis — dulu item kedua yang
+    traversal tetap menulis item pertama.
     """
+    if not isinstance(files, (list, tuple)):
+        raise ValueError("files harus list of dict.")
     root = Path(worktree)
-    applied: list[str] = []
+    root_resolved = root.resolve()
+    # Fase 1 — validasi semua, tanpa menulis apa pun.
+    plan: list[tuple[Path, str, str]] = []
     for item in files or []:
+        if not isinstance(item, dict):
+            raise ValueError("Setiap item files harus dict.")
         rel = validate_rel_path(str(item.get("path", "")))
-        target = root / rel
-        target.parent.mkdir(parents=True, exist_ok=True)
+        target = _resolve_within_root(root, rel)
         mode = str(item.get("mode", "replace"))
-        content = str(item.get("content", ""))
+        if mode not in ("replace", "patch"):
+            raise ValueError(f"Mode file tidak dikenal: {mode!r}")
+        content = item.get("content", "")
+        if not isinstance(content, str):
+            raise ValueError(f"content harus string untuk {rel!r}.")
+        if mode == "patch":
+            # Validasi patch secara kering sebelum menulis apa pun.
+            original = target.read_text(encoding="utf-8") if target.is_file() else ""
+            _apply_unified_diff(original, content)
+        plan.append((target, mode, content))
+    # Fase 2 — tulis.
+    applied: list[str] = []
+    for target, mode, content in plan:
+        rel = target.relative_to(root_resolved)
+        target.parent.mkdir(parents=True, exist_ok=True)
         if mode == "patch":
             original = target.read_text(encoding="utf-8") if target.is_file() else ""
-            patched = _apply_unified_diff(original, content)
-            target.write_text(patched, encoding="utf-8")
-        elif mode == "replace":
-            target.write_text(content, encoding="utf-8")
+            target.write_text(_apply_unified_diff(original, content), encoding="utf-8")
         else:
-            raise ValueError(f"Mode file tidak dikenal: {mode!r}")
+            target.write_text(content, encoding="utf-8")
         applied.append(str(rel))
     return applied
 
@@ -87,14 +146,19 @@ def _apply_unified_diff(original: str, patch_text: str) -> str:
     """Terapkan unified diff sederhana (hunk @@ -a,b +c,d @@, - / + / spasi).
 
     Patch yang tidak bisa diterapkan bersih DITOLAK (ValueError) — tidak
-    pernah ditulis setengah-setengah.
+    pernah ditulis setengah-setengah. Baris konteks (`` ``) dan baris
+    hapus (``-``) DIVERIFIKASI terhadap isi asli — dulu keduanya
+    diabaikan isinya, sehingga patch dengan konteks/hapus yang salah
+    tetap "berhasil" dan merusak file diam-diam. Jumlah baris tiap hunk
+    juga diperiksa terhadap angka di header ``@@``.
     """
+    if not isinstance(patch_text, str) or not patch_text.strip():
+        raise ValueError("Patch kosong.")
     original_lines = original.splitlines(keepends=True)
     result: list[str] = []
     patch_lines = patch_text.splitlines()
     i = 0
     src_idx = 0
-    import re
 
     hunk_re = re.compile(r"^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@")
     while i < len(patch_lines):
@@ -102,33 +166,75 @@ def _apply_unified_diff(original: str, patch_text: str) -> str:
         match = hunk_re.match(line)
         if match:
             start = int(match.group(1))
+            old_count = int(match.group(2)) if match.group(2) is not None else 1
+            new_count = int(match.group(4)) if match.group(4) is not None else 1
             start_idx = max(start - 1, 0) if start > 0 else 0
             if start_idx < src_idx:
                 raise ValueError("Patch tidak berurutan / tumpang tindih.")
             result.extend(original_lines[src_idx:start_idx])
             src_idx = start_idx
             i += 1
+            old_seen = 0
+            new_seen = 0
             while i < len(patch_lines) and not patch_lines[i].startswith("@@"):
                 hunk_line = patch_lines[i]
                 if hunk_line.startswith("---") or hunk_line.startswith("+++"):
                     i += 1
                     continue
+                if hunk_line.startswith("\\"):
+                    # "\ No newline at end of file" — penanda sah, lewati.
+                    i += 1
+                    continue
                 if hunk_line.startswith(" "):
                     if src_idx >= len(original_lines):
                         raise ValueError("Patch melebihi akhir file.")
+                    expected = hunk_line[1:]
+                    actual = original_lines[src_idx].rstrip("\r\n")
+                    if actual != expected:
+                        raise ValueError(
+                            f"Baris konteks patch tidak cocok: {expected!r} "
+                            f"(file berisi {actual!r})."
+                        )
                     result.append(original_lines[src_idx])
                     src_idx += 1
+                    old_seen += 1
+                    new_seen += 1
                 elif hunk_line.startswith("-"):
                     if src_idx >= len(original_lines):
                         raise ValueError("Patch menghapus baris yang tidak ada.")
+                    expected = hunk_line[1:]
+                    actual = original_lines[src_idx].rstrip("\r\n")
+                    if actual != expected:
+                        raise ValueError(
+                            f"Baris hapus patch tidak cocok: {expected!r} "
+                            f"(file berisi {actual!r})."
+                        )
                     src_idx += 1
+                    old_seen += 1
                 elif hunk_line.startswith("+"):
                     result.append(hunk_line[1:] + "\n")
+                    new_seen += 1
                 elif hunk_line == "":
-                    result.append("\n")
+                    # Baris kosong = baris konteks kosong.
+                    if src_idx >= len(original_lines):
+                        raise ValueError("Patch melebihi akhir file.")
+                    actual = original_lines[src_idx].rstrip("\r\n")
+                    if actual != "":
+                        raise ValueError(
+                            "Baris kosong patch tidak cocok dengan isi file."
+                        )
+                    result.append(original_lines[src_idx])
+                    src_idx += 1
+                    old_seen += 1
+                    new_seen += 1
                 else:
                     raise ValueError(f"Baris patch tidak dikenal: {hunk_line!r}")
                 i += 1
+            if old_seen != old_count or new_seen != new_count:
+                raise ValueError(
+                    f"Jumlah baris hunk tidak cocok: header @@ -{start},{old_count} "
+                    f"+{new_count} tapi isi {old_seen}/{new_seen} baris."
+                )
             continue
         if line.startswith(("---", "+++", "diff ", "index ")):
             i += 1
@@ -176,14 +282,36 @@ def commit(worktree: str | Path, message: str) -> bool:
 
 
 def cleanup(worktree: str | Path, repo_path: str | Path | None = None) -> bool:
-    """Hapus worktree; True bila path sudah tidak ada sesudahnya."""
+    """Hapus worktree; True bila path sudah tidak ada sesudahnya.
+
+    Fail-closed untuk path berbahaya (root/home/repo) — delegasi ke
+    mufakat.sandbox.worktree sudah menjaga, dan fallback lokal di sini
+    juga menolaknya.
+    """
     try:
         from mufakat.sandbox.worktree import remove_worktree
 
         return remove_worktree(worktree, repo_path)
     except ImportError:
         target = Path(worktree)
-        if target.exists():
+        try:
+            resolved = target.resolve()
+        except OSError:
+            return False
+        if resolved == Path("/") or resolved == Path.home():
+            return False
+        if repo_path is not None:
+            try:
+                repo_resolved = Path(repo_path).resolve()
+            except OSError:
+                repo_resolved = None
+            # Sama seperti mufakat.sandbox.worktree: berbahaya bila target
+            # adalah repo atau leluhurnya; target di dalam repo boleh dihapus.
+            if repo_resolved is not None and (
+                resolved == repo_resolved or resolved in repo_resolved.parents
+            ):
+                return False
+        if target.exists() or target.is_symlink():
             try:
                 if target.is_dir() and not target.is_symlink():
                     shutil.rmtree(target)
@@ -191,4 +319,4 @@ def cleanup(worktree: str | Path, repo_path: str | Path | None = None) -> bool:
                     target.unlink()
             except OSError:
                 pass
-        return not target.exists()
+        return not target.exists() and not target.is_symlink()
