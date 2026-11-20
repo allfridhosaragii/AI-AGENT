@@ -1,1 +1,22 @@
-aW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSAnd3h0JzsKCi8vIE1VRkFLQVQgUm9vbSDigJQgbWFuaWZlc3QgTVYzLCBwZXJtaXNzaW9uIE1JTklNQUwgKENsYXVkZSDCpzcpLgovLyBESUxBUkFORyBtZW5hbWJhaDogY29va2llcywgd2ViUmVxdWVzdCwgZGVjbGFyYXRpdmVOZXRSZXF1ZXN0LCBkZWJ1Z2dlciwKLy8gc2NyaXB0aW5nIGluamVrc2kgYmViYXMsIGF0YXUgPGFsbF91cmxzPi4KLy8gUHV0YXJhbiAyIChHUFQtNik6IGhvc3RfcGVybWlzc2lvbnMgNiBkb21haW4gQUkgRElIQVBVUyDigJQgY29udGVudCBzY3JpcHQKLy8gdGlkYWsgbGFnaSB0ZXJkYWZ0YXIgZGkgTVZQIChtb2R1bCBvcHQtaW4gRmFzZSAyIGRpIHNyYy9waGFzZTItb3B0aW4vLAovLyB0aWRhayBha3RpZiksIGphZGkgZXh0ZW5zaW9uIHRpZGFrIGJ1dHVoIGFrc2VzIGhvc3Qga2Ugc2l0dXMgQUkuCmV4cG9ydCBkZWZhdWx0IGRlZmluZUNvbmZpZyh7CiAgLy8gSDI6IGVudHJ5cG9pbnRzIGFkYSBkaSBzcmMvLCBidWthbiByb290IOKAlCB0YW5wYSBpbmkgd3h0IGJ1aWxkCiAgLy8gZ2FnYWwgIk5vIGVudHJ5cG9pbnRzIGZvdW5kIi4KICBzcmNEaXI6ICdzcmMnLAogIG1hbmlmZXN0OiB7CiAgICBuYW1lOiAnTVVGQUtBVCBSb29tJywKICAgIGRlc2NyaXB0aW9uOgogICAgICAnTW9kZXJhdG9yIHJhcGF0IG11bHRpLUFJIHZpYSBsb2dpbiBicm93c2VyLiBTZW1pLW1hbnVhbDogQW5kYSB5YW5nIG1lbmVrYW4gS2lyaW0uJywKICAgIHBlcm1pc3Npb25zOiBbJ3NpZGVQYW5lbCcsICdzdG9yYWdlJywgJ3VubGltaXRlZFN0b3JhZ2UnLCAnY2xpcGJvYXJkV3JpdGUnLCAnbmF0aXZlTWVzc2FnaW5nJ10sCiAgICBzaWRlX3BhbmVsOiB7CiAgICAgIGRlZmF1bHRfcGF0aDogJ3NpZGVwYW5lbC5odG1sJywKICAgIH0sCiAgfSwKfSk7Cg==
+import { defineConfig } from 'wxt';
+
+// MUFAKAT Room — manifest MV3, permission MINIMAL (Claude §7).
+// DILARANG menambah: cookies, webRequest, declarativeNetRequest, debugger,
+// scripting injeksi bebas, atau <all_urls>.
+// Putaran 2 (GPT-6): host_permissions 6 domain AI DIHAPUS — content script
+// tidak lagi terdaftar di MVP (modul opt-in Fase 2 di src/phase2-optin/,
+// tidak aktif), jadi extension tidak butuh akses host ke situs AI.
+export default defineConfig({
+  // H2: entrypoints ada di src/, bukan root — tanpa ini wxt build
+  // gagal "No entrypoints found".
+  srcDir: 'src',
+  manifest: {
+    name: 'MUFAKAT Room',
+    description:
+      'Moderator rapat multi-AI via login browser. Semi-manual: Anda yang menekan Kirim.',
+    permissions: ['sidePanel', 'storage', 'unlimitedStorage', 'clipboardWrite', 'nativeMessaging'],
+    side_panel: {
+      default_path: 'sidepanel.html',
+    },
+  },
+});
