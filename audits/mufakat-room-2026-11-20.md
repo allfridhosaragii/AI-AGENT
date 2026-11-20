@@ -1,5 +1,15 @@
 # AUDIT EKSTREM 2 PUTARAN — MUFAKAT ROOM (artifact slug `mufakat`)
 Tanggal: 2026-11-20 (WIB). Auditor: subagent audit (depth 2/2).
+
+> **Catatan ruang lingkup (ditambah 20 Nov 2026, perbaikan dokumentasi):**
+> semua path file di laporan ini (`client/src/App.tsx`,
+> `server/src/actions.ts`, `server/src/schema.ts`, `client/src/api.ts`,
+> `client/src/reference.ts`, `client/src/main.tsx`, `client/index.html`,
+> `client/src/theme.css`) adalah file **internal website artifact slug
+> `mufakat`** — BUKAN file di repo `~/workspace/mufakat/` dan jangan
+> dicari di sana. `audits/latest/` yang disebut di bawah juga milik
+> builder artifact, bukan direktori repo.
+
 Sumber yang dibaca penuh: `client/src/App.tsx` (919 baris), `client/src/reference.ts` (249),
 `server/src/actions.ts` (2050 baris), `server/src/schema.ts` (228),
 `client/src/api.ts`, `client/src/main.tsx`, `client/index.html`, `client/src/theme.css` (parsial),
