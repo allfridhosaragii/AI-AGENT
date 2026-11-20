@@ -4,12 +4,86 @@ Sistem multi-AI agent: satu ide masuk, beberapa AI berdebat, saling mengkritik
 dan mengoreksi, lalu menghasilkan spesifikasi, kode, audit, dan test — diulang
 sampai aman dan mencapai mufakat.
 
-> **Status (20 Nov 2026):** prototipe. Jalur `mock` sudah jalan end-to-end
-> (CLI → run → worktree + diff + gates nyata → transkrip → spec → laporan,
-> MCP 15 domain, A2A format, dashboard web). **Test: 71 passed, 1 skipped,
-> 0 failed; ruff bersih; mypy bersih** (lihat [SELF_AUDIT.md](SELF_AUDIT.md)).
+> **Status (20 Nov 2026):** prototipe. **Produk utama (MVP) adalah
+> Browser-Only AI Room** — lihat [Produk utama (MVP)](#produk-utama-mvp-browser-only-ai-room)
+> di bawah. Jalur `mock` sudah jalan end-to-end (CLI → run → worktree +
+> diff + gates nyata → transkrip → spec → laporan, MCP 15 domain, A2A
+> format, dashboard web).
+>
+> **Angka test yang jujur (dijalankan 20 Nov 2026, 20:01 WIB, Python
+> 3.12.3, pytest 9.2.0):** setelah perbaikan audit — inti
+> **174 passed, 1 skipped, 0 failed**; Local Runner
+> **41 passed, 0 failed**; `ruff check` bersih; `mypy
+> --check-untyped-defs` bersih (0 error, 94 file); `bandit` 0 High,
+> 0 Medium, 153 Low. Audit eksternal sebelumnya (sebelum perbaikan)
+> mendapat **6 failed, 149 passed, 1 skipped**. Docker TIDAK tersedia
+> di VM ini, jadi gate nyata mengembalikan **BELUM_TERVERIFIKASI**
+> (fail-closed, bukan AMAN) sampai Docker terpasang — lihat
+> [SELF_AUDIT.md](SELF_AUDIT.md).
 > Debat multi-provider asli menunggu API key / login CLI owner di
 > [DECISIONS.md](DECISIONS.md).
+>
+> **Lisensi:** MIT (lihat [LICENSE](LICENSE)) — keputusan sementara
+> yang bisa diubah owner.
+
+## Produk utama (MVP): Browser-Only AI Room
+
+Satu-satunya produk utama MUFAKAT adalah **Browser-Only AI Room**:
+pengguna login di website resmi AI (ChatGPT, Claude, Gemini, DeepSeek,
+Qwen) di browsernya sendiri, menyalin prompt dari Room, mengirim sendiri,
+lalu menempel jawaban kembali (manual handoff). Tidak ada otomasi web
+chat, tidak ada pembacaan cookie/token, tidak ada auto-send.
+
+Komponen MVP:
+
+- **Room Dashboard** — daftar rapat, fase, timeline, dan laporan.
+- **Prompt Manager** — susun prompt per peran/fase (ronde 1, kritik,
+  rapat, voting, spesifikasi).
+- **Room Engine** — state machine rapat (DRAFT → … → APPROVED),
+  anti-loop, dan pacing (jeda 20 dtk/situs, batas harian 40).
+- **Answer Import** — impor jawaban dengan provenance ("user imported",
+  provider, ronde, waktu impor) dan secret scan SEBELUM disimpan.
+- **Consensus Engine** — Borda count + voting 2/3, satu-satunya mesin
+  konsensus Room.
+- **IndexedDB** (Dexie di browser; padanan SQLite/JSONL di layanan
+  Python) — state rapat persisten, tidak hilang saat reload.
+- **Website resmi AI** — tempat satu-satunya interaksi dengan provider.
+
+**Satu-satunya engine AI Room di web adalah engine TypeScript** di
+website Room (artifact `mufakat`). Engine Python di `src/mufakat/room/`
+adalah layanan backend terpisah / referensi yang sinkron dengan engine
+TS — bukan engine kedua yang berjalan sendiri-sendiri. Sumber kebenaran
+tunggal per lapisan: UI/state web = engine TS; logika handoff, pacing,
+secret scan, dan konsensus Python = `src/mufakat/room/` (dipakai CLI,
+MCP, dan demo mock); keduanya harus dijaga sinkron, dan bila berbeda,
+yang berlaku adalah perilaku yang terdokumentasi di
+[BLUEPRINT.md](BLUEPRINT.md) §17–§18.
+
+## Modul Opsional / Legacy — bukan MVP
+
+Jalur di bawah ini **TIDAK dihapus dari repo**, tetapi **bukan MVP**:
+tidak aktif secara default, tidak dipakai Room, dan butuh keputusan
+owner sebelum dipakai atau diaktifkan kembali (lihat
+[DECISIONS.md](DECISIONS.md) A9, A16, B10).
+
+- **Adapter CLI AI** (`src/mufakat/adapters/`) — menjalankan CLI
+  provider (codex, claude, copilot, dsb.); hanya dipakai bila login
+  terverifikasi, dan hanya di jalur legacy.
+- **API key provider** — debat via API resmi; menunggu keputusan dan
+  key owner (B1, B2, B7, B8).
+- **Content scripts / DOM scraping** (`mufakat-room/src/adapters/`,
+  `src/entrypoints/*.content.ts`) — `fillInput`/`readLastReply`;
+  bagian dari extension, bukan MVP.
+- **Assisted Fill** — pengisian otomatis via extension; opt-in Fase 2,
+  TIDAK AKTIF, tidak ada di UI utama MVP.
+- **Native Messaging / Local Runner** (`mufakat-room/runner/`) —
+  eksekusi kode lokal via host native; modul terpisah, bukan jalur Room.
+- **Server MCP 15 domain, LangGraph pipeline CLI, dashboard FastAPI**
+  (`src/mufakat/`) — layanan backend/referensi; tetap ada dan teruji,
+  tetapi bukan produk utama.
+
+Bagian "Contoh pemakaian CLI", "Server MCP", dan "Cara menambah provider
+baru" di bawah mendokumentasikan jalur opsional/legacy ini.
 
 ## Instalasi
 
@@ -30,6 +104,20 @@ Periksa instalasi:
 mufakat --help
 mufakat doctor
 ```
+
+**Lockfile dependensi:** `requirements.lock` (141 paket ter-pin,
+dihasilkan 20 Nov 2026 dari `.venv` via `pip freeze`; `uv` tidak
+tersedia di VM jadi `uv.lock` belum ada) dan pin versi di
+`pyproject.toml`. Lockfile extension (`package-lock.json` /
+`pnpm-lock.yaml`) **belum ada** — `npm install` gagal karena
+`@types/turndown@^4.0.0` tidak ada (versi terbaru 5.0.6); perbaikan
+menjadi `^5.0.5` dan pembuatan lockfile adalah tugas worker ekstensi
+(lihat [SELF_AUDIT.md](SELF_AUDIT.md)).
+
+**CI:** `.github/workflows/ci.yml` (ruff, mypy, pytest inti + runner,
+typecheck + vitest + `wxt build` extension, gitleaks). File ini tidak
+bisa di-push via GitHub API (GitHub App diblokir untuk file workflow)
+— tambahkan manual lewat web GitHub, lihat komentar di kepala file CI.
 
 ## Isi `.env`
 
@@ -55,7 +143,10 @@ MUFAKAT_MAX_COST_USD=1.0
 `mufakat doctor` hanya memeriksa **ada/tidak**-nya key — nilainya tidak pernah
 ditampilkan di layar maupun log.
 
-## Contoh pemakaian CLI
+## Contoh pemakaian CLI (jalur opsional/legacy — bukan MVP)
+
+> Jalur CLI di bawah ini adalah modul opsional/legacy, bukan produk
+> utama. Produk utama adalah Browser-Only AI Room di atas.
 
 ```bash
 # Pipeline penuh (mock bila provider belum terhubung)
@@ -80,12 +171,15 @@ Setiap run menulis ke `runs/<run_id>/`:
 - `worktree/` — kode nyata hasil node code (`main.py`, `test_main.py`)
 - `diff/iter-01.patch` — unified diff worktree
 - `gates/` — `semgrep.json`, `bandit.json`, `gitleaks.json`,
-  `trivy.json`, `pytest.json`, `lint.json`, `verdict.json` (AMAN/TIDAK AMAN)
+  `trivy.json`, `pytest.json`, `lint.json`, `verdict.json`
+  (AMAN / TIDAK AMAN / BELUM_TERVERIFIKASI — tanpa Docker, gate
+  gagal-tertutup menjadi BELUM_TERVERIFIKASI, bukan AMAN)
 
 Contoh hasil nyata (mock, 20 Nov 2026): `mufakat run "Buat REST API todo
-dengan FastAPI + test + audit"` selesai ±12 detik, verdict **AMAN**.
+dengan FastAPI + test + audit"` selesai ±12 detik; tanpa Docker di VM
+ini verdict-nya **BELUM_TERVERIFIKASI** (semua gate butuh sandbox).
 
-## Dashboard web
+## Dashboard web (layanan backend/referensi — bukan produk utama)
 
 ```bash
 uvicorn mufakat.web.app:app --reload
@@ -98,7 +192,12 @@ Endpoint: `GET /`, `/health`, `/api/projects`, `/api/runs`,
 Data dibaca dari folder `runs/` dan SQLite bila ada; bila tidak ada,
 endpoint mengembalikan list kosong + status `ok`.
 
-## Server MCP
+> **Local-only secara default:** tanpa autentikasi, dashboard ini
+> HANYA untuk localhost pribadi — jangan expose ke publik. Bila
+> dipakai publik, set env `MUFAKAT_WEB_TOKEN`; `POST /api/debate`
+> lalu mewajibkan header `X-MUFAKAT-TOKEN`.
+
+## Server MCP (jalur opsional/legacy — bukan MVP)
 
 Satu server FastMCP bernama `mufakat`, transport stdio:
 
@@ -118,23 +217,27 @@ Tool yang tersedia: `debate_start`, `debate_status`, `pipeline_run`,
 `gate_report`, `core_list_agents`, `meeting_create`, `task_create`,
 `project_create`, `git_status`, `filesystem_read`, `terminal_run`,
 `testing_run`, `security_scan`, `research_search`, `evaluation_submit`,
-`approval_request`, `observability_status` — total **55 tool dari
+`approval_request`, `observability_status` — total **54 tool dari
 15 modul domain** di `src/mufakat/mcp_server/domains/` (core,
 communication, meeting, task, memory, project, git, filesystem,
 terminal, testing, security, research, evaluation, approval,
 observability), masing-masing dengan kontrak + permission
 (`read` / `propose` / `write-sandbox` / `execute-approved` /
-`approval-required`). `git_commit` hanya jalan dengan approval yang
-disetujui; tidak pernah push.
+`approval-required`). `git_commit` hanya jalan dengan approval
+manusia yang disetujui lewat `mufakat approve` + token sekali pakai
+yang terikat hash diff; tidak pernah push. Tool
+`approval_record_decision` sudah DIHAPUS dari MCP (audit H1) — AI
+tidak bisa menyetujui commit-nya sendiri.
 
 ## Postgres/Redis (opsional)
 
 ```bash
 pip install -e ".[postgres]"   # psycopg
 pip install -e ".[redis]"      # redis
-docker compose up -d           # Postgres 16 + Redis 7 (lihat docker-compose.yml)
-DATABASE_URL=postgresql://mufakat:mufakat@localhost:5432/mufakat mufakat run "..."
-REDIS_URL=redis://localhost:6379/0 mufakat run "..."
+cp .env.example .env           # isi POSTGRES_PASSWORD & REDIS_PASSWORD (wajib)
+docker compose up -d           # Postgres 16 + Redis 7, hanya 127.0.0.1 (lihat docker-compose.yml)
+DATABASE_URL=postgresql://mufakat:<POSTGRES_PASSWORD>@localhost:5432/mufakat \
+REDIS_URL=redis://:<REDIS_PASSWORD>@localhost:6379/0 mufakat run "..."
 ```
 
 Tanpa `DATABASE_URL`/`REDIS_URL`, MUFAKAT memakai SQLite dan cache
@@ -155,9 +258,11 @@ dengan agent A2A eksternal **belum terverifikasi** dan tidak diklaim.
 - **Jangan membaca kredensial CLI** (file konfigurasi/token CLI provider
   lain). API key hanya dibaca dari environment / `.env` milik pengguna.
 - **Jangan menjalankan perintah berbahaya lewat MCP**: `terminal_run`
-  hanya mengizinkan `echo`, `ls`, dan `pytest` (tanpa shell, tanpa
-  metakarakter). `filesystem_read` menolak file rahasia (`.env`,
-  `*secret*`, `*.pem`, `*.key`, dsb.).
+  hanya mengizinkan `echo` dan `ls` (tanpa shell, tanpa metakarakter);
+  `pytest` HANYA lewat gate sandbox Docker. `filesystem_read` hanya
+  boleh di dalam allowlist folder workspace/repo (`runs/`), menolak
+  symlink, folder kredensial (`~/.ssh`, `~/.codex`, `~/.config`,
+  `~/.claude`, `~/.gemini`, `~/.aws`) dan `*.sqlite`.
 - **Biaya & kuota**: debat memakai ringkasan ronde sebelumnya (maks.
   1.200 karakter per agen), bukan transkrip penuh; ada token bucket per
   provider dan circuit breaker setelah 3 error 429/5xx berturut-turut
@@ -186,7 +291,10 @@ default. Jangan pernah klaim koneksi otomatis bila hanya manual handoff.
 (identitas situs/kebijakan belum terverifikasi). Lihat
 `src/mufakat/room/providers.py`.
 
-**Engine Python** (`src/mufakat/room/`): `handoff.py` (state machine V3
+**Engine Python** (`src/mufakat/room/`): layanan backend terpisah /
+referensi yang sinkron dengan engine TypeScript di web — bukan engine
+kedua yang berjalan sendiri-sendiri (lihat "Produk utama (MVP)" di atas
+dan BLUEPRINT §18). `handoff.py` (state machine V3
 Addendum F: DRAFT → READY_TO_SEND → WAITING_FOR_USER_SUBMISSION →
 WAITING_FOR_IMPORTED_RESPONSE → RESPONSE_IMPORTED → CRITIQUE_READY →
 WAITING_FOR_REBUTTAL_IMPORT → REVISION_READY → FINAL_REVIEW → APPROVED),
@@ -196,7 +304,8 @@ repair), `providers.py`, `prompts.py`, `state_machine.py` (Claude §2),
 `anti_loop.py`, `storage.py` (SQLite + JSONL; padanan Dexie di browser).
 Konsensus Borda reuse `mufakat.consensus.voting` — tidak ada logika ganda.
 
-**Extension scaffold** (`mufakat-room/`, WXT/React/TS): manifest MV3 permission
+**Extension scaffold** (`mufakat-room/`, WXT/React/TS — modul opsional
+Fase 2, BUKAN MVP, tidak aktif default): manifest MV3 permission
 minimal (`sidePanel`, `storage`, `unlimitedStorage`, `clipboardWrite`,
 `nativeMessaging` + 6 host permission saja), 6 content script adapter
 (`fillInput` HANYA isi teks, TIDAK kirim), `selectors.json` versioned
@@ -205,7 +314,8 @@ minimal (`sidePanel`, `storage`, `unlimitedStorage`, `clipboardWrite`,
 Dexie, `runnerClient.ts`. **Belum terverifikasi:** `pnpm` tidak tersedia di
 VM ini, jadi `pnpm install`/`pnpm dev`/vitest belum pernah jalan.
 
-**Local Runner** (`mufakat-room/runner/`, Python stdlib): native messaging
+**Local Runner** (`mufakat-room/runner/`, Python stdlib — modul
+opsional/legacy, BUKAN MVP, tidak dipakai Room): native messaging
 host length-prefixed (`init_workspace`, `apply_files`, `run_gates`, `diff`,
 `commit` — hanya dengan approval token sekali pakai — `cleanup`, `status`),
 `worktree.py` (tolak path traversal), `sandbox.py` (Docker non-root,
@@ -225,13 +335,13 @@ terverifikasi** di VM ini (binary `docker` tidak ada); sandbox mengembalikan
 menekan Kirim, menyalin/menempel jawaban, menyetujui patch & commit. Lihat
 [BLUEPRINT.md](BLUEPRINT.md) §17 dan [DECISIONS.md](DECISIONS.md) A16–A18, B10.
 
-## Cara menambah provider baru
+## Cara menambah provider baru (jalur opsional/legacy — bukan MVP)
 
 1. Buat adapter di `src/mufakat/adapters/` mengikuti `adapters/base.py`
    (contoh: `adapters/cli_codex.py`, `adapters/api_openai_compat.py`).
 2. Daftarkan provider + kapabilitasnya di `src/mufakat/provider_registry.py`.
 3. Tambahkan fallback-nya di `config/providers.yaml` (rantai per peran,
-   mis. debater: `deepseek → openrouter_free → groq → gemini_api`).
+   mis. debater: `deepseek → openrouter → groq → gemini`).
 4. Tambahkan API key-nya ke `.env.example` dan `.env` (jangan commit `.env`).
 5. Tambahkan tes di `tests/` dan jalankan `pytest`.
 6. Bila provider memakai CLI, pastikan `mufakat doctor` mendeteksinya
@@ -245,10 +355,14 @@ ruff check src tests
 mypy src
 ```
 
-Hasil 20 Nov 2026: **71 passed, 1 skipped, 0 failed** (pytest),
-ruff bersih, mypy bersih (81 file). 1 skip = catatan Playwright
-belum terpasang (E2E dashboard memakai TestClient — lihat
-`tests/e2e/`).
+Hasil perbaikan audit Python 20 Nov 2026 (dijalankan 20:01 WIB,
+Python 3.12.3, pytest 9.2.0): **inti 174 passed, 1 skipped,
+0 failed**; **Local Runner 41 passed, 0 failed**; `ruff check`
+bersih; `mypy --check-untyped-defs` bersih (0 error, 94 file);
+`bandit` 0 High, 0 Medium, 153 Low. Docker tidak tersedia di VM
+ini sehingga gate nyata berstatus **BELUM_TERVERIFIKASI**. Lihat
+[SELF_AUDIT.md](SELF_AUDIT.md) untuk rincian dan status perbaikan.
+Angka "71 passed, 0 failed" dari self-audit lama sudah tidak berlaku.
 
 ## Yang masih butuh owner (real testing)
 
