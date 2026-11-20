@@ -1,1 +1,19 @@
-Ly8gTVVGQUtBVCBSb29tIOKAlCBjb250ZW50IHNjcmlwdCBjaGF0Z3B0IChDbGF1ZGUgwqc0KSDigJQgT1BULUlOIEZBU0UgMiwgVElEQUsgQUtUSUYgREkgTVZQLgovLyBBZGFwdGVyIHNpdHVzOiBmaWxsSW5wdXQgSEFOWUEgbWVuZ2lzaSB0ZWtzIChUSURBSyBraXJpbSksIHJlYWRMYXN0UmVwbHkKLy8gaGFueWEgbWVtYmFjYSBET00geWFuZyB0YW1waWwuIFNlbGVjdG9yIGRhcmkgc2VsZWN0b3JzLmpzb24gKHZlcnNpb25lZCkuCi8vIEJpbGEgc2VsZWN0b3IgZ2FnYWwgLT4gZmFsbGJhY2sgY2xpcGJvYXJkICsgbW9kZSBNYW51YWwgQ29weS4KLy8gSmFsdXIgQXNzaXN0ZWQgRmlsbCAob3B0LWluIEZhc2UgMik7IGFsdXIgdXRhbWEgUm9vbSBhZGFsYWggTWFudWFsIEhhbmRvZmYuCi8vIEZpbGUgaW5pIFRJREFLIHRlcmRhZnRhciBzZWJhZ2FpIGVudHJ5cG9pbnQgV1hUIChkaSBsdWFyIHNyYy9lbnRyeXBvaW50cy8pCi8vIHNlaGluZ2dhIFRJREFLIGRpLWJ1aWxkIGtlIG1hbmlmZXN0IE1WUCDigJQgbGloYXQgLi4vUkVBRE1FLm1kLgppbXBvcnQgeyBjcmVhdGVBZGFwdGVyLCByZWdpc3RlckFkYXB0ZXJNZXNzYWdlcywgdHlwZSBTaXRlU2VsZWN0b3JzIH0gZnJvbSAnLi4vLi4vYWRhcHRlcnMvYmFzZSc7CmltcG9ydCBzZWxlY3RvcnNKc29uIGZyb20gJy4uLy4uL2FkYXB0ZXJzL3NlbGVjdG9ycy5qc29uJzsKCmNvbnN0IHNlbGVjdG9ycyA9IChzZWxlY3RvcnNKc29uLnNpdGVzIGFzIFJlY29yZDxzdHJpbmcsIFNpdGVTZWxlY3RvcnM+KVsnY2hhdGdwdCddOwoKZXhwb3J0IGRlZmF1bHQgZGVmaW5lQ29udGVudFNjcmlwdCh7CiAgbWF0Y2hlczogc2VsZWN0b3JzLm1hdGNoZXMsCiAgbWFpbigpIHsKICAgIGNvbnN0IGFkYXB0ZXIgPSBjcmVhdGVBZGFwdGVyKCdjaGF0Z3B0JywgJ29wZW5haScsIHNlbGVjdG9ycyk7CiAgICByZWdpc3RlckFkYXB0ZXJNZXNzYWdlcyhhZGFwdGVyLCBzZWxlY3RvcnMpOwogIH0sCn0pOwo=
+// MUFAKAT Room — content script chatgpt (Claude §4) — OPT-IN FASE 2, TIDAK AKTIF DI MVP.
+// Adapter situs: fillInput HANYA mengisi teks (TIDAK kirim), readLastReply
+// hanya membaca DOM yang tampil. Selector dari selectors.json (versioned).
+// Bila selector gagal -> fallback clipboard + mode Manual Copy.
+// Jalur Assisted Fill (opt-in Fase 2); alur utama Room adalah Manual Handoff.
+// File ini TIDAK terdaftar sebagai entrypoint WXT (di luar src/entrypoints/)
+// sehingga TIDAK di-build ke manifest MVP — lihat ../README.md.
+import { createAdapter, registerAdapterMessages, type SiteSelectors } from '../../adapters/base';
+import selectorsJson from '../../adapters/selectors.json';
+
+const selectors = (selectorsJson.sites as Record<string, SiteSelectors>)['chatgpt'];
+
+export default defineContentScript({
+  matches: selectors.matches,
+  main() {
+    const adapter = createAdapter('chatgpt', 'openai', selectors);
+    registerAdapterMessages(adapter, selectors);
+  },
+});
