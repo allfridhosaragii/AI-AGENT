@@ -1,1 +1,115 @@
-IyBTYW5kYm94IE1VRkFLQVQgKFQ5LCBkaXBlcmJhaWtpIGF1ZGl0IDIwIE5vdiAyMDI2OiBINzsKIyBwdXRhcmFuIDI6IE4xIOKAlCBhdHVyYW4gU2VtZ3JlcCArIERCIFRyaXZ5IGRpIGRhbGFtIGltYWdlLAojIHN1cGF5YSBnYXRlIGphbGFuIG9mZmxpbmUgZGkgY29udGFpbmVyIC0tbmV0d29yayBub25lKS4KIyBQeXRob24gMy4xMiArIHRvb2xpbmcgdmVyaWZpa2FzaSBrb2RlLgojCiMgQXR1cmFuIERvY2tlcmZpbGUgaW5pOgojIC0gU0VNVUEgdG9vbCBkaS1waW4gdmVyc2lueWEgZGFuIGRpdmVyaWZpa2FzaSBjaGVja3N1bSAoU0hBLTI1NikKIyAgIGJpbGEgZGl1bmR1aCBzZWJhZ2FpIGFyc2lwLiBUSURBSyBBREEgYGN1cmwgfCBiYXNoYCBkYXJpIGJyYW5jaAojICAgYG1hc3RlcmAgZGFuIFRJREFLIEFEQSBgfHwgZWNobyBkaWxld2F0aWAg4oCUIGJ1aWxkIEdBR0FMIGJpbGEKIyAgIHNhdHUgdG9vbCB0aWRhayB0ZXJwYXNhbmcsIHN1cGF5YSBnYXRlIHRpZGFrIGphdHVoIGRpYW0tZGlhbSBrZQojICAgZmFsbGJhY2sgcmVnZXguCiMgLSB0cml2eSB2MC43Ni4yIChyaWxpcyA1IE5vdiAyMDI2OyB2MC41MC4wIGxhbWEgc3VkYWggc2FuZ2F0IHR1YSkuCiMgLSBnaXRsZWFrcyB2OC4zMC4xLgojIC0gTm9kZS5qcyB2MjAuMjAuMiAodGFyYmFsbCByZXNtaSArIGNoZWNrc3VtLCB0YW5wYSBub2Rlc291cmNlKS4KIyAtIFVzZXIgYG11ZmFrYXRgIHVpZCAxMDAwMSDigJQgSEFSVVMgY29jb2sgZGVuZ2FuCiMgICBgLS11c2VyIDEwMDAxOjEwMDAxYCBkaSBgc3JjL211ZmFrYXQvc2FuZGJveC9kb2NrZXIucHlgLgojIFZlcnNpIGRpLXBpbiBwZXIgMjAgTm92IDIwMjYgKGRpY2VrIHZpYSBQeVBJIC8gbm9kZWpzLm9yZyAvCiMgR2l0SHViIHJlbGVhc2VzICsgY2hlY2tzdW1zIHJlc21pKS4KRlJPTSBweXRob246My4xMi1zbGltCgpFTlYgREVCSUFOX0ZST05URU5EPW5vbmludGVyYWN0aXZlIFwKICAgIFBJUF9OT19DQUNIRV9ESVI9MSBcCiAgICBQWVRIT05ET05UV1JJVEVCWVRFQ09ERT0xIFwKICAgIFRSSVZZX0NBQ0hFX0RJUj0vdmFyL2xpYi90cml2eQoKUlVOIGFwdC1nZXQgdXBkYXRlICYmIGFwdC1nZXQgaW5zdGFsbCAteSAtLW5vLWluc3RhbGwtcmVjb21tZW5kcyBcCiAgICAgICAgZ2l0IGN1cmwgY2EtY2VydGlmaWNhdGVzIHh6LXV0aWxzIFwKICAgICYmIGFwdC1nZXQgY2xlYW4gJiYgcm0gLXJmIC92YXIvbGliL2FwdC9saXN0cy8qCgojIE5vZGUuanMgdjIwLjIwLjIg4oCUIHRhcmJhbGwgcmVzbWkgbm9kZWpzLm9yZywgdmVyaWZpa2FzaSBTSEEtMjU2LgpBUkcgTk9ERV9WRVJTSU9OPTIwLjIwLjIKQVJHIE5PREVfU0hBMjU2PWRmNzcwYjJhNmYxMzBlZDg2MjdjOTc4MmM5ODhmZGE5NjY5ZmEyMzg5ODMyOWE2MWE4NzFlMzJmOTY1ZTAwN2QKUlVOIGN1cmwgLWZzU0wgLW8gL3RtcC9ub2RlLnRhci54eiBcCiAgICAgICAgImh0dHBzOi8vbm9kZWpzLm9yZy9kaXN0L3Yke05PREVfVkVSU0lPTn0vbm9kZS12JHtOT0RFX1ZFUlNJT059LWxpbnV4LXg2NC50YXIueHoiIFwKICAgICYmIGVjaG8gIiR7Tk9ERV9TSEEyNTZ9ICAvdG1wL25vZGUudGFyLnh6IiB8IHNoYTI1NnN1bSAtYyAtIFwKICAgICYmIHRhciAteEpmIC90bXAvbm9kZS50YXIueHogLUMgL3Vzci9sb2NhbCAtLXN0cmlwLWNvbXBvbmVudHM9MSBcCiAgICAmJiBybSAvdG1wL25vZGUudGFyLnh6IFwKICAgICYmIG5vZGUgLS12ZXJzaW9uICYmIG5wbSAtLXZlcnNpb24KCiMgVG9vbGluZyB2ZXJpZmlrYXNpIFB5dGhvbiDigJQgdmVyc2kgZGktcGluIChwaXAgZ2FnYWwgYmlsYSB2ZXJzaSB0YWsgYWRhKS4KUlVOIHBpcCBpbnN0YWxsIC0tbm8tY2FjaGUtZGlyIFwKICAgICAgICBzZW1ncmVwPT0xLjE4Ni4wIFwKICAgICAgICBiYW5kaXQ9PTEuOS40IFwKICAgICAgICBydWZmPT0wLjE3LjYgXAogICAgICAgIHB5dGVzdD09OS4yLjAgXAogICAgICAgIHB5dGVzdC1jb3Y9PTcuMS4wIFwKICAgICYmIHNlbWdyZXAgLS12ZXJzaW9uICYmIGJhbmRpdCAtLXZlcnNpb24gJiYgcnVmZiAtLXZlcnNpb24gJiYgcHl0ZXN0IC0tdmVyc2lvbgoKIyBBdHVyYW4gU2VtZ3JlcCBESSBEQUxBTSBpbWFnZSAoTjEsIHB1dGFyYW4gMikg4oCUIEpBTkdBTiBwYWthaQojIGAtLWNvbmZpZyBhdXRvYCBkaSBnYXRlOiBjb250YWluZXIgamFsYW4gYC0tbmV0d29yayBub25lYCwgamFkaQojIHVuZHVoYW4gYXR1cmFuIGRhcmkgcmVnaXN0cnkgU2VtZ3JlcCBwYXN0aSBnYWdhbCBkYW4gZ2F0ZSBsb2xvcwojIGtvc29uZy4gU2FsaW5hbiBgcC9weXRob25gICsgYHAvc2VjcmV0c2AgZGFyaSByZXBvIHNlbWdyZXAtcnVsZXMsCiMgZGktcGluIGtlIGNvbW1pdCBhNWFkMTcxNGYwMGM5ZjdmZGU5ODBjYWIwZWExZDZkYzZkNDE0ZmQyCiMgKDIwMjYtMTEtMTApIGRhbiBkaXZlcmlmaWthc2kgU0hBLTI1NiB0YXJiYWxsLW55YS4gR2F0ZSBtZW1ha2FpCiMgYHNlbWdyZXAgLS1jb25maWcgL3J1bGVzYC4gQnVpbGQgR0FHQUwgYmlsYSB0YXJiYWxsL2NoZWNrc3VtLwojIGp1bWxhaCBhdHVyYW4gdGlkYWsgY29jb2sgYXRhdSBhdHVyYW4gdGlkYWsgYmlzYSBkaW11YXQgKHNtb2tlCiMgdGVzdCBhdGFzIGRpcmVrdG9yaSBrb3Nvbmcg4oCUIG1lbWJ1a3Rpa2FuIGF0dXJhbiB0ZXJtdWF0IG9mZmxpbmUpLgpBUkcgU0VNR1JFUF9SVUxFU19SRUY9YTVhZDE3MTRmMDBjOWY3ZmRlOTgwY2FiMGVhMWQ2ZGM2ZDQxNGZkMgpBUkcgU0VNR1JFUF9SVUxFU19TSEEyNTY9ZTVhN2VjMzMwMzVmYzc3MDdiODczODVjYjk5ZTEyMjhjNzZiMTYwNGVmZTU0MzllOTI4OTFmMzAwNTcxNGNjMwpSVU4gY3VybCAtZnNTTCAtbyAvdG1wL3NlbWdyZXAtcnVsZXMudGFyLmd6IFwKICAgICAgICAiaHR0cHM6Ly9jb2RlbG9hZC5naXRodWIuY29tL3NlbWdyZXAvc2VtZ3JlcC1ydWxlcy90YXIuZ3ovJHtTRU1HUkVQX1JVTEVTX1JFRn0iIFwKICAgICYmIGVjaG8gIiR7U0VNR1JFUF9SVUxFU19TSEEyNTZ9ICAvdG1wL3NlbWdyZXAtcnVsZXMudGFyLmd6IiB8IHNoYTI1NnN1bSAtYyAtIFwKICAgICYmIG1rZGlyIC1wIC90bXAvc2VtZ3JlcC1ydWxlcyAvcnVsZXMgXAogICAgJiYgdGFyIC14emYgL3RtcC9zZW1ncmVwLXJ1bGVzLnRhci5neiAtQyAvdG1wL3NlbWdyZXAtcnVsZXMgLS1zdHJpcC1jb21wb25lbnRzPTEgXAogICAgJiYgY3AgLXIgL3RtcC9zZW1ncmVwLXJ1bGVzL3B5dGhvbiAvcnVsZXMvcHl0aG9uIFwKICAgICYmIGNwIC1yIC90bXAvc2VtZ3JlcC1ydWxlcy9nZW5lcmljL3NlY3JldHMgL3J1bGVzL3NlY3JldHMgXAogICAgJiYgZmluZCAvcnVsZXMgLXR5cGUgZiAhIC1uYW1lICcqLnlhbWwnICEgLW5hbWUgJyoueW1sJyAtZGVsZXRlIFwKICAgICYmIHJtIC1yZiAvdG1wL3NlbWdyZXAtcnVsZXMgL3RtcC9zZW1ncmVwLXJ1bGVzLnRhci5neiBcCiAgICAmJiB0ZXN0ICIkKGZpbmQgL3J1bGVzIC1uYW1lICcqLnlhbWwnIC1vIC1uYW1lICcqLnltbCcgfCB3YyAtbCkiIC1nZSA1MDAgXAogICAgJiYgbWtkaXIgLXAgL3RtcC9lbXB0eS1ydWxlcy1jaGVjayBcCiAgICAmJiBzZW1ncmVwIC0tanNvbiAtLWNvbmZpZyAvcnVsZXMgLS1tZXRyaWNzIG9mZiAtLXF1aWV0IC90bXAvZW1wdHktcnVsZXMtY2hlY2sgXAogICAgJiYgcm0gLXJmIC90bXAvZW1wdHktcnVsZXMtY2hlY2sKCiMgdHJpdnkgdjAuNzYuMiDigJQgdGFyYmFsbCByaWxpcyBHaXRIdWIgcmVzbWksIHZlcmlmaWthc2kgU0hBLTI1Ni4KIyBCdWlsZCBHQUdBTCBiaWxhIGNoZWNrc3VtIHRpZGFrIGNvY29rIC8gYmluYXJ5IHRpZGFrIGphbGFuLgpBUkcgVFJJVllfVkVSU0lPTj0wLjc2LjIKQVJHIFRSSVZZX1NIQTI1Nj1iYzBmYzcyNmUwMTdiODkyN2E2MmIyZDM1MzFkN2E4NGVlMDE3NjlkYWY1Yzk5ZWQ4NjZkY2VkNTQwODlmZGJmClJVTiBjdXJsIC1mc1NMIC1vIC90bXAvdHJpdnkudGFyLmd6IFwKICAgICAgICAiaHR0cHM6Ly9naXRodWIuY29tL2FxdWFzZWN1cml0eS90cml2eS9yZWxlYXNlcy9kb3dubG9hZC92JHtUUklWWV9WRVJTSU9OfS90cml2eV8ke1RSSVZZX1ZFUlNJT059X0xpbnV4LTY0Yml0LnRhci5neiIgXAogICAgJiYgZWNobyAiJHtUUklWWV9TSEEyNTZ9ICAvdG1wL3RyaXZ5LnRhci5neiIgfCBzaGEyNTZzdW0gLWMgLSBcCiAgICAmJiB0YXIgLXh6ZiAvdG1wL3RyaXZ5LnRhci5neiAtQyAvdXNyL2xvY2FsL2JpbiB0cml2eSBcCiAgICAmJiBybSAvdG1wL3RyaXZ5LnRhci5neiBcCiAgICAmJiB0cml2eSAtLXZlcnNpb24KCiMgRGF0YWJhc2UgQ1ZFIFRyaXZ5IERJIERBTEFNIGltYWdlIChOMSwgcHV0YXJhbiAyKSDigJQgSkFOR0FOIHVuZHVoCiMgc2FhdCBqYWxhbjogY29udGFpbmVyIGAtLW5ldHdvcmsgbm9uZWAsIGphZGkgYHRyaXZ5IGZzYCB0YW5wYSBEQgojIHBhc3RpIGdhZ2FsIGRhbiBnYXRlIGxvbG9zIGtvc29uZy4gR2F0ZSBtZW1ha2FpCiMgYHRyaXZ5IGZzIC0tc2tpcC1kYi11cGRhdGUgLS1vZmZsaW5lLXNjYW5gLiBEQiBkaXVuZHVoIHNhYXQgYnVpbGQKIyAoZGkgc2luaWxhaCBqYXJpbmdhbiB0ZXJzZWRpYSkga2UgJFRSSVZZX0NBQ0hFX0RJUiBkYW4gZGlidWF0CiMgYmlzYSBkaWJhY2EvZGl0dWxpcyB1c2VyIGBtdWZha2F0YCAodHJpdnkgYnV0dWggbG9jayBmaWxlIGRpIGNhY2hlCiMgc2FhdCBzY2FuOyBjb250YWluZXIgYmVyc2lmYXQgc2VrYWxpIHBha2FpKS4gQnVpbGQgR0FHQUwgYmlsYSBEQgojIHRpZGFrIHRlcnVuZHVoLiBDQVRBVEFOOiBEQiBtZW1iZWt1IHBhZGEgdGFuZ2dhbCBidWlsZCDigJQgcmVidWlsZAojIGltYWdlIHNlY2FyYSBiZXJrYWxhIHVudHVrIENWRSB0ZXJiYXJ1LgpSVU4gbWtkaXIgLXAgL3Zhci9saWIvdHJpdnkgXAogICAgJiYgdHJpdnkgaW1hZ2UgLS1kb3dubG9hZC1kYi1vbmx5IFwKICAgICYmIHRlc3QgLW4gIiQoZmluZCAvdmFyL2xpYi90cml2eSAtbmFtZSAndHJpdnkuZGInIHwgaGVhZCAtbiAxKSIgXAogICAgJiYgY2htb2QgLVIgYStyd1ggL3Zhci9saWIvdHJpdnkKCiMgZ2l0bGVha3MgdjguMzAuMSDigJQgdGFyYmFsbCByaWxpcyBHaXRIdWIgcmVzbWksIHZlcmlmaWthc2kgU0hBLTI1Ni4KQVJHIEdJVExFQUtTX1ZFUlNJT049OC4zMC4xCkFSRyBHSVRMRUFLU19TSEEyNTY9NTUxZjZmYzgzZWE0NTdkNjJhMGQ5ODIzN2NiYWQxMDVhZjhkNTU3MDAzMDUxZjQxZjNlN2NhN2IzZjI0NzBlYgpSVU4gY3VybCAtZnNTTCAtbyAvdG1wL2dpdGxlYWtzLnRhci5neiBcCiAgICAgICAgImh0dHBzOi8vZ2l0aHViLmNvbS9naXRsZWFrcy9naXRsZWFrcy9yZWxlYXNlcy9kb3dubG9hZC92JHtHSVRMRUFLU19WRVJTSU9OfS9naXRsZWFrc18ke0dJVExFQUtTX1ZFUlNJT059X2xpbnV4X3g2NC50YXIuZ3oiIFwKICAgICYmIGVjaG8gIiR7R0lUTEVBS1NfU0hBMjU2fSAgL3RtcC9naXRsZWFrcy50YXIuZ3oiIHwgc2hhMjU2c3VtIC1jIC0gXAogICAgJiYgdGFyIC14emYgL3RtcC9naXRsZWFrcy50YXIuZ3ogLUMgL3Vzci9sb2NhbC9iaW4gZ2l0bGVha3MgXAogICAgJiYgcm0gL3RtcC9naXRsZWFrcy50YXIuZ3ogXAogICAgJiYgZ2l0bGVha3MgdmVyc2lvbgoKUlVOIHVzZXJhZGQgLW0gLXUgMTAwMDEgLXMgL2Jpbi9zaCBtdWZha2F0IFwKICAgICYmIG1rZGlyIC1wIC93b3JrIC9ydWxlcyBcCiAgICAmJiBjaG93biBtdWZha2F0Om11ZmFrYXQgL3dvcmsgXAogICAgJiYgY2htb2QgLVIgYStyWCAvcnVsZXMKClVTRVIgbXVmYWthdApXT1JLRElSIC93b3JrCg==
+# Sandbox MUFAKAT (T9, diperbaiki audit 20 Nov 2026: H7;
+# putaran 2: N1 — aturan Semgrep + DB Trivy di dalam image,
+# supaya gate jalan offline di container --network none).
+# Python 3.12 + tooling verifikasi kode.
+#
+# Aturan Dockerfile ini:
+# - SEMUA tool di-pin versinya dan diverifikasi checksum (SHA-256)
+#   bila diunduh sebagai arsip. TIDAK ADA `curl | bash` dari branch
+#   `master` dan TIDAK ADA `|| echo dilewati` — build GAGAL bila
+#   satu tool tidak terpasang, supaya gate tidak jatuh diam-diam ke
+#   fallback regex.
+# - trivy v0.76.2 (rilis 5 Nov 2026; v0.50.0 lama sudah sangat tua).
+# - gitleaks v8.30.1.
+# - Node.js v20.20.2 (tarball resmi + checksum, tanpa nodesource).
+# - User `mufakat` uid 10001 — HARUS cocok dengan
+#   `--user 10001:10001` di `src/mufakat/sandbox/docker.py`.
+# Versi di-pin per 20 Nov 2026 (dicek via PyPI / nodejs.org /
+# GitHub releases + checksums resmi).
+FROM python:3.12-slim
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PIP_NO_CACHE_DIR=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    TRIVY_CACHE_DIR=/var/lib/trivy
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        git curl ca-certificates xz-utils \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Node.js v20.20.2 — tarball resmi nodejs.org, verifikasi SHA-256.
+ARG NODE_VERSION=20.20.2
+ARG NODE_SHA256=df770b2a6f130ed8627c9782c988fda9669fa23898329a61a871e32f965e007d
+RUN curl -fsSL -o /tmp/node.tar.xz \
+        "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.xz" \
+    && echo "${NODE_SHA256}  /tmp/node.tar.xz" | sha256sum -c - \
+    && tar -xJf /tmp/node.tar.xz -C /usr/local --strip-components=1 \
+    && rm /tmp/node.tar.xz \
+    && node --version && npm --version
+
+# Tooling verifikasi Python — versi di-pin (pip gagal bila versi tak ada).
+RUN pip install --no-cache-dir \
+        semgrep==1.186.0 \
+        bandit==1.9.4 \
+        ruff==0.17.6 \
+        pytest==9.2.0 \
+        pytest-cov==7.1.0 \
+    && semgrep --version && bandit --version && ruff --version && pytest --version
+
+# Aturan Semgrep DI DALAM image (N1, putaran 2) — JANGAN pakai
+# `--config auto` di gate: container jalan `--network none`, jadi
+# unduhan aturan dari registry Semgrep pasti gagal dan gate lolos
+# kosong. Salinan `p/python` + `p/secrets` dari repo semgrep-rules,
+# di-pin ke commit a5ad1714f00c9f7fde980cab0ea1d6dc6d414fd2
+# (2026-11-10) dan diverifikasi SHA-256 tarball-nya. Gate memakai
+# `semgrep --config /rules`. Build GAGAL bila tarball/checksum/
+# jumlah aturan tidak cocok atau aturan tidak bisa dimuat (smoke
+# test atas direktori kosong — membuktikan aturan termuat offline).
+ARG SEMGREP_RULES_REF=a5ad1714f00c9f7fde980cab0ea1d6dc6d414fd2
+ARG SEMGREP_RULES_SHA256=e5a7ec33035fc7707b87385cb99e1228c76b1604efe5439e92891f3005714cc3
+RUN curl -fsSL -o /tmp/semgrep-rules.tar.gz \
+        "https://codeload.github.com/semgrep/semgrep-rules/tar.gz/${SEMGREP_RULES_REF}" \
+    && echo "${SEMGREP_RULES_SHA256}  /tmp/semgrep-rules.tar.gz" | sha256sum -c - \
+    && mkdir -p /tmp/semgrep-rules /rules \
+    && tar -xzf /tmp/semgrep-rules.tar.gz -C /tmp/semgrep-rules --strip-components=1 \
+    && cp -r /tmp/semgrep-rules/python /rules/python \
+    && cp -r /tmp/semgrep-rules/generic/secrets /rules/secrets \
+    && find /rules -type f ! -name '*.yaml' ! -name '*.yml' -delete \
+    && rm -rf /tmp/semgrep-rules /tmp/semgrep-rules.tar.gz \
+    && test "$(find /rules -name '*.yaml' -o -name '*.yml' | wc -l)" -ge 500 \
+    && mkdir -p /tmp/empty-rules-check \
+    && semgrep --json --config /rules --metrics off --quiet /tmp/empty-rules-check \
+    && rm -rf /tmp/empty-rules-check
+
+# trivy v0.76.2 — tarball rilis GitHub resmi, verifikasi SHA-256.
+# Build GAGAL bila checksum tidak cocok / binary tidak jalan.
+ARG TRIVY_VERSION=0.76.2
+ARG TRIVY_SHA256=bc0fc726e017b8927a62b2d3531d7a84ee01769daf5c99ed866dced54089fdbf
+RUN curl -fsSL -o /tmp/trivy.tar.gz \
+        "https://github.com/aquasecurity/trivy/releases/download/v${TRIVY_VERSION}/trivy_${TRIVY_VERSION}_Linux-64bit.tar.gz" \
+    && echo "${TRIVY_SHA256}  /tmp/trivy.tar.gz" | sha256sum -c - \
+    && tar -xzf /tmp/trivy.tar.gz -C /usr/local/bin trivy \
+    && rm /tmp/trivy.tar.gz \
+    && trivy --version
+
+# Database CVE Trivy DI DALAM image (N1, putaran 2) — JANGAN unduh
+# saat jalan: container `--network none`, jadi `trivy fs` tanpa DB
+# pasti gagal dan gate lolos kosong. Gate memakai
+# `trivy fs --skip-db-update --offline-scan`. DB diunduh saat build
+# (di sinilah jaringan tersedia) ke $TRIVY_CACHE_DIR dan dibuat
+# bisa dibaca/ditulis user `mufakat` (trivy butuh lock file di cache
+# saat scan; container bersifat sekali pakai). Build GAGAL bila DB
+# tidak terunduh. CATATAN: DB membeku pada tanggal build — rebuild
+# image secara berkala untuk CVE terbaru.
+RUN mkdir -p /var/lib/trivy \
+    && trivy image --download-db-only \
+    && test -n "$(find /var/lib/trivy -name 'trivy.db' | head -n 1)" \
+    && chmod -R a+rwX /var/lib/trivy
+
+# gitleaks v8.30.1 — tarball rilis GitHub resmi, verifikasi SHA-256.
+ARG GITLEAKS_VERSION=8.30.1
+ARG GITLEAKS_SHA256=551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb
+RUN curl -fsSL -o /tmp/gitleaks.tar.gz \
+        "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" \
+    && echo "${GITLEAKS_SHA256}  /tmp/gitleaks.tar.gz" | sha256sum -c - \
+    && tar -xzf /tmp/gitleaks.tar.gz -C /usr/local/bin gitleaks \
+    && rm /tmp/gitleaks.tar.gz \
+    && gitleaks version
+
+RUN useradd -m -u 10001 -s /bin/sh mufakat \
+    && mkdir -p /work /rules \
+    && chown mufakat:mufakat /work \
+    && chmod -R a+rX /rules
+
+USER mufakat
+WORKDIR /work
