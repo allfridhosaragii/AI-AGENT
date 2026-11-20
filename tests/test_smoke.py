@@ -1,1 +1,195 @@
-IiIiU21va2UgdGVzdCBNVUZBS0FUOiBDTEkgKFQxMi1UMTQpLCBNQ1AgKFQxMyksIFdlYiAoVDE1KS4KClBha2V0IGRpaW1wb3IgZGFyaSBpbnN0YWxhc2kgZWRpdGFibGUgKGBwaXAgaW5zdGFsbCAtZSAuYCk7IGxheW91dAprYW5vbmlrIGFkYWxhaCBgc3JjL211ZmFrYXQvYCBkYW4gdGlkYWsgYWRhIGxhZ2kgdHJlZSBmbGF0IGRpIHJvb3QuCiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IGpzb24KaW1wb3J0IG9zCgpmcm9tIHR5cGVyLnRlc3RpbmcgaW1wb3J0IENsaVJ1bm5lcgoKZnJvbSBtdWZha2F0LmNsaSBpbXBvcnQgYXBwIGFzIGNsaV9hcHAKZnJvbSBtdWZha2F0Lm1jcF9zZXJ2ZXIgaW1wb3J0IHNlcnZlciBhcyBtY3Bfc2VydmVyCmZyb20gbXVmYWthdC5tY3Bfc2VydmVyLnNlcnZlciBpbXBvcnQgKAogICAgZGViYXRlX3N0YXJ0LAogICAgZGViYXRlX3N0YXR1cywKICAgIGZpbGVzeXN0ZW1fcmVhZCwKICAgIGdhdGVfcmVwb3J0LAogICAgbWNwLAogICAgdGVybWluYWxfcnVuLAopCmZyb20gbXVmYWthdC5ydW5uZXIgaW1wb3J0IGNyZWF0ZV9ydW4sIHJlYWRfcnVuCmZyb20gbXVmYWthdC53ZWIuYXBwIGltcG9ydCBhcHAgYXMgd2ViX2FwcAoKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgUnVubmVyIC8gQ0xJCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmRlZiB0ZXN0X2NyZWF0ZV9ydW5fd3JpdGVzX2FydGlmYWN0cyh0bXBfcGF0aCwgbW9ua2V5cGF0Y2gpOgogICAgbW9ua2V5cGF0Y2guY2hkaXIodG1wX3BhdGgpCiAgICByZXN1bHQgPSBjcmVhdGVfcnVuKCJCdWF0IFJFU1QgQVBJIHRvZG8gZGVuZ2FuIEZhc3RBUEkgKyB0ZXN0ICsgYXVkaXQiLCBvdXRwdXQ9InJ1bnMiKQogICAgcnVuX2RpciA9IHRtcF9wYXRoIC8gInJ1bnMiIC8gcmVzdWx0WyJydW5faWQiXQogICAgYXNzZXJ0IChydW5fZGlyIC8gInRyYW5zY3JpcHQuanNvbmwiKS5pc19maWxlKCkKICAgIGFzc2VydCAocnVuX2RpciAvICJyb3VuZHMiIC8gInJvdW5kLTAxLm1kIikuaXNfZmlsZSgpCiAgICBhc3NlcnQgKHJ1bl9kaXIgLyAic3BlYy5tZCIpLmlzX2ZpbGUoKQogICAgYXNzZXJ0IChydW5fZGlyIC8gImZpbmFsX3JlcG9ydC5tZCIpLmlzX2ZpbGUoKQogICAgbGluZXMgPSBbanNvbi5sb2Fkcyh4KSBmb3IgeCBpbgogICAgICAgICAgICAgKHJ1bl9kaXIgLyAidHJhbnNjcmlwdC5qc29ubCIpLnJlYWRfdGV4dChlbmNvZGluZz0idXRmLTgiKS5zcGxpdGxpbmVzKCkKICAgICAgICAgICAgIGlmIHguc3RyaXAoKV0KICAgIGFzc2VydCBsZW4obGluZXMpID49IDEKICAgIHJlcXVpcmVkID0gKAogICAgICAgICJydW5faWQiLCAicm91bmQiLCAicGhhc2UiLCAiYWdlbnRfaWQiLCAicm9sZSIsCiAgICAgICAgIm1vZGVsX2ZhbWlseSIsICJjb250ZW50IiwgInRpbWVzdGFtcCIsCiAgICApCiAgICBmb3IgbGluZSBpbiBsaW5lczoKICAgICAgICBmb3IgZmllbGQgaW4gcmVxdWlyZWQ6CiAgICAgICAgICAgIGFzc2VydCBmaWVsZCBpbiBsaW5lCiAgICBpbmZvID0gcmVhZF9ydW4ocmVzdWx0WyJydW5faWQiXSkKICAgIGFzc2VydCBpbmZvIGlzIG5vdCBOb25lIGFuZCBpbmZvWyJtZXNzYWdlX2NvdW50Il0gPT0gbGVuKGxpbmVzKQoKCmRlZiB0ZXN0X2NsaV9oZWxwX2FuZF9jb21tYW5kcyh0bXBfcGF0aCwgbW9ua2V5cGF0Y2gpOgogICAgbW9ua2V5cGF0Y2guY2hkaXIodG1wX3BhdGgpCiAgICBydW5uZXIgPSBDbGlSdW5uZXIoKQogICAgaGVscF9jbWRzID0gWwogICAgICAgIFsiLS1oZWxwIl0sCiAgICAgICAgWyJydW4iLCAiLS1oZWxwIl0sCiAgICAgICAgWyJkZWJhdGUiLCAiLS1oZWxwIl0sCiAgICAgICAgWyJyZXN1bWUiLCAiLS1oZWxwIl0sCiAgICAgICAgWyJzdGF0dXMiLCAiLS1oZWxwIl0sCiAgICAgICAgWyJkb2N0b3IiLCAiLS1oZWxwIl0sCiAgICBdCiAgICBmb3IgYXJncyBpbiBoZWxwX2NtZHM6CiAgICAgICAgcmVzID0gcnVubmVyLmludm9rZShjbGlfYXBwLCBhcmdzKQogICAgICAgIGFzc2VydCByZXMuZXhpdF9jb2RlID09IDAsIChhcmdzLCByZXMub3V0cHV0KQogICAgcmVzID0gcnVubmVyLmludm9rZShjbGlfYXBwLCBbInJ1biIsICJJZGUgdGVzIiwgIi0tb3V0cHV0IiwgInJ1bnMiXSkKICAgIGFzc2VydCByZXMuZXhpdF9jb2RlID09IDAsIHJlcy5vdXRwdXQKICAgIHJlcyA9IHJ1bm5lci5pbnZva2UoY2xpX2FwcCwgWyJkb2N0b3IiXSkKICAgIGFzc2VydCByZXMuZXhpdF9jb2RlID09IDAKICAgIGFzc2VydCAiT1BFTkFJX0FQSV9LRVkiIGluIHJlcy5vdXRwdXQKICAgICMgTmlsYWkga2V5IHRpZGFrIGJvbGVoIGJvY29yIGtlIG91dHB1dCBkb2N0b3IuCiAgICBvcy5lbnZpcm9uWyJPUEVOQUlfQVBJX0tFWSJdID0gInNrLVJBSEFTSUEtWUFORy1USURBSy1CT0xFSC1NVU5DVUwiCiAgICB0cnk6CiAgICAgICAgcmVzID0gcnVubmVyLmludm9rZShjbGlfYXBwLCBbImRvY3RvciJdKQogICAgICAgIGFzc2VydCAic2stUkFIQVNJQS1ZQU5HLVRJREFLLUJPTEVILU1VTkNVTCIgbm90IGluIHJlcy5vdXRwdXQKICAgIGZpbmFsbHk6CiAgICAgICAgZGVsIG9zLmVudmlyb25bIk9QRU5BSV9BUElfS0VZIl0KCgpkZWYgdGVzdF9jbGlfc3RhdHVzX21pc3NpbmdfcnVuKHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICBtb25rZXlwYXRjaC5jaGRpcih0bXBfcGF0aCkKICAgIHJlcyA9IENsaVJ1bm5lcigpLmludm9rZShjbGlfYXBwLCBbInN0YXR1cyIsICJ0aWRha2FkYSJdKQogICAgYXNzZXJ0IHJlcy5leGl0X2NvZGUgPT0gMQoKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgTUNQCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmRlZiB0ZXN0X21jcF90b29sc19yZWdpc3RlcmVkKCk6CiAgICBuYW1lcyA9IHNldCgpCiAgICBtYW5hZ2VyID0gZ2V0YXR0cihtY3AsICJfdG9vbF9tYW5hZ2VyIiwgTm9uZSkKICAgIGlmIG1hbmFnZXIgaXMgbm90IE5vbmU6CiAgICAgICAgdHJ5OgogICAgICAgICAgICBuYW1lcyA9IHNldChnZXRhdHRyKG1hbmFnZXIsICJfdG9vbHMiLCB7fSkua2V5cygpKQogICAgICAgIGV4Y2VwdCBFeGNlcHRpb246CiAgICAgICAgICAgIG5hbWVzID0gc2V0KCkKICAgIGlmIG5vdCBuYW1lczogICMgZmFsbGJhY2s6IG5hbWEgZnVuZ3NpIGRpIG1vZHVsIHNlcnZlcgogICAgICAgIG5hbWVzID0ge24gZm9yIG4gaW4gZGlyKG1jcF9zZXJ2ZXIpIGlmIG5vdCBuLnN0YXJ0c3dpdGgoIl8iKX0KICAgIGZvciBleHBlY3RlZCBpbiAoCiAgICAgICAgImRlYmF0ZV9zdGFydCIsCiAgICAgICAgImRlYmF0ZV9zdGF0dXMiLAogICAgICAgICJwaXBlbGluZV9ydW4iLAogICAgICAgICJnYXRlX3JlcG9ydCIsCiAgICAgICAgImNvcmVfbGlzdF9hZ2VudHMiLAogICAgICAgICJtZWV0aW5nX2NyZWF0ZSIsCiAgICAgICAgInRhc2tfY3JlYXRlIiwKICAgICAgICAicHJvamVjdF9jcmVhdGUiLAogICAgICAgICJnaXRfc3RhdHVzIiwKICAgICAgICAiZmlsZXN5c3RlbV9yZWFkIiwKICAgICAgICAidGVybWluYWxfcnVuIiwKICAgICAgICAidGVzdGluZ19ydW4iLAogICAgICAgICJzZWN1cml0eV9zY2FuIiwKICAgICAgICAicmVzZWFyY2hfc2VhcmNoIiwKICAgICAgICAiZXZhbHVhdGlvbl9zdWJtaXQiLAogICAgICAgICJhcHByb3ZhbF9yZXF1ZXN0IiwKICAgICAgICAib2JzZXJ2YWJpbGl0eV9zdGF0dXMiLAogICAgKToKICAgICAgICBhc3NlcnQgZXhwZWN0ZWQgaW4gbmFtZXMsIGV4cGVjdGVkCgoKZGVmIHRlc3RfbWNwX3Rlcm1pbmFsX2FsbG93bGlzdCh0bXBfcGF0aCwgbW9ua2V5cGF0Y2gpOgogICAgbW9ua2V5cGF0Y2guY2hkaXIodG1wX3BhdGgpCiAgICBvayA9IHRlcm1pbmFsX3J1bigiZWNobyBoYWxvIikKICAgIGFzc2VydCBva1sib2siXSBpcyBUcnVlIGFuZCAiaGFsbyIgaW4gb2tbInN0ZG91dCJdCiAgICBkZW5pZWQgPSB0ZXJtaW5hbF9ydW4oInJtIC1yZiAvIikKICAgIGFzc2VydCBkZW5pZWRbIm9rIl0gaXMgRmFsc2UKICAgIGRlbmllZDIgPSB0ZXJtaW5hbF9ydW4oImxzOyBybSAtcmYgLyIpCiAgICBhc3NlcnQgZGVuaWVkMlsib2siXSBpcyBGYWxzZQoKCmRlZiB0ZXN0X21jcF9maWxlc3lzdGVtX3JlZnVzZXNfc2VjcmV0cyh0bXBfcGF0aCwgbW9ua2V5cGF0Y2gpOgogICAgbW9ua2V5cGF0Y2guY2hkaXIodG1wX3BhdGgpCiAgICBtb25rZXlwYXRjaC5zZXRlbnYoIk1VRkFLQVRfV09SS1NQQUNFX1JPT1RTIiwgc3RyKHRtcF9wYXRoKSkKICAgICh0bXBfcGF0aCAvICIuZW52Iikud3JpdGVfdGV4dCgiT1BFTkFJX0FQSV9LRVk9c2stcmFoYXNpYSIsIGVuY29kaW5nPSJ1dGYtOCIpCiAgICBhc3NlcnQgZmlsZXN5c3RlbV9yZWFkKHN0cih0bXBfcGF0aCAvICIuZW52IikpWyJvayJdIGlzIEZhbHNlCiAgICAodG1wX3BhdGggLyAiYmlhc2EudHh0Iikud3JpdGVfdGV4dCgiaGFsbyIsIGVuY29kaW5nPSJ1dGYtOCIpCiAgICBnb3QgPSBmaWxlc3lzdGVtX3JlYWQoc3RyKHRtcF9wYXRoIC8gImJpYXNhLnR4dCIpKQogICAgYXNzZXJ0IGdvdFsib2siXSBpcyBUcnVlIGFuZCBnb3RbImNvbnRlbnQiXSA9PSAiaGFsbyIKCgpkZWYgdGVzdF9tY3BfZGViYXRlX3N0YXJ0X2FuZF9nYXRlKHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICBtb25rZXlwYXRjaC5jaGRpcih0bXBfcGF0aCkKICAgIHJ1bl9pZCA9IGRlYmF0ZV9zdGFydCgiVG9waWsgdGVzIikKICAgIGFzc2VydCBpc2luc3RhbmNlKHJ1bl9pZCwgc3RyKSBhbmQgbGVuKHJ1bl9pZCkgPT0gOAogICAgc3RhdHVzID0gZGViYXRlX3N0YXR1cyhydW5faWQpCiAgICBhc3NlcnQgc3RhdHVzWyJvayJdIGlzIFRydWUgYW5kIHN0YXR1c1sicnVuX2lkIl0gPT0gcnVuX2lkCiAgICBnYXRlID0gZ2F0ZV9yZXBvcnQocnVuX2lkKQogICAgIyBSdW4gbnlhdGEgbWVudWxpcyBnYXRlcy88dG9vbD4uanNvbiArIHZlcmRpY3QuanNvbi4gVGFucGEgRG9ja2VyLAogICAgIyBnYXRlIGdhZ2FsLXRlcnR1dHVwIHNhbmRib3gtdW5hdmFpbGFibGUgLT4gdmVyZGljdAogICAgIyBCRUxVTV9URVJWRVJJRklLQVNJIChmYWlsLWNsb3NlZCwgYXVkaXQgQzEvSDMpLCBidWthbiBBTUFOLgogICAgYXNzZXJ0IGdhdGVbInZlcmlmaWVkIl0gaXMgVHJ1ZSBhbmQgZ2F0ZVsic3RhdHVzIl0gPT0gInRlcnZlcmlmaWthc2kiCiAgICBuYW1lcyA9IHtnWyJuYW1lIl0gZm9yIGcgaW4gZ2F0ZVsiZ2F0ZXMiXX0KICAgIGFzc2VydCAidmVyZGljdC5qc29uIiBpbiBuYW1lcyBhbmQgInB5dGVzdC5qc29uIiBpbiBuYW1lcwogICAgdmVyZGljdCA9IG5leHQoZyBmb3IgZyBpbiBnYXRlWyJnYXRlcyJdIGlmIGdbIm5hbWUiXSA9PSAidmVyZGljdC5qc29uIikKICAgICMgTjc6IGRldGVrc2kgZGFyaSBkYWVtb24raW1hZ2UsIEJVS0FOIGJpbmFyeS4KICAgIGZyb20gbXVmYWthdC5zYW5kYm94LmRvY2tlciBpbXBvcnQgZG9ja2VyX2F2YWlsYWJsZSBhcyBfZG9ja2VyX2F2YWlsYWJsZQoKICAgIGlmIG5vdCBfZG9ja2VyX2F2YWlsYWJsZSgpOgogICAgICAgIGFzc2VydCB2ZXJkaWN0WyJkYXRhIl1bInN0YXR1cyJdID09ICJCRUxVTV9URVJWRVJJRklLQVNJIgogICAgZWxzZTogICMgcHJhZ21hOiBubyBjb3ZlciAtIERvY2tlciBhZGEgZGkgaG9zdCBpbmkKICAgICAgICBhc3NlcnQgdmVyZGljdFsiZGF0YSJdWyJzdGF0dXMiXSA9PSAiQU1BTiIKCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIFdlYgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpkZWYgdGVzdF93ZWJfZW5kcG9pbnRzKHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICBmcm9tIGZhc3RhcGkudGVzdGNsaWVudCBpbXBvcnQgVGVzdENsaWVudAoKICAgIG1vbmtleXBhdGNoLmNoZGlyKHRtcF9wYXRoKQogICAgY3JlYXRlX3J1bigiVG9waWsgd2ViIiwgb3V0cHV0PSJydW5zIikKICAgIGNsaWVudCA9IFRlc3RDbGllbnQod2ViX2FwcCkKICAgIGFzc2VydCBjbGllbnQuZ2V0KCIvaGVhbHRoIikuanNvbigpWyJzdGF0dXMiXSA9PSAib2siCiAgICBhc3NlcnQgY2xpZW50LmdldCgiLyIpLnN0YXR1c19jb2RlID09IDIwMAogICAgYXNzZXJ0ICJNVUZBS0FUIiBpbiBjbGllbnQuZ2V0KCIvIikudGV4dAogICAgZm9yIHBhdGggaW4gKAogICAgICAgICIvYXBpL3Byb2plY3RzIiwKICAgICAgICAiL2FwaS9ydW5zIiwKICAgICAgICAiL2FwaS9tZWV0aW5ncyIsCiAgICAgICAgIi9hcGkvdGFza3MiLAogICAgICAgICIvYXBpL2FwcHJvdmFscyIsCiAgICAgICAgIi9hcGkvdXNhZ2UiLAogICAgICAgICIvYXBpL2F1ZGl0IiwKICAgICk6CiAgICAgICAgcmVzID0gY2xpZW50LmdldChwYXRoKQogICAgICAgIGFzc2VydCByZXMuc3RhdHVzX2NvZGUgPT0gMjAwLCBwYXRoCiAgICAgICAgYXNzZXJ0IHJlcy5qc29uKClbInN0YXR1cyJdID09ICJvayIKICAgIGFzc2VydCBjbGllbnQuZ2V0KCIvYXBpL3J1bnMiKS5qc29uKClbImNvdW50Il0gPT0gMQogICAgcmVzID0gY2xpZW50LnBvc3QoIi9hcGkvZGViYXRlIiwganNvbj17InRvcGljIjogIkRlYmF0IHZpYSB3ZWIifSkKICAgIGFzc2VydCByZXMuc3RhdHVzX2NvZGUgPT0gMjAxCiAgICBydW5faWQgPSByZXMuanNvbigpWyJydW5faWQiXQogICAgYXNzZXJ0IGNsaWVudC5nZXQoZiIvYXBpL3J1bnMve3J1bl9pZH0iKS5zdGF0dXNfY29kZSA9PSAyMDAKICAgIGFzc2VydCBjbGllbnQuZ2V0KCIvYXBpL3J1bnMvdGlkYWthZGEiKS5zdGF0dXNfY29kZSA9PSA0MDQK
+"""Smoke test MUFAKAT: CLI (T12-T14), MCP (T13), Web (T15).
+
+Paket diimpor dari instalasi editable (`pip install -e .`); layout
+kanonik adalah `src/mufakat/` dan tidak ada lagi tree flat di root.
+"""
+
+from __future__ import annotations
+
+import json
+import os
+
+from typer.testing import CliRunner
+
+from mufakat.cli import app as cli_app
+from mufakat.mcp_server import server as mcp_server
+from mufakat.mcp_server.server import (
+    debate_start,
+    debate_status,
+    filesystem_read,
+    gate_report,
+    mcp,
+    terminal_run,
+)
+from mufakat.runner import create_run, read_run
+from mufakat.web.app import app as web_app
+
+
+# ---------------------------------------------------------------------------
+# Runner / CLI
+# ---------------------------------------------------------------------------
+def test_create_run_writes_artifacts(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    result = create_run("Buat REST API todo dengan FastAPI + test + audit", output="runs")
+    run_dir = tmp_path / "runs" / result["run_id"]
+    assert (run_dir / "transcript.jsonl").is_file()
+    assert (run_dir / "rounds" / "round-01.md").is_file()
+    assert (run_dir / "spec.md").is_file()
+    assert (run_dir / "final_report.md").is_file()
+    lines = [json.loads(x) for x in
+             (run_dir / "transcript.jsonl").read_text(encoding="utf-8").splitlines()
+             if x.strip()]
+    assert len(lines) >= 1
+    required = (
+        "run_id", "round", "phase", "agent_id", "role",
+        "model_family", "content", "timestamp",
+    )
+    for line in lines:
+        for field in required:
+            assert field in line
+    info = read_run(result["run_id"])
+    assert info is not None and info["message_count"] == len(lines)
+
+
+def test_cli_help_and_commands(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    runner = CliRunner()
+    help_cmds = [
+        ["--help"],
+        ["run", "--help"],
+        ["debate", "--help"],
+        ["resume", "--help"],
+        ["status", "--help"],
+        ["doctor", "--help"],
+    ]
+    for args in help_cmds:
+        res = runner.invoke(cli_app, args)
+        assert res.exit_code == 0, (args, res.output)
+    res = runner.invoke(cli_app, ["run", "Ide tes", "--output", "runs"])
+    assert res.exit_code == 0, res.output
+    res = runner.invoke(cli_app, ["doctor"])
+    assert res.exit_code == 0
+    assert "OPENAI_API_KEY" in res.output
+    # Nilai key tidak boleh bocor ke output doctor.
+    os.environ["OPENAI_API_KEY"] = "sk-RAHASIA-YANG-TIDAK-BOLEH-MUNCUL"
+    try:
+        res = runner.invoke(cli_app, ["doctor"])
+        assert "sk-RAHASIA-YANG-TIDAK-BOLEH-MUNCUL" not in res.output
+    finally:
+        del os.environ["OPENAI_API_KEY"]
+
+
+def test_cli_status_missing_run(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    res = CliRunner().invoke(cli_app, ["status", "tidakada"])
+    assert res.exit_code == 1
+
+
+# ---------------------------------------------------------------------------
+# MCP
+# ---------------------------------------------------------------------------
+def test_mcp_tools_registered():
+    names = set()
+    manager = getattr(mcp, "_tool_manager", None)
+    if manager is not None:
+        try:
+            names = set(getattr(manager, "_tools", {}).keys())
+        except Exception:
+            names = set()
+    if not names:  # fallback: nama fungsi di modul server
+        names = {n for n in dir(mcp_server) if not n.startswith("_")}
+    for expected in (
+        "debate_start",
+        "debate_status",
+        "pipeline_run",
+        "gate_report",
+        "core_list_agents",
+        "meeting_create",
+        "task_create",
+        "project_create",
+        "git_status",
+        "filesystem_read",
+        "terminal_run",
+        "testing_run",
+        "security_scan",
+        "research_search",
+        "evaluation_submit",
+        "approval_request",
+        "observability_status",
+    ):
+        assert expected in names, expected
+
+
+def test_mcp_terminal_allowlist(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    ok = terminal_run("echo halo")
+    assert ok["ok"] is True and "halo" in ok["stdout"]
+    denied = terminal_run("rm -rf /")
+    assert denied["ok"] is False
+    denied2 = terminal_run("ls; rm -rf /")
+    assert denied2["ok"] is False
+
+
+def test_mcp_filesystem_refuses_secrets(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setenv("MUFAKAT_WORKSPACE_ROOTS", str(tmp_path))
+    (tmp_path / ".env").write_text("OPENAI_API_KEY=sk-rahasia", encoding="utf-8")
+    assert filesystem_read(str(tmp_path / ".env"))["ok"] is False
+    (tmp_path / "biasa.txt").write_text("halo", encoding="utf-8")
+    got = filesystem_read(str(tmp_path / "biasa.txt"))
+    assert got["ok"] is True and got["content"] == "halo"
+
+
+def test_mcp_debate_start_and_gate(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    run_id = debate_start("Topik tes")
+    assert isinstance(run_id, str) and len(run_id) == 8
+    status = debate_status(run_id)
+    assert status["ok"] is True and status["run_id"] == run_id
+    gate = gate_report(run_id)
+    # Run nyata menulis gates/<tool>.json + verdict.json. Tanpa Docker,
+    # gate gagal-tertutup sandbox-unavailable -> verdict
+    # BELUM_TERVERIFIKASI (fail-closed, audit C1/H3), bukan AMAN.
+    assert gate["verified"] is True and gate["status"] == "terverifikasi"
+    names = {g["name"] for g in gate["gates"]}
+    assert "verdict.json" in names and "pytest.json" in names
+    verdict = next(g for g in gate["gates"] if g["name"] == "verdict.json")
+    # N7: deteksi dari daemon+image, BUKAN binary.
+    from mufakat.sandbox.docker import docker_available as _docker_available
+
+    if not _docker_available():
+        assert verdict["data"]["status"] == "BELUM_TERVERIFIKASI"
+    else:  # pragma: no cover - Docker ada di host ini
+        assert verdict["data"]["status"] == "AMAN"
+
+
+# ---------------------------------------------------------------------------
+# Web
+# ---------------------------------------------------------------------------
+def test_web_endpoints(tmp_path, monkeypatch):
+    from fastapi.testclient import TestClient
+
+    monkeypatch.chdir(tmp_path)
+    create_run("Topik web", output="runs")
+    client = TestClient(web_app)
+    assert client.get("/health").json()["status"] == "ok"
+    assert client.get("/").status_code == 200
+    assert "MUFAKAT" in client.get("/").text
+    for path in (
+        "/api/projects",
+        "/api/runs",
+        "/api/meetings",
+        "/api/tasks",
+        "/api/approvals",
+        "/api/usage",
+        "/api/audit",
+    ):
+        res = client.get(path)
+        assert res.status_code == 200, path
+        assert res.json()["status"] == "ok"
+    assert client.get("/api/runs").json()["count"] == 1
+    res = client.post("/api/debate", json={"topic": "Debat via web"})
+    assert res.status_code == 201
+    run_id = res.json()["run_id"]
+    assert client.get(f"/api/runs/{run_id}").status_code == 200
+    assert client.get("/api/runs/tidakada").status_code == 404
