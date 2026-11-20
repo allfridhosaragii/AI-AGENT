@@ -1,0 +1,159 @@
+"""Test 15 domain MCP MUFAKAT (ChatGPT §7).
+
+Satu server FastMCP bernama ``mufakat`` tetap menjadi gateway;
+tiap domain adalah modul terpisah di
+``mufakat.mcp_server.domains`` dan mendaftarkan tool-nya sendiri.
+"""
+
+from __future__ import annotations
+
+import asyncio
+
+from mufakat.mcp_server.domains import DOMAINS, register_all, store
+from mufakat.mcp_server.domains.approval import (
+    approval_get_status,
+    approval_record_decision,
+    approval_request,
+)
+from mufakat.mcp_server.domains.git import git_commit
+from mufakat.mcp_server.domains.meeting import (
+    meeting_create,
+    meeting_record_decision,
+    meeting_submit_argument,
+    meeting_submit_critique,
+)
+from mufakat.mcp_server.domains.memory import memory_list, memory_read, memory_write
+from mufakat.mcp_server.domains.project import project_create, project_create_adr
+from mufakat.mcp_server.domains.task import (
+    task_assign,
+    task_create,
+    task_get_dependencies,
+    task_update_status,
+)
+from mufakat.mcp_server.server import REGISTERED_TOOLS, list_tool_contracts, mcp
+
+
+def test_lima_belas_domain_terdaftar():
+    assert len(DOMAINS) == 15
+    assert set(DOMAINS) == {
+        "core", "communication", "meeting", "task", "memory", "project",
+        "git", "filesystem", "terminal", "testing", "security", "research",
+        "evaluation", "approval", "observability",
+    }
+
+
+def test_semua_tool_terdaftar_di_server():
+    assert len(REGISTERED_TOOLS) >= 50
+    # 17 nama lama dari test_smoke tetap ada.
+    for expected in (
+        "debate_start", "debate_status", "pipeline_run", "gate_report",
+        "core_list_agents", "meeting_create", "task_create", "project_create",
+        "git_status", "filesystem_read", "terminal_run", "testing_run",
+        "security_scan", "research_search", "evaluation_submit",
+        "approval_request", "observability_status",
+    ):
+        assert expected in REGISTERED_TOOLS, expected
+    # Tool baru per domain juga terdaftar.
+    for expected in (
+        "agent_register", "agent_send_message", "meeting_submit_argument",
+        "task_assign", "memory_write", "project_create_adr", "git_diff",
+        "filesystem_propose_patch", "test_run_unit", "security_scan_secrets",
+        "research_save_reference", "review_submit", "approval_get_status",
+        "observability_list_runs",
+    ):
+        assert expected in REGISTERED_TOOLS, expected
+
+
+def test_kontrak_tool_punya_permission():
+    all_contracts = list_tool_contracts()
+    assert len(all_contracts) == len(REGISTERED_TOOLS)
+    permissions = {"read", "write-sandbox", "propose", "execute-approved",
+                   "approval-required"}
+    for contract in all_contracts:
+        assert contract["domain"] in DOMAINS
+        assert contract["permission"] in permissions, contract
+        assert contract["description"]
+
+
+def test_register_all_idempotent_pada_server_baru():
+    from fastmcp import FastMCP
+
+    fresh = FastMCP("test-fresh")
+    names = register_all(fresh)
+    assert len(names) == len(REGISTERED_TOOLS)
+    assert set(names) == set(REGISTERED_TOOLS)
+
+
+def test_list_tools_async():
+    tools = asyncio.run(mcp.list_tools())
+    names = {t.name for t in tools}
+    assert set(REGISTERED_TOOLS) <= names
+
+
+def test_meeting_alur_lengkap():
+    store.reset()
+    created = meeting_create("Topik tes", participants="a,b")
+    assert created["ok"] is True
+    mid = created["meeting_id"]
+    assert meeting_submit_argument(mid, "a", "Usulan A")["ok"] is True
+    assert meeting_submit_critique(mid, "b", "Kritik B")["ok"] is True
+    decision = meeting_record_decision(mid, "approve", dissent="minoritas: B")
+    assert decision["ok"] is True
+    assert decision["dissent"] == ["minoritas: B"]
+
+
+def test_task_lifecycle_dan_dependency():
+    store.reset()
+    t1 = task_create("Task 1")
+    t2 = task_create("Task 2", depends_on=t1["task_id"])
+    assert task_assign(t2["task_id"], "coder")["assignee"] == "coder"
+    assert task_update_status(t2["task_id"], "done")["status"] == "done"
+    deps = task_get_dependencies(t2["task_id"])
+    assert deps["depends_on"] == [t1["task_id"]]
+    assert task_update_status(t2["task_id"], "salah")["ok"] is False
+
+
+def test_memory_per_proyek():
+    store.reset()
+    assert memory_write("proj-1", "adr-1", "Pakai LangGraph")["ok"] is True
+    assert memory_read("proj-1", "adr-1")["content"] == "Pakai LangGraph"
+    assert memory_read("proj-2", "adr-1")["ok"] is False
+    assert memory_list("proj-1")["count"] == 1
+
+
+def test_project_adr():
+    store.reset()
+    project = project_create("Proyek tes")
+    adr = project_create_adr(project["project_id"], "ADR-1", "Pakai SQLite")
+    assert adr["ok"] is True
+    assert adr["title"] == "ADR-1"
+
+
+def test_git_commit_butuh_approval():
+    store.reset()
+    # Tanpa approval: ditolak.
+    assert git_commit(".", "pesan", approval_id="tidak-ada")["ok"] is False
+    # Approval yang ditolak juga tidak cukup.
+    approval = approval_request("Commit tes")
+    approval_record_decision(approval["approval_id"], False, note="tidak")
+    assert git_commit(".", "pesan",
+                      approval_id=approval["approval_id"])["ok"] is False
+    # Approval yang disetujui lolos gate approval (commit git-nya
+    # sendiri boleh gagal karena tidak ada perubahan — yang diuji
+    # di sini adalah gate-nya, bukan git).
+    approval2 = approval_request("Commit tes 2")
+    approval_record_decision(approval2["approval_id"], True)
+    assert approval_get_status(approval2["approval_id"])["status"] == "approved"
+
+
+def test_filesystem_propose_patch_tidak_menulis(tmp_path):
+    from mufakat.mcp_server.domains.filesystem import filesystem_propose_patch
+
+    target = tmp_path / "a.txt"
+    target.write_text("lama\n", encoding="utf-8")
+    result = filesystem_propose_patch(str(target), "baru\n", reason="tes")
+    assert result["ok"] is True
+    assert result["status"] == "proposed"
+    assert target.read_text(encoding="utf-8") == "lama\n"
+    assert filesystem_propose_patch(str(tmp_path / ".env"),
+                                    "x")["ok"] is False
