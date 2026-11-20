@@ -1,1 +1,68 @@
-IiIiR2F0ZSBsaW50IChUMTAsIGRpcGVyYmFpa2kgYXVkaXQgMjAgTm92IDIwMjY6IEMxICsgSDM7CnB1dGFyYW4gMjogTjEpLgoKRGlqYWxhbmthbiBIQU5ZQSBkaSBkYWxhbSBzYW5kYm94IERvY2tlciAoYGBydWZmIGNoZWNrYGApLiBUYW5wYQpEb2NrZXI6IGdhZ2FsIHRlcnR1dHVwIChgYHNhbmRib3gtdW5hdmFpbGFibGVgYCkuIEJpbGEgcnVmZiB0aWRhawphZGEgZGkgZGFsYW0gc2FuZGJveDogZ2FnYWwtdGVydHV0dXAgKGBgdG9vbC1taXNzaW5nYGApIOKAlCBmYWxsYmFjawpgYHB5X2NvbXBpbGVgYCBkaSBob3N0IHN1ZGFoIGRpaGFwdXM7IHN5bnRheCBjaGVjayBob3N0IGJ1a2FuCnBlbmdnYW50aSBydWZmLgoKTjEg4oCUIGV4aXQgY29kZSBESVBFUklLU0EgKGR1bHUgc2VtdWEgbm9uemVybyBkaWFuZ2dhcCAiYWRhIHRlbXVhbgpsaW50Iik6IHJ1ZmYga2VsdWFyIDAgPSBiZXJzaWgsIDEgPSBhZGEgcGVsYW5nZ2FyYW47IDIgKGVycm9yLAptaXMuIGNvbmZpZyBydXNhayAvIGNyYXNoKSBkYW4gbGFpbm55YSAtPiBgYHBhc3NlZD1GYWxzZWBgLApgYHJ1bGU9InRvb2wtZXJyb3IiYGAuIEV4aXQgMSBkZW5nYW4gc3Rkb3V0IGtvc29uZyBqdWdhCmBgdG9vbC1lcnJvcmBgIChydWZmIHNlbGFsdSBtZW5jZXRhayBwZWxhbmdnYXJhbiB5YW5nIGRpdGVtdWthbm55YSkuCiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKdHJ5OgogICAgZnJvbSAuX3NhbmRib3ggaW1wb3J0IHJ1bl9nYXRlX2luX3NhbmRib3gsIHRvb2xfZXJyb3IsIHRvb2xfbWlzc2luZwogICAgZnJvbSAucnVubmVyIGltcG9ydCBHYXRlUmVzdWx0CmV4Y2VwdCBJbXBvcnRFcnJvcjogICMgcHJhZ21hOiBubyBjb3ZlcgogICAgZnJvbSBtdWZha2F0LmdhdGVzLl9zYW5kYm94IGltcG9ydCBydW5fZ2F0ZV9pbl9zYW5kYm94LCB0b29sX2Vycm9yLCB0b29sX21pc3NpbmcgICMgdHlwZTogaWdub3JlCiAgICBmcm9tIG11ZmFrYXQuZ2F0ZXMucnVubmVyIGltcG9ydCBHYXRlUmVzdWx0ICAjIHR5cGU6IGlnbm9yZQoKCmRlZiBydW4odGFyZ2V0X2Rpciwgc2FuZGJveF9ydW5uZXI9Tm9uZSkgLT4gR2F0ZVJlc3VsdDoKICAgICIiIkphbGFua2FuIGdhdGUgbGludCBhdGFzIGBgdGFyZ2V0X2RpcmBgIChkaSBzYW5kYm94KS4iIiIKICAgIHJlc3VsdCA9IHJ1bl9nYXRlX2luX3NhbmRib3goCiAgICAgICAgImxpbnQiLCB0YXJnZXRfZGlyLAogICAgICAgICJjb21tYW5kIC12IHJ1ZmYgPi9kZXYvbnVsbCAyPiYxIHx8IHsgZWNobyBUT09MX01JU1NJTkc7IGV4aXQgMTI3OyB9OyAiCiAgICAgICAgInJ1ZmYgY2hlY2sgLS1vdXRwdXQtZm9ybWF0IGNvbmNpc2UgLiIsCiAgICAgICAgdGltZW91dD0zMDAsIHJlYWRfb25seT1UcnVlLCBzYW5kYm94X3J1bm5lcj1zYW5kYm94X3J1bm5lcikKICAgIGlmIGlzaW5zdGFuY2UocmVzdWx0LCBHYXRlUmVzdWx0KToKICAgICAgICByZXR1cm4gcmVzdWx0CiAgICBvdXRwdXQgPSByZXN1bHQuZ2V0KCJzdGRvdXQiKSBvciAiIgogICAgZXhpdF9jb2RlID0gcmVzdWx0LmdldCgiZXhpdF9jb2RlIikKICAgIGlmICJUT09MX01JU1NJTkciIGluIG91dHB1dCBvciBleGl0X2NvZGUgPT0gMTI3OgogICAgICAgIHJldHVybiB0b29sX21pc3NpbmcoImxpbnQiLCAicnVmZiIpCiAgICBpZiBleGl0X2NvZGUgPT0gMDoKICAgICAgICByZXR1cm4gR2F0ZVJlc3VsdCh0b29sPSJsaW50IiwgcGFzc2VkPVRydWUsIGZpbmRpbmdzPVtdKQogICAgaWYgZXhpdF9jb2RlICE9IDE6CiAgICAgICAgcmV0dXJuIHRvb2xfZXJyb3IoCiAgICAgICAgICAgICJsaW50IiwKICAgICAgICAgICAgZiJydWZmIGdhZ2FsIChleGl0IGNvZGUge2V4aXRfY29kZX0sIGJ1a2FuIDAvMSkg4oCUIGhhc2lsICIKICAgICAgICAgICAgInRpZGFrIGRhcGF0IGRpcGVyY2F5YSwgYnVrYW4gQU1BTi4iKQogICAgaWYgbm90IG91dHB1dC5zdHJpcCgpOgogICAgICAgIHJldHVybiB0b29sX2Vycm9yKAogICAgICAgICAgICAibGludCIsCiAgICAgICAgICAgICJydWZmIGtlbHVhciAxIChhZGEgcGVsYW5nZ2FyYW4pIHRhcGkgc3Rkb3V0IGtvc29uZyDigJQgaGFzaWwgIgogICAgICAgICAgICAidGlkYWsgZGFwYXQgZGlwZXJjYXlhLCBidWthbiBBTUFOLiIpCiAgICBmaW5kaW5ncyA9IFtdCiAgICBmb3IgbGluZSBpbiBvdXRwdXQuc3BsaXRsaW5lcygpOgogICAgICAgICMgRm9ybWF0IGNvbmNpc2U6IHBhdGg6bGluZTpjb2w6IENPREUgcGVzYW4KICAgICAgICBwYXJ0cyA9IGxpbmUuc3BsaXQoIjoiLCAzKQogICAgICAgIGlmIGxlbihwYXJ0cykgPT0gNDoKICAgICAgICAgICAgZmluZGluZ3MuYXBwZW5kKHsKICAgICAgICAgICAgICAgICJzZXZlcml0eSI6ICJNRURJVU0iLCAiZmlsZSI6IHBhcnRzWzBdLAogICAgICAgICAgICAgICAgImxpbmUiOiBpbnQocGFydHNbMV0pIGlmIHBhcnRzWzFdLmlzZGlnaXQoKSBlbHNlIDAsCiAgICAgICAgICAgICAgICAicnVsZSI6IHBhcnRzWzNdLnN0cmlwKCkuc3BsaXQoIiAiLCAxKVswXSwKICAgICAgICAgICAgICAgICJtZXNzYWdlIjogbGluZS5zdHJpcCgpWzozMDBdLAogICAgICAgICAgICB9KQogICAgaWYgbm90IGZpbmRpbmdzOgogICAgICAgIGZpbmRpbmdzLmFwcGVuZCh7CiAgICAgICAgICAgICJzZXZlcml0eSI6ICJNRURJVU0iLCAiZmlsZSI6ICIiLCAibGluZSI6IDAsCiAgICAgICAgICAgICJydWxlIjogInJ1ZmYiLCAibWVzc2FnZSI6ICJydWZmIG1lbmVtdWthbiBwZWxhbmdnYXJhbiBsaW50LiIsCiAgICAgICAgfSkKICAgIHJldHVybiBHYXRlUmVzdWx0KHRvb2w9ImxpbnQiLCBwYXNzZWQ9RmFsc2UsIGZpbmRpbmdzPWZpbmRpbmdzKQo=
+"""Gate lint (T10, diperbaiki audit 20 Nov 2026: C1 + H3;
+putaran 2: N1).
+
+Dijalankan HANYA di dalam sandbox Docker (``ruff check``). Tanpa
+Docker: gagal tertutup (``sandbox-unavailable``). Bila ruff tidak
+ada di dalam sandbox: gagal-tertutup (``tool-missing``) — fallback
+``py_compile`` di host sudah dihapus; syntax check host bukan
+pengganti ruff.
+
+N1 — exit code DIPERIKSA (dulu semua nonzero dianggap "ada temuan
+lint"): ruff keluar 0 = bersih, 1 = ada pelanggaran; 2 (error,
+mis. config rusak / crash) dan lainnya -> ``passed=False``,
+``rule="tool-error"``. Exit 1 dengan stdout kosong juga
+``tool-error`` (ruff selalu mencetak pelanggaran yang ditemukannya).
+"""
+
+from __future__ import annotations
+
+try:
+    from ._sandbox import run_gate_in_sandbox, tool_error, tool_missing
+    from .runner import GateResult
+except ImportError:  # pragma: no cover
+    from mufakat.gates._sandbox import run_gate_in_sandbox, tool_error, tool_missing  # type: ignore
+    from mufakat.gates.runner import GateResult  # type: ignore
+
+
+def run(target_dir, sandbox_runner=None) -> GateResult:
+    """Jalankan gate lint atas ``target_dir`` (di sandbox)."""
+    result = run_gate_in_sandbox(
+        "lint", target_dir,
+        "command -v ruff >/dev/null 2>&1 || { echo TOOL_MISSING; exit 127; }; "
+        "ruff check --output-format concise .",
+        timeout=300, read_only=True, sandbox_runner=sandbox_runner)
+    if isinstance(result, GateResult):
+        return result
+    output = result.get("stdout") or ""
+    exit_code = result.get("exit_code")
+    if "TOOL_MISSING" in output or exit_code == 127:
+        return tool_missing("lint", "ruff")
+    if exit_code == 0:
+        return GateResult(tool="lint", passed=True, findings=[])
+    if exit_code != 1:
+        return tool_error(
+            "lint",
+            f"ruff gagal (exit code {exit_code}, bukan 0/1) — hasil "
+            "tidak dapat dipercaya, bukan AMAN.")
+    if not output.strip():
+        return tool_error(
+            "lint",
+            "ruff keluar 1 (ada pelanggaran) tapi stdout kosong — hasil "
+            "tidak dapat dipercaya, bukan AMAN.")
+    findings = []
+    for line in output.splitlines():
+        # Format concise: path:line:col: CODE pesan
+        parts = line.split(":", 3)
+        if len(parts) == 4:
+            findings.append({
+                "severity": "MEDIUM", "file": parts[0],
+                "line": int(parts[1]) if parts[1].isdigit() else 0,
+                "rule": parts[3].strip().split(" ", 1)[0],
+                "message": line.strip()[:300],
+            })
+    if not findings:
+        findings.append({
+            "severity": "MEDIUM", "file": "", "line": 0,
+            "rule": "ruff", "message": "ruff menemukan pelanggaran lint.",
+        })
+    return GateResult(tool="lint", passed=False, findings=findings)
