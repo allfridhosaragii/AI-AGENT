@@ -1,1 +1,19 @@
-Ly8gTVVGQUtBVCBSb29tIOKAlCBjb250ZW50IHNjcmlwdCBkZWVwc2VlayAoQ2xhdWRlIMKnNCkg4oCUIE9QVC1JTiBGQVNFIDIsIFRJREFLIEFLVElGIERJIE1WUC4KLy8gQWRhcHRlciBzaXR1czogZmlsbElucHV0IEhBTllBIG1lbmdpc2kgdGVrcyAoVElEQUsga2lyaW0pLCByZWFkTGFzdFJlcGx5Ci8vIGhhbnlhIG1lbWJhY2EgRE9NIHlhbmcgdGFtcGlsLiBTZWxlY3RvciBkYXJpIHNlbGVjdG9ycy5qc29uICh2ZXJzaW9uZWQpLgovLyBCaWxhIHNlbGVjdG9yIGdhZ2FsIC0+IGZhbGxiYWNrIGNsaXBib2FyZCArIG1vZGUgTWFudWFsIENvcHkuCi8vIEphbHVyIEFzc2lzdGVkIEZpbGwgKG9wdC1pbiBGYXNlIDIpOyBhbHVyIHV0YW1hIFJvb20gYWRhbGFoIE1hbnVhbCBIYW5kb2ZmLgovLyBGaWxlIGluaSBUSURBSyB0ZXJkYWZ0YXIgc2ViYWdhaSBlbnRyeXBvaW50IFdYVCAoZGkgbHVhciBzcmMvZW50cnlwb2ludHMvKQovLyBzZWhpbmdnYSBUSURBSyBkaS1idWlsZCBrZSBtYW5pZmVzdCBNVlAg4oCUIGxpaGF0IC4uL1JFQURNRS5tZC4KaW1wb3J0IHsgY3JlYXRlQWRhcHRlciwgcmVnaXN0ZXJBZGFwdGVyTWVzc2FnZXMsIHR5cGUgU2l0ZVNlbGVjdG9ycyB9IGZyb20gJy4uLy4uL2FkYXB0ZXJzL2Jhc2UnOwppbXBvcnQgc2VsZWN0b3JzSnNvbiBmcm9tICcuLi8uLi9hZGFwdGVycy9zZWxlY3RvcnMuanNvbic7Cgpjb25zdCBzZWxlY3RvcnMgPSAoc2VsZWN0b3JzSnNvbi5zaXRlcyBhcyBSZWNvcmQ8c3RyaW5nLCBTaXRlU2VsZWN0b3JzPilbJ2RlZXBzZWVrJ107CgpleHBvcnQgZGVmYXVsdCBkZWZpbmVDb250ZW50U2NyaXB0KHsKICBtYXRjaGVzOiBzZWxlY3RvcnMubWF0Y2hlcywKICBtYWluKCkgewogICAgY29uc3QgYWRhcHRlciA9IGNyZWF0ZUFkYXB0ZXIoJ2RlZXBzZWVrJywgJ2RlZXBzZWVrJywgc2VsZWN0b3JzKTsKICAgIHJlZ2lzdGVyQWRhcHRlck1lc3NhZ2VzKGFkYXB0ZXIsIHNlbGVjdG9ycyk7CiAgfSwKfSk7Cg==
+// MUFAKAT Room — content script deepseek (Claude §4) — OPT-IN FASE 2, TIDAK AKTIF DI MVP.
+// Adapter situs: fillInput HANYA mengisi teks (TIDAK kirim), readLastReply
+// hanya membaca DOM yang tampil. Selector dari selectors.json (versioned).
+// Bila selector gagal -> fallback clipboard + mode Manual Copy.
+// Jalur Assisted Fill (opt-in Fase 2); alur utama Room adalah Manual Handoff.
+// File ini TIDAK terdaftar sebagai entrypoint WXT (di luar src/entrypoints/)
+// sehingga TIDAK di-build ke manifest MVP — lihat ../README.md.
+import { createAdapter, registerAdapterMessages, type SiteSelectors } from '../../adapters/base';
+import selectorsJson from '../../adapters/selectors.json';
+
+const selectors = (selectorsJson.sites as Record<string, SiteSelectors>)['deepseek'];
+
+export default defineContentScript({
+  matches: selectors.matches,
+  main() {
+    const adapter = createAdapter('deepseek', 'deepseek', selectors);
+    registerAdapterMessages(adapter, selectors);
+  },
+});
