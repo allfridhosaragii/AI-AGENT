@@ -1,1 +1,67 @@
-IiIiVGVzdCBlbmQtdG8tZW5kIGRhc2hib2FyZCB3ZWIgTVVGQUtBVCAoSFRUUCwgVGVzdENsaWVudC9odHRweCkuCgpBbHVyIHBlbnVoIHlhbmcgZGl1amk6IGhlYWx0aCAtPiBidWF0IGRlYmF0IHZpYSBQT1NUIC0+IGJhY2EKZGV0YWlsIHJ1biAodGVybWFzdWsgZGlmZiArIHZlcmRpY3QgZ2F0ZSBueWF0YSkgLT4gZGFmdGFyIHJ1biAtPgplbmRwb2ludCBwZW5kdWt1bmcuIFBsYXl3cmlnaHQgVElEQUsgZGlwYWthaSBkaSBzaW5pIGthcmVuYQp0aWRhayB0ZXJwYXNhbmcgZGkgVk0g4oCUIGxpaGF0IHRlc3RfcGxheXdyaWdodF9ub3RlLnB5LgoiIiIKCmZyb20gX19mdXR1cmVfXyBpbXBvcnQgYW5ub3RhdGlvbnMKCmZyb20gZmFzdGFwaS50ZXN0Y2xpZW50IGltcG9ydCBUZXN0Q2xpZW50Cgpmcm9tIG11ZmFrYXQud2ViLmFwcCBpbXBvcnQgYXBwCgoKZGVmIHRlc3RfZTJlX2Rhc2hib2FyZF9hbHVyX3BlbnVoKHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICBtb25rZXlwYXRjaC5jaGRpcih0bXBfcGF0aCkKICAgIGNsaWVudCA9IFRlc3RDbGllbnQoYXBwKQoKICAgIGhlYWx0aCA9IGNsaWVudC5nZXQoIi9oZWFsdGgiKQogICAgYXNzZXJ0IGhlYWx0aC5zdGF0dXNfY29kZSA9PSAyMDAKICAgIGFzc2VydCBoZWFsdGguanNvbigpWyJzdGF0dXMiXSA9PSAib2siCgogICAgY3JlYXRlZCA9IGNsaWVudC5wb3N0KAogICAgICAgICIvYXBpL2RlYmF0ZSIsCiAgICAgICAganNvbj17InRvcGljIjogIkJ1YXQgUkVTVCBBUEkgdG9kbyBkZW5nYW4gRmFzdEFQSSArIHRlc3QgKyBhdWRpdCJ9KQogICAgYXNzZXJ0IGNyZWF0ZWQuc3RhdHVzX2NvZGUgPT0gMjAxCiAgICBib2R5ID0gY3JlYXRlZC5qc29uKCkKICAgIHJ1bl9pZCA9IGJvZHlbInJ1bl9pZCJdCiAgICAjIFJ1biBueWF0YSBtZW51bGlzIGRpZmYgKyB2ZXJkaWN0IGdhdGUgKGJ1a2FuIGhhbnlhIHJpbmdrYXNhbikuCiAgICAjIFRhbnBhIERvY2tlciBnYXRlIGdhZ2FsLXRlcnR1dHVwIC0+IEJFTFVNX1RFUlZFUklGSUtBU0kgKEMxL0gzKTsKICAgICMgZGVuZ2FuIERvY2tlciwgdGVtcGxhdGUgYmVyc2loIC0+IEFNQU4uCiAgICAjIE43OiBkZXRla3NpIGRhcmkgZGFlbW9uK2ltYWdlLCBCVUtBTiBiaW5hcnkuCiAgICBmcm9tIG11ZmFrYXQuc2FuZGJveC5kb2NrZXIgaW1wb3J0IGRvY2tlcl9hdmFpbGFibGUKCiAgICBpZiBub3QgZG9ja2VyX2F2YWlsYWJsZSgpOgogICAgICAgIGFzc2VydCBib2R5WyJ2ZXJkaWN0Il0gPT0gIkJFTFVNX1RFUlZFUklGSUtBU0kiCiAgICBlbHNlOiAgIyBwcmFnbWE6IG5vIGNvdmVyIC0gRG9ja2VyIGFkYSBkaSBob3N0IGluaQogICAgICAgIGFzc2VydCBib2R5WyJ2ZXJkaWN0Il0gPT0gIkFNQU4iCiAgICAgICAgYXNzZXJ0IGFueShnWyJ0b29sIl0gPT0gInB5dGVzdCIgYW5kIGdbInBhc3NlZCJdIGZvciBnIGluIGJvZHlbImdhdGVzIl0pCiAgICBhc3NlcnQgYm9keVsiZGlmZiJdIGlzIG5vdCBOb25lCgogICAgZGV0YWlsID0gY2xpZW50LmdldChmIi9hcGkvcnVucy97cnVuX2lkfSIpCiAgICBhc3NlcnQgZGV0YWlsLnN0YXR1c19jb2RlID09IDIwMAogICAgYXNzZXJ0IGRldGFpbC5qc29uKClbInJ1bl9pZCJdID09IHJ1bl9pZAogICAgYXNzZXJ0IGRldGFpbC5qc29uKClbIm1lc3NhZ2VfY291bnQiXSA+PSAxCgogICAgcnVucyA9IGNsaWVudC5nZXQoIi9hcGkvcnVucyIpCiAgICBhc3NlcnQgcnVucy5zdGF0dXNfY29kZSA9PSAyMDAKICAgIGFzc2VydCBydW5zLmpzb24oKVsiY291bnQiXSA9PSAxCgogICAgZm9yIHBhdGggaW4gKCIvYXBpL3Byb2plY3RzIiwgIi9hcGkvbWVldGluZ3MiLCAiL2FwaS90YXNrcyIsCiAgICAgICAgICAgICAgICAgIi9hcGkvYXBwcm92YWxzIiwgIi9hcGkvdXNhZ2UiLCAiL2FwaS9hdWRpdCIpOgogICAgICAgIHJlcyA9IGNsaWVudC5nZXQocGF0aCkKICAgICAgICBhc3NlcnQgcmVzLnN0YXR1c19jb2RlID09IDIwMCwgcGF0aAogICAgICAgIGFzc2VydCByZXMuanNvbigpWyJzdGF0dXMiXSA9PSAib2siCgogICAgYXNzZXJ0IGNsaWVudC5nZXQoIi9hcGkvcnVucy90aWRha2FkYSIpLnN0YXR1c19jb2RlID09IDQwNAogICAgYXNzZXJ0IGNsaWVudC5nZXQoIi8iKS5zdGF0dXNfY29kZSA9PSAyMDAKICAgIGFzc2VydCAiTVVGQUtBVCIgaW4gY2xpZW50LmdldCgiLyIpLnRleHQKCgpkZWYgdGVzdF9lMmVfZGViYXRlX3RhbnBhX3RvcGlrX2RpdG9sYWsodG1wX3BhdGgsIG1vbmtleXBhdGNoKToKICAgIG1vbmtleXBhdGNoLmNoZGlyKHRtcF9wYXRoKQogICAgY2xpZW50ID0gVGVzdENsaWVudChhcHApCiAgICByZXMgPSBjbGllbnQucG9zdCgiL2FwaS9kZWJhdGUiLCBqc29uPXsidG9waWMiOiAiIn0pCiAgICBhc3NlcnQgcmVzLnN0YXR1c19jb2RlID09IDQyMgo=
+"""Test end-to-end dashboard web MUFAKAT (HTTP, TestClient/httpx).
+
+Alur penuh yang diuji: health -> buat debat via POST -> baca
+detail run (termasuk diff + verdict gate nyata) -> daftar run ->
+endpoint pendukung. Playwright TIDAK dipakai di sini karena
+tidak terpasang di VM — lihat test_playwright_note.py.
+"""
+
+from __future__ import annotations
+
+from fastapi.testclient import TestClient
+
+from mufakat.web.app import app
+
+
+def test_e2e_dashboard_alur_penuh(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    client = TestClient(app)
+
+    health = client.get("/health")
+    assert health.status_code == 200
+    assert health.json()["status"] == "ok"
+
+    created = client.post(
+        "/api/debate",
+        json={"topic": "Buat REST API todo dengan FastAPI + test + audit"})
+    assert created.status_code == 201
+    body = created.json()
+    run_id = body["run_id"]
+    # Run nyata menulis diff + verdict gate (bukan hanya ringkasan).
+    # Tanpa Docker gate gagal-tertutup -> BELUM_TERVERIFIKASI (C1/H3);
+    # dengan Docker, template bersih -> AMAN.
+    # N7: deteksi dari daemon+image, BUKAN binary.
+    from mufakat.sandbox.docker import docker_available
+
+    if not docker_available():
+        assert body["verdict"] == "BELUM_TERVERIFIKASI"
+    else:  # pragma: no cover - Docker ada di host ini
+        assert body["verdict"] == "AMAN"
+        assert any(g["tool"] == "pytest" and g["passed"] for g in body["gates"])
+    assert body["diff"] is not None
+
+    detail = client.get(f"/api/runs/{run_id}")
+    assert detail.status_code == 200
+    assert detail.json()["run_id"] == run_id
+    assert detail.json()["message_count"] >= 1
+
+    runs = client.get("/api/runs")
+    assert runs.status_code == 200
+    assert runs.json()["count"] == 1
+
+    for path in ("/api/projects", "/api/meetings", "/api/tasks",
+                 "/api/approvals", "/api/usage", "/api/audit"):
+        res = client.get(path)
+        assert res.status_code == 200, path
+        assert res.json()["status"] == "ok"
+
+    assert client.get("/api/runs/tidakada").status_code == 404
+    assert client.get("/").status_code == 200
+    assert "MUFAKAT" in client.get("/").text
+
+
+def test_e2e_debate_tanpa_topik_ditolak(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    client = TestClient(app)
+    res = client.post("/api/debate", json={"topic": ""})
+    assert res.status_code == 422
