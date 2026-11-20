@@ -30,7 +30,7 @@ async def node(state, adapters=None, ctx=None):
             try:
                 from mufakat.gates.pytest import run as run_pytest  # type: ignore
             except ImportError:
-                run_pytest = None
+                run_pytest = None  # type: ignore[assignment]
         if run_pytest is not None:
             try:
                 result = run_pytest(worktree)
