@@ -1,1 +1,27 @@
-IiIiTXVzZSBDb2RleCBDTEkgYWRhcHRlciAoVDQpLiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKZnJvbSAuX2NsaSBpbXBvcnQgY2hlY2tfYmluYXJ5LCBydW5fY2xpCmZyb20gLmJhc2UgaW1wb3J0IEFkYXB0ZXIsIFJlcGx5CgoKY2xhc3MgQ29kZXhBZGFwdGVyKEFkYXB0ZXIpOgogICAgIiIiQWRhcHRlciBvdmVyIHRoZSBgYGNvZGV4YGAgQ0xJIChgYGNvZGV4IGV4ZWMgLS1qc29uYGApLiIiIgoKICAgIG5hbWUgPSAiY29kZXgiCiAgICBmYW1pbHkgPSAiY29kZXgiCgogICAgZGVmIF9faW5pdF9fKHNlbGYsIG5hbWU6IHN0ciA9ICJjb2RleCIsIGZhbWlseTogc3RyID0gImNvZGV4Iik6CiAgICAgICAgc2VsZi5uYW1lID0gbmFtZQogICAgICAgIHNlbGYuZmFtaWx5ID0gZmFtaWx5CgogICAgZGVmIGlzX2F2YWlsYWJsZShzZWxmKSAtPiBib29sOgogICAgICAgIHJldHVybiBjaGVja19iaW5hcnkoImNvZGV4IiwgWyJjb2RleCIsICJsb2dpbiIsICJzdGF0dXMiXSwgdGltZW91dD01KQoKICAgIGFzeW5jIGRlZiBhc2soc2VsZiwgcHJvbXB0OiBzdHIsIHN5c3RlbTogc3RyID0gIiIsCiAgICAgICAgICAgICAgICAgIGN0eDogZGljdCB8IE5vbmUgPSBOb25lKSAtPiBSZXBseToKICAgICAgICBmdWxsX3Byb21wdCA9IGYie3N5c3RlbX1cblxue3Byb21wdH0iIGlmIHN5c3RlbSBlbHNlIHByb21wdAogICAgICAgIHJldHVybiBhd2FpdCBydW5fY2xpKAogICAgICAgICAgICBzZWxmLm5hbWUsIHNlbGYuZmFtaWx5LAogICAgICAgICAgICBbImNvZGV4IiwgImV4ZWMiLCAiLS1qc29uIiwgIi0tIiwgZnVsbF9wcm9tcHRdLCBjdHgpCg==
+"""Muse Codex CLI adapter (T4)."""
+
+from __future__ import annotations
+
+from ._cli import check_binary, run_cli
+from .base import Adapter, Reply
+
+
+class CodexAdapter(Adapter):
+    """Adapter over the ``codex`` CLI (``codex exec --json``)."""
+
+    name = "codex"
+    family = "codex"
+
+    def __init__(self, name: str = "codex", family: str = "codex"):
+        self.name = name
+        self.family = family
+
+    def is_available(self) -> bool:
+        return check_binary("codex", ["codex", "login", "status"], timeout=5)
+
+    async def ask(self, prompt: str, system: str = "",
+                  ctx: dict | None = None) -> Reply:
+        full_prompt = f"{system}\n\n{prompt}" if system else prompt
+        return await run_cli(
+            self.name, self.family,
+            ["codex", "exec", "--json", "--", full_prompt], ctx)
