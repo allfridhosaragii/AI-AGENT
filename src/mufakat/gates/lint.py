@@ -1,37 +1,38 @@
-"""Gate lint (T10).
+"""Gate lint (T10, diperbaiki audit 20 Nov 2026: C1 + H3).
 
-Bila ruff tersedia: jalankan ``ruff check``. Bila tidak: cek syntax
-semua file Python via ``py_compile``. Tidak pernah raise bila tool
-hilang; file yang tidak bisa dibaca dilewati.
+Dijalankan HANYA di dalam sandbox Docker (``ruff check``). Tanpa
+Docker: gagal tertutup (``sandbox-unavailable``). Bila ruff tidak
+ada di dalam sandbox: gagal-tertutup (``tool-missing``) — fallback
+``py_compile`` di host sudah dihapus; syntax check host bukan
+pengganti ruff.
 """
 
 from __future__ import annotations
 
-import py_compile
-import shutil
-import subprocess
-from pathlib import Path
-
 try:
+    from ._sandbox import run_gate_in_sandbox, tool_missing
     from .runner import GateResult
 except ImportError:  # pragma: no cover
+    from mufakat.gates._sandbox import run_gate_in_sandbox, tool_missing  # type: ignore
     from mufakat.gates.runner import GateResult  # type: ignore
 
 
-def _run_ruff(target_dir) -> GateResult | None:
-    if shutil.which("ruff") is None:
-        return None
-    try:
-        result = subprocess.run(
-            ["ruff", "check", "--output-format", "concise", str(target_dir)],
-            capture_output=True, text=True, timeout=300,
-        )
-    except (OSError, subprocess.SubprocessError):
-        return None
-    if result.returncode == 0:
+def run(target_dir, sandbox_runner=None) -> GateResult:
+    """Jalankan gate lint atas ``target_dir`` (di sandbox)."""
+    result = run_gate_in_sandbox(
+        "lint", target_dir,
+        "command -v ruff >/dev/null 2>&1 || { echo TOOL_MISSING; exit 127; }; "
+        "ruff check --output-format concise .",
+        timeout=300, read_only=True, sandbox_runner=sandbox_runner)
+    if isinstance(result, GateResult):
+        return result
+    output = result.get("stdout") or ""
+    if "TOOL_MISSING" in output or result.get("exit_code") == 127:
+        return tool_missing("lint", "ruff")
+    if result.get("exit_code") == 0:
         return GateResult(tool="lint", passed=True, findings=[])
     findings = []
-    for line in (result.stdout or "").splitlines():
+    for line in output.splitlines():
         # Format concise: path:line:col: CODE pesan
         parts = line.split(":", 3)
         if len(parts) == 4:
@@ -47,33 +48,3 @@ def _run_ruff(target_dir) -> GateResult | None:
             "rule": "ruff", "message": "ruff menemukan pelanggaran lint.",
         })
     return GateResult(tool="lint", passed=False, findings=findings)
-
-
-def _run_py_compile(target_dir) -> GateResult:
-    root = Path(target_dir)
-    files = [root] if root.is_file() and root.suffix == ".py" else sorted(
-        p for p in root.rglob("*.py")
-        if "__pycache__" not in p.parts and ".venv" not in p.parts)
-    findings = []
-    for path in files:
-        try:
-            py_compile.compile(str(path), doraise=True)
-        except py_compile.PyCompileError as exc:
-            findings.append({
-                "severity": "HIGH", "file": str(path), "line": 0,
-                "rule": "syntax-error", "message": f"Syntax error: {exc}",
-            })
-        except OSError:
-            continue
-    return GateResult(tool="lint", passed=not findings, findings=findings)
-
-
-def run(target_dir) -> GateResult:
-    """Jalankan gate lint atas ``target_dir``."""
-    try:
-        binary = _run_ruff(target_dir)
-    except Exception:
-        binary = None
-    if binary is not None:
-        return binary
-    return _run_py_compile(target_dir)
