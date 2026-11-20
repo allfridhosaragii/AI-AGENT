@@ -12,10 +12,10 @@ roles:
   debaters:
     pro:
       prompt: "config/prompts/debater_pro.md"
-      model_family: "openrouter_free"
+      model_family: "openrouter"
     contra:
       prompt: "config/prompts/debater_contra.md"
-      model_family: "openrouter_free"
+      model_family: "openrouter"
     neutral:
       prompt: "config/prompts/debater_neutral.md"
       model_family: "groq"
@@ -27,12 +27,12 @@ roles:
     model_family: "deepseek"
   reviewers:
     - prompt: "config/prompts/reviewer.md"
-      model_family: "openrouter_free"
+      model_family: "openrouter"
     - prompt: "config/prompts/reviewer.md"
       model_family: "groq"
   auditor:
     prompt: "config/prompts/auditor.md"
-    model_family: "gemini_api"
+    model_family: "gemini"
   tester:
     prompt: "config/prompts/tester.md"
     model_family: "groq"
