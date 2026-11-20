@@ -11,39 +11,41 @@ requires-python = ">=3.12"
 license = { text = "MIT" }
 authors = [{ name = "MUFAKAT" }]
 dependencies = [
-    "langgraph",
-    "langgraph-checkpoint-sqlite",
-    "fastmcp",
-    "mcp",
-    "openai",
-    "pydantic>=2",
-    "typer",
-    "rich",
-    "sqlmodel",
-    "pyyaml",
-    "python-dotenv",
-    "fastapi",
-    "uvicorn",
-    "httpx",
+    # Dipin ke versi yang terpasang & teruji di VM 20 Nov 2026
+    # (lihat requirements.lock; `mcp==2.3.0` sesuai DECISIONS A12).
+    "langgraph==1.2.23",
+    "langgraph-checkpoint-sqlite==3.1.3",
+    "fastmcp==4.2.2",
+    "mcp==2.3.0",
+    "openai==3.56.0",
+    "pydantic==2.14.4",
+    "typer==0.29.2",
+    "rich==15.0.0",
+    "sqlmodel==0.0.50",
+    "pyyaml==6.0.3",
+    "python-dotenv==1.2.4",
+    "fastapi==0.165.0",
+    "uvicorn==0.54.0",
+    "httpx==0.28.1",
 ]
 
 [project.optional-dependencies]
 dev = [
-    "pytest",
-    "pytest-cov",
-    "ruff",
-    "mypy",
-    "bandit",
+    "pytest==9.2.0",
+    "pytest-cov==7.1.0",
+    "ruff==0.17.6",
+    "mypy==2.4.1",
+    "bandit==1.9.4",
 ]
 # Postgres (opsional): DATABASE_URL=postgresql://... — tanpa ini,
 # MUFAKAT tetap jalan dengan SQLite.
 postgres = [
-    "psycopg[binary]",
+    "psycopg[binary]==3.3.9",
 ]
 # Redis (opsional): REDIS_URL=redis://... — tanpa ini, cache/queue
 # memakai fallback in-memory.
 redis = [
-    "redis",
+    "redis==8.1.0",
 ]
 
 [project.scripts]
