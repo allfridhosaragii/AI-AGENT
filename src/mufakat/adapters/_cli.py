@@ -58,6 +58,7 @@ async def run_cli(name: str, family: str, cmd: list[str],
     try:
         proc = await asyncio.create_subprocess_exec(
             *cmd,
+            stdin=asyncio.subprocess.DEVNULL,
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
             cwd=cwd,
@@ -95,7 +96,8 @@ def check_binary(binary: str, probe: list[str] | None = None,
         if probe is None:
             return True
         result = subprocess.run(
-            probe, capture_output=True, timeout=timeout)
+            probe, capture_output=True, timeout=timeout,
+            stdin=subprocess.DEVNULL)
         return result.returncode == 0
     except Exception:
         return False
