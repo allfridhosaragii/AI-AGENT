@@ -128,6 +128,72 @@ def resume_command(
     _echo(f"Status: resumed | pesan transkrip: {info['message_count']} | dir: {info['dir']}")
 
 
+# ---------------------------------------------------------------------------
+# approve — HANYA manusia (audit H1)
+# ---------------------------------------------------------------------------
+@app.command("approve")
+def approve_command(
+    approval_id: str = typer.Argument(..., help="ID approval yang diputus."),
+    repo: str = typer.Option(".", "--repo", help="Repo yang diff-nya diikat."),
+    note: str = typer.Option("", "--note", help="Catatan keputusan."),
+    yes: bool = typer.Option(False, "--yes", help="Setujui tanpa konfirmasi (skrip)."),
+) -> None:
+    """Setujui/tolak approval sebagai MANUSIA (bukan AI/MCP).
+
+    Menampilkan diff + hash-nya, meminta konfirmasi ``y/N`` di TTY,
+    lalu menerbitkan token sekali pakai (24 jam) yang terikat hash
+    diff tersebut. Token HANYA ditampilkan sekali di sini — simpan
+    baik-baik; ``git_commit`` memakainya satu kali.
+    """
+    import sys
+
+    from mufakat.mcp_server import approval_store
+    from mufakat.mcp_server.domains.approval import decide_approval
+
+    record = approval_store.get_approval(approval_id)
+    if record is None:
+        _echo(f"[red]Approval tidak ditemukan:[/red] {approval_id}")
+        raise typer.Exit(code=1)
+    if record["status"] != "pending":
+        _echo(f"[red]Approval sudah diputus:[/red] {record['status']}")
+        raise typer.Exit(code=1)
+    diff_hash = approval_store.diff_hash_for_repo(repo)
+    _echo(f"Approval: [bold]{approval_id}[/bold]")
+    _echo(f"Judul: {record.get('title', '')}")
+    _echo(f"Run: {record.get('run_id', '') or '-'}")
+    _echo(f"Diminta oleh: {record.get('requested_by', '') or '-'}")
+    _echo(f"Hash diff saat ini: [bold]{diff_hash or '(bukan repo / tanpa diff)'}[/bold]")
+    try:
+        proc = subprocess.run(
+            ["git", "-C", repo, "diff", "HEAD", "--stat"],
+            capture_output=True, text=True, timeout=30, shell=False)
+        if proc.stdout.strip():
+            _echo("Diff stat:")
+            _echo(proc.stdout.strip())
+    except Exception:
+        pass
+    if not yes:
+        if not sys.stdin.isatty():
+            _echo("[red]Bukan TTY: persetujuan butuh konfirmasi manusia "
+                  "di terminal (atau pakai --yes secara eksplisit).[/red]")
+            raise typer.Exit(code=1)
+        confirmed = typer.confirm("Setujui approval ini?", default=False)
+        if not confirmed:
+            result = decide_approval(approval_id, False, decided_by="human-cli",
+                                     note=note or "ditolak di CLI",
+                                     diff_hash=diff_hash)
+            _echo(f"[yellow]Approval ditolak.[/yellow] status: {result.get('status')}")
+            raise typer.Exit(code=0)
+    result = decide_approval(approval_id, True, decided_by="human-cli",
+                             note=note, diff_hash=diff_hash)
+    token = result.get("approval_token", "")
+    _echo("[green]Approval DISETUJUI.[/green]")
+    _echo(f"Hash diff terikat: {diff_hash}")
+    _echo("Token sekali pakai (24 jam, HANYA tampil sekali):")
+    _echo(f"[bold]{token}[/bold]")
+    _echo("Pakai: git_commit(approval_id=..., approval_token=<token>).")
+
+
 @app.command("status")
 def status_command(
     run_id: str = typer.Argument(..., help="ID run yang dicek statusnya."),
