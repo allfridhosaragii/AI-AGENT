@@ -11,9 +11,15 @@ DEFAULT_MIN_COVERAGE = 0.8
 DEFAULT_MIN_APPROVE_RATIO = 2 / 3
 
 
-def _finding_category(tool: str, finding: dict) -> str:
-    rule = str(finding.get("rule", "")).lower()
-    message = str(finding.get("message", "")).lower()
+def _finding_category(tool: str, finding: object) -> str:
+    # Temuan bisa berupa dict (normal) atau string (dari adapter /
+    # gate pihak ketiga) — dulu string membuat .get() melempar
+    # AttributeError dan verdict crash.
+    if isinstance(finding, dict):
+        rule = str(finding.get("rule", "")).lower()
+        message = str(finding.get("message", "")).lower()
+    else:
+        rule, message = "", str(finding).lower()
     text = f"{rule} {message}"
     if tool == "gitleaks" or "secret" in text or "api-key" in text \
             or "password" in text or "token" in text or "private-key" in text:
@@ -67,7 +73,10 @@ def verdict(results, gates_config=None) -> dict:
         if not passed:
             safe = False
         for finding in findings:
-            severity = str(finding.get("severity", "")).upper()
+            severity = (
+                str(finding.get("severity", "")).upper()
+                if isinstance(finding, dict) else ""
+            )
             if tool in ("semgrep", "bandit") and severity in ("HIGH", "CRITICAL"):
                 safe = False
             if tool == "gitleaks":
