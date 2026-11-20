@@ -25,7 +25,16 @@ class _State:
     idea = "ide tes"
 
 
-def test_build_adapters_memakai_mock_bila_cli_belum_login():
+def test_build_adapters_memakai_mock_bila_cli_belum_login(monkeypatch):
+    # Hermetis (H4): hasil test tidak boleh bergantung pada binary CLI
+    # yang kebetulan terpasang di host — mock shutil.which supaya
+    # semua CLI dianggap tidak tersedia.
+    import shutil
+
+    from mufakat.adapters import _cli as cli_mod
+
+    monkeypatch.setattr(shutil, "which", lambda name: None)
+    monkeypatch.setattr(cli_mod.shutil, "which", lambda name: None)
     adapters = _build_adapters()
     text = asyncio.run(adapters["research"](_State()))
     # Mock research: teks lokal, bukan jawaban CLI/API.
