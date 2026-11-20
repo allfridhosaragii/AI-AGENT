@@ -1,1 +1,79 @@
-IiIiRG9tYWluIGFwcHJvdmFsIOKAlCBwZXJtaW50YWFuIGRhbiBzdGF0dXMgcGVyc2V0dWp1YW4gKEgxKS4KCkhBTllBIGR1YSB0b29sIE1DUDogYGBhcHByb3ZhbF9yZXF1ZXN0YGAgKG1pbnRhKSBkYW4KYGBhcHByb3ZhbF9nZXRfc3RhdHVzYGAgKGJhY2EpLiBUSURBSyBBREEgdG9vbCBNQ1AgeWFuZyBiaXNhCm1lbXV0dXNrYW4gYXBwcm92YWwg4oCUIGBgYXBwcm92YWxfcmVjb3JkX2RlY2lzaW9uYGAgRElIQVBVUyBkYXJpCnJlZ2lzdHJhc2kgTUNQIChhdWRpdCBIMTogQUkgYmlzYSBtZW55ZXR1anVpIGNvbW1pdC1ueWEgc2VuZGlyaSkuCgpLZXB1dHVzYW4gSEFOWUEgZGFyaSBtYW51c2lhIGxld2F0IENMSSBgYG11ZmFrYXQgYXBwcm92ZSA8aWQ+YGAKKGtvbmZpcm1hc2kgeS9OIGRpIFRUWSksIGRpc2ltcGFuIGRpIFNRTGl0ZQooOm1vZDpgbXVmYWthdC5tY3Bfc2VydmVyLmFwcHJvdmFsX3N0b3JlYCksIHRlcmlrYXQgaGFzaCBkaWZmLAptYXNhIGJlcmxha3UgMjQgamFtLCB0b2tlbiBzZWthbGkgcGFrYWkuIGBgZGVjaWRlX2FwcHJvdmFsYGAgZGkKYmF3YWggaW5pIGFkYWxhaCBmdW5nc2kgaW50ZXJuYWwgdW50dWsgQ0xJIOKAlCBCVUtBTiB0b29sIE1DUCBkYW4KVElEQUsgZGlkYWZ0YXJrYW4ga2Ugc2VydmVyLgoiIiIKCmZyb20gX19mdXR1cmVfXyBpbXBvcnQgYW5ub3RhdGlvbnMKCmZyb20gbXVmYWthdC5tY3Bfc2VydmVyIGltcG9ydCBhcHByb3ZhbF9zdG9yZQpmcm9tIG11ZmFrYXQubWNwX3NlcnZlci50b29scyBpbXBvcnQgZXJyLCBuZXdfaWQsIG9rCgpET01BSU4gPSAiYXBwcm92YWwiCgpDT05UUkFDVFMgPSBbCiAgICB7Im5hbWUiOiAiYXBwcm92YWxfcmVxdWVzdCIsICJkZXNjcmlwdGlvbiI6ICJNaW50YSBwZXJzZXR1anVhbiB1bnR1ayBrZXB1dHVzYW4vYWtzaS4iLAogICAgICJwZXJtaXNzaW9uIjogIndyaXRlLXNhbmRib3giLCAic2NvcGUiOiAiYXBwcm92YWxzIn0sCiAgICB7Im5hbWUiOiAiYXBwcm92YWxfZ2V0X3N0YXR1cyIsICJkZXNjcmlwdGlvbiI6ICJTdGF0dXMgc2F0dSBhcHByb3ZhbC4iLAogICAgICJwZXJtaXNzaW9uIjogInJlYWQiLCAic2NvcGUiOiAiYXBwcm92YWxzIn0sCl0KCgpkZWYgYXBwcm92YWxfcmVxdWVzdCh0aXRsZTogc3RyLCBydW5faWQ6IHN0ciA9ICIiLAogICAgICAgICAgICAgICAgICAgICByZXF1ZXN0ZWRfYnk6IHN0ciA9ICIiLCBkaWZmX2hhc2g6IHN0ciA9ICIiKSAtPiBkaWN0OgogICAgIiIiTWludGEgcGVyc2V0dWp1YW4gKGFwcHJvdmFsKSB1bnR1ayBzZWJ1YWgga2VwdXR1c2FuL2Frc2kuCgogICAgTWVuY2F0YXQgYXBwcm92YWwgYGBwZW5kaW5nYGAgZGkgU1FMaXRlLiBLZXB1dHVzYW4gVElEQUsgYmlzYQogICAgZGlidWF0IGxld2F0IE1DUCDigJQgbWFudXNpYSBtZW55ZXR1anVpIGxld2F0IGBgbXVmYWthdCBhcHByb3ZlYGAuCiAgICAiIiIKICAgIGFwcHJvdmFsX2lkID0gbmV3X2lkKCJhcHByIikKICAgIHJlY29yZCA9IGFwcHJvdmFsX3N0b3JlLmNyZWF0ZV9hcHByb3ZhbCgKICAgICAgICBhcHByb3ZhbF9pZCwgdGl0bGUsIHJ1bl9pZD1ydW5faWQsCiAgICAgICAgcmVxdWVzdGVkX2J5PXJlcXVlc3RlZF9ieSwgZGlmZl9oYXNoPWRpZmZfaGFzaCkKICAgIHJldHVybiBvaygqKnJlY29yZCkKCgpkZWYgYXBwcm92YWxfZ2V0X3N0YXR1cyhhcHByb3ZhbF9pZDogc3RyKSAtPiBkaWN0OgogICAgIiIiU3RhdHVzIHNhdHUgYXBwcm92YWwuIiIiCiAgICByZWNvcmQgPSBhcHByb3ZhbF9zdG9yZS5nZXRfYXBwcm92YWwoYXBwcm92YWxfaWQpCiAgICBpZiByZWNvcmQgaXMgTm9uZToKICAgICAgICByZXR1cm4gZXJyKCJBcHByb3ZhbCB0aWRhayBkaXRlbXVrYW4uIiwgYXBwcm92YWxfaWQ9YXBwcm92YWxfaWQpCiAgICByZXR1cm4gb2soKipyZWNvcmQpCgoKZGVmIGRlY2lkZV9hcHByb3ZhbChhcHByb3ZhbF9pZDogc3RyLCBhcHByb3ZlZDogYm9vbCwKICAgICAgICAgICAgICAgICAgICBkZWNpZGVkX2J5OiBzdHIgPSAiIiwgbm90ZTogc3RyID0gIiIsCiAgICAgICAgICAgICAgICAgICAgZGlmZl9oYXNoOiBzdHIgPSAiIiwgcmVwb19wYXRoOiBzdHIgPSAiIiwKICAgICAgICAgICAgICAgICAgICBicmFuY2g6IHN0ciA9ICIiLCB3b3JrdHJlZTogc3RyID0gIiIpIC0+IGRpY3Q6CiAgICAiIiJQdXR1c2thbiBhcHByb3ZhbCDigJQgSU5URVJOQUwsIGhhbnlhIHVudHVrIENMSSBtYW51c2lhLgoKICAgIEJVS0FOIHRvb2wgTUNQICh0aWRhayBkaWRhZnRhcmthbikuIE1lbmdlbWJhbGlrYW4gcmVjb3JkICsKICAgIHRva2VuIHNla2FsaSBwYWthaSBiaWxhIGRpc2V0dWp1aS4gYGByZXBvX3BhdGhgYC9gYGJyYW5jaGBgLwogICAgYGB3b3JrdHJlZWBgIG1lbmdpa2F0IHBlcnNldHVqdWFuIGtlIGlkZW50aXRhcyByZXBvIChHUFQgMykuCiAgICAiIiIKICAgIHJlY29yZCwgdG9rZW4gPSBhcHByb3ZhbF9zdG9yZS5kZWNpZGVfYXBwcm92YWwoCiAgICAgICAgYXBwcm92YWxfaWQsIGFwcHJvdmVkLCBkZWNpZGVkX2J5PWRlY2lkZWRfYnksIG5vdGU9bm90ZSwKICAgICAgICBkaWZmX2hhc2g9ZGlmZl9oYXNoLCByZXBvX3BhdGg9cmVwb19wYXRoLCBicmFuY2g9YnJhbmNoLAogICAgICAgIHdvcmt0cmVlPXdvcmt0cmVlKQogICAgaWYgcmVjb3JkIGlzIE5vbmU6CiAgICAgICAgcmV0dXJuIGVycigiQXBwcm92YWwgdGlkYWsgZGl0ZW11a2FuLiIsIGFwcHJvdmFsX2lkPWFwcHJvdmFsX2lkKQogICAgb3V0ID0gZGljdChyZWNvcmQpCiAgICBpZiB0b2tlbiBpcyBub3QgTm9uZToKICAgICAgICBvdXRbImFwcHJvdmFsX3Rva2VuIl0gPSB0b2tlbgogICAgcmV0dXJuIG9rKCoqb3V0KQoKCmRlZiByZWdpc3RlcihtY3ApIC0+IGxpc3Rbc3RyXToKICAgICIiIkRhZnRhcmthbiB0b29sIGRvbWFpbiBhcHByb3ZhbCBrZSBgYG1jcGBgICh0YW5wYSByZWNvcmRfZGVjaXNpb24pLiIiIgogICAgZm9yIGZuIGluIChhcHByb3ZhbF9yZXF1ZXN0LCBhcHByb3ZhbF9nZXRfc3RhdHVzKToKICAgICAgICBtY3AudG9vbChmbikKICAgIHJldHVybiBbY1sibmFtZSJdIGZvciBjIGluIENPTlRSQUNUU10K
+"""Domain approval — permintaan dan status persetujuan (H1).
+
+HANYA dua tool MCP: ``approval_request`` (minta) dan
+``approval_get_status`` (baca). TIDAK ADA tool MCP yang bisa
+memutuskan approval — ``approval_record_decision`` DIHAPUS dari
+registrasi MCP (audit H1: AI bisa menyetujui commit-nya sendiri).
+
+Keputusan HANYA dari manusia lewat CLI ``mufakat approve <id>``
+(konfirmasi y/N di TTY), disimpan di SQLite
+(:mod:`mufakat.mcp_server.approval_store`), terikat hash diff,
+masa berlaku 24 jam, token sekali pakai. ``decide_approval`` di
+bawah ini adalah fungsi internal untuk CLI — BUKAN tool MCP dan
+TIDAK didaftarkan ke server.
+"""
+
+from __future__ import annotations
+
+from mufakat.mcp_server import approval_store
+from mufakat.mcp_server.tools import err, new_id, ok
+
+DOMAIN = "approval"
+
+CONTRACTS = [
+    {"name": "approval_request", "description": "Minta persetujuan untuk keputusan/aksi.",
+     "permission": "write-sandbox", "scope": "approvals"},
+    {"name": "approval_get_status", "description": "Status satu approval.",
+     "permission": "read", "scope": "approvals"},
+]
+
+
+def approval_request(title: str, run_id: str = "",
+                     requested_by: str = "", diff_hash: str = "") -> dict:
+    """Minta persetujuan (approval) untuk sebuah keputusan/aksi.
+
+    Mencatat approval ``pending`` di SQLite. Keputusan TIDAK bisa
+    dibuat lewat MCP — manusia menyetujui lewat ``mufakat approve``.
+    """
+    approval_id = new_id("appr")
+    record = approval_store.create_approval(
+        approval_id, title, run_id=run_id,
+        requested_by=requested_by, diff_hash=diff_hash)
+    return ok(**record)
+
+
+def approval_get_status(approval_id: str) -> dict:
+    """Status satu approval."""
+    record = approval_store.get_approval(approval_id)
+    if record is None:
+        return err("Approval tidak ditemukan.", approval_id=approval_id)
+    return ok(**record)
+
+
+def decide_approval(approval_id: str, approved: bool,
+                    decided_by: str = "", note: str = "",
+                    diff_hash: str = "", repo_path: str = "",
+                    branch: str = "", worktree: str = "") -> dict:
+    """Putuskan approval — INTERNAL, hanya untuk CLI manusia.
+
+    BUKAN tool MCP (tidak didaftarkan). Mengembalikan record +
+    token sekali pakai bila disetujui. ``repo_path``/``branch``/
+    ``worktree`` mengikat persetujuan ke identitas repo (GPT 3).
+    """
+    record, token = approval_store.decide_approval(
+        approval_id, approved, decided_by=decided_by, note=note,
+        diff_hash=diff_hash, repo_path=repo_path, branch=branch,
+        worktree=worktree)
+    if record is None:
+        return err("Approval tidak ditemukan.", approval_id=approval_id)
+    out = dict(record)
+    if token is not None:
+        out["approval_token"] = token
+    return ok(**out)
+
+
+def register(mcp) -> list[str]:
+    """Daftarkan tool domain approval ke ``mcp`` (tanpa record_decision)."""
+    for fn in (approval_request, approval_get_status):
+        mcp.tool(fn)
+    return [c["name"] for c in CONTRACTS]
