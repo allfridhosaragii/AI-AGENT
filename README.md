@@ -163,6 +163,68 @@ dengan agent A2A eksternal **belum terverifikasi** dan tidak diklaim.
   provider dan circuit breaker setelah 3 error 429/5xx berturut-turut
   (lihat `config/providers.yaml`).
 
+## MUFAKAT Room — rapat multi-AI via login browser (manual handoff default)
+
+> **Disclaimer ToS (Claude §0.4):** "Mengotomasi web chat bisa melanggar
+> Ketentuan Layanan penyedia AI. MUFAKAT Room dirancang semi-manual (Anda yang
+> menekan Kirim) untuk meminimalkan risiko, tetapi risiko pembatasan akun tetap
+> ada dan menjadi tanggung jawab pengguna. Gunakan akun sendiri, untuk proyek
+> sendiri, dengan kecepatan wajar."
+
+**Konflik yang diselesaikan dengan jujur (Claude ROOM vs ChatGPT V3):**
+dokumen Claude memakai Chrome Extension (fillInput + readLastReply DOM)
+sebagai moderator, sedangkan V3 **melarang** extension dan DOM
+scraping/automasi pada MVP dan mewajibkan Manual Handoff sebagai default.
+Gabungan yang dipakai: **mode default adalah MANUAL HANDOFF** (V3 §2.2 Mode B)
+— pengguna menyalin prompt, mengirim sendiri di tab resmi provider, lalu
+menempel jawaban kembali (dilabeli "user imported" + provenance). Assisted
+Fill via extension HANYA modul opt-in Fase 2, terpisah, tidak aktif secara
+default. Jangan pernah klaim koneksi otomatis bila hanya manual handoff.
+
+**Status per provider (jujur):** ChatGPT, Claude, Gemini, DeepSeek, Qwen =
+`manual_handoff` ("Manual handoff only"); Muse = `needs_policy_review`
+(identitas situs/kebijakan belum terverifikasi). Lihat
+`src/mufakat/room/providers.py`.
+
+**Engine Python** (`src/mufakat/room/`): `handoff.py` (state machine V3
+Addendum F: DRAFT → READY_TO_SEND → WAITING_FOR_USER_SUBMISSION →
+WAITING_FOR_IMPORTED_RESPONSE → RESPONSE_IMPORTED → CRITIQUE_READY →
+WAITING_FOR_REBUTTAL_IMPORT → REVISION_READY → FINAL_REVIEW → APPROVED),
+`secret_scan.py`, `pacing.py` (jeda 20 dtk/situs, batas harian default 40),
+`parser.py` (blok ```json terakhir, ok/repair_needed/unparsed, maks 1x
+repair), `providers.py`, `prompts.py`, `state_machine.py` (Claude §2),
+`anti_loop.py`, `storage.py` (SQLite + JSONL; padanan Dexie di browser).
+Konsensus Borda reuse `mufakat.consensus.voting` — tidak ada logika ganda.
+
+**Extension scaffold** (`mufakat-room/`, WXT/React/TS): manifest MV3 permission
+minimal (`sidePanel`, `storage`, `unlimitedStorage`, `clipboardWrite`,
+`nativeMessaging` + 6 host permission saja), 6 content script adapter
+(`fillInput` HANYA isi teks, TIDAK kirim), `selectors.json` versioned
+(`lastVerified: "belum terverifikasi"`), Selector Doctor, engine TS
+(stateMachine, parser, consensus, pacing, antiLoop, secretScan), storage
+Dexie, `runnerClient.ts`. **Belum terverifikasi:** `pnpm` tidak tersedia di
+VM ini, jadi `pnpm install`/`pnpm dev`/vitest belum pernah jalan.
+
+**Local Runner** (`mufakat-room/runner/`, Python stdlib): native messaging
+host length-prefixed (`init_workspace`, `apply_files`, `run_gates`, `diff`,
+`commit` — hanya dengan approval token sekali pakai — `cleanup`, `status`),
+`worktree.py` (tolak path traversal), `sandbox.py` (Docker non-root,
+`--network none`), `gates/` + `verdict.py` (reuse `mufakat.gates`), `mcp_server.py`
+(tool `room_status`, `gate_report`, `run_gates`). **Docker belum
+terverifikasi** di VM ini (binary `docker` tidak ada); sandbox mengembalikan
+`verified: false`, bukan pura-pura jalan.
+
+**Demo mock end-to-end** (tanpa situs AI asli):
+
+```bash
+.venv/bin/python -m mufakat.room.demo "Buat REST API todo dengan FastAPI + test + audit"
+# menulis runs/room-mock-<id>/final_report.md
+```
+
+**Yang masih manual (dilakukan pengguna di website AI):** login di tiap situs,
+menekan Kirim, menyalin/menempel jawaban, menyetujui patch & commit. Lihat
+[BLUEPRINT.md](BLUEPRINT.md) §17 dan [DECISIONS.md](DECISIONS.md) A16–A18, B10.
+
 ## Cara menambah provider baru
 
 1. Buat adapter di `src/mufakat/adapters/` mengikuti `adapters/base.py`
