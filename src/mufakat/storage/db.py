@@ -279,3 +279,58 @@ def get_session(path: str | Path) -> Session:
     engine = get_engine(path)
     SQLModel.metadata.create_all(engine)
     return Session(engine)
+
+
+# ---------------------------------------------------------------------------
+# Postgres opsional (DATABASE_URL) — SQLite tetap default
+# ---------------------------------------------------------------------------
+
+
+def resolve_database_url() -> str:
+    """URL database dari env, dengan fallback SQLite yang jujur.
+
+    Prioritas: ``DATABASE_URL`` (mis. ``postgresql://user:pass@host:5432/db``)
+    lalu ``MUFAKAT_DB`` (path file SQLite). Bila keduanya kosong,
+    kembalikan ``sqlite:///./runs/mufakat.db``. Nilai secret TIDAK
+    pernah dicetak — pemanggil hanya boleh menampilkan skema/host.
+    """
+    import os
+
+    url = os.environ.get("DATABASE_URL", "").strip()
+    if url:
+        return url
+    sqlite_path = os.environ.get("MUFAKAT_DB", "").strip()
+    if sqlite_path:
+        return f"sqlite:///{sqlite_path}"
+    return "sqlite:///./runs/mufakat.db"
+
+
+def get_engine_for_url(url: str):
+    """Buat engine SQLModel untuk ``url`` apa pun.
+
+    - ``sqlite:///...`` selalu bisa (driver bawaan).
+    - ``postgresql://...`` butuh driver ``psycopg`` (opsional, lihat
+      ``pyproject.toml`` extra ``postgres``). Bila driver tidak ada,
+      raise ``RuntimeError`` yang jelas — bukan fallback diam-diam
+      ke SQLite, karena itu akan menyembunyikan kesalahan konfigurasi.
+    """
+    if url.startswith("sqlite:"):
+        path = url[len("sqlite:///"):]
+        return get_engine(path)
+    if url.startswith(("postgresql://", "postgres://")):
+        try:
+            import psycopg  # noqa: F401
+        except ImportError as exc:
+            raise RuntimeError(
+                "DATABASE_URL Postgres dipakai, tetapi driver psycopg "
+                "tidak terpasang. Jalankan: pip install -e \".[postgres]\""
+            ) from exc
+        return create_engine(url)
+    raise ValueError(f"Skema DATABASE_URL tidak didukung: {url.split('://', 1)[0]}")
+
+
+def init_db_url(url: str):
+    """Buat semua tabel pada database ``url``; kembalikan engine."""
+    engine = get_engine_for_url(url)
+    SQLModel.metadata.create_all(engine)
+    return engine
