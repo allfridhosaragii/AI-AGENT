@@ -25,6 +25,10 @@ Hal yang belum terverifikasi ditulis apa adanya sebagai
 | A14 | **E2E dashboard via HTTP TestClient (Playwright belum terpasang)** | Playwright tidak terpasang di VM (tidak ada binary browser). E2E diuji lewat `tests/e2e/` memakai FastAPI TestClient (alur health → debat → detail run → daftar run). Bila Playwright terpasang nanti, E2E browser bisa ditambahkan; sampai saat itu statusnya "belum terpasang", bukan "lolos". |
 | A15 | **Desktop Tauri, Temporal, E2B/Daytona: deferred** | Sengaja TIDAK dibangun di tahap ini. Desktop Tauri: belum ada kebutuhan multi-user/desktop; web + CLI cukup untuk MVP. Temporal (workflow tahan lama): checkpoint LangGraph + `resume` sudah cukup untuk MVP; Temporal menambah server + biaya. Sandbox cloud E2B/Daytona: butuh akun + API key berbayar; sandbox lokal (Docker/worktree + allowlist terminal) cukup untuk MVP. Ketiganya dicatat sebagai deferred, bukan "sudah ada". |
 
+| A16 | **MUFAKAT Room: Manual Handoff adalah mode default** | Claude ROOM memakai extension (fillInput + readLastReply DOM) sebagai moderator, sedangkan V3 melarang extension/DOM scraping pada MVP dan mewajibkan Manual Handoff (Mode B). Keputusan 20 Nov 2026: default = manual handoff (engine Python `src/mufakat/room/`, state machine V3 Addendum F, respons dilabeli "user imported" + provenance). Assisted Fill via extension HANYA modul opt-in Fase 2 di `mufakat-room/` (scaffold, belum terverifikasi), tidak aktif default. Status per provider jujur: ChatGPT/Claude/Gemini/DeepSeek/Qwen = `manual_handoff`, Muse = `needs_policy_review`. |
+| A17 | **Room: tidak ada auto-send, tidak ada pembacaan sesi provider** | Tidak ada kode (Python maupun TS) yang menekan Kirim/Enter, memanggil API internal situs AI, atau membaca cookie/token/localStorage/password. Pacing 20 dtk/situs + batas harian 40; secret scanner sebelum salin; tidak ada polling background. |
+| A18 | **Room reuse, bukan duplikasi** | Konsensus Borda reuse `mufakat.consensus.voting`; gates/verdict reuse `mufakat.gates`; worktree/sandbox runner reuse `mufakat.sandbox` bila terpasang (fallback lokal + laporan jujur bila Docker tidak ada). Validasi path traversal dan native messaging host adalah kode baru khusus Room. Storage Room: JSONL + SQLite stdlib (padanan Dexie di browser). |
+
 ## B. Keputusan terbuka — butuh persetujuan owner
 
 | # | Keputusan | Status | Opsi / catatan |
@@ -38,6 +42,7 @@ Hal yang belum terverifikasi ditulis apa adanya sebagai
 | B7 | **Provider coding default** | **Belum terverifikasi** — belum ada keputusan owner | Kandidat rantai coder: `codex → opencode_free → qwen_api`. |
 | B8 | **Batas biaya & kuota harian** | **Belum terverifikasi** — belum ada keputusan owner | Token bucket per provider dan batas biaya per run/hari di `config/providers.yaml` masih nilai contoh dan perlu disetujui owner. |
 | B9 | **Penyimpanan run jangka panjang** | **Belum terverifikasi** — belum ada keputusan owner | Saat ini run tersimpan lokal di `runs/` + SQLite lokal. Apakah perlu backup/cloud atau retensi tertentu? |
+| B10 | **Assisted Fill (extension) diaktifkan atau tetap Manual Handoff saja?** | **Belum terverifikasi** — belum ada keputusan owner | Extension scaffold (`mufakat-room/`) sudah ditulis file-by-file tetapi belum pernah jalan (`pnpm` tidak ada di VM; `selectors.json.lastVerified` = "belum terverifikasi"). Sebelum diaktifkan perlu: (1) keputusan owner untuk memakai extension opt-in, (2) verifikasi manual selector di 6 situs, (3) audit permission manifest. Sampai saat itu, mode default tetap Manual Handoff dan extension tidak boleh diklaim jalan. |
 
 ## C. Cara mengubah dokumen ini
 
