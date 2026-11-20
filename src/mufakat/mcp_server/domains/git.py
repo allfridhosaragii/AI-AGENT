@@ -1,1 +1,191 @@
-IiIiRG9tYWluIGdpdCDigJQgc3RhdHVzL2RpZmYvYnJhbmNoIHJlYWQtb25seSwgd29ya3RyZWUvY29tbWl0IHRlcmtlbmRhbGkuCgpQZXJtaXNzaW9uOiBgYHJlYWRgYCB1bnR1ayBzdGF0dXMvZGlmZi9icmFuY2gsIGBgd3JpdGUtc2FuZGJveGBgCnVudHVrIHdvcmt0cmVlIChoYW55YSBkaSBiYXdhaCBgYHJ1bnMvYGApLCBgYGFwcHJvdmFsLXJlcXVpcmVkYGAKdW50dWsgY29tbWl0IOKAlCBjb21taXQgdGFucGEgYXBwcm92YWwgeWFuZyB0ZXJjYXRhdCBkYW4gZGlzZXR1anVpCmRpdG9sYWsgbWVudGFoLW1lbnRhaC4gVG9vbCBpbmkgVElEQUsgcGVybmFoIHB1c2guCiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IHN1YnByb2Nlc3MKZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCgpmcm9tIG11ZmFrYXQubWNwX3NlcnZlciBpbXBvcnQgYXBwcm92YWxfc3RvcmUKZnJvbSBtdWZha2F0Lm1jcF9zZXJ2ZXIucmVwb19yZWdpc3RyeSBpbXBvcnQgcmVzb2x2ZV9yZWdpc3RlcmVkX3JlcG8KZnJvbSBtdWZha2F0Lm1jcF9zZXJ2ZXIudG9vbHMgaW1wb3J0IGVyciwgZ2l0X3N0YXR1c19zYWZlLCBvawpmcm9tIG11ZmFrYXQucnVubmVyIGltcG9ydCB1dGNub3cKCkRPTUFJTiA9ICJnaXQiCgpDT05UUkFDVFMgPSBbCiAgICB7Im5hbWUiOiAiZ2l0X3N0YXR1cyIsICJkZXNjcmlwdGlvbiI6ICJTdGF0dXMgZ2l0IHJlYWQtb25seS4iLAogICAgICJwZXJtaXNzaW9uIjogInJlYWQiLCAic2NvcGUiOiAiZ2l0In0sCiAgICB7Im5hbWUiOiAiZ2l0X2RpZmYiLCAiZGVzY3JpcHRpb24iOiAiRGlmZiAoc3RhdCArIHBhdGNoKSByZWFkLW9ubHkuIiwKICAgICAicGVybWlzc2lvbiI6ICJyZWFkIiwgInNjb3BlIjogImdpdCJ9LAogICAgeyJuYW1lIjogImdpdF9icmFuY2giLCAiZGVzY3JpcHRpb24iOiAiRGFmdGFyIGJyYW5jaCByZWFkLW9ubHkuIiwKICAgICAicGVybWlzc2lvbiI6ICJyZWFkIiwgInNjb3BlIjogImdpdCJ9LAogICAgeyJuYW1lIjogImdpdF9jcmVhdGVfd29ya3RyZWUiLCAiZGVzY3JpcHRpb24iOiAiQnVhdCB3b3JrdHJlZSBkaSBiYXdhaCBydW5zLy4iLAogICAgICJwZXJtaXNzaW9uIjogIndyaXRlLXNhbmRib3giLCAic2NvcGUiOiAiZ2l0In0sCiAgICB7Im5hbWUiOiAiZ2l0X2NvbW1pdCIsICJkZXNjcmlwdGlvbiI6ICJDb21taXQg4oCUIHdhamliIGFwcHJvdmFsIHlhbmcgZGlzZXR1anVpLiIsCiAgICAgInBlcm1pc3Npb24iOiAiYXBwcm92YWwtcmVxdWlyZWQiLCAic2NvcGUiOiAiZ2l0In0sCl0KCgpkZWYgX3JlcXVpcmVfcmVnaXN0ZXJlZF9yZXBvKHJlcG9fcGF0aDogc3RyKSAtPiB0dXBsZVtQYXRoIHwgTm9uZSwgZGljdCB8IE5vbmVdOgogICAgIiIiUmVwbyB0ZXJkYWZ0YXIgKEdQVCA1KSBhdGF1IChOb25lLCBlcnJvci1kaWN0KSBiaWxhIHRpZGFrIHRlcmRhZnRhci4iIiIKICAgIHJlZ2lzdGVyZWQgPSByZXNvbHZlX3JlZ2lzdGVyZWRfcmVwbyhyZXBvX3BhdGgpCiAgICBpZiByZWdpc3RlcmVkIGlzIE5vbmU6CiAgICAgICAgcmV0dXJuIE5vbmUsIGVycigKICAgICAgICAgICAgIlJlcG8gYmVsdW0gdGVyZGFmdGFyIGRpIHJlZ2lzdHJ5ICh+Ly5tdWZha2F0L3J1bm5lci5qc29uKS4gIgogICAgICAgICAgICAiRGFmdGFya2FuIGR1bHUgbGV3YXQgQ0xJIGxva2FsOiAiCiAgICAgICAgICAgICJgbXVmYWthdCByZXBvLXJlZ2lzdGVyIDxuYW1hPiA8cGF0aD5gLiIsCiAgICAgICAgICAgIHJlcG9fcGF0aD1yZXBvX3BhdGgpCiAgICByZXR1cm4gcmVnaXN0ZXJlZCwgTm9uZQoKCmRlZiBfZ2l0X2JyYW5jaChyZXBvOiBQYXRoKSAtPiBzdHI6CiAgICAiIiJCcmFuY2ggc2FhdCBpbmkgKCcnIGJpbGEgZ2FnYWwgZGliYWNhKS4iIiIKICAgIHRyeToKICAgICAgICBwcm9jID0gX2dpdChzdHIocmVwbyksICJyZXYtcGFyc2UiLCAiLS1hYmJyZXYtcmVmIiwgIkhFQUQiKQogICAgZXhjZXB0IEV4Y2VwdGlvbjogICMgbm9xYTogQkxFMDAxCiAgICAgICAgcmV0dXJuICIiCiAgICByZXR1cm4gcHJvYy5zdGRvdXQuc3RyaXAoKSBpZiBwcm9jLnJldHVybmNvZGUgPT0gMCBlbHNlICIiCgoKZGVmIGdpdF9zdGF0dXMocmVwb19wYXRoOiBzdHIgPSAiLiIpIC0+IGRpY3Q6CiAgICAiIiJTdGF0dXMgZ2l0IHJlYWQtb25seSB1bnR1ayBzZWJ1YWggcmVwbyBsb2thbCAoaGFydXMgdGVyZGFmdGFyKS4iIiIKICAgIHJldHVybiBnaXRfc3RhdHVzX3NhZmUocmVwb19wYXRoKQoKCmRlZiBfZ2l0KHJlcG9fcGF0aDogc3RyLCAqYXJnczogc3RyKSAtPiBzdWJwcm9jZXNzLkNvbXBsZXRlZFByb2Nlc3M6CiAgICByZXR1cm4gc3VicHJvY2Vzcy5ydW4oCiAgICAgICAgWyJnaXQiLCAiLUMiLCByZXBvX3BhdGgsICphcmdzXSwgY2FwdHVyZV9vdXRwdXQ9VHJ1ZSwgdGV4dD1UcnVlLAogICAgICAgIHRpbWVvdXQ9NjAsIHNoZWxsPUZhbHNlLAogICAgKQoKCmRlZiBnaXRfZGlmZihyZXBvX3BhdGg6IHN0ciA9ICIuIiwgbWF4X2NoYXJzOiBpbnQgPSAyMDAwMCkgLT4gZGljdDoKICAgICIiIkRpZmYgcmVhZC1vbmx5OiByaW5na2FzYW4gc3RhdCArIHBhdGNoIChkaWJhdGFzaSBwYW5qYW5nbnlhKS4iIiIKICAgIHJlcG8sIGRlbmllZCA9IF9yZXF1aXJlX3JlZ2lzdGVyZWRfcmVwbyhyZXBvX3BhdGgpCiAgICBpZiBkZW5pZWQgaXMgbm90IE5vbmU6CiAgICAgICAgcmV0dXJuIGRlbmllZAogICAgYXNzZXJ0IHJlcG8gaXMgbm90IE5vbmUKICAgIHJlcG9fcGF0aCA9IHN0cihyZXBvKQogICAgdHJ5OgogICAgICAgIHN0YXQgPSBfZ2l0KHJlcG9fcGF0aCwgImRpZmYiLCAiLS1zdGF0IikKICAgICAgICBwYXRjaCA9IF9naXQocmVwb19wYXRoLCAiZGlmZiIpCiAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGV4YzogICMgbm9xYTogQkxFMDAxCiAgICAgICAgcmV0dXJuIGVycihmImdpdCBnYWdhbCBkaWphbGFua2FuOiB7ZXhjfSIsIHJlcG9fcGF0aD1yZXBvX3BhdGgpCiAgICBpZiBzdGF0LnJldHVybmNvZGUgIT0gMDoKICAgICAgICByZXR1cm4gZXJyKCJCdWthbiByZXBvc2l0b3JpIGdpdCBhdGF1IGdpdCBlcnJvci4iLAogICAgICAgICAgICAgICAgICAgcmVwb19wYXRoPXJlcG9fcGF0aCwgc3RkZXJyPXN0YXQuc3RkZXJyWzoyMDAwXSkKICAgIHJldHVybiBvayhyZXBvX3BhdGg9cmVwb19wYXRoLCBzdGF0PXN0YXQuc3Rkb3V0LAogICAgICAgICAgICAgIHBhdGNoPXBhdGNoLnN0ZG91dFs6bWF4X2NoYXJzXSkKCgpkZWYgZ2l0X2JyYW5jaChyZXBvX3BhdGg6IHN0ciA9ICIuIikgLT4gZGljdDoKICAgICIiIkRhZnRhciBicmFuY2ggcmVhZC1vbmx5LiIiIgogICAgcmVwbywgZGVuaWVkID0gX3JlcXVpcmVfcmVnaXN0ZXJlZF9yZXBvKHJlcG9fcGF0aCkKICAgIGlmIGRlbmllZCBpcyBub3QgTm9uZToKICAgICAgICByZXR1cm4gZGVuaWVkCiAgICBhc3NlcnQgcmVwbyBpcyBub3QgTm9uZQogICAgcmVwb19wYXRoID0gc3RyKHJlcG8pCiAgICB0cnk6CiAgICAgICAgcHJvYyA9IF9naXQocmVwb19wYXRoLCAiYnJhbmNoIiwgIi0tbGlzdCIpCiAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGV4YzogICMgbm9xYTogQkxFMDAxCiAgICAgICAgcmV0dXJuIGVycihmImdpdCBnYWdhbCBkaWphbGFua2FuOiB7ZXhjfSIsIHJlcG9fcGF0aD1yZXBvX3BhdGgpCiAgICBpZiBwcm9jLnJldHVybmNvZGUgIT0gMDoKICAgICAgICByZXR1cm4gZXJyKCJCdWthbiByZXBvc2l0b3JpIGdpdCBhdGF1IGdpdCBlcnJvci4iLAogICAgICAgICAgICAgICAgICAgcmVwb19wYXRoPXJlcG9fcGF0aCwgc3RkZXJyPXByb2Muc3RkZXJyWzoyMDAwXSkKICAgIGJyYW5jaGVzID0gW2xpbmUuc3RyaXAoKS5sc3RyaXAoIiogIikuc3RyaXAoKQogICAgICAgICAgICAgICAgZm9yIGxpbmUgaW4gcHJvYy5zdGRvdXQuc3BsaXRsaW5lcygpIGlmIGxpbmUuc3RyaXAoKV0KICAgIHJldHVybiBvayhyZXBvX3BhdGg9cmVwb19wYXRoLCBicmFuY2hlcz1icmFuY2hlcykKCgpkZWYgZ2l0X2NyZWF0ZV93b3JrdHJlZShyZXBvX3BhdGg6IHN0ciwgd29ya3RyZWVfcGF0aDogc3RyLAogICAgICAgICAgICAgICAgICAgICAgICBicmFuY2g6IHN0ciA9ICIiKSAtPiBkaWN0OgogICAgIiIiQnVhdCBnaXQgd29ya3RyZWUg4oCUIGhhbnlhIGRpIGJhd2FoIGZvbGRlciBgYHJ1bnMvYGAuIiIiCiAgICByZXBvLCBkZW5pZWQgPSBfcmVxdWlyZV9yZWdpc3RlcmVkX3JlcG8ocmVwb19wYXRoKQogICAgaWYgZGVuaWVkIGlzIG5vdCBOb25lOgogICAgICAgIHJldHVybiBkZW5pZWQKICAgIGFzc2VydCByZXBvIGlzIG5vdCBOb25lCiAgICByZXBvX3BhdGggPSBzdHIocmVwbykKICAgIHRhcmdldCA9IFBhdGgod29ya3RyZWVfcGF0aCkKICAgIHJ1bnNfcm9vdCA9IFBhdGgoInJ1bnMiKS5yZXNvbHZlKCkKICAgIHRyeToKICAgICAgICByZXNvbHZlZCA9IHRhcmdldC5yZXNvbHZlKCkKICAgIGV4Y2VwdCBPU0Vycm9yIGFzIGV4YzoKICAgICAgICByZXR1cm4gZXJyKGYiUGF0aCB3b3JrdHJlZSB0aWRhayB2YWxpZDoge2V4Y30iKQogICAgaWYgcnVuc19yb290IG5vdCBpbiByZXNvbHZlZC5wYXJlbnRzIGFuZCByZXNvbHZlZCAhPSBydW5zX3Jvb3Q6CiAgICAgICAgcmV0dXJuIGVycigiV29ya3RyZWUgaGFueWEgYm9sZWggZGlidWF0IGRpIGJhd2FoIHJ1bnMvLiIsCiAgICAgICAgICAgICAgICAgICB3b3JrdHJlZV9wYXRoPXdvcmt0cmVlX3BhdGgpCiAgICBhcmdzID0gWyJ3b3JrdHJlZSIsICJhZGQiLCBzdHIocmVzb2x2ZWQpXQogICAgaWYgYnJhbmNoOgogICAgICAgIGFyZ3MgKz0gWyItYiIsIGJyYW5jaF0KICAgIHRyeToKICAgICAgICBwcm9jID0gc3VicHJvY2Vzcy5ydW4oWyJnaXQiLCAiLUMiLCByZXBvX3BhdGgsICphcmdzXSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY2FwdHVyZV9vdXRwdXQ9VHJ1ZSwgdGV4dD1UcnVlLCB0aW1lb3V0PTEyMCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc2hlbGw9RmFsc2UpCiAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGV4YzogICMgbm9xYTogQkxFMDAxCiAgICAgICAgcmV0dXJuIGVycihmImdpdCBnYWdhbCBkaWphbGFua2FuOiB7ZXhjfSIsIHJlcG9fcGF0aD1yZXBvX3BhdGgpCiAgICBpZiBwcm9jLnJldHVybmNvZGUgIT0gMDoKICAgICAgICByZXR1cm4gZXJyKCJnaXQgd29ya3RyZWUgZ2FnYWwuIiwgc3RkZXJyPXByb2Muc3RkZXJyWzoyMDAwXSkKICAgIHJldHVybiBvayhyZXBvX3BhdGg9cmVwb19wYXRoLCB3b3JrdHJlZV9wYXRoPXN0cihyZXNvbHZlZCksIGJyYW5jaD1icmFuY2gpCgoKZGVmIGdpdF9jb21taXQocmVwb19wYXRoOiBzdHIsIG1lc3NhZ2U6IHN0ciwgYXBwcm92YWxfaWQ6IHN0ciA9ICIiLAogICAgICAgICAgICAgICBhcHByb3ZhbF90b2tlbjogc3RyID0gIiIpIC0+IGRpY3Q6CiAgICAiIiJDb21taXQg4oCUIGRpdG9sYWsga2VjdWFsaSBhZGEgYXBwcm92YWwgbWFudXNpYSB5YW5nIGRpc2V0dWp1aS4KCiAgICBTeWFyYXQgKEgxICsgR1BUIDMpOiByZXBvIHRlcmRhZnRhciBkaSByZWdpc3RyeTsgYXBwcm92YWwKICAgIGJlcnN0YXR1cyBgYGFwcHJvdmVkYGAgZGkgU1FMaXRlOyB0b2tlbiBzZWthbGkgcGFrYWkgdmFsaWQgJgogICAgYmVsdW0gZGlwYWthaSAmIGJlbHVtIGtlZGFsdXdhcnNhOyBoYXNoIGBgZ2l0IGRpZmZgYCBzYWF0IGluaQogICAgKFRJREFLIEJPTEVIIGtvc29uZyDigJQgTjEyKSBzYW1hIGRlbmdhbiBoYXNoIHNhYXQgZGlzZXR1anVpOyBkYW4KICAgIHJlcG8vYnJhbmNoIHNhYXQgaW5pIHNhbWEgZGVuZ2FuIHlhbmcgZGlpa2F0IHNhYXQgcGVyc2V0dWp1YW4uCiAgICBWZXJpZmlrYXNpICsgcGVuYW5kYWFuIHRva2VuIHRlcnBha2FpIGRpbGFrdWthbiBkYWxhbSBTQVRVCiAgICB0cmFuc2Frc2kgYXRvbWlrIChHUFQgMzogdGlkYWsgYWRhIGNlbGFoIHBha2FpLWJlcnNhbWFhbikg4oCUCiAgICBrYXJlbmEgaXR1IHRva2VuIGhhbmd1cyBqdWdhIGJpbGEgYGBnaXQgY29tbWl0YGAgZ2FnYWwgc2VzdWRhaG55YTsKICAgIG1pbnRhIHBlcnNldHVqdWFuIGJhcnUgZGFsYW0ga2FzdXMgaXR1LgogICAgIiIiCiAgICByZXBvLCBkZW5pZWQgPSBfcmVxdWlyZV9yZWdpc3RlcmVkX3JlcG8ocmVwb19wYXRoKQogICAgaWYgZGVuaWVkIGlzIG5vdCBOb25lOgogICAgICAgIHJldHVybiBkZW5pZWQKICAgIGFzc2VydCByZXBvIGlzIG5vdCBOb25lCiAgICByZXBvX3BhdGggPSBzdHIocmVwbykKICAgIGN1cnJlbnRfaGFzaCA9IGFwcHJvdmFsX3N0b3JlLmRpZmZfaGFzaF9mb3JfcmVwbyhyZXBvX3BhdGgpCiAgICBicmFuY2ggPSBfZ2l0X2JyYW5jaChyZXBvKQogICAgdmFsaWQsIHJlYXNvbiA9IGFwcHJvdmFsX3N0b3JlLnZlcmlmeV9hbmRfY29uc3VtZV90b2tlbigKICAgICAgICBhcHByb3ZhbF9pZCwgYXBwcm92YWxfdG9rZW4sIGN1cnJlbnRfZGlmZl9oYXNoPWN1cnJlbnRfaGFzaCwKICAgICAgICByZXBvX3BhdGg9cmVwb19wYXRoLCBicmFuY2g9YnJhbmNoKQogICAgaWYgbm90IHZhbGlkOgogICAgICAgIHJldHVybiBlcnIoCiAgICAgICAgICAgICJDb21taXQgbWVtZXJsdWthbiBhcHByb3ZhbCBtYW51c2lhIHlhbmcgZGlzZXR1anVpLiAiCiAgICAgICAgICAgICJNaW50YSBhcHByb3ZhbCBsZXdhdCBhcHByb3ZhbF9yZXF1ZXN0LCBzZXR1anVpIGxld2F0ICIKICAgICAgICAgICAgImBtdWZha2F0IGFwcHJvdmUgPGlkPmAgKG1hbnVzaWEsIGRpIFRUWSksIGxhbHUgdWxhbmdpICIKICAgICAgICAgICAgImRlbmdhbiBhcHByb3ZhbF9pZCArIGFwcHJvdmFsX3Rva2VuIHNla2FsaSBwYWthaS4gIgogICAgICAgICAgICBmIkFsYXNhbjoge3JlYXNvbn0iLAogICAgICAgICAgICBhcHByb3ZhbF9pZD1hcHByb3ZhbF9pZCkKICAgIHRyeToKICAgICAgICBwcm9jID0gc3VicHJvY2Vzcy5ydW4oCiAgICAgICAgICAgIFsiZ2l0IiwgIi1DIiwgcmVwb19wYXRoLCAiY29tbWl0IiwgIi1tIiwgbWVzc2FnZV0sCiAgICAgICAgICAgIGNhcHR1cmVfb3V0cHV0PVRydWUsIHRleHQ9VHJ1ZSwgdGltZW91dD02MCwgc2hlbGw9RmFsc2UpCiAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGV4YzogICMgbm9xYTogQkxFMDAxCiAgICAgICAgcmV0dXJuIGVycigiZ2l0IGdhZ2FsIGRpamFsYW5rYW4gKHRva2VuIGFwcHJvdmFsIHN1ZGFoIGhhbmd1cyDigJQgIgogICAgICAgICAgICAgICAgICAgIm1pbnRhIHBlcnNldHVqdWFuIGJhcnUgYmlsYSBwZXJsdSkuIiwKICAgICAgICAgICAgICAgICAgIHJlcG9fcGF0aD1yZXBvX3BhdGgsIGVycm9yX2RldGFpbD1zdHIoZXhjKSkKICAgIGlmIHByb2MucmV0dXJuY29kZSAhPSAwOgogICAgICAgIHJldHVybiBlcnIoImdpdCBjb21taXQgZ2FnYWwgKHRva2VuIGFwcHJvdmFsIHN1ZGFoIGhhbmd1cyDigJQgIgogICAgICAgICAgICAgICAgICAgIm1pbnRhIHBlcnNldHVqdWFuIGJhcnUgYmlsYSBwZXJsdSkuIiwKICAgICAgICAgICAgICAgICAgIHN0ZGVycj1wcm9jLnN0ZGVycls6MjAwMF0sIHN0ZG91dD1wcm9jLnN0ZG91dFs6MjAwMF0pCiAgICByZXR1cm4gb2socmVwb19wYXRoPXJlcG9fcGF0aCwgbWVzc2FnZT1tZXNzYWdlLAogICAgICAgICAgICAgIGFwcHJvdmFsX2lkPWFwcHJvdmFsX2lkLCBvdXRwdXQ9cHJvYy5zdGRvdXRbOjIwMDBdLAogICAgICAgICAgICAgIGNvbW1pdHRlZF9hdD11dGNub3coKSkKCgpkZWYgcmVnaXN0ZXIobWNwKSAtPiBsaXN0W3N0cl06CiAgICAiIiJEYWZ0YXJrYW4gc2VtdWEgdG9vbCBkb21haW4gZ2l0IGtlIGBgbWNwYGAuIiIiCiAgICBmb3IgZm4gaW4gKGdpdF9zdGF0dXMsIGdpdF9kaWZmLCBnaXRfYnJhbmNoLCBnaXRfY3JlYXRlX3dvcmt0cmVlLAogICAgICAgICAgICAgICBnaXRfY29tbWl0KToKICAgICAgICBtY3AudG9vbChmbikKICAgIHJldHVybiBbY1sibmFtZSJdIGZvciBjIGluIENPTlRSQUNUU10K
+"""Domain git — status/diff/branch read-only, worktree/commit terkendali.
+
+Permission: ``read`` untuk status/diff/branch, ``write-sandbox``
+untuk worktree (hanya di bawah ``runs/``), ``approval-required``
+untuk commit — commit tanpa approval yang tercatat dan disetujui
+ditolak mentah-mentah. Tool ini TIDAK pernah push.
+"""
+
+from __future__ import annotations
+
+import subprocess
+from pathlib import Path
+
+from mufakat.mcp_server import approval_store
+from mufakat.mcp_server.repo_registry import resolve_registered_repo
+from mufakat.mcp_server.tools import err, git_status_safe, ok
+from mufakat.runner import utcnow
+
+DOMAIN = "git"
+
+CONTRACTS = [
+    {"name": "git_status", "description": "Status git read-only.",
+     "permission": "read", "scope": "git"},
+    {"name": "git_diff", "description": "Diff (stat + patch) read-only.",
+     "permission": "read", "scope": "git"},
+    {"name": "git_branch", "description": "Daftar branch read-only.",
+     "permission": "read", "scope": "git"},
+    {"name": "git_create_worktree", "description": "Buat worktree di bawah runs/.",
+     "permission": "write-sandbox", "scope": "git"},
+    {"name": "git_commit", "description": "Commit — wajib approval yang disetujui.",
+     "permission": "approval-required", "scope": "git"},
+]
+
+
+def _require_registered_repo(repo_path: str) -> tuple[Path | None, dict | None]:
+    """Repo terdaftar (GPT 5) atau (None, error-dict) bila tidak terdaftar."""
+    registered = resolve_registered_repo(repo_path)
+    if registered is None:
+        return None, err(
+            "Repo belum terdaftar di registry (~/.mufakat/runner.json). "
+            "Daftarkan dulu lewat CLI lokal: "
+            "`mufakat repo-register <nama> <path>`.",
+            repo_path=repo_path)
+    return registered, None
+
+
+def _git_branch(repo: Path) -> str:
+    """Branch saat ini ('' bila gagal dibaca)."""
+    try:
+        proc = _git(str(repo), "rev-parse", "--abbrev-ref", "HEAD")
+    except Exception:  # noqa: BLE001
+        return ""
+    return proc.stdout.strip() if proc.returncode == 0 else ""
+
+
+def git_status(repo_path: str = ".") -> dict:
+    """Status git read-only untuk sebuah repo lokal (harus terdaftar)."""
+    return git_status_safe(repo_path)
+
+
+def _git(repo_path: str, *args: str) -> subprocess.CompletedProcess:
+    return subprocess.run(
+        ["git", "-C", repo_path, *args], capture_output=True, text=True,
+        timeout=60, shell=False,
+    )
+
+
+def git_diff(repo_path: str = ".", max_chars: int = 20000) -> dict:
+    """Diff read-only: ringkasan stat + patch (dibatasi panjangnya)."""
+    repo, denied = _require_registered_repo(repo_path)
+    if denied is not None:
+        return denied
+    assert repo is not None
+    repo_path = str(repo)
+    try:
+        stat = _git(repo_path, "diff", "--stat")
+        patch = _git(repo_path, "diff")
+    except Exception as exc:  # noqa: BLE001
+        return err(f"git gagal dijalankan: {exc}", repo_path=repo_path)
+    if stat.returncode != 0:
+        return err("Bukan repositori git atau git error.",
+                   repo_path=repo_path, stderr=stat.stderr[:2000])
+    return ok(repo_path=repo_path, stat=stat.stdout,
+              patch=patch.stdout[:max_chars])
+
+
+def git_branch(repo_path: str = ".") -> dict:
+    """Daftar branch read-only."""
+    repo, denied = _require_registered_repo(repo_path)
+    if denied is not None:
+        return denied
+    assert repo is not None
+    repo_path = str(repo)
+    try:
+        proc = _git(repo_path, "branch", "--list")
+    except Exception as exc:  # noqa: BLE001
+        return err(f"git gagal dijalankan: {exc}", repo_path=repo_path)
+    if proc.returncode != 0:
+        return err("Bukan repositori git atau git error.",
+                   repo_path=repo_path, stderr=proc.stderr[:2000])
+    branches = [line.strip().lstrip("* ").strip()
+                for line in proc.stdout.splitlines() if line.strip()]
+    return ok(repo_path=repo_path, branches=branches)
+
+
+def git_create_worktree(repo_path: str, worktree_path: str,
+                        branch: str = "") -> dict:
+    """Buat git worktree — hanya di bawah folder ``runs/``."""
+    repo, denied = _require_registered_repo(repo_path)
+    if denied is not None:
+        return denied
+    assert repo is not None
+    repo_path = str(repo)
+    target = Path(worktree_path)
+    runs_root = Path("runs").resolve()
+    try:
+        resolved = target.resolve()
+    except OSError as exc:
+        return err(f"Path worktree tidak valid: {exc}")
+    if runs_root not in resolved.parents and resolved != runs_root:
+        return err("Worktree hanya boleh dibuat di bawah runs/.",
+                   worktree_path=worktree_path)
+    args = ["worktree", "add", str(resolved)]
+    if branch:
+        args += ["-b", branch]
+    try:
+        proc = subprocess.run(["git", "-C", repo_path, *args],
+                              capture_output=True, text=True, timeout=120,
+                              shell=False)
+    except Exception as exc:  # noqa: BLE001
+        return err(f"git gagal dijalankan: {exc}", repo_path=repo_path)
+    if proc.returncode != 0:
+        return err("git worktree gagal.", stderr=proc.stderr[:2000])
+    return ok(repo_path=repo_path, worktree_path=str(resolved), branch=branch)
+
+
+def git_commit(repo_path: str, message: str, approval_id: str = "",
+               approval_token: str = "") -> dict:
+    """Commit — ditolak kecuali ada approval manusia yang disetujui.
+
+    Syarat (H1 + GPT 3): repo terdaftar di registry; approval
+    berstatus ``approved`` di SQLite; token sekali pakai valid &
+    belum dipakai & belum kedaluwarsa; hash ``git diff`` saat ini
+    (TIDAK BOLEH kosong — N12) sama dengan hash saat disetujui; dan
+    repo/branch saat ini sama dengan yang diikat saat persetujuan.
+    Verifikasi + penandaan token terpakai dilakukan dalam SATU
+    transaksi atomik (GPT 3: tidak ada celah pakai-bersamaan) —
+    karena itu token hangus juga bila ``git commit`` gagal sesudahnya;
+    minta persetujuan baru dalam kasus itu.
+    """
+    repo, denied = _require_registered_repo(repo_path)
+    if denied is not None:
+        return denied
+    assert repo is not None
+    repo_path = str(repo)
+    current_hash = approval_store.diff_hash_for_repo(repo_path)
+    branch = _git_branch(repo)
+    valid, reason = approval_store.verify_and_consume_token(
+        approval_id, approval_token, current_diff_hash=current_hash,
+        repo_path=repo_path, branch=branch)
+    if not valid:
+        return err(
+            "Commit memerlukan approval manusia yang disetujui. "
+            "Minta approval lewat approval_request, setujui lewat "
+            "`mufakat approve <id>` (manusia, di TTY), lalu ulangi "
+            "dengan approval_id + approval_token sekali pakai. "
+            f"Alasan: {reason}",
+            approval_id=approval_id)
+    try:
+        proc = subprocess.run(
+            ["git", "-C", repo_path, "commit", "-m", message],
+            capture_output=True, text=True, timeout=60, shell=False)
+    except Exception as exc:  # noqa: BLE001
+        return err("git gagal dijalankan (token approval sudah hangus — "
+                   "minta persetujuan baru bila perlu).",
+                   repo_path=repo_path, error_detail=str(exc))
+    if proc.returncode != 0:
+        return err("git commit gagal (token approval sudah hangus — "
+                   "minta persetujuan baru bila perlu).",
+                   stderr=proc.stderr[:2000], stdout=proc.stdout[:2000])
+    return ok(repo_path=repo_path, message=message,
+              approval_id=approval_id, output=proc.stdout[:2000],
+              committed_at=utcnow())
+
+
+def register(mcp) -> list[str]:
+    """Daftarkan semua tool domain git ke ``mcp``."""
+    for fn in (git_status, git_diff, git_branch, git_create_worktree,
+               git_commit):
+        mcp.tool(fn)
+    return [c["name"] for c in CONTRACTS]
