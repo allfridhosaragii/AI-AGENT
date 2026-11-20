@@ -6,24 +6,29 @@
 # semua mesin — bila `docker compose` tidak tersedia, abaikan file
 # ini dan pakai default SQLite.
 #
+# Keamanan (audit M11): port HANYA di 127.0.0.1 (dulu 0.0.0.0 —
+# bisa diakses siapa pun di Wi-Fi yang sama). Password WAJIB dari
+# file .env (salin .env.example -> .env, isi password kuat);
+# Redis memakai requirepass.
+#
 # Cara pakai:
+#   cp .env.example .env   # isi POSTGRES_PASSWORD & REDIS_PASSWORD
 #   docker compose up -d
-#   DATABASE_URL=postgresql://mufakat:mufakat@localhost:5432/mufakat \
-#   REDIS_URL=redis://localhost:6379/0 \
+#   DATABASE_URL=postgresql://mufakat:<POSTGRES_PASSWORD>@localhost:5432/mufakat \
+#   REDIS_URL=redis://:<REDIS_PASSWORD>@localhost:6379/0 \
 #   mufakat run "Buat REST API todo dengan FastAPI + test + audit"
 #
-# Jangan commit file .env berisi password nyata; contoh di bawah
-# hanya untuk pengembangan lokal.
+# Jangan commit file .env berisi password nyata.
 
 services:
   db:
     image: postgres:16
     environment:
       POSTGRES_USER: mufakat
-      POSTGRES_PASSWORD: mufakat
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD wajib diisi di .env}
       POSTGRES_DB: mufakat
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"
     volumes:
       - mufakat_pgdata:/var/lib/postgresql/data
     healthcheck:
@@ -34,12 +39,13 @@ services:
 
   redis:
     image: redis:7
+    command: ["redis-server", "--requirepass", "${REDIS_PASSWORD:?REDIS_PASSWORD wajib diisi di .env}"]
     ports:
-      - "6379:6379"
+      - "127.0.0.1:6379:6379"
     volumes:
       - mufakat_redisdata:/data
     healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD}", "ping"]
       interval: 5s
       timeout: 5s
       retries: 10
@@ -53,8 +59,8 @@ services:
   #     redis:
   #       condition: service_healthy
   #   environment:
-  #     DATABASE_URL: postgresql://mufakat:mufakat@db:5432/mufakat
-  #     REDIS_URL: redis://redis:6379/0
+  #     DATABASE_URL: postgresql://mufakat:${POSTGRES_PASSWORD}@db:5432/mufakat
+  #     REDIS_URL: redis://:${REDIS_PASSWORD}@redis:6379/0
   #   volumes:
   #     - ./runs:/app/runs
 
