@@ -53,6 +53,14 @@ mufakat-mcp = "mufakat.mcp_server.server:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.pytest.ini_options]
+# Artefak run (runs/*/worktree/test_main.py) tidak boleh dikoleksi:
+# tiap run punya test_main.py yang sama namanya sehingga pytest
+# gagal "import file mismatch" begitu ada >1 run (ditemukan Putaran 2
+# setelah mock run membuat runs/c2052540).
+testpaths = ["tests"]
+norecursedirs = ["runs", ".venv", ".git", "__pycache__", ".mypy_cache", ".ruff_cache"]
+
 [tool.ruff]
 line-length = 100
 target-version = "py312"
