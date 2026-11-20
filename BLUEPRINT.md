@@ -574,6 +574,106 @@ DECISIONS A15 dengan alasan.
 
 ---
 
+## 17. MUFAKAT Room — browser login, manual handoff default (20 Nov 2026)
+
+### 17.1 Konflik Claude ROOM vs ChatGPT V3 — dan penyelesaiannya
+
+| Sumber | Posisi |
+|---|---|
+| Claude MUFAKAT-ROOM.md | Chrome Extension sebagai moderator: `fillInput` + `readLastReply` DOM di 6 situs; pacing 20 dtk; batas harian 40; secret scanner; Local Runner via Native Messaging. |
+| ChatGPT V3 (§2, Addendum D, F, G, I) | **Tidak ada extension di MVP**; larang DOM scraping, otomasi kirim/ambil, Playwright/Selenium/CDP, pembacaan cookie/token; wajib Manual Handoff sebagai default; state machine handoff DRAFT → … → APPROVED; provider-policy snapshot per provider. |
+
+**Keputusan (jujur, tidak disembunyikan): mode default = MANUAL HANDOFF
+(V3 §2.2 Mode B).** Extension Claude dipakai HANYA sebagai modul **opt-in
+Fase 2 (Assisted Fill)**, terpisah di `mufakat-room/`, tidak aktif secara
+default, dan tidak pernah menekan Kirim/Enter. Alasannya: ToS provider
+(Addendum G) melarang ekstraksi otomatis — ChatGPT (1 Jan 2026), Claude
+(consumer terms), Gemini, DeepSeek (27 Mar 2026), Qwen (19 Mei 2026) —
+dan V3 secara eksplisit melarang extension pada MVP. Mengklaim "connected"
+untuk manual handoff adalah klaim palsu; status per provider ditulis jujur
+di `src/mufakat/room/providers.py`.
+
+### 17.2 Apa yang dibangun (20 Nov 2026)
+
+**Engine Python — `src/mufakat/room/` (mode default, teruji pytest):**
+- `handoff.py` — Room + state machine V3 Addendum F (10 state, transisi
+  tervalidasi; state tidak maju tanpa impor respons), prompt queue per
+  provider, `copy_prompt` (secret scan + pacing sebelum salin), impor
+  respons berlabel `"user imported"` + provenance (provider, ronde, waktu
+  impor), konsensus reuse `mufakat.consensus.voting`, persistensi JSON
+  (`room.json` + `transcript.jsonl`).
+- `secret_scan.py` — regex API key/token/password/`-----BEGIN`/`.env`;
+  bila ketemu → blokir + peringatan; nilai asli tidak disimpan di log.
+- `pacing.py` — jeda min 20 dtk/situs, batas harian default 40; bila
+  tercapai → ronde ditunda.
+- `parser.py` — blok ```json terakhir, validasi minimal skema §3, status
+  `ok | repair_needed | unparsed`, maks 1x repair.
+- `providers.py` — registry 6 provider dengan kapabilitas V3 §2.5;
+  ChatGPT/Claude/Gemini/DeepSeek/Qwen = `manual_handoff`, Muse =
+  `needs_policy_review`; otomasi submission/retrieval = `False` untuk semua.
+- `prompts.py` — 11 template per peran/fase, diakhiri instruksi blok JSON.
+- `state_machine.py` — mesin debat Claude §2 (maks 3 ronde debat, 5 iterasi
+  perbaikan, 12 total; eskalasi otomatis bila batas tercapai).
+- `anti_loop.py` — hash (diff + temuan) berulang 2x atau temuan stagnan
+  2 iterasi → eskalasi.
+- `storage.py` — SQLite stdlib (padanan Dexie/IndexedDB): rooms, responses,
+  usage + ekspor Markdown.
+- `demo.py` — mock end-to-end (`python -m mufakat.room.demo`): handoff mock
+  + konsensus + gates nyata atas kode contoh → `runs/room-mock-<id>/`.
+
+**Extension scaffold — `mufakat-room/` (Fase 2, opt-in, BELUM terverifikasi):**
+WXT/React/TS file-by-file (pnpm tidak tersedia di VM — `pnpm install` /
+`pnpm dev` / vitest belum pernah jalan). Manifest MV3 permission minimal
+(`sidePanel`, `storage`, `unlimitedStorage`, `clipboardWrite`,
+`nativeMessaging` + 6 host permission saja; tanpa `cookies`/`webRequest`/
+`declarativeNetRequest`/`debugger`/`<all_urls>`). 6 content script adapter
+dengan interface `SiteAdapter` (`fillInput` HANYA isi teks, TIDAK kirim;
+`readLastReply`; `isGenerating`; `detectBlocker`), `selectors.json` versioned
+dengan `lastVerified: "belum terverifikasi"`, Selector Doctor, engine TS,
+storage Dexie, `runnerClient.ts` (Native Messaging `com.mufakat.runner`).
+
+**Local Runner — `mufakat-room/runner/` (Python stdlib, teruji unit):**
+`host.py` (native messaging length-prefixed; perintah `init_workspace`,
+`apply_files`, `run_gates`, `diff`, `commit`, `cleanup`, `status`; commit
+hanya dengan approval token sekali pakai; tidak pernah push),
+`worktree.py` (tolak path traversal — `../../etc/passwd` ditolak sebelum
+file ditulis; reuse `mufakat.sandbox.worktree` bila terpasang),
+`sandbox.py` (reuse `mufakat.sandbox.docker`; Docker tidak ada → hasil
+`verified: false`, exit 127), `gates/` + `verdict.py` (reuse
+`mufakat.gates.runner`/`verdict`; tambah status `ESKALASI` bila anti-loop
+memicu), `mcp_server.py` (tool `room_status`, `gate_report`, `run_gates`;
+FastMCP opsional), `install_host.py` (`allowed_origins` = ID ekstensi saja),
+`docker/sandbox.Dockerfile` (salinan dari `docker/`).
+
+### 17.3 Aturan keamanan (tidak boleh dilanggar — Claude §0 + V3 Addendum D/I)
+
+- TIDAK ADA auto-send: tidak ada kode yang menekan Kirim/Enter atau
+  dispatch klik kirim — di Python maupun TS (grep: tidak ada `click()` pada
+  tombol kirim di adapter manapun).
+- TIDAK memanggil API internal situs AI; TIDAK membaca/menyalin cookie,
+  token, localStorage, password; TIDAK ada tab tersembunyi/headless browser/
+  Playwright/Puppeteer/Selenium untuk situs AI; TIDAK ada rotasi multi-akun
+  atau bypass captcha/limit; TIDAK ada polling background (baca jawaban hanya
+  saat dipicu pengguna).
+- Secret scanner sebelum kirim; semua data lokal; tidak ada server
+  eksternal/analytics.
+- Kode AI tidak pernah dijalankan langsung di laptop; hanya Docker non-root,
+  tanpa `$HOME`, network none saat test, CPU/RAM/waktu dibatasi; patch ke git
+  worktree terpisah; commit/push/instal dependensi wajib approval manusia.
+- Disclaimer ToS §0.4 tampil di README Room dan layar pertama side panel.
+
+### 17.4 Yang masih manual & belum terverifikasi
+
+- **Manual (pengguna):** login di tiap situs AI; menekan Kirim; menyalin +
+  menempel jawaban; menyetujui patch/commit. Tidak ada jalan pintas otomatis
+  yang dijanjikan.
+- **Belum terverifikasi:** extension (`pnpm dev`, vitest, uji manual di 6
+  situs, `selectors.json.lastVerified`); Docker sandbox di VM ini; server MCP
+  runner di MCP Inspector; debat multi-AI sungguhan via browser (butuh
+  pengguna menjalankan handoff manual).
+
+---
+
 *Dokumen ini digabung dari dua sumber owner (Claude + ChatGPT) dan
 diimplementasikan di repo `~/workspace/mufakat/`. Bila ada konflik antara
 kedua sumber, yang dipakai: LangGraph satu orkestrator, satu server MCP,
