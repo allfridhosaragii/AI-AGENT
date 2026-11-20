@@ -2,51 +2,17 @@
 // Adapter situs: fillInput HANYA mengisi teks (TIDAK kirim), readLastReply
 // hanya membaca DOM yang tampil. Selector dari selectors.json (versioned).
 // Bila selector gagal -> fallback clipboard + mode Manual Copy.
-import {
-  detectBlockerGeneric,
-  fillInputGeneric,
-  isGeneratingGeneric,
-  readLastReplyGeneric,
-  type SiteAdapter,
-  type SiteSelectors,
-} from '../adapters/base';
+// Jalur Assisted Fill (opt-in Fase 2, TIDAK aktif di MVP browser-only);
+// alur utama Room adalah Manual Handoff.
+import { createAdapter, registerAdapterMessages, type SiteSelectors } from '../adapters/base';
 import selectorsJson from '../adapters/selectors.json';
 
 const selectors = (selectorsJson.sites as Record<string, SiteSelectors>)['deepseek'];
 
-export const adapter: SiteAdapter = {
-  id: 'deepseek',
-  family: 'deepseek',
+export default defineContentScript({
   matches: selectors.matches,
-  isLoggedIn: () => detectBlockerGeneric(selectors) !== 'logged_out',
-  detectBlocker: () => detectBlockerGeneric(selectors),
-  fillInput: (text: string) => fillInputGeneric(selectors, text),
-  isGenerating: () => isGeneratingGeneric(selectors),
-  readLastReply: () => readLastReplyGeneric(selectors),
-};
-
-chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
-  if (message?.type === 'FILL_INPUT') {
-    adapter
-      .fillInput(String(message.text ?? ''))
-      .then((ok) => sendResponse({ ok, filled: ok }))
-      .catch((error: unknown) => sendResponse({ ok: false, error: String(error) }));
-    return true;
-  }
-  if (message?.type === 'READ_LAST_REPLY') {
-    const reply = adapter.readLastReply();
-    sendResponse({ ok: reply !== null, reply });
-    return true;
-  }
-  if (message?.type === 'ADAPTER_STATUS') {
-    sendResponse({
-      ok: true,
-      id: adapter.id,
-      loggedIn: adapter.isLoggedIn(),
-      blocker: adapter.detectBlocker(),
-      generating: adapter.isGenerating(),
-    });
-    return true;
-  }
-  return false;
+  main() {
+    const adapter = createAdapter('deepseek', 'deepseek', selectors);
+    registerAdapterMessages(adapter, selectors);
+  },
 });
