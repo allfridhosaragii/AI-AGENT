@@ -11,6 +11,7 @@ gagal import hanya karena langgraph belum terinstal.
 from __future__ import annotations
 
 import asyncio
+from typing import Any
 
 from .edges import should_continue_debate, should_revise
 from .nodes import NODES
@@ -108,14 +109,47 @@ def build_graph(adapters=None, checkpointer_path=None, ctx=None):
         "audit_final": END,
         "escalate": END,
     })
-    graph.add_edge("revise", "audit")
+    graph.add_edge("revise", "review")
 
-    checkpointer = None
+    checkpointer: Any = None
     if checkpointer_path and SqliteSaver is not None:
+        # M10: SqliteSaver.from_conn_string() mengembalikan context
+        # manager (crash "Invalid checkpointer provided"). Pakai
+        # konstruktor langsung dengan koneksi — BUKAN from_conn_string.
+        # Graph MUFAKAT dijalankan async (ainvoke): SqliteSaver sinkron
+        # tidak mendukung metode async, jadi bila ada event loop yang
+        # sedang berjalan, pakai AsyncSqliteSaver dengan koneksi
+        # aiosqlite (dibuat di loop yang sama — AsyncSqliteSaver
+        # terikat ke loop pembuatnya). Bila dipanggil dari konteks
+        # sinkron (tanpa loop), pakai SqliteSaver(sqlite3.connect(
+        # path, check_same_thread=False)) sesuai audit — graph itu
+        # lalu harus dibangun/dijalankan di dalam loop async bila
+        # memakai ainvoke.
+        import asyncio
+
         try:
-            checkpointer = SqliteSaver.from_conn_string(str(checkpointer_path))
-        except Exception:
-            checkpointer = MemorySaver()
+            asyncio.get_running_loop()
+            _loop_running = True
+        except RuntimeError:
+            _loop_running = False
+        if _loop_running:
+            try:
+                import aiosqlite
+                from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver
+
+                checkpointer = AsyncSqliteSaver(
+                    aiosqlite.connect(str(checkpointer_path)))
+            except Exception:
+                checkpointer = MemorySaver()
+        else:
+            import sqlite3
+
+            try:
+                conn = sqlite3.connect(str(checkpointer_path),
+                                       check_same_thread=False)
+                checkpointer = SqliteSaver(conn)
+            except Exception:
+                checkpointer = MemorySaver()
     else:
         checkpointer = MemorySaver()
     return graph.compile(checkpointer=checkpointer)
