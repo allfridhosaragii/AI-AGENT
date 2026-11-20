@@ -146,13 +146,19 @@ def test_mcp_debate_start_and_gate(tmp_path, monkeypatch):
     status = debate_status(run_id)
     assert status["ok"] is True and status["run_id"] == run_id
     gate = gate_report(run_id)
-    # Per 20 Nov 2026 run nyata menulis gates/<tool>.json + verdict.json
-    # (dulu: belum terverifikasi). Verdict AMAN untuk template bersih.
+    # Run nyata menulis gates/<tool>.json + verdict.json. Tanpa Docker,
+    # gate gagal-tertutup sandbox-unavailable -> verdict
+    # BELUM_TERVERIFIKASI (fail-closed, audit C1/H3), bukan AMAN.
     assert gate["verified"] is True and gate["status"] == "terverifikasi"
     names = {g["name"] for g in gate["gates"]}
     assert "verdict.json" in names and "pytest.json" in names
     verdict = next(g for g in gate["gates"] if g["name"] == "verdict.json")
-    assert verdict["data"]["status"] == "AMAN"
+    import shutil as _shutil
+
+    if _shutil.which("docker") is None:
+        assert verdict["data"]["status"] == "BELUM_TERVERIFIKASI"
+    else:  # pragma: no cover - Docker ada di host ini
+        assert verdict["data"]["status"] == "AMAN"
 
 
 # ---------------------------------------------------------------------------
