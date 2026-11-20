@@ -1,1 +1,379 @@
-IiIiUGVueWltcGFuYW4gYXBwcm92YWwgbWFudXNpYSBkaSBTUUxpdGUgKGF1ZGl0IDIwIE5vdiAyMDI2OiBIMSkuCgpBcHByb3ZhbCBIQU5ZQSBkaXB1dHVza2FuIG1hbnVzaWEgbGV3YXQgQ0xJIGBgbXVmYWthdCBhcHByb3ZlIDxpZD5gYAooa29uZmlybWFzaSB5L04gZGkgVFRZKSDigJQgVElEQUsgQURBIHRvb2wgTUNQIHlhbmcgYmlzYSBtZW11dHVza2FuLgpBdHVyYW46CgotIFNhdHUgYXBwcm92YWwgPSBzYXR1IGJhcmlzIFNRTGl0ZSAoYnVrYW4gZGljdCBtZW1vcmkpOiBzdGF0dXMKICBgYHBlbmRpbmdgYCAtPiBgYGFwcHJvdmVkYGAvYGByZWplY3RlZGBgLCBzZWthbGkgcHV0dXMgdGlkYWsgYmlzYQogIGRpdWJhaCBsYWdpLiBgYGRlY2lkZV9hcHByb3ZhbGBgIGF0b21payAoc2F0dSB0cmFuc2Frc2kKICBgYEJFR0lOIElNTUVESUFURWBgICsgYGBVUERBVEUgLi4uIFdIRVJFIHN0YXR1cz0ncGVuZGluZydgYCDigJQKICBkdWEgcHJvc2VzIHlhbmcgbWVtdXR1c2thbiBiZXJzYW1hYW4gaGFueWEgc2F0dSB5YW5nIG1lbmFuZywKICBHUFQgMykuCi0gVGVyaWthdCBoYXNoIGRpZmY6IHNhYXQgbWFudXNpYSBtZW55ZXR1anVpLCBoYXNoIGBgZ2l0IGRpZmZgYCBzYWF0CiAgaXR1IGRpc2ltcGFuOyBgYGdpdF9jb21taXRgYCBtZW5vbGFrIGJpbGEgZGlmZiBzYWF0IGNvbW1pdCBiZXJiZWRhLgogIEhhc2gga29zb25nIERJVE9MQUsgKE4xMik6IGdpdCBlcnJvciAvIGJ1a2FuIHJlcG8gdGlkYWsgYm9sZWgKICBtZWxld2F0aSBjZWsuIEFwcHJvdmFsIGp1Z2EgdGVyaWthdCBpZGVudGl0YXMgcmVwbywgYnJhbmNoLCBkYW4KICB3b3JrdHJlZSAoR1BUIDMpIGJpbGEgZGlpa2F0IHNhYXQgcGVyc2V0dWp1YW4uCi0gVG9rZW4gc2VrYWxpIHBha2FpOiBkaXRlcmJpdGthbiBzYWF0IHBlcnNldHVqdWFuLCBkaXNpbXBhbiBIQU5ZQQogIHNlYmFnYWkgaGFzaCBTSEEtMjU2IChidWthbiBwbGFpbnRleHQpLCBtYXNhIGJlcmxha3UgMjQgamFtLAogIGhhbmd1cyBzZXRlbGFoIGRpcGFrYWkgY29tbWl0LiBWZXJpZmlrYXNpICsgcGVuYW5kYWFuIHRlcnBha2FpCiAgZGlsYWt1a2FuIGRhbGFtIFNBVFUgdHJhbnNha3NpIGF0b21pawogICg6ZnVuYzpgdmVyaWZ5X2FuZF9jb25zdW1lX3Rva2VuYCkg4oCUIHRpZGFrIGFkYSBjZWxhaCBkdWEgcHJvc2VzCiAgbWVtYWthaSB0b2tlbiB5YW5nIHNhbWEgc2ViZWx1bSBkaXRhbmRhaSB0ZXJwYWthaSAoR1BUIDMpLgotIEphbHVyIERCOiBlbnYgYGBNVUZBS0FUX0FQUFJPVkFMU19EQmBgIGF0YXUgYGBydW5zL2FwcHJvdmFscy5kYmBgLgoiIiIKCmZyb20gX19mdXR1cmVfXyBpbXBvcnQgYW5ub3RhdGlvbnMKCmltcG9ydCBoYXNobGliCmltcG9ydCBobWFjCmltcG9ydCBvcwppbXBvcnQgc2VjcmV0cwppbXBvcnQgc3FsaXRlMwppbXBvcnQgc3VicHJvY2Vzcwpmcm9tIGRhdGV0aW1lIGltcG9ydCBkYXRldGltZSwgdGltZWRlbHRhLCB0aW1lem9uZQpmcm9tIHBhdGhsaWIgaW1wb3J0IFBhdGgKCnRyeToKICAgIGZyb20gbXVmYWthdC5ydW5uZXIgaW1wb3J0IHJ1bnNfZGlyLCB1dGNub3cKZXhjZXB0IEltcG9ydEVycm9yOiAgIyBwcmFnbWE6IG5vIGNvdmVyCiAgICBmcm9tIG11ZmFrYXQucnVubmVyIGltcG9ydCBydW5zX2RpciwgdXRjbm93ICAjIHR5cGU6IGlnbm9yZQoKVE9LRU5fVFRMX0hPVVJTID0gMjQKCl9TQ0hFTUEgPSAiIiIKQ1JFQVRFIFRBQkxFIElGIE5PVCBFWElTVFMgYXBwcm92YWxzICgKICAgIGFwcHJvdmFsX2lkIFRFWFQgUFJJTUFSWSBLRVksCiAgICB0aXRsZSBURVhUIE5PVCBOVUxMIERFRkFVTFQgJycsCiAgICBydW5faWQgVEVYVCBOT1QgTlVMTCBERUZBVUxUICcnLAogICAgcmVxdWVzdGVkX2J5IFRFWFQgTk9UIE5VTEwgREVGQVVMVCAnJywKICAgIGRpZmZfaGFzaCBURVhUIE5PVCBOVUxMIERFRkFVTFQgJycsCiAgICBzdGF0dXMgVEVYVCBOT1QgTlVMTCBERUZBVUxUICdwZW5kaW5nJywKICAgIHRva2VuX2hhc2ggVEVYVCwKICAgIGV4cGlyZXNfYXQgVEVYVCwKICAgIHVzZWQgSU5URUdFUiBOT1QgTlVMTCBERUZBVUxUIDAsCiAgICBkZWNpZGVkX2J5IFRFWFQgTk9UIE5VTEwgREVGQVVMVCAnJywKICAgIG5vdGUgVEVYVCBOT1QgTlVMTCBERUZBVUxUICcnLAogICAgY3JlYXRlZF9hdCBURVhUIE5PVCBOVUxMLAogICAgZGVjaWRlZF9hdCBURVhULAogICAgcmVwb19wYXRoIFRFWFQgTk9UIE5VTEwgREVGQVVMVCAnJywKICAgIGJyYW5jaCBURVhUIE5PVCBOVUxMIERFRkFVTFQgJycsCiAgICB3b3JrdHJlZSBURVhUIE5PVCBOVUxMIERFRkFVTFQgJycKKQoiIiIKCiMgS29sb20gaWthdGFuIHJlcG8vYnJhbmNoL3dvcmt0cmVlIChHUFQgMykg4oCUIG1pZ3Jhc2kgdW50dWsgREIgbGFtYQojIHlhbmcgZGlidWF0IHNlYmVsdW0ga29sb20gaW5pIGFkYS4KX0JJTkRJTkdfQ09MVU1OUyA9ICgKICAgICgicmVwb19wYXRoIiwgIlRFWFQgTk9UIE5VTEwgREVGQVVMVCAnJyIpLAogICAgKCJicmFuY2giLCAiVEVYVCBOT1QgTlVMTCBERUZBVUxUICcnIiksCiAgICAoIndvcmt0cmVlIiwgIlRFWFQgTk9UIE5VTEwgREVGQVVMVCAnJyIpLAopCgoKZGVmIGRiX3BhdGgoKSAtPiBQYXRoOgogICAgIiIiTG9rYXNpIGZpbGUgU1FMaXRlIGFwcHJvdmFsLiIiIgogICAgb3ZlcnJpZGUgPSBvcy5lbnZpcm9uLmdldCgiTVVGQUtBVF9BUFBST1ZBTFNfREIiLCAiIikuc3RyaXAoKQogICAgaWYgb3ZlcnJpZGU6CiAgICAgICAgcmV0dXJuIFBhdGgob3ZlcnJpZGUpCiAgICByZXR1cm4gcnVuc19kaXIoKSAvICJhcHByb3ZhbHMuZGIiCgoKZGVmIF9jb25uZWN0KHBhdGg6IFBhdGggfCBOb25lID0gTm9uZSkgLT4gc3FsaXRlMy5Db25uZWN0aW9uOgogICAgcGF0aCA9IFBhdGgocGF0aCkgaWYgcGF0aCBpcyBub3QgTm9uZSBlbHNlIGRiX3BhdGgoKQogICAgcGF0aC5wYXJlbnQubWtkaXIocGFyZW50cz1UcnVlLCBleGlzdF9vaz1UcnVlKQogICAgY29ubiA9IHNxbGl0ZTMuY29ubmVjdChzdHIocGF0aCksIGNoZWNrX3NhbWVfdGhyZWFkPUZhbHNlKQogICAgY29ubi5yb3dfZmFjdG9yeSA9IHNxbGl0ZTMuUm93CiAgICBjb25uLmV4ZWN1dGUoX1NDSEVNQSkKICAgIGV4aXN0aW5nID0ge3Jvd1sxXSBmb3Igcm93IGluIGNvbm4uZXhlY3V0ZSgiUFJBR01BIHRhYmxlX2luZm8oYXBwcm92YWxzKSIpfQogICAgZm9yIGNvbHVtbiwgZGVmaW5pdGlvbiBpbiBfQklORElOR19DT0xVTU5TOgogICAgICAgIGlmIGNvbHVtbiBub3QgaW4gZXhpc3Rpbmc6CiAgICAgICAgICAgIGNvbm4uZXhlY3V0ZShmIkFMVEVSIFRBQkxFIGFwcHJvdmFscyBBREQgQ09MVU1OIHtjb2x1bW59IHtkZWZpbml0aW9ufSIpCiAgICBjb25uLmNvbW1pdCgpCiAgICByZXR1cm4gY29ubgoKCmRlZiBfcm93X3RvX2RpY3Qocm93OiBzcWxpdGUzLlJvdykgLT4gZGljdDoKICAgIHJlY29yZCA9IGRpY3Qocm93KQogICAgcmVjb3JkWyJ1c2VkIl0gPSBib29sKHJlY29yZC5nZXQoInVzZWQiKSkKICAgIHJlY29yZC5wb3AoInRva2VuX2hhc2giLCBOb25lKQogICAgcmV0dXJuIHJlY29yZAoKCmRlZiBjcmVhdGVfYXBwcm92YWwoYXBwcm92YWxfaWQ6IHN0ciwgdGl0bGU6IHN0ciwgcnVuX2lkOiBzdHIgPSAiIiwKICAgICAgICAgICAgICAgICAgICByZXF1ZXN0ZWRfYnk6IHN0ciA9ICIiLCBkaWZmX2hhc2g6IHN0ciA9ICIiLAogICAgICAgICAgICAgICAgICAgIHBhdGg6IFBhdGggfCBOb25lID0gTm9uZSwKICAgICAgICAgICAgICAgICAgICByZXBvX3BhdGg6IHN0ciA9ICIiLCBicmFuY2g6IHN0ciA9ICIiLAogICAgICAgICAgICAgICAgICAgIHdvcmt0cmVlOiBzdHIgPSAiIikgLT4gZGljdDoKICAgICIiIkJ1YXQgYXBwcm92YWwgcGVuZGluZzsga2VtYmFsaWthbiByZWNvcmQgKHRhbnBhIHRva2VuKS4iIiIKICAgIGNvbm4gPSBfY29ubmVjdChwYXRoKQogICAgdHJ5OgogICAgICAgIGNvbm4uZXhlY3V0ZSgKICAgICAgICAgICAgIklOU0VSVCBJTlRPIGFwcHJvdmFscyAoYXBwcm92YWxfaWQsIHRpdGxlLCBydW5faWQsIHJlcXVlc3RlZF9ieSwiCiAgICAgICAgICAgICIgZGlmZl9oYXNoLCBzdGF0dXMsIGNyZWF0ZWRfYXQsIHJlcG9fcGF0aCwgYnJhbmNoLCB3b3JrdHJlZSkiCiAgICAgICAgICAgICIgVkFMVUVTICg/LCA/LCA/LCA/LCA/LCAncGVuZGluZycsID8sID8sID8sID8pIiwKICAgICAgICAgICAgKGFwcHJvdmFsX2lkLCB0aXRsZSwgcnVuX2lkLCByZXF1ZXN0ZWRfYnksIGRpZmZfaGFzaCwgdXRjbm93KCksCiAgICAgICAgICAgICByZXBvX3BhdGgsIGJyYW5jaCwgd29ya3RyZWUpLAogICAgICAgICkKICAgICAgICBjb25uLmNvbW1pdCgpCiAgICBmaW5hbGx5OgogICAgICAgIGNvbm4uY2xvc2UoKQogICAgcmVjb3JkID0gZ2V0X2FwcHJvdmFsKGFwcHJvdmFsX2lkLCBwYXRoKQogICAgYXNzZXJ0IHJlY29yZCBpcyBub3QgTm9uZQogICAgcmV0dXJuIHJlY29yZAoKCmRlZiBnZXRfYXBwcm92YWwoYXBwcm92YWxfaWQ6IHN0ciwgcGF0aDogUGF0aCB8IE5vbmUgPSBOb25lKSAtPiBkaWN0IHwgTm9uZToKICAgICIiIkJhY2Egc2F0dSBhcHByb3ZhbCBkYXJpIFNRTGl0ZTsgTm9uZSBiaWxhIHRpZGFrIGFkYS4iIiIKICAgIGNvbm4gPSBfY29ubmVjdChwYXRoKQogICAgdHJ5OgogICAgICAgIHJvdyA9IGNvbm4uZXhlY3V0ZSgKICAgICAgICAgICAgIlNFTEVDVCAqIEZST00gYXBwcm92YWxzIFdIRVJFIGFwcHJvdmFsX2lkID0gPyIsCiAgICAgICAgICAgIChhcHByb3ZhbF9pZCwpLAogICAgICAgICkuZmV0Y2hvbmUoKQogICAgZmluYWxseToKICAgICAgICBjb25uLmNsb3NlKCkKICAgIHJldHVybiBfcm93X3RvX2RpY3Qocm93KSBpZiByb3cgaXMgbm90IE5vbmUgZWxzZSBOb25lCgoKZGVmIGxpc3RfYXBwcm92YWxzKHBhdGg6IFBhdGggfCBOb25lID0gTm9uZSkgLT4gbGlzdFtkaWN0XToKICAgICIiIlNlbXVhIGFwcHJvdmFsICh0YW5wYSB0b2tlbiBoYXNoKS4iIiIKICAgIGNvbm4gPSBfY29ubmVjdChwYXRoKQogICAgdHJ5OgogICAgICAgIHJvd3MgPSBjb25uLmV4ZWN1dGUoCiAgICAgICAgICAgICJTRUxFQ1QgKiBGUk9NIGFwcHJvdmFscyBPUkRFUiBCWSBjcmVhdGVkX2F0IERFU0MiKS5mZXRjaGFsbCgpCiAgICBmaW5hbGx5OgogICAgICAgIGNvbm4uY2xvc2UoKQogICAgcmV0dXJuIFtfcm93X3RvX2RpY3QocikgZm9yIHIgaW4gcm93c10KCgpkZWYgZGVjaWRlX2FwcHJvdmFsKGFwcHJvdmFsX2lkOiBzdHIsIGFwcHJvdmVkOiBib29sLCBkZWNpZGVkX2J5OiBzdHIsCiAgICAgICAgICAgICAgICAgICAgbm90ZTogc3RyID0gIiIsIGRpZmZfaGFzaDogc3RyID0gIiIsCiAgICAgICAgICAgICAgICAgICAgcGF0aDogUGF0aCB8IE5vbmUgPSBOb25lLAogICAgICAgICAgICAgICAgICAgIHJlcG9fcGF0aDogc3RyID0gIiIsIGJyYW5jaDogc3RyID0gIiIsCiAgICAgICAgICAgICAgICAgICAgd29ya3RyZWU6IHN0ciA9ICIiKSAtPiB0dXBsZVtkaWN0IHwgTm9uZSwgc3RyIHwgTm9uZV06CiAgICAiIiJQdXR1c2thbiBhcHByb3ZhbCAoSEFOWUEgZGlwYW5nZ2lsIENMSSBtYW51c2lhLCBidWthbiBNQ1ApLgoKICAgIEtlbWJhbGlrYW4gYGAocmVjb3JkLCB0b2tlbilgYDogdG9rZW4gaGFueWEgYWRhIGJpbGEgZGlzZXR1anVpCiAgICAoc2VrYWxpIHBha2FpLCAyNCBqYW0pLiBBcHByb3ZhbCB5YW5nIHN1ZGFoIGRpcHV0dXMgdGlkYWsgYmlzYQogICAgZGl1YmFoIGxhZ2kuIGBgZGlmZl9oYXNoYGAgbWVuZ2lrYXQgcGVyc2V0dWp1YW4ga2UgZGlmZiBzYWF0IGl0dTsKICAgIGBgcmVwb19wYXRoYGAvYGBicmFuY2hgYC9gYHdvcmt0cmVlYGAgbWVuZ2lrYXRueWEga2UgaWRlbnRpdGFzCiAgICByZXBvIChHUFQgMykuCgogICAgQVRPTUlLIChHUFQgMyk6IGJhY2Egc3RhdHVzICsgdXBkYXRlIGRpbGFrdWthbiBkYWxhbSBzYXR1CiAgICB0cmFuc2Frc2kgYGBCRUdJTiBJTU1FRElBVEVgYCBkZW5nYW4KICAgIGBgVVBEQVRFIC4uLiBXSEVSRSBzdGF0dXM9J3BlbmRpbmcnYGAg4oCUIGJpbGEgZHVhIHByb3NlcyBtZW11dHVzCiAgICBiZXJzYW1hYW4sIGhhbnlhIHNhdHUgeWFuZyBtZW5hbmcgKGBgcm93Y291bnQgPT0gMWBgKTsgeWFuZyBrYWxhaAogICAgbWVuZGFwYXQgcmVjb3JkIGhhc2lsIGtlcHV0dXNhbiBwZXJ0YW1hIHRhbnBhIHRva2VuLgogICAgIiIiCiAgICB0b2tlbiA9IE5vbmUKICAgIHRva2VuX2hhc2ggPSBOb25lCiAgICBleHBpcmVzX2F0ID0gTm9uZQogICAgaWYgYXBwcm92ZWQ6CiAgICAgICAgdG9rZW4gPSBzZWNyZXRzLnRva2VuX3VybHNhZmUoMzIpCiAgICAgICAgdG9rZW5faGFzaCA9IGhhc2hsaWIuc2hhMjU2KHRva2VuLmVuY29kZSgidXRmLTgiKSkuaGV4ZGlnZXN0KCkKICAgICAgICBleHBpcmVzX2F0ID0gKGRhdGV0aW1lLm5vdyh0aW1lem9uZS51dGMpCiAgICAgICAgICAgICAgICAgICAgICArIHRpbWVkZWx0YShob3Vycz1UT0tFTl9UVExfSE9VUlMpKS5pc29mb3JtYXQoKS5yZXBsYWNlKCIrMDA6MDAiLCAiWiIpCiAgICBjb25uID0gX2Nvbm5lY3QocGF0aCkKICAgIHRyeToKICAgICAgICBjb25uLmV4ZWN1dGUoIkJFR0lOIElNTUVESUFURSIpCiAgICAgICAgcm93ID0gY29ubi5leGVjdXRlKAogICAgICAgICAgICAiU0VMRUNUICogRlJPTSBhcHByb3ZhbHMgV0hFUkUgYXBwcm92YWxfaWQgPSA/IiwKICAgICAgICAgICAgKGFwcHJvdmFsX2lkLCksCiAgICAgICAgKS5mZXRjaG9uZSgpCiAgICAgICAgaWYgcm93IGlzIE5vbmU6CiAgICAgICAgICAgIGNvbm4ucm9sbGJhY2soKQogICAgICAgICAgICByZXR1cm4gTm9uZSwgTm9uZQogICAgICAgIGlmIHJvd1sic3RhdHVzIl0gIT0gInBlbmRpbmciOgogICAgICAgICAgICBjb25uLnJvbGxiYWNrKCkKICAgICAgICAgICAgcmV0dXJuIF9yb3dfdG9fZGljdChyb3cpLCBOb25lCiAgICAgICAgYm91bmRfaGFzaCA9IGRpZmZfaGFzaCBvciByb3dbImRpZmZfaGFzaCJdCiAgICAgICAgY3Vyc29yID0gY29ubi5leGVjdXRlKAogICAgICAgICAgICAiVVBEQVRFIGFwcHJvdmFscyBTRVQgc3RhdHVzID0gPywgdG9rZW5faGFzaCA9ID8sIGV4cGlyZXNfYXQgPSA/LCIKICAgICAgICAgICAgIiBkZWNpZGVkX2J5ID0gPywgbm90ZSA9ID8sIGRpZmZfaGFzaCA9ID8sIGRlY2lkZWRfYXQgPSA/LCIKICAgICAgICAgICAgIiByZXBvX3BhdGggPSA/LCBicmFuY2ggPSA/LCB3b3JrdHJlZSA9ID8iCiAgICAgICAgICAgICIgV0hFUkUgYXBwcm92YWxfaWQgPSA/IEFORCBzdGF0dXMgPSAncGVuZGluZyciLAogICAgICAgICAgICAoImFwcHJvdmVkIiBpZiBhcHByb3ZlZCBlbHNlICJyZWplY3RlZCIsIHRva2VuX2hhc2gsIGV4cGlyZXNfYXQsCiAgICAgICAgICAgICBkZWNpZGVkX2J5LCBub3RlLCBib3VuZF9oYXNoLCB1dGNub3coKSwKICAgICAgICAgICAgIHJlcG9fcGF0aCBvciByb3dbInJlcG9fcGF0aCJdLCBicmFuY2ggb3Igcm93WyJicmFuY2giXSwKICAgICAgICAgICAgIHdvcmt0cmVlIG9yIHJvd1sid29ya3RyZWUiXSwgYXBwcm92YWxfaWQpLAogICAgICAgICkKICAgICAgICBpZiBjdXJzb3Iucm93Y291bnQgIT0gMToKICAgICAgICAgICAgIyBEaXB1dHVzIHByb3NlcyBsYWluIGRpIGFudGFyYSBiYWNhIGRhbiB1cGRhdGUuCiAgICAgICAgICAgIGNvbm4ucm9sbGJhY2soKQogICAgICAgICAgICByZXR1cm4gZ2V0X2FwcHJvdmFsKGFwcHJvdmFsX2lkLCBwYXRoKSwgTm9uZQogICAgICAgIGNvbm4uY29tbWl0KCkKICAgIGZpbmFsbHk6CiAgICAgICAgY29ubi5jbG9zZSgpCiAgICByZXR1cm4gZ2V0X2FwcHJvdmFsKGFwcHJvdmFsX2lkLCBwYXRoKSwgdG9rZW4KCgpkZWYgX2NoZWNrX2JpbmRpbmcocmVjb3JkOiBkaWN0LCBjdXJyZW50X2RpZmZfaGFzaDogc3RyLAogICAgICAgICAgICAgICAgICAgcmVwb19wYXRoOiBzdHIgPSAiIiwgYnJhbmNoOiBzdHIgPSAiIikgLT4gc3RyIHwgTm9uZToKICAgICIiIlBlc2FuIGVycm9yIGJpbGEgaWthdGFuIGFwcHJvdmFsIHRpZGFrIGNvY29rOyBOb25lIGJpbGEgY29jb2suCgogICAgSGFzaCBrb3NvbmcgRElUT0xBSyAoTjEyKTogZ2l0IGVycm9yIC8gYnVrYW4gcmVwbyB0aWRhayBib2xlaAogICAgbWVsZXdhdGkgY2VrIGRpZmYuIElrYXRhbiByZXBvL2JyYW5jaCBoYW55YSBkaXRlZ2Fra2FuIGJpbGEKICAgIHRlcnNpbXBhbiBzYWF0IHBlcnNldHVqdWFuIChhcHByb3ZhbCBsYW1hIHRhbnBhIGlrYXRhbiB0ZXRhcAogICAgYmlzYSBkaXBha2FpLCB0YXBpIENMSSBiYXJ1IHNlbGFsdSBtZW5naWthdG55YSkuCiAgICAiIiIKICAgIGJvdW5kID0gcmVjb3JkLmdldCgiZGlmZl9oYXNoIiwgIiIpCiAgICBpZiBub3QgYm91bmQ6CiAgICAgICAgcmV0dXJuICgiQXBwcm92YWwgYmVsdW0gdGVyaWthdCBoYXNoIGRpZmYg4oCUIHNldHVqdWkgbGV3YXQgIgogICAgICAgICAgICAgICAgImBtdWZha2F0IGFwcHJvdmUgPGlkPmAgeWFuZyBtZW5naGl0dW5nIGhhc2ggZGlmZi4iKQogICAgaWYgbm90IGN1cnJlbnRfZGlmZl9oYXNoOgogICAgICAgIHJldHVybiAoIkhhc2ggZGlmZiBzYWF0IGluaSBrb3NvbmcgKGdpdCBlcnJvciAvIGJ1a2FuIHJlcG8pIOKAlCAiCiAgICAgICAgICAgICAgICAiY2VrIGRpZmYgdGlkYWsgYm9sZWggZGlsZXdhdGk7IHRvbGFrLiIpCiAgICBpZiBjdXJyZW50X2RpZmZfaGFzaCAhPSBib3VuZDoKICAgICAgICByZXR1cm4gKCJEaWZmIGJlcnViYWggc2VqYWsgZGlzZXR1anVpIChoYXNoIHRpZGFrIGNvY29rKSDigJQgIgogICAgICAgICAgICAgICAgIm1pbnRhIHBlcnNldHVqdWFuIGJhcnUuIikKICAgIHN0b3JlZF9yZXBvID0gcmVjb3JkLmdldCgicmVwb19wYXRoIiwgIiIpCiAgICBpZiBzdG9yZWRfcmVwbyBhbmQgcmVwb19wYXRoOgogICAgICAgIHRyeToKICAgICAgICAgICAgZnJvbSBwYXRobGliIGltcG9ydCBQYXRoIGFzIF9QYXRoCgogICAgICAgICAgICBzYW1lID0gX1BhdGgoc3RvcmVkX3JlcG8pLnJlc29sdmUoKSA9PSBfUGF0aChyZXBvX3BhdGgpLnJlc29sdmUoKQogICAgICAgIGV4Y2VwdCBPU0Vycm9yOgogICAgICAgICAgICBzYW1lID0gc3RvcmVkX3JlcG8gPT0gcmVwb19wYXRoCiAgICAgICAgaWYgbm90IHNhbWU6CiAgICAgICAgICAgIHJldHVybiAoIlJlcG8gc2FhdCBjb21taXQgYmVyYmVkYSBkZW5nYW4gcmVwbyBzYWF0IGRpc2V0dWp1aSAiCiAgICAgICAgICAgICAgICAgICAgZiIoe3N0b3JlZF9yZXBvfSAhPSB7cmVwb19wYXRofSkg4oCUIG1pbnRhIHBlcnNldHVqdWFuIGJhcnUuIikKICAgIHN0b3JlZF9icmFuY2ggPSByZWNvcmQuZ2V0KCJicmFuY2giLCAiIikKICAgIGlmIHN0b3JlZF9icmFuY2ggYW5kIGJyYW5jaCBhbmQgYnJhbmNoICE9IHN0b3JlZF9icmFuY2g6CiAgICAgICAgcmV0dXJuICgiQnJhbmNoIHNhYXQgY29tbWl0IGJlcmJlZGEgZGVuZ2FuIGJyYW5jaCBzYWF0IGRpc2V0dWp1aSAiCiAgICAgICAgICAgICAgICBmIih7YnJhbmNofSAhPSB7c3RvcmVkX2JyYW5jaH0pIOKAlCBtaW50YSBwZXJzZXR1anVhbiBiYXJ1LiIpCiAgICByZXR1cm4gTm9uZQoKCmRlZiB2ZXJpZnlfdG9rZW4oYXBwcm92YWxfaWQ6IHN0ciwgdG9rZW46IHN0ciwKICAgICAgICAgICAgICAgICBjdXJyZW50X2RpZmZfaGFzaDogc3RyID0gIiIsCiAgICAgICAgICAgICAgICAgcGF0aDogUGF0aCB8IE5vbmUgPSBOb25lLAogICAgICAgICAgICAgICAgIHJlcG9fcGF0aDogc3RyID0gIiIsIGJyYW5jaDogc3RyID0gIiIpIC0+IHR1cGxlW2Jvb2wsIHN0cl06CiAgICAiIiJWZXJpZmlrYXNpIHRva2VuIGFwcHJvdmFsIHNla2FsaSBwYWthaSArIGlrYXRhbiBoYXNoIGRpZmYuCgogICAgS2VtYmFsaWthbiBgYChUcnVlLCAiIilgYCBiaWxhIHZhbGlkLCBlbHNlIGBgKEZhbHNlLCBhbGFzYW4pYGAuCiAgICBUSURBSyBtZW5hbmRhaSB0b2tlbiB0ZXJwYWthaSDigJQgcGVtYW5nZ2lsIHlhbmcgYmVyaGFzaWwgY29tbWl0CiAgICB3YWppYiBtZW1ha2FpIDpmdW5jOmB2ZXJpZnlfYW5kX2NvbnN1bWVfdG9rZW5gIChhdG9taWspIGFnYXIKICAgIHRpZGFrIGFkYSBjZWxhaCBwYWthaS1iZXJzYW1hYW4gKEdQVCAzKS4KICAgICIiIgogICAgaWYgbm90IGFwcHJvdmFsX2lkIG9yIG5vdCB0b2tlbjoKICAgICAgICByZXR1cm4gRmFsc2UsICJhcHByb3ZhbF9pZC90b2tlbiBrb3NvbmcuIgogICAgcmVjb3JkID0gZ2V0X2FwcHJvdmFsKGFwcHJvdmFsX2lkLCBwYXRoKQogICAgaWYgcmVjb3JkIGlzIE5vbmU6CiAgICAgICAgcmV0dXJuIEZhbHNlLCAiQXBwcm92YWwgdGlkYWsgZGl0ZW11a2FuLiIKICAgIGlmIHJlY29yZFsic3RhdHVzIl0gIT0gImFwcHJvdmVkIjoKICAgICAgICByZXR1cm4gRmFsc2UsIGYiQXBwcm92YWwgYmVyc3RhdHVzIHtyZWNvcmRbJ3N0YXR1cyddfSwgYnVrYW4gYXBwcm92ZWQuIgogICAgaWYgcmVjb3JkWyJ1c2VkIl06CiAgICAgICAgcmV0dXJuIEZhbHNlLCAiVG9rZW4gYXBwcm92YWwgc3VkYWggZGlwYWthaSAoc2VrYWxpIHBha2FpKS4iCiAgICBpZiByZWNvcmQuZ2V0KCJleHBpcmVzX2F0IikgYW5kIHV0Y25vdygpID4gc3RyKHJlY29yZFsiZXhwaXJlc19hdCJdKToKICAgICAgICByZXR1cm4gRmFsc2UsICJUb2tlbiBhcHByb3ZhbCBzdWRhaCBrZWRhbHV3YXJzYS4iCiAgICBjb25uID0gX2Nvbm5lY3QocGF0aCkKICAgIHRyeToKICAgICAgICByb3cgPSBjb25uLmV4ZWN1dGUoCiAgICAgICAgICAgICJTRUxFQ1QgdG9rZW5faGFzaCBGUk9NIGFwcHJvdmFscyBXSEVSRSBhcHByb3ZhbF9pZCA9ID8iLAogICAgICAgICAgICAoYXBwcm92YWxfaWQsKSwKICAgICAgICApLmZldGNob25lKCkKICAgIGZpbmFsbHk6CiAgICAgICAgY29ubi5jbG9zZSgpCiAgICBleHBlY3RlZCA9IHJvd1sidG9rZW5faGFzaCJdIGlmIHJvdyBpcyBub3QgTm9uZSBlbHNlIE5vbmUKICAgIGlmIG5vdCBleHBlY3RlZCBvciBub3QgaG1hYy5jb21wYXJlX2RpZ2VzdCgKICAgICAgICAgICAgaGFzaGxpYi5zaGEyNTYodG9rZW4uZW5jb2RlKCJ1dGYtOCIpKS5oZXhkaWdlc3QoKSwgZXhwZWN0ZWQpOgogICAgICAgIHJldHVybiBGYWxzZSwgIlRva2VuIGFwcHJvdmFsIHRpZGFrIGNvY29rLiIKICAgIGJpbmRpbmdfZXJyb3IgPSBfY2hlY2tfYmluZGluZyhyZWNvcmQsIGN1cnJlbnRfZGlmZl9oYXNoLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJlcG9fcGF0aD1yZXBvX3BhdGgsIGJyYW5jaD1icmFuY2gpCiAgICBpZiBiaW5kaW5nX2Vycm9yIGlzIG5vdCBOb25lOgogICAgICAgIHJldHVybiBGYWxzZSwgYmluZGluZ19lcnJvcgogICAgcmV0dXJuIFRydWUsICIiCgoKZGVmIHZlcmlmeV9hbmRfY29uc3VtZV90b2tlbihhcHByb3ZhbF9pZDogc3RyLCB0b2tlbjogc3RyLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIGN1cnJlbnRfZGlmZl9oYXNoOiBzdHIgPSAiIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICBwYXRoOiBQYXRoIHwgTm9uZSA9IE5vbmUsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmVwb19wYXRoOiBzdHIgPSAiIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmFuY2g6IHN0ciA9ICIiKSAtPiB0dXBsZVtib29sLCBzdHJdOgogICAgIiIiVmVyaWZpa2FzaSB0b2tlbiArIHRhbmRhaSB0ZXJwYWthaSBkYWxhbSBTQVRVIHRyYW5zYWtzaSAoR1BUIDMpLgoKICAgIFNlbXVhIGNlayA6ZnVuYzpgdmVyaWZ5X3Rva2VuYCAoc3RhdHVzLCB0b2tlbiwga2VkYWx1d2Fyc2EsCiAgICBpa2F0YW4gZGlmZi9yZXBvL2JyYW5jaCkgZGFuIGBgVVBEQVRFIHVzZWQ9MWBgIGJlcmphbGFuIGRhbGFtCiAgICBgYEJFR0lOIElNTUVESUFURWBgIOKAlCBkdWEgcHJvc2VzIHlhbmcgbWVtYWthaSB0b2tlbiB5YW5nIHNhbWEKICAgIGJlcnNhbWFhbiBoYW55YSBzYXR1IHlhbmcgbG9sb3MuIEtlbWJhbGlrYW4gYGAoVHJ1ZSwgIiIpYGAgYmlsYQogICAgdG9rZW4gdmFsaWQgZGFuIGtpbmkgaGFuZ3VzLCBlbHNlIGBgKEZhbHNlLCBhbGFzYW4pYGAuCiAgICAiIiIKICAgIGlmIG5vdCBhcHByb3ZhbF9pZCBvciBub3QgdG9rZW46CiAgICAgICAgcmV0dXJuIEZhbHNlLCAiYXBwcm92YWxfaWQvdG9rZW4ga29zb25nLiIKICAgIGNvbm4gPSBfY29ubmVjdChwYXRoKQogICAgdHJ5OgogICAgICAgIGNvbm4uZXhlY3V0ZSgiQkVHSU4gSU1NRURJQVRFIikKICAgICAgICByb3cgPSBjb25uLmV4ZWN1dGUoCiAgICAgICAgICAgICJTRUxFQ1QgKiBGUk9NIGFwcHJvdmFscyBXSEVSRSBhcHByb3ZhbF9pZCA9ID8iLAogICAgICAgICAgICAoYXBwcm92YWxfaWQsKSwKICAgICAgICApLmZldGNob25lKCkKICAgICAgICBpZiByb3cgaXMgTm9uZToKICAgICAgICAgICAgY29ubi5yb2xsYmFjaygpCiAgICAgICAgICAgIHJldHVybiBGYWxzZSwgIkFwcHJvdmFsIHRpZGFrIGRpdGVtdWthbi4iCiAgICAgICAgcmVjb3JkID0gX3Jvd190b19kaWN0KHJvdykKICAgICAgICBpZiByZWNvcmRbInN0YXR1cyJdICE9ICJhcHByb3ZlZCI6CiAgICAgICAgICAgIGNvbm4ucm9sbGJhY2soKQogICAgICAgICAgICByZXR1cm4gRmFsc2UsIChmIkFwcHJvdmFsIGJlcnN0YXR1cyB7cmVjb3JkWydzdGF0dXMnXX0sICIKICAgICAgICAgICAgICAgICAgICAgICAgICAgImJ1a2FuIGFwcHJvdmVkLiIpCiAgICAgICAgaWYgcmVjb3JkWyJ1c2VkIl06CiAgICAgICAgICAgIGNvbm4ucm9sbGJhY2soKQogICAgICAgICAgICByZXR1cm4gRmFsc2UsICJUb2tlbiBhcHByb3ZhbCBzdWRhaCBkaXBha2FpIChzZWthbGkgcGFrYWkpLiIKICAgICAgICBpZiByZWNvcmQuZ2V0KCJleHBpcmVzX2F0IikgYW5kIHV0Y25vdygpID4gc3RyKHJlY29yZFsiZXhwaXJlc19hdCJdKToKICAgICAgICAgICAgY29ubi5yb2xsYmFjaygpCiAgICAgICAgICAgIHJldHVybiBGYWxzZSwgIlRva2VuIGFwcHJvdmFsIHN1ZGFoIGtlZGFsdXdhcnNhLiIKICAgICAgICBleHBlY3RlZCA9IHJvd1sidG9rZW5faGFzaCJdCiAgICAgICAgaWYgbm90IGV4cGVjdGVkIG9yIG5vdCBobWFjLmNvbXBhcmVfZGlnZXN0KAogICAgICAgICAgICAgICAgaGFzaGxpYi5zaGEyNTYodG9rZW4uZW5jb2RlKCJ1dGYtOCIpKS5oZXhkaWdlc3QoKSwgZXhwZWN0ZWQpOgogICAgICAgICAgICBjb25uLnJvbGxiYWNrKCkKICAgICAgICAgICAgcmV0dXJuIEZhbHNlLCAiVG9rZW4gYXBwcm92YWwgdGlkYWsgY29jb2suIgogICAgICAgIGJpbmRpbmdfZXJyb3IgPSBfY2hlY2tfYmluZGluZyhyZWNvcmQsIGN1cnJlbnRfZGlmZl9oYXNoLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXBvX3BhdGg9cmVwb19wYXRoLCBicmFuY2g9YnJhbmNoKQogICAgICAgIGlmIGJpbmRpbmdfZXJyb3IgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIGNvbm4ucm9sbGJhY2soKQogICAgICAgICAgICByZXR1cm4gRmFsc2UsIGJpbmRpbmdfZXJyb3IKICAgICAgICBjdXJzb3IgPSBjb25uLmV4ZWN1dGUoCiAgICAgICAgICAgICJVUERBVEUgYXBwcm92YWxzIFNFVCB1c2VkID0gMSBXSEVSRSBhcHByb3ZhbF9pZCA9ID8gIgogICAgICAgICAgICAiQU5EIHVzZWQgPSAwIiwKICAgICAgICAgICAgKGFwcHJvdmFsX2lkLCksCiAgICAgICAgKQogICAgICAgIGlmIGN1cnNvci5yb3djb3VudCAhPSAxOgogICAgICAgICAgICBjb25uLnJvbGxiYWNrKCkKICAgICAgICAgICAgcmV0dXJuIEZhbHNlLCAiVG9rZW4gYXBwcm92YWwgc3VkYWggZGlwYWthaSAoc2VrYWxpIHBha2FpKS4iCiAgICAgICAgY29ubi5jb21taXQoKQogICAgICAgIHJldHVybiBUcnVlLCAiIgogICAgZmluYWxseToKICAgICAgICBjb25uLmNsb3NlKCkKCgpkZWYgY29uc3VtZV90b2tlbihhcHByb3ZhbF9pZDogc3RyLCBwYXRoOiBQYXRoIHwgTm9uZSA9IE5vbmUpIC0+IE5vbmU6CiAgICAiIiJUYW5kYWkgdG9rZW4gc3VkYWggZGlwYWthaSAoc2VrYWxpIHBha2FpKS4KCiAgICBIYW55YSB1bnR1ayBrb21wYXRpYmlsaXRhcyBwZW1hbmdnaWwgbGFtYSDigJQgcGVtYW5nZ2lsIGJhcnUgV0FKSUIKICAgIG1lbWFrYWkgOmZ1bmM6YHZlcmlmeV9hbmRfY29uc3VtZV90b2tlbmAgKGF0b21paykuCiAgICAiIiIKICAgIGNvbm4gPSBfY29ubmVjdChwYXRoKQogICAgdHJ5OgogICAgICAgIGNvbm4uZXhlY3V0ZSgiVVBEQVRFIGFwcHJvdmFscyBTRVQgdXNlZCA9IDEgV0hFUkUgYXBwcm92YWxfaWQgPSA/IiwKICAgICAgICAgICAgICAgICAgICAgKGFwcHJvdmFsX2lkLCkpCiAgICAgICAgY29ubi5jb21taXQoKQogICAgZmluYWxseToKICAgICAgICBjb25uLmNsb3NlKCkKCgpkZWYgZGlmZl9oYXNoX2Zvcl9yZXBvKHJlcG9fcGF0aDogc3RyID0gIi4iKSAtPiBzdHI6CiAgICAiIiJIYXNoIFNIQS0yNTYgZGFyaSBgYGdpdCBkaWZmIEhFQURgYCByZXBvIHNhYXQgaW5pLgoKICAgIGBgSEVBRGBgIChidWthbiBkaWZmIHVuc3RhZ2VkIHNhamEpIHN1cGF5YSBwZXJ1YmFoYW4geWFuZyBzdWRhaAogICAgZGktc3RhZ2UgaWt1dCB0ZXJpa2F0IGtlIGFwcHJvdmFsLgogICAgIiIiCiAgICB0cnk6CiAgICAgICAgcHJvYyA9IHN1YnByb2Nlc3MucnVuKAogICAgICAgICAgICBbImdpdCIsICItQyIsIHN0cihyZXBvX3BhdGgpLCAiZGlmZiIsICJIRUFEIl0sCiAgICAgICAgICAgIGNhcHR1cmVfb3V0cHV0PVRydWUsIHRleHQ9VHJ1ZSwgdGltZW91dD02MCwgc2hlbGw9RmFsc2UpCiAgICBleGNlcHQgKE9TRXJyb3IsIHN1YnByb2Nlc3MuU3VicHJvY2Vzc0Vycm9yKToKICAgICAgICByZXR1cm4gIiIKICAgIGlmIHByb2MucmV0dXJuY29kZSAhPSAwOgogICAgICAgIHJldHVybiAiIgogICAgcmV0dXJuIGhhc2hsaWIuc2hhMjU2KHByb2Muc3Rkb3V0LmVuY29kZSgidXRmLTgiKSkuaGV4ZGlnZXN0KCkK
+"""Penyimpanan approval manusia di SQLite (audit 20 Nov 2026: H1).
+
+Approval HANYA diputuskan manusia lewat CLI ``mufakat approve <id>``
+(konfirmasi y/N di TTY) — TIDAK ADA tool MCP yang bisa memutuskan.
+Aturan:
+
+- Satu approval = satu baris SQLite (bukan dict memori): status
+  ``pending`` -> ``approved``/``rejected``, sekali putus tidak bisa
+  diubah lagi. ``decide_approval`` atomik (satu transaksi
+  ``BEGIN IMMEDIATE`` + ``UPDATE ... WHERE status='pending'`` —
+  dua proses yang memutuskan bersamaan hanya satu yang menang,
+  GPT 3).
+- Terikat hash diff: saat manusia menyetujui, hash ``git diff`` saat
+  itu disimpan; ``git_commit`` menolak bila diff saat commit berbeda.
+  Hash kosong DITOLAK (N12): git error / bukan repo tidak boleh
+  melewati cek. Approval juga terikat identitas repo, branch, dan
+  worktree (GPT 3) bila diikat saat persetujuan.
+- Token sekali pakai: diterbitkan saat persetujuan, disimpan HANYA
+  sebagai hash SHA-256 (bukan plaintext), masa berlaku 24 jam,
+  hangus setelah dipakai commit. Verifikasi + penandaan terpakai
+  dilakukan dalam SATU transaksi atomik
+  (:func:`verify_and_consume_token`) — tidak ada celah dua proses
+  memakai token yang sama sebelum ditandai terpakai (GPT 3).
+- Jalur DB: env ``MUFAKAT_APPROVALS_DB`` atau ``runs/approvals.db``.
+"""
+
+from __future__ import annotations
+
+import hashlib
+import hmac
+import os
+import secrets
+import sqlite3
+import subprocess
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+try:
+    from mufakat.runner import runs_dir, utcnow
+except ImportError:  # pragma: no cover
+    from mufakat.runner import runs_dir, utcnow  # type: ignore
+
+TOKEN_TTL_HOURS = 24
+
+_SCHEMA = """
+CREATE TABLE IF NOT EXISTS approvals (
+    approval_id TEXT PRIMARY KEY,
+    title TEXT NOT NULL DEFAULT '',
+    run_id TEXT NOT NULL DEFAULT '',
+    requested_by TEXT NOT NULL DEFAULT '',
+    diff_hash TEXT NOT NULL DEFAULT '',
+    status TEXT NOT NULL DEFAULT 'pending',
+    token_hash TEXT,
+    expires_at TEXT,
+    used INTEGER NOT NULL DEFAULT 0,
+    decided_by TEXT NOT NULL DEFAULT '',
+    note TEXT NOT NULL DEFAULT '',
+    created_at TEXT NOT NULL,
+    decided_at TEXT,
+    repo_path TEXT NOT NULL DEFAULT '',
+    branch TEXT NOT NULL DEFAULT '',
+    worktree TEXT NOT NULL DEFAULT ''
+)
+"""
+
+# Kolom ikatan repo/branch/worktree (GPT 3) — migrasi untuk DB lama
+# yang dibuat sebelum kolom ini ada.
+_BINDING_COLUMNS = (
+    ("repo_path", "TEXT NOT NULL DEFAULT ''"),
+    ("branch", "TEXT NOT NULL DEFAULT ''"),
+    ("worktree", "TEXT NOT NULL DEFAULT ''"),
+)
+
+
+def db_path() -> Path:
+    """Lokasi file SQLite approval."""
+    override = os.environ.get("MUFAKAT_APPROVALS_DB", "").strip()
+    if override:
+        return Path(override)
+    return runs_dir() / "approvals.db"
+
+
+def _connect(path: Path | None = None) -> sqlite3.Connection:
+    path = Path(path) if path is not None else db_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    conn = sqlite3.connect(str(path), check_same_thread=False)
+    conn.row_factory = sqlite3.Row
+    conn.execute(_SCHEMA)
+    existing = {row[1] for row in conn.execute("PRAGMA table_info(approvals)")}
+    for column, definition in _BINDING_COLUMNS:
+        if column not in existing:
+            conn.execute(f"ALTER TABLE approvals ADD COLUMN {column} {definition}")
+    conn.commit()
+    return conn
+
+
+def _row_to_dict(row: sqlite3.Row) -> dict:
+    record = dict(row)
+    record["used"] = bool(record.get("used"))
+    record.pop("token_hash", None)
+    return record
+
+
+def create_approval(approval_id: str, title: str, run_id: str = "",
+                    requested_by: str = "", diff_hash: str = "",
+                    path: Path | None = None,
+                    repo_path: str = "", branch: str = "",
+                    worktree: str = "") -> dict:
+    """Buat approval pending; kembalikan record (tanpa token)."""
+    conn = _connect(path)
+    try:
+        conn.execute(
+            "INSERT INTO approvals (approval_id, title, run_id, requested_by,"
+            " diff_hash, status, created_at, repo_path, branch, worktree)"
+            " VALUES (?, ?, ?, ?, ?, 'pending', ?, ?, ?, ?)",
+            (approval_id, title, run_id, requested_by, diff_hash, utcnow(),
+             repo_path, branch, worktree),
+        )
+        conn.commit()
+    finally:
+        conn.close()
+    record = get_approval(approval_id, path)
+    assert record is not None
+    return record
+
+
+def get_approval(approval_id: str, path: Path | None = None) -> dict | None:
+    """Baca satu approval dari SQLite; None bila tidak ada."""
+    conn = _connect(path)
+    try:
+        row = conn.execute(
+            "SELECT * FROM approvals WHERE approval_id = ?",
+            (approval_id,),
+        ).fetchone()
+    finally:
+        conn.close()
+    return _row_to_dict(row) if row is not None else None
+
+
+def list_approvals(path: Path | None = None) -> list[dict]:
+    """Semua approval (tanpa token hash)."""
+    conn = _connect(path)
+    try:
+        rows = conn.execute(
+            "SELECT * FROM approvals ORDER BY created_at DESC").fetchall()
+    finally:
+        conn.close()
+    return [_row_to_dict(r) for r in rows]
+
+
+def decide_approval(approval_id: str, approved: bool, decided_by: str,
+                    note: str = "", diff_hash: str = "",
+                    path: Path | None = None,
+                    repo_path: str = "", branch: str = "",
+                    worktree: str = "") -> tuple[dict | None, str | None]:
+    """Putuskan approval (HANYA dipanggil CLI manusia, bukan MCP).
+
+    Kembalikan ``(record, token)``: token hanya ada bila disetujui
+    (sekali pakai, 24 jam). Approval yang sudah diputus tidak bisa
+    diubah lagi. ``diff_hash`` mengikat persetujuan ke diff saat itu;
+    ``repo_path``/``branch``/``worktree`` mengikatnya ke identitas
+    repo (GPT 3).
+
+    ATOMIK (GPT 3): baca status + update dilakukan dalam satu
+    transaksi ``BEGIN IMMEDIATE`` dengan
+    ``UPDATE ... WHERE status='pending'`` — bila dua proses memutus
+    bersamaan, hanya satu yang menang (``rowcount == 1``); yang kalah
+    mendapat record hasil keputusan pertama tanpa token.
+    """
+    token = None
+    token_hash = None
+    expires_at = None
+    if approved:
+        token = secrets.token_urlsafe(32)
+        token_hash = hashlib.sha256(token.encode("utf-8")).hexdigest()
+        expires_at = (datetime.now(timezone.utc)
+                      + timedelta(hours=TOKEN_TTL_HOURS)).isoformat().replace("+00:00", "Z")
+    conn = _connect(path)
+    try:
+        conn.execute("BEGIN IMMEDIATE")
+        row = conn.execute(
+            "SELECT * FROM approvals WHERE approval_id = ?",
+            (approval_id,),
+        ).fetchone()
+        if row is None:
+            conn.rollback()
+            return None, None
+        if row["status"] != "pending":
+            conn.rollback()
+            return _row_to_dict(row), None
+        bound_hash = diff_hash or row["diff_hash"]
+        cursor = conn.execute(
+            "UPDATE approvals SET status = ?, token_hash = ?, expires_at = ?,"
+            " decided_by = ?, note = ?, diff_hash = ?, decided_at = ?,"
+            " repo_path = ?, branch = ?, worktree = ?"
+            " WHERE approval_id = ? AND status = 'pending'",
+            ("approved" if approved else "rejected", token_hash, expires_at,
+             decided_by, note, bound_hash, utcnow(),
+             repo_path or row["repo_path"], branch or row["branch"],
+             worktree or row["worktree"], approval_id),
+        )
+        if cursor.rowcount != 1:
+            # Diputus proses lain di antara baca dan update.
+            conn.rollback()
+            return get_approval(approval_id, path), None
+        conn.commit()
+    finally:
+        conn.close()
+    return get_approval(approval_id, path), token
+
+
+def _check_binding(record: dict, current_diff_hash: str,
+                   repo_path: str = "", branch: str = "") -> str | None:
+    """Pesan error bila ikatan approval tidak cocok; None bila cocok.
+
+    Hash kosong DITOLAK (N12): git error / bukan repo tidak boleh
+    melewati cek diff. Ikatan repo/branch hanya ditegakkan bila
+    tersimpan saat persetujuan (approval lama tanpa ikatan tetap
+    bisa dipakai, tapi CLI baru selalu mengikatnya).
+    """
+    bound = record.get("diff_hash", "")
+    if not bound:
+        return ("Approval belum terikat hash diff — setujui lewat "
+                "`mufakat approve <id>` yang menghitung hash diff.")
+    if not current_diff_hash:
+        return ("Hash diff saat ini kosong (git error / bukan repo) — "
+                "cek diff tidak boleh dilewati; tolak.")
+    if current_diff_hash != bound:
+        return ("Diff berubah sejak disetujui (hash tidak cocok) — "
+                "minta persetujuan baru.")
+    stored_repo = record.get("repo_path", "")
+    if stored_repo and repo_path:
+        try:
+            from pathlib import Path as _Path
+
+            same = _Path(stored_repo).resolve() == _Path(repo_path).resolve()
+        except OSError:
+            same = stored_repo == repo_path
+        if not same:
+            return ("Repo saat commit berbeda dengan repo saat disetujui "
+                    f"({stored_repo} != {repo_path}) — minta persetujuan baru.")
+    stored_branch = record.get("branch", "")
+    if stored_branch and branch and branch != stored_branch:
+        return ("Branch saat commit berbeda dengan branch saat disetujui "
+                f"({branch} != {stored_branch}) — minta persetujuan baru.")
+    return None
+
+
+def verify_token(approval_id: str, token: str,
+                 current_diff_hash: str = "",
+                 path: Path | None = None,
+                 repo_path: str = "", branch: str = "") -> tuple[bool, str]:
+    """Verifikasi token approval sekali pakai + ikatan hash diff.
+
+    Kembalikan ``(True, "")`` bila valid, else ``(False, alasan)``.
+    TIDAK menandai token terpakai — pemanggil yang berhasil commit
+    wajib memakai :func:`verify_and_consume_token` (atomik) agar
+    tidak ada celah pakai-bersamaan (GPT 3).
+    """
+    if not approval_id or not token:
+        return False, "approval_id/token kosong."
+    record = get_approval(approval_id, path)
+    if record is None:
+        return False, "Approval tidak ditemukan."
+    if record["status"] != "approved":
+        return False, f"Approval berstatus {record['status']}, bukan approved."
+    if record["used"]:
+        return False, "Token approval sudah dipakai (sekali pakai)."
+    if record.get("expires_at") and utcnow() > str(record["expires_at"]):
+        return False, "Token approval sudah kedaluwarsa."
+    conn = _connect(path)
+    try:
+        row = conn.execute(
+            "SELECT token_hash FROM approvals WHERE approval_id = ?",
+            (approval_id,),
+        ).fetchone()
+    finally:
+        conn.close()
+    expected = row["token_hash"] if row is not None else None
+    if not expected or not hmac.compare_digest(
+            hashlib.sha256(token.encode("utf-8")).hexdigest(), expected):
+        return False, "Token approval tidak cocok."
+    binding_error = _check_binding(record, current_diff_hash,
+                                   repo_path=repo_path, branch=branch)
+    if binding_error is not None:
+        return False, binding_error
+    return True, ""
+
+
+def verify_and_consume_token(approval_id: str, token: str,
+                             current_diff_hash: str = "",
+                             path: Path | None = None,
+                             repo_path: str = "",
+                             branch: str = "") -> tuple[bool, str]:
+    """Verifikasi token + tandai terpakai dalam SATU transaksi (GPT 3).
+
+    Semua cek :func:`verify_token` (status, token, kedaluwarsa,
+    ikatan diff/repo/branch) dan ``UPDATE used=1`` berjalan dalam
+    ``BEGIN IMMEDIATE`` — dua proses yang memakai token yang sama
+    bersamaan hanya satu yang lolos. Kembalikan ``(True, "")`` bila
+    token valid dan kini hangus, else ``(False, alasan)``.
+    """
+    if not approval_id or not token:
+        return False, "approval_id/token kosong."
+    conn = _connect(path)
+    try:
+        conn.execute("BEGIN IMMEDIATE")
+        row = conn.execute(
+            "SELECT * FROM approvals WHERE approval_id = ?",
+            (approval_id,),
+        ).fetchone()
+        if row is None:
+            conn.rollback()
+            return False, "Approval tidak ditemukan."
+        record = _row_to_dict(row)
+        if record["status"] != "approved":
+            conn.rollback()
+            return False, (f"Approval berstatus {record['status']}, "
+                           "bukan approved.")
+        if record["used"]:
+            conn.rollback()
+            return False, "Token approval sudah dipakai (sekali pakai)."
+        if record.get("expires_at") and utcnow() > str(record["expires_at"]):
+            conn.rollback()
+            return False, "Token approval sudah kedaluwarsa."
+        expected = row["token_hash"]
+        if not expected or not hmac.compare_digest(
+                hashlib.sha256(token.encode("utf-8")).hexdigest(), expected):
+            conn.rollback()
+            return False, "Token approval tidak cocok."
+        binding_error = _check_binding(record, current_diff_hash,
+                                       repo_path=repo_path, branch=branch)
+        if binding_error is not None:
+            conn.rollback()
+            return False, binding_error
+        cursor = conn.execute(
+            "UPDATE approvals SET used = 1 WHERE approval_id = ? "
+            "AND used = 0",
+            (approval_id,),
+        )
+        if cursor.rowcount != 1:
+            conn.rollback()
+            return False, "Token approval sudah dipakai (sekali pakai)."
+        conn.commit()
+        return True, ""
+    finally:
+        conn.close()
+
+
+def consume_token(approval_id: str, path: Path | None = None) -> None:
+    """Tandai token sudah dipakai (sekali pakai).
+
+    Hanya untuk kompatibilitas pemanggil lama — pemanggil baru WAJIB
+    memakai :func:`verify_and_consume_token` (atomik).
+    """
+    conn = _connect(path)
+    try:
+        conn.execute("UPDATE approvals SET used = 1 WHERE approval_id = ?",
+                     (approval_id,))
+        conn.commit()
+    finally:
+        conn.close()
+
+
+def diff_hash_for_repo(repo_path: str = ".") -> str:
+    """Hash SHA-256 dari ``git diff HEAD`` repo saat ini.
+
+    ``HEAD`` (bukan diff unstaged saja) supaya perubahan yang sudah
+    di-stage ikut terikat ke approval.
+    """
+    try:
+        proc = subprocess.run(
+            ["git", "-C", str(repo_path), "diff", "HEAD"],
+            capture_output=True, text=True, timeout=60, shell=False)
+    except (OSError, subprocess.SubprocessError):
+        return ""
+    if proc.returncode != 0:
+        return ""
+    return hashlib.sha256(proc.stdout.encode("utf-8")).hexdigest()
