@@ -89,6 +89,12 @@ class DebateMachine:
     total_iterations: int = 0
     history: list[str] = field(default_factory=list)
 
+    def __post_init__(self) -> None:
+        if self.state not in STATES:
+            raise IllegalTransition(f"State awal tidak dikenal: {self.state!r}")
+        if self.debate_round < 0 or self.fix_iterations < 0 or self.total_iterations < 0:
+            raise ValueError("Penghitung ronde/iterasi tidak boleh negatif.")
+
     def transition(self, event: str) -> str:
         """Jalankan ``event``; kembalikan state baru.
 
@@ -104,6 +110,11 @@ class DebateMachine:
                 f"Event {event!r} tidak valid dari state {self.state!r} "
                 f"(harus dari {expected_from!r})."
             )
+        # total_iterations menghitung SEMUA transisi (debat + perbaikan):
+        # dulu hanya revisi_selesai yang menambahkannya, sehingga batas
+        # MAX_TOTAL_ITERATIONS (12) tidak pernah tercapai sebelum
+        # MAX_FIX_ITERATIONS (5) — batas total praktis mati.
+        self.total_iterations += 1
         if event == "debat_lanjut":
             self.debate_round += 1
             if self.debate_round >= MAX_DEBATE_ROUNDS:
@@ -112,7 +123,6 @@ class DebateMachine:
                 return self.state
         if event == "revisi_selesai":
             self.fix_iterations += 1
-            self.total_iterations += 1
             if (self.fix_iterations >= MAX_FIX_ITERATIONS
                     or self.total_iterations >= MAX_TOTAL_ITERATIONS):
                 self.state = "eskalasi"
