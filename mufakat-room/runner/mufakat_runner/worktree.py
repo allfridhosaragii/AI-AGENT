@@ -1,1 +1,415 @@
-IiIiV29ya3RyZWUgJiBhcHBseSBwYXRjaCBMb2NhbCBSdW5uZXIgKENsYXVkZSDCpzUsIMKnVDExKS4KClJldXNlOiBiaWxhIHBha2V0IGBgbXVmYWthdGBgIHRlcnBhc2FuZywgYGBpbml0X3dvcmtzcGFjZWBgIC8KYGBjbGVhbnVwYGAgbWVuZGVsZWdhc2lrYW4ga2UgOm1vZDpgbXVmYWthdC5zYW5kYm94Lndvcmt0cmVlYCAobG9naWthCnlhbmcgc2FtYSwgc2F0dSBzdW1iZXIga2ViZW5hcmFuKS4gQmlsYSB0aWRhayB0ZXJwYXNhbmcsIGZhbGxiYWNrIGxva2FsCihmb2xkZXIgYmlhc2EpIGRpcGFrYWkg4oCUIHJ1bm5lciB0ZXRhcCBiaXNhIGphbGFuIG1hbmRpcmkuCgpgYGFwcGx5X2ZpbGVzYGAgU0VMQUxVIG1lbWFrYWkgdmFsaWRhc2kgbG9rYWwgZGkgc2luaSAodGlkYWsgZGlkZWxlZ2FzaWthbik6CnBhdGggYWJzb2x1dCBhdGF1IG1lbmdhbmR1bmcgYGAuLmBgIERJVE9MQUsgZGVuZ2FuIGBgVmFsdWVFcnJvcmBgCihzZWJlbHVtIGZpbGUgYXBhIHB1biBkaXR1bGlzKS4KIiIiCgpmcm9tIF9fZnV0dXJlX18gaW1wb3J0IGFubm90YXRpb25zCgppbXBvcnQgcmUKaW1wb3J0IHNodXRpbAppbXBvcnQgc3VicHJvY2Vzcwpmcm9tIHBhdGhsaWIgaW1wb3J0IFBhdGgKCl9fYWxsX18gPSBbCiAgICAidmFsaWRhdGVfcmVsX3BhdGgiLAogICAgImluaXRfd29ya3NwYWNlIiwKICAgICJhcHBseV9maWxlcyIsCiAgICAiZGlmZiIsCiAgICAiY29tbWl0IiwKICAgICJjbGVhbnVwIiwKXQoKX0RSSVZFX1JFID0gcmUuY29tcGlsZShyIl5bQS1aYS16XToiKQoKCmRlZiB2YWxpZGF0ZV9yZWxfcGF0aChwYXRoOiBzdHIpIC0+IFBhdGg6CiAgICAiIiJWYWxpZGFzaSBwYXRoIHJlbGF0aWYgZGkgZGFsYW0gd29ya3RyZWU7IHRvbGFrIHRyYXZlcnNhbC9hYnNvbHV0LgoKICAgIFBlcmlrc2EganVnYSBzZXBhcmF0b3IgV2luZG93cyAoYGBcXGBgKSBhZ2FyIGBgLi5cXC4uXFx3aW4uaW5pYGAKICAgIGRpdG9sYWsgbWVza2kgaG9zdC1ueWEgTGludXgsIGRyaXZlIFdpbmRvd3MgKGBgQzpcXC4uLmBgIC8gYGBDOi8uLi5gYCkKICAgIGFnYXIgdGlkYWsgamFkaSBwYXRoIGFic29sdXQgZGkgaG9zdCBXaW5kb3dzLCBkYW4gYnl0ZSBOVUwuCiAgICAiIiIKICAgIHJhdyA9IHN0cihwYXRoIG9yICIiKQogICAgaWYgIlx4MDAiIGluIHJhdzoKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCJQYXRoIG1lbmdhbmR1bmcgYnl0ZSBOVUwuIikKICAgIGNhbmRpZGF0ZSA9IFBhdGgocmF3KQogICAgaWYgY2FuZGlkYXRlLmlzX2Fic29sdXRlKCkgb3IgcmF3LnN0YXJ0c3dpdGgoKCIvIiwgIlxcIikpOgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoZiJQYXRoIGFic29sdXQgZGl0b2xhazoge3JhdyFyfSIpCiAgICBpZiBfRFJJVkVfUkUubWF0Y2gocmF3KToKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKGYiUGF0aCBhYnNvbHV0IFdpbmRvd3MgZGl0b2xhazoge3JhdyFyfSIpCiAgICBwYXJ0cyA9IHJhdy5yZXBsYWNlKCJcXCIsICIvIikuc3BsaXQoIi8iKQogICAgaWYgIi4uIiBpbiBwYXJ0czoKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKGYiUGF0aCB0cmF2ZXJzYWwgZGl0b2xhazoge3JhdyFyfSIpCiAgICBpZiByYXcgPT0gIiIgb3IgcmF3IGluICgiLiIsICIuLyIpOgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoIlBhdGgga29zb25nIGRpdG9sYWsuIikKICAgIHJldHVybiBjYW5kaWRhdGUKCgpkZWYgX3Jlc29sdmVfd2l0aGluX3Jvb3Qocm9vdDogUGF0aCwgcmVsOiBQYXRoKSAtPiBQYXRoOgogICAgIiIiS2VtYmFsaWthbiB0YXJnZXQgYWJzb2x1dCBkaSBiYXdhaCBgYHJvb3RgYDsgdG9sYWsgc3ltbGluayBlc2NhcGUuCgogICAgU2V0aWFwIGtvbXBvbmVuIHBhdGggeWFuZyBzdWRhaCBhZGEgZGlwZXJpa3NhOiBiaWxhIGFkYSBzeW1saW5rIGRpCiAgICB0ZW5nYWggamFsYW4gKGBgbGluayAtPiAvZXRjYGApIGF0YXUgdGFyZ2V0IGl0dSBzZW5kaXJpIHN5bWxpbmssCiAgICB0dWxpcyBkaXRvbGFrIOKAlCBkdWx1IGBgd3JpdGVfdGV4dGBgIG1lbmdpa3V0aSBzeW1saW5rIGRhbiBtZW51bGlzCiAgICBrZSBsdWFyIHdvcmt0cmVlLgogICAgIiIiCiAgICByb290X3Jlc29sdmVkID0gcm9vdC5yZXNvbHZlKCkKICAgIGN1cnJlbnQgPSByb290X3Jlc29sdmVkCiAgICBmb3IgcGFydCBpbiByZWwucGFydHM6CiAgICAgICAgaWYgcGFydCBpbiAoIiIsICIuIik6CiAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgY3VycmVudCA9IGN1cnJlbnQgLyBwYXJ0CiAgICAgICAgaWYgY3VycmVudC5pc19zeW1saW5rKCk6CiAgICAgICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoZiJQYXRoIG1lbGV3YXRpIHN5bWxpbmsgZGl0b2xhazoge3JlbCFyfSIpCiAgICB0YXJnZXQgPSByb290X3Jlc29sdmVkIC8gcmVsCiAgICBpZiB0YXJnZXQuaXNfc3ltbGluaygpOgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoZiJQYXRoIHN5bWxpbmsgZGl0b2xhazoge3JlbCFyfSIpCiAgICByZXR1cm4gdGFyZ2V0CgoKZGVmIGluaXRfd29ya3NwYWNlKHJlcG9fcGF0aDogc3RyIHwgUGF0aCwgcnVuX2lkOiBzdHIpIC0+IFBhdGg6CiAgICAiIiJCdWF0IHdvcmt0cmVlIGBgcnVucy88cnVuX2lkPi93dGBgIGRpIGJyYW5jaCBgYG11ZmFrYXQvPHJ1bl9pZD5gYC4iIiIKICAgICMgVmFsaWRhc2kgcnVuX2lkIHNlYmVsdW0gZGVsZWdhc2k6IHJ1bl9pZCB0cmF2ZXJzYWwgKC4uLy4uL3gpCiAgICAjIGR1bHUgbG9sb3Mga2UgY3JlYXRlX3dvcmt0cmVlIGRhbiBtZW1idWF0IGZvbGRlciBkaSBsdWFyIHJlcG8uCiAgICB0cnk6CiAgICAgICAgZnJvbSBtdWZha2F0LnNhbmRib3gud29ya3RyZWUgaW1wb3J0IHZhbGlkYXRlX3J1bl9pZAoKICAgICAgICB2YWxpZGF0ZV9ydW5faWQocnVuX2lkKQogICAgZXhjZXB0IEltcG9ydEVycm9yOgogICAgICAgIGlmIG5vdCByZS5tYXRjaChyIl5bQS1aYS16MC05XVtBLVphLXowLTkuXy1dKiQiLCBzdHIocnVuX2lkKSkgb3IgIi4uIiBpbiBzdHIocnVuX2lkKToKICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcihmInJ1bl9pZCB0aWRhayB2YWxpZDoge3J1bl9pZCFyfSIpCiAgICB0cnk6CiAgICAgICAgZnJvbSBtdWZha2F0LnNhbmRib3gud29ya3RyZWUgaW1wb3J0IGNyZWF0ZV93b3JrdHJlZQoKICAgICAgICByZXR1cm4gY3JlYXRlX3dvcmt0cmVlKHJlcG9fcGF0aCwgcnVuX2lkKQogICAgZXhjZXB0IEltcG9ydEVycm9yOgogICAgICAgIHRhcmdldCA9IFBhdGgocmVwb19wYXRoKSAvICJydW5zIiAvIHJ1bl9pZCAvICJ3dCIKICAgICAgICB0YXJnZXQubWtkaXIocGFyZW50cz1UcnVlLCBleGlzdF9vaz1UcnVlKQogICAgICAgIHJldHVybiB0YXJnZXQKCgpkZWYgX3JlYWRfdGV4dF9yYXcocGF0aDogUGF0aCkgLT4gc3RyOgogICAgIiIiQmFjYSB0ZWtzIFRBTlBBIHVuaXZlcnNhbC1uZXdsaW5lIHRyYW5zbGF0aW9uIChMNSk6IGBgcmVhZF90ZXh0YGAKICAgIG1lbmd1YmFoIGBgXFxyXFxuYGAgamFkaSBgYFxcbmBgIHNlaGluZ2dhIHBhdGNoIGFwcGxpZXIgdGlkYWsgYmlzYQogICAgbGFnaSBtZW5kZXRla3NpIGZpbGUgQ1JMRi4gQmFjYSBieXRlcyBsYWx1IGRlY29kZSBhZ2FyIEVPTCBhc2xpIHV0dWguIiIiCiAgICByZXR1cm4gcGF0aC5yZWFkX2J5dGVzKCkuZGVjb2RlKCJ1dGYtOCIpCgoKZGVmIF93cml0ZV90ZXh0X3JhdyhwYXRoOiBQYXRoLCB0ZXh0OiBzdHIpIC0+IE5vbmU6CiAgICAiIiJUdWxpcyB0ZWtzIHZlcmJhdGltICh0YW5wYSB0cmFuc2xhc2kgbmV3bGluZSBwZXItcGxhdGZvcm0pLiIiIgogICAgcGF0aC53cml0ZV9ieXRlcyh0ZXh0LmVuY29kZSgidXRmLTgiKSkKCgpkZWYgYXBwbHlfZmlsZXMod29ya3RyZWU6IHN0ciB8IFBhdGgsIGZpbGVzOiBsaXN0W2RpY3RdKSAtPiBsaXN0W3N0cl06CiAgICAiIiJUZXJhcGthbiBkYWZ0YXIgZmlsZSAocmVwbGFjZS9wYXRjaCkga2Ugd29ya3RyZWU7IGtlbWJhbGlrYW4gcGF0aCB5YW5nIGRpdHVsaXMuCgogICAgYGBmaWxlc2BgOiBgYFt7InBhdGgiOiAic3JjL2FwcC5weSIsICJtb2RlIjogInJlcGxhY2UifCJwYXRjaCIsCiAgICAiY29udGVudCI6ICIuLi4ifV1gYC4gTW9kZSBgYHBhdGNoYGAgbWVtYWthaSB1bmlmaWVkIGRpZmYgZGFuCiAgICBkaXRlcmFwa2FuIHNlY2FyYSBrZXJpbmcgZHVsdSAodmFsaWRhc2kpIHNlYmVsdW0gZGl0dWxpcy4KCiAgICBBdG9taWsgcGVyIHBhbmdnaWxhbjogU0VNVUEgaXRlbSBkaXZhbGlkYXNpIGR1bHUgKHBhdGgsIG1vZGUsCiAgICBpc2ksIHN5bWxpbmspIHNlYmVsdW0gZmlsZSBwZXJ0YW1hIGRpdHVsaXMg4oCUIGR1bHUgaXRlbSBrZWR1YSB5YW5nCiAgICB0cmF2ZXJzYWwgdGV0YXAgbWVudWxpcyBpdGVtIHBlcnRhbWEuCiAgICAiIiIKICAgIGlmIG5vdCBpc2luc3RhbmNlKGZpbGVzLCAobGlzdCwgdHVwbGUpKToKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCJmaWxlcyBoYXJ1cyBsaXN0IG9mIGRpY3QuIikKICAgIHJvb3QgPSBQYXRoKHdvcmt0cmVlKQogICAgcm9vdF9yZXNvbHZlZCA9IHJvb3QucmVzb2x2ZSgpCiAgICAjIEZhc2UgMSDigJQgdmFsaWRhc2kgc2VtdWEsIHRhbnBhIG1lbnVsaXMgYXBhIHB1bi4KICAgIHBsYW46IGxpc3RbdHVwbGVbUGF0aCwgc3RyLCBzdHJdXSA9IFtdCiAgICBmb3IgaXRlbSBpbiBmaWxlcyBvciBbXToKICAgICAgICBpZiBub3QgaXNpbnN0YW5jZShpdGVtLCBkaWN0KToKICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigiU2V0aWFwIGl0ZW0gZmlsZXMgaGFydXMgZGljdC4iKQogICAgICAgIHJlbCA9IHZhbGlkYXRlX3JlbF9wYXRoKHN0cihpdGVtLmdldCgicGF0aCIsICIiKSkpCiAgICAgICAgdGFyZ2V0ID0gX3Jlc29sdmVfd2l0aGluX3Jvb3Qocm9vdCwgcmVsKQogICAgICAgIG1vZGUgPSBzdHIoaXRlbS5nZXQoIm1vZGUiLCAicmVwbGFjZSIpKQogICAgICAgIGlmIG1vZGUgbm90IGluICgicmVwbGFjZSIsICJwYXRjaCIpOgogICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKGYiTW9kZSBmaWxlIHRpZGFrIGRpa2VuYWw6IHttb2RlIXJ9IikKICAgICAgICBjb250ZW50ID0gaXRlbS5nZXQoImNvbnRlbnQiLCAiIikKICAgICAgICBpZiBub3QgaXNpbnN0YW5jZShjb250ZW50LCBzdHIpOgogICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKGYiY29udGVudCBoYXJ1cyBzdHJpbmcgdW50dWsge3JlbCFyfS4iKQogICAgICAgIGlmIG1vZGUgPT0gInBhdGNoIjoKICAgICAgICAgICAgIyBWYWxpZGFzaSBwYXRjaCBzZWNhcmEga2VyaW5nIHNlYmVsdW0gbWVudWxpcyBhcGEgcHVuLgogICAgICAgICAgICBvcmlnaW5hbCA9IF9yZWFkX3RleHRfcmF3KHRhcmdldCkgaWYgdGFyZ2V0LmlzX2ZpbGUoKSBlbHNlICIiCiAgICAgICAgICAgIF9hcHBseV91bmlmaWVkX2RpZmYob3JpZ2luYWwsIGNvbnRlbnQpCiAgICAgICAgcGxhbi5hcHBlbmQoKHRhcmdldCwgbW9kZSwgY29udGVudCkpCiAgICAjIEZhc2UgMiDigJQgdHVsaXMuCiAgICBhcHBsaWVkOiBsaXN0W3N0cl0gPSBbXQogICAgZm9yIHRhcmdldCwgbW9kZSwgY29udGVudCBpbiBwbGFuOgogICAgICAgIHJlbCA9IHRhcmdldC5yZWxhdGl2ZV90byhyb290X3Jlc29sdmVkKQogICAgICAgIHRhcmdldC5wYXJlbnQubWtkaXIocGFyZW50cz1UcnVlLCBleGlzdF9vaz1UcnVlKQogICAgICAgIGlmIG1vZGUgPT0gInBhdGNoIjoKICAgICAgICAgICAgb3JpZ2luYWwgPSBfcmVhZF90ZXh0X3Jhdyh0YXJnZXQpIGlmIHRhcmdldC5pc19maWxlKCkgZWxzZSAiIgogICAgICAgICAgICBfd3JpdGVfdGV4dF9yYXcodGFyZ2V0LCBfYXBwbHlfdW5pZmllZF9kaWZmKG9yaWdpbmFsLCBjb250ZW50KSkKICAgICAgICBlbHNlOgogICAgICAgICAgICBfd3JpdGVfdGV4dF9yYXcodGFyZ2V0LCBjb250ZW50KQogICAgICAgIGFwcGxpZWQuYXBwZW5kKHN0cihyZWwpKQogICAgcmV0dXJuIGFwcGxpZWQKCgpkZWYgX2FwcGx5X3VuaWZpZWRfZGlmZihvcmlnaW5hbDogc3RyLCBwYXRjaF90ZXh0OiBzdHIpIC0+IHN0cjoKICAgICIiIlRlcmFwa2FuIHVuaWZpZWQgZGlmZiBzZWRlcmhhbmEgKGh1bmsgQEAgLWEsYiArYyxkIEBALCAtIC8gKyAvIHNwYXNpKS4KCiAgICBQYXRjaCB5YW5nIHRpZGFrIGJpc2EgZGl0ZXJhcGthbiBiZXJzaWggRElUT0xBSyAoVmFsdWVFcnJvcikg4oCUIHRpZGFrCiAgICBwZXJuYWggZGl0dWxpcyBzZXRlbmdhaC1zZXRlbmdhaC4gQmFyaXMga29udGVrcyAoYGAgYGApIGRhbiBiYXJpcwogICAgaGFwdXMgKGBgLWBgKSBESVZFUklGSUtBU0kgdGVyaGFkYXAgaXNpIGFzbGkg4oCUIGR1bHUga2VkdWFueWEKICAgIGRpYWJhaWthbiBpc2lueWEsIHNlaGluZ2dhIHBhdGNoIGRlbmdhbiBrb250ZWtzL2hhcHVzIHlhbmcgc2FsYWgKICAgIHRldGFwICJiZXJoYXNpbCIgZGFuIG1lcnVzYWsgZmlsZSBkaWFtLWRpYW0uIEp1bWxhaCBiYXJpcyB0aWFwIGh1bmsKICAgIGp1Z2EgZGlwZXJpa3NhIHRlcmhhZGFwIGFuZ2thIGRpIGhlYWRlciBgYEBAYGAuCiAgICAiIiIKICAgIGlmIG5vdCBpc2luc3RhbmNlKHBhdGNoX3RleHQsIHN0cikgb3Igbm90IHBhdGNoX3RleHQuc3RyaXAoKToKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCJQYXRjaCBrb3NvbmcuIikKICAgIG9yaWdpbmFsX2xpbmVzID0gb3JpZ2luYWwuc3BsaXRsaW5lcyhrZWVwZW5kcz1UcnVlKQogICAgIyBMNSAocHV0YXJhbiAyKTogYmFyaXMgIisiIGR1bHUgc2VsYWx1IGRpYmVyaSAiXG4iIOKAlCBmaWxlIENSTEYgamFkaQogICAgIyBjYW1wdXIgYWR1aywgZGFuIGZpbGUgdGFucGEgbmV3bGluZSBha2hpciBtZW5kYWRhayBwdW55YSBuZXdsaW5lLgogICAgIyBQYWthaSBha2hpciBiYXJpcyBmaWxlIEFTTEkgKFxyXG4gYmlsYSBhZGEgc2F0dSBzYWphIGJhcmlzIENSTEYpLAogICAgIyBkYW4gaG9ybWF0aSBwZW5hbmRhICJcIE5vIG5ld2xpbmUgYXQgZW5kIG9mIGZpbGUiLgogICAgZW9sID0gIlxyXG4iIGlmIGFueShsaW5lLmVuZHN3aXRoKCJcclxuIikgZm9yIGxpbmUgaW4gb3JpZ2luYWxfbGluZXMpIGVsc2UgIlxuIgogICAgcmVzdWx0OiBsaXN0W3N0cl0gPSBbXQogICAgcGF0Y2hfbGluZXMgPSBwYXRjaF90ZXh0LnNwbGl0bGluZXMoKQogICAgaSA9IDAKICAgIHNyY19pZHggPSAwCgogICAgaHVua19yZSA9IHJlLmNvbXBpbGUociJeQEAgLShcZCspKD86LChcZCspKT8gXCsoXGQrKSg/OiwoXGQrKSk/IEBAIikKICAgIHdoaWxlIGkgPCBsZW4ocGF0Y2hfbGluZXMpOgogICAgICAgIGxpbmUgPSBwYXRjaF9saW5lc1tpXQogICAgICAgIG1hdGNoID0gaHVua19yZS5tYXRjaChsaW5lKQogICAgICAgIGlmIG1hdGNoOgogICAgICAgICAgICBzdGFydCA9IGludChtYXRjaC5ncm91cCgxKSkKICAgICAgICAgICAgb2xkX2NvdW50ID0gaW50KG1hdGNoLmdyb3VwKDIpKSBpZiBtYXRjaC5ncm91cCgyKSBpcyBub3QgTm9uZSBlbHNlIDEKICAgICAgICAgICAgbmV3X2NvdW50ID0gaW50KG1hdGNoLmdyb3VwKDQpKSBpZiBtYXRjaC5ncm91cCg0KSBpcyBub3QgTm9uZSBlbHNlIDEKICAgICAgICAgICAgc3RhcnRfaWR4ID0gbWF4KHN0YXJ0IC0gMSwgMCkgaWYgc3RhcnQgPiAwIGVsc2UgMAogICAgICAgICAgICBpZiBzdGFydF9pZHggPCBzcmNfaWR4OgogICAgICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigiUGF0Y2ggdGlkYWsgYmVydXJ1dGFuIC8gdHVtcGFuZyB0aW5kaWguIikKICAgICAgICAgICAgcmVzdWx0LmV4dGVuZChvcmlnaW5hbF9saW5lc1tzcmNfaWR4OnN0YXJ0X2lkeF0pCiAgICAgICAgICAgIHNyY19pZHggPSBzdGFydF9pZHgKICAgICAgICAgICAgaSArPSAxCiAgICAgICAgICAgIG9sZF9zZWVuID0gMAogICAgICAgICAgICBuZXdfc2VlbiA9IDAKICAgICAgICAgICAgIyBKZW5pcyBiYXJpcyB0ZXJha2hpciB5YW5nIGRpdGFtYmFoa2FuIGtlIHJlc3VsdCAoJ3BsdXMnIC8KICAgICAgICAgICAgIyAnY29udGV4dCcgLyBOb25lKS4gUGVuYW5kYSAiXCBObyBuZXdsaW5lIGF0IGVuZCBvZiBmaWxlIgogICAgICAgICAgICAjIGhhbnlhIGJvbGVoIG1lbmdoYXB1cyBuZXdsaW5lIGJpbGEgbWVuZ2lrdXRpIGJhcmlzICIrIiBhdGF1CiAgICAgICAgICAgICMga29udGVrcyDigJQgYmlsYSBtZW5naWt1dGkgYmFyaXMgIi0iIGlhIG1lcnVqdWsga2UgYmFyaXMgeWFuZwogICAgICAgICAgICAjIERJSEFQVVMgKHRpZGFrIGFkYSBkaSByZXN1bHQpIGRhbiByZXN1bHQgdGlkYWsgYm9sZWggZGl1YmFoLgogICAgICAgICAgICBsYXN0X2FwcGVuZGVkOiBzdHIgfCBOb25lID0gTm9uZQogICAgICAgICAgICB3aGlsZSBpIDwgbGVuKHBhdGNoX2xpbmVzKSBhbmQgbm90IHBhdGNoX2xpbmVzW2ldLnN0YXJ0c3dpdGgoIkBAIik6CiAgICAgICAgICAgICAgICBodW5rX2xpbmUgPSBwYXRjaF9saW5lc1tpXQogICAgICAgICAgICAgICAgaWYgaHVua19saW5lLnN0YXJ0c3dpdGgoIi0tLSIpIG9yIGh1bmtfbGluZS5zdGFydHN3aXRoKCIrKysiKToKICAgICAgICAgICAgICAgICAgICBpICs9IDEKICAgICAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICAgICAgaWYgaHVua19saW5lLnN0YXJ0c3dpdGgoIlxcIik6CiAgICAgICAgICAgICAgICAgICAgIyAiXCBObyBuZXdsaW5lIGF0IGVuZCBvZiBmaWxlIiDigJQgcGVuYW5kYSBzYWg6IGhhcHVzCiAgICAgICAgICAgICAgICAgICAgIyBuZXdsaW5lIGRhcmkgYmFyaXMgdGVyYWtoaXIgeWFuZyBiYXJ1IGRpdGFtYmFoa2FuCiAgICAgICAgICAgICAgICAgICAgIyAoYmFyaXMgIisiIGF0YXUga29udGVrcykgYWdhciBmaWxlIHRldGFwIHRhbnBhCiAgICAgICAgICAgICAgICAgICAgIyBuZXdsaW5lIGFraGlyIHNlcGVydGkgeWFuZyBkaW1pbnRhIHBhdGNoLgogICAgICAgICAgICAgICAgICAgIGlmIGxhc3RfYXBwZW5kZWQgaXMgbm90IE5vbmUgYW5kIHJlc3VsdDoKICAgICAgICAgICAgICAgICAgICAgICAgbGFzdCA9IHJlc3VsdFstMV0KICAgICAgICAgICAgICAgICAgICAgICAgaWYgbGFzdC5lbmRzd2l0aCgiXHJcbiIpOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgcmVzdWx0Wy0xXSA9IGxhc3RbOi0yXQogICAgICAgICAgICAgICAgICAgICAgICBlbGlmIGxhc3QuZW5kc3dpdGgoIlxuIik6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXN1bHRbLTFdID0gbGFzdFs6LTFdCiAgICAgICAgICAgICAgICAgICAgaSArPSAxCiAgICAgICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgICAgIGlmIGh1bmtfbGluZS5zdGFydHN3aXRoKCIgIik6CiAgICAgICAgICAgICAgICAgICAgaWYgc3JjX2lkeCA+PSBsZW4ob3JpZ2luYWxfbGluZXMpOgogICAgICAgICAgICAgICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKCJQYXRjaCBtZWxlYmloaSBha2hpciBmaWxlLiIpCiAgICAgICAgICAgICAgICAgICAgZXhwZWN0ZWQgPSBodW5rX2xpbmVbMTpdCiAgICAgICAgICAgICAgICAgICAgYWN0dWFsID0gb3JpZ2luYWxfbGluZXNbc3JjX2lkeF0ucnN0cmlwKCJcclxuIikKICAgICAgICAgICAgICAgICAgICBpZiBhY3R1YWwgIT0gZXhwZWN0ZWQ6CiAgICAgICAgICAgICAgICAgICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBmIkJhcmlzIGtvbnRla3MgcGF0Y2ggdGlkYWsgY29jb2s6IHtleHBlY3RlZCFyfSAiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBmIihmaWxlIGJlcmlzaSB7YWN0dWFsIXJ9KS4iCiAgICAgICAgICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgICAgICAgICByZXN1bHQuYXBwZW5kKG9yaWdpbmFsX2xpbmVzW3NyY19pZHhdKQogICAgICAgICAgICAgICAgICAgIGxhc3RfYXBwZW5kZWQgPSAiY29udGV4dCIKICAgICAgICAgICAgICAgICAgICBzcmNfaWR4ICs9IDEKICAgICAgICAgICAgICAgICAgICBvbGRfc2VlbiArPSAxCiAgICAgICAgICAgICAgICAgICAgbmV3X3NlZW4gKz0gMQogICAgICAgICAgICAgICAgZWxpZiBodW5rX2xpbmUuc3RhcnRzd2l0aCgiLSIpOgogICAgICAgICAgICAgICAgICAgIGlmIHNyY19pZHggPj0gbGVuKG9yaWdpbmFsX2xpbmVzKToKICAgICAgICAgICAgICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigiUGF0Y2ggbWVuZ2hhcHVzIGJhcmlzIHlhbmcgdGlkYWsgYWRhLiIpCiAgICAgICAgICAgICAgICAgICAgZXhwZWN0ZWQgPSBodW5rX2xpbmVbMTpdCiAgICAgICAgICAgICAgICAgICAgYWN0dWFsID0gb3JpZ2luYWxfbGluZXNbc3JjX2lkeF0ucnN0cmlwKCJcclxuIikKICAgICAgICAgICAgICAgICAgICBpZiBhY3R1YWwgIT0gZXhwZWN0ZWQ6CiAgICAgICAgICAgICAgICAgICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBmIkJhcmlzIGhhcHVzIHBhdGNoIHRpZGFrIGNvY29rOiB7ZXhwZWN0ZWQhcn0gIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgZiIoZmlsZSBiZXJpc2kge2FjdHVhbCFyfSkuIgogICAgICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICAgICAgbGFzdF9hcHBlbmRlZCA9IE5vbmUKICAgICAgICAgICAgICAgICAgICBzcmNfaWR4ICs9IDEKICAgICAgICAgICAgICAgICAgICBvbGRfc2VlbiArPSAxCiAgICAgICAgICAgICAgICBlbGlmIGh1bmtfbGluZS5zdGFydHN3aXRoKCIrIik6CiAgICAgICAgICAgICAgICAgICAgcmVzdWx0LmFwcGVuZChodW5rX2xpbmVbMTpdICsgZW9sKQogICAgICAgICAgICAgICAgICAgIGxhc3RfYXBwZW5kZWQgPSAicGx1cyIKICAgICAgICAgICAgICAgICAgICBuZXdfc2VlbiArPSAxCiAgICAgICAgICAgICAgICBlbGlmIGh1bmtfbGluZSA9PSAiIjoKICAgICAgICAgICAgICAgICAgICAjIEJhcmlzIGtvc29uZyA9IGJhcmlzIGtvbnRla3Mga29zb25nLgogICAgICAgICAgICAgICAgICAgIGlmIHNyY19pZHggPj0gbGVuKG9yaWdpbmFsX2xpbmVzKToKICAgICAgICAgICAgICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigiUGF0Y2ggbWVsZWJpaGkgYWtoaXIgZmlsZS4iKQogICAgICAgICAgICAgICAgICAgIGFjdHVhbCA9IG9yaWdpbmFsX2xpbmVzW3NyY19pZHhdLnJzdHJpcCgiXHJcbiIpCiAgICAgICAgICAgICAgICAgICAgaWYgYWN0dWFsICE9ICIiOgogICAgICAgICAgICAgICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIkJhcmlzIGtvc29uZyBwYXRjaCB0aWRhayBjb2NvayBkZW5nYW4gaXNpIGZpbGUuIgogICAgICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICAgICAgcmVzdWx0LmFwcGVuZChvcmlnaW5hbF9saW5lc1tzcmNfaWR4XSkKICAgICAgICAgICAgICAgICAgICBsYXN0X2FwcGVuZGVkID0gImNvbnRleHQiCiAgICAgICAgICAgICAgICAgICAgc3JjX2lkeCArPSAxCiAgICAgICAgICAgICAgICAgICAgb2xkX3NlZW4gKz0gMQogICAgICAgICAgICAgICAgICAgIG5ld19zZWVuICs9IDEKICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcihmIkJhcmlzIHBhdGNoIHRpZGFrIGRpa2VuYWw6IHtodW5rX2xpbmUhcn0iKQogICAgICAgICAgICAgICAgaSArPSAxCiAgICAgICAgICAgIGlmIG9sZF9zZWVuICE9IG9sZF9jb3VudCBvciBuZXdfc2VlbiAhPSBuZXdfY291bnQ6CiAgICAgICAgICAgICAgICByYWlzZSBWYWx1ZUVycm9yKAogICAgICAgICAgICAgICAgICAgIGYiSnVtbGFoIGJhcmlzIGh1bmsgdGlkYWsgY29jb2s6IGhlYWRlciBAQCAte3N0YXJ0fSx7b2xkX2NvdW50fSAiCiAgICAgICAgICAgICAgICAgICAgZiIre25ld19jb3VudH0gdGFwaSBpc2kge29sZF9zZWVufS97bmV3X3NlZW59IGJhcmlzLiIKICAgICAgICAgICAgICAgICkKICAgICAgICAgICAgY29udGludWUKICAgICAgICBpZiBsaW5lLnN0YXJ0c3dpdGgoKCItLS0iLCAiKysrIiwgImRpZmYgIiwgImluZGV4ICIpKToKICAgICAgICAgICAgaSArPSAxCiAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgcmFpc2UgVmFsdWVFcnJvcihmIlBhdGNoIHRpZGFrIGRpYXdhbGkgaHVuayBAQDoge2xpbmUhcn0iKQogICAgcmVzdWx0LmV4dGVuZChvcmlnaW5hbF9saW5lc1tzcmNfaWR4Ol0pCiAgICByZXR1cm4gIiIuam9pbihyZXN1bHQpCgoKZGVmIF9zdGFnZV9hbGwocm9vdDogUGF0aCkgLT4gYm9vbDoKICAgICIiIlN0YWdlIHNlbXVhIHBlcnViYWhhbiAodGVybWFzdWsgZmlsZSBiYXJ1L3VudHJhY2tlZCkg4oCUIGBgZ2l0IGFkZCAtQWBgLgoKICAgIE4yOiBgYGRpZmYoKWBgIFdBSklCIG1lbWFuZ2dpbCBpbmkgZHVsdS4gRHVsdSBgYGRpZmYoKWBgIG1lbWFrYWkKICAgIGBgZ2l0IGRpZmYgSEVBRGBgIHlhbmcgVElEQUsgbWVuYW1waWxrYW4gZmlsZSB1bnRyYWNrZWQsIHNlbWVudGFyYQogICAgYGBjb21taXQoKWBgIG1lbWFrYWkgYGBnaXQgYWRkIC1BYGAg4oCUIGZpbGUgYmFydSAobWlzLiBiYWNrZG9vci5weSkKICAgIGlrdXQgdGVyLWNvbW1pdCB0YW5wYSBwZXJuYWggdGVybGloYXQgZGkgZGlmZiB5YW5nIGRpc2V0dWp1aS4KICAgICIiIgogICAgdHJ5OgogICAgICAgIHJlc3VsdCA9IHN1YnByb2Nlc3MucnVuKAogICAgICAgICAgICBbImdpdCIsICJhZGQiLCAiLUEiXSwgY3dkPXN0cihyb290KSwKICAgICAgICAgICAgY2FwdHVyZV9vdXRwdXQ9VHJ1ZSwgdGV4dD1UcnVlLCB0aW1lb3V0PTYwLAogICAgICAgICkKICAgICAgICByZXR1cm4gcmVzdWx0LnJldHVybmNvZGUgPT0gMAogICAgZXhjZXB0IChPU0Vycm9yLCBzdWJwcm9jZXNzLlN1YnByb2Nlc3NFcnJvciwgc3VicHJvY2Vzcy5UaW1lb3V0RXhwaXJlZCk6CiAgICAgICAgcmV0dXJuIEZhbHNlCgoKZGVmIGRpZmYod29ya3RyZWU6IHN0ciB8IFBhdGgpIC0+IHN0cjoKICAgICIiIlVuaWZpZWQgZGlmZiB3b3JrdHJlZSB2cyBIRUFEIChiaWxhIHJlcG8gZ2l0KSwgc2VsYWluIGl0dSAnJy4KCiAgICBOMjogc3RhZ2UgZHVsdSAoYGBnaXQgYWRkIC1BYGApLCBsYWx1IGBgZ2l0IGRpZmYgLS1jYWNoZWQgSEVBRGBgIOKAlAogICAgeWFuZyBkaWxpaGF0IG1hbnVzaWEgZGkgZGlmZiA9IHlhbmcgYWthbiBkaS1jb21taXQsIHRlcm1hc3VrIGZpbGUKICAgIGJhcnUuIEFydGVmYWsgZ2F0ZSAoY292ZXJhZ2UuanNvbiwgLmNvdmVyYWdlLCAucHl0ZXN0X2NhY2hlKSB0aWRhawogICAgbWFzdWsgd29ya3RyZWUgKGRpdHVsaXMga2UgbW91bnQgbHVhciB3b3JrdHJlZSwgbGloYXQgTjQpLCBqYWRpCiAgICB0aWRhayBpa3V0IHRlci1zdGFnZSBkaSBzaW5pLgogICAgIiIiCiAgICByb290ID0gUGF0aCh3b3JrdHJlZSkKICAgIHRyeToKICAgICAgICBpZiBub3QgX3N0YWdlX2FsbChyb290KToKICAgICAgICAgICAgcmV0dXJuICIiCiAgICAgICAgcmVzdWx0ID0gc3VicHJvY2Vzcy5ydW4oCiAgICAgICAgICAgIFsiZ2l0IiwgImRpZmYiLCAiLS1jYWNoZWQiLCAiSEVBRCIsICItLSIsICIuIl0sCiAgICAgICAgICAgIGN3ZD1zdHIocm9vdCksIGNhcHR1cmVfb3V0cHV0PVRydWUsIHRleHQ9VHJ1ZSwgdGltZW91dD02MCwKICAgICAgICApCiAgICAgICAgaWYgcmVzdWx0LnJldHVybmNvZGUgPT0gMCBhbmQgcmVzdWx0LnN0ZG91dC5zdHJpcCgpOgogICAgICAgICAgICByZXR1cm4gcmVzdWx0LnN0ZG91dAogICAgZXhjZXB0IChPU0Vycm9yLCBzdWJwcm9jZXNzLlN1YnByb2Nlc3NFcnJvciwgc3VicHJvY2Vzcy5UaW1lb3V0RXhwaXJlZCk6CiAgICAgICAgcGFzcwogICAgcmV0dXJuICIiCgoKZGVmIGRpZmZfaGFzaCh3b3JrdHJlZTogc3RyIHwgUGF0aCkgLT4gc3RyOgogICAgIiIiSGFzaCBTSEEtMjU2IGRhcmkgZGlmZiB3b3JrdHJlZSAoIiIgYmlsYSB0YW5wYSBkaWZmIC8gYnVrYW4gcmVwbykuIiIiCiAgICBpbXBvcnQgaGFzaGxpYgoKICAgIHRleHQgPSBkaWZmKHdvcmt0cmVlKQogICAgaWYgbm90IHRleHQ6CiAgICAgICAgcmV0dXJuICIiCiAgICByZXR1cm4gaGFzaGxpYi5zaGEyNTYodGV4dC5lbmNvZGUoInV0Zi04IikpLmhleGRpZ2VzdCgpCgoKZGVmIGNvbW1pdCh3b3JrdHJlZTogc3RyIHwgUGF0aCwgbWVzc2FnZTogc3RyLAogICAgICAgICAgIGV4cGVjdGVkX2RpZmZfaGFzaDogc3RyIHwgTm9uZSA9IE5vbmUpIC0+IGJvb2w6CiAgICAiIiJDb21taXQgZGkgd29ya3RyZWUuIEhBTllBIGRpcGFuZ2dpbCBob3N0IHNldGVsYWggYXBwcm92YWwgdG9rZW4gdmFsaWQuCgogICAgTjI6IFRJREFLIEFEQSBsYWdpIGBgZ2l0IGFkZCAtQWBgIGRpIHNpbmkg4oCUIHlhbmcgZGktY29tbWl0IEhBTllBCiAgICB5YW5nIHN1ZGFoIGRpLXN0YWdlIG9sZWggYGBkaWZmKClgYCAoeWFuZyBzdWRhaCBkaWxpaGF0IG1hbnVzaWEpLgogICAgQmlsYSBgYGV4cGVjdGVkX2RpZmZfaGFzaGBgIGRpYmVyaWthbiwgaGFzaCBkaWZmIHN0YWdlZCBzYWF0IGluaQogICAgZGl2ZXJpZmlrYXNpIHVsYW5nIHNlYmVsdW0gY29tbWl0OyBiaWxhIGJlcnViYWggc2VqYWsgZGlzZXR1anVpCiAgICAobWlzLiBmaWxlIGJhcnUgZGl0YW1iYWhrYW4gc2V0ZWxhaCBBcHByb3ZlKSAtPiB0b2xhayAoRmFsc2UpLgogICAgU2V0ZWxhaCBjb21taXQsIGRpdmVyaWZpa2FzaSBiYWh3YSB0aWRhayBhZGEgbGFnaSBzdGFnZWQgZGlmZgogICAgdnMgSEVBRCAoY29tbWl0IGJlbmFyLWJlbmFyIGJlcmlzaSBzZW11YSB5YW5nIGRpc2V0dWp1aSkuCiAgICBQdXNoIFRJREFLIFBFUk5BSCBkaWxha3VrYW4gZGkgc2luaS4KICAgICIiIgogICAgcm9vdCA9IFBhdGgod29ya3RyZWUpCiAgICB0cnk6CiAgICAgICAgaWYgZXhwZWN0ZWRfZGlmZl9oYXNoIGlzIG5vdCBOb25lOgogICAgICAgICAgICBjdXJyZW50ID0gZGlmZl9oYXNoKHdvcmt0cmVlKQogICAgICAgICAgICBpZiBjdXJyZW50ICE9IGV4cGVjdGVkX2RpZmZfaGFzaDoKICAgICAgICAgICAgICAgIHJldHVybiBGYWxzZQogICAgICAgIHJlc3VsdCA9IHN1YnByb2Nlc3MucnVuKAogICAgICAgICAgICBbImdpdCIsICJjb21taXQiLCAiLW0iLCBtZXNzYWdlXSwgY3dkPXN0cihyb290KSwKICAgICAgICAgICAgY2FwdHVyZV9vdXRwdXQ9VHJ1ZSwgdGV4dD1UcnVlLCB0aW1lb3V0PTYwLAogICAgICAgICkKICAgICAgICBpZiByZXN1bHQucmV0dXJuY29kZSAhPSAwOgogICAgICAgICAgICByZXR1cm4gRmFsc2UKICAgICAgICAjIFZlcmlmaWthc2kgdWxhbmc6IHNldGVsYWggY29tbWl0LCBzdGFnZWQgZGlmZiB2cyBIRUFEIGhhcnVzIGtvc29uZy4KICAgICAgICBjaGVjayA9IHN1YnByb2Nlc3MucnVuKAogICAgICAgICAgICBbImdpdCIsICJkaWZmIiwgIi0tY2FjaGVkIiwgIkhFQUQiLCAiLS0iLCAiLiJdLAogICAgICAgICAgICBjd2Q9c3RyKHJvb3QpLCBjYXB0dXJlX291dHB1dD1UcnVlLCB0ZXh0PVRydWUsIHRpbWVvdXQ9NjAsCiAgICAgICAgKQogICAgICAgIHJldHVybiBjaGVjay5yZXR1cm5jb2RlID09IDAgYW5kIG5vdCBjaGVjay5zdGRvdXQuc3RyaXAoKQogICAgZXhjZXB0IChPU0Vycm9yLCBzdWJwcm9jZXNzLlN1YnByb2Nlc3NFcnJvciwgc3VicHJvY2Vzcy5UaW1lb3V0RXhwaXJlZCk6CiAgICAgICAgcmV0dXJuIEZhbHNlCgoKZGVmIGNsZWFudXAod29ya3RyZWU6IHN0ciB8IFBhdGgsIHJlcG9fcGF0aDogc3RyIHwgUGF0aCB8IE5vbmUgPSBOb25lKSAtPiBib29sOgogICAgIiIiSGFwdXMgd29ya3RyZWU7IFRydWUgYmlsYSBwYXRoIHN1ZGFoIHRpZGFrIGFkYSBzZXN1ZGFobnlhLgoKICAgIEZhaWwtY2xvc2VkIChhdWRpdCBDMik6IGJpbGEgYGByZXBvX3BhdGhgYCBkaWtldGFodWksIGhhcHVzIEhBTllBCiAgICBiaWxhIHRhcmdldCBiZXJhZGEgZGkgYmF3YWggYGA8cmVwbz4vcnVucy88cnVuX2lkPi93dGBgLiBQYXRoIGRpCiAgICBsdWFyIHBvbGEgaXR1IChyZXBvIGl0dSBzZW5kaXJpLCBsZWx1aHVybnlhLCBmb2xkZXIgbGFpbikgRElUT0xBSy4KICAgICIiIgogICAgdHJ5OgogICAgICAgIGZyb20gbXVmYWthdC5zYW5kYm94Lndvcmt0cmVlIGltcG9ydCByZW1vdmVfd29ya3RyZWUKCiAgICAgICAgcmV0dXJuIHJlbW92ZV93b3JrdHJlZSh3b3JrdHJlZSwgcmVwb19wYXRoKQogICAgZXhjZXB0IEltcG9ydEVycm9yOgogICAgICAgIHRhcmdldCA9IFBhdGgod29ya3RyZWUpCiAgICAgICAgdHJ5OgogICAgICAgICAgICByZXNvbHZlZCA9IHRhcmdldC5yZXNvbHZlKCkKICAgICAgICBleGNlcHQgT1NFcnJvcjoKICAgICAgICAgICAgcmV0dXJuIEZhbHNlCiAgICAgICAgaWYgcmVzb2x2ZWQgPT0gUGF0aCgiLyIpIG9yIHJlc29sdmVkID09IFBhdGguaG9tZSgpOgogICAgICAgICAgICByZXR1cm4gRmFsc2UKICAgICAgICBpZiByZXBvX3BhdGggaXMgbm90IE5vbmU6CiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIHJlcG9fcmVzb2x2ZWQgPSBQYXRoKHJlcG9fcGF0aCkucmVzb2x2ZSgpCiAgICAgICAgICAgIGV4Y2VwdCBPU0Vycm9yOgogICAgICAgICAgICAgICAgcmVwb19yZXNvbHZlZCA9IE5vbmUKICAgICAgICAgICAgaWYgcmVwb19yZXNvbHZlZCBpcyBub3QgTm9uZSBhbmQgKAogICAgICAgICAgICAgICAgcmVzb2x2ZWQgPT0gcmVwb19yZXNvbHZlZCBvciByZXNvbHZlZCBpbiByZXBvX3Jlc29sdmVkLnBhcmVudHMKICAgICAgICAgICAgKToKICAgICAgICAgICAgICAgIHJldHVybiBGYWxzZQogICAgICAgICAgICAjIEMyIChmYWxsYmFjayBsb2thbCk6IGhhbnlhIGRpIGJhd2FoIHJ1bnMvPHJ1bl9pZD4vd3QuCiAgICAgICAgICAgIGlmIHJlcG9fcmVzb2x2ZWQgaXMgTm9uZToKICAgICAgICAgICAgICAgIHJldHVybiBGYWxzZQogICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICByZWwgPSByZXNvbHZlZC5yZWxhdGl2ZV90byhyZXBvX3Jlc29sdmVkIC8gInJ1bnMiKQogICAgICAgICAgICBleGNlcHQgVmFsdWVFcnJvcjoKICAgICAgICAgICAgICAgIHJldHVybiBGYWxzZQogICAgICAgICAgICBpZiBsZW4ocmVsLnBhcnRzKSA8IDIgb3IgcmVsLnBhcnRzWzFdICE9ICJ3dCI6CiAgICAgICAgICAgICAgICByZXR1cm4gRmFsc2UKICAgICAgICBpZiB0YXJnZXQuZXhpc3RzKCkgb3IgdGFyZ2V0LmlzX3N5bWxpbmsoKToKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgaWYgdGFyZ2V0LmlzX2RpcigpIGFuZCBub3QgdGFyZ2V0LmlzX3N5bWxpbmsoKToKICAgICAgICAgICAgICAgICAgICBzaHV0aWwucm10cmVlKHRhcmdldCkKICAgICAgICAgICAgICAgIGVsc2U6CiAgICAgICAgICAgICAgICAgICAgdGFyZ2V0LnVubGluaygpCiAgICAgICAgICAgIGV4Y2VwdCBPU0Vycm9yOgogICAgICAgICAgICAgICAgcGFzcwogICAgICAgIHJldHVybiBub3QgdGFyZ2V0LmV4aXN0cygpIGFuZCBub3QgdGFyZ2V0LmlzX3N5bWxpbmsoKQo=
+"""Worktree & apply patch Local Runner (Claude §5, §T11).
+
+Reuse: bila paket ``mufakat`` terpasang, ``init_workspace`` /
+``cleanup`` mendelegasikan ke :mod:`mufakat.sandbox.worktree` (logika
+yang sama, satu sumber kebenaran). Bila tidak terpasang, fallback lokal
+(folder biasa) dipakai — runner tetap bisa jalan mandiri.
+
+``apply_files`` SELALU memakai validasi lokal di sini (tidak didelegasikan):
+path absolut atau mengandung ``..`` DITOLAK dengan ``ValueError``
+(sebelum file apa pun ditulis).
+"""
+
+from __future__ import annotations
+
+import re
+import shutil
+import subprocess
+from pathlib import Path
+
+__all__ = [
+    "validate_rel_path",
+    "init_workspace",
+    "apply_files",
+    "diff",
+    "commit",
+    "cleanup",
+]
+
+_DRIVE_RE = re.compile(r"^[A-Za-z]:")
+
+
+def validate_rel_path(path: str) -> Path:
+    """Validasi path relatif di dalam worktree; tolak traversal/absolut.
+
+    Periksa juga separator Windows (``\\``) agar ``..\\..\\win.ini``
+    ditolak meski host-nya Linux, drive Windows (``C:\\...`` / ``C:/...``)
+    agar tidak jadi path absolut di host Windows, dan byte NUL.
+    """
+    raw = str(path or "")
+    if "\x00" in raw:
+        raise ValueError("Path mengandung byte NUL.")
+    candidate = Path(raw)
+    if candidate.is_absolute() or raw.startswith(("/", "\\")):
+        raise ValueError(f"Path absolut ditolak: {raw!r}")
+    if _DRIVE_RE.match(raw):
+        raise ValueError(f"Path absolut Windows ditolak: {raw!r}")
+    parts = raw.replace("\\", "/").split("/")
+    if ".." in parts:
+        raise ValueError(f"Path traversal ditolak: {raw!r}")
+    if raw == "" or raw in (".", "./"):
+        raise ValueError("Path kosong ditolak.")
+    return candidate
+
+
+def _resolve_within_root(root: Path, rel: Path) -> Path:
+    """Kembalikan target absolut di bawah ``root``; tolak symlink escape.
+
+    Setiap komponen path yang sudah ada diperiksa: bila ada symlink di
+    tengah jalan (``link -> /etc``) atau target itu sendiri symlink,
+    tulis ditolak — dulu ``write_text`` mengikuti symlink dan menulis
+    ke luar worktree.
+    """
+    root_resolved = root.resolve()
+    current = root_resolved
+    for part in rel.parts:
+        if part in ("", "."):
+            continue
+        current = current / part
+        if current.is_symlink():
+            raise ValueError(f"Path melewati symlink ditolak: {rel!r}")
+    target = root_resolved / rel
+    if target.is_symlink():
+        raise ValueError(f"Path symlink ditolak: {rel!r}")
+    return target
+
+
+def init_workspace(repo_path: str | Path, run_id: str) -> Path:
+    """Buat worktree ``runs/<run_id>/wt`` di branch ``mufakat/<run_id>``."""
+    # Validasi run_id sebelum delegasi: run_id traversal (../../x)
+    # dulu lolos ke create_worktree dan membuat folder di luar repo.
+    try:
+        from mufakat.sandbox.worktree import validate_run_id
+
+        validate_run_id(run_id)
+    except ImportError:
+        if not re.match(r"^[A-Za-z0-9][A-Za-z0-9._-]*$", str(run_id)) or ".." in str(run_id):
+            raise ValueError(f"run_id tidak valid: {run_id!r}")
+    try:
+        from mufakat.sandbox.worktree import create_worktree
+
+        return create_worktree(repo_path, run_id)
+    except ImportError:
+        target = Path(repo_path) / "runs" / run_id / "wt"
+        target.mkdir(parents=True, exist_ok=True)
+        return target
+
+
+def _read_text_raw(path: Path) -> str:
+    """Baca teks TANPA universal-newline translation (L5): ``read_text``
+    mengubah ``\\r\\n`` jadi ``\\n`` sehingga patch applier tidak bisa
+    lagi mendeteksi file CRLF. Baca bytes lalu decode agar EOL asli utuh."""
+    return path.read_bytes().decode("utf-8")
+
+
+def _write_text_raw(path: Path, text: str) -> None:
+    """Tulis teks verbatim (tanpa translasi newline per-platform)."""
+    path.write_bytes(text.encode("utf-8"))
+
+
+def apply_files(worktree: str | Path, files: list[dict]) -> list[str]:
+    """Terapkan daftar file (replace/patch) ke worktree; kembalikan path yang ditulis.
+
+    ``files``: ``[{"path": "src/app.py", "mode": "replace"|"patch",
+    "content": "..."}]``. Mode ``patch`` memakai unified diff dan
+    diterapkan secara kering dulu (validasi) sebelum ditulis.
+
+    Atomik per panggilan: SEMUA item divalidasi dulu (path, mode,
+    isi, symlink) sebelum file pertama ditulis — dulu item kedua yang
+    traversal tetap menulis item pertama.
+    """
+    if not isinstance(files, (list, tuple)):
+        raise ValueError("files harus list of dict.")
+    root = Path(worktree)
+    root_resolved = root.resolve()
+    # Fase 1 — validasi semua, tanpa menulis apa pun.
+    plan: list[tuple[Path, str, str]] = []
+    for item in files or []:
+        if not isinstance(item, dict):
+            raise ValueError("Setiap item files harus dict.")
+        rel = validate_rel_path(str(item.get("path", "")))
+        target = _resolve_within_root(root, rel)
+        mode = str(item.get("mode", "replace"))
+        if mode not in ("replace", "patch"):
+            raise ValueError(f"Mode file tidak dikenal: {mode!r}")
+        content = item.get("content", "")
+        if not isinstance(content, str):
+            raise ValueError(f"content harus string untuk {rel!r}.")
+        if mode == "patch":
+            # Validasi patch secara kering sebelum menulis apa pun.
+            original = _read_text_raw(target) if target.is_file() else ""
+            _apply_unified_diff(original, content)
+        plan.append((target, mode, content))
+    # Fase 2 — tulis.
+    applied: list[str] = []
+    for target, mode, content in plan:
+        rel = target.relative_to(root_resolved)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        if mode == "patch":
+            original = _read_text_raw(target) if target.is_file() else ""
+            _write_text_raw(target, _apply_unified_diff(original, content))
+        else:
+            _write_text_raw(target, content)
+        applied.append(str(rel))
+    return applied
+
+
+def _apply_unified_diff(original: str, patch_text: str) -> str:
+    """Terapkan unified diff sederhana (hunk @@ -a,b +c,d @@, - / + / spasi).
+
+    Patch yang tidak bisa diterapkan bersih DITOLAK (ValueError) — tidak
+    pernah ditulis setengah-setengah. Baris konteks (`` ``) dan baris
+    hapus (``-``) DIVERIFIKASI terhadap isi asli — dulu keduanya
+    diabaikan isinya, sehingga patch dengan konteks/hapus yang salah
+    tetap "berhasil" dan merusak file diam-diam. Jumlah baris tiap hunk
+    juga diperiksa terhadap angka di header ``@@``.
+    """
+    if not isinstance(patch_text, str) or not patch_text.strip():
+        raise ValueError("Patch kosong.")
+    original_lines = original.splitlines(keepends=True)
+    # L5 (putaran 2): baris "+" dulu selalu diberi "\n" — file CRLF jadi
+    # campur aduk, dan file tanpa newline akhir mendadak punya newline.
+    # Pakai akhir baris file ASLI (\r\n bila ada satu saja baris CRLF),
+    # dan hormati penanda "\ No newline at end of file".
+    eol = "\r\n" if any(line.endswith("\r\n") for line in original_lines) else "\n"
+    result: list[str] = []
+    patch_lines = patch_text.splitlines()
+    i = 0
+    src_idx = 0
+
+    hunk_re = re.compile(r"^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@")
+    while i < len(patch_lines):
+        line = patch_lines[i]
+        match = hunk_re.match(line)
+        if match:
+            start = int(match.group(1))
+            old_count = int(match.group(2)) if match.group(2) is not None else 1
+            new_count = int(match.group(4)) if match.group(4) is not None else 1
+            start_idx = max(start - 1, 0) if start > 0 else 0
+            if start_idx < src_idx:
+                raise ValueError("Patch tidak berurutan / tumpang tindih.")
+            result.extend(original_lines[src_idx:start_idx])
+            src_idx = start_idx
+            i += 1
+            old_seen = 0
+            new_seen = 0
+            # Jenis baris terakhir yang ditambahkan ke result ('plus' /
+            # 'context' / None). Penanda "\ No newline at end of file"
+            # hanya boleh menghapus newline bila mengikuti baris "+" atau
+            # konteks — bila mengikuti baris "-" ia merujuk ke baris yang
+            # DIHAPUS (tidak ada di result) dan result tidak boleh diubah.
+            last_appended: str | None = None
+            while i < len(patch_lines) and not patch_lines[i].startswith("@@"):
+                hunk_line = patch_lines[i]
+                if hunk_line.startswith("---") or hunk_line.startswith("+++"):
+                    i += 1
+                    continue
+                if hunk_line.startswith("\\"):
+                    # "\ No newline at end of file" — penanda sah: hapus
+                    # newline dari baris terakhir yang baru ditambahkan
+                    # (baris "+" atau konteks) agar file tetap tanpa
+                    # newline akhir seperti yang diminta patch.
+                    if last_appended is not None and result:
+                        last = result[-1]
+                        if last.endswith("\r\n"):
+                            result[-1] = last[:-2]
+                        elif last.endswith("\n"):
+                            result[-1] = last[:-1]
+                    i += 1
+                    continue
+                if hunk_line.startswith(" "):
+                    if src_idx >= len(original_lines):
+                        raise ValueError("Patch melebihi akhir file.")
+                    expected = hunk_line[1:]
+                    actual = original_lines[src_idx].rstrip("\r\n")
+                    if actual != expected:
+                        raise ValueError(
+                            f"Baris konteks patch tidak cocok: {expected!r} "
+                            f"(file berisi {actual!r})."
+                        )
+                    result.append(original_lines[src_idx])
+                    last_appended = "context"
+                    src_idx += 1
+                    old_seen += 1
+                    new_seen += 1
+                elif hunk_line.startswith("-"):
+                    if src_idx >= len(original_lines):
+                        raise ValueError("Patch menghapus baris yang tidak ada.")
+                    expected = hunk_line[1:]
+                    actual = original_lines[src_idx].rstrip("\r\n")
+                    if actual != expected:
+                        raise ValueError(
+                            f"Baris hapus patch tidak cocok: {expected!r} "
+                            f"(file berisi {actual!r})."
+                        )
+                    last_appended = None
+                    src_idx += 1
+                    old_seen += 1
+                elif hunk_line.startswith("+"):
+                    result.append(hunk_line[1:] + eol)
+                    last_appended = "plus"
+                    new_seen += 1
+                elif hunk_line == "":
+                    # Baris kosong = baris konteks kosong.
+                    if src_idx >= len(original_lines):
+                        raise ValueError("Patch melebihi akhir file.")
+                    actual = original_lines[src_idx].rstrip("\r\n")
+                    if actual != "":
+                        raise ValueError(
+                            "Baris kosong patch tidak cocok dengan isi file."
+                        )
+                    result.append(original_lines[src_idx])
+                    last_appended = "context"
+                    src_idx += 1
+                    old_seen += 1
+                    new_seen += 1
+                else:
+                    raise ValueError(f"Baris patch tidak dikenal: {hunk_line!r}")
+                i += 1
+            if old_seen != old_count or new_seen != new_count:
+                raise ValueError(
+                    f"Jumlah baris hunk tidak cocok: header @@ -{start},{old_count} "
+                    f"+{new_count} tapi isi {old_seen}/{new_seen} baris."
+                )
+            continue
+        if line.startswith(("---", "+++", "diff ", "index ")):
+            i += 1
+            continue
+        raise ValueError(f"Patch tidak diawali hunk @@: {line!r}")
+    result.extend(original_lines[src_idx:])
+    return "".join(result)
+
+
+def _stage_all(root: Path) -> bool:
+    """Stage semua perubahan (termasuk file baru/untracked) — ``git add -A``.
+
+    N2: ``diff()`` WAJIB memanggil ini dulu. Dulu ``diff()`` memakai
+    ``git diff HEAD`` yang TIDAK menampilkan file untracked, sementara
+    ``commit()`` memakai ``git add -A`` — file baru (mis. backdoor.py)
+    ikut ter-commit tanpa pernah terlihat di diff yang disetujui.
+    """
+    try:
+        result = subprocess.run(
+            ["git", "add", "-A"], cwd=str(root),
+            capture_output=True, text=True, timeout=60,
+        )
+        return result.returncode == 0
+    except (OSError, subprocess.SubprocessError, subprocess.TimeoutExpired):
+        return False
+
+
+def diff(worktree: str | Path) -> str:
+    """Unified diff worktree vs HEAD (bila repo git), selain itu ''.
+
+    N2: stage dulu (``git add -A``), lalu ``git diff --cached HEAD`` —
+    yang dilihat manusia di diff = yang akan di-commit, termasuk file
+    baru. Artefak gate (coverage.json, .coverage, .pytest_cache) tidak
+    masuk worktree (ditulis ke mount luar worktree, lihat N4), jadi
+    tidak ikut ter-stage di sini.
+    """
+    root = Path(worktree)
+    try:
+        if not _stage_all(root):
+            return ""
+        result = subprocess.run(
+            ["git", "diff", "--cached", "HEAD", "--", "."],
+            cwd=str(root), capture_output=True, text=True, timeout=60,
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            return result.stdout
+    except (OSError, subprocess.SubprocessError, subprocess.TimeoutExpired):
+        pass
+    return ""
+
+
+def diff_hash(worktree: str | Path) -> str:
+    """Hash SHA-256 dari diff worktree ("" bila tanpa diff / bukan repo)."""
+    import hashlib
+
+    text = diff(worktree)
+    if not text:
+        return ""
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def commit(worktree: str | Path, message: str,
+           expected_diff_hash: str | None = None) -> bool:
+    """Commit di worktree. HANYA dipanggil host setelah approval token valid.
+
+    N2: TIDAK ADA lagi ``git add -A`` di sini — yang di-commit HANYA
+    yang sudah di-stage oleh ``diff()`` (yang sudah dilihat manusia).
+    Bila ``expected_diff_hash`` diberikan, hash diff staged saat ini
+    diverifikasi ulang sebelum commit; bila berubah sejak disetujui
+    (mis. file baru ditambahkan setelah Approve) -> tolak (False).
+    Setelah commit, diverifikasi bahwa tidak ada lagi staged diff
+    vs HEAD (commit benar-benar berisi semua yang disetujui).
+    Push TIDAK PERNAH dilakukan di sini.
+    """
+    root = Path(worktree)
+    try:
+        if expected_diff_hash is not None:
+            current = diff_hash(worktree)
+            if current != expected_diff_hash:
+                return False
+        result = subprocess.run(
+            ["git", "commit", "-m", message], cwd=str(root),
+            capture_output=True, text=True, timeout=60,
+        )
+        if result.returncode != 0:
+            return False
+        # Verifikasi ulang: setelah commit, staged diff vs HEAD harus kosong.
+        check = subprocess.run(
+            ["git", "diff", "--cached", "HEAD", "--", "."],
+            cwd=str(root), capture_output=True, text=True, timeout=60,
+        )
+        return check.returncode == 0 and not check.stdout.strip()
+    except (OSError, subprocess.SubprocessError, subprocess.TimeoutExpired):
+        return False
+
+
+def cleanup(worktree: str | Path, repo_path: str | Path | None = None) -> bool:
+    """Hapus worktree; True bila path sudah tidak ada sesudahnya.
+
+    Fail-closed (audit C2): bila ``repo_path`` diketahui, hapus HANYA
+    bila target berada di bawah ``<repo>/runs/<run_id>/wt``. Path di
+    luar pola itu (repo itu sendiri, leluhurnya, folder lain) DITOLAK.
+    """
+    try:
+        from mufakat.sandbox.worktree import remove_worktree
+
+        return remove_worktree(worktree, repo_path)
+    except ImportError:
+        target = Path(worktree)
+        try:
+            resolved = target.resolve()
+        except OSError:
+            return False
+        if resolved == Path("/") or resolved == Path.home():
+            return False
+        if repo_path is not None:
+            try:
+                repo_resolved = Path(repo_path).resolve()
+            except OSError:
+                repo_resolved = None
+            if repo_resolved is not None and (
+                resolved == repo_resolved or resolved in repo_resolved.parents
+            ):
+                return False
+            # C2 (fallback lokal): hanya di bawah runs/<run_id>/wt.
+            if repo_resolved is None:
+                return False
+            try:
+                rel = resolved.relative_to(repo_resolved / "runs")
+            except ValueError:
+                return False
+            if len(rel.parts) < 2 or rel.parts[1] != "wt":
+                return False
+        if target.exists() or target.is_symlink():
+            try:
+                if target.is_dir() and not target.is_symlink():
+                    shutil.rmtree(target)
+                else:
+                    target.unlink()
+            except OSError:
+                pass
+        return not target.exists() and not target.is_symlink()
