@@ -1,0 +1,1 @@
+{"compilerOptions":{"jsx":"react-jsx","noEmit":true},"exclude":["node_modules",".output"],"extends":"./.wxt/tsconfig.json","include":["src",".wxt/types"]}
