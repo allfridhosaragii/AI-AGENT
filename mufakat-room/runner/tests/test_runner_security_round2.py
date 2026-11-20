@@ -1,1 +1,242 @@
-IiIiVGVzdCByZWdyZXNpIGF1ZGl0IHB1dGFyYW4gMiDigJQgTG9jYWwgUnVubmVyIChwZWtlcmphIDIpLgoKLSBOMzogYHJlZ2lzdGVyX3JlcG9gIFRJREFLIHRlcnNlZGlhIGxld2F0IG5hdGl2ZSBtZXNzYWdpbmcgKGhhbnlhCiAgQ0xJIGxva2FsIGBtdWZha2F0LXJvb20tcnVubmVyIHJlZ2lzdGVyYCk7IEhPTUUgdGlkYWsgYmlzYQogIGRpZGFmdGFya2FuOyB0b2tlbiBhcHByb3ZhbCBIQU5ZQSB0ZXJiaXQgc2V0ZWxhaCBtYW51c2lhCiAgbWVuZ29uZmlybWFzaSBrb2RlIDYgZGlnaXQgZGFyaSBkaWFsb2cgT1MgKHJlcXVlc3RfYXBwcm92YWwgLT4KICBjb25maXJtX2FwcHJvdmFsIC0+IGlzc3VlX2FwcHJvdmFsX3Rva2VuKS4KLSBHUFQgMyAocnVubmVyKTogdG9rZW4gdGVyaWthdCBicmFuY2ggKyB3b3JrdHJlZSArIGhhc2g7IHBlbWFrYWlhbgogIGJlcnNhbWFhbiBkaXRvbGFrIChzZWthbGkgcGFrYWkpLgotIE45OiBpbnN0YWxsX2hvc3QgbWVtYWthaSBjb25zb2xlIHNjcmlwdCB2ZW52IChwYXRoIGFic29sdXQpOwogIHdyYXBwZXIgZXhlY3V0YWJsZS4KIiIiCgpmcm9tIF9fZnV0dXJlX18gaW1wb3J0IGFubm90YXRpb25zCgppbXBvcnQgaW1wb3J0bGliLnV0aWwKaW1wb3J0IG9zCmltcG9ydCByZQppbXBvcnQgc3VicHJvY2VzcwppbXBvcnQgc3lzCmZyb20gcGF0aGxpYiBpbXBvcnQgUGF0aAoKaW1wb3J0IHB5dGVzdAoKZnJvbSBtdWZha2F0X3J1bm5lciBpbXBvcnQgaG9zdCBhcyBob3N0X21vZApmcm9tIG11ZmFrYXRfcnVubmVyIGltcG9ydCByZWdpc3RyeSBhcyByZWdpc3RyeV9tb2QKCl9pbnN0YWxsX2hvc3RfcGF0aCA9IFBhdGgoX19maWxlX18pLnJlc29sdmUoKS5wYXJlbnQucGFyZW50IC8gImluc3RhbGxfaG9zdC5weSIKX3NwZWMgPSBpbXBvcnRsaWIudXRpbC5zcGVjX2Zyb21fZmlsZV9sb2NhdGlvbigKICAgICJtdWZha2F0X3Jvb21faW5zdGFsbF9ob3N0X3IyIiwgX2luc3RhbGxfaG9zdF9wYXRoKQpfaW5zdGFsbF9ob3N0ID0gaW1wb3J0bGliLnV0aWwubW9kdWxlX2Zyb21fc3BlYyhfc3BlYykKX3NwZWMubG9hZGVyLmV4ZWNfbW9kdWxlKF9pbnN0YWxsX2hvc3QpCgoKZGVmIF9pbml0X2dpdF9yZXBvKHJlcG86IFBhdGgpIC0+IE5vbmU6CiAgICBzdWJwcm9jZXNzLnJ1bihbImdpdCIsICJpbml0IiwgIi1xIiwgc3RyKHJlcG8pXSwgY2hlY2s9VHJ1ZSkKICAgIHN1YnByb2Nlc3MucnVuKFsiZ2l0IiwgIi1DIiwgc3RyKHJlcG8pLCAiY29uZmlnIiwgInVzZXIuZW1haWwiLCAidEB0LnQiXSwKICAgICAgICAgICAgICAgICAgIGNoZWNrPVRydWUpCiAgICBzdWJwcm9jZXNzLnJ1bihbImdpdCIsICItQyIsIHN0cihyZXBvKSwgImNvbmZpZyIsICJ1c2VyLm5hbWUiLCAiVGVzIl0sCiAgICAgICAgICAgICAgICAgICBjaGVjaz1UcnVlKQogICAgKHJlcG8gLyAiYS50eHQiKS53cml0ZV90ZXh0KCJzYXR1XG4iLCBlbmNvZGluZz0idXRmLTgiKQogICAgc3VicHJvY2Vzcy5ydW4oWyJnaXQiLCAiLUMiLCBzdHIocmVwbyksICJhZGQiLCAiLUEiXSwgY2hlY2s9VHJ1ZSkKICAgIHN1YnByb2Nlc3MucnVuKFsiZ2l0IiwgIi1DIiwgc3RyKHJlcG8pLCAiY29tbWl0IiwgIi1xbSIsICJhd2FsIl0sCiAgICAgICAgICAgICAgICAgICBjaGVjaz1UcnVlKQoKCmRlZiBfc2V0dXBfZ2l0X2hvc3QodG1wX3BhdGgsIG1vbmtleXBhdGNoKToKICAgICIiIkhvc3QgKyByZXBvIGdpdCB0ZXJkYWZ0YXIgKyB3b3JrdHJlZSByMSBkZW5nYW4gcGVydWJhaGFuLiIiIgogICAgbW9ua2V5cGF0Y2guc2V0ZW52KCJNVUZBS0FUX1JVTk5FUl9SRUdJU1RSWSIsCiAgICAgICAgICAgICAgICAgICAgICAgc3RyKHRtcF9wYXRoIC8gInJ1bm5lci5qc29uIikpCiAgICByZXBvID0gdG1wX3BhdGggLyAicmVwbyIKICAgIHJlcG8ubWtkaXIoKQogICAgX2luaXRfZ2l0X3JlcG8ocmVwbykKICAgIGFzc2VydCByZWdpc3RyeV9tb2QucmVnaXN0ZXJfcmVwbygiciIsIHN0cihyZXBvKSlbIm5hbWUiXSA9PSAiciIKICAgIGhvc3QgPSBob3N0X21vZC5SdW5uZXJIb3N0KCkKICAgIGFzc2VydCBob3N0LmhhbmRsZV9jb21tYW5kKAogICAgICAgIHsiY29tbWFuZCI6ICJpbml0X3dvcmtzcGFjZSIsICJyZXBvIjogInIiLCAicnVuX2lkIjogInIxIn0KICAgIClbIm9rIl0gaXMgVHJ1ZQogICAgd3QgPSByZXBvIC8gInJ1bnMiIC8gInIxIiAvICJ3dCIKICAgICh3dCAvICJhLnR4dCIpLndyaXRlX3RleHQoInNhdHVcbmR1YVxuIiwgZW5jb2Rpbmc9InV0Zi04IikKICAgIHJldHVybiBob3N0LCByZXBvLCB3dAoKCmRlZiBfY2FwdHVyZV9jb2RlKG1vbmtleXBhdGNoKToKICAgICIiIlRhbmdhbmkgZGlhbG9nIE9TOiB0YW5na2FwIGtvZGUgNiBkaWdpdCBkYXJpIGJvZHkgZGlhbG9nLiIiIgogICAgY2FwdHVyZWQ6IGRpY3QgPSB7fQoKICAgIGRlZiBfZmFrZV9kaWFsb2codGl0bGUsIGJvZHkpOgogICAgICAgIGNhcHR1cmVkWyJib2R5Il0gPSBib2R5CiAgICAgICAgcmV0dXJuICJkaWFsb2ciCgogICAgbW9ua2V5cGF0Y2guc2V0YXR0cihob3N0X21vZCwgIl9zaG93X2h1bWFuX2NvZGUiLCBfZmFrZV9kaWFsb2cpCiAgICByZXR1cm4gY2FwdHVyZWQKCgpkZWYgX2NvZGVfZnJvbShjYXB0dXJlZDogZGljdCkgLT4gc3RyOgogICAgbWF0Y2ggPSByZS5zZWFyY2gociJLT0RFIFBFUlNFVFVKVUFOOiAoXGR7Nn0pIiwgY2FwdHVyZWRbImJvZHkiXSkKICAgIGFzc2VydCBtYXRjaCBpcyBub3QgTm9uZSwgY2FwdHVyZWQKICAgIHJldHVybiBtYXRjaC5ncm91cCgxKQoKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgTjMg4oCUIHJlZ2lzdGVyX3JlcG8gaGFueWEgdmlhIENMSSBsb2thbAojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpkZWYgdGVzdF9uM19yZWdpc3Rlcl9yZXBvX2xld2F0X25hdGl2ZV9tZXNzYWdpbmdfZGl0b2xhayh0bXBfcGF0aCwgbW9ua2V5cGF0Y2gpOgogICAgIiIiTjMgKFBvQyk6IHBlc2FuIGByZWdpc3Rlcl9yZXBvYCBhcGEgcHVuIOKAlCB0ZXJtYXN1ayBIT01FIOKAlAogICAgZGl0b2xhayBkYW4gbWVuZ2FyYWhrYW4ga2UgQ0xJIGxva2FsLiIiIgogICAgbW9ua2V5cGF0Y2guc2V0ZW52KCJNVUZBS0FUX1JVTk5FUl9SRUdJU1RSWSIsCiAgICAgICAgICAgICAgICAgICAgICAgc3RyKHRtcF9wYXRoIC8gInJ1bm5lci5qc29uIikpCiAgICBob3N0ID0gaG9zdF9tb2QuUnVubmVySG9zdCgpCiAgICByZXMgPSBob3N0LmhhbmRsZV9jb21tYW5kKAogICAgICAgIHsiY29tbWFuZCI6ICJyZWdpc3Rlcl9yZXBvIiwgIm5hbWUiOiAiaG9tZSIsCiAgICAgICAgICJwYXRoIjogc3RyKFBhdGguaG9tZSgpKX0pCiAgICBhc3NlcnQgcmVzWyJvayJdIGlzIEZhbHNlCiAgICBhc3NlcnQgIm11ZmFrYXQtcm9vbS1ydW5uZXIgcmVnaXN0ZXIiIGluIHJlc1siZXJyb3IiXQogICAgYXNzZXJ0IHJlZ2lzdHJ5X21vZC5sb2FkX3JlZ2lzdHJ5KClbInJlcG9zIl0gPT0ge30KCgpkZWYgdGVzdF9uM19yZWdpc3Rlcl9yZXBvX2NsaV9sb2thbCh0bXBfcGF0aCwgbW9ua2V5cGF0Y2gsIGNhcHN5cyk6CiAgICAiIiJOMzogYG11ZmFrYXQtcm9vbS1ydW5uZXIgcmVnaXN0ZXIgPG5hbWE+IDxwYXRoPmAgbWVuZGFmdGFya2FuCiAgICByZXBvOyBIT01FIGRpdG9sYWsuIiIiCiAgICBtb25rZXlwYXRjaC5zZXRlbnYoIk1VRkFLQVRfUlVOTkVSX1JFR0lTVFJZIiwKICAgICAgICAgICAgICAgICAgICAgICBzdHIodG1wX3BhdGggLyAicnVubmVyLmpzb24iKSkKICAgIHJlcG8gPSB0bXBfcGF0aCAvICJyZXBvIgogICAgcmVwby5ta2RpcigpCiAgICBfaW5pdF9naXRfcmVwbyhyZXBvKQogICAgYXNzZXJ0IGhvc3RfbW9kLm1haW4oWyJyZWdpc3RlciIsICJyIiwgc3RyKHJlcG8pXSkgPT0gMAogICAgYXNzZXJ0IHJlZ2lzdHJ5X21vZC5sb2FkX3JlZ2lzdHJ5KClbInJlcG9zIl1bInIiXSA9PSBzdHIocmVwby5yZXNvbHZlKCkpCiAgICAjIEhPTUUgZGl0b2xhayBvbGVoIENMSS4KICAgIGFzc2VydCBob3N0X21vZC5tYWluKFsicmVnaXN0ZXIiLCAiaG9tZSIsIHN0cihQYXRoLmhvbWUoKSldKSA9PSAxCiAgICBhc3NlcnQgImhvbWUiIG5vdCBpbiByZWdpc3RyeV9tb2QubG9hZF9yZWdpc3RyeSgpWyJyZXBvcyJdCiAgICBjYXBzeXMucmVhZG91dGVycigpCgoKZGVmIHRlc3RfbjNfcmVnaXN0cnlfdG9sYWtfaG9tZSh0bXBfcGF0aCwgbW9ua2V5cGF0Y2gpOgogICAgIiIiTjM6IHJlZ2lzdHJ5LnJlZ2lzdGVyX3JlcG8gbWVub2xhayBIT01FIGRhbiBsZWx1aHVybnlhLiIiIgogICAgbW9ua2V5cGF0Y2guc2V0ZW52KCJNVUZBS0FUX1JVTk5FUl9SRUdJU1RSWSIsCiAgICAgICAgICAgICAgICAgICAgICAgc3RyKHRtcF9wYXRoIC8gInJ1bm5lci5qc29uIikpCiAgICB3aXRoIHB5dGVzdC5yYWlzZXMoVmFsdWVFcnJvcik6CiAgICAgICAgcmVnaXN0cnlfbW9kLnJlZ2lzdGVyX3JlcG8oImhvbWUiLCBzdHIoUGF0aC5ob21lKCkpKQogICAgd2l0aCBweXRlc3QucmFpc2VzKFZhbHVlRXJyb3IpOgogICAgICAgIHJlZ2lzdHJ5X21vZC5yZWdpc3Rlcl9yZXBvKCJyb290IiwgIi8iKQoKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgTjMgKyBHUFQgMyDigJQgYWx1ciBwZXJzZXR1anVhbiBtYW51c2lhIChrb2RlIDYgZGlnaXQpCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmRlZiB0ZXN0X24zX3Rva2VuX3RhbnBhX2tvbmZpcm1hc2lfbWFudXNpYV9kaXRvbGFrKHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICAiIiJOMyAoUG9DIGF1ZGl0KTogdXJ1dGFuIGRpZmYgLT4gaXNzdWVfYXBwcm92YWxfdG9rZW4gLT4gY29tbWl0CiAgICBvbGVoIHBlbWFuZ2dpbCB5YW5nIHNhbWEgVEFOUEEgbWFudXNpYSBraW5pIGRpdG9sYWsuIiIiCiAgICBob3N0LCBfcmVwbywgX3d0ID0gX3NldHVwX2dpdF9ob3N0KHRtcF9wYXRoLCBtb25rZXlwYXRjaCkKICAgIHNob3duID0gaG9zdC5oYW5kbGVfY29tbWFuZCh7ImNvbW1hbmQiOiAiZGlmZiIsICJydW5faWQiOiAicjEifSkKICAgIGFzc2VydCBzaG93blsib2siXSBpcyBUcnVlIGFuZCBzaG93blsiZGlmZl9oYXNoIl0KICAgIGFzc2VydCBob3N0LmhhbmRsZV9jb21tYW5kKAogICAgICAgIHsiY29tbWFuZCI6ICJpc3N1ZV9hcHByb3ZhbF90b2tlbiIsICJydW5faWQiOiAicjEiLAogICAgICAgICAiZGlmZl9oYXNoIjogc2hvd25bImRpZmZfaGFzaCJdfSlbIm9rIl0gaXMgRmFsc2UKICAgIGFzc2VydCBob3N0LmhhbmRsZV9jb21tYW5kKAogICAgICAgIHsiY29tbWFuZCI6ICJjb21taXQiLCAicnVuX2lkIjogInIxIiwgIm1lc3NhZ2UiOiAieCIsCiAgICAgICAgICJhcHByb3ZhbF90b2tlbiI6ICJhcGEtcHVuIn0pWyJvayJdIGlzIEZhbHNlCgoKZGVmIHRlc3RfbjNfYWx1cl9rb2RlXzZfZGlnaXRfbGVuZ2thcCh0bXBfcGF0aCwgbW9ua2V5cGF0Y2gpOgogICAgIiIiTjMvR1BUIDM6IHJlcXVlc3QgLT4ga29kZSBzYWxhaCBkaXRvbGFrIC0+IGtvZGUgYmVuYXIgZGFyaQogICAgZGlhbG9nIE9TIC0+IHRva2VuIHRlcmJpdCAtPiBjb21taXQgc2VrYWxpIC0+IHRva2VuIGhhbmd1cy4iIiIKICAgIGhvc3QsIF9yZXBvLCB3dCA9IF9zZXR1cF9naXRfaG9zdCh0bXBfcGF0aCwgbW9ua2V5cGF0Y2gpCiAgICBjYXB0dXJlZCA9IF9jYXB0dXJlX2NvZGUobW9ua2V5cGF0Y2gpCiAgICByZXF1ZXN0ZWQgPSBob3N0LmhhbmRsZV9jb21tYW5kKHsiY29tbWFuZCI6ICJyZXF1ZXN0X2FwcHJvdmFsIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJydW5faWQiOiAicjEifSkKICAgIGFzc2VydCByZXF1ZXN0ZWRbIm9rIl0gaXMgVHJ1ZQogICAgYXNzZXJ0ICJhcHByb3ZhbF90b2tlbiIgbm90IGluIHJlcXVlc3RlZAogICAgYXNzZXJ0ICJLT0RFIiBub3QgaW4gc3RyKHJlcXVlc3RlZCkgICMga29kZSB0aWRhayBsZXdhdCBrYW5hbCBla3N0ZW5zaQogICAgYXBwcm92YWxfaWQgPSByZXF1ZXN0ZWRbImFwcHJvdmFsX2lkIl0KICAgIGFzc2VydCByZXF1ZXN0ZWRbImRpZmZfaGFzaCJdCiAgICBhc3NlcnQgcmVxdWVzdGVkWyJicmFuY2giXQogICAgY29kZSA9IF9jb2RlX2Zyb20oY2FwdHVyZWQpCiAgICBhc3NlcnQgcmUuZnVsbG1hdGNoKHIiXGR7Nn0iLCBjb2RlKQogICAgYXNzZXJ0IGhvc3QuaGFuZGxlX2NvbW1hbmQoCiAgICAgICAgeyJjb21tYW5kIjogImNvbmZpcm1fYXBwcm92YWwiLCAicnVuX2lkIjogInIxIiwKICAgICAgICAgImFwcHJvdmFsX2lkIjogYXBwcm92YWxfaWQsICJjb2RlIjogIjAwMDAwMCJ9KVsib2siXSBpcyBGYWxzZQogICAgYXNzZXJ0IGhvc3QuaGFuZGxlX2NvbW1hbmQoCiAgICAgICAgeyJjb21tYW5kIjogImNvbmZpcm1fYXBwcm92YWwiLCAicnVuX2lkIjogInIxIiwKICAgICAgICAgImFwcHJvdmFsX2lkIjogYXBwcm92YWxfaWQsICJjb2RlIjogY29kZX0pWyJvayJdIGlzIFRydWUKICAgIGlzc3VlZCA9IGhvc3QuaGFuZGxlX2NvbW1hbmQoCiAgICAgICAgeyJjb21tYW5kIjogImlzc3VlX2FwcHJvdmFsX3Rva2VuIiwgInJ1bl9pZCI6ICJyMSIsCiAgICAgICAgICJkaWZmX2hhc2giOiByZXF1ZXN0ZWRbImRpZmZfaGFzaCJdfSkKICAgIGFzc2VydCBpc3N1ZWRbIm9rIl0gaXMgVHJ1ZQogICAgdG9rZW4gPSBpc3N1ZWRbImFwcHJvdmFsX3Rva2VuIl0KICAgIGFzc2VydCBob3N0LmhhbmRsZV9jb21tYW5kKAogICAgICAgIHsiY29tbWFuZCI6ICJjb21taXQiLCAicnVuX2lkIjogInIxIiwgIm1lc3NhZ2UiOiAieCIsCiAgICAgICAgICJhcHByb3ZhbF90b2tlbiI6IHRva2VufSlbIm9rIl0gaXMgVHJ1ZQogICAgYXNzZXJ0IGhvc3QuaGFuZGxlX2NvbW1hbmQoCiAgICAgICAgeyJjb21tYW5kIjogImNvbW1pdCIsICJydW5faWQiOiAicjEiLCAibWVzc2FnZSI6ICJ5IiwKICAgICAgICAgImFwcHJvdmFsX3Rva2VuIjogdG9rZW59KVsib2siXSBpcyBGYWxzZQoKCmRlZiB0ZXN0X24zX3JlcXVlc3RfYXBwcm92YWxfdGFucGFfZGlmZl9kaXRvbGFrKHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICAiIiJHUFQgMzogYXBwcm92YWwgdGFucGEgcGVydWJhaGFuIChoYXNoIGtvc29uZykgZGl0b2xhay4iIiIKICAgIG1vbmtleXBhdGNoLnNldGVudigiTVVGQUtBVF9SVU5ORVJfUkVHSVNUUlkiLAogICAgICAgICAgICAgICAgICAgICAgIHN0cih0bXBfcGF0aCAvICJydW5uZXIuanNvbiIpKQogICAgcmVwbyA9IHRtcF9wYXRoIC8gInJlcG8iCiAgICByZXBvLm1rZGlyKCkKICAgIF9pbml0X2dpdF9yZXBvKHJlcG8pCiAgICByZWdpc3RyeV9tb2QucmVnaXN0ZXJfcmVwbygiciIsIHN0cihyZXBvKSkKICAgIGhvc3QgPSBob3N0X21vZC5SdW5uZXJIb3N0KCkKICAgIGhvc3QuaGFuZGxlX2NvbW1hbmQoeyJjb21tYW5kIjogImluaXRfd29ya3NwYWNlIiwgInJlcG8iOiAiciIsCiAgICAgICAgICAgICAgICAgICAgICAgICAicnVuX2lkIjogInIxIn0pCiAgICByZXMgPSBob3N0LmhhbmRsZV9jb21tYW5kKHsiY29tbWFuZCI6ICJyZXF1ZXN0X2FwcHJvdmFsIiwgInJ1bl9pZCI6ICJyMSJ9KQogICAgYXNzZXJ0IHJlc1sib2siXSBpcyBGYWxzZQoKCmRlZiB0ZXN0X24zX2RpZmZfYmVydWJhaF9zZXRlbGFoX2NvbmZpcm1fdG9rZW5fdGlkYWtfdGVyYml0KAogICAgICAgIHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICAiIiJHUFQgMzogZGlmZiBiZXJ1YmFoIHNldGVsYWggY29uZmlybV9hcHByb3ZhbCAtPiB0b2tlbiB0aWRhayB0ZXJiaXQuIiIiCiAgICBob3N0LCBfcmVwbywgd3QgPSBfc2V0dXBfZ2l0X2hvc3QodG1wX3BhdGgsIG1vbmtleXBhdGNoKQogICAgY2FwdHVyZWQgPSBfY2FwdHVyZV9jb2RlKG1vbmtleXBhdGNoKQogICAgcmVxdWVzdGVkID0gaG9zdC5oYW5kbGVfY29tbWFuZCh7ImNvbW1hbmQiOiAicmVxdWVzdF9hcHByb3ZhbCIsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAicnVuX2lkIjogInIxIn0pCiAgICBhc3NlcnQgcmVxdWVzdGVkWyJvayJdIGlzIFRydWUKICAgIGFzc2VydCBob3N0LmhhbmRsZV9jb21tYW5kKAogICAgICAgIHsiY29tbWFuZCI6ICJjb25maXJtX2FwcHJvdmFsIiwgInJ1bl9pZCI6ICJyMSIsCiAgICAgICAgICJhcHByb3ZhbF9pZCI6IHJlcXVlc3RlZFsiYXBwcm92YWxfaWQiXSwKICAgICAgICAgImNvZGUiOiBfY29kZV9mcm9tKGNhcHR1cmVkKX0pWyJvayJdIGlzIFRydWUKICAgICh3dCAvICJhLnR4dCIpLndyaXRlX3RleHQoInNhdHVcbmR1YVxudGlnYVxuIiwgZW5jb2Rpbmc9InV0Zi04IikKICAgIGFzc2VydCBob3N0LmhhbmRsZV9jb21tYW5kKAogICAgICAgIHsiY29tbWFuZCI6ICJpc3N1ZV9hcHByb3ZhbF90b2tlbiIsICJydW5faWQiOiAicjEiLAogICAgICAgICAiZGlmZl9oYXNoIjogcmVxdWVzdGVkWyJkaWZmX2hhc2giXX0pWyJvayJdIGlzIEZhbHNlCgoKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyBOOSDigJQgd3JhcHBlciArIGluc3RhbGxfaG9zdAojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpkZWYgdGVzdF9uOV93cmFwcGVyX2V4ZWN1dGFibGUoKToKICAgICIiIk45OiB3cmFwcGVyIG11ZmFrYXQtcnVubmVyLWhvc3QgcHVueWEgYml0IGV4ZWN1dGFibGUuIiIiCiAgICB3cmFwcGVyID0gUGF0aChfX2ZpbGVfXykucmVzb2x2ZSgpLnBhcmVudC5wYXJlbnQgLyAibXVmYWthdC1ydW5uZXItaG9zdCIKICAgIGFzc2VydCB3cmFwcGVyLmlzX2ZpbGUoKQogICAgYXNzZXJ0IG9zLmFjY2Vzcyh3cmFwcGVyLCBvcy5YX09LKQogICAgYXNzZXJ0ICJWSVJUVUFMX0VOViIgaW4gd3JhcHBlci5yZWFkX3RleHQoZW5jb2Rpbmc9InV0Zi04IikKCgpkZWYgdGVzdF9uOV9pbnN0YWxsX2hvc3RfcGFrYWlfY29uc29sZV9zY3JpcHRfdmVudih0bXBfcGF0aCwgbW9ua2V5cGF0Y2gpOgogICAgIiIiTjk6IGluc3RhbGxfaG9zdCBtZW1ha2FpIGNvbnNvbGUgc2NyaXB0IGRhcmkgdmVudiAocGF0aCBhYnNvbHV0KSwKICAgIGJ1a2FuIHB5dGhvbjMgZGFyaSBQQVRILiIiIgogICAgdmVudl9iaW4gPSB0bXBfcGF0aCAvICJ2ZW52IiAvICJiaW4iCiAgICB2ZW52X2Jpbi5ta2RpcihwYXJlbnRzPVRydWUpCiAgICBzY3JpcHQgPSB2ZW52X2JpbiAvICJtdWZha2F0LXJ1bm5lci1ob3N0IgogICAgc2NyaXB0LndyaXRlX3RleHQoIiMhL2Jpbi9zaFxuIiwgZW5jb2Rpbmc9InV0Zi04IikKICAgIHNjcmlwdC5jaG1vZCgwbzc1NSkKICAgIGZha2VfcHl0aG9uID0gdmVudl9iaW4gLyAicHl0aG9uIgogICAgZmFrZV9weXRob24ud3JpdGVfdGV4dCgiIiwgZW5jb2Rpbmc9InV0Zi04IikKICAgIG1vbmtleXBhdGNoLnNldGF0dHIoc3lzLCAiZXhlY3V0YWJsZSIsIHN0cihmYWtlX3B5dGhvbikpCiAgICBtb25rZXlwYXRjaC5zZXRlbnYoIlBBVEgiLCBzdHIodmVudl9iaW4pLCBwcmVwZW5kPW9zLnBhdGhzZXApCiAgICBkZWZhdWx0ID0gX2luc3RhbGxfaG9zdC5kZWZhdWx0X2hvc3RfcGF0aCgpCiAgICBhc3NlcnQgZGVmYXVsdCA9PSBzdHIoc2NyaXB0LnJlc29sdmUoKSkKICAgIGFzc2VydCBQYXRoKGRlZmF1bHQpLmlzX2Fic29sdXRlKCkKICAgIGFzc2VydCBkZWZhdWx0ICE9IHN5cy5leGVjdXRhYmxlCgoKZGVmIHRlc3RfbjlfaG9zdF9tYW5pZmVzdF90b2xha19wYXRoX3JlbGF0aWYoKToKICAgICIiIk45OiBtYW5pZmVzdCBtZW5vbGFrIGhvc3QtcGF0aCByZWxhdGlmIChoYXJ1cyBhYnNvbHV0KS4iIiIKICAgIHdpdGggcHl0ZXN0LnJhaXNlcyhWYWx1ZUVycm9yKToKICAgICAgICBfaW5zdGFsbF9ob3N0Lmhvc3RfbWFuaWZlc3QoImNocm9tZS1leHRlbnNpb246Ly9hYmNkZWYvIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIm11ZmFrYXQtcnVubmVyLWhvc3QiKQo=
+"""Test regresi audit putaran 2 — Local Runner (pekerja 2).
+
+- N3: `register_repo` TIDAK tersedia lewat native messaging (hanya
+  CLI lokal `mufakat-room-runner register`); HOME tidak bisa
+  didaftarkan; token approval HANYA terbit setelah manusia
+  mengonfirmasi kode 6 digit dari dialog OS (request_approval ->
+  confirm_approval -> issue_approval_token).
+- GPT 3 (runner): token terikat branch + worktree + hash; pemakaian
+  bersamaan ditolak (sekali pakai).
+- N9: install_host memakai console script venv (path absolut);
+  wrapper executable.
+"""
+
+from __future__ import annotations
+
+import importlib.util
+import os
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+import pytest
+
+from mufakat_runner import host as host_mod
+from mufakat_runner import registry as registry_mod
+
+_install_host_path = Path(__file__).resolve().parent.parent / "install_host.py"
+_spec = importlib.util.spec_from_file_location(
+    "mufakat_room_install_host_r2", _install_host_path)
+_install_host = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_install_host)
+
+
+def _init_git_repo(repo: Path) -> None:
+    subprocess.run(["git", "init", "-q", str(repo)], check=True)
+    subprocess.run(["git", "-C", str(repo), "config", "user.email", "t@t.t"],
+                   check=True)
+    subprocess.run(["git", "-C", str(repo), "config", "user.name", "Tes"],
+                   check=True)
+    (repo / "a.txt").write_text("satu\n", encoding="utf-8")
+    subprocess.run(["git", "-C", str(repo), "add", "-A"], check=True)
+    subprocess.run(["git", "-C", str(repo), "commit", "-qm", "awal"],
+                   check=True)
+
+
+def _setup_git_host(tmp_path, monkeypatch):
+    """Host + repo git terdaftar + worktree r1 dengan perubahan."""
+    monkeypatch.setenv("MUFAKAT_RUNNER_REGISTRY",
+                       str(tmp_path / "runner.json"))
+    repo = tmp_path / "repo"
+    repo.mkdir()
+    _init_git_repo(repo)
+    assert registry_mod.register_repo("r", str(repo))["name"] == "r"
+    host = host_mod.RunnerHost()
+    assert host.handle_command(
+        {"command": "init_workspace", "repo": "r", "run_id": "r1"}
+    )["ok"] is True
+    wt = repo / "runs" / "r1" / "wt"
+    (wt / "a.txt").write_text("satu\ndua\n", encoding="utf-8")
+    return host, repo, wt
+
+
+def _capture_code(monkeypatch):
+    """Tangani dialog OS: tangkap kode 6 digit dari body dialog."""
+    captured: dict = {}
+
+    def _fake_dialog(title, body):
+        captured["body"] = body
+        return "dialog"
+
+    monkeypatch.setattr(host_mod, "_show_human_code", _fake_dialog)
+    return captured
+
+
+def _code_from(captured: dict) -> str:
+    match = re.search(r"KODE PERSETUJUAN: (\d{6})", captured["body"])
+    assert match is not None, captured
+    return match.group(1)
+
+
+# ---------------------------------------------------------------------------
+# N3 — register_repo hanya via CLI lokal
+# ---------------------------------------------------------------------------
+def test_n3_register_repo_lewat_native_messaging_ditolak(tmp_path, monkeypatch):
+    """N3 (PoC): pesan `register_repo` apa pun — termasuk HOME —
+    ditolak dan mengarahkan ke CLI lokal."""
+    monkeypatch.setenv("MUFAKAT_RUNNER_REGISTRY",
+                       str(tmp_path / "runner.json"))
+    host = host_mod.RunnerHost()
+    res = host.handle_command(
+        {"command": "register_repo", "name": "home",
+         "path": str(Path.home())})
+    assert res["ok"] is False
+    assert "mufakat-room-runner register" in res["error"]
+    assert registry_mod.load_registry()["repos"] == {}
+
+
+def test_n3_register_repo_cli_lokal(tmp_path, monkeypatch, capsys):
+    """N3: `mufakat-room-runner register <nama> <path>` mendaftarkan
+    repo; HOME ditolak."""
+    monkeypatch.setenv("MUFAKAT_RUNNER_REGISTRY",
+                       str(tmp_path / "runner.json"))
+    repo = tmp_path / "repo"
+    repo.mkdir()
+    _init_git_repo(repo)
+    assert host_mod.main(["register", "r", str(repo)]) == 0
+    assert registry_mod.load_registry()["repos"]["r"] == str(repo.resolve())
+    # HOME ditolak oleh CLI.
+    assert host_mod.main(["register", "home", str(Path.home())]) == 1
+    assert "home" not in registry_mod.load_registry()["repos"]
+    capsys.readouterr()
+
+
+def test_n3_registry_tolak_home(tmp_path, monkeypatch):
+    """N3: registry.register_repo menolak HOME dan leluhurnya."""
+    monkeypatch.setenv("MUFAKAT_RUNNER_REGISTRY",
+                       str(tmp_path / "runner.json"))
+    with pytest.raises(ValueError):
+        registry_mod.register_repo("home", str(Path.home()))
+    with pytest.raises(ValueError):
+        registry_mod.register_repo("root", "/")
+
+
+# ---------------------------------------------------------------------------
+# N3 + GPT 3 — alur persetujuan manusia (kode 6 digit)
+# ---------------------------------------------------------------------------
+def test_n3_token_tanpa_konfirmasi_manusia_ditolak(tmp_path, monkeypatch):
+    """N3 (PoC audit): urutan diff -> issue_approval_token -> commit
+    oleh pemanggil yang sama TANPA manusia kini ditolak."""
+    host, _repo, _wt = _setup_git_host(tmp_path, monkeypatch)
+    shown = host.handle_command({"command": "diff", "run_id": "r1"})
+    assert shown["ok"] is True and shown["diff_hash"]
+    assert host.handle_command(
+        {"command": "issue_approval_token", "run_id": "r1",
+         "diff_hash": shown["diff_hash"]})["ok"] is False
+    assert host.handle_command(
+        {"command": "commit", "run_id": "r1", "message": "x",
+         "approval_token": "apa-pun"})["ok"] is False
+
+
+def test_n3_alur_kode_6_digit_lengkap(tmp_path, monkeypatch):
+    """N3/GPT 3: request -> kode salah ditolak -> kode benar dari
+    dialog OS -> token terbit -> commit sekali -> token hangus."""
+    host, _repo, wt = _setup_git_host(tmp_path, monkeypatch)
+    captured = _capture_code(monkeypatch)
+    requested = host.handle_command({"command": "request_approval",
+                                     "run_id": "r1"})
+    assert requested["ok"] is True
+    assert "approval_token" not in requested
+    assert "KODE" not in str(requested)  # kode tidak lewat kanal ekstensi
+    approval_id = requested["approval_id"]
+    assert requested["diff_hash"]
+    assert requested["branch"]
+    code = _code_from(captured)
+    assert re.fullmatch(r"\d{6}", code)
+    assert host.handle_command(
+        {"command": "confirm_approval", "run_id": "r1",
+         "approval_id": approval_id, "code": "000000"})["ok"] is False
+    assert host.handle_command(
+        {"command": "confirm_approval", "run_id": "r1",
+         "approval_id": approval_id, "code": code})["ok"] is True
+    issued = host.handle_command(
+        {"command": "issue_approval_token", "run_id": "r1",
+         "diff_hash": requested["diff_hash"]})
+    assert issued["ok"] is True
+    token = issued["approval_token"]
+    assert host.handle_command(
+        {"command": "commit", "run_id": "r1", "message": "x",
+         "approval_token": token})["ok"] is True
+    assert host.handle_command(
+        {"command": "commit", "run_id": "r1", "message": "y",
+         "approval_token": token})["ok"] is False
+
+
+def test_n3_request_approval_tanpa_diff_ditolak(tmp_path, monkeypatch):
+    """GPT 3: approval tanpa perubahan (hash kosong) ditolak."""
+    monkeypatch.setenv("MUFAKAT_RUNNER_REGISTRY",
+                       str(tmp_path / "runner.json"))
+    repo = tmp_path / "repo"
+    repo.mkdir()
+    _init_git_repo(repo)
+    registry_mod.register_repo("r", str(repo))
+    host = host_mod.RunnerHost()
+    host.handle_command({"command": "init_workspace", "repo": "r",
+                         "run_id": "r1"})
+    res = host.handle_command({"command": "request_approval", "run_id": "r1"})
+    assert res["ok"] is False
+
+
+def test_n3_diff_berubah_setelah_confirm_token_tidak_terbit(
+        tmp_path, monkeypatch):
+    """GPT 3: diff berubah setelah confirm_approval -> token tidak terbit."""
+    host, _repo, wt = _setup_git_host(tmp_path, monkeypatch)
+    captured = _capture_code(monkeypatch)
+    requested = host.handle_command({"command": "request_approval",
+                                     "run_id": "r1"})
+    assert requested["ok"] is True
+    assert host.handle_command(
+        {"command": "confirm_approval", "run_id": "r1",
+         "approval_id": requested["approval_id"],
+         "code": _code_from(captured)})["ok"] is True
+    (wt / "a.txt").write_text("satu\ndua\ntiga\n", encoding="utf-8")
+    assert host.handle_command(
+        {"command": "issue_approval_token", "run_id": "r1",
+         "diff_hash": requested["diff_hash"]})["ok"] is False
+
+
+# ---------------------------------------------------------------------------
+# N9 — wrapper + install_host
+# ---------------------------------------------------------------------------
+def test_n9_wrapper_executable():
+    """N9: wrapper mufakat-runner-host punya bit executable."""
+    wrapper = Path(__file__).resolve().parent.parent / "mufakat-runner-host"
+    assert wrapper.is_file()
+    assert os.access(wrapper, os.X_OK)
+    assert "VIRTUAL_ENV" in wrapper.read_text(encoding="utf-8")
+
+
+def test_n9_install_host_pakai_console_script_venv(tmp_path, monkeypatch):
+    """N9: install_host memakai console script dari venv (path absolut),
+    bukan python3 dari PATH."""
+    venv_bin = tmp_path / "venv" / "bin"
+    venv_bin.mkdir(parents=True)
+    script = venv_bin / "mufakat-runner-host"
+    script.write_text("#!/bin/sh\n", encoding="utf-8")
+    script.chmod(0o755)
+    fake_python = venv_bin / "python"
+    fake_python.write_text("", encoding="utf-8")
+    monkeypatch.setattr(sys, "executable", str(fake_python))
+    monkeypatch.setenv("PATH", str(venv_bin), prepend=os.pathsep)
+    default = _install_host.default_host_path()
+    assert default == str(script.resolve())
+    assert Path(default).is_absolute()
+    assert default != sys.executable
+
+
+def test_n9_host_manifest_tolak_path_relatif():
+    """N9: manifest menolak host-path relatif (harus absolut)."""
+    with pytest.raises(ValueError):
+        _install_host.host_manifest("chrome-extension://abcdef/",
+                                    "mufakat-runner-host")
