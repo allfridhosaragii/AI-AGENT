@@ -1,20 +1,21 @@
-"""Gate semgrep (T10).
+"""Gate semgrep (T10, diperbaiki audit 20 Nov 2026: C1 + H3).
 
-Bila binary semgrep ada: jalankan semgrep JSON. Bila tidak ada:
-fallback regex deterministik (SQL injection, eval/exec, os.system).
-Tidak pernah raise bila tool hilang.
+Dijalankan HANYA di dalam sandbox Docker. Tanpa Docker: gagal
+tertutup (``sandbox-unavailable``). Bila binary semgrep tidak ada
+di dalam sandbox: gagal-tertutup (``tool-missing``). Pemindai regex
+hanya info tambahan (severity INFO) — BUKAN pengganti tool.
 """
 
 from __future__ import annotations
 
 import json
-import shutil
-import subprocess
 
 try:
+    from ._sandbox import run_gate_in_sandbox, tool_missing
     from ._scan import scan_patterns
     from .runner import GateResult
-except ImportError:  # pragma: no cover - impor absolut sebagai fallback
+except ImportError:  # pragma: no cover
+    from mufakat.gates._sandbox import run_gate_in_sandbox, tool_missing  # type: ignore
     from mufakat.gates._scan import scan_patterns  # type: ignore
     from mufakat.gates.runner import GateResult  # type: ignore
 
@@ -40,17 +41,38 @@ _PATTERNS = [
 _SEVERITY = {"ERROR": "HIGH", "WARNING": "MEDIUM", "INFO": "LOW"}
 
 
-def _run_binary(target_dir) -> GateResult | None:
-    if shutil.which("semgrep") is None:
-        return None
+def _regex_info_findings(target_dir) -> list[dict]:
+    out = []
+    for finding in scan_patterns(target_dir, _PATTERNS,
+                                 extensions={".py", ".js", ".ts"}):
+        finding = dict(finding)
+        finding["severity"] = "INFO"
+        finding["message"] = "[regex-info, bukan pengganti semgrep] " + finding["message"]
+        out.append(finding)
+    return out
+
+
+def run(target_dir, sandbox_runner=None) -> GateResult:
+    """Jalankan gate semgrep atas ``target_dir`` (di sandbox)."""
+    result = run_gate_in_sandbox(
+        "semgrep", target_dir,
+        "command -v semgrep >/dev/null 2>&1 || { echo TOOL_MISSING; exit 127; }; "
+        "semgrep --json --config auto --quiet .",
+        timeout=300, read_only=True, sandbox_runner=sandbox_runner)
+    if isinstance(result, GateResult):
+        return result
+    output = result.get("stdout") or ""
+    if "TOOL_MISSING" in output or result.get("exit_code") == 127:
+        failed = tool_missing("semgrep", "semgrep")
+        failed.findings.extend(_regex_info_findings(target_dir))
+        return failed
     try:
-        result = subprocess.run(
-            ["semgrep", "--json", "--config", "auto", "--quiet", str(target_dir)],
-            capture_output=True, text=True, timeout=300,
-        )
-        data = json.loads(result.stdout or "{}")
-    except (OSError, subprocess.SubprocessError, ValueError):
-        return None
+        data = json.loads(output or "{}")
+    except ValueError:
+        return GateResult(tool="semgrep", passed=False, findings=[{
+            "severity": "HIGH", "file": "", "line": 0, "rule": "semgrep-error",
+            "message": "Output semgrep bukan JSON yang valid.",
+        }])
     findings = []
     for item in data.get("results", []) or []:
         extra = item.get("extra", {}) or {}
@@ -62,16 +84,5 @@ def _run_binary(target_dir) -> GateResult | None:
             "rule": str(item.get("check_id", "semgrep")),
             "message": str(extra.get("message", "Temuan semgrep.")),
         })
-    return GateResult(tool="semgrep", passed=not findings, findings=findings)
-
-
-def run(target_dir) -> GateResult:
-    """Jalankan gate semgrep atas ``target_dir``."""
-    try:
-        binary = _run_binary(target_dir)
-    except Exception:
-        binary = None
-    if binary is not None:
-        return binary
-    findings = scan_patterns(target_dir, _PATTERNS, extensions={".py", ".js", ".ts"})
-    return GateResult(tool="semgrep", passed=not findings, findings=findings)
+    passed = not any(f["severity"] in ("HIGH", "CRITICAL") for f in findings)
+    return GateResult(tool="semgrep", passed=passed, findings=findings)
