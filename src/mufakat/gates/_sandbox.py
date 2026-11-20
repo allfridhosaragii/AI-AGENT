@@ -1,1 +1,110 @@
-IiIiSmVtYmF0YW4gZ2F0ZSAtPiBzYW5kYm94IERvY2tlciAoYXVkaXQgMjAgTm92IDIwMjY6IEMxICsgSDM7CnB1dGFyYW4gMjogTjEgKyBONykuCgpTZW11YSBnYXRlIFdBSklCIGxld2F0IHNpbmkuIEJpbGEgRG9ja2VyIHRpZGFrIHRlcnNlZGlhLCBrZW1iYWxpa2FuCmBgR2F0ZVJlc3VsdChwYXNzZWQ9RmFsc2UsIHJ1bGU9InNhbmRib3gtdW5hdmFpbGFibGUiKWBgIOKAlCBUSURBSwpQRVJOQUggZmFsbGJhY2sga2UgZWtzZWt1c2kgaG9zdCBkYW4gVElEQUsgUEVSTkFIIGBgcGFzc2VkPVRydWVgYC4KCmBgc2FuZGJveF9ydW5uZXJgYCBhZGFsYWggaW5qZWtzaSB1bnR1ayB0ZXN0OiBjYWxsYWJsZSBkZW5nYW4Kc2lnbmF0dXJlIGBgKGltYWdlLCB3b3JrZGlyLCBjb21tYW5kLCB0aW1lb3V0LCBuZXR3b3JrX25vbmUsCnJlYWRfb25seSkgLT4gZGljdGBgIHNlcGVydGkgOmZ1bmM6YG11ZmFrYXQuc2FuZGJveC5kb2NrZXIucnVuX2luX3NhbmRib3hgLgpEaSBwcm9kdWtzaSBzZWxhbHUgYGBOb25lYGAgKD0gcnVubmVyIERvY2tlciBhc2xpKS4gVGVzdCBtZW1ha2FpCmZha2UgcnVubmVyIHN1cGF5YSBnYXRlIGJpc2EgZGl1amkgdGFucGEgRG9ja2VyIHN1bmdndWhhbi4KCkRldGVrc2kgRG9ja2VyIChONyk6IGtldGVyc2VkaWFhbiBkaWNlayBsZXdhdAo6ZnVuYzpgbXVmYWthdC5zYW5kYm94LmRvY2tlci5kb2NrZXJfYXZhaWxhYmxlYCDigJQgZGFlbW9uIGhpZHVwIERBTgppbWFnZSBzYW5kYm94IGFkYSDigJQgYnVrYW4gc2VrYWRhciBiaW5hcnkgZGkgUEFUSC4KIiIiCgpmcm9tIF9fZnV0dXJlX18gaW1wb3J0IGFubm90YXRpb25zCgp0cnk6CiAgICBmcm9tIC4uc2FuZGJveC5kb2NrZXIgaW1wb3J0IFNBTkRCT1hfSU1BR0UsIGRvY2tlcl9hdmFpbGFibGUKICAgIGZyb20gLnJ1bm5lciBpbXBvcnQgR2F0ZVJlc3VsdApleGNlcHQgSW1wb3J0RXJyb3I6ICAjIHByYWdtYTogbm8gY292ZXIKICAgIGZyb20gbXVmYWthdC5nYXRlcy5ydW5uZXIgaW1wb3J0IEdhdGVSZXN1bHQgICMgdHlwZTogaWdub3JlCiAgICBmcm9tIG11ZmFrYXQuc2FuZGJveC5kb2NrZXIgaW1wb3J0IFNBTkRCT1hfSU1BR0UsIGRvY2tlcl9hdmFpbGFibGUgICMgdHlwZTogaWdub3JlCgpTQU5EQk9YX1VOQVZBSUxBQkxFX1JVTEUgPSAic2FuZGJveC11bmF2YWlsYWJsZSIKVE9PTF9FUlJPUl9SVUxFID0gInRvb2wtZXJyb3IiCgoKZGVmIHNhbmRib3hfdW5hdmFpbGFibGUodG9vbDogc3RyLCBkZXRhaWw6IHN0ciA9ICIiKSAtPiBHYXRlUmVzdWx0OgogICAgIiIiR2F0ZVJlc3VsdCBnYWdhbC10ZXJ0dXR1cCBzYWF0IHNhbmRib3ggdGlkYWsgdGVyc2VkaWEuIiIiCiAgICBtZXNzYWdlID0gIlNhbmRib3ggRG9ja2VyIHRpZGFrIHRlcnNlZGlhIOKAlCBnYXRlIGJlbHVtIHRlcnZlcmlmaWthc2kuIgogICAgaWYgZGV0YWlsOgogICAgICAgIG1lc3NhZ2UgKz0gZiIge2RldGFpbH0iCiAgICByZXR1cm4gR2F0ZVJlc3VsdCh0b29sPXRvb2wsIHBhc3NlZD1GYWxzZSwgZmluZGluZ3M9W3sKICAgICAgICAic2V2ZXJpdHkiOiAiSElHSCIsICJmaWxlIjogIiIsICJsaW5lIjogMCwKICAgICAgICAicnVsZSI6IFNBTkRCT1hfVU5BVkFJTEFCTEVfUlVMRSwgIm1lc3NhZ2UiOiBtZXNzYWdlLAogICAgfV0pCgoKZGVmIHRvb2xfbWlzc2luZyh0b29sOiBzdHIsIGJpbmFyeTogc3RyKSAtPiBHYXRlUmVzdWx0OgogICAgIiIiR2F0ZVJlc3VsdCBnYWdhbC10ZXJ0dXR1cCBzYWF0IHRvb2wgdGlkYWsgYWRhIGRpIGRhbGFtIHNhbmRib3guIiIiCiAgICByZXR1cm4gR2F0ZVJlc3VsdCh0b29sPXRvb2wsIHBhc3NlZD1GYWxzZSwgZmluZGluZ3M9W3sKICAgICAgICAic2V2ZXJpdHkiOiAiSElHSCIsICJmaWxlIjogIiIsICJsaW5lIjogMCwKICAgICAgICAicnVsZSI6ICJ0b29sLW1pc3NpbmciLAogICAgICAgICJtZXNzYWdlIjogZiJUb29sIHtiaW5hcnl9IHRpZGFrIHRlcnNlZGlhIGRpIGRhbGFtIHNhbmRib3gg4oCUICIKICAgICAgICAgICAgICAgICAgICJnYXRlIGJlbHVtIHRlcnZlcmlmaWthc2kgKGJ1a2FuIEFNQU4pLiIsCiAgICB9XSkKCgpkZWYgdG9vbF9lcnJvcih0b29sOiBzdHIsIG1lc3NhZ2U6IHN0cikgLT4gR2F0ZVJlc3VsdDoKICAgICIiIkdhdGVSZXN1bHQgZ2FnYWwtdGVydHV0dXAgc2FhdCB0b29sIGNyYXNoIC8gb3V0cHV0IHRhayB2YWxpZCAoTjEpLgoKICAgIERpcGFrYWkgYmlsYSBleGl0IGNvZGUgdG9vbCBkaSBsdWFyIGRhZnRhciBzdWtzZXNueWEsIGF0YXUgb3V0cHV0CiAgICB5YW5nIHNlaGFydXNueWEgSlNPTiBrb3NvbmcvcnVzYWsuIER1bHUga2FzdXMgaW5pIGRpYW5nZ2FwCiAgICAiMCB0ZW11YW4iIChgYHBhc3NlZD1UcnVlYGApIOKAlCB2ZXJkaWN0IEFNQU4gcGFsc3UuIFNla2FyYW5nCiAgICBgYHBhc3NlZD1GYWxzZWBgIGRlbmdhbiBgYHJ1bGU9InRvb2wtZXJyb3IiYGAgZGFuIHZlcmRpY3QKICAgIDptb2Q6YG11ZmFrYXQuZ2F0ZXMudmVyZGljdGAgbWVtYmFjYW55YSBzZWJhZ2FpCiAgICBgYEJFTFVNX1RFUlZFUklGSUtBU0lgYC4KICAgICIiIgogICAgcmV0dXJuIEdhdGVSZXN1bHQodG9vbD10b29sLCBwYXNzZWQ9RmFsc2UsIGZpbmRpbmdzPVt7CiAgICAgICAgInNldmVyaXR5IjogIkhJR0giLCAiZmlsZSI6ICIiLCAibGluZSI6IDAsCiAgICAgICAgInJ1bGUiOiBUT09MX0VSUk9SX1JVTEUsICJtZXNzYWdlIjogbWVzc2FnZSwKICAgIH1dKQoKCmRlZiBydW5fZ2F0ZV9pbl9zYW5kYm94KHRvb2w6IHN0ciwgdGFyZ2V0X2RpciwgY29tbWFuZDogc3RyLAogICAgICAgICAgICAgICAgICAgICAgICB0aW1lb3V0OiBpbnQgPSAzMDAsIHJlYWRfb25seTogYm9vbCA9IEZhbHNlLAogICAgICAgICAgICAgICAgICAgICAgICBzYW5kYm94X3J1bm5lcj1Ob25lLCBleHRyYV9tb3VudHM9Tm9uZSkgLT4gZGljdCB8IEdhdGVSZXN1bHQ6CiAgICAiIiJKYWxhbmthbiBgYGNvbW1hbmRgYCBkaSBzYW5kYm94IGF0YXMgYGB0YXJnZXRfZGlyYGAuCgogICAgS2VtYmFsaWthbiBkaWN0IGhhc2lsIHNhbmRib3ggKGBgZXhpdF9jb2RlYGAvYGBzdGRvdXRgYC9gYHN0ZGVycmBgKSwKICAgIGF0YXUgYGBHYXRlUmVzdWx0YGAgZ2FnYWwtdGVydHV0dXAgYmlsYSBzYW5kYm94IHRpZGFrIHRlcnNlZGlhLgoKICAgIGBgZXh0cmFfbW91bnRzYGA6IGRhZnRhciBgYChob3N0X3BhdGgsIGNvbnRhaW5lcl9wYXRoKWBgIHlhbmcKICAgIGRpLW1vdW50IHRhbWJhaGFuIGRpIGx1YXIgd29ya3RyZWUgKE40OiBhcnRlZmFrIGdhdGUpLiBIYW55YQogICAgZGl0ZXJ1c2thbiBrZSBydW5uZXIgYmlsYSB0aWRhayBrb3NvbmcsIHN1cGF5YSBmYWtlIHJ1bm5lciBsYW1hCiAgICB5YW5nIHRpZGFrIG1lbmdlbmFsIHBhcmFtZXRlciBpdHUgdGV0YXAgYmlzYSBkaXBha2FpLgogICAgIiIiCiAgICBydW5uZXIgPSBzYW5kYm94X3J1bm5lcgogICAgaWYgcnVubmVyIGlzIE5vbmU6CiAgICAgICAgIyBJbXBvciBkaSBzaW5pIChidWthbiBkaSBhdGFzKSBzdXBheWEgbW9ua2V5cGF0Y2gKICAgICAgICAjIGBgbXVmYWthdC5zYW5kYm94LmRvY2tlci5ydW5faW5fc2FuZGJveGBgIGRpIHRlc3QgYmVybGFrdS4KICAgICAgICBmcm9tIC4uc2FuZGJveC5kb2NrZXIgaW1wb3J0IHJ1bl9pbl9zYW5kYm94IGFzIF9mcmVzaF9ydW4KICAgICAgICBydW5uZXIgPSBfZnJlc2hfcnVuCiAgICAgICAgIyBONzogZGFlbW9uIGhpZHVwICsgaW1hZ2UgYWRhIOKAlCBiaW5hcnkgc2FqYSB0aWRhayBjdWt1cC4KICAgICAgICBpZiBub3QgZG9ja2VyX2F2YWlsYWJsZSgpOgogICAgICAgICAgICByZXR1cm4gc2FuZGJveF91bmF2YWlsYWJsZSgKICAgICAgICAgICAgICAgIHRvb2wsICJEb2NrZXIgdGlkYWsgdGVyc2VkaWEgKGJpbmFyeSB0aWRhayBhZGEsIGRhZW1vbiAiCiAgICAgICAgICAgICAgICAgICAgICAidGlkYWsgbWVyZXNwb25zIGBkb2NrZXIgaW5mb2AsIGF0YXUgaW1hZ2UgIgogICAgICAgICAgICAgICAgICAgICAgZiJ7U0FOREJPWF9JTUFHRX0gYmVsdW0gZGktYnVpbGQpLiIpCiAgICBrd2FyZ3M6IGRpY3QgPSB7InRpbWVvdXQiOiB0aW1lb3V0LCAibmV0d29ya19ub25lIjogVHJ1ZSwKICAgICAgICAgICAgICAgICAgICAicmVhZF9vbmx5IjogcmVhZF9vbmx5fQogICAgaWYgZXh0cmFfbW91bnRzOgogICAgICAgIGt3YXJnc1siZXh0cmFfdm9sdW1lcyJdID0gbGlzdChleHRyYV9tb3VudHMpCiAgICB0cnk6CiAgICAgICAgcmVzdWx0ID0gcnVubmVyKFNBTkRCT1hfSU1BR0UsIHN0cih0YXJnZXRfZGlyKSwgY29tbWFuZCwgKiprd2FyZ3MpCiAgICBleGNlcHQgVHlwZUVycm9yOgogICAgICAgICMgRmFrZSBydW5uZXIgbGFtYSB0YW5wYSBwYXJhbWV0ZXIgZXh0cmFfdm9sdW1lczogdWxhbmdpIHRhbnBhCiAgICAgICAgIyBtb3VudCB0YW1iYWhhbiAoYXJ0ZWZhayBnYXRlIGxhbHUgdGlkYWsgdGVyaXNvbGFzaSDigJQgaGFueWEKICAgICAgICAjIGphbHVyIHRlc3QgbGFtYTsgZmFrZSBydW5uZXIgcmVwbyBzdWRhaCBtZW5kdWt1bmdueWEpLgogICAgICAgIGt3YXJncy5wb3AoImV4dHJhX3ZvbHVtZXMiLCBOb25lKQogICAgICAgIHJlc3VsdCA9IHJ1bm5lcihTQU5EQk9YX0lNQUdFLCBzdHIodGFyZ2V0X2RpciksIGNvbW1hbmQsICoqa3dhcmdzKQogICAgaWYgbm90IGlzaW5zdGFuY2UocmVzdWx0LCBkaWN0KToKICAgICAgICByZXR1cm4gc2FuZGJveF91bmF2YWlsYWJsZSh0b29sLCAicnVubmVyIHNhbmRib3ggbWVuZ2VtYmFsaWthbiB0aXBlIHRhayBkaWtlbmFsLiIpCiAgICBpZiByZXN1bHQuZ2V0KCJzYW5kYm94X3VuYXZhaWxhYmxlIik6CiAgICAgICAgcmV0dXJuIHNhbmRib3hfdW5hdmFpbGFibGUodG9vbCwgc3RyKHJlc3VsdC5nZXQoInN0ZGVyciIsICIiKSkpCiAgICByZXR1cm4gcmVzdWx0Cg==
+"""Jembatan gate -> sandbox Docker (audit 20 Nov 2026: C1 + H3;
+putaran 2: N1 + N7).
+
+Semua gate WAJIB lewat sini. Bila Docker tidak tersedia, kembalikan
+``GateResult(passed=False, rule="sandbox-unavailable")`` — TIDAK
+PERNAH fallback ke eksekusi host dan TIDAK PERNAH ``passed=True``.
+
+``sandbox_runner`` adalah injeksi untuk test: callable dengan
+signature ``(image, workdir, command, timeout, network_none,
+read_only) -> dict`` seperti :func:`mufakat.sandbox.docker.run_in_sandbox`.
+Di produksi selalu ``None`` (= runner Docker asli). Test memakai
+fake runner supaya gate bisa diuji tanpa Docker sungguhan.
+
+Deteksi Docker (N7): ketersediaan dicek lewat
+:func:`mufakat.sandbox.docker.docker_available` — daemon hidup DAN
+image sandbox ada — bukan sekadar binary di PATH.
+"""
+
+from __future__ import annotations
+
+try:
+    from ..sandbox.docker import SANDBOX_IMAGE, docker_available
+    from .runner import GateResult
+except ImportError:  # pragma: no cover
+    from mufakat.gates.runner import GateResult  # type: ignore
+    from mufakat.sandbox.docker import SANDBOX_IMAGE, docker_available  # type: ignore
+
+SANDBOX_UNAVAILABLE_RULE = "sandbox-unavailable"
+TOOL_ERROR_RULE = "tool-error"
+
+
+def sandbox_unavailable(tool: str, detail: str = "") -> GateResult:
+    """GateResult gagal-tertutup saat sandbox tidak tersedia."""
+    message = "Sandbox Docker tidak tersedia — gate belum terverifikasi."
+    if detail:
+        message += f" {detail}"
+    return GateResult(tool=tool, passed=False, findings=[{
+        "severity": "HIGH", "file": "", "line": 0,
+        "rule": SANDBOX_UNAVAILABLE_RULE, "message": message,
+    }])
+
+
+def tool_missing(tool: str, binary: str) -> GateResult:
+    """GateResult gagal-tertutup saat tool tidak ada di dalam sandbox."""
+    return GateResult(tool=tool, passed=False, findings=[{
+        "severity": "HIGH", "file": "", "line": 0,
+        "rule": "tool-missing",
+        "message": f"Tool {binary} tidak tersedia di dalam sandbox — "
+                   "gate belum terverifikasi (bukan AMAN).",
+    }])
+
+
+def tool_error(tool: str, message: str) -> GateResult:
+    """GateResult gagal-tertutup saat tool crash / output tak valid (N1).
+
+    Dipakai bila exit code tool di luar daftar suksesnya, atau output
+    yang seharusnya JSON kosong/rusak. Dulu kasus ini dianggap
+    "0 temuan" (``passed=True``) — verdict AMAN palsu. Sekarang
+    ``passed=False`` dengan ``rule="tool-error"`` dan verdict
+    :mod:`mufakat.gates.verdict` membacanya sebagai
+    ``BELUM_TERVERIFIKASI``.
+    """
+    return GateResult(tool=tool, passed=False, findings=[{
+        "severity": "HIGH", "file": "", "line": 0,
+        "rule": TOOL_ERROR_RULE, "message": message,
+    }])
+
+
+def run_gate_in_sandbox(tool: str, target_dir, command: str,
+                        timeout: int = 300, read_only: bool = False,
+                        sandbox_runner=None, extra_mounts=None) -> dict | GateResult:
+    """Jalankan ``command`` di sandbox atas ``target_dir``.
+
+    Kembalikan dict hasil sandbox (``exit_code``/``stdout``/``stderr``),
+    atau ``GateResult`` gagal-tertutup bila sandbox tidak tersedia.
+
+    ``extra_mounts``: daftar ``(host_path, container_path)`` yang
+    di-mount tambahan di luar worktree (N4: artefak gate). Hanya
+    diteruskan ke runner bila tidak kosong, supaya fake runner lama
+    yang tidak mengenal parameter itu tetap bisa dipakai.
+    """
+    runner = sandbox_runner
+    if runner is None:
+        # Impor di sini (bukan di atas) supaya monkeypatch
+        # ``mufakat.sandbox.docker.run_in_sandbox`` di test berlaku.
+        from ..sandbox.docker import run_in_sandbox as _fresh_run
+        runner = _fresh_run
+        # N7: daemon hidup + image ada — binary saja tidak cukup.
+        if not docker_available():
+            return sandbox_unavailable(
+                tool, "Docker tidak tersedia (binary tidak ada, daemon "
+                      "tidak merespons `docker info`, atau image "
+                      f"{SANDBOX_IMAGE} belum di-build).")
+    kwargs: dict = {"timeout": timeout, "network_none": True,
+                    "read_only": read_only}
+    if extra_mounts:
+        kwargs["extra_volumes"] = list(extra_mounts)
+    try:
+        result = runner(SANDBOX_IMAGE, str(target_dir), command, **kwargs)
+    except TypeError:
+        # Fake runner lama tanpa parameter extra_volumes: ulangi tanpa
+        # mount tambahan (artefak gate lalu tidak terisolasi — hanya
+        # jalur test lama; fake runner repo sudah mendukungnya).
+        kwargs.pop("extra_volumes", None)
+        result = runner(SANDBOX_IMAGE, str(target_dir), command, **kwargs)
+    if not isinstance(result, dict):
+        return sandbox_unavailable(tool, "runner sandbox mengembalikan tipe tak dikenal.")
+    if result.get("sandbox_unavailable"):
+        return sandbox_unavailable(tool, str(result.get("stderr", "")))
+    return result
