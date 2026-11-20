@@ -1,18 +1,22 @@
-"""Domain approval — permintaan, status, dan keputusan persetujuan.
+"""Domain approval — permintaan dan status persetujuan (H1).
 
-Permission: ``write-sandbox`` untuk meminta, ``approval-required``
-untuk memutuskan (keputusan dicatat, bukan dieksekusi). Persetujuan
-di sini adalah catatan; tindakan berisiko (commit/push/deploy)
-tetap harus memeriksa catatan ini sebelum berjalan — lihat
-domain git ``git_commit``.
+HANYA dua tool MCP: ``approval_request`` (minta) dan
+``approval_get_status`` (baca). TIDAK ADA tool MCP yang bisa
+memutuskan approval — ``approval_record_decision`` DIHAPUS dari
+registrasi MCP (audit H1: AI bisa menyetujui commit-nya sendiri).
+
+Keputusan HANYA dari manusia lewat CLI ``mufakat approve <id>``
+(konfirmasi y/N di TTY), disimpan di SQLite
+(:mod:`mufakat.mcp_server.approval_store`), terikat hash diff,
+masa berlaku 24 jam, token sekali pakai. ``decide_approval`` di
+bawah ini adalah fungsi internal untuk CLI — BUKAN tool MCP dan
+TIDAK didaftarkan ke server.
 """
 
 from __future__ import annotations
 
+from mufakat.mcp_server import approval_store
 from mufakat.mcp_server.tools import err, new_id, ok
-from mufakat.runner import utcnow
-
-from . import store
 
 DOMAIN = "approval"
 
@@ -21,45 +25,52 @@ CONTRACTS = [
      "permission": "write-sandbox", "scope": "approvals"},
     {"name": "approval_get_status", "description": "Status satu approval.",
      "permission": "read", "scope": "approvals"},
-    {"name": "approval_record_decision", "description": "Catat keputusan approval.",
-     "permission": "approval-required", "scope": "approvals"},
 ]
 
 
 def approval_request(title: str, run_id: str = "",
-                     requested_by: str = "") -> dict:
-    """Minta persetujuan (approval) untuk sebuah keputusan/aksi."""
+                     requested_by: str = "", diff_hash: str = "") -> dict:
+    """Minta persetujuan (approval) untuk sebuah keputusan/aksi.
+
+    Mencatat approval ``pending`` di SQLite. Keputusan TIDAK bisa
+    dibuat lewat MCP — manusia menyetujui lewat ``mufakat approve``.
+    """
     approval_id = new_id("appr")
-    record = {"approval_id": approval_id, "title": title, "run_id": run_id,
-              "requested_by": requested_by, "status": "pending",
-              "created_at": utcnow()}
-    store.approvals[approval_id] = record
+    record = approval_store.create_approval(
+        approval_id, title, run_id=run_id,
+        requested_by=requested_by, diff_hash=diff_hash)
     return ok(**record)
 
 
 def approval_get_status(approval_id: str) -> dict:
     """Status satu approval."""
-    record = store.approvals.get(approval_id)
+    record = approval_store.get_approval(approval_id)
     if record is None:
         return err("Approval tidak ditemukan.", approval_id=approval_id)
     return ok(**record)
 
 
-def approval_record_decision(approval_id: str, approved: bool,
-                             note: str = "", decided_by: str = "") -> dict:
-    """Catat keputusan approval (setujui/tolak) beserta catatan."""
-    record = store.approvals.get(approval_id)
+def decide_approval(approval_id: str, approved: bool,
+                    decided_by: str = "", note: str = "",
+                    diff_hash: str = "") -> dict:
+    """Putuskan approval — INTERNAL, hanya untuk CLI manusia.
+
+    BUKAN tool MCP (tidak didaftarkan). Mengembalikan record +
+    token sekali pakai bila disetujui.
+    """
+    record, token = approval_store.decide_approval(
+        approval_id, approved, decided_by=decided_by, note=note,
+        diff_hash=diff_hash)
     if record is None:
         return err("Approval tidak ditemukan.", approval_id=approval_id)
-    record["status"] = "approved" if approved else "rejected"
-    record["note"] = note
-    record["decided_by"] = decided_by
-    record["decided_at"] = utcnow()
-    return ok(**record)
+    out = dict(record)
+    if token is not None:
+        out["approval_token"] = token
+    return ok(**out)
 
 
 def register(mcp) -> list[str]:
-    """Daftarkan semua tool domain approval ke ``mcp``."""
-    for fn in (approval_request, approval_get_status, approval_record_decision):
+    """Daftarkan tool domain approval ke ``mcp`` (tanpa record_decision)."""
+    for fn in (approval_request, approval_get_status):
         mcp.tool(fn)
     return [c["name"] for c in CONTRACTS]
