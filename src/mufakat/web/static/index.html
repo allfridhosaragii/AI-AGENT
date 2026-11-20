@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MUFAKAT — Dashboard</title>
+<style>
+  :root { --bg:#0f172a; --panel:#1e293b; --panel2:#273449; --text:#e2e8f0; --muted:#94a3b8; --accent:#38bdf8; --ok:#34d399; --warn:#fbbf24; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background:var(--bg); color:var(--text); }
+  .layout { display:flex; min-height:100vh; }
+  nav { width:230px; background:var(--panel); padding:16px 12px; flex-shrink:0; }
+  nav h1 { font-size:20px; margin:4px 8px 4px; }
+  nav p.tag { color:var(--muted); font-size:12px; margin:0 8px 16px; }
+  nav a { display:block; padding:9px 10px; margin:2px 0; border-radius:8px; color:var(--text); text-decoration:none; font-size:14px; }
+  nav a:hover, nav a.active { background:var(--panel2); color:#fff; }
+  nav a .dot { float:right; color:var(--muted); font-size:12px; }
+  main { flex:1; padding:24px; }
+  h2 { margin-top:0; }
+  .muted { color:var(--muted); }
+  .cards { display:grid; grid-template-columns:repeat(auto-fill, minmax(220px, 1fr)); gap:14px; margin:18px 0; }
+  .card { background:var(--panel); border-radius:12px; padding:16px; }
+  .card h3 { margin:0 0 6px; font-size:15px; }
+  .card .big { font-size:26px; font-weight:700; }
+  .card p { margin:6px 0 0; color:var(--muted); font-size:13px; }
+  .ok { color:var(--ok); } .warn { color:var(--warn); }
+  section.panel { background:var(--panel); border-radius:12px; padding:16px; margin-top:14px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { text-align:left; padding:8px 6px; border-bottom:1px solid var(--panel2); }
+  th { color:var(--muted); font-weight:600; }
+  form.debate { display:flex; gap:8px; margin-top:12px; }
+  input[type=text] { flex:1; padding:10px; border-radius:8px; border:1px solid var(--panel2); background:var(--bg); color:var(--text); }
+  button { padding:10px 16px; border-radius:8px; border:0; background:var(--accent); color:#082f49; font-weight:700; cursor:pointer; }
+  button:hover { opacity:.9; }
+  #debate-result { margin-top:10px; font-size:14px; }
+  @media (max-width: 760px) { nav { width:170px; } main { padding:14px; } }
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav aria-label="Navigasi utama">
+    <h1>MUFAKAT</h1>
+    <p class="tag">Musyawarah untuk Mufakat</p>
+    <a href="#dashboard" class="active">Dashboard</a>
+    <a href="#projects">Projects</a>
+    <a href="#agents">AI Agents</a>
+    <a href="#connections">Connections</a>
+    <a href="#meetings">Meeting Rooms</a>
+    <a href="#debates">Debate History</a>
+    <a href="#tasks">Task Board</a>
+    <a href="#workspace">Workspace</a>
+    <a href="#git">Git &amp; PR</a>
+    <a href="#testing">Testing</a>
+    <a href="#security">Security</a>
+    <a href="#memory">Memory</a>
+    <a href="#usage">Usage &amp; Costs</a>
+    <a href="#audit">Audit Logs</a>
+    <a href="#settings">Settings</a>
+  </nav>
+  <main>
+    <section id="dashboard">
+      <h2>Dashboard</h2>
+      <p class="muted">Debat multi-AI menuju mufakat: debat, spesifikasi, kode, audit, test — lalu ulangi sampai aman.</p>
+      <div class="cards">
+        <div class="card"><h3>Status layanan</h3><div class="big ok" id="health-status">…</div><p id="health-detail">Memeriksa /health…</p></div>
+        <div class="card"><h3>Total run</h3><div class="big" id="runs-count">…</div><p>Run debat &amp; pipeline di folder runs/</p></div>
+        <div class="card"><h3>Gate terverifikasi</h3><div class="big" id="gates-count">—</div><p>Gate terverifikasi bila ada hasil di runs/&lt;id&gt;/gates/</p></div>
+        <div class="card"><h3>Biaya total</h3><div class="big" id="usage-cost">…</div><p>USD, dari /api/usage (SQLite bila ada)</p></div>
+      </div>
+    </section>
+
+    <section class="panel" id="debate-panel">
+      <h3>Mulai debat baru</h3>
+      <form class="debate" id="debate-form">
+        <input type="text" id="debate-topic" placeholder="Contoh: Buat REST API todo dengan FastAPI + test + audit" aria-label="Topik debat" required>
+        <button type="submit">Mulai debat</button>
+      </form>
+      <div id="debate-result" aria-live="polite"></div>
+    </section>
+
+    <section class="panel" id="debates">
+      <h3>Debate History</h3>
+      <table>
+        <thead><tr><th>Run ID</th><th>Mode</th><th>Provider</th><th>Status</th><th>Dibuat</th></tr></thead>
+        <tbody id="runs-body"><tr><td colspan="5" class="muted">Memuat…</td></tr></tbody>
+      </table>
+    </section>
+
+    <section class="panel" id="projects">
+      <h3>Projects</h3>
+      <p class="muted" id="projects-info">Memuat /api/projects…</p>
+    </section>
+
+    <section class="panel" id="agents">
+      <h3>AI Agents</h3>
+      <p class="muted">Peran: researcher, planner, architect, debater (pro/contra), moderator, coder, reviewer, auditor, tester. Daftar lengkap tersedia lewat MCP tool <code>core_list_agents</code>.</p>
+    </section>
+
+    <section class="panel" id="connections">
+      <h3>Connections</h3>
+      <p class="muted">Provider dihubungkan lewat API key di <code>.env</code> atau lewat CLI masing-masing (bukan lewat otomasi web chat). Periksa kesiapan dengan <code>mufakat doctor</code>.</p>
+    </section>
+
+    <section class="panel" id="meetings">
+      <h3>Meeting Rooms</h3>
+      <p class="muted" id="meetings-info">Memuat /api/meetings…</p>
+    </section>
+
+    <section class="panel" id="tasks">
+      <h3>Task Board</h3>
+      <p class="muted" id="tasks-info">Memuat /api/tasks…</p>
+    </section>
+
+    <section class="panel" id="workspace">
+      <h3>Workspace</h3>
+      <p class="muted">File run tersimpan di <code>runs/&lt;run_id&gt;/</code>: transcript.jsonl, rounds/, spec.md, final_report.md, gates/.</p>
+    </section>
+
+    <section class="panel" id="git">
+      <h3>Git &amp; PR</h3>
+      <p class="muted">Status git tersedia lewat MCP tool <code>git_status</code>. Perubahan kode hanya masuk repo setelah gate lolos.</p>
+    </section>
+
+    <section class="panel" id="testing">
+      <h3>Testing</h3>
+      <p class="muted">Pengujian dijalankan lewat MCP tool <code>testing_run</code> (pytest --collect-only) dan <code>pytest</code> di CI.</p>
+    </section>
+
+    <section class="panel" id="security">
+      <h3>Security</h3>
+      <p class="muted">Pemindai (semgrep, bandit, gitleaks, trivy) dicek lewat <code>mufakat doctor</code> dan MCP tool <code>security_scan</code>. Hasil scan disimpan di <code>runs/&lt;id&gt;/gates/</code>.</p>
+    </section>
+
+    <section class="panel" id="memory">
+      <h3>Memory</h3>
+      <p class="muted">Transkrip debat tersimpan sebagai JSONL (satu MufakatMessage per baris) dan ringkasan Markdown per ronde, sehingga keputusan dan dissent bisa ditelusuri.</p>
+    </section>
+
+    <section class="panel" id="usage">
+      <h3>Usage &amp; Costs</h3>
+      <p class="muted" id="usage-info">Memuat /api/usage…</p>
+    </section>
+
+    <section class="panel" id="audit">
+      <h3>Audit Logs</h3>
+      <p class="muted" id="audit-info">Memuat /api/audit…</p>
+    </section>
+
+    <section class="panel" id="settings">
+      <h3>Settings</h3>
+      <p class="muted">Pengaturan provider, kuota, dan gate ada di <code>config/providers.yaml</code>, <code>config/roles.yaml</code>, dan <code>config/gates.yaml</code>. Jangan pernah menulis API key di file yang di-commit.</p>
+    </section>
+  </main>
+</div>
+<script>
+async function loadJson(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(path + " -> " + res.status);
+  return res.json();
+}
+async function refresh() {
+  try {
+    const health = await loadJson("/health");
+    document.getElementById("health-status").textContent = health.status === "ok" ? "OK" : health.status;
+    document.getElementById("health-detail").textContent = "runs: " + health.runs_count + (health.sqlite ? " | SQLite: " + health.sqlite : " | SQLite: belum ada");
+    document.getElementById("runs-count").textContent = health.runs_count;
+  } catch (e) {
+    document.getElementById("health-status").textContent = "TIDAK";
+    document.getElementById("health-status").className = "big warn";
+    document.getElementById("health-detail").textContent = "Tidak bisa menghubungi /health.";
+  }
+  try {
+    const runs = await loadJson("/api/runs");
+    const body = document.getElementById("runs-body");
+    if (!runs.items.length) {
+      body.innerHTML = '<tr><td colspan="5" class="muted">Belum ada run. Mulai debat dari form di atas atau CLI: mufakat run "ide Anda".</td></tr>';
+    } else {
+      body.innerHTML = runs.items.map(function (r) {
+        return "<tr><td><code>" + r.run_id + "</code></td><td>" + (r.mode || "-") + "</td><td>" + (r.provider || "-") + "</td><td>" + (r.status || "-") + "</td><td>" + (r.created_at || "-") + "</td></tr>";
+      }).join("");
+    }
+  } catch (e) { /* biarkan placeholder */ }
+  try {
+    const usage = await loadJson("/api/usage");
+    document.getElementById("usage-cost").textContent = "$" + Number(usage.total_cost_usd || 0).toFixed(2);
+    document.getElementById("usage-info").textContent = "Entri ledger: " + usage.ledger_entries + " | total biaya: $" + Number(usage.total_cost_usd || 0).toFixed(2);
+  } catch (e) { document.getElementById("usage-cost").textContent = "$0.00"; }
+  const fill = async function (path, elId, label) {
+    try {
+      const data = await loadJson(path);
+      document.getElementById(elId).textContent = label + ": " + data.count + " item.";
+    } catch (e) { document.getElementById(elId).textContent = label + ": tidak bisa dimuat."; }
+  };
+  fill("/api/projects", "projects-info", "Project");
+  fill("/api/meetings", "meetings-info", "Meeting");
+  fill("/api/tasks", "tasks-info", "Task");
+  fill("/api/audit", "audit-info", "Entri audit");
+}
+document.getElementById("debate-form").addEventListener("submit", async function (ev) {
+  ev.preventDefault();
+  const topic = document.getElementById("debate-topic").value.trim();
+  const out = document.getElementById("debate-result");
+  if (!topic) return;
+  out.textContent = "Memulai debat…";
+  try {
+    const res = await fetch("/api/debate", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ topic: topic }) });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.detail || res.status);
+    out.textContent = "Debat dibuat — run_id: " + data.run_id + " (lihat Debate History).";
+    document.getElementById("debate-topic").value = "";
+    refresh();
+  } catch (e) {
+    out.textContent = "Gagal memulai debat: " + e.message;
+  }
+});
+document.querySelectorAll("nav a").forEach(function (a) {
+  a.addEventListener("click", function () {
+    document.querySelectorAll("nav a").forEach(function (x) { x.classList.remove("active"); });
+    a.classList.add("active");
+  });
+});
+refresh();
+</script>
+</body>
+</html>
