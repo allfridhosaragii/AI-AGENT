@@ -1,1 +1,11 @@
-QGVjaG8gb2ZmClJFTSBXcmFwcGVyIGV4ZWN1dGFibGUgTG9jYWwgUnVubmVyIE1VRkFLQVQgUm9vbSAoYXVkaXQgSDYsIE45LCBXaW5kb3dzKS4KUkVNIENocm9tZSBtZW5qYWxhbmthbiBgcGF0aGAgZGkgbWFuaWZlc3QgZGVuZ2FuIGFyZ3VtZW4KUkVNIGBjaHJvbWUtZXh0ZW5zaW9uOi8vPGlkPi9gIOKAlCB3cmFwcGVyIGluaSB5YW5nIG1lbWFuZ2dpbCBob3N0IFB5dGhvbi4KUkVNIE45OiBwYWthaSBQeXRob24gZGFyaSB2ZW52IGR1bHUgKCVWSVJUVUFMX0VOViUpLCBidWthbiBgcHl0aG9uYApSRU0gc2VtYmFyYW5nIGRhcmkgUEFUSC4KSUYgREVGSU5FRCBWSVJUVUFMX0VOViBJRiBFWElTVCAiJVZJUlRVQUxfRU5WJVxTY3JpcHRzXHB5dGhvbi5leGUiICgKICAiJVZJUlRVQUxfRU5WJVxTY3JpcHRzXHB5dGhvbi5leGUiIC1tIG11ZmFrYXRfcnVubmVyLmhvc3QgJSoKICBFWElUIC9CICVFUlJPUkxFVkVMJQopCnB5dGhvbiAtbSBtdWZha2F0X3J1bm5lci5ob3N0ICUqCg==
+@echo off
+REM Wrapper executable Local Runner MUFAKAT Room (audit H6, N9, Windows).
+REM Chrome menjalankan `path` di manifest dengan argumen
+REM `chrome-extension://<id>/` — wrapper ini yang memanggil host Python.
+REM N9: pakai Python dari venv dulu (%VIRTUAL_ENV%), bukan `python`
+REM sembarang dari PATH.
+IF DEFINED VIRTUAL_ENV IF EXIST "%VIRTUAL_ENV%\Scripts\python.exe" (
+  "%VIRTUAL_ENV%\Scripts\python.exe" -m mufakat_runner.host %*
+  EXIT /B %ERRORLEVEL%
+)
+python -m mufakat_runner.host %*
