@@ -36,7 +36,10 @@ def test_tie_borda():
          {"decision": "approve", "ranking": ["B", "A"]}],
         [],
     )
-    assert r["decision"] in ("tie", "mufakat")  # tie terdeteksi bila winner ambigu
+    # Seri Borda yang sesungguhnya — dulu test ini menerima "tie" ATAU
+    # "mufakat" sehingga tie yang hilang tidak pernah ketahuan.
+    assert r["decision"] == "tie"
+    assert r["winner"] is None
     assert r["borda"]["A"] == r["borda"]["B"]
 
 
