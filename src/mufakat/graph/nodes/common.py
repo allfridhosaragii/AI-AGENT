@@ -81,6 +81,8 @@ async def call_adapter(adapters, key, default_text, state=None):
     if fn is None:
         return default_text
     target = getattr(fn, "generate", getattr(fn, "run", fn))
+    if target is None:
+        return default_text
     try:
         result = target(state) if state is not None else target()
         if inspect.isawaitable(result):
