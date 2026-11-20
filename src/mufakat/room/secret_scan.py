@@ -1,1 +1,105 @@
-IiIiU2VjcmV0IFNjYW5uZXIgTVVGQUtBVCBSb29tIChDbGF1ZGUgwqcwLjIgLyDCp1Q4LCBWMyBBZGRlbmR1bSBFMy9FNCkuCgpNZW1pbmRhaSB0ZWtzIHByb21wdCBTRUJFTFVNIGRpc2FsaW4vZGlraXJpbSBrZSBzaXR1cyBBSS4gQmlsYSBhZGEKdGVtdWFuLCBwcm9tcHQgRElCTE9LSVIgZGFuIHBlbmdndW5hIGRpcGVyaW5nYXRrYW4g4oCUIHBlbWluZGFpYW4gdGlkYWsKcGVybmFoIGRpYW0tZGlhbSBtZW5naGFwdXMgYXRhdSBtZW5ndWJhaCBpc2kgdGFucGEgbWVtYmVyaSB0YWh1LgoKUG9sYSB5YW5nIGRpcGluZGFpIChyZWdleCwgdGFucGEgcGVybmFoIG1lbnlpbXBhbiBuaWxhaSBhc2xpbnlhIGtlCmxvZyk6IEFQSSBrZXkgdW11bSwgdG9rZW4gQmVhcmVyLCBwYXNhbmdhbiBgYGtleT1gYC9gYHBhc3N3b3JkPWBgLApibG9rIGBgLS0tLS1CRUdJTiAuLi4tLS0tLWBgLCBydWp1a2FuIGBgLmVudmBgLCBkYW4ga3JlZGVuc2lhbCBBV1MgLwpHaXRIdWIgLyBBbnRocm9waWMgLyBPcGVuQUkgLyBHb29nbGUgLyBTbGFjay4KClBlcmJhaWthbiBhdWRpdCAyMCBOb3YgMjAyNjogcG9sYSB5YW5nIGR1bHUgbG9sb3Mg4oCUIGBgc2stcHJvai0uLi5gYCwKYGBnaXRodWJfcGF0Xy4uLmBgLCBgYEFJemEuLi5gYCAoR29vZ2xlKSwgYGB4b3hiLS4uLmBgIChTbGFjayksCmBgLS0tLS1iZWdpbiAuLi4tLS0tLWBgIGh1cnVmIGtlY2lsLCBkYW4gYGBhcGkga2V5ID0gLi4uYGAgKHNwYXNpKSDigJQKa2luaSB0ZXJkZXRla3NpLiBQdXRhcmFuIDIgKE4xNCk6IGBgZ2xwYXQtLi4uYGAgKEdpdExhYikgZGFuIGBgaGZfLi4uYGAKKEh1Z2dpbmdGYWNlKSBkaXRhbWJhaGthbiB1bnR1ayBwYXJpdGFzIGRlbmdhbiBUUwooYGBtdWZha2F0LXJvb20vc3JjL2VuZ2luZS9zZWNyZXRTY2FuLnRzYGApLiBUZW11YW4gZ2FuZGEgcGFkYSByZW50YW5nCnlhbmcgc2FtYSAoc2F0dSBzZWNyZXQgeWFuZyBjb2NvayBkdWEgcG9sYSkgaGFueWEgZGlsYXBvcmthbiBzZWthbGkuCiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IHJlCmZyb20gZGF0YWNsYXNzZXMgaW1wb3J0IGRhdGFjbGFzcwoKX19hbGxfXyA9IFsiU2VjcmV0RmluZGluZyIsICJzY2FuX3RleHQiLCAiY29udGFpbnNfc2VjcmV0IiwgInJlZGFjdF9tYXRjaGVzIl0KCl9QQVRURVJOUzogbGlzdFt0dXBsZVtzdHIsIHJlLlBhdHRlcm5bc3RyXV1dID0gWwogICAgKCJhd3NfYWNjZXNzX2tleSIsIHJlLmNvbXBpbGUociJBS0lBWzAtOUEtWl17MTZ9IikpLAogICAgKCJnaXRodWJfdG9rZW4iLCByZS5jb21waWxlKHIiZ2hbcG91c3JdX1tBLVphLXowLTldezIwLH0iKSksCiAgICAoImdpdGh1Yl9maW5lX2dyYWluZWRfdG9rZW4iLCByZS5jb21waWxlKHIiZ2l0aHViX3BhdF9bQS1aYS16MC05X117MjAsfSIpKSwKICAgICgib3BlbmFpX2tleSIsIHJlLmNvbXBpbGUociJzay0oPzpwcm9qLSk/W0EtWmEtejAtOVwtX117MjAsfSIpKSwKICAgICgiYW50aHJvcGljX2tleSIsIHJlLmNvbXBpbGUociJzay1hbnQtW0EtWmEtejAtOVwtX117MTAsfSIpKSwKICAgICgiZ29vZ2xlX2FwaV9rZXkiLCByZS5jb21waWxlKHIiQUl6YVswLTlBLVphLXpcLV9dezM1fSIpKSwKICAgICgic2xhY2tfdG9rZW4iLCByZS5jb21waWxlKHIieG94W2JhcHJzXS1bQS1aYS16MC05XC1dezEwLH0iKSksCiAgICAjIE4xNCAocHV0YXJhbiAyLCBwYXJpdGFzIGRlbmdhbiBUUyBtdWZha2F0LXJvb20vc3JjL2VuZ2luZS9zZWNyZXRTY2FuLnRzKToKICAgICMgR2l0TGFiIHBlcnNvbmFsIGFjY2VzcyB0b2tlbiBkYW4gSHVnZ2luZ0ZhY2UgdG9rZW4uCiAgICAoImdpdGxhYl90b2tlbiIsIHJlLmNvbXBpbGUociJnbHBhdC1bQS1aYS16MC05XC1fXXsyMCx9IikpLAogICAgKCJodWdnaW5nZmFjZV90b2tlbiIsIHJlLmNvbXBpbGUociJoZl9bQS1aYS16MC05XXsyMCx9IikpLAogICAgKCJiZWFyZXJfdG9rZW4iLCByZS5jb21waWxlKHIiQmVhcmVyXHMrW0EtWmEtejAtOVwtLl9+Ky89XXsxMCx9IikpLAogICAgKCJwcml2YXRlX2tleV9ibG9jayIsIHJlLmNvbXBpbGUociItLS0tLUJFR0lOIFtBLVogXSpQUklWQVRFIEtFWS0tLS0tIiwgcmUuSUdOT1JFQ0FTRSkpLAogICAgKCJlbnZfZmlsZV9yZWYiLCByZS5jb21waWxlKHIiKD9pKVwuZW52XGIiKSksCiAgICAoCiAgICAgICAgImNyZWRlbnRpYWxfYXNzaWdubWVudCIsCiAgICAgICAgcmUuY29tcGlsZSgKICAgICAgICAgICAgciIoP2kpKGFwaVsgX1wtXT9rZXl8YXBpa2V5fHNlY3JldHxwYXNzd29yZHxwYXNzd2R8dG9rZW58YWNjZXNzWyBfXC1dP2tleSkiCiAgICAgICAgICAgIHIiKFxzKls6PV1ccyopKFtcIiddPylbXlxzXCInLDtdezQsfSIKICAgICAgICApLAogICAgKSwKICAgICgKICAgICAgICAiZ2VuZXJpY19sb25nX3Rva2VuIiwKICAgICAgICByZS5jb21waWxlKHIiKD9pKSh0b2tlbnxzZWNyZXQpXHMqWzo9XVxzKlsnXCJdW0EtWmEtejAtOVwtX117MTYsfVsnXCJdIiksCiAgICApLApdCgoKQGRhdGFjbGFzcyhmcm96ZW49VHJ1ZSkKY2xhc3MgU2VjcmV0RmluZGluZzoKICAgICIiIlNhdHUgdGVtdWFuIHNlY3JldCBzY2FubmVyIChuaWxhaSBhc2xpIFRJREFLIGRpc2ltcGFuKS4iIiIKCiAgICBwYXR0ZXJuOiBzdHIKICAgIHByZXZpZXc6IHN0ciAgIyA0IGthcmFrdGVyIHBlcnRhbWEgKyAiLi4uIiDigJQgY3VrdXAgdW50dWsgbWVuZ2VuYWxpLCBidWthbiBib2Nvci4KCiAgICBkZWYgYXNfZGljdChzZWxmKSAtPiBkaWN0W3N0ciwgc3RyXToKICAgICAgICByZXR1cm4geyJwYXR0ZXJuIjogc2VsZi5wYXR0ZXJuLCAicHJldmlldyI6IHNlbGYucHJldmlld30KCgpkZWYgX3ByZXZpZXcobWF0Y2g6IHN0cikgLT4gc3RyOgogICAgY2xlYW5lZCA9IG1hdGNoLnN0cmlwKCkKICAgIHJldHVybiAoY2xlYW5lZFs6NF0gKyAiLi4uIikgaWYgbGVuKGNsZWFuZWQpID4gNCBlbHNlICIqKioqIgoKCmRlZiBzY2FuX3RleHQodGV4dDogc3RyKSAtPiBsaXN0W1NlY3JldEZpbmRpbmddOgogICAgIiIiUGluZGFpIGBgdGV4dGBgOyBrZW1iYWxpa2FuIGRhZnRhciB0ZW11YW4gKGtvc29uZyA9IGJlcnNpaCkuCgogICAgU2F0dSByZW50YW5nIHRla3MgeWFuZyBjb2NvayBiZWJlcmFwYSBwb2xhIGhhbnlhIGRpbGFwb3JrYW4gc2VrYWxpCiAgICAocG9sYSBwZXJ0YW1hIHlhbmcgY29jb2sgbWVuYW5nKSBhZ2FyIHNhdHUgc2VjcmV0IHRpZGFrIGRpaGl0dW5nCiAgICBiZXJrYWxpLWthbGkuCiAgICAiIiIKICAgIGZpbmRpbmdzOiBsaXN0W1NlY3JldEZpbmRpbmddID0gW10KICAgIHNlZW5fc3BhbnM6IGxpc3RbdHVwbGVbaW50LCBpbnRdXSA9IFtdCiAgICBmb3IgbmFtZSwgcGF0dGVybiBpbiBfUEFUVEVSTlM6CiAgICAgICAgZm9yIG1hdGNoIGluIHBhdHRlcm4uZmluZGl0ZXIodGV4dCBvciAiIik6CiAgICAgICAgICAgIHNwYW4gPSAobWF0Y2guc3RhcnQoKSwgbWF0Y2guZW5kKCkpCiAgICAgICAgICAgICMgUmVudGFuZyB5YW5nIHR1bXBhbmcgdGluZGloIGRlbmdhbiB0ZW11YW4gc2ViZWx1bW55YSBhZGFsYWgKICAgICAgICAgICAgIyBzZWNyZXQgeWFuZyBzYW1hIChtaXMuIHNrLS4uLiBkaSBkYWxhbSBhcGlfa2V5ID0gInNrLS4uLiIpCiAgICAgICAgICAgICMg4oCUIGxhcG9ya2FuIHNla2FsaSBzYWphLgogICAgICAgICAgICBpZiBhbnkoc3BhblswXSA8IGVuZCBhbmQgc3RhcnQgPCBzcGFuWzFdIGZvciBzdGFydCwgZW5kIGluIHNlZW5fc3BhbnMpOgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgc2Vlbl9zcGFucy5hcHBlbmQoc3BhbikKICAgICAgICAgICAgZmluZGluZ3MuYXBwZW5kKFNlY3JldEZpbmRpbmcocGF0dGVybj1uYW1lLCBwcmV2aWV3PV9wcmV2aWV3KG1hdGNoLmdyb3VwKDApKSkpCiAgICByZXR1cm4gZmluZGluZ3MKCgpkZWYgY29udGFpbnNfc2VjcmV0KHRleHQ6IHN0cikgLT4gYm9vbDoKICAgICIiIlRydWUgYmlsYSBhZGEgc2VjcmV0IHlhbmcgdGVyZGV0ZWtzaSBwYWRhIGBgdGV4dGBgLiIiIgogICAgcmV0dXJuIGJvb2woc2Nhbl90ZXh0KHRleHQpKQoKCmRlZiByZWRhY3RfbWF0Y2hlcyh0ZXh0OiBzdHIpIC0+IHN0cjoKICAgICIiIkdhbnRpIHNlbXVhIGtlY29jb2thbiBwb2xhIHJhaGFzaWEgZGVuZ2FuIGBgW1JFREFDVEVEOjxwb2xhPl1gYC4iIiIKICAgIHJlZGFjdGVkID0gdGV4dCBvciAiIgogICAgZm9yIG5hbWUsIHBhdHRlcm4gaW4gX1BBVFRFUk5TOgogICAgICAgIHJlZGFjdGVkID0gcGF0dGVybi5zdWIoZiJbUkVEQUNURUQ6e25hbWV9XSIsIHJlZGFjdGVkKQogICAgcmV0dXJuIHJlZGFjdGVkCg==
+"""Secret Scanner MUFAKAT Room (Claude §0.2 / §T8, V3 Addendum E3/E4).
+
+Memindai teks prompt SEBELUM disalin/dikirim ke situs AI. Bila ada
+temuan, prompt DIBLOKIR dan pengguna diperingatkan — pemindaian tidak
+pernah diam-diam menghapus atau mengubah isi tanpa memberi tahu.
+
+Pola yang dipindai (regex, tanpa pernah menyimpan nilai aslinya ke
+log): API key umum, token Bearer, pasangan ``key=``/``password=``,
+blok ``-----BEGIN ...-----``, rujukan ``.env``, dan kredensial AWS /
+GitHub / Anthropic / OpenAI / Google / Slack.
+
+Perbaikan audit 20 Nov 2026: pola yang dulu lolos — ``sk-proj-...``,
+``github_pat_...``, ``AIza...`` (Google), ``xoxb-...`` (Slack),
+``-----begin ...-----`` huruf kecil, dan ``api key = ...`` (spasi) —
+kini terdeteksi. Putaran 2 (N14): ``glpat-...`` (GitLab) dan ``hf_...``
+(HuggingFace) ditambahkan untuk paritas dengan TS
+(``mufakat-room/src/engine/secretScan.ts``). Temuan ganda pada rentang
+yang sama (satu secret yang cocok dua pola) hanya dilaporkan sekali.
+"""
+
+from __future__ import annotations
+
+import re
+from dataclasses import dataclass
+
+__all__ = ["SecretFinding", "scan_text", "contains_secret", "redact_matches"]
+
+_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
+    ("aws_access_key", re.compile(r"AKIA[0-9A-Z]{16}")),
+    ("github_token", re.compile(r"gh[pousr]_[A-Za-z0-9]{20,}")),
+    ("github_fine_grained_token", re.compile(r"github_pat_[A-Za-z0-9_]{20,}")),
+    ("openai_key", re.compile(r"sk-(?:proj-)?[A-Za-z0-9\-_]{20,}")),
+    ("anthropic_key", re.compile(r"sk-ant-[A-Za-z0-9\-_]{10,}")),
+    ("google_api_key", re.compile(r"AIza[0-9A-Za-z\-_]{35}")),
+    ("slack_token", re.compile(r"xox[baprs]-[A-Za-z0-9\-]{10,}")),
+    # N14 (putaran 2, paritas dengan TS mufakat-room/src/engine/secretScan.ts):
+    # GitLab personal access token dan HuggingFace token.
+    ("gitlab_token", re.compile(r"glpat-[A-Za-z0-9\-_]{20,}")),
+    ("huggingface_token", re.compile(r"hf_[A-Za-z0-9]{20,}")),
+    ("bearer_token", re.compile(r"Bearer\s+[A-Za-z0-9\-._~+/=]{10,}")),
+    ("private_key_block", re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----", re.IGNORECASE)),
+    ("env_file_ref", re.compile(r"(?i)\.env\b")),
+    (
+        "credential_assignment",
+        re.compile(
+            r"(?i)(api[ _\-]?key|apikey|secret|password|passwd|token|access[ _\-]?key)"
+            r"(\s*[:=]\s*)([\"']?)[^\s\"',;]{4,}"
+        ),
+    ),
+    (
+        "generic_long_token",
+        re.compile(r"(?i)(token|secret)\s*[:=]\s*['\"][A-Za-z0-9\-_]{16,}['\"]"),
+    ),
+]
+
+
+@dataclass(frozen=True)
+class SecretFinding:
+    """Satu temuan secret scanner (nilai asli TIDAK disimpan)."""
+
+    pattern: str
+    preview: str  # 4 karakter pertama + "..." — cukup untuk mengenali, bukan bocor.
+
+    def as_dict(self) -> dict[str, str]:
+        return {"pattern": self.pattern, "preview": self.preview}
+
+
+def _preview(match: str) -> str:
+    cleaned = match.strip()
+    return (cleaned[:4] + "...") if len(cleaned) > 4 else "****"
+
+
+def scan_text(text: str) -> list[SecretFinding]:
+    """Pindai ``text``; kembalikan daftar temuan (kosong = bersih).
+
+    Satu rentang teks yang cocok beberapa pola hanya dilaporkan sekali
+    (pola pertama yang cocok menang) agar satu secret tidak dihitung
+    berkali-kali.
+    """
+    findings: list[SecretFinding] = []
+    seen_spans: list[tuple[int, int]] = []
+    for name, pattern in _PATTERNS:
+        for match in pattern.finditer(text or ""):
+            span = (match.start(), match.end())
+            # Rentang yang tumpang tindih dengan temuan sebelumnya adalah
+            # secret yang sama (mis. sk-... di dalam api_key = "sk-...")
+            # — laporkan sekali saja.
+            if any(span[0] < end and start < span[1] for start, end in seen_spans):
+                continue
+            seen_spans.append(span)
+            findings.append(SecretFinding(pattern=name, preview=_preview(match.group(0))))
+    return findings
+
+
+def contains_secret(text: str) -> bool:
+    """True bila ada secret yang terdeteksi pada ``text``."""
+    return bool(scan_text(text))
+
+
+def redact_matches(text: str) -> str:
+    """Ganti semua kecocokan pola rahasia dengan ``[REDACTED:<pola>]``."""
+    redacted = text or ""
+    for name, pattern in _PATTERNS:
+        redacted = pattern.sub(f"[REDACTED:{name}]", redacted)
+    return redacted
