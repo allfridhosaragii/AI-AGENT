@@ -249,7 +249,7 @@ def diff(worktree: str | Path) -> str:
     root = Path(worktree)
     try:
         result = subprocess.run(
-            ["git", "diff", "--", "."],
+            ["git", "diff", "HEAD", "--", "."],
             cwd=str(root), capture_output=True, text=True, timeout=60,
         )
         if result.returncode == 0 and result.stdout.strip():
@@ -257,6 +257,16 @@ def diff(worktree: str | Path) -> str:
     except (OSError, subprocess.SubprocessError, subprocess.TimeoutExpired):
         pass
     return ""
+
+
+def diff_hash(worktree: str | Path) -> str:
+    """Hash SHA-256 dari diff worktree ("" bila tanpa diff / bukan repo)."""
+    import hashlib
+
+    text = diff(worktree)
+    if not text:
+        return ""
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
 def commit(worktree: str | Path, message: str) -> bool:
@@ -284,9 +294,9 @@ def commit(worktree: str | Path, message: str) -> bool:
 def cleanup(worktree: str | Path, repo_path: str | Path | None = None) -> bool:
     """Hapus worktree; True bila path sudah tidak ada sesudahnya.
 
-    Fail-closed untuk path berbahaya (root/home/repo) — delegasi ke
-    mufakat.sandbox.worktree sudah menjaga, dan fallback lokal di sini
-    juga menolaknya.
+    Fail-closed (audit C2): bila ``repo_path`` diketahui, hapus HANYA
+    bila target berada di bawah ``<repo>/runs/<run_id>/wt``. Path di
+    luar pola itu (repo itu sendiri, leluhurnya, folder lain) DITOLAK.
     """
     try:
         from mufakat.sandbox.worktree import remove_worktree
@@ -305,11 +315,18 @@ def cleanup(worktree: str | Path, repo_path: str | Path | None = None) -> bool:
                 repo_resolved = Path(repo_path).resolve()
             except OSError:
                 repo_resolved = None
-            # Sama seperti mufakat.sandbox.worktree: berbahaya bila target
-            # adalah repo atau leluhurnya; target di dalam repo boleh dihapus.
             if repo_resolved is not None and (
                 resolved == repo_resolved or resolved in repo_resolved.parents
             ):
+                return False
+            # C2 (fallback lokal): hanya di bawah runs/<run_id>/wt.
+            if repo_resolved is None:
+                return False
+            try:
+                rel = resolved.relative_to(repo_resolved / "runs")
+            except ValueError:
+                return False
+            if len(rel.parts) < 2 or rel.parts[1] != "wt":
                 return False
         if target.exists() or target.is_symlink():
             try:
