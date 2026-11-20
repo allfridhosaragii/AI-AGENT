@@ -1,0 +1,45 @@
+# MUFAKAT — konfigurasi peran agent (Claude §13) + batas run.
+roles:
+  researcher:
+    prompt: "config/prompts/researcher.md"
+    model_family: "deepseek"
+  planner:
+    prompt: "config/prompts/planner.md"
+    model_family: "deepseek"
+  architect:
+    prompt: "config/prompts/architect.md"
+    model_family: "deepseek"
+  debaters:
+    pro:
+      prompt: "config/prompts/debater_pro.md"
+      model_family: "openrouter_free"
+    contra:
+      prompt: "config/prompts/debater_contra.md"
+      model_family: "openrouter_free"
+    neutral:
+      prompt: "config/prompts/debater_neutral.md"
+      model_family: "groq"
+  moderator:
+    prompt: "config/prompts/moderator.md"
+    model_family: "deepseek"
+  coder:
+    prompt: "config/prompts/coder.md"
+    model_family: "deepseek"
+  reviewers:
+    - prompt: "config/prompts/reviewer.md"
+      model_family: "openrouter_free"
+    - prompt: "config/prompts/reviewer.md"
+      model_family: "groq"
+  auditor:
+    prompt: "config/prompts/auditor.md"
+    model_family: "gemini_api"
+  tester:
+    prompt: "config/prompts/tester.md"
+    model_family: "groq"
+
+limits:
+  max_debate_rounds: 3
+  max_fix_iterations: 5
+  max_total_iterations: 12
+  max_cost_usd: 1.0
+  max_wall_minutes: 60
