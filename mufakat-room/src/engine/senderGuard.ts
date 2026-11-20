@@ -1,1 +1,27 @@
-Ly8gTVVGQUtBVCBSb29tIOKAlCBTZW5kZXIgR3VhcmQgKHRhYmVsIHRhbWJhaGFuIENoYXRHUFQsIHB1dGFyYW4gMikuCi8vIExpc3RlbmVyIGNocm9tZS5ydW50aW1lLm9uTWVzc2FnZSBkaSBiYWNrZ3JvdW5kIFdBSklCIG1lbXZhbGlkYXNpIHNlbmRlcjoKLy8gcGVzYW4gUk9PTV9UUkFOU0lUSU9OIChkYW4gZHVsdSBGSUxMX0lOUFVUKSBoYW55YSBib2xlaCBkYXRhbmcgZGFyaQovLyBoYWxhbWFuIGV4dGVuc2lvbiAoc2lkZSBwYW5lbCkg4oCUIEJVS0FOIGRhcmkgY29udGVudCBzY3JpcHQgZGkgc2l0dXMgQUkuCi8vIENvbnRlbnQgc2NyaXB0IHNlbGFsdSBtZW1iYXdhIGBzZW5kZXIudGFiYDsgaGFsYW1hbiBleHRlbnNpb24gdGlkYWsuCi8vIFBlc2FuIGRhcmkgdGFiIChjb250ZW50IHNjcmlwdCkgZGl0b2xhayBhZ2FyIHNpdHVzIEFJIC8gc2tyaXAgeWFuZwovLyBkaXN1bnRpa2thbiBrZSBoYWxhbWFuIHRpZGFrIGJpc2EgbWVuZ2dlcmFra2FuIHN0YXRlIG1hY2hpbmUgcmFwYXQuCmV4cG9ydCBpbnRlcmZhY2UgTWVzc2FnZVNlbmRlckxpa2UgewogIGlkPzogc3RyaW5nOwogIHRhYj86IHVua25vd247CiAgdXJsPzogc3RyaW5nOwogIG9yaWdpbj86IHN0cmluZzsKfQoKZXhwb3J0IGZ1bmN0aW9uIGlzVHJ1c3RlZFJvb21TZW5kZXIoc2VuZGVyOiBNZXNzYWdlU2VuZGVyTGlrZSB8IHVuZGVmaW5lZCB8IG51bGwpOiBib29sZWFuIHsKICBpZiAoIXNlbmRlcikgcmV0dXJuIGZhbHNlOwogIC8vIENvbnRlbnQgc2NyaXB0IChkYW4gaGFsYW1hbiB3ZWIgYmlhc2EpIHNlbGFsdSBwdW55YSBzZW5kZXIudGFiLgogIGlmIChzZW5kZXIudGFiKSByZXR1cm4gZmFsc2U7CiAgLy8gSGFsYW1hbiBleHRlbnNpb24gcHVueWEgdXJsIGNocm9tZS1leHRlbnNpb246Ly8gKGF0YXUgbW96LWV4dGVuc2lvbjovLykuCiAgLy8gc2VuZGVyLnVybCBrb3NvbmcgKG1pcy4gZGFyaSBiYWNrZ3JvdW5kIHNlbmRpcmkpIHRldGFwIGRpaXppbmthbi4KICBpZiAodHlwZW9mIHNlbmRlci51cmwgPT09ICdzdHJpbmcnICYmIHNlbmRlci51cmwgIT09ICcnKSB7CiAgICBpZiAoIXNlbmRlci51cmwuc3RhcnRzV2l0aCgnY2hyb21lLWV4dGVuc2lvbjovLycpICYmICFzZW5kZXIudXJsLnN0YXJ0c1dpdGgoJ21vei1leHRlbnNpb246Ly8nKSkgewogICAgICByZXR1cm4gZmFsc2U7CiAgICB9CiAgfQogIHJldHVybiB0cnVlOwp9Cg==
+// MUFAKAT Room — Sender Guard (tabel tambahan ChatGPT, putaran 2).
+// Listener chrome.runtime.onMessage di background WAJIB memvalidasi sender:
+// pesan ROOM_TRANSITION (dan dulu FILL_INPUT) hanya boleh datang dari
+// halaman extension (side panel) — BUKAN dari content script di situs AI.
+// Content script selalu membawa `sender.tab`; halaman extension tidak.
+// Pesan dari tab (content script) ditolak agar situs AI / skrip yang
+// disuntikkan ke halaman tidak bisa menggerakkan state machine rapat.
+export interface MessageSenderLike {
+  id?: string;
+  tab?: unknown;
+  url?: string;
+  origin?: string;
+}
+
+export function isTrustedRoomSender(sender: MessageSenderLike | undefined | null): boolean {
+  if (!sender) return false;
+  // Content script (dan halaman web biasa) selalu punya sender.tab.
+  if (sender.tab) return false;
+  // Halaman extension punya url chrome-extension:// (atau moz-extension://).
+  // sender.url kosong (mis. dari background sendiri) tetap diizinkan.
+  if (typeof sender.url === 'string' && sender.url !== '') {
+    if (!sender.url.startsWith('chrome-extension://') && !sender.url.startsWith('moz-extension://')) {
+      return false;
+    }
+  }
+  return true;
+}
