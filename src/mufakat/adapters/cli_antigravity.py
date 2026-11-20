@@ -1,1 +1,28 @@
-IiIiR29vZ2xlIEFudGlncmF2aXR5IENMSSBhZGFwdGVyIChUNCkuIiIiCgpmcm9tIF9fZnV0dXJlX18gaW1wb3J0IGFubm90YXRpb25zCgpmcm9tIC5fY2xpIGltcG9ydCBjaGVja19iaW5hcnksIHJ1bl9jbGkKZnJvbSAuYmFzZSBpbXBvcnQgQWRhcHRlciwgUmVwbHkKCgpjbGFzcyBBbnRpZ3Jhdml0eUFkYXB0ZXIoQWRhcHRlcik6CiAgICAiIiJBZGFwdGVyIG92ZXIgdGhlIGBgYWd5YGAgQ0xJIChBbnRpZ3Jhdml0eSkuIiIiCgogICAgbmFtZSA9ICJhbnRpZ3Jhdml0eSIKICAgIGZhbWlseSA9ICJhbnRpZ3Jhdml0eSIKCiAgICBkZWYgX19pbml0X18oc2VsZiwgbmFtZTogc3RyID0gImFudGlncmF2aXR5IiwKICAgICAgICAgICAgICAgICBmYW1pbHk6IHN0ciA9ICJhbnRpZ3Jhdml0eSIpOgogICAgICAgIHNlbGYubmFtZSA9IG5hbWUKICAgICAgICBzZWxmLmZhbWlseSA9IGZhbWlseQoKICAgIGRlZiBpc19hdmFpbGFibGUoc2VsZikgLT4gYm9vbDoKICAgICAgICByZXR1cm4gY2hlY2tfYmluYXJ5KCJhZ3kiKQoKICAgIGFzeW5jIGRlZiBhc2soc2VsZiwgcHJvbXB0OiBzdHIsIHN5c3RlbTogc3RyID0gIiIsCiAgICAgICAgICAgICAgICAgIGN0eDogZGljdCB8IE5vbmUgPSBOb25lKSAtPiBSZXBseToKICAgICAgICBmdWxsX3Byb21wdCA9IGYie3N5c3RlbX1cblxue3Byb21wdH0iIGlmIHN5c3RlbSBlbHNlIHByb21wdAogICAgICAgIHJldHVybiBhd2FpdCBydW5fY2xpKAogICAgICAgICAgICBzZWxmLm5hbWUsIHNlbGYuZmFtaWx5LAogICAgICAgICAgICBbImFneSIsICItcCIsICItLW91dHB1dC1mb3JtYXQiLCAianNvbiIsICItLSIsIGZ1bGxfcHJvbXB0XSwgY3R4KQo=
+"""Google Antigravity CLI adapter (T4)."""
+
+from __future__ import annotations
+
+from ._cli import check_binary, run_cli
+from .base import Adapter, Reply
+
+
+class AntigravityAdapter(Adapter):
+    """Adapter over the ``agy`` CLI (Antigravity)."""
+
+    name = "antigravity"
+    family = "antigravity"
+
+    def __init__(self, name: str = "antigravity",
+                 family: str = "antigravity"):
+        self.name = name
+        self.family = family
+
+    def is_available(self) -> bool:
+        return check_binary("agy")
+
+    async def ask(self, prompt: str, system: str = "",
+                  ctx: dict | None = None) -> Reply:
+        full_prompt = f"{system}\n\n{prompt}" if system else prompt
+        return await run_cli(
+            self.name, self.family,
+            ["agy", "-p", "--output-format", "json", "--", full_prompt], ctx)
