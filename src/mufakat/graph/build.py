@@ -1,1 +1,164 @@
-IiIiQnVpbGQgZ3JhcGggTVVGQUtBVCAoVDcpLgoKQmlsYSBsYW5nZ3JhcGggdGVyc2VkaWE6IFN0YXRlR3JhcGggbnlhdGEgZGVuZ2FuIGNvbmRpdGlvbmFsIGVkZ2VzCmRhcmkgYGBncmFwaC9lZGdlcy5weWBgIGRhbiBjaGVja3BvaW50ZXIgU1FMaXRlIGJpbGEgcGF0aCBkaWJlcmlrYW4uCkJpbGEgbGFuZ2dyYXBoIFRJREFLIHRlcnNlZGlhOiBrZW1iYWxpa2FuIGBgU2ltcGxlR3JhcGhgYCBmYWxsYmFjawp5YW5nIG1lbmphbGFua2FuIHJlc2VhcmNoIC0+IGRlYmF0ZSAtPiBjcml0aXF1ZSAtPiBtZWV0aW5nIC0+IHNwZWMKc2VjYXJhIHNla3VlbnNpYWwsIGFnYXIgZGVtbyB0ZXRhcCBqYWxhbi4gTW9kdWwgaW5pIHRpZGFrIHBlcm5haApnYWdhbCBpbXBvcnQgaGFueWEga2FyZW5hIGxhbmdncmFwaCBiZWx1bSB0ZXJpbnN0YWwuCiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IGFzeW5jaW8KZnJvbSB0eXBpbmcgaW1wb3J0IEFueQoKZnJvbSAuZWRnZXMgaW1wb3J0IHNob3VsZF9jb250aW51ZV9kZWJhdGUsIHNob3VsZF9yZXZpc2UKZnJvbSAubm9kZXMgaW1wb3J0IE5PREVTCmZyb20gLnN0YXRlIGltcG9ydCBSdW5TdGF0ZQoKX05PREVfT1JERVIgPSBbInJlc2VhcmNoIiwgImRlYmF0ZSIsICJjcml0aXF1ZSIsICJtZWV0aW5nIiwgInNwZWMiLAogICAgICAgICAgICAgICAiY29kZSIsICJyZXZpZXciLCAiYXVkaXQiLCAidGVzdCIsICJyZXZpc2UiXQoKCmRlZiBfYXBwbHlfcGF0Y2goc3RhdGU6IFJ1blN0YXRlLCBwYXRjaDogZGljdCkgLT4gUnVuU3RhdGU6CiAgICBpZiBub3QgcGF0Y2g6CiAgICAgICAgcmV0dXJuIHN0YXRlCiAgICBpZiBoYXNhdHRyKHN0YXRlLCAibW9kZWxfY29weSIpOgogICAgICAgIHJldHVybiBzdGF0ZS5tb2RlbF9jb3B5KHVwZGF0ZT1wYXRjaCkKICAgIGRhdGEgPSBzdGF0ZS50b19kaWN0KCkgaWYgaGFzYXR0cihzdGF0ZSwgInRvX2RpY3QiKSBlbHNlIGRpY3Qoc3RhdGUpCiAgICBkYXRhLnVwZGF0ZShwYXRjaCkKICAgIHJldHVybiBSdW5TdGF0ZSgqKmRhdGEpCgoKZGVmIF9jb2VyY2Vfc3RhdGUoZGF0YSkgLT4gUnVuU3RhdGU6CiAgICBpZiBpc2luc3RhbmNlKGRhdGEsIFJ1blN0YXRlKToKICAgICAgICByZXR1cm4gZGF0YQogICAgaWYgaXNpbnN0YW5jZShkYXRhLCBkaWN0KToKICAgICAgICByZXR1cm4gUnVuU3RhdGUuZnJvbV9kaWN0KGRhdGEpCiAgICByYWlzZSBUeXBlRXJyb3IoZiJzdGF0ZSBoYXJ1cyBSdW5TdGF0ZSBhdGF1IGRpY3QsIGJ1a2FuIHt0eXBlKGRhdGEpIXJ9IikKCgpjbGFzcyBTaW1wbGVHcmFwaDoKICAgICIiIkZhbGxiYWNrIHRhbnBhIGxhbmdncmFwaDogamFsYW5rYW4gbm9kZSBkZW1vIHNlY2FyYSBzZWt1ZW5zaWFsLiIiIgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBhZGFwdGVycz1Ob25lLCBub2Rlcz1Ob25lLCBjdHg9Tm9uZSk6CiAgICAgICAgc2VsZi5hZGFwdGVycyA9IGFkYXB0ZXJzCiAgICAgICAgc2VsZi5ub2RlcyA9IG5vZGVzIG9yIE5PREVTCiAgICAgICAgc2VsZi5jdHggPSBkaWN0KGN0eCBvciB7fSkKCiAgICBhc3luYyBkZWYgYWludm9rZShzZWxmLCBzdGF0ZSwgY3R4PU5vbmUpOgogICAgICAgIGN1cnJlbnQgPSBfY29lcmNlX3N0YXRlKHN0YXRlKQogICAgICAgIGN0eCA9IGRpY3QoY3R4IG9yIHt9KSBvciBzZWxmLmN0eAogICAgICAgICMgRGVtbzogcmVzZWFyY2ggLT4gZGViYXRlIC0+IGNyaXRpcXVlIC0+IG1lZXRpbmcgLT4gc3BlYy4KICAgICAgICBmb3IgbmFtZSBpbiBbInJlc2VhcmNoIiwgImRlYmF0ZSIsICJjcml0aXF1ZSIsICJtZWV0aW5nIiwgInNwZWMiXToKICAgICAgICAgICAgcGF0Y2ggPSBhd2FpdCBzZWxmLm5vZGVzW25hbWVdKGN1cnJlbnQsIHNlbGYuYWRhcHRlcnMsIGN0eCkKICAgICAgICAgICAgY3VycmVudCA9IF9hcHBseV9wYXRjaChjdXJyZW50LCBwYXRjaCkKICAgICAgICByZXR1cm4gY3VycmVudC50b19kaWN0KCkKCiAgICBkZWYgaW52b2tlKHNlbGYsIHN0YXRlLCBjdHg9Tm9uZSk6CiAgICAgICAgcmV0dXJuIGFzeW5jaW8ucnVuKHNlbGYuYWludm9rZShzdGF0ZSwgY3R4KSkKCgpkZWYgYnVpbGRfZ3JhcGgoYWRhcHRlcnM9Tm9uZSwgY2hlY2twb2ludGVyX3BhdGg9Tm9uZSwgY3R4PU5vbmUsCiAgICAgICAgICAgICAgICByZXF1aXJlX2h1bWFuX2FwcHJvdmFsOiBib29sID0gRmFsc2UpOgogICAgIiIiQmFuZ3VuIGdyYXBoOyBrZW1iYWxpa2FuIFN0YXRlR3JhcGggbGFuZ2dyYXBoIGF0YXUgU2ltcGxlR3JhcGguCgogICAgYGBjdHhgYCBkaXBha2FpIGJlcnNhbWEgKHNhdHUgZGljdCB5YW5nIHNhbWEpIG9sZWggc2VtdWEgbm9kZToKICAgIGRpIHNpbmlsYWggYGB3b3JrdHJlZWBgLCBgYHJ1bl9kaXJgYCwgZGFuIGBgZ2F0ZV9yZXN1bHRzYGAKICAgIGRpYmFnaWthbiBhbnRhci1ub2RlIChhdWRpdCAtPiB0ZXN0IC0+IHJldmlzZSkuIFRhbnBhIGN0eAogICAgYmVyc2FtYSwgaGFzaWwgYXVkaXQgdGlkYWsgcGVybmFoIHNhbXBhaSBrZSBub2RlIHRlc3QuCgogICAgYGByZXF1aXJlX2h1bWFuX2FwcHJvdmFsPVRydWVgYCAoTjExKSBtZW5nYWt0aWZrYW4gYGBpbnRlcnJ1cHQoKWBgCiAgICBkaSBub2RlIHNwZWMgKHNlYmVsdW0gY29kZSkgZGFuIG5vZGUgcmV2aXNlIChzZWJlbHVtIGNvbW1pdCk6CiAgICBncmFwaCBqZWRhIGRhbiBoYW55YSBsYW5qdXQgc2V0ZWxhaCBtYW51c2lhIG1lLXJlc3VtZSBkZW5nYW4KICAgIGBgQ29tbWFuZChyZXN1bWU9Li4uKWBgLiBEZWZhdWx0IEZhbHNlOiBydW4gbm9uLWludGVyYWt0aWYKICAgIChtaXMuIGBgY3JlYXRlX3J1bmBgKSBqYWxhbiBzZXBlcnRpIGJpYXNhIHRhbnBhIGplZGEuCiAgICAiIiIKICAgIHNoYXJlZF9jdHggPSB7ImFkYXB0ZXJzIjogYWRhcHRlcnMsICoqKGN0eCBvciB7fSl9CiAgICBpZiByZXF1aXJlX2h1bWFuX2FwcHJvdmFsOgogICAgICAgIHNoYXJlZF9jdHhbInJlcXVpcmVfaHVtYW5fYXBwcm92YWwiXSA9IFRydWUKICAgIHRyeToKICAgICAgICBmcm9tIGxhbmdncmFwaC5jaGVja3BvaW50Lm1lbW9yeSBpbXBvcnQgTWVtb3J5U2F2ZXIKICAgICAgICBmcm9tIGxhbmdncmFwaC5ncmFwaCBpbXBvcnQgRU5ELCBTVEFSVCwgU3RhdGVHcmFwaAogICAgZXhjZXB0IEltcG9ydEVycm9yOgogICAgICAgIHJldHVybiBTaW1wbGVHcmFwaChhZGFwdGVycz1hZGFwdGVycywgY3R4PXNoYXJlZF9jdHgpCiAgICB0cnk6CiAgICAgICAgZnJvbSBsYW5nZ3JhcGguY2hlY2twb2ludC5zcWxpdGUgaW1wb3J0IFNxbGl0ZVNhdmVyCiAgICBleGNlcHQgSW1wb3J0RXJyb3I6ICAjIHBha2V0IGxhbmdncmFwaC1jaGVja3BvaW50LXNxbGl0ZSBiZWx1bSB0ZXJwYXNhbmcKICAgICAgICBTcWxpdGVTYXZlciA9IE5vbmUgICMgdHlwZTogaWdub3JlCgogICAgZ3JhcGggPSBTdGF0ZUdyYXBoKFJ1blN0YXRlKQogICAgZm9yIG5hbWUgaW4gX05PREVfT1JERVI6CiAgICAgICAgZm4gPSBOT0RFU1tuYW1lXQoKICAgICAgICBkZWYgX3dyYXAoZm49Zm4sIGFkYXB0ZXJzPWFkYXB0ZXJzLCBzaGFyZWRfY3R4PXNoYXJlZF9jdHgpOgogICAgICAgICAgICBhc3luYyBkZWYgX25vZGUoc3RhdGU6IFJ1blN0YXRlKToKICAgICAgICAgICAgICAgIHBhdGNoID0gYXdhaXQgZm4oc3RhdGUsIGFkYXB0ZXJzLCBzaGFyZWRfY3R4KQogICAgICAgICAgICAgICAgcmV0dXJuIHBhdGNoCiAgICAgICAgICAgIHJldHVybiBfbm9kZQoKICAgICAgICBncmFwaC5hZGRfbm9kZShuYW1lLCBfd3JhcCgpKQoKICAgIGdyYXBoLmFkZF9lZGdlKFNUQVJULCAicmVzZWFyY2giKQogICAgZ3JhcGguYWRkX2VkZ2UoInJlc2VhcmNoIiwgImRlYmF0ZSIpCiAgICBncmFwaC5hZGRfZWRnZSgiZGViYXRlIiwgImNyaXRpcXVlIikKICAgIGdyYXBoLmFkZF9lZGdlKCJjcml0aXF1ZSIsICJtZWV0aW5nIikKICAgIGdyYXBoLmFkZF9jb25kaXRpb25hbF9lZGdlcygibWVldGluZyIsIHNob3VsZF9jb250aW51ZV9kZWJhdGUsIHsKICAgICAgICAiZGViYXRlIjogImRlYmF0ZSIsCiAgICAgICAgInNwZWMiOiAic3BlYyIsCiAgICAgICAgImVzY2FsYXRlIjogRU5ELAogICAgfSkKICAgIGdyYXBoLmFkZF9lZGdlKCJzcGVjIiwgImNvZGUiKQogICAgZ3JhcGguYWRkX2VkZ2UoImNvZGUiLCAicmV2aWV3IikKICAgIGdyYXBoLmFkZF9lZGdlKCJyZXZpZXciLCAiYXVkaXQiKQogICAgZ3JhcGguYWRkX2VkZ2UoImF1ZGl0IiwgInRlc3QiKQogICAgZ3JhcGguYWRkX2NvbmRpdGlvbmFsX2VkZ2VzKCJ0ZXN0Iiwgc2hvdWxkX3JldmlzZSwgewogICAgICAgICJyZXZpc2UiOiAicmV2aXNlIiwKICAgICAgICAiYXVkaXRfZmluYWwiOiBFTkQsCiAgICAgICAgImVzY2FsYXRlIjogRU5ELAogICAgfSkKICAgIGdyYXBoLmFkZF9lZGdlKCJyZXZpc2UiLCAicmV2aWV3IikKCiAgICBjaGVja3BvaW50ZXI6IEFueSA9IE5vbmUKICAgIGlmIGNoZWNrcG9pbnRlcl9wYXRoIGFuZCBTcWxpdGVTYXZlciBpcyBub3QgTm9uZToKICAgICAgICAjIE0xMDogU3FsaXRlU2F2ZXIuZnJvbV9jb25uX3N0cmluZygpIG1lbmdlbWJhbGlrYW4gY29udGV4dAogICAgICAgICMgbWFuYWdlciAoY3Jhc2ggIkludmFsaWQgY2hlY2twb2ludGVyIHByb3ZpZGVkIikuIFBha2FpCiAgICAgICAgIyBrb25zdHJ1a3RvciBsYW5nc3VuZyBkZW5nYW4ga29uZWtzaSDigJQgQlVLQU4gZnJvbV9jb25uX3N0cmluZy4KICAgICAgICAjIEdyYXBoIE1VRkFLQVQgZGlqYWxhbmthbiBhc3luYyAoYWludm9rZSk6IFNxbGl0ZVNhdmVyIHNpbmtyb24KICAgICAgICAjIHRpZGFrIG1lbmR1a3VuZyBtZXRvZGUgYXN5bmMsIGphZGkgYmlsYSBhZGEgZXZlbnQgbG9vcCB5YW5nCiAgICAgICAgIyBzZWRhbmcgYmVyamFsYW4sIHBha2FpIEFzeW5jU3FsaXRlU2F2ZXIgZGVuZ2FuIGtvbmVrc2kKICAgICAgICAjIGFpb3NxbGl0ZSAoZGlidWF0IGRpIGxvb3AgeWFuZyBzYW1hIOKAlCBBc3luY1NxbGl0ZVNhdmVyCiAgICAgICAgIyB0ZXJpa2F0IGtlIGxvb3AgcGVtYnVhdG55YSkuIEJpbGEgZGlwYW5nZ2lsIGRhcmkga29udGVrcwogICAgICAgICMgc2lua3JvbiAodGFucGEgbG9vcCksIHBha2FpIFNxbGl0ZVNhdmVyKHNxbGl0ZTMuY29ubmVjdCgKICAgICAgICAjIHBhdGgsIGNoZWNrX3NhbWVfdGhyZWFkPUZhbHNlKSkgc2VzdWFpIGF1ZGl0IOKAlCBncmFwaCBpdHUKICAgICAgICAjIGxhbHUgaGFydXMgZGliYW5ndW4vZGlqYWxhbmthbiBkaSBkYWxhbSBsb29wIGFzeW5jIGJpbGEKICAgICAgICAjIG1lbWFrYWkgYWludm9rZS4KICAgICAgICBpbXBvcnQgYXN5bmNpbwoKICAgICAgICB0cnk6CiAgICAgICAgICAgIGFzeW5jaW8uZ2V0X3J1bm5pbmdfbG9vcCgpCiAgICAgICAgICAgIF9sb29wX3J1bm5pbmcgPSBUcnVlCiAgICAgICAgZXhjZXB0IFJ1bnRpbWVFcnJvcjoKICAgICAgICAgICAgX2xvb3BfcnVubmluZyA9IEZhbHNlCiAgICAgICAgaWYgX2xvb3BfcnVubmluZzoKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgaW1wb3J0IGFpb3NxbGl0ZQogICAgICAgICAgICAgICAgZnJvbSBsYW5nZ3JhcGguY2hlY2twb2ludC5zcWxpdGUuYWlvIGltcG9ydCBBc3luY1NxbGl0ZVNhdmVyCgogICAgICAgICAgICAgICAgY2hlY2twb2ludGVyID0gQXN5bmNTcWxpdGVTYXZlcigKICAgICAgICAgICAgICAgICAgICBhaW9zcWxpdGUuY29ubmVjdChzdHIoY2hlY2twb2ludGVyX3BhdGgpKSkKICAgICAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbjoKICAgICAgICAgICAgICAgIGNoZWNrcG9pbnRlciA9IE1lbW9yeVNhdmVyKCkKICAgICAgICBlbHNlOgogICAgICAgICAgICBpbXBvcnQgc3FsaXRlMwoKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgY29ubiA9IHNxbGl0ZTMuY29ubmVjdChzdHIoY2hlY2twb2ludGVyX3BhdGgpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjaGVja19zYW1lX3RocmVhZD1GYWxzZSkKICAgICAgICAgICAgICAgIGNoZWNrcG9pbnRlciA9IFNxbGl0ZVNhdmVyKGNvbm4pCiAgICAgICAgICAgIGV4Y2VwdCBFeGNlcHRpb246CiAgICAgICAgICAgICAgICBjaGVja3BvaW50ZXIgPSBNZW1vcnlTYXZlcigpCiAgICBlbHNlOgogICAgICAgIGNoZWNrcG9pbnRlciA9IE1lbW9yeVNhdmVyKCkKICAgIHJldHVybiBncmFwaC5jb21waWxlKGNoZWNrcG9pbnRlcj1jaGVja3BvaW50ZXIpCg==
+"""Build graph MUFAKAT (T7).
+
+Bila langgraph tersedia: StateGraph nyata dengan conditional edges
+dari ``graph/edges.py`` dan checkpointer SQLite bila path diberikan.
+Bila langgraph TIDAK tersedia: kembalikan ``SimpleGraph`` fallback
+yang menjalankan research -> debate -> critique -> meeting -> spec
+secara sekuensial, agar demo tetap jalan. Modul ini tidak pernah
+gagal import hanya karena langgraph belum terinstal.
+"""
+
+from __future__ import annotations
+
+import asyncio
+from typing import Any
+
+from .edges import should_continue_debate, should_revise
+from .nodes import NODES
+from .state import RunState
+
+_NODE_ORDER = ["research", "debate", "critique", "meeting", "spec",
+               "code", "review", "audit", "test", "revise"]
+
+
+def _apply_patch(state: RunState, patch: dict) -> RunState:
+    if not patch:
+        return state
+    if hasattr(state, "model_copy"):
+        return state.model_copy(update=patch)
+    data = state.to_dict() if hasattr(state, "to_dict") else dict(state)
+    data.update(patch)
+    return RunState(**data)
+
+
+def _coerce_state(data) -> RunState:
+    if isinstance(data, RunState):
+        return data
+    if isinstance(data, dict):
+        return RunState.from_dict(data)
+    raise TypeError(f"state harus RunState atau dict, bukan {type(data)!r}")
+
+
+class SimpleGraph:
+    """Fallback tanpa langgraph: jalankan node demo secara sekuensial."""
+
+    def __init__(self, adapters=None, nodes=None, ctx=None):
+        self.adapters = adapters
+        self.nodes = nodes or NODES
+        self.ctx = dict(ctx or {})
+
+    async def ainvoke(self, state, ctx=None):
+        current = _coerce_state(state)
+        ctx = dict(ctx or {}) or self.ctx
+        # Demo: research -> debate -> critique -> meeting -> spec.
+        for name in ["research", "debate", "critique", "meeting", "spec"]:
+            patch = await self.nodes[name](current, self.adapters, ctx)
+            current = _apply_patch(current, patch)
+        return current.to_dict()
+
+    def invoke(self, state, ctx=None):
+        return asyncio.run(self.ainvoke(state, ctx))
+
+
+def build_graph(adapters=None, checkpointer_path=None, ctx=None,
+                require_human_approval: bool = False):
+    """Bangun graph; kembalikan StateGraph langgraph atau SimpleGraph.
+
+    ``ctx`` dipakai bersama (satu dict yang sama) oleh semua node:
+    di sinilah ``worktree``, ``run_dir``, dan ``gate_results``
+    dibagikan antar-node (audit -> test -> revise). Tanpa ctx
+    bersama, hasil audit tidak pernah sampai ke node test.
+
+    ``require_human_approval=True`` (N11) mengaktifkan ``interrupt()``
+    di node spec (sebelum code) dan node revise (sebelum commit):
+    graph jeda dan hanya lanjut setelah manusia me-resume dengan
+    ``Command(resume=...)``. Default False: run non-interaktif
+    (mis. ``create_run``) jalan seperti biasa tanpa jeda.
+    """
+    shared_ctx = {"adapters": adapters, **(ctx or {})}
+    if require_human_approval:
+        shared_ctx["require_human_approval"] = True
+    try:
+        from langgraph.checkpoint.memory import MemorySaver
+        from langgraph.graph import END, START, StateGraph
+    except ImportError:
+        return SimpleGraph(adapters=adapters, ctx=shared_ctx)
+    try:
+        from langgraph.checkpoint.sqlite import SqliteSaver
+    except ImportError:  # paket langgraph-checkpoint-sqlite belum terpasang
+        SqliteSaver = None  # type: ignore
+
+    graph = StateGraph(RunState)
+    for name in _NODE_ORDER:
+        fn = NODES[name]
+
+        def _wrap(fn=fn, adapters=adapters, shared_ctx=shared_ctx):
+            async def _node(state: RunState):
+                patch = await fn(state, adapters, shared_ctx)
+                return patch
+            return _node
+
+        graph.add_node(name, _wrap())
+
+    graph.add_edge(START, "research")
+    graph.add_edge("research", "debate")
+    graph.add_edge("debate", "critique")
+    graph.add_edge("critique", "meeting")
+    graph.add_conditional_edges("meeting", should_continue_debate, {
+        "debate": "debate",
+        "spec": "spec",
+        "escalate": END,
+    })
+    graph.add_edge("spec", "code")
+    graph.add_edge("code", "review")
+    graph.add_edge("review", "audit")
+    graph.add_edge("audit", "test")
+    graph.add_conditional_edges("test", should_revise, {
+        "revise": "revise",
+        "audit_final": END,
+        "escalate": END,
+    })
+    graph.add_edge("revise", "review")
+
+    checkpointer: Any = None
+    if checkpointer_path and SqliteSaver is not None:
+        # M10: SqliteSaver.from_conn_string() mengembalikan context
+        # manager (crash "Invalid checkpointer provided"). Pakai
+        # konstruktor langsung dengan koneksi — BUKAN from_conn_string.
+        # Graph MUFAKAT dijalankan async (ainvoke): SqliteSaver sinkron
+        # tidak mendukung metode async, jadi bila ada event loop yang
+        # sedang berjalan, pakai AsyncSqliteSaver dengan koneksi
+        # aiosqlite (dibuat di loop yang sama — AsyncSqliteSaver
+        # terikat ke loop pembuatnya). Bila dipanggil dari konteks
+        # sinkron (tanpa loop), pakai SqliteSaver(sqlite3.connect(
+        # path, check_same_thread=False)) sesuai audit — graph itu
+        # lalu harus dibangun/dijalankan di dalam loop async bila
+        # memakai ainvoke.
+        import asyncio
+
+        try:
+            asyncio.get_running_loop()
+            _loop_running = True
+        except RuntimeError:
+            _loop_running = False
+        if _loop_running:
+            try:
+                import aiosqlite
+                from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver
+
+                checkpointer = AsyncSqliteSaver(
+                    aiosqlite.connect(str(checkpointer_path)))
+            except Exception:
+                checkpointer = MemorySaver()
+        else:
+            import sqlite3
+
+            try:
+                conn = sqlite3.connect(str(checkpointer_path),
+                                       check_same_thread=False)
+                checkpointer = SqliteSaver(conn)
+            except Exception:
+                checkpointer = MemorySaver()
+    else:
+        checkpointer = MemorySaver()
+    return graph.compile(checkpointer=checkpointer)
