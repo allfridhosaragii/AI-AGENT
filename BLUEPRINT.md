@@ -531,9 +531,15 @@ Lihat `DECISIONS.md` (bagian B). Ringkasnya:
 ## 16. Status implementasi — 20 Nov 2026 (jujur)
 
 ### Sudah jalan dan terverifikasi
-- **Test: 71 passed, 1 skipped, 0 failed** (`pytest -q`, 86 detik;
-  1 skip = catatan Playwright belum terpasang). **Ruff: bersih.
-  Mypy: bersih (81 file).** Lihat `SELF_AUDIT.md`.
+- **Test — ANGKA LAMA TIDAK BERLAKU:** self-audit lama mengklaim
+  "71 passed, 1 skipped, 0 failed" (`pytest -q`, 86 detik), tetapi
+  audit eksternal 20 Nov 2026 menjalankan `pip install -e ".[dev]"
+  && pytest -q` dan mendapat **6 failed, 149 passed, 1 skipped**.
+  Angka 71 passed **tidak bisa direproduksi** dan tidak lagi dipakai
+  sebagai klaim. Hasil perbaikan audit **belum dijalankan di run ini**
+  (lihat `SELF_AUDIT.md`). **Ruff: bersih. Mypy: bersih (81 file,
+  tanpa `--check-untyped-defs`; dengan flag itu ada 6 error — lihat
+  SELF_AUDIT.md).**
 - **MCP 15 domain, 55 tool** — gateway `mufakat`, kontrak + permission
   per tool, test per domain.
 - **A2A format** — Agent Card + Task/artifact envelope + dispatcher
@@ -671,6 +677,77 @@ FastMCP opsional), `install_host.py` (`allowed_origins` = ID ekstensi saja),
   situs, `selectors.json.lastVerified`); Docker sandbox di VM ini; server MCP
   runner di MCP Inspector; debat multi-AI sungguhan via browser (butuh
   pengguna menjalankan handoff manual).
+
+---
+
+## 18. Arsitektur browser-only MVP (20 Nov 2026 — hasil audit ChatGPT)
+
+Bagian ini menyelesaikan konflik "dua engine berjalan sendiri-sendiri"
+(temuan J audit ChatGPT) dan menetapkan produk utama.
+
+### 18.1 Produk utama: Browser-Only AI Room
+
+Satu-satunya produk utama MUFAKAT adalah **Browser-Only AI Room**.
+Pengguna login di website resmi AI di browsernya sendiri; Room hanya
+menyusun prompt, mengatur giliran, mengimpor jawaban, dan menghitung
+konsensus. Tidak ada otomasi web chat, tidak ada pembacaan cookie/token,
+tidak ada auto-send, tidak ada server yang memanggil provider atas nama
+pengguna.
+
+| Komponen MVP | Lokasi / teknologi | Catatan |
+|---|---|---|
+| Room Dashboard | Website Room (artifact `mufakat`) | Daftar rapat, fase, timeline, laporan |
+| Prompt Manager | Website Room | Prompt per peran/fase |
+| Room Engine | Website Room, TypeScript | State machine, anti-loop, pacing |
+| Answer Import | Website Room | Impor + provenance + secret scan SEBELUM simpan |
+| Consensus Engine | Website Room, TypeScript | Borda count + voting 2/3 |
+| Penyimpanan | IndexedDB (Dexie) di browser | State persisten; padanan SQLite/JSONL di Python |
+| Website resmi AI | ChatGPT, Claude, Gemini, DeepSeek, Qwen (tab pengguna) | Status jujur: `manual_handoff`; Muse `needs_policy_review` |
+
+### 18.2 Satu engine, bukan dua (penyelesaian temuan J)
+
+- **Satu-satunya engine AI Room di web adalah engine TypeScript** di
+  website Room (artifact `mufakat`).
+- **Engine Python** (`src/mufakat/room/`) adalah layanan backend
+  terpisah / referensi yang sinkron dengan engine TS: dipakai CLI, MCP,
+  dan demo mock. Ia BUKAN engine kedua yang berjalan sendiri-sendiri
+  di dalam Room.
+- **Sumber kebenaran tunggal per lapisan:**
+  - UI, state rapat, dan pacing di web → engine TS.
+  - Logika handoff, secret scan, pacing, dan konsensus di sisi Python
+    (CLI/MCP/demo) → `src/mufakat/room/`.
+  - Bila perilaku keduanya berbeda, yang berlaku adalah perilaku yang
+    terdokumentasi di BLUEPRINT §17–§18 dan `src/mufakat/room/`; selisih
+    harus diperbaiki, bukan didiamkan.
+- Konsensus Borda tetap reuse satu implementasi per sisi
+  (`mufakat.consensus.voting` di Python; padanan TS-nya di website) —
+  tidak ada logika ganda di dalam satu sisi.
+
+### 18.3 Modul Opsional / Legacy — bukan MVP
+
+Jalur di bawah ini TIDAK dihapus dari repo, tetapi jelas terpisah dari
+MVP: tidak aktif secara default, tidak dipakai Room, dan butuh keputusan
+owner sebelum dipakai (lihat DECISIONS.md A9, A16, B10).
+
+| Modul | Lokasi | Status |
+|---|---|---|
+| Adapter CLI AI | `src/mufakat/adapters/` | Legacy; hanya bila login terverifikasi |
+| API key provider | `.env` + `config/providers.yaml` | Menunggu keputusan + key owner |
+| Content scripts / DOM scraping | `mufakat-room/src/adapters/`, `*.content.ts` | Bagian extension, bukan MVP |
+| Assisted Fill | `mufakat-room/` | Opt-in Fase 2, TIDAK AKTIF; dihapus dari UI utama MVP |
+| Native Messaging / Local Runner | `mufakat-room/runner/` | Modul terpisah, bukan jalur Room |
+| Server MCP 15 domain, pipeline LangGraph, dashboard FastAPI | `src/mufakat/` | Layanan backend/referensi |
+
+### 18.4 Dokumen lama yang masih menyebut CLI sebagai antarmuka utama
+
+Bagian-bagian lama blueprint ini (§6 Target Architecture, §12 Monorepo
+Structure, dan bagian lain yang menyebut CLI sebagai "antarmuka utama")
+mendokumentasikan arsitektur backend/referensi sebelum keputusan MVP
+browser-only. Sejak 20 Nov 2026 yang berlaku adalah §18 ini:
+**CLI adalah antarmuka opsional/legacy** (DECISIONS.md A9 yang
+diperbarui), dan produk utama adalah Browser-Only AI Room. Bagian lama
+tidak dihapus agar riwayat keputusan tetap terlacak, tetapi tidak boleh
+dibaca sebagai arsitektur produk utama.
 
 ---
 
