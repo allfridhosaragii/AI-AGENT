@@ -1,1 +1,146 @@
-IiIiUmVnaXN0cnkgcmVwbyB0ZXJkYWZ0YXIgdW50dWsgb3BlcmFzaSBHaXQgTUNQIChhdWRpdCBwdXRhcmFuIDI6IEdQVCA1KS4KClNhdHUgZmlsZSBtaWxpayBwZW5nZ3VuYSwgU0FNQSBkZW5nYW4gcmVnaXN0cnkgTG9jYWwgUnVubmVyCmBgfi8ubXVmYWthdC9ydW5uZXIuanNvbmBgIChlbnYgYGBNVUZBS0FUX1JVTk5FUl9SRUdJU1RSWWBgIHVudHVrCnRlc3QsIGF0YXUgYGBNVUZBS0FUX1JFUE9fUkVHSVNUUllgYCk6CgouLiBjb2RlLWJsb2NrOjoganNvbgoKICAgIHsicmVwb3MiOiB7Im5hbWEtcmVwbyI6ICIvYWJzL3BhdGgvcmVwbyJ9LCAicnVucyI6IHsuLi59fQoKQXR1cmFuOgoKLSBPcGVyYXNpIEdpdCBNQ1AgKGBgZ2l0X3N0YXR1c2BgIC8gYGBnaXRfZGlmZmBgIC8gYGBnaXRfYnJhbmNoYGAgLwogIGBgZ2l0X2NyZWF0ZV93b3JrdHJlZWBgIC8gYGBnaXRfY29tbWl0YGApIEhBTllBIG1lbmVyaW1hIHJlcG8geWFuZwogIHRlcmRhZnRhciBkaSBzaW5pIOKAlCBuYW1hIHRlcmRhZnRhciwgcGF0aCB5YW5nIHBlcnNpcyBzYW1hIGRlbmdhbgogIG5pbGFpIHRlcmRhZnRhciwgYXRhdSBzdWJwYXRoIGRpIGRhbGFtIHJlcG8gdGVyZGFmdGFyIChtaXMuIGBgLmBgCiAgc2FhdCBjd2QgYmVyYWRhIGRpIGRhbGFtIHJlcG8gaXR1KS4gUGF0aCBiZWJhcyBESVRPTEFLLgotIFBlbmRhZnRhcmFuIEhBTllBIGxld2F0IENMSSBsb2thbCBtYW51c2lhIChgYG11ZmFrYXQgcmVwby1yZWdpc3RlcmBgCiAgYXRhdSBgYG11ZmFrYXQtcm9vbS1ydW5uZXIgcmVnaXN0ZXJgYCkg4oCUIFRJREFLIEFEQSB0b29sIE1DUCBhdGF1CiAgcGVzYW4gbmF0aXZlIG1lc3NhZ2luZyB5YW5nIGJpc2EgbWVuZGFmdGFya2FuIHJlcG8uCi0gUGF0aCBIT01FIChhdGF1IGxlbHVodXIgSE9NRSwgbWlzLiBgYC9gYCkgVElEQUsgQk9MRUggZGlkYWZ0YXJrYW4uCiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKaW1wb3J0IGpzb24KaW1wb3J0IG9zCmltcG9ydCByZQpmcm9tIHBhdGhsaWIgaW1wb3J0IFBhdGgKCl9fYWxsX18gPSBbCiAgICAicmVnaXN0cnlfcGF0aCIsCiAgICAibG9hZF9yZWdpc3RyeSIsCiAgICAic2F2ZV9yZWdpc3RyeSIsCiAgICAicmVnaXN0ZXJfcmVwbyIsCiAgICAicmVzb2x2ZV9yZWdpc3RlcmVkX3JlcG8iLAogICAgImxpc3RfcmVwb3MiLAogICAgImlzX2dpdF9yZXBvIiwKXQoKX05BTUVfUkUgPSByZS5jb21waWxlKHIiW0EtWmEtejAtOV1bQS1aYS16MC05Ll8tXSoiKQoKCmRlZiByZWdpc3RyeV9wYXRoKCkgLT4gUGF0aDoKICAgICIiIkxva2FzaSBmaWxlIHJlZ2lzdHJ5IChlbnYgb3ZlcnJpZGUgdW50dWsgdGVzdCkuIiIiCiAgICBmb3IgZW52IGluICgiTVVGQUtBVF9SVU5ORVJfUkVHSVNUUlkiLCAiTVVGQUtBVF9SRVBPX1JFR0lTVFJZIik6CiAgICAgICAgb3ZlcnJpZGUgPSBvcy5lbnZpcm9uLmdldChlbnYsICIiKS5zdHJpcCgpCiAgICAgICAgaWYgb3ZlcnJpZGU6CiAgICAgICAgICAgIHJldHVybiBQYXRoKG92ZXJyaWRlKQogICAgcmV0dXJuIFBhdGguaG9tZSgpIC8gIi5tdWZha2F0IiAvICJydW5uZXIuanNvbiIKCgpkZWYgbG9hZF9yZWdpc3RyeSgpIC0+IGRpY3Q6CiAgICAiIiJCYWNhIHJlZ2lzdHJ5OyB7fSB0ZXJzdHJ1a3R1ciBiaWxhIGZpbGUgYmVsdW0gYWRhIC8gcnVzYWsuIiIiCiAgICBwYXRoID0gcmVnaXN0cnlfcGF0aCgpCiAgICB0cnk6CiAgICAgICAgZGF0YSA9IGpzb24ubG9hZHMocGF0aC5yZWFkX3RleHQoZW5jb2Rpbmc9InV0Zi04IikpCiAgICBleGNlcHQgKE9TRXJyb3IsIFZhbHVlRXJyb3IpOgogICAgICAgIHJldHVybiB7InJlcG9zIjoge30sICJydW5zIjoge319CiAgICBpZiBub3QgaXNpbnN0YW5jZShkYXRhLCBkaWN0KToKICAgICAgICByZXR1cm4geyJyZXBvcyI6IHt9LCAicnVucyI6IHt9fQogICAgZGF0YS5zZXRkZWZhdWx0KCJyZXBvcyIsIHt9KQogICAgZGF0YS5zZXRkZWZhdWx0KCJydW5zIiwge30pCiAgICBpZiBub3QgaXNpbnN0YW5jZShkYXRhWyJyZXBvcyJdLCBkaWN0KToKICAgICAgICBkYXRhWyJyZXBvcyJdID0ge30KICAgIGlmIG5vdCBpc2luc3RhbmNlKGRhdGFbInJ1bnMiXSwgZGljdCk6CiAgICAgICAgZGF0YVsicnVucyJdID0ge30KICAgIHJldHVybiBkYXRhCgoKZGVmIHNhdmVfcmVnaXN0cnkoZGF0YTogZGljdCkgLT4gUGF0aDoKICAgICIiIlR1bGlzIHJlZ2lzdHJ5IChhdG9taWstaXNoOiB0dWxpcyBsYWx1IGdhbnRpKS4iIiIKICAgIHBhdGggPSByZWdpc3RyeV9wYXRoKCkKICAgIHBhdGgucGFyZW50Lm1rZGlyKHBhcmVudHM9VHJ1ZSwgZXhpc3Rfb2s9VHJ1ZSkKICAgIHRtcCA9IHBhdGgud2l0aF9zdWZmaXgoIi50bXAiKQogICAgdG1wLndyaXRlX3RleHQoanNvbi5kdW1wcyhkYXRhLCBlbnN1cmVfYXNjaWk9RmFsc2UsIGluZGVudD0yKSwKICAgICAgICAgICAgICAgICAgIGVuY29kaW5nPSJ1dGYtOCIpCiAgICB0bXAucmVwbGFjZShwYXRoKQogICAgcmV0dXJuIHBhdGgKCgpkZWYgcmVnaXN0ZXJfcmVwbyhuYW1lOiBzdHIsIHJlcG9fcGF0aDogc3RyIHwgUGF0aCkgLT4gZGljdDoKICAgICIiIkRhZnRhcmthbiBzYXR1IHJlcG8gbWlsaWsgcGVuZ2d1bmEgKG5hbWEgLT4gcGF0aCBhYnNvbHV0KS4KCiAgICBIYW55YSBkaXBhbmdnaWwgQ0xJIGxva2FsIG1hbnVzaWEuIE5hbWEgaGFueWEKICAgIGBgW0EtWmEtejAtOV1bQS1aYS16MC05Ll8tXSpgYDsgcGF0aCBoYXJ1cyBmb2xkZXIgeWFuZyBhZGEgZGFuCiAgICBUSURBSyBCT0xFSCBIT01FIGF0YXUgbGVsdWh1ciBIT01FIChhdWRpdCBOMzogSE9NRSBwZXJuYWggYmlzYQogICAgZGlkYWZ0YXJrYW4gbGV3YXQgcGVzYW4gYXBhIHB1bikuCiAgICAiIiIKICAgIGlmIG5vdCBpc2luc3RhbmNlKG5hbWUsIHN0cikgb3Igbm90IF9OQU1FX1JFLmZ1bGxtYXRjaChuYW1lKToKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKGYiTmFtYSByZXBvIHRpZGFrIHZhbGlkOiB7bmFtZSFyfSIpCiAgICByZXNvbHZlZCA9IFBhdGgocmVwb19wYXRoKS5yZXNvbHZlKCkKICAgIGlmIG5vdCByZXNvbHZlZC5pc19kaXIoKToKICAgICAgICByYWlzZSBWYWx1ZUVycm9yKGYiUmVwbyB0aWRhayBkaXRlbXVrYW46IHtyZXBvX3BhdGghcn0iKQogICAgaG9tZSA9IFBhdGguaG9tZSgpLnJlc29sdmUoKQogICAgaWYgcmVzb2x2ZWQgPT0gaG9tZSBvciByZXNvbHZlZCBpbiBob21lLnBhcmVudHM6CiAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigKICAgICAgICAgICAgIlJlcG8gdGlkYWsgYm9sZWggSE9NRSBhdGF1IGxlbHVodXIgSE9NRSAiCiAgICAgICAgICAgIGYiKGRpdG9sYWs6IHtyZXNvbHZlZH0pLiIpCiAgICBkYXRhID0gbG9hZF9yZWdpc3RyeSgpCiAgICBkYXRhWyJyZXBvcyJdW25hbWVdID0gc3RyKHJlc29sdmVkKQogICAgc2F2ZV9yZWdpc3RyeShkYXRhKQogICAgcmV0dXJuIHsibmFtZSI6IG5hbWUsICJwYXRoIjogc3RyKHJlc29sdmVkKX0KCgpkZWYgcmVzb2x2ZV9yZWdpc3RlcmVkX3JlcG8ocmVwbzogc3RyIHwgUGF0aCkgLT4gUGF0aCB8IE5vbmU6CiAgICAiIiJLZW1iYWxpa2FuIHJvb3QgcmVwbyB0ZXJkYWZ0YXIgdW50dWsgYGByZXBvYGAsIGVsc2UgTm9uZS4KCiAgICBgYHJlcG9gYCBib2xlaCBiZXJ1cGEgbmFtYSB0ZXJkYWZ0YXIsIHBhdGggeWFuZyBwZXJzaXMgc2FtYQogICAgZGVuZ2FuIG5pbGFpIHRlcmRhZnRhciwgYXRhdSBzdWJwYXRoIGRpIGRhbGFtIHJlcG8gdGVyZGFmdGFyCiAgICAobWlzLiBgYCIuImBgIHNhYXQgY3dkIGRpIGRhbGFtIHJlcG8gaXR1KS4gUGF0aCBiZWJhcyB5YW5nIHRpZGFrCiAgICB0ZXJkYWZ0YXIgRElUT0xBSy4KICAgICIiIgogICAgaWYgcmVwbyBpcyBOb25lOgogICAgICAgIHJldHVybiBOb25lCiAgICBkYXRhID0gbG9hZF9yZWdpc3RyeSgpCiAgICByZXBvcyA9IGRhdGEuZ2V0KCJyZXBvcyIsIHt9KQogICAgaWYgaXNpbnN0YW5jZShyZXBvLCBzdHIpIGFuZCByZXBvIGluIHJlcG9zOgogICAgICAgIGNhbmRpZGF0ZSA9IFBhdGgocmVwb3NbcmVwb10pCiAgICAgICAgcmV0dXJuIGNhbmRpZGF0ZSBpZiBjYW5kaWRhdGUuaXNfZGlyKCkgZWxzZSBOb25lCiAgICB0cnk6CiAgICAgICAgcmVzb2x2ZWQgPSBQYXRoKHJlcG8pLnJlc29sdmUoKQogICAgZXhjZXB0IE9TRXJyb3I6CiAgICAgICAgcmV0dXJuIE5vbmUKICAgIGZvciB2YWx1ZSBpbiByZXBvcy52YWx1ZXMoKToKICAgICAgICB0cnk6CiAgICAgICAgICAgIHJlZ2lzdGVyZWQgPSBQYXRoKHZhbHVlKS5yZXNvbHZlKCkKICAgICAgICBleGNlcHQgT1NFcnJvcjoKICAgICAgICAgICAgY29udGludWUKICAgICAgICBpZiByZXNvbHZlZCA9PSByZWdpc3RlcmVkIG9yIHJlZ2lzdGVyZWQgaW4gcmVzb2x2ZWQucGFyZW50czoKICAgICAgICAgICAgcmV0dXJuIHJlZ2lzdGVyZWQgaWYgcmVnaXN0ZXJlZC5pc19kaXIoKSBlbHNlIE5vbmUKICAgIHJldHVybiBOb25lCgoKZGVmIGxpc3RfcmVwb3MoKSAtPiBkaWN0W3N0ciwgc3RyXToKICAgICIiIlNlbXVhIHJlcG8gdGVyZGFmdGFyIChuYW1hIC0+IHBhdGgpLiIiIgogICAgcmV0dXJuIGRpY3QobG9hZF9yZWdpc3RyeSgpLmdldCgicmVwb3MiLCB7fSkpCgoKZGVmIGlzX2dpdF9yZXBvKHBhdGg6IHN0ciB8IFBhdGgpIC0+IGJvb2w6CiAgICAiIiJUcnVlIGJpbGEgYGBwYXRoYGAgYWRhbGFoIHJvb3QgcmVwbyBnaXQgKHB1bnlhIGBgLmdpdGBgKS4iIiIKICAgIHRyeToKICAgICAgICB0YXJnZXQgPSBQYXRoKHBhdGgpCiAgICBleGNlcHQgKFR5cGVFcnJvciwgVmFsdWVFcnJvcik6CiAgICAgICAgcmV0dXJuIEZhbHNlCiAgICByZXR1cm4gdGFyZ2V0LmlzX2RpcigpIGFuZCAodGFyZ2V0IC8gIi5naXQiKS5leGlzdHMoKQo=
+"""Registry repo terdaftar untuk operasi Git MCP (audit putaran 2: GPT 5).
+
+Satu file milik pengguna, SAMA dengan registry Local Runner
+``~/.mufakat/runner.json`` (env ``MUFAKAT_RUNNER_REGISTRY`` untuk
+test, atau ``MUFAKAT_REPO_REGISTRY``):
+
+.. code-block:: json
+
+    {"repos": {"nama-repo": "/abs/path/repo"}, "runs": {...}}
+
+Aturan:
+
+- Operasi Git MCP (``git_status`` / ``git_diff`` / ``git_branch`` /
+  ``git_create_worktree`` / ``git_commit``) HANYA menerima repo yang
+  terdaftar di sini — nama terdaftar, path yang persis sama dengan
+  nilai terdaftar, atau subpath di dalam repo terdaftar (mis. ``.``
+  saat cwd berada di dalam repo itu). Path bebas DITOLAK.
+- Pendaftaran HANYA lewat CLI lokal manusia (``mufakat repo-register``
+  atau ``mufakat-room-runner register``) — TIDAK ADA tool MCP atau
+  pesan native messaging yang bisa mendaftarkan repo.
+- Path HOME (atau leluhur HOME, mis. ``/``) TIDAK BOLEH didaftarkan.
+"""
+
+from __future__ import annotations
+
+import json
+import os
+import re
+from pathlib import Path
+
+__all__ = [
+    "registry_path",
+    "load_registry",
+    "save_registry",
+    "register_repo",
+    "resolve_registered_repo",
+    "list_repos",
+    "is_git_repo",
+]
+
+_NAME_RE = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*")
+
+
+def registry_path() -> Path:
+    """Lokasi file registry (env override untuk test)."""
+    for env in ("MUFAKAT_RUNNER_REGISTRY", "MUFAKAT_REPO_REGISTRY"):
+        override = os.environ.get(env, "").strip()
+        if override:
+            return Path(override)
+    return Path.home() / ".mufakat" / "runner.json"
+
+
+def load_registry() -> dict:
+    """Baca registry; {} terstruktur bila file belum ada / rusak."""
+    path = registry_path()
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {"repos": {}, "runs": {}}
+    if not isinstance(data, dict):
+        return {"repos": {}, "runs": {}}
+    data.setdefault("repos", {})
+    data.setdefault("runs", {})
+    if not isinstance(data["repos"], dict):
+        data["repos"] = {}
+    if not isinstance(data["runs"], dict):
+        data["runs"] = {}
+    return data
+
+
+def save_registry(data: dict) -> Path:
+    """Tulis registry (atomik-ish: tulis lalu ganti)."""
+    path = registry_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(".tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2),
+                   encoding="utf-8")
+    tmp.replace(path)
+    return path
+
+
+def register_repo(name: str, repo_path: str | Path) -> dict:
+    """Daftarkan satu repo milik pengguna (nama -> path absolut).
+
+    Hanya dipanggil CLI lokal manusia. Nama hanya
+    ``[A-Za-z0-9][A-Za-z0-9._-]*``; path harus folder yang ada dan
+    TIDAK BOLEH HOME atau leluhur HOME (audit N3: HOME pernah bisa
+    didaftarkan lewat pesan apa pun).
+    """
+    if not isinstance(name, str) or not _NAME_RE.fullmatch(name):
+        raise ValueError(f"Nama repo tidak valid: {name!r}")
+    resolved = Path(repo_path).resolve()
+    if not resolved.is_dir():
+        raise ValueError(f"Repo tidak ditemukan: {repo_path!r}")
+    home = Path.home().resolve()
+    if resolved == home or resolved in home.parents:
+        raise ValueError(
+            "Repo tidak boleh HOME atau leluhur HOME "
+            f"(ditolak: {resolved}).")
+    data = load_registry()
+    data["repos"][name] = str(resolved)
+    save_registry(data)
+    return {"name": name, "path": str(resolved)}
+
+
+def resolve_registered_repo(repo: str | Path) -> Path | None:
+    """Kembalikan root repo terdaftar untuk ``repo``, else None.
+
+    ``repo`` boleh berupa nama terdaftar, path yang persis sama
+    dengan nilai terdaftar, atau subpath di dalam repo terdaftar
+    (mis. ``"."`` saat cwd di dalam repo itu). Path bebas yang tidak
+    terdaftar DITOLAK.
+    """
+    if repo is None:
+        return None
+    data = load_registry()
+    repos = data.get("repos", {})
+    if isinstance(repo, str) and repo in repos:
+        candidate = Path(repos[repo])
+        return candidate if candidate.is_dir() else None
+    try:
+        resolved = Path(repo).resolve()
+    except OSError:
+        return None
+    for value in repos.values():
+        try:
+            registered = Path(value).resolve()
+        except OSError:
+            continue
+        if resolved == registered or registered in resolved.parents:
+            return registered if registered.is_dir() else None
+    return None
+
+
+def list_repos() -> dict[str, str]:
+    """Semua repo terdaftar (nama -> path)."""
+    return dict(load_registry().get("repos", {}))
+
+
+def is_git_repo(path: str | Path) -> bool:
+    """True bila ``path`` adalah root repo git (punya ``.git``)."""
+    try:
+        target = Path(path)
+    except (TypeError, ValueError):
+        return False
+    return target.is_dir() and (target / ".git").exists()
