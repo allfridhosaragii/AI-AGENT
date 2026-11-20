@@ -242,30 +242,46 @@ evaluasi/stub bertanda "belum terverifikasi".
 ## 7. MCP and A2A Design
 
 **Satu server FastMCP** di `src/mufakat/mcp_server/server.py`, transport
-stdio. Tools inti: `debate_start(topic, providers?)`,
+stdio — server ini adalah **gateway**: semua tool didaftarkan dari
+15 modul domain terpisah di `src/mufakat/mcp_server/domains/`
+(`core`, `communication`, `meeting`, `task`, `memory`, `project`,
+`git`, `filesystem`, `terminal`, `testing`, `security`, `research`,
+`evaluation`, `approval`, `observability`). Per 20 Nov 2026:
+**55 tool terdaftar** dan terverifikasi lewat `mcp.list_tools()`,
+masing-masing dengan kontrak di `CONTRACTS` tiap domain (nama,
+deskripsi, permission, scope). Permission: `read`, `propose`,
+`write-sandbox`, `execute-approved`, `approval-required`.
+Tools inti: `debate_start(topic, providers?)`,
 `debate_status(run_id)`, `pipeline_run(spec_path, repo_path)`,
 `gate_report(run_id)`.
 
-**Tools namespaced per domain** (dari ChatGPT §7, sebagai modul dalam satu
-server, bukan 15 proses): `core_*` (registrasi agent, kapabilitas, status),
+Contoh per domain: `core_*` (registrasi agent, kapabilitas, status),
 `meeting_*` (create, ronde debat, rebuttal, decision),
 `task_*` (delegasi, status, dependency), `project_*` (create, brief, ADR),
-`git_*` (status, diff, worktree, branch, commit, PR — commit/PR hanya
-setelah approval), `filesystem_*` (baca file, propose patch — tolak file
-rahasia), `terminal_*` (allowlist command di sandbox), `testing_*`
-(run unit/integration/E2E), `security_*` (SAST, dependency, secret,
-container), `research_*` (referensi, kutipan), `evaluation_*` (review,
-skor, bukti), `approval_*` (request/status/decision), `observability_*`
-(trace, metrics, log, status workflow).
+`git_*` (status, diff, worktree, branch, commit — commit HANYA
+dengan approval yang disetujui; tidak pernah push),
+`filesystem_*` (baca file, propose patch — TIDAK menulis file,
+tolak file rahasia), `terminal_*` (allowlist command di sandbox),
+`testing_*` (run unit/integration/E2E), `security_*` (SAST,
+dependency, secret), `research_*` (referensi, kutipan),
+`evaluation_*` (review, skor, bukti), `approval_*`
+(request/status/decision), `observability_*` (trace, metrics, log,
+status workflow). Catatan domain (memory/task/meeting/project)
+dalam-memori per proses server; catatan permanen ada di
+``runs/<run_id>/`` dan SQLite.
 
 **Message envelope internal** (`src/mufakat/message_bus.py`):
 `message_id`, `conversation_id`, `project_id`, `sender_agent_id`,
 `recipient_agent_id`, `message_type`, `correlation_id`, `created_at`,
 `payload`.
 
-**A2A:** hanya sebagai adapter evaluasi/stub bertanda "belum terverifikasi";
-jangan paksa semua komunikasi lewat A2A. Internal message bus sudah cukup
-untuk komunikasi agent-to-agent di MVP.
+**A2A (per 20 Nov 2026):** modul `src/mufakat/a2a/` mengimplementasikan
+**format** protokol A2A — Agent Card (JSON, validasi Pydantic),
+Task / TaskStatus / Message / Artifact, dan dispatcher lokal
+in-process (`dispatch_task`). Interop dengan agent A2A **eksternal**
+(HTTP JSON-RPC ke server agent lain) **belum terverifikasi** — tidak
+ada server A2A eksternal yang diuji, dan modul ini tidak mengklaimnya.
+Internal message bus sudah cukup untuk komunikasi agent-to-agent di MVP.
 
 **Keamanan MCP:** tools tulis/eksekusi/Git/jaringan butuh permission ketat;
 `terminal_run` hanya allowlist (`echo`/`ls`/`pytest`, tanpa shell, tolak
@@ -385,6 +401,19 @@ dll.) ditambahkan saat migrasi PostgreSQL — lihat `DECISIONS.md`.
 `GET /api/approvals`, `GET /api/usage`, `GET /api/audit`,
 `POST /api/debate`.
 
+**Postgres/Redis opsional (per 20 Nov 2026):** `storage/db.py`
+`resolve_database_url()` — prioritas `DATABASE_URL`, lalu
+`MUFAKAT_DB`, lalu SQLite default `sqlite:///./runs/mufakat.db`.
+`get_engine_for_url()` membuat engine Postgres bila driver `psycopg`
+ada (extra `pip install -e .[postgres]`); tanpa driver, error
+`RuntimeError` yang jelas — bukan fallback diam-diam ke SQLite.
+`storage/cache.py` menyediakan `Cache`/`Queue`: Redis bila
+`REDIS_URL` diset + pustaka `redis` terpasang + server menjawab
+ping, bila tidak fallback in-memory dan `backend` dilaporkan
+`"memory"`. `docker-compose.yml` (root repo) menjalankan
+Postgres 16 + Redis 7 dengan healthcheck. Postgres/Redis TIDAK
+wajib dan TIDAK dipakai bila env tidak diset.
+
 **Permission matrix:** read-only → propose → write-in-sandbox →
 execute-approved → git-branch → merge/deploy (approval). Destructive
 actions selalu butuh approval eksplisit.
@@ -395,25 +424,28 @@ actions selalu butuh approval eksplisit.
 
 ```
 mufakat/
-├── README.md  BLUEPRINT.md  DECISIONS.md
-├── pyproject.toml  .env.example  .gitignore
+├── README.md  BLUEPRINT.md  DECISIONS.md  SELF_AUDIT.md
+├── pyproject.toml  .env.example  .gitignore  docker-compose.yml
 ├── config/  providers.yaml  roles.yaml  gates.yaml  prompts/*.md (11 peran)
 ├── src/mufakat/
-│   ├── cli.py  runner.py  security.py  message_bus.py  provider_registry.py
+│   ├── cli.py  __main__.py  runner.py  security.py  message_bus.py  provider_registry.py
 │   ├── graph/  state.py  edges.py  build.py  nodes/*.py
-│   ├── adapters/  base.py  api_openai_compat.py  cli_codex.py  cli_copilot.py
+│   ├── adapters/  base.py  api_openai_compat.py  _cli.py  cli_codex.py  cli_copilot.py
 │   │   cli_antigravity.py  cli_claude.py  cli_opencode.py
 │   ├── router/  quota.py  fallback.py  budget.py
 │   ├── consensus/  protocol.py  voting.py  anonymize.py
 │   ├── gates/  runner.py  verdict.py  semgrep.py  bandit.py  gitleaks.py
 │   │   trivy.py  pytest.py  lint.py
 │   ├── sandbox/  docker.py  worktree.py
-│   ├── storage/  db.py  transcript.py
-│   ├── mcp_server/  server.py  tools.py
+│   ├── storage/  db.py  transcript.py  cache.py
+│   ├── a2a/  card.py  tasks.py
+│   ├── mcp_server/  server.py  tools.py  domains/*.py (15 domain)
 │   └── web/  app.py  static/index.html
 ├── docker/sandbox.Dockerfile
 ├── runs/  (di-gitignore; transcript.jsonl, rounds/, spec.md, gates/, diff/, final_report.md)
-└── tests/  test_consensus.py  test_router.py  test_adapters.py  test_gates.py  test_smoke.py
+└── tests/  test_consensus.py  test_router.py  test_adapters.py  test_gates.py
+    test_smoke.py  test_anti_loop.py  test_pipeline.py  test_mcp_domains.py
+    test_a2a.py  test_storage.py  test_cli_adapters.py  e2e/
 ```
 
 Struktur mengikuti Claude §7 persis, ditambah `web/`, `message_bus.py`,
@@ -423,15 +455,15 @@ Struktur mengikuti Claude §7 persis, ditambah `web/`, `message_bus.py`,
 
 ## 13. Implementation Roadmap
 
-| Fase | Milestone | Acceptance |
-|---|---|---|
-| 0 — Riset & Arsitektur | Audit provider + 34 repo, pilih stack, PRD/blueprint ini, threat model, persetujuan owner | Blueprint ini + `DECISIONS.md` |
-| 1 — Foundation | Scaffold, skema+storage, adapter API+CLI pertama, router/quota, konsensus, doctor, MCP server pertama | `uv sync`/`pip install -e .`, `mufakat --help`, `mufakat doctor` |
-| 2 — Multi-AI Collaboration | ≥2–3 provider resmi, agent registry, message bus, brainstorming/debate/rebuttal/revision, decision record | `mufakat debate` end-to-end dengan adapter mock → spec.md + transkrip |
-| 3 — Coding Workspace | Worktree, coding agent adapter, sandbox terminal, diff review | Loop code→review di worktree |
-| 4 — QA & Security | Test runner, Playwright, SAST, dependency+secret scan, failure triage, fix/retest, gates | Verdict TIDAK AMAN pada repo contoh bermasalah |
-| 5 — Reliable Autonomy | Checkpoint/recovery, delegasi dinamis, budget/time limits, emergency meeting, observability | Resume run; eskalasi anti-loop teruji |
-| 6 — Production & Desktop | Hardening, deployment, backup, desktop shell bila dibutuhkan, multi-user | — (di luar MVP) |
+| Fase | Milestone | Acceptance | Status 20 Nov 2026 |
+|---|---|---|---|
+| 0 — Riset & Arsitektur | Audit provider + 34 repo, pilih stack, PRD/blueprint ini, threat model, persetujuan owner | Blueprint ini + `DECISIONS.md` | Selesai (blueprint + keputusan; persetujuan owner B1–B9 masih terbuka) |
+| 1 — Foundation | Scaffold, skema+storage, adapter API+CLI pertama, router/quota, konsensus, doctor, MCP server pertama | `uv sync`/`pip install -e .`, `mufakat --help`, `mufakat doctor` | Selesai (CLI + doctor + MCP gateway 55 tool; Postgres/Redis opsional) |
+| 2 — Multi-AI Collaboration | ≥2–3 provider resmi, agent registry, message bus, brainstorming/debate/rebuttal/revision, decision record | `mufakat debate` end-to-end dengan adapter mock → spec.md + transkrip | Selesai dengan mock; debat multi-AI SUNGGUHAN butuh API key / login CLI (lihat §16) |
+| 3 — Coding Workspace | Worktree, coding agent adapter, sandbox terminal, diff review | Loop code→review di worktree | Selesai (code→review→audit→test→revise nyata, diff + gates di `runs/<id>/`) |
+| 4 — QA & Security | Test runner, Playwright, SAST, dependency+secret scan, failure triage, fix/retest, gates | Verdict TIDAK AMAN pada repo contoh bermasalah | Sebagian: gate nyata jalan (ruff/pytest/bandit + fallback semgrep/gitleaks; trivy binary belum ada); Playwright belum terpasang — E2E via TestClient |
+| 5 — Reliable Autonomy | Checkpoint/recovery, delegasi dinamis, budget/time limits, emergency meeting, observability | Resume run; eskalasi anti-loop teruji | Sebagian: anti-loop teruji (hash + cap iterasi) + resume; budget enforcement + emergency meeting belum diuji end-to-end |
+| 6 — Production & Desktop | Hardening, deployment, backup, desktop shell bila dibutuhkan, multi-user | — (di luar MVP) | Deferred (lihat DECISIONS A15) |
 
 **Risiko per fase:** kuota berubah (Fase 1–2), kebijakan wrapping CLI
 (Fase 3), false positive scanner (Fase 4), biaya observability (Fase 5).
@@ -486,11 +518,59 @@ Lihat `DECISIONS.md` (bagian B). Ringkasnya:
    dsb.):** sambungkan yang mana dulu, dengan akun demo dulu?
 6. **B6 — Batas budget default:** `MAX_COST_USD=1.0`, `MAX_WALL_MINUTES=60`
    — naikkan/turunkan?
-7. **B7 — PostgreSQL:** tetap SQLite untuk MVP, migrasi nanti — setuju?
+7. **B7 — PostgreSQL:** diputuskan 20 Nov 2026 (DECISIONS A3): SQLite
+   tetap default, Postgres/Redis opsional via `DATABASE_URL`/`REDIS_URL`
+   + `docker-compose.yml` — tidak wajib.
 8. **B8 — UI:** dashboard HTML statis + FastAPI cukup untuk MVP, atau
    lanjut ke Chainlit/Next.js di Fase 4?
 9. **B9 — Layout repo:** kanonik `src/mufakat/` (diputuskan saat integrasi
    — flat layout di root sudah dihapus).
+
+---
+
+## 16. Status implementasi — 20 Nov 2026 (jujur)
+
+### Sudah jalan dan terverifikasi
+- **Test: 71 passed, 1 skipped, 0 failed** (`pytest -q`, 86 detik;
+  1 skip = catatan Playwright belum terpasang). **Ruff: bersih.
+  Mypy: bersih (81 file).** Lihat `SELF_AUDIT.md`.
+- **MCP 15 domain, 55 tool** — gateway `mufakat`, kontrak + permission
+  per tool, test per domain.
+- **A2A format** — Agent Card + Task/artifact envelope + dispatcher
+  lokal; interop eksternal belum terverifikasi.
+- **Loop coding nyata (mock)** — `mufakat run "Buat REST API todo
+  dengan FastAPI + test + audit"` selesai ±12 detik: worktree berisi
+  `main.py` + `test_main.py` nyata, `diff/iter-01.patch`, 6 gate,
+  `verdict.json` = AMAN. Dashboard E2E (TestClient) lolos.
+- **Anti-loop** — hash osilasi + temuan tidak turun + cap iterasi
+  (5 fix / 12 total) teruji; riwayat dicatat node `test` (edge
+  pure-read).
+- **Postgres/Redis opsional** — `DATABASE_URL` / `REDIS_URL` +
+  `docker-compose.yml`, fallback SQLite/in-memory.
+- **Gates nyata atas kode sendiri** — ruff bersih, bandit 0 High /
+  1 Medium (diperbaiki: validasi identifier SQL + `nosec`),
+  mypy bersih, pytest 67 lolos.
+
+### Masih butuh owner (real testing) — MUSTAHIL tanpa ini
+- **Debat multi-AI sungguhan:** butuh salah satu API key di env
+  (`DEEPSEEK_API_KEY`, `OPENROUTER_API_KEY`, `GEMINI_API_KEY`,
+  `GROQ_API_KEY`, `META_API_KEY`) ATAU login CLI terverifikasi
+  (`codex login`, `copilot`, `claude`, `agy`, `opencode`).
+  Saat ini VM: tidak ada API key, `codex` TIDAK login — semua peran
+  memakai mock deterministik.
+- **Gate semgrep/gitleaks/trivy binary:** binary tidak ada di VM
+  (semgrep tidak bisa satu venv dengan FastMCP — lihat DECISIONS
+  A12); gate memakai fallback regex / INFO "belum terverifikasi".
+- **Docker sandbox:** binary `docker` tidak ada di VM — sandbox
+  Docker belum terverifikasi; yang jalan worktree lokal + allowlist.
+- **Playwright E2E browser:** belum terpasang.
+- **Figma/Canva/MT5, OpenBot/Antigravity, multi-user, deployment
+  production, backup:** belum dibangun / butuh keputusan owner
+  (B1–B9 di DECISIONS.md).
+
+### Sengaja tidak dibangun (deferred)
+Desktop Tauri, Temporal, sandbox cloud E2B/Daytona — lihat
+DECISIONS A15 dengan alasan.
 
 ---
 
