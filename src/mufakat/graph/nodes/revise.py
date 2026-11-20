@@ -70,7 +70,9 @@ async def node(state, adapters=None, ctx=None):
         f"Perbaiki {len(findings)} temuan (iterasi "
         f"{getattr(state, 'fix_iterations', 0) + 1}; "
         f"ruff --fix: {'berhasil' if fixed else 'tidak dijalankan/gagal'}).")
-    return {"messages": messages, "phase": "audit",
+    # M10: revisi kembali ke REVIEW (bukan langsung audit) — hasil
+    # perbaikan harus direview manusia/agen dulu sebelum diaudit lagi.
+    return {"messages": messages, "phase": "review",
             "diff_hash": diff_hash,
             "fix_iterations": getattr(state, "fix_iterations", 0) + 1,
             "total_iterations": getattr(state, "total_iterations", 0) + 1}
