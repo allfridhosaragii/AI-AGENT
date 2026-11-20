@@ -18,16 +18,29 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
 HOST_NAME = "com.mufakat.runner"
 
+# ID ekstensi Chrome: 32 huruf kecil a-p (bentuk kanonik), tapi validasi
+# di sini sengaja longgar ke [a-z0-9]+ agar ID pengembangan/uji tetap
+# bisa dipakai — yang ditolak adalah ID kosong, huruf besar, dan
+# segmen path tambahan (dulu "chrome-extension://abc/extra" dan
+# "chrome-extension://" lolos begitu saja).
+_EXTENSION_ID_RE = re.compile(r"^chrome-extension://[a-z0-9]+/$")
+
 
 def host_manifest(extension_id: str, host_path: str) -> dict:
     """Bangun isi manifest native messaging host."""
-    if not extension_id.startswith("chrome-extension://"):
-        raise ValueError("extension-id harus diawali 'chrome-extension://'.")
+    if not isinstance(extension_id, str) or not _EXTENSION_ID_RE.match(extension_id):
+        raise ValueError(
+            "extension-id harus berbentuk 'chrome-extension://<id>/' "
+            "(id huruf kecil/angka, diakhiri '/')."
+        )
+    if not isinstance(host_path, str) or not host_path.strip():
+        raise ValueError("host-path tidak boleh kosong.")
     return {
         "name": HOST_NAME,
         "description": "MUFAKAT Room Local Runner (worktree + gates lokal).",
