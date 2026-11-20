@@ -12,9 +12,9 @@ jalan. Tidak ada logika tool di sini.
 
 Keamanan: tools tulis/eksekusi/Git/jaringan butuh permission ketat
 (lihat ``CONTRACTS`` tiap domain); ``terminal_run`` hanya allowlist
-(``echo``/``ls``/``pytest``, tanpa shell, tolak metakarakter);
-``filesystem_read`` menolak file rahasia; secret tidak pernah masuk
-log/laporan.
+(``echo``/``ls``, tanpa shell, tolak metakarakter — pytest hanya
+lewat gate sandbox); ``filesystem_read`` hanya di dalam allowlist
+folder workspace; secret tidak pernah masuk log/laporan.
 """
 
 from __future__ import annotations
@@ -24,7 +24,6 @@ from fastmcp import FastMCP
 from mufakat.mcp_server.domains import contracts, register_all
 from mufakat.mcp_server.domains.approval import (
     approval_get_status,
-    approval_record_decision,
     approval_request,
 )
 from mufakat.mcp_server.domains.communication import (
@@ -144,6 +143,6 @@ __all__ = [
     "security_get_findings",
     "research_search", "research_save_reference", "research_list_references",
     "evaluation_submit", "review_submit", "review_approve", "review_list",
-    "approval_request", "approval_get_status", "approval_record_decision",
+    "approval_request", "approval_get_status",
     "observability_status", "observability_list_runs",
 ]
