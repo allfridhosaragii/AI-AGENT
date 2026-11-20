@@ -1,1 +1,161 @@
-IiIiVGVzdCByZWdyZXNpIGF1ZGl0IDIwIE5vdiAyMDI2OiBDMywgTTEsIE0xMiwgQ2hhdEdQVCBJICsgd2ViIGF1dGguCgotIEMzOiBmaWxlc3lzdGVtX3JlYWQgaGFueWEgZGkgZGFsYW0gYWxsb3dsaXN0IHdvcmtzcGFjZTsgc3ltbGluawogIGRpdG9sYWs7IH4vLmNvZGV4L2F1dGguanNvbiwgfi8uc3NoL2lkX2VkMjU1MTksIH4vLmNvbmZpZy9naC9ob3N0cy55bWwKICBkYW4gKi5zcWxpdGUgZGl0b2xhayAoUG9DIGF1ZGl0KS4KLSBNMTogU0hFTExfTUVUQSBiZXJpc2kgbmV3bGluZS9DUiBhc2xpIOKAlCBgbHMgcnVuc2AgZGFuCiAgYHB5dGVzdCB0ZXN0cy90ZXN0X21haW4ucHlgIHRpZGFrIGxhZ2kgZGl0b2xhayBrYXJlbmEgaHVydWYgbi9yLgotIE0xMjogcnVuX2lkPSIuLiIgZGl0b2xhayBkaSBzZW11YSBwaW50dSBtYXN1ayAod2ViICYgTUNQKS4KLSBDaGF0R1BUIEk6IG5hbWEgcHJvdmlkZXIgY29uZmlnID09IGFkYXB0ZXIgKG9wZW5yb3V0ZXIsIGdlbWluaSk7CiAgbWV0YV9hcGkgYmVyc3RhdHVzIG5lZWRzX3BvbGljeV9yZXZpZXcgKGJ1a2FuIGtsYWltIE11c2UgU3BhcmspLgotIFdlYjogbG9jYWwtb25seSB0YW5wYSB0b2tlbjsgYmlsYSBNVUZBS0FUX1dFQl9UT0tFTiBkaXNldCwgUE9TVAogIC9hcGkvZGViYXRlIHdhamliIGhlYWRlciBYLU1VRkFLQVQtVE9LRU4uCiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCgpmcm9tIG11ZmFrYXQubWNwX3NlcnZlci50b29scyBpbXBvcnQgU0hFTExfTUVUQSwgcmVhZF9maWxlX3NhZmUsIHJ1bl90ZXJtaW5hbF9jb21tYW5kCmZyb20gbXVmYWthdC5ydW5uZXIgaW1wb3J0IHJlYWRfcnVuCgoKZGVmIHRlc3Rfc2hlbGxfbWV0YV9iZXJpc2lfbmV3bGluZV9hc2xpX2J1a2FuX2h1cnVmKHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICAiIiJNMTogU0hFTExfTUVUQSBiZXJpc2kgJ1xcbicgZGFuICdcXHInIGFzbGksIGJ1a2FuIGh1cnVmIG4vci8nXFwnLiIiIgogICAgYXNzZXJ0ICJcbiIgaW4gU0hFTExfTUVUQQogICAgYXNzZXJ0ICJcciIgaW4gU0hFTExfTUVUQQogICAgYXNzZXJ0ICJuIiBub3QgaW4gU0hFTExfTUVUQQogICAgYXNzZXJ0ICJyIiBub3QgaW4gU0hFTExfTUVUQQogICAgYXNzZXJ0ICJcXCIgbm90IGluIFNIRUxMX01FVEEKICAgIG1vbmtleXBhdGNoLmNoZGlyKHRtcF9wYXRoKQogICAgYXNzZXJ0IHJ1bl90ZXJtaW5hbF9jb21tYW5kKCJscyBydW5zIilbIm9rIl0gaXMgVHJ1ZQogICAgIyBQZXJpbnRhaCBweXRlc3QgZGl0b2xhayBrYXJlbmEgdGlkYWsgZGkgYWxsb3dsaXN0IChDMSksIEJVS0FOCiAgICAjIGthcmVuYSBtZXRha2FyYWt0ZXIg4oCUIHBlc2FubnlhIGhhcnVzIG1lbnllYnV0IGFsbG93bGlzdC4KICAgIGRlbmllZCA9IHJ1bl90ZXJtaW5hbF9jb21tYW5kKCJweXRlc3QgdGVzdHMvdGVzdF9tYWluLnB5IikKICAgIGFzc2VydCBkZW5pZWRbIm9rIl0gaXMgRmFsc2UKICAgIGFzc2VydCAicHl0ZXN0IiBpbiBkZW5pZWRbImVycm9yIl0ubG93ZXIoKSBvciAiYWxsb3dsaXN0IiBpbiBkZW5pZWRbImVycm9yIl0ubG93ZXIoKQogICAgIyBNZXRha2FyYWt0ZXIgYXNsaSB0ZXRhcCBkaXRvbGFrLgogICAgYXNzZXJ0IHJ1bl90ZXJtaW5hbF9jb21tYW5kKCJsczsgZWNobyB4IilbIm9rIl0gaXMgRmFsc2UKICAgIGFzc2VydCBydW5fdGVybWluYWxfY29tbWFuZCgiZWNobyBoYWxvXG5kdW5pYSIpWyJvayJdIGlzIEZhbHNlCgoKZGVmIHRlc3RfZmlsZXN5c3RlbV9yZWFkX2hhbnlhX2FsbG93bGlzdF93b3Jrc3BhY2UodG1wX3BhdGgsIG1vbmtleXBhdGNoKToKICAgICIiIkMzOiBmaWxlIGRpIGx1YXIgd29ya3NwYWNlIGRpdG9sYWsgd2FsYXUgbmFtYW55YSB0aWRhayBzZW5zaXRpZi4iIiIKICAgIG1vbmtleXBhdGNoLmNoZGlyKHRtcF9wYXRoKQogICAgbW9ua2V5cGF0Y2guc2V0ZW52KCJNVUZBS0FUX1dPUktTUEFDRV9ST09UUyIsIHN0cih0bXBfcGF0aCkpCiAgICAodG1wX3BhdGggLyAiYm9sZWgudHh0Iikud3JpdGVfdGV4dCgib2siLCBlbmNvZGluZz0idXRmLTgiKQogICAgYXNzZXJ0IHJlYWRfZmlsZV9zYWZlKHN0cih0bXBfcGF0aCAvICJib2xlaC50eHQiKSlbIm9rIl0gaXMgVHJ1ZQogICAgb3V0c2lkZSA9IHRtcF9wYXRoLnBhcmVudCAvICJkaS1sdWFyLnR4dCIKICAgIG91dHNpZGUud3JpdGVfdGV4dCgicmFoYXNpYSIsIGVuY29kaW5nPSJ1dGYtOCIpCiAgICB0cnk6CiAgICAgICAgYXNzZXJ0IHJlYWRfZmlsZV9zYWZlKHN0cihvdXRzaWRlKSlbIm9rIl0gaXMgRmFsc2UKICAgIGZpbmFsbHk6CiAgICAgICAgb3V0c2lkZS51bmxpbmsobWlzc2luZ19vaz1UcnVlKQoKCmRlZiB0ZXN0X2ZpbGVzeXN0ZW1fcmVhZF9rcmVkZW5zaWFsX2NsaV9kaXRvbGFrKHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICAiIiJDMyAoUG9DIGF1ZGl0KTogdG9rZW4gQ29kZXgvR2l0SHViIENMSSAmIGt1bmNpIFNTSCBkaXRvbGFrLiIiIgogICAgbW9ua2V5cGF0Y2guY2hkaXIodG1wX3BhdGgpCiAgICBtb25rZXlwYXRjaC5zZXRlbnYoIk1VRkFLQVRfV09SS1NQQUNFX1JPT1RTIiwgc3RyKHRtcF9wYXRoKSkKICAgIGhvbWUgPSBQYXRoLmhvbWUoKQogICAgZm9yIHRhcmdldCBpbiAoaG9tZSAvICIuY29kZXgiIC8gImF1dGguanNvbiIsCiAgICAgICAgICAgICAgICAgICBob21lIC8gIi5zc2giIC8gImlkX2VkMjU1MTkiLAogICAgICAgICAgICAgICAgICAgaG9tZSAvICIuY29uZmlnIiAvICJnaCIgLyAiaG9zdHMueW1sIiwKICAgICAgICAgICAgICAgICAgIGhvbWUgLyAiLmNsYXVkZSIgLyAic2V0dGluZ3MuanNvbiIsCiAgICAgICAgICAgICAgICAgICBob21lIC8gIi5hd3MiIC8gImNyZWRlbnRpYWxzIiwKICAgICAgICAgICAgICAgICAgIGhvbWUgLyAiLmdpdC1jcmVkZW50aWFscyIpOgogICAgICAgIGFzc2VydCByZWFkX2ZpbGVfc2FmZShzdHIodGFyZ2V0KSlbIm9rIl0gaXMgRmFsc2UsIHRhcmdldAogICAgIyAqLnNxbGl0ZSBqdWdhIGRpYmxva2lyLCBiYWhrYW4gZGkgZGFsYW0gd29ya3NwYWNlLgogICAgZGIgPSB0bXBfcGF0aCAvICJkYXRhLnNxbGl0ZSIKICAgIGRiLndyaXRlX2J5dGVzKGIiU1FMaXRlIGZvcm1hdCAzXHgwMCIpCiAgICBhc3NlcnQgcmVhZF9maWxlX3NhZmUoc3RyKGRiKSlbIm9rIl0gaXMgRmFsc2UKCgpkZWYgdGVzdF9maWxlc3lzdGVtX3JlYWRfc3ltbGlua19kaXRvbGFrKHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICAiIiJDMzogc3ltbGluayAoZmlsZSBtYXVwdW4gZm9sZGVyKSB0aWRhayBib2xlaCBkaWJhY2EuIiIiCiAgICBtb25rZXlwYXRjaC5jaGRpcih0bXBfcGF0aCkKICAgIG1vbmtleXBhdGNoLnNldGVudigiTVVGQUtBVF9XT1JLU1BBQ0VfUk9PVFMiLCBzdHIodG1wX3BhdGgpKQogICAgb3V0c2lkZSA9IHRtcF9wYXRoLnBhcmVudCAvICJ0YXJnZXQtcmFoYXNpYS50eHQiCiAgICBvdXRzaWRlLndyaXRlX3RleHQoInJhaGFzaWEiLCBlbmNvZGluZz0idXRmLTgiKQogICAgbGluayA9IHRtcF9wYXRoIC8gImxpbmsudHh0IgogICAgdHJ5OgogICAgICAgIGxpbmsuc3ltbGlua190byhvdXRzaWRlKQogICAgICAgIGFzc2VydCByZWFkX2ZpbGVfc2FmZShzdHIobGluaykpWyJvayJdIGlzIEZhbHNlCiAgICAgICAgbGlua19kaXIgPSB0bXBfcGF0aCAvICJsaW5rZGlyIgogICAgICAgIGxpbmtfZGlyLnN5bWxpbmtfdG8odG1wX3BhdGgucGFyZW50LCB0YXJnZXRfaXNfZGlyZWN0b3J5PVRydWUpCiAgICAgICAgYXNzZXJ0IHJlYWRfZmlsZV9zYWZlKHN0cihsaW5rX2RpciAvICJ0YXJnZXQtcmFoYXNpYS50eHQiKSlbIm9rIl0gaXMgRmFsc2UKICAgIGZpbmFsbHk6CiAgICAgICAgb3V0c2lkZS51bmxpbmsobWlzc2luZ19vaz1UcnVlKQoKCmRlZiB0ZXN0X3J1bl9pZF90cmF2ZXJzYWxfZGl0b2xha19zZW11YV9waW50dSh0bXBfcGF0aCwgbW9ua2V5cGF0Y2gpOgogICAgIiIiTTEyOiBydW5faWQ9Jy4uJyBkaXRvbGFrIGRpIHJ1bm5lciwgTUNQIGdhdGVfcmVwb3J0LCBkYW4gd2ViLiIiIgogICAgbW9ua2V5cGF0Y2guY2hkaXIodG1wX3BhdGgpCiAgICBhc3NlcnQgcmVhZF9ydW4oIi4uIikgaXMgTm9uZQogICAgYXNzZXJ0IHJlYWRfcnVuKCIuLi9ldmlsIikgaXMgTm9uZQogICAgYXNzZXJ0IHJlYWRfcnVuKCIiKSBpcyBOb25lCiAgICBmcm9tIG11ZmFrYXQubWNwX3NlcnZlci50b29scyBpbXBvcnQgZ2F0ZV9yZXBvcnRfZm9yX3J1bgoKICAgIGFzc2VydCBnYXRlX3JlcG9ydF9mb3JfcnVuKCIuLiIpWyJvayJdIGlzIEZhbHNlCiAgICBhc3NlcnQgZ2F0ZV9yZXBvcnRfZm9yX3J1bigiYS9iIilbIm9rIl0gaXMgRmFsc2UKICAgIGZyb20gZmFzdGFwaS50ZXN0Y2xpZW50IGltcG9ydCBUZXN0Q2xpZW50CgogICAgZnJvbSBtdWZha2F0LndlYi5hcHAgaW1wb3J0IGFwcAoKICAgIGNsaWVudCA9IFRlc3RDbGllbnQoYXBwLCByYWlzZV9zZXJ2ZXJfZXhjZXB0aW9ucz1GYWxzZSkKICAgIGFzc2VydCBjbGllbnQuZ2V0KCIvYXBpL3J1bnMvLi4iKS5zdGF0dXNfY29kZSBpbiAoNDAwLCA0MDQpCiAgICBhc3NlcnQgY2xpZW50LmdldCgiL2FwaS9ydW5zLyUyRSUyRSIpLnN0YXR1c19jb2RlIGluICg0MDAsIDQwNCkKCgpkZWYgdGVzdF9uYW1hX3Byb3ZpZGVyX2NvbmZpZ19zYW1hX2Rlbmdhbl9hZGFwdGVyKCk6CiAgICAiIiJDaGF0R1BUIEk6IGNvbmZpZyBtZW1ha2FpICdvcGVucm91dGVyJyAmICdnZW1pbmknIChidWthbgogICAgb3BlbnJvdXRlcl9mcmVlL2dlbWluaV9hcGkpIGRhbiBydW5uZXIgbWVtYWthaW55YS4iIiIKICAgIGltcG9ydCB5YW1sCgogICAgY29uZmlnX3BhdGggPSBQYXRoKF9fZmlsZV9fKS5yZXNvbHZlKCkucGFyZW50LnBhcmVudCAvICJjb25maWciIC8gInByb3ZpZGVycy55YW1sIgogICAgZGF0YSA9IHlhbWwuc2FmZV9sb2FkKGNvbmZpZ19wYXRoLnJlYWRfdGV4dChlbmNvZGluZz0idXRmLTgiKSkKICAgIGFzc2VydCAib3BlbnJvdXRlciIgaW4gZGF0YVsiYWRhcHRlcnMiXQogICAgYXNzZXJ0ICJnZW1pbmkiIGluIGRhdGFbImFkYXB0ZXJzIl0KICAgIGFzc2VydCAib3BlbnJvdXRlcl9mcmVlIiBub3QgaW4gZGF0YVsiYWRhcHRlcnMiXQogICAgYXNzZXJ0ICJnZW1pbmlfYXBpIiBub3QgaW4gZGF0YVsiYWRhcHRlcnMiXQogICAgZnJvbSBtdWZha2F0LnByb3ZpZGVyX3JlZ2lzdHJ5IGltcG9ydCBkZWZhdWx0X3JlZ2lzdHJ5CgogICAgcmVnaXN0cnkgPSBkZWZhdWx0X3JlZ2lzdHJ5KCkKICAgIGFzc2VydCByZWdpc3RyeS5nZXQoIm9wZW5yb3V0ZXIiKSBpcyBub3QgTm9uZQogICAgYXNzZXJ0IHJlZ2lzdHJ5LmdldCgiZ2VtaW5pIikgaXMgbm90IE5vbmUKICAgIGFzc2VydCByZWdpc3RyeS5nZXQoIm9wZW5yb3V0ZXJfZnJlZSIpIGlzIE5vbmUKICAgIGFzc2VydCByZWdpc3RyeS5nZXQoImdlbWluaV9hcGkiKSBpcyBOb25lCgoKZGVmIHRlc3RfbWV0YV9hcGlfbmVlZHNfcG9saWN5X3Jldmlld19idWthbl9tdXNlX3NwYXJrKCk6CiAgICAiIiJDaGF0R1BUIEk6IG1ldGFfYXBpL2xsYW1hLTQtbWF2ZXJpY2sgVElEQUsgZGlrbGFpbSBzZWJhZ2FpIE11c2UgU3BhcmsuIiIiCiAgICBmcm9tIG11ZmFrYXQucHJvdmlkZXJfcmVnaXN0cnkgaW1wb3J0IGRlZmF1bHRfcmVnaXN0cnkKCiAgICBtZXRhID0gZGVmYXVsdF9yZWdpc3RyeSgpLmdldCgibWV0YV9hcGkiKQogICAgYXNzZXJ0IG1ldGEgaXMgbm90IE5vbmUKICAgIGFzc2VydCBtZXRhLnN0YXR1cyA9PSAibmVlZHNfcG9saWN5X3JldmlldyIKCgpkZWYgdGVzdF93ZWJfbG9jYWxfb25seV90YW5wYV90b2tlbl9kYW5fYXV0aF9iaWxhX3Rva2VuX2Rpc2V0KAogICAgICAgIHRtcF9wYXRoLCBtb25rZXlwYXRjaCk6CiAgICAiIiJXZWI6IGxvY2FsLW9ubHkgYmlsYSBNVUZBS0FUX1dFQl9UT0tFTiBrb3Nvbmc7IGJpbGEgZGlzZXQsIFBPU1QKICAgIC9hcGkvZGViYXRlIHRhbnBhIHRva2VuIHlhbmcgYmVuYXIgLT4gNDAxLiIiIgoKICAgIGZyb20gZmFzdGFwaS50ZXN0Y2xpZW50IGltcG9ydCBUZXN0Q2xpZW50CgogICAgZnJvbSBtdWZha2F0LndlYi5hcHAgaW1wb3J0IGFwcAoKICAgIG1vbmtleXBhdGNoLmNoZGlyKHRtcF9wYXRoKQogICAgbW9ua2V5cGF0Y2guZGVsZW52KCJNVUZBS0FUX1dFQl9UT0tFTiIsIHJhaXNpbmc9RmFsc2UpCiAgICBjbGllbnQgPSBUZXN0Q2xpZW50KGFwcCwgcmFpc2Vfc2VydmVyX2V4Y2VwdGlvbnM9RmFsc2UpCiAgICBhc3NlcnQgY2xpZW50LmdldCgiL2hlYWx0aCIpLmpzb24oKVsibG9jYWxfb25seSJdIGlzIFRydWUKICAgIGFzc2VydCBjbGllbnQuZ2V0KCIvaGVhbHRoIikuanNvbigpWyJhdXRoX3JlcXVpcmVkIl0gaXMgRmFsc2UKCiAgICBtb25rZXlwYXRjaC5zZXRlbnYoIk1VRkFLQVRfV0VCX1RPS0VOIiwgInRva2VuLXJhaGFzaWEtdWppIikKICAgIGFzc2VydCBjbGllbnQuZ2V0KCIvaGVhbHRoIikuanNvbigpWyJsb2NhbF9vbmx5Il0gaXMgRmFsc2UKICAgIGFzc2VydCBjbGllbnQuZ2V0KCIvaGVhbHRoIikuanNvbigpWyJhdXRoX3JlcXVpcmVkIl0gaXMgVHJ1ZQogICAgcmVzID0gY2xpZW50LnBvc3QoIi9hcGkvZGViYXRlIiwganNvbj17InRvcGljIjogInRlcyIsICJwcm92aWRlciI6ICJtb2NrIn0pCiAgICBhc3NlcnQgcmVzLnN0YXR1c19jb2RlID09IDQwMQogICAgcmVzID0gY2xpZW50LnBvc3QoIi9hcGkvZGViYXRlIiwganNvbj17InRvcGljIjogInRlcyIsICJwcm92aWRlciI6ICJtb2NrIn0sCiAgICAgICAgICAgICAgICAgICAgICBoZWFkZXJzPXsiWC1NVUZBS0FULVRPS0VOIjogInNhbGFoIn0pCiAgICBhc3NlcnQgcmVzLnN0YXR1c19jb2RlID09IDQwMQo=
+"""Test regresi audit 20 Nov 2026: C3, M1, M12, ChatGPT I + web auth.
+
+- C3: filesystem_read hanya di dalam allowlist workspace; symlink
+  ditolak; ~/.codex/auth.json, ~/.ssh/id_ed25519, ~/.config/gh/hosts.yml
+  dan *.sqlite ditolak (PoC audit).
+- M1: SHELL_META berisi newline/CR asli — `ls runs` dan
+  `pytest tests/test_main.py` tidak lagi ditolak karena huruf n/r.
+- M12: run_id=".." ditolak di semua pintu masuk (web & MCP).
+- ChatGPT I: nama provider config == adapter (openrouter, gemini);
+  meta_api berstatus needs_policy_review (bukan klaim Muse Spark).
+- Web: local-only tanpa token; bila MUFAKAT_WEB_TOKEN diset, POST
+  /api/debate wajib header X-MUFAKAT-TOKEN.
+"""
+
+from __future__ import annotations
+
+from pathlib import Path
+
+from mufakat.mcp_server.tools import SHELL_META, read_file_safe, run_terminal_command
+from mufakat.runner import read_run
+
+
+def test_shell_meta_berisi_newline_asli_bukan_huruf(tmp_path, monkeypatch):
+    """M1: SHELL_META berisi '\\n' dan '\\r' asli, bukan huruf n/r/'\\'."""
+    assert "\n" in SHELL_META
+    assert "\r" in SHELL_META
+    assert "n" not in SHELL_META
+    assert "r" not in SHELL_META
+    assert "\\" not in SHELL_META
+    monkeypatch.chdir(tmp_path)
+    assert run_terminal_command("ls runs")["ok"] is True
+    # Perintah pytest ditolak karena tidak di allowlist (C1), BUKAN
+    # karena metakarakter — pesannya harus menyebut allowlist.
+    denied = run_terminal_command("pytest tests/test_main.py")
+    assert denied["ok"] is False
+    assert "pytest" in denied["error"].lower() or "allowlist" in denied["error"].lower()
+    # Metakarakter asli tetap ditolak.
+    assert run_terminal_command("ls; echo x")["ok"] is False
+    assert run_terminal_command("echo halo\ndunia")["ok"] is False
+
+
+def test_filesystem_read_hanya_allowlist_workspace(tmp_path, monkeypatch):
+    """C3: file di luar workspace ditolak walau namanya tidak sensitif."""
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setenv("MUFAKAT_WORKSPACE_ROOTS", str(tmp_path))
+    (tmp_path / "boleh.txt").write_text("ok", encoding="utf-8")
+    assert read_file_safe(str(tmp_path / "boleh.txt"))["ok"] is True
+    outside = tmp_path.parent / "di-luar.txt"
+    outside.write_text("rahasia", encoding="utf-8")
+    try:
+        assert read_file_safe(str(outside))["ok"] is False
+    finally:
+        outside.unlink(missing_ok=True)
+
+
+def test_filesystem_read_kredensial_cli_ditolak(tmp_path, monkeypatch):
+    """C3 (PoC audit): token Codex/GitHub CLI & kunci SSH ditolak."""
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setenv("MUFAKAT_WORKSPACE_ROOTS", str(tmp_path))
+    home = Path.home()
+    for target in (home / ".codex" / "auth.json",
+                   home / ".ssh" / "id_ed25519",
+                   home / ".config" / "gh" / "hosts.yml",
+                   home / ".claude" / "settings.json",
+                   home / ".aws" / "credentials",
+                   home / ".git-credentials"):
+        assert read_file_safe(str(target))["ok"] is False, target
+    # *.sqlite juga diblokir, bahkan di dalam workspace.
+    db = tmp_path / "data.sqlite"
+    db.write_bytes(b"SQLite format 3\x00")
+    assert read_file_safe(str(db))["ok"] is False
+
+
+def test_filesystem_read_symlink_ditolak(tmp_path, monkeypatch):
+    """C3: symlink (file maupun folder) tidak boleh dibaca."""
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setenv("MUFAKAT_WORKSPACE_ROOTS", str(tmp_path))
+    outside = tmp_path.parent / "target-rahasia.txt"
+    outside.write_text("rahasia", encoding="utf-8")
+    link = tmp_path / "link.txt"
+    try:
+        link.symlink_to(outside)
+        assert read_file_safe(str(link))["ok"] is False
+        link_dir = tmp_path / "linkdir"
+        link_dir.symlink_to(tmp_path.parent, target_is_directory=True)
+        assert read_file_safe(str(link_dir / "target-rahasia.txt"))["ok"] is False
+    finally:
+        outside.unlink(missing_ok=True)
+
+
+def test_run_id_traversal_ditolak_semua_pintu(tmp_path, monkeypatch):
+    """M12: run_id='..' ditolak di runner, MCP gate_report, dan web."""
+    monkeypatch.chdir(tmp_path)
+    assert read_run("..") is None
+    assert read_run("../evil") is None
+    assert read_run("") is None
+    from mufakat.mcp_server.tools import gate_report_for_run
+
+    assert gate_report_for_run("..")["ok"] is False
+    assert gate_report_for_run("a/b")["ok"] is False
+    from fastapi.testclient import TestClient
+
+    from mufakat.web.app import app
+
+    client = TestClient(app, raise_server_exceptions=False)
+    assert client.get("/api/runs/..").status_code in (400, 404)
+    assert client.get("/api/runs/%2E%2E").status_code in (400, 404)
+
+
+def test_nama_provider_config_sama_dengan_adapter():
+    """ChatGPT I: config memakai 'openrouter' & 'gemini' (bukan
+    openrouter_free/gemini_api) dan runner memakainya."""
+    import yaml
+
+    config_path = Path(__file__).resolve().parent.parent / "config" / "providers.yaml"
+    data = yaml.safe_load(config_path.read_text(encoding="utf-8"))
+    assert "openrouter" in data["adapters"]
+    assert "gemini" in data["adapters"]
+    assert "openrouter_free" not in data["adapters"]
+    assert "gemini_api" not in data["adapters"]
+    from mufakat.provider_registry import default_registry
+
+    registry = default_registry()
+    assert registry.get("openrouter") is not None
+    assert registry.get("gemini") is not None
+    assert registry.get("openrouter_free") is None
+    assert registry.get("gemini_api") is None
+
+
+def test_meta_api_needs_policy_review_bukan_muse_spark():
+    """ChatGPT I: meta_api/llama-4-maverick TIDAK diklaim sebagai Muse Spark."""
+    from mufakat.provider_registry import default_registry
+
+    meta = default_registry().get("meta_api")
+    assert meta is not None
+    assert meta.status == "needs_policy_review"
+
+
+def test_web_local_only_tanpa_token_dan_auth_bila_token_diset(
+        tmp_path, monkeypatch):
+    """Web: local-only bila MUFAKAT_WEB_TOKEN kosong; bila diset, POST
+    /api/debate tanpa token yang benar -> 401."""
+
+    from fastapi.testclient import TestClient
+
+    from mufakat.web.app import app
+
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.delenv("MUFAKAT_WEB_TOKEN", raising=False)
+    client = TestClient(app, raise_server_exceptions=False)
+    assert client.get("/health").json()["local_only"] is True
+    assert client.get("/health").json()["auth_required"] is False
+
+    monkeypatch.setenv("MUFAKAT_WEB_TOKEN", "token-rahasia-uji")
+    assert client.get("/health").json()["local_only"] is False
+    assert client.get("/health").json()["auth_required"] is True
+    res = client.post("/api/debate", json={"topic": "tes", "provider": "mock"})
+    assert res.status_code == 401
+    res = client.post("/api/debate", json={"topic": "tes", "provider": "mock"},
+                      headers={"X-MUFAKAT-TOKEN": "salah"})
+    assert res.status_code == 401
