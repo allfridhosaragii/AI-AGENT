@@ -1,1 +1,233 @@
-IyBNVUZBS0FUIFJvb20g4oCUIENocm9tZSBFeHRlbnNpb24gKEJyb3dzZXItT25seSwgTWFudWFsIEhhbmRvZmYpCgo+ICoqU3RhdHVzICgyMCBOb3YgMjAyNiwgc2V0ZWxhaCBwZXJiYWlrYW4gYXVkaXQpOioqIGVrc3RlbnNpICoqYmlzYSBkaS1idWlsZCBkYW4KPiBsb2xvcyB0eXBlY2hlY2sgKyB0ZXN0Kiog4oCUIGxpaGF0ICJIYXNpbCB2ZXJpZmlrYXNpIiBkaSBiYXdhaCB1bnR1ayBwZXJpbnRhaCwKPiB2ZXJzaSwgZGFuIG91dHB1dCBhcGEgYWRhbnlhLiBNb2RlIHV0YW1hIGFkYWxhaCAqKk1hbnVhbCBIYW5kb2ZmKioKPiAoYnJvd3Nlci1vbmx5KTogcGVuZ2d1bmEgbWVueWFsaW4gcHJvbXB0LCBtZW5lbXBlbCBkaSB0YWIgcmVzbWkgcHJvdmlkZXIsCj4gbWVuZ2lyaW0gc2VuZGlyaSwgbGFsdSBtZW5lbXBlbCBqYXdhYmFuIGtlbWJhbGkga2Ugc2lkZSBwYW5lbC4KPgo+ICoqQXNzaXN0ZWQgRmlsbCBkYW4gY29udGVudCBzY3JpcHQgRElIQVBVUyBkYXJpIE1WUCAocHV0YXJhbiAyKS4qKgo+IFRvbWJvbCAiQW1iaWwgamF3YWJhbiB0ZXJha2hpciBkYXJpIHRhYiIgZGloYXB1cyBkYXJpIHNpZGUgcGFuZWw7Cj4gaGFuZGxlciBgRklMTF9JTlBVVGAgLyBgUkVBRF9MQVNUX1JFUExZYCBkaWhhcHVzIGRhcmkgYmFja2dyb3VuZDsKPiA2IGNvbnRlbnQgc2NyaXB0IGRpcGluZGFoIGtlIGBzcmMvcGhhc2UyLW9wdGluL2NvbnRlbnQtc2NyaXB0cy9gIChidWthbgo+IGVudHJ5cG9pbnQgV1hULCB0aWRhayBkaS1idWlsZCBrZSBtYW5pZmVzdCk7IGBob3N0X3Blcm1pc3Npb25zYCA2IGRvbWFpbgo+IGRpaGFwdXMgZGFyaSBgd3h0LmNvbmZpZy50c2AuIE5hdGl2ZSBNZXNzYWdpbmcgKExvY2FsIFJ1bm5lcikgdGV0YXAgYWRhCj4gc2ViYWdhaSBqYWx1ciBGYXNlIDIgeWFuZyB0ZXJwaXNhaC4gQWx1ciB1dGFtYSB0aWRhayBwZXJuYWggbWVtYmFjYSBET00KPiBzaXR1cyBBSSBkYW4gdGlkYWsgcGVybmFoIG1lbmdpc2kgaW5wdXQg4oCUIGhhbnlhIE1hbnVhbCBIYW5kb2ZmLgo+Cj4gKipSaXNpa28gdGVyYnVrYSAocHV0YXJhbiAyKTogSW5kZXhlZERCIFRBTlBBIGVua3JpcHNpIGFwbGlrYXNpLioqCj4gRGF0YSByYXBhdCAoaWRlLCBqYXdhYmFuIGltcG9yLCBzdGF0ZSkgdGVyc2ltcGFuIHBsYWludGV4dCBkaSBJbmRleGVkREIKPiAoRGV4aWUpIGRhbiBgY2hyb21lLnN0b3JhZ2UubG9jYWxgIOKAlCBzaWFwYSBwdW4geWFuZyBiaXNhIG1lbWJhY2EgcHJvZmlsCj4gYnJvd3NlciBiaXNhIG1lbWJhY2FueWEuIEluaSBCVUtBTiBrbGFpbSB0ZXJlbmtyaXBzaTsgZW5rcmlwc2kKPiBhcGxpa2FzaSB0aWRhayBkaWxha3VrYW4gZGkgTVZQIChidXR1aCBtYW5hamVtZW4ga3VuY2kgeWFuZyBhbWFuLCBkaQo+IGx1YXIgbGluZ2t1cCBNVlApLiBNaXRpZ2FzaTogamFuZ2FuIG1hc3Vra2FuIGtyZWRlbnNpYWwgKHNlY3JldCBzY2FubmVyCj4gbWVtYmxva2lyIHNlYmVsdW0gc2ltcGFuKSBkYW4gaGFwdXMgZGF0YSBsZXdhdCB0b21ib2wgIkhhcHVzIHNlbHVydWgKPiBkYXRhIHJhcGF0IiBkaSBzaWRlIHBhbmVsLiBMaWhhdCAiUmlzaWtvIHRlcmJ1a2EiIGRpIGJhd2FoLgo+Cj4gKipZYW5nIEJFTFVNIHRlcnZlcmlmaWthc2k6Kiogc2VsZWN0b3Igc2l0dXMgKGBzZWxlY3RvcnMuanNvbmAsCj4gYGxhc3RWZXJpZmllZDogImJlbHVtIHRlcnZlcmlmaWthc2kiYCkg4oCUIGJlbHVtIHBlcm5haCBkaXVqaSBkaSBzaXR1cyBBSQo+IGFzbGksIGRhbiB0aWRhayBhZGEgQ2hyb21lICsgbG9naW4gcHJvdmlkZXIgZGkgVk0gaW5pIHVudHVrIG1lbmd1amlueWEuCj4gU2FtcGFpIHRlcnZlcmlmaWthc2ksIGV4dGVuc2lvbiBqYXR1aCBrZSBtb2RlIE1hbnVhbCBDb3B5IGJpbGEgU2VsZWN0b3IKPiBEb2N0b3IgbWVuYW5kYWkgYWRhcHRlciBydXNhay4gSmFuZ2FuIG1lbmdhbmdnYXAgZmxvdyBlbmQtdG8tZW5kIGRpIHNpdHVzCj4gYXNsaSBzdWRhaCBqYWxhbiBzZWJlbHVtIGRpdWppIGRpIENocm9tZSBzdW5nZ3VoYW4gZGVuZ2FuIGxvZ2luIHByb3ZpZGVyLgoKIyMgSGFzaWwgdmVyaWZpa2FzaSAoZGlqYWxhbmthbiAyMCBOb3YgMjAyNiwgMTI6NDUgVVRDKQoKTGluZ2t1bmdhbjogTm9kZSB2MjQuMjIuMSwgbnBtIDEwLjkuNCwgV1hUIDAuMTkuMjksIFR5cGVTY3JpcHQgNS54LCB2aXRlc3QgMi4xLjkuCmBwbnBtYCB0aWRhayB0ZXJzZWRpYSBkaSBWTSBpbmkg4oCUIGRpcGFrYWkgYG5wbWAgKHNlc3VhaSB0dWdhcykuCgp8IFBlcmludGFoIHwgSGFzaWwgfAp8LS0tfC0tLXwKfCBgbnBtIGluc3RhbGxgIChzZWJlbHVtIHBlcmJhaWthbikgfCDinYwgYEVUQVJHRVQ6IE5vIG1hdGNoaW5nIHZlcnNpb24gZm91bmQgZm9yIEB0eXBlcy90dXJuZG93bkBeNC4wLjBgIHwKfCBgbnBtIGluc3RhbGxgIChzZXRlbGFoIGBAdHlwZXMvdHVybmRvd25gIOKGkiBgXjUuMC41YCkgfCDinIUgYGFkZGVkIDU0MCBwYWNrYWdlc2A7IGxvY2tmaWxlIGBwYWNrYWdlLWxvY2suanNvbmAgZGlidWF0ICgyNzUgS0IpIHwKfCBgbnBtIHJ1biB0eXBlY2hlY2tgIChgd3h0IHByZXBhcmUgJiYgdHNjIC0tbm9FbWl0YCkgfCDinIUgZXhpdCAwLCB0YW5wYSBlcnJvciB8CnwgYG5wbSB0ZXN0YCAoYHZpdGVzdCBydW5gKSB8IOKchSBgVGVzdCBGaWxlcyAyIHBhc3NlZCAoMilgLCBgVGVzdHMgMzMgcGFzc2VkICgzMylgIOKAlCAxMyBsYW1hICsgMjAgcmVncmVzaSBhdWRpdCBiYXJ1IHwKfCBgbnBtIHJ1biBidWlsZGAgKGB3eHQgYnVpbGRgKSB8IOKchSBgQnVpbHQgZXh0ZW5zaW9uIGluIDQuNyBzYCwgdG90YWwgNTU0Ljg4IGtCOyBtYW5pZmVzdCBNVjMgKyA2IGNvbnRlbnQgc2NyaXB0ICsgc2lkZSBwYW5lbCArIGJhY2tncm91bmQgU1cgfAoKIyMgUGVyYmFpa2FuIGF1ZGl0IHB1dGFyYW4gMiAoMjAyNi0xMS0yMCkKCi0gKipONToqKiBgbGFiZWxNYXBgIHBlciByb25kZSBkaSBEZXhpZSAoYHJ1bnMubGFiZWxNYXBbcm91bmRdYCkg4oCUIGRpYnVhdAogIFNFS0FMSSBzYWF0IG1hc3VrIGZhc2Uga3JpdGlrLCBkaXBha2FpIGRpIGtyaXRpay9yYXBhdC9zcGVzaWZpa2FzaTsKICBwZW1lbmFuZyBCb3JkYSAobGFiZWwgQS9CL0MpIGRpcGV0YWthbiBsZXdhdCBsYWJlbE1hcCBrZSBwcm9wb3NhbCB5YW5nCiAgYmVuYXIgKGByZXNvbHZlV2lubmVyUHJvcG9zYWxgKTsgdGFucGEgbGFiZWxNYXAsIHNwZXNpZmlrYXNpIGRpdG9sYWsg4oCUCiAgSkFOR0FOIGZhbGxiYWNrIGtlIHVzdWxhbiBwZXJ0YW1hLiBQcm9tcHQga3JpdGlrIHRhbnBhIG5hbWEgcHJvdmlkZXIuCi0gKipONiArIEdQVC0xOioqIHNhdHUgc3VtYmVyIGtlYmVuYXJhbiA9IHN0YXRlIG1hY2hpbmUgYmFja2dyb3VuZC4gU2lkZQogIHBhbmVsIG1lbmctYXdhaXQgaGFzaWwgdHJhbnNpc2kgZGFuIG1lbmFtcGlsa2FuIGVycm9ybnlhOyByb25kZSBiYXJ1CiAgbGV3YXQgZXZlbnQgYHJvbmRlX2JhcnVgIChgZGViYXRfdWxhbmdgIOKGkiBgdXN1bGFuX3IxYCwgcm9uZGUgKzEpOwogIGV2ZW50IGByZXNldGAgcGFkYSAiTXVsYWkgcmFwYXQiIChyYXBhdCBrZWR1YSBiaXNhIGRpbXVsYWkpLiBUZXN0CiAgaW50ZWdyYXNpIDMgcm9uZGUgcGVudWggZGVuZ2FuIHVydXRhbiBldmVudCBzaWRlIHBhbmVsIHBlcnNpcy4KLSAqKkdQVC0yOioqIGJ1a2EgdWxhbmcgZXh0ZW5zaW9uIG1lbXVsaWhrYW4gSVNJIElERSAoKyBwZXNlcnRhLCBsYWJlbE1hcCkKICBkYXJpIGRhdGEgcmFwYXQsIGJ1a2FuIGhhbnlhIElEIGRhbiBwZXNhbi4KLSAqKk4xMDoqKiBJRCBwcm92aWRlciBNdXNlIGRpc2FtYWthbiBqYWRpIGBtdXNlYCBkaSBVSSwgYHNlbGVjdG9ycy5qc29uYCwKICBhZGFwdGVyLCBkYW4gY29udGVudCBzY3JpcHQgKGBtZXRhYWlgIGRpaGFwdXMpLgotICoqTjEzOioqIGphd2FiYW4gQUkgZGlzaXNpcGthbiBoYW55YSBzZWJhZ2FpIERBVEEg4oCUIGRlbGltaXRlcgogIGAtLS0gREFUQSBEQVJJIEFJIC4uLiAtLS1gICsgaW5zdHJ1a3NpIGVrc3BsaXNpdCwgaXNpIGhhbnlhCiAgc3VtbWFyeS9jbGFpbXMgaGFzaWwgcGFyc2UgKGBlbmdpbmUvcHJvbXB0R3VhcmQudHNgKS4KLSAqKk4xNDoqKiBzZWNyZXQgc2Nhbm5lciBUUyBtZW5hbmdrYXAgR2l0TGFiIGBnbHBhdC1gIGRhbiBIdWdnaW5nRmFjZQogIGBoZl9gIChibG9jaykuIENhdGF0YW46IFB5dGhvbiBgc3JjL211ZmFrYXQvcm9vbS9zZWNyZXRfc2Nhbi5weWAgQkVMVU0KICBwdW55YSBrZWR1YSBwb2xhIGluaSDigJQgcGFyaXRhcyBwZW51aCBidXR1aCBwZXJiYWlrYW4gZGkgc2lzaSBQeXRob24uCi0gKipHUFQtNDoqKiBzZWNyZXQgc2NhbiBTRUJFTFVNIGBkYi5ydW5zLmFkZCgpYDsgaWRlIGJlcmtyZWRlbnNpYWwgdGlkYWsKICB0ZXJzaW1wYW47IHBlbmdndW5hIG1lbWlsaWggaGFwdXMgb3RvbWF0aXMgKGByZWRhY3RUZXh0YCkgYXRhdSBzdW50aW5nCiAgbWFudWFsOyBub3RpY2UgaGFueWEgbWVueWVidXQgbmFtYSBwb2xhLCBidWthbiBuaWxhaSBrcmVkZW5zaWFsLgotICoqR1BULTY6KiogbGloYXQgc3RhdHVzIGRpIGF0YXMg4oCUIGNvbnRlbnQgc2NyaXB0IGtlbHVhciBkYXJpIE1WUC4KLSAqKlRhYmVsIHRhbWJhaGFuOioqIHRvbWJvbCAiSGFwdXMgc2VsdXJ1aCBkYXRhIHJhcGF0IiBkaSBzaWRlIHBhbmVsCiAgKERleGllICsgY2hyb21lLnN0b3JhZ2UgKyByZXNldCBtZXNpbik7IFNlbGVjdG9yIERvY3RvciBtZW1ha2FpIHNpdHVzCiAgZGFyaSBVUkwgdGFiIGFrdGlmIHlhbmcgYmVuYXItYmVuYXIgZGljZWsgKGJ1a2FuIGBzZWxlY3RlZFswXWApOwogIGxpc3RlbmVyIGJhY2tncm91bmQgbWVub2xhayBgUk9PTV9UUkFOU0lUSU9OYCBkYXJpIGNvbnRlbnQgc2NyaXB0CiAgKGBzZW5kZXIudGFiYCk7IEluZGV4ZWREQiB0YW5wYSBlbmtyaXBzaSBkaWRva3VtZW50YXNpa2FuIHNlYmFnYWkKICByaXNpa28gdGVyYnVrYSAoYnVrYW4ga2xhaW0gdGVyZW5rcmlwc2kpLgotICoqTDU6KiogcGF0Y2ggYXBwbGllciBydW5uZXIgKGBydW5uZXIvbXVmYWthdF9ydW5uZXIvd29ya3RyZWUucHlgKSB0aWRhawogIGxhZ2kgbWVuYW1iYWggYFxuYCBkaSBzZXRpYXAgYmFyaXMgYCtgOiBwYWthaSBFT0wgZmlsZSBhc2xpIChDUkxGCiAgZGlwZXJ0YWhhbmthbiwgYmFjYS90dWxpcyBieXRlcyB0YW5wYSB0cmFuc2xhc2kgbmV3bGluZSkgZGFuIGhvcm1hdGkKICBwZW5hbmRhIGBcIE5vIG5ld2xpbmUgYXQgZW5kIG9mIGZpbGVgLiBUZXN0IHB5dGVzdCA0IGthc3VzIGJhcnUgKyAxCiAgZWtzcGVrdGFzaSBsYW1hIGRpcGVyYmFpa2kga2Ugc2VtYW50aWsgZGlmZiBzdGFuZGFyLgotICoqLmdpdGlnbm9yZToqKiB0YW1iYWggYCEuZW52LmV4YW1wbGVgIChwb2xhIGAuZW52LipgIHNlYmVsdW1ueWEgaWt1dAogIG1lbmdhYmFpa2FuIGAuZW52LmV4YW1wbGVgKS4KCiMjIFBlcmJhaWthbiBhdWRpdCAyMDI2LTExLTIwIChyaW5na2FzOyBkZXRhaWwgcGVyIGZpbGUgZGkgYmF3YWgpCgotICoqSDI6KiogYEB0eXBlcy90dXJuZG93bmAg4oaSIGBeNS4wLjVgOyBgc3JjRGlyOiAnc3JjJ2AgZGkgYHd4dC5jb25maWcudHNgOwogIGB0c2NvbmZpZy5qc29uYCBleHRlbmRzIGAuLy53eHQvdHNjb25maWcuanNvbmAgKCsgYGpzeDogcmVhY3QtanN4YCk7IHNlbXVhCiAgYCouY29udGVudC50c2AgZGlidW5na3VzIGBleHBvcnQgZGVmYXVsdCBkZWZpbmVDb250ZW50U2NyaXB0KHsgbWF0Y2hlcywgbWFpbiB9KWA7CiAgYGJhY2tncm91bmQudHNgIGRpYnVuZ2t1cyBgZXhwb3J0IGRlZmF1bHQgZGVmaW5lQmFja2dyb3VuZCguLi4pYDsgQ0kgam9iCiAgYGV4dGVuc2lvbmAgZGkgcm9vdCBgLmdpdGh1Yi93b3JrZmxvd3MvY2kueW1sYCAocGFrYWkgYG5wbSBjaWAgKyBOb2RlIDI0KS4KICBGaWxlIHdvcmtmbG93IGRpIHJvb3QgcmVwbyAqKnRpZGFrIGJpc2EgZGktcHVzaCB2aWEgQVBJKiogKEdpdEh1YiBtZW1ibG9raXIKICB1cGxvYWQgd29ya2Zsb3cgdW50dWsgQXBwIHRhbnBhIGl6aW4gd29ya2Zsb3dzKSDigJQgdGFtYmFoa2FuIG1hbnVhbCB2aWEgd2ViCiAgR2l0SHViIGJpbGEgYmVsdW0gYWRhLgotICoqSDU6Kiogc2lkZSBwYW5lbCB0ZXJzYW1idW5nIHBlbnVoIOKAlCBhbHVyIElkZSDihpIgVXN1bGFuIOKGkiBLcml0aWsgc2lsYW5nIOKGkgogIFJhcGF0ICYgdm90aW5nIChCb3JkYSkg4oaSIFNwZXNpZmlrYXNpOyB0b21ib2wgU2ltcGFuIGphd2FiYW4gbWVueWltcGFuIGtlCiAgRGV4aWUgKGBkYi5tZXNzYWdlcy5hZGRgKSBkZW5nYW4gcHJvdmlkZXIvcm9uZGUvZmFzZSB0ZXJjYXRhdCBkYW4gYmFydQogIG1lbmFtcGlsa2FuICJkaXNpbXBhbiIgc2V0ZWxhaCBgYWRkYCBiZXJoYXNpbDsgYHJlY29yZFByb21wdGAgcGVyIHByb3ZpZGVyCiAgc2FhdCBwcm9tcHQgZGlzYWxpbi4gKFB1dGFyYW4gMjogIkFtYmlsIGphd2FiYW4gdGVyYWtoaXIgZGFyaSB0YWIiCiAgRElIQVBVUyBkYXJpIE1WUCDigJQgaW1wb3IgamF3YWJhbiBoYW55YSB0ZW1wZWwgbWFudWFsLikKLSAqKk0yOioqIHNlY3JldCBzY2FubmVyIFRTIGRpc2FtYWthbiBkZW5nYW4gUHl0aG9uICsgSldUOyBgLmVudmAgaGFueWEKICBwZXJpbmdhdGFuIChgc2V2ZXJpdHk6ICd3YXJuJ2ApLCBidWthbiBibG9raXI7IGltcG9yIGphd2FiYW4gZGktc2NhbgogIFNFQkVMVU0gZGlzaW1wYW4uCi0gKipNMzoqKiBwYXJzZXIgbWVuZ2l6aW5rYW4gYFxzKmAgc2V0ZWxhaCBganNvbmAgZGFuIGZhbGxiYWNrIG9iamVrIGB7Li4ufWAKICB0ZXJha2hpciB5YW5nIHZhbGlkIChpbm5lclRleHQgdGFucGEgcGFnYXIpOyBgcmVhZExhc3RSZXBseWAgbWVtYWthaSB0dXJuZG93bi4KLSAqKk00OioqIHJvbmRlIDMgdGFucGEgbXVmYWthdCDihpIgYHNwZXNpZmlrYXNpYCBkZW5nYW4gYGRpc3NlbnRgLCBidWthbiBlc2thbGFzaS4KLSAqKk01OioqIHN0YXRlIG1hY2hpbmUgZGlzaW1wYW4gcGVyc2lzdGVuIGRpIGBjaHJvbWUuc3RvcmFnZS5zZXNzaW9uYCArCiAgYGNocm9tZS5zdG9yYWdlLmxvY2FsYCAoYHN0b3JhZ2Uvcm9vbVN0YXRlLnRzYCksIGJ1a2FuIHZhcmlhYmVsIG1vZHVsIFNXLgotICoqTTY6Kiogc2VlZCBhbm9uaW1pc2FzaSBkYXJpIGBjcnlwdG8uZ2V0UmFuZG9tVmFsdWVzYCBwZXIgcm9uZGUgYmlsYSBzZWVkCiAgdGlkYWsgZGliZXJpa2FuLgotICoqTTc6Kioga3JpdGlrIGJsb2NraW5nIHB1bnlhIHN0YXR1cyBgcmVzb2x2ZWRgOyBgYXBwcm92ZVJhdGlvYCB0ZXJpa2F0IGtlCiAgcGVtZW5hbmcgQm9yZGEuCi0gKipNODoqKiAoUHV0YXJhbiAyOiBESUhBUFVTIGRhcmkgTVZQIOKAlCBgRklMTF9JTlBVVGAgZGFuIGNvbnRlbnQgc2NyaXB0CiAga2VsdWFyIGRhcmkgamFsdXIgdXRhbWE7IGxpaGF0IHN0YXR1cyBkaSBhdGFzLiBCaWxhIG1vZHVsIEZhc2UgMgogIGRpYWt0aWZrYW4ga2VtYmFsaSwgYEZJTExfSU5QVVRgIGhhcnVzIG1lbmNhcmkgdGFiIGJlcmRhc2Fya2FuIGhvc3QKICB5YW5nIGNvY29rIGRlbmdhbiBgc2l0ZWAgZGFuIG1lbmphbGFua2FuIHNlY3JldC1zY2FuICsgcGFjaW5nIHNlYmVsdW0KICBtZW5lcnVza2FuLikKLSAqKk05OioqIGBkZXRlY3RCbG9ja2VyYCBjZWsgZWxlbWVuIGJhbm5lci90b2FzdCBzcGVzaWZpayAoYHJhdGVMaW1pdEluZGljYXRvcmApLAogIGJ1a2FuIGBib2R5LmlubmVyVGV4dGA7IGBsb2dpbkluZGljYXRvcmAgKGVsZW1lbiBoYWxhbWFuIGxvZ2luKSBkaWJlZGFrYW4KICBkYXJpIGlucHV0IHJ1c2FrIChpbnB1dCBoaWxhbmcg4oaSIGJsb2NrZXIgYGVycm9yYCkuCi0gKipTZWxlY3RvciBEb2N0b3I6KiogYGxhc3RSZXBseUZvdW5kYCBoYXNpbCBwZW1lcmlrc2FhbiBueWF0YSBkYXJpIGNvbnRlbnQKICBzY3JpcHQsIGJ1a2FuIGhhcmRjb2RlIGB0cnVlYC4gKFB1dGFyYW4gMjogc2l0dXMgeWFuZyBkaWNlayBkaWFtYmlsIGRhcmkKICBVUkwgdGFiIGFrdGlmOyBkaSBNVlAgY29udGVudCBzY3JpcHQgdGlkYWsgYWt0aWYgc2VoaW5nZ2EgRG9jdG9yCiAgbWVsYXBvcmthbiBtb2R1bCBGYXNlIDIgYmVsdW0gYWt0aWYg4oCUIGJ1a2FuIG1lbmdrbGFpbSBhZGFwdGVyIE9LLikKCiMjIERpc2NsYWltZXIgVG9TIChDbGF1ZGUgwqcwLjQpCgo+ICJNZW5nb3RvbWFzaSB3ZWIgY2hhdCBiaXNhIG1lbGFuZ2dhciBLZXRlbnR1YW4gTGF5YW5hbiBwZW55ZWRpYSBBSS4gTVVGQUtBVCBSb29tCj4gZGlyYW5jYW5nIHNlbWktbWFudWFsIChBbmRhIHlhbmcgbWVuZWthbiBLaXJpbSkgdW50dWsgbWVtaW5pbWFsa2FuIHJpc2lrbywgdGV0YXBpCj4gcmlzaWtvIHBlbWJhdGFzYW4gYWt1biB0ZXRhcCBhZGEgZGFuIG1lbmphZGkgdGFuZ2d1bmcgamF3YWIgcGVuZ2d1bmEuIEd1bmFrYW4gYWt1bgo+IHNlbmRpcmksIHVudHVrIHByb3llayBzZW5kaXJpLCBkZW5nYW4ga2VjZXBhdGFuIHdhamFyLiIKCiMjIEluc3RhbGFzaQoKYGBgYmFzaApjZCBtdWZha2F0LXJvb20KbnBtIGluc3RhbGwgICAjIGF0YXU6IG5wbSBjaSAgIChiaWxhIHBhY2thZ2UtbG9jay5qc29uIHN1ZGFoIGFkYSkKbnBtIHJ1biBkZXYgICAjIG1lbWJ1a2EgQ2hyb21lIGRlbmdhbiBzaWRlIHBhbmVsICJNVUZBS0FUIFJvb20iCmBgYAoKTGFsdSAqKkxvYWQgdW5wYWNrZWQqKiBmb2xkZXIgYC5vdXRwdXQvY2hyb21lLW12M2AgZGkgYGNocm9tZTovL2V4dGVuc2lvbnNgLgoKIyMgUGVybWlzc2lvbiBtYW5pZmVzdCAoZmluYWwsIHRpZGFrIGJvbGVoIGRpdGFtYmFoIHRhbnBhIGFsYXNhbiB0ZXJ0dWxpcykKCmBzaWRlUGFuZWxgLCBgc3RvcmFnZWAsIGB1bmxpbWl0ZWRTdG9yYWdlYCwgYGNsaXBib2FyZFdyaXRlYCwgYG5hdGl2ZU1lc3NhZ2luZ2AuCihQdXRhcmFuIDI6IGBob3N0X3Blcm1pc3Npb25zYCA2IGRvbWFpbiBBSSBESUhBUFVTIOKAlCB0aWRhayBhZGEgY29udGVudApzY3JpcHQgZGkgTVZQLCBqYWRpIGV4dGVuc2lvbiB0aWRhayBidXR1aCBha3NlcyBob3N0IGtlIHNpdHVzIEFJLikKRElMQVJBTkc6IGBjb29raWVzYCwgYHdlYlJlcXVlc3RgLCBgZGVjbGFyYXRpdmVOZXRSZXF1ZXN0YCwgYGRlYnVnZ2VyYCwKYHNjcmlwdGluZ2AgaW5qZWtzaSBiZWJhcywgYDxhbGxfdXJscz5gLgoKIyMgU3RydWt0dXIKCmBgYHRleHQKc3JjLwogIGVudHJ5cG9pbnRzLwogICAgYmFja2dyb3VuZC50cyAgICAgICAgIyBvcmtlc3RyYXRvciAoc3RhdGUgbWFjaGluZSBwZXJzaXN0ZW4gKyBwYWNpbmcgKyBwYXJzZXI7IFRBTlBBIEZJTExfSU5QVVQvUkVBRF9MQVNUX1JFUExZKQogICAgc2lkZXBhbmVsLyAgICAgICAgICAgIyBSZWFjdCBhcHAgKEFwcC50c3gpIOKAlCBVSSBNYW51YWwgSGFuZG9mZiAoYWx1ciBwZW51aCkKICBwaGFzZTItb3B0aW4vCiAgICBSRUFETUUubWQgICAgICAgICAgICAjIHN0YXR1cyBtb2R1bCBvcHQtaW4gRmFzZSAyICh0aWRhayBha3RpZiBkaSBNVlApCiAgICBjb250ZW50LXNjcmlwdHMvICAgICAjIDYgYWRhcHRlciBzaXR1cyAoZGVmaW5lQ29udGVudFNjcmlwdCkg4oCUIFRJREFLIHRlcmRhZnRhciBkaSBtYW5pZmVzdCBNVlAKICBhZGFwdGVycy8KICAgIGJhc2UudHMgICAgICAgICAgICAgICMgaW50ZXJmYWNlIFNpdGVBZGFwdGVyICsgZmlsbElucHV0L3JlYWRMYXN0UmVwbHkgKHR1cm5kb3duKSDigJQgSEFOWUEgdW50dWsgbW9kdWwgRmFzZSAyCiAgICBzZWxlY3RvcnMuanNvbiAgICAgICAjIHNlbGVjdG9yIHBlciBzaXR1cyAodmVyc2lvbmVkOyBsYXN0VmVyaWZpZWQgPSBiZWx1bSB0ZXJ2ZXJpZmlrYXNpKQogICAgZG9jdG9yLnRzICAgICAgICAgICAgIyBTZWxlY3RvciBEb2N0b3IgKHNpdHVzIGRhcmkgVVJMIHRhYiBha3RpZjsgbGFzdFJlcGx5Rm91bmQgbnlhdGEpCiAgZW5naW5lLwogICAgc3RhdGVNYWNoaW5lLnRzICAgICAgIyBhbHVyIENsYXVkZSDCpzIgKHJvbmRlIDMgLT4gc3Blc2lmaWthc2kgKyBkaXNzZW50OyBzbmFwc2hvdC9yZXN0b3JlOyByb25kZV9iYXJ1ICsgcmVzZXQpCiAgICBwcm9tcHRzLyoubWQgICAgICAgICAjIHRlbXBsYXRlIHBlciBwZXJhbiAmIGZhc2UKICAgIHBhcnNlci50cyAgICAgICAgICAgICMgYmxvayBgYGBqc29uIHRlcmFraGlyICsgZmFsbGJhY2sgb2JqZWsgey4uLn0gdGVyYWtoaXIKICAgIGNvbnNlbnN1cy50cyAgICAgICAgICMgYW5vbmltaXNhc2kgKHNlZWQgYWNhayksIEJvcmRhLCAyLzMsIGJsb2NraW5nIHJlc29sdmVkOyByZXNvbHZlV2lubmVyUHJvcG9zYWwKICAgIHByb21wdEd1YXJkLnRzICAgICAgICMgTjEzOiBkZWxpbWl0ZXIgREFUQSArIHN1bW1hcnkvY2xhaW1zIGhhc2lsIHBhcnNlCiAgICBzZW5kZXJHdWFyZC50cyAgICAgICAjIHZhbGlkYXNpIHNlbmRlciBwZXNhbiBiYWNrZ3JvdW5kICh0b2xhayBjb250ZW50IHNjcmlwdCkKICAgIHBhY2luZy50cyAgICAgICAgICAgICMgamVkYSAyMCBkdGsvc2l0dXMsIGJhdGFzIGhhcmlhbiBkZWZhdWx0IDQwCiAgICBhbnRpTG9vcC50cyAgICAgICAgICAjIGhhc2ggZGlmZit0ZW11YW4KICAgIHNlY3JldFNjYW4udHMgICAgICAgICMgYmxvayBrcmVkZW5zaWFsIHNlYmVsdW0ga2lyaW0vc2ltcGFuICgrIEpXVCwgZ2xwYXQtLCBoZl87IC5lbnYgPSB3YXJuKQogIHN0b3JhZ2UvCiAgICBkYi50cyAgICAgICAgICAgICAgICAjIERleGllOiBydW5zICgrbGFiZWxNYXAgcGVyIHJvbmRlKSwgbWVzc2FnZXMsIGdhdGVSZXN1bHRzLCB1c2FnZQogICAgcm9vbVN0YXRlLnRzICAgICAgICAgIyBzdGF0ZSByYXBhdCBwZXJzaXN0ZW4gKGNocm9tZS5zdG9yYWdlLnNlc3Npb24gKyBsb2NhbCkKICAgIGV4cG9ydC50cyAgICAgICAgICAgICMgZWtzcG9yIHRyYW5za3JpcCAubWQgLyAuanNvbgogIG5hdGl2ZS8KICAgIHJ1bm5lckNsaWVudC50cyAgICAgICMgY2hyb21lLnJ1bnRpbWUuY29ubmVjdE5hdGl2ZSgnY29tLm11ZmFrYXQucnVubmVyJykg4oCUIGxlZ2FjeSBGYXNlIDIKICB1aS8gICAgICAgICAgICAgICAgICAgICMgVGltZWxpbmUsIFZvdGVUYWJsZSwgR2F0ZVJlcG9ydAp0ZXN0cy8KICBlbmdpbmUudGVzdC50cyAgICAgICAgICMgdml0ZXN0OiBwYXJzZXIsIGtvbnNlbnN1cywgcGFjaW5nLCBhbnRpLWxvb3AsIHNlY3JldCBzY2FuCiAgYXVkaXQtcmVncmVzc2lvbnMudGVzdC50cyAgIyB2aXRlc3Q6IHJlZ3Jlc2kgTTItTTkgKyBwYWNpbmcgcmVjb3JkUHJvbXB0ICgyMCB0ZXN0KQogIGF1ZGl0LXJvdW5kMi50ZXN0LnRzICAgIyB2aXRlc3Q6IHJlZ3Jlc2kgcHV0YXJhbiAyIChONSwgTjYsIE4xMCwgTjEzLCBOMTQsIEdQVC00LCBHUFQtNiwgc2VuZGVyL2RvY3RvcikKYGBgCgojIyBTZWxlY3RvcgoKU2VtdWEgc2VsZWN0b3IgQ1NTIGFkYSBkaSBgc3JjL2FkYXB0ZXJzL3NlbGVjdG9ycy5qc29uYCAoYnVrYW4gaGFyZGNvZGUpLCBkZW5nYW4KYHZlcnNpb25gIGRhbiBgbGFzdFZlcmlmaWVkYC4gTmlsYWkgYGxhc3RWZXJpZmllZGAgc2FhdCBpbmkKKioiYmVsdW0gdGVydmVyaWZpa2FzaSIqKiDigJQgc2VsZWN0b3IgSEFSVVMgZGl2ZXJpZmlrYXNpIG1hbnVhbCBkaSB0aWFwIHNpdHVzCmRhbiBkaXBlcmJhcnVpIHNhYXQgc2l0dXMgYmVydWJhaC4gYGxvZ2luSW5kaWNhdG9yYCwgYGxvZ2dlZEluSW5kaWNhdG9yYCwgZGFuCmByYXRlTGltaXRJbmRpY2F0b3JgIHNlbmdhamEgYG51bGxgOiBuaWxhaSB5YW5nIHNhbGFoIG1lbnllYmFia2FuIGZhbHNlCnBvc2l0aXZlIChtaXMuIGBsb2dpbkluZGljYXRvcmAgPSBzZWxlY3RvciBpbnB1dCBtZW1idWF0ICJsb2dpbiIgZGFuICJpbnB1dApydXNhayIgdGFrIGJpc2EgZGliZWRha2FuKS4gSXNpIGtldGlnYW55YSBoYW55YSBzZXRlbGFoIGRpdmVyaWZpa2FzaSBkaSBzaXR1cwphc2xpLiBCaWxhIHNlbGVjdG9yIHJ1c2FrLCBleHRlbnNpb24gb3RvbWF0aXMgamF0dWgga2UgbW9kZSBNYW51YWwgQ29weQooU2VsZWN0b3IgRG9jdG9yKS4KCiMjIFlhbmcgbWFzaWggbWFudWFsIChkaWxha3VrYW4gcGVuZ2d1bmEgZGkgd2Vic2l0ZSBBSSkKCjEuIExvZ2luIGRpIHRpYXAgc2l0dXMgQUkgKHRhYiByZXNtaSBwcm92aWRlcikuCjIuIE1lbmVrYW4gdG9tYm9sICoqS2lyaW0qKiDigJQgc2VsYWx1IG1hbnVzaWEsIHRpZGFrIHBlcm5haCBleHRlbnNpb24uCjMuIE1lbmVtcGVsIGphd2FiYW4gQUkgc2VjYXJhIG1hbnVhbCBrZSBzaWRlIHBhbmVsICh0b21ib2wgIkFtYmlsIGphd2FiYW4KICAgdGVyYWtoaXIgZGFyaSB0YWIiIERJSEFQVVMgZGFyaSBNVlAgcHV0YXJhbiAyKS4KNC4gTWVueWV0dWp1aSBwYXRjaCAvIGNvbW1pdCBkaSBMb2NhbCBSdW5uZXIgKHRvbWJvbCBBcHByb3ZlKS4KCiMjIFJpc2lrbyB0ZXJidWthIChqYW5nYW4ga2xhaW0gc3VkYWggdGVydHV0dXApCgotICoqSW5kZXhlZERCIHRhbnBhIGVua3JpcHNpIGFwbGlrYXNpLioqIERhdGEgcmFwYXQg4oCUIGlkZSwgamF3YWJhbiBBSQogIHlhbmcgZGlpbXBvciwgbGFiZWxNYXAsIHN0YXRlIHJhcGF0IOKAlCB0ZXJzaW1wYW4gKipwbGFpbnRleHQqKiBkaQogIEluZGV4ZWREQiAoRGV4aWUpIGRhbiBgY2hyb21lLnN0b3JhZ2UubG9jYWxgIGRpIHByb2ZpbCBicm93c2VyIHBlbmdndW5hLgogIFNpYXBhIHB1biB5YW5nIGJpc2EgbWVtYmFjYSBwcm9maWwgYnJvd3NlciAoYWtzZXMgZmlzaWsga2UgbWVzaW4sCiAgbWFsd2FyZSwgYmFja3VwIHByb2ZpbCB5YW5nIGJvY29yKSBiaXNhIG1lbWJhY2EgZGF0YSByYXBhdC4gRXh0ZW5zaW9uCiAgaW5pIFRJREFLIG1lbmdrbGFpbSBkYXRhIHRlcmVua3JpcHNpLiBFbmtyaXBzaSBkaSBsZXZlbCBhcGxpa2FzaSBiZWx1bQogIGRpbGFrdWthbiBkaSBNVlA6IGJ1dHVoIG1hbmFqZW1lbiBrdW5jaSAobWlzLiBrdW5jaSB0dXJ1bmFuIGRhcmkKICBwYXNzcGhyYXNlIHBlbmdndW5hIHZpYSBXZWJDcnlwdG8gKyBzYWx0KSB5YW5nIGFtYW4sIGRhbiBpdHUgZGkgbHVhcgogIGxpbmdrdXAgTVZQLiBNaXRpZ2FzaSB5YW5nIHN1ZGFoIGFkYTogc2VjcmV0IHNjYW5uZXIgbWVtYmxva2lyCiAgcGVueWltcGFuYW4gaWRlL2phd2FiYW4geWFuZyBtZW5nYW5kdW5nIGtyZWRlbnNpYWw7IHRvbWJvbCAiSGFwdXMKICBzZWx1cnVoIGRhdGEgcmFwYXQiIGRpIHNpZGUgcGFuZWwgbWVuZ2hhcHVzIERleGllICsgY2hyb21lLnN0b3JhZ2UgKwogIHJlc2V0IHN0YXRlIG1hY2hpbmU7IHRyYW5za3JpcCB5YW5nIGRpdW5kdWgganVnYSBwbGFpbnRleHQg4oCUIHNpbXBhbiBkaQogIHRlbXBhdCB5YW5nIGFtYW4uCi0gKipTZWxlY3RvciBiZWx1bSB0ZXJ2ZXJpZmlrYXNpKiogKGBzZWxlY3RvcnMuanNvbmAsCiAgYGxhc3RWZXJpZmllZDogImJlbHVtIHRlcnZlcmlmaWthc2kiYCkuCgojIyBZYW5nIG1hc2loIHRlcnNpc2EgKGJ1a2FuIGJhZ2lhbiB0dWdhcyBpbmkpCgotIFZlcmlmaWthc2kgc2VsZWN0b3IgZGkgc2l0dXMgQUkgYXNsaSAoYnV0dWggQ2hyb21lICsgbG9naW4gcHJvdmlkZXIpLgotIFVqaSBrbGlrIHNpZGUgcGFuZWwgZW5kLXRvLWVuZCBkaSBDaHJvbWUgc3VuZ2d1aGFuICh2aXRlc3QgaGFueWEgbWVuZ3VqaQogIGVuZ2luZTsgQXBwLnRzeCBiZWx1bSBkaXVqaSBsZXdhdCBicm93c2VyKS4KLSBINiAobmF0aXZlIGhvc3QgcGF0aC90b2tlbiksIEMx4oCTQzMsIEgxL0gzL0g0L0g3IOKAlCBkaWtlcmpha2FuIHdvcmtlciBsYWluLgo=
+# MUFAKAT Room — Chrome Extension (Browser-Only, Manual Handoff)
+
+> **Status (20 Nov 2026, setelah perbaikan audit):** ekstensi **bisa di-build dan
+> lolos typecheck + test** — lihat "Hasil verifikasi" di bawah untuk perintah,
+> versi, dan output apa adanya. Mode utama adalah **Manual Handoff**
+> (browser-only): pengguna menyalin prompt, menempel di tab resmi provider,
+> mengirim sendiri, lalu menempel jawaban kembali ke side panel.
+>
+> **Assisted Fill dan content script DIHAPUS dari MVP (putaran 2).**
+> Tombol "Ambil jawaban terakhir dari tab" dihapus dari side panel;
+> handler `FILL_INPUT` / `READ_LAST_REPLY` dihapus dari background;
+> 6 content script dipindah ke `src/phase2-optin/content-scripts/` (bukan
+> entrypoint WXT, tidak di-build ke manifest); `host_permissions` 6 domain
+> dihapus dari `wxt.config.ts`. Native Messaging (Local Runner) tetap ada
+> sebagai jalur Fase 2 yang terpisah. Alur utama tidak pernah membaca DOM
+> situs AI dan tidak pernah mengisi input — hanya Manual Handoff.
+>
+> **Risiko terbuka (putaran 2): IndexedDB TANPA enkripsi aplikasi.**
+> Data rapat (ide, jawaban impor, state) tersimpan plaintext di IndexedDB
+> (Dexie) dan `chrome.storage.local` — siapa pun yang bisa membaca profil
+> browser bisa membacanya. Ini BUKAN klaim terenkripsi; enkripsi
+> aplikasi tidak dilakukan di MVP (butuh manajemen kunci yang aman, di
+> luar lingkup MVP). Mitigasi: jangan masukkan kredensial (secret scanner
+> memblokir sebelum simpan) dan hapus data lewat tombol "Hapus seluruh
+> data rapat" di side panel. Lihat "Risiko terbuka" di bawah.
+>
+> **Yang BELUM terverifikasi:** selector situs (`selectors.json`,
+> `lastVerified: "belum terverifikasi"`) — belum pernah diuji di situs AI
+> asli, dan tidak ada Chrome + login provider di VM ini untuk mengujinya.
+> Sampai terverifikasi, extension jatuh ke mode Manual Copy bila Selector
+> Doctor menandai adapter rusak. Jangan menganggap flow end-to-end di situs
+> asli sudah jalan sebelum diuji di Chrome sungguhan dengan login provider.
+
+## Hasil verifikasi (dijalankan 20 Nov 2026, 12:45 UTC)
+
+Lingkungan: Node v24.22.1, npm 10.9.4, WXT 0.19.29, TypeScript 5.x, vitest 2.1.9.
+`pnpm` tidak tersedia di VM ini — dipakai `npm` (sesuai tugas).
+
+| Perintah | Hasil |
+|---|---|
+| `npm install` (sebelum perbaikan) | ❌ `ETARGET: No matching version found for @types/turndown@^4.0.0` |
+| `npm install` (setelah `@types/turndown` → `^5.0.5`) | ✅ `added 540 packages`; lockfile `package-lock.json` dibuat (275 KB) |
+| `npm run typecheck` (`wxt prepare && tsc --noEmit`) | ✅ exit 0, tanpa error |
+| `npm test` (`vitest run`) | ✅ `Test Files 2 passed (2)`, `Tests 33 passed (33)` — 13 lama + 20 regresi audit baru |
+| `npm run build` (`wxt build`) | ✅ `Built extension in 4.7 s`, total 554.88 kB; manifest MV3 + 6 content script + side panel + background SW |
+
+## Perbaikan audit putaran 2 (2026-11-20)
+
+- **N5:** `labelMap` per ronde di Dexie (`runs.labelMap[round]`) — dibuat
+  SEKALI saat masuk fase kritik, dipakai di kritik/rapat/spesifikasi;
+  pemenang Borda (label A/B/C) dipetakan lewat labelMap ke proposal yang
+  benar (`resolveWinnerProposal`); tanpa labelMap, spesifikasi ditolak —
+  JANGAN fallback ke usulan pertama. Prompt kritik tanpa nama provider.
+- **N6 + GPT-1:** satu sumber kebenaran = state machine background. Side
+  panel meng-await hasil transisi dan menampilkan errornya; ronde baru
+  lewat event `ronde_baru` (`debat_ulang` → `usulan_r1`, ronde +1);
+  event `reset` pada "Mulai rapat" (rapat kedua bisa dimulai). Test
+  integrasi 3 ronde penuh dengan urutan event side panel persis.
+- **GPT-2:** buka ulang extension memulihkan ISI IDE (+ peserta, labelMap)
+  dari data rapat, bukan hanya ID dan pesan.
+- **N10:** ID provider Muse disamakan jadi `muse` di UI, `selectors.json`,
+  adapter, dan content script (`metaai` dihapus).
+- **N13:** jawaban AI disisipkan hanya sebagai DATA — delimiter
+  `--- DATA DARI AI ... ---` + instruksi eksplisit, isi hanya
+  summary/claims hasil parse (`engine/promptGuard.ts`).
+- **N14:** secret scanner TS menangkap GitLab `glpat-` dan HuggingFace
+  `hf_` (block). Catatan: Python `src/mufakat/room/secret_scan.py` BELUM
+  punya kedua pola ini — paritas penuh butuh perbaikan di sisi Python.
+- **GPT-4:** secret scan SEBELUM `db.runs.add()`; ide berkredensial tidak
+  tersimpan; pengguna memilih hapus otomatis (`redactText`) atau sunting
+  manual; notice hanya menyebut nama pola, bukan nilai kredensial.
+- **GPT-6:** lihat status di atas — content script keluar dari MVP.
+- **Tabel tambahan:** tombol "Hapus seluruh data rapat" di side panel
+  (Dexie + chrome.storage + reset mesin); Selector Doctor memakai situs
+  dari URL tab aktif yang benar-benar dicek (bukan `selected[0]`);
+  listener background menolak `ROOM_TRANSITION` dari content script
+  (`sender.tab`); IndexedDB tanpa enkripsi didokumentasikan sebagai
+  risiko terbuka (bukan klaim terenkripsi).
+- **L5:** patch applier runner (`runner/mufakat_runner/worktree.py`) tidak
+  lagi menambah `\n` di setiap baris `+`: pakai EOL file asli (CRLF
+  dipertahankan, baca/tulis bytes tanpa translasi newline) dan hormati
+  penanda `\ No newline at end of file`. Test pytest 4 kasus baru + 1
+  ekspektasi lama diperbaiki ke semantik diff standar.
+- **.gitignore:** tambah `!.env.example` (pola `.env.*` sebelumnya ikut
+  mengabaikan `.env.example`).
+
+## Perbaikan audit 2026-11-20 (ringkas; detail per file di bawah)
+
+- **H2:** `@types/turndown` → `^5.0.5`; `srcDir: 'src'` di `wxt.config.ts`;
+  `tsconfig.json` extends `./.wxt/tsconfig.json` (+ `jsx: react-jsx`); semua
+  `*.content.ts` dibungkus `export default defineContentScript({ matches, main })`;
+  `background.ts` dibungkus `export default defineBackground(...)`; CI job
+  `extension` di root `.github/workflows/ci.yml` (pakai `npm ci` + Node 24).
+  File workflow di root repo **tidak bisa di-push via API** (GitHub memblokir
+  upload workflow untuk App tanpa izin workflows) — tambahkan manual via web
+  GitHub bila belum ada.
+- **H5:** side panel tersambung penuh — alur Ide → Usulan → Kritik silang →
+  Rapat & voting (Borda) → Spesifikasi; tombol Simpan jawaban menyimpan ke
+  Dexie (`db.messages.add`) dengan provider/ronde/fase tercatat dan baru
+  menampilkan "disimpan" setelah `add` berhasil; `recordPrompt` per provider
+  saat prompt disalin. (Putaran 2: "Ambil jawaban terakhir dari tab"
+  DIHAPUS dari MVP — impor jawaban hanya tempel manual.)
+- **M2:** secret scanner TS disamakan dengan Python + JWT; `.env` hanya
+  peringatan (`severity: 'warn'`), bukan blokir; impor jawaban di-scan
+  SEBELUM disimpan.
+- **M3:** parser mengizinkan `\s*` setelah `json` dan fallback objek `{...}`
+  terakhir yang valid (innerText tanpa pagar); `readLastReply` memakai turndown.
+- **M4:** ronde 3 tanpa mufakat → `spesifikasi` dengan `dissent`, bukan eskalasi.
+- **M5:** state machine disimpan persisten di `chrome.storage.session` +
+  `chrome.storage.local` (`storage/roomState.ts`), bukan variabel modul SW.
+- **M6:** seed anonimisasi dari `crypto.getRandomValues` per ronde bila seed
+  tidak diberikan.
+- **M7:** kritik blocking punya status `resolved`; `approveRatio` terikat ke
+  pemenang Borda.
+- **M8:** (Putaran 2: DIHAPUS dari MVP — `FILL_INPUT` dan content script
+  keluar dari jalur utama; lihat status di atas. Bila modul Fase 2
+  diaktifkan kembali, `FILL_INPUT` harus mencari tab berdasarkan host
+  yang cocok dengan `site` dan menjalankan secret-scan + pacing sebelum
+  meneruskan.)
+- **M9:** `detectBlocker` cek elemen banner/toast spesifik (`rateLimitIndicator`),
+  bukan `body.innerText`; `loginIndicator` (elemen halaman login) dibedakan
+  dari input rusak (input hilang → blocker `error`).
+- **Selector Doctor:** `lastReplyFound` hasil pemeriksaan nyata dari content
+  script, bukan hardcode `true`. (Putaran 2: situs yang dicek diambil dari
+  URL tab aktif; di MVP content script tidak aktif sehingga Doctor
+  melaporkan modul Fase 2 belum aktif — bukan mengklaim adapter OK.)
+
+## Disclaimer ToS (Claude §0.4)
+
+> "Mengotomasi web chat bisa melanggar Ketentuan Layanan penyedia AI. MUFAKAT Room
+> dirancang semi-manual (Anda yang menekan Kirim) untuk meminimalkan risiko, tetapi
+> risiko pembatasan akun tetap ada dan menjadi tanggung jawab pengguna. Gunakan akun
+> sendiri, untuk proyek sendiri, dengan kecepatan wajar."
+
+## Instalasi
+
+```bash
+cd mufakat-room
+npm install   # atau: npm ci   (bila package-lock.json sudah ada)
+npm run dev   # membuka Chrome dengan side panel "MUFAKAT Room"
+```
+
+Lalu **Load unpacked** folder `.output/chrome-mv3` di `chrome://extensions`.
+
+## Permission manifest (final, tidak boleh ditambah tanpa alasan tertulis)
+
+`sidePanel`, `storage`, `unlimitedStorage`, `clipboardWrite`, `nativeMessaging`.
+(Putaran 2: `host_permissions` 6 domain AI DIHAPUS — tidak ada content
+script di MVP, jadi extension tidak butuh akses host ke situs AI.)
+DILARANG: `cookies`, `webRequest`, `declarativeNetRequest`, `debugger`,
+`scripting` injeksi bebas, `<all_urls>`.
+
+## Struktur
+
+```text
+src/
+  entrypoints/
+    background.ts        # orkestrator (state machine persisten + pacing + parser; TANPA FILL_INPUT/READ_LAST_REPLY)
+    sidepanel/           # React app (App.tsx) — UI Manual Handoff (alur penuh)
+  phase2-optin/
+    README.md            # status modul opt-in Fase 2 (tidak aktif di MVP)
+    content-scripts/     # 6 adapter situs (defineContentScript) — TIDAK terdaftar di manifest MVP
+  adapters/
+    base.ts              # interface SiteAdapter + fillInput/readLastReply (turndown) — HANYA untuk modul Fase 2
+    selectors.json       # selector per situs (versioned; lastVerified = belum terverifikasi)
+    doctor.ts            # Selector Doctor (situs dari URL tab aktif; lastReplyFound nyata)
+  engine/
+    stateMachine.ts      # alur Claude §2 (ronde 3 -> spesifikasi + dissent; snapshot/restore; ronde_baru + reset)
+    prompts/*.md         # template per peran & fase
+    parser.ts            # blok ```json terakhir + fallback objek {...} terakhir
+    consensus.ts         # anonimisasi (seed acak), Borda, 2/3, blocking resolved; resolveWinnerProposal
+    promptGuard.ts       # N13: delimiter DATA + summary/claims hasil parse
+    senderGuard.ts       # validasi sender pesan background (tolak content script)
+    pacing.ts            # jeda 20 dtk/situs, batas harian default 40
+    antiLoop.ts          # hash diff+temuan
+    secretScan.ts        # blok kredensial sebelum kirim/simpan (+ JWT, glpat-, hf_; .env = warn)
+  storage/
+    db.ts                # Dexie: runs (+labelMap per ronde), messages, gateResults, usage
+    roomState.ts         # state rapat persisten (chrome.storage.session + local)
+    export.ts            # ekspor transkrip .md / .json
+  native/
+    runnerClient.ts      # chrome.runtime.connectNative('com.mufakat.runner') — legacy Fase 2
+  ui/                    # Timeline, VoteTable, GateReport
+tests/
+  engine.test.ts         # vitest: parser, konsensus, pacing, anti-loop, secret scan
+  audit-regressions.test.ts  # vitest: regresi M2-M9 + pacing recordPrompt (20 test)
+  audit-round2.test.ts   # vitest: regresi putaran 2 (N5, N6, N10, N13, N14, GPT-4, GPT-6, sender/doctor)
+```
+
+## Selector
+
+Semua selector CSS ada di `src/adapters/selectors.json` (bukan hardcode), dengan
+`version` dan `lastVerified`. Nilai `lastVerified` saat ini
+**"belum terverifikasi"** — selector HARUS diverifikasi manual di tiap situs
+dan diperbarui saat situs berubah. `loginIndicator`, `loggedInIndicator`, dan
+`rateLimitIndicator` sengaja `null`: nilai yang salah menyebabkan false
+positive (mis. `loginIndicator` = selector input membuat "login" dan "input
+rusak" tak bisa dibedakan). Isi ketiganya hanya setelah diverifikasi di situs
+asli. Bila selector rusak, extension otomatis jatuh ke mode Manual Copy
+(Selector Doctor).
+
+## Yang masih manual (dilakukan pengguna di website AI)
+
+1. Login di tiap situs AI (tab resmi provider).
+2. Menekan tombol **Kirim** — selalu manusia, tidak pernah extension.
+3. Menempel jawaban AI secara manual ke side panel (tombol "Ambil jawaban
+   terakhir dari tab" DIHAPUS dari MVP putaran 2).
+4. Menyetujui patch / commit di Local Runner (tombol Approve).
+
+## Risiko terbuka (jangan klaim sudah tertutup)
+
+- **IndexedDB tanpa enkripsi aplikasi.** Data rapat — ide, jawaban AI
+  yang diimpor, labelMap, state rapat — tersimpan **plaintext** di
+  IndexedDB (Dexie) dan `chrome.storage.local` di profil browser pengguna.
+  Siapa pun yang bisa membaca profil browser (akses fisik ke mesin,
+  malware, backup profil yang bocor) bisa membaca data rapat. Extension
+  ini TIDAK mengklaim data terenkripsi. Enkripsi di level aplikasi belum
+  dilakukan di MVP: butuh manajemen kunci (mis. kunci turunan dari
+  passphrase pengguna via WebCrypto + salt) yang aman, dan itu di luar
+  lingkup MVP. Mitigasi yang sudah ada: secret scanner memblokir
+  penyimpanan ide/jawaban yang mengandung kredensial; tombol "Hapus
+  seluruh data rapat" di side panel menghapus Dexie + chrome.storage +
+  reset state machine; transkrip yang diunduh juga plaintext — simpan di
+  tempat yang aman.
+- **Selector belum terverifikasi** (`selectors.json`,
+  `lastVerified: "belum terverifikasi"`).
+
+## Yang masih tersisa (bukan bagian tugas ini)
+
+- Verifikasi selector di situs AI asli (butuh Chrome + login provider).
+- Uji klik side panel end-to-end di Chrome sungguhan (vitest hanya menguji
+  engine; App.tsx belum diuji lewat browser).
+- H6 (native host path/token), C1–C3, H1/H3/H4/H7 — dikerjakan worker lain.
