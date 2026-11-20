@@ -4,6 +4,9 @@ import { defineConfig } from 'wxt';
 // DILARANG menambah: cookies, webRequest, declarativeNetRequest, debugger,
 // scripting injeksi bebas, atau <all_urls>. Host permissions hanya 6 domain.
 export default defineConfig({
+  // H2: entrypoints ada di src/, bukan root — tanpa ini wxt build
+  // gagal "No entrypoints found".
+  srcDir: 'src',
   manifest: {
     name: 'MUFAKAT Room',
     description:
