@@ -1,1 +1,140 @@
-IiIiUmVnaXN0cnkgTG9jYWwgUnVubmVyIChhdWRpdCAyMCBOb3YgMjAyNjogQzIpLgoKU2F0dSBmaWxlIG1pbGlrIHBlbmdndW5hOiBgYH4vLm11ZmFrYXQvcnVubmVyLmpzb25gYCAoYmlzYSBkaS1vdmVycmlkZQplbnYgYGBNVUZBS0FUX1JVTk5FUl9SRUdJU1RSWWBgIHVudHVrIHRlc3QpOgoKLi4gY29kZS1ibG9jazo6IGpzb24KCiAgICB7InJlcG9zIjogeyJuYW1hLXJlcG8iOiAiL2Ficy9wYXRoL3JlcG8ifSwKICAgICAicnVucyI6IHsiPHJ1bl9pZD4iOiB7InJlcG8iOiAibmFtYS1yZXBvIiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgIndvcmt0cmVlIjogIi9hYnMvcGF0aC9yZXBvL3J1bnMvPHJ1bl9pZD4vd3QifX19CgotIFJlcG8gSEFOWUEgYm9sZWggZGFyaSByZWdpc3RyeSBpbmkgKGRpZGFmdGFya2FuIHNla2FsaSBsZXdhdAogIHBlcmludGFoIGBgcmVnaXN0ZXJfcmVwb2BgKSDigJQgcGVzYW4gbmF0aXZlIG1lc3NhZ2luZyBUSURBSyBCT0xFSAogIG1lbWJhd2EgcGF0aCByZXBvIGJlYmFzLgotIFNlbXVhIHBlcmludGFoIGhvc3QgbGFpbiBoYW55YSBtZW5lcmltYSBgYHJ1bl9pZGBgOyB3b3JrdHJlZQogIGRpYW1iaWwgZGFyaSByZWdpc3RyeSwgYnVrYW4gZGFyaSBwZXNhbi4KIiIiCgpmcm9tIF9fZnV0dXJlX18gaW1wb3J0IGFubm90YXRpb25zCgppbXBvcnQganNvbgppbXBvcnQgb3MKZnJvbSBwYXRobGliIGltcG9ydCBQYXRoCgpfX2FsbF9fID0gWwogICAgInJlZ2lzdHJ5X3BhdGgiLCAibG9hZF9yZWdpc3RyeSIsICJzYXZlX3JlZ2lzdHJ5IiwKICAgICJyZWdpc3Rlcl9yZXBvIiwgInJlc29sdmVfcmVwbyIsICJyZWNvcmRfcnVuIiwgInJlc29sdmVfcnVuIiwKICAgICJyZW1vdmVfcnVuIiwKXQoKCmRlZiByZWdpc3RyeV9wYXRoKCkgLT4gUGF0aDoKICAgICIiIkxva2FzaSBmaWxlIHJlZ2lzdHJ5IChlbnYgb3ZlcnJpZGUgdW50dWsgdGVzdCkuIiIiCiAgICBvdmVycmlkZSA9IG9zLmVudmlyb24uZ2V0KCJNVUZBS0FUX1JVTk5FUl9SRUdJU1RSWSIsICIiKS5zdHJpcCgpCiAgICBpZiBvdmVycmlkZToKICAgICAgICByZXR1cm4gUGF0aChvdmVycmlkZSkKICAgIHJldHVybiBQYXRoLmhvbWUoKSAvICIubXVmYWthdCIgLyAicnVubmVyLmpzb24iCgoKZGVmIGxvYWRfcmVnaXN0cnkoKSAtPiBkaWN0OgogICAgIiIiQmFjYSByZWdpc3RyeTsge30gdGVyc3RydWt0dXIgYmlsYSBmaWxlIGJlbHVtIGFkYSAvIHJ1c2FrLiIiIgogICAgcGF0aCA9IHJlZ2lzdHJ5X3BhdGgoKQogICAgdHJ5OgogICAgICAgIGRhdGEgPSBqc29uLmxvYWRzKHBhdGgucmVhZF90ZXh0KGVuY29kaW5nPSJ1dGYtOCIpKQogICAgZXhjZXB0IChPU0Vycm9yLCBWYWx1ZUVycm9yKToKICAgICAgICByZXR1cm4geyJyZXBvcyI6IHt9LCAicnVucyI6IHt9fQogICAgaWYgbm90IGlzaW5zdGFuY2UoZGF0YSwgZGljdCk6CiAgICAgICAgcmV0dXJuIHsicmVwb3MiOiB7fSwgInJ1bnMiOiB7fX0KICAgIGRhdGEuc2V0ZGVmYXVsdCgicmVwb3MiLCB7fSkKICAgIGRhdGEuc2V0ZGVmYXVsdCgicnVucyIsIHt9KQogICAgaWYgbm90IGlzaW5zdGFuY2UoZGF0YVsicmVwb3MiXSwgZGljdCk6CiAgICAgICAgZGF0YVsicmVwb3MiXSA9IHt9CiAgICBpZiBub3QgaXNpbnN0YW5jZShkYXRhWyJydW5zIl0sIGRpY3QpOgogICAgICAgIGRhdGFbInJ1bnMiXSA9IHt9CiAgICByZXR1cm4gZGF0YQoKCmRlZiBzYXZlX3JlZ2lzdHJ5KGRhdGE6IGRpY3QpIC0+IFBhdGg6CiAgICAiIiJUdWxpcyByZWdpc3RyeSAoYXRvbWlrLWlzaDogdHVsaXMgbGFsdSBnYW50aSkuIiIiCiAgICBwYXRoID0gcmVnaXN0cnlfcGF0aCgpCiAgICBwYXRoLnBhcmVudC5ta2RpcihwYXJlbnRzPVRydWUsIGV4aXN0X29rPVRydWUpCiAgICB0bXAgPSBwYXRoLndpdGhfc3VmZml4KCIudG1wIikKICAgIHRtcC53cml0ZV90ZXh0KGpzb24uZHVtcHMoZGF0YSwgZW5zdXJlX2FzY2lpPUZhbHNlLCBpbmRlbnQ9MiksCiAgICAgICAgICAgICAgICAgICBlbmNvZGluZz0idXRmLTgiKQogICAgdG1wLnJlcGxhY2UocGF0aCkKICAgIHJldHVybiBwYXRoCgoKZGVmIHJlZ2lzdGVyX3JlcG8obmFtZTogc3RyLCByZXBvX3BhdGg6IHN0ciB8IFBhdGgpIC0+IGRpY3Q6CiAgICAiIiJEYWZ0YXJrYW4gc2F0dSByZXBvIG1pbGlrIHBlbmdndW5hIChuYW1hIC0+IHBhdGggYWJzb2x1dCkuCgogICAgTmFtYSBoYW55YSBgYFtBLVphLXowLTldW0EtWmEtejAtOS5fLV0qYGA7IHBhdGggaGFydXMgZm9sZGVyIHlhbmcgYWRhLgogICAgIiIiCiAgICBpbXBvcnQgcmUKCiAgICBpZiBub3QgaXNpbnN0YW5jZShuYW1lLCBzdHIpIG9yIG5vdCByZS5mdWxsbWF0Y2gociJbQS1aYS16MC05XVtBLVphLXowLTkuXy1dKiIsIG5hbWUpOgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoZiJOYW1hIHJlcG8gdGlkYWsgdmFsaWQ6IHtuYW1lIXJ9IikKICAgIHJlc29sdmVkID0gUGF0aChyZXBvX3BhdGgpLnJlc29sdmUoKQogICAgaWYgbm90IHJlc29sdmVkLmlzX2RpcigpOgogICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoZiJSZXBvIHRpZGFrIGRpdGVtdWthbjoge3JlcG9fcGF0aCFyfSIpCiAgICAjIEF1ZGl0IHB1dGFyYW4gMiAoTjMpOiBIT01FIChhdGF1IGxlbHVodXJueWEsIG1pcy4gLykgdGlkYWsgYm9sZWgKICAgICMgZGlkYWZ0YXJrYW4g4oCUIFBvQyBtZW5kYWZ0YXJrYW4gSE9NRSBsZXdhdCBwZXNhbiBuYXRpdmUgbWVzc2FnaW5nLgogICAgaG9tZSA9IFBhdGguaG9tZSgpLnJlc29sdmUoKQogICAgaWYgcmVzb2x2ZWQgPT0gaG9tZSBvciByZXNvbHZlZCBpbiBob21lLnBhcmVudHM6CiAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigKICAgICAgICAgICAgZiJSZXBvIHRpZGFrIGJvbGVoIEhPTUUgYXRhdSBsZWx1aHVyIEhPTUU6IHtyZXNvbHZlZH0iKQogICAgZGF0YSA9IGxvYWRfcmVnaXN0cnkoKQogICAgZGF0YVsicmVwb3MiXVtuYW1lXSA9IHN0cihyZXNvbHZlZCkKICAgIHNhdmVfcmVnaXN0cnkoZGF0YSkKICAgIHJldHVybiB7Im5hbWUiOiBuYW1lLCAicGF0aCI6IHN0cihyZXNvbHZlZCl9CgoKZGVmIHJlc29sdmVfcmVwbyhyZXBvOiBzdHIgfCBQYXRoKSAtPiBQYXRoIHwgTm9uZToKICAgICIiIktlbWJhbGlrYW4gcGF0aCByZXBvIGJpbGEgdGVyZGFmdGFyLCBlbHNlIE5vbmUuCgogICAgYGByZXBvYGAgYm9sZWggYmVydXBhIG5hbWEgdGVyZGFmdGFyIGF0YXUgcGF0aCB5YW5nIHBlcnNpcyBzYW1hCiAgICBkZW5nYW4gbmlsYWkgdGVyZGFmdGFyLiBQYXRoIGJlYmFzIHlhbmcgdGlkYWsgdGVyZGFmdGFyIERJVE9MQUsuCiAgICAiIiIKICAgIGlmIHJlcG8gaXMgTm9uZToKICAgICAgICByZXR1cm4gTm9uZQogICAgZGF0YSA9IGxvYWRfcmVnaXN0cnkoKQogICAgcmVwb3MgPSBkYXRhLmdldCgicmVwb3MiLCB7fSkKICAgIGlmIGlzaW5zdGFuY2UocmVwbywgc3RyKSBhbmQgcmVwbyBpbiByZXBvczoKICAgICAgICBjYW5kaWRhdGUgPSBQYXRoKHJlcG9zW3JlcG9dKQogICAgICAgIHJldHVybiBjYW5kaWRhdGUgaWYgY2FuZGlkYXRlLmlzX2RpcigpIGVsc2UgTm9uZQogICAgdHJ5OgogICAgICAgIHJlc29sdmVkID0gUGF0aChyZXBvKS5yZXNvbHZlKCkKICAgIGV4Y2VwdCBPU0Vycm9yOgogICAgICAgIHJldHVybiBOb25lCiAgICBmb3IgdmFsdWUgaW4gcmVwb3MudmFsdWVzKCk6CiAgICAgICAgdHJ5OgogICAgICAgICAgICBpZiByZXNvbHZlZCA9PSBQYXRoKHZhbHVlKS5yZXNvbHZlKCk6CiAgICAgICAgICAgICAgICByZXR1cm4gcmVzb2x2ZWQKICAgICAgICBleGNlcHQgT1NFcnJvcjoKICAgICAgICAgICAgY29udGludWUKICAgIHJldHVybiBOb25lCgoKZGVmIHJlY29yZF9ydW4ocnVuX2lkOiBzdHIsIHJlcG9fbmFtZTogc3RyLCB3b3JrdHJlZTogc3RyIHwgUGF0aCkgLT4gTm9uZToKICAgICIiIkNhdGF0IGBgcnVuX2lkIC0+IHdvcmt0cmVlYGAgZGkgcmVnaXN0cnkuIiIiCiAgICBkYXRhID0gbG9hZF9yZWdpc3RyeSgpCiAgICBkYXRhWyJydW5zIl1bc3RyKHJ1bl9pZCldID0gewogICAgICAgICJyZXBvIjogcmVwb19uYW1lLAogICAgICAgICJ3b3JrdHJlZSI6IHN0cihQYXRoKHdvcmt0cmVlKS5yZXNvbHZlKCkpLAogICAgfQogICAgc2F2ZV9yZWdpc3RyeShkYXRhKQoKCmRlZiByZXNvbHZlX3J1bihydW5faWQ6IHN0cikgLT4gZGljdCB8IE5vbmU6CiAgICAiIiJLZW1iYWxpa2FuIGBgeyJyZXBvIiwgIndvcmt0cmVlIn1gYCB1bnR1ayBydW5faWQsIGVsc2UgTm9uZS4iIiIKICAgIGlmIG5vdCBpc2luc3RhbmNlKHJ1bl9pZCwgc3RyKToKICAgICAgICByZXR1cm4gTm9uZQogICAgcmV0dXJuIGxvYWRfcmVnaXN0cnkoKS5nZXQoInJ1bnMiLCB7fSkuZ2V0KHJ1bl9pZCkKCgpkZWYgcmVtb3ZlX3J1bihydW5faWQ6IHN0cikgLT4gTm9uZToKICAgICIiIkhhcHVzIGNhdGF0YW4gcnVuIGRhcmkgcmVnaXN0cnkuIiIiCiAgICBkYXRhID0gbG9hZF9yZWdpc3RyeSgpCiAgICBkYXRhLmdldCgicnVucyIsIHt9KS5wb3Aoc3RyKHJ1bl9pZCksIE5vbmUpCiAgICBzYXZlX3JlZ2lzdHJ5KGRhdGEpCg==
+"""Registry Local Runner (audit 20 Nov 2026: C2).
+
+Satu file milik pengguna: ``~/.mufakat/runner.json`` (bisa di-override
+env ``MUFAKAT_RUNNER_REGISTRY`` untuk test):
+
+.. code-block:: json
+
+    {"repos": {"nama-repo": "/abs/path/repo"},
+     "runs": {"<run_id>": {"repo": "nama-repo",
+                           "worktree": "/abs/path/repo/runs/<run_id>/wt"}}}
+
+- Repo HANYA boleh dari registry ini (didaftarkan sekali lewat
+  perintah ``register_repo``) — pesan native messaging TIDAK BOLEH
+  membawa path repo bebas.
+- Semua perintah host lain hanya menerima ``run_id``; worktree
+  diambil dari registry, bukan dari pesan.
+"""
+
+from __future__ import annotations
+
+import json
+import os
+from pathlib import Path
+
+__all__ = [
+    "registry_path", "load_registry", "save_registry",
+    "register_repo", "resolve_repo", "record_run", "resolve_run",
+    "remove_run",
+]
+
+
+def registry_path() -> Path:
+    """Lokasi file registry (env override untuk test)."""
+    override = os.environ.get("MUFAKAT_RUNNER_REGISTRY", "").strip()
+    if override:
+        return Path(override)
+    return Path.home() / ".mufakat" / "runner.json"
+
+
+def load_registry() -> dict:
+    """Baca registry; {} terstruktur bila file belum ada / rusak."""
+    path = registry_path()
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {"repos": {}, "runs": {}}
+    if not isinstance(data, dict):
+        return {"repos": {}, "runs": {}}
+    data.setdefault("repos", {})
+    data.setdefault("runs", {})
+    if not isinstance(data["repos"], dict):
+        data["repos"] = {}
+    if not isinstance(data["runs"], dict):
+        data["runs"] = {}
+    return data
+
+
+def save_registry(data: dict) -> Path:
+    """Tulis registry (atomik-ish: tulis lalu ganti)."""
+    path = registry_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(".tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2),
+                   encoding="utf-8")
+    tmp.replace(path)
+    return path
+
+
+def register_repo(name: str, repo_path: str | Path) -> dict:
+    """Daftarkan satu repo milik pengguna (nama -> path absolut).
+
+    Nama hanya ``[A-Za-z0-9][A-Za-z0-9._-]*``; path harus folder yang ada.
+    """
+    import re
+
+    if not isinstance(name, str) or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", name):
+        raise ValueError(f"Nama repo tidak valid: {name!r}")
+    resolved = Path(repo_path).resolve()
+    if not resolved.is_dir():
+        raise ValueError(f"Repo tidak ditemukan: {repo_path!r}")
+    # Audit putaran 2 (N3): HOME (atau leluhurnya, mis. /) tidak boleh
+    # didaftarkan — PoC mendaftarkan HOME lewat pesan native messaging.
+    home = Path.home().resolve()
+    if resolved == home or resolved in home.parents:
+        raise ValueError(
+            f"Repo tidak boleh HOME atau leluhur HOME: {resolved}")
+    data = load_registry()
+    data["repos"][name] = str(resolved)
+    save_registry(data)
+    return {"name": name, "path": str(resolved)}
+
+
+def resolve_repo(repo: str | Path) -> Path | None:
+    """Kembalikan path repo bila terdaftar, else None.
+
+    ``repo`` boleh berupa nama terdaftar atau path yang persis sama
+    dengan nilai terdaftar. Path bebas yang tidak terdaftar DITOLAK.
+    """
+    if repo is None:
+        return None
+    data = load_registry()
+    repos = data.get("repos", {})
+    if isinstance(repo, str) and repo in repos:
+        candidate = Path(repos[repo])
+        return candidate if candidate.is_dir() else None
+    try:
+        resolved = Path(repo).resolve()
+    except OSError:
+        return None
+    for value in repos.values():
+        try:
+            if resolved == Path(value).resolve():
+                return resolved
+        except OSError:
+            continue
+    return None
+
+
+def record_run(run_id: str, repo_name: str, worktree: str | Path) -> None:
+    """Catat ``run_id -> worktree`` di registry."""
+    data = load_registry()
+    data["runs"][str(run_id)] = {
+        "repo": repo_name,
+        "worktree": str(Path(worktree).resolve()),
+    }
+    save_registry(data)
+
+
+def resolve_run(run_id: str) -> dict | None:
+    """Kembalikan ``{"repo", "worktree"}`` untuk run_id, else None."""
+    if not isinstance(run_id, str):
+        return None
+    return load_registry().get("runs", {}).get(run_id)
+
+
+def remove_run(run_id: str) -> None:
+    """Hapus catatan run dari registry."""
+    data = load_registry()
+    data.get("runs", {}).pop(str(run_id), None)
+    save_registry(data)
