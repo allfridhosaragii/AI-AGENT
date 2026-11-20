@@ -41,13 +41,14 @@ def _coerce_state(data) -> RunState:
 class SimpleGraph:
     """Fallback tanpa langgraph: jalankan node demo secara sekuensial."""
 
-    def __init__(self, adapters=None, nodes=None):
+    def __init__(self, adapters=None, nodes=None, ctx=None):
         self.adapters = adapters
         self.nodes = nodes or NODES
+        self.ctx = dict(ctx or {})
 
     async def ainvoke(self, state, ctx=None):
         current = _coerce_state(state)
-        ctx = dict(ctx or {})
+        ctx = dict(ctx or {}) or self.ctx
         # Demo: research -> debate -> critique -> meeting -> spec.
         for name in ["research", "debate", "critique", "meeting", "spec"]:
             patch = await self.nodes[name](current, self.adapters, ctx)
@@ -58,13 +59,20 @@ class SimpleGraph:
         return asyncio.run(self.ainvoke(state, ctx))
 
 
-def build_graph(adapters=None, checkpointer_path=None):
-    """Bangun graph; kembalikan StateGraph langgraph atau SimpleGraph."""
+def build_graph(adapters=None, checkpointer_path=None, ctx=None):
+    """Bangun graph; kembalikan StateGraph langgraph atau SimpleGraph.
+
+    ``ctx`` dipakai bersama (satu dict yang sama) oleh semua node:
+    di sinilah ``worktree``, ``run_dir``, dan ``gate_results``
+    dibagikan antar-node (audit -> test -> revise). Tanpa ctx
+    bersama, hasil audit tidak pernah sampai ke node test.
+    """
+    shared_ctx = {"adapters": adapters, **(ctx or {})}
     try:
         from langgraph.checkpoint.memory import MemorySaver
         from langgraph.graph import END, START, StateGraph
     except ImportError:
-        return SimpleGraph(adapters=adapters)
+        return SimpleGraph(adapters=adapters, ctx=shared_ctx)
     try:
         from langgraph.checkpoint.sqlite import SqliteSaver
     except ImportError:  # paket langgraph-checkpoint-sqlite belum terpasang
@@ -74,10 +82,9 @@ def build_graph(adapters=None, checkpointer_path=None):
     for name in _NODE_ORDER:
         fn = NODES[name]
 
-        def _wrap(fn=fn, adapters=adapters):
+        def _wrap(fn=fn, adapters=adapters, shared_ctx=shared_ctx):
             async def _node(state: RunState):
-                ctx = {"adapters": adapters}
-                patch = await fn(state, adapters, ctx)
+                patch = await fn(state, adapters, shared_ctx)
                 return patch
             return _node
 
