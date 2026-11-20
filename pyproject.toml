@@ -33,6 +33,17 @@ dev = [
     "pytest-cov",
     "ruff",
     "mypy",
+    "bandit",
+]
+# Postgres (opsional): DATABASE_URL=postgresql://... — tanpa ini,
+# MUFAKAT tetap jalan dengan SQLite.
+postgres = [
+    "psycopg[binary]",
+]
+# Redis (opsional): REDIS_URL=redis://... — tanpa ini, cache/queue
+# memakai fallback in-memory.
+redis = [
+    "redis",
 ]
 
 [project.scripts]
