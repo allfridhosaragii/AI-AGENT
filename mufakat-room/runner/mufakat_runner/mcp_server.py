@@ -2,6 +2,10 @@
 
 Tool: ``room_status``, ``gate_report``, ``run_gates``.
 
+Audit C2: ``run_gates``/``gate_report`` memakai ``run_id`` (worktree
+diambil dari registry ``~/.mufakat/runner.json``), BUKAN path bebas.
+``room_status`` membaca ``room.json`` di bawah cwd atau repo terdaftar.
+
 Bila ``fastmcp`` terpasang, tool didaftarkan ke server FastMCP bernama
 ``mufakat-room`` (transport stdio, ``main()``). Bila tidak terpasang,
 ketiga fungsi tetap bisa diimpor dan dipanggil langsung sebagai fungsi
@@ -15,16 +19,27 @@ import json
 from pathlib import Path
 
 from mufakat_runner import gates as gates_mod
+from mufakat_runner import registry as registry_mod
 from mufakat_runner import verdict as verdict_mod
 
 __all__ = ["room_status", "gate_report", "run_gates", "main"]
 
 
 def room_status(room_dir: str = "runs/room-mock") -> dict:
-    """Status room dari ``room.json`` (bila ada); tanpa itu, status jujur."""
-    room_file = Path(room_dir) / "room.json"
+    """Status room dari ``room.json`` (bila ada); tanpa itu, status jujur.
+
+    Path harus di bawah cwd atau repo terdaftar — di luar itu ditolak.
+    """
+    target = Path(room_dir).resolve()
+    allowed = [Path.cwd().resolve()]
+    for value in registry_mod.load_registry().get("repos", {}).values():
+        allowed.append(Path(value).resolve())
+    if not any(target == root or root in target.parents for root in allowed):
+        return {"ok": False, "room_found": False, "mode": "manual_handoff",
+                "error": "room_dir di luar workspace/repo terdaftar."}
+    room_file = target / "room.json"
     if not room_file.is_file():
-        room_file = Path(room_dir) / "room" / "room.json"
+        room_file = target / "room" / "room.json"
     if not room_file.is_file():
         return {
             "ok": True,
@@ -50,17 +65,32 @@ def room_status(room_dir: str = "runs/room-mock") -> dict:
     }
 
 
-def run_gates(target_dir: str = ".", profile: str = "python") -> dict:
-    """Jalankan gates + verdict; kembalikan hasil terstruktur."""
-    if not isinstance(target_dir, str) or not isinstance(profile, str):
-        return {"ok": False, "error": "target_dir dan profile harus string."}
-    results = gates_mod.run_gates(target_dir, profile=profile)
+def run_gates(run_id: str, profile: str = "python") -> dict:
+    """Jalankan gates + verdict atas worktree ``run_id``; hasil terstruktur.
+
+    ``run_id`` harus dikenal di registry (dibuat lewat init_workspace);
+    path bebas tidak diterima (audit C2).
+    """
+    if not isinstance(run_id, str) or not isinstance(profile, str):
+        return {"ok": False, "error": "run_id dan profile harus string."}
+    record = registry_mod.resolve_run(run_id)
+    if record is None:
+        return {"ok": False,
+                "error": f"run_id tidak dikenal: {run_id!r}."}
+    results = gates_mod.run_gates(record["worktree"], profile=profile)
     return {"ok": True, "results": results, "verdict": verdict_mod.apply_verdict(results)}
 
 
-def gate_report(run_dir: str = ".") -> dict:
-    """Baca ``gates/verdict.json`` hasil run sebelumnya (bila ada)."""
-    verdict_file = Path(run_dir) / "gates" / "verdict.json"
+def gate_report(run_id: str) -> dict:
+    """Baca ``gates/verdict.json`` hasil run ``run_id`` (bila ada)."""
+    if not isinstance(run_id, str):
+        return {"ok": False, "found": False, "error": "run_id harus string."}
+    record = registry_mod.resolve_run(run_id)
+    if record is None:
+        return {"ok": False, "found": False,
+                "error": f"run_id tidak dikenal: {run_id!r}."}
+    run_dir = Path(record["worktree"]).parent  # <repo>/runs/<run_id>
+    verdict_file = run_dir / "gates" / "verdict.json"
     if not verdict_file.is_file():
         return {
             "ok": True,
