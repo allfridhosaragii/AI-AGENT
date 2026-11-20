@@ -19,6 +19,9 @@ class GateResult:
     tool: str
     passed: bool
     findings: list[dict] = field(default_factory=list)
+    # Coverage terukur (0.0-1.0) dari gate pytest, bila ada. None =
+    # tidak diukur — verdict TIDAK boleh menganggapnya lolos.
+    coverage: float | None = None
 
 
 def _failed_open(tool: str, message: str) -> GateResult:
@@ -28,8 +31,13 @@ def _failed_open(tool: str, message: str) -> GateResult:
     }])
 
 
-def run_all(target_dir) -> list[GateResult]:
-    """Jalankan semua gate atas ``target_dir``."""
+def run_all(target_dir, sandbox_runner=None) -> list[GateResult]:
+    """Jalankan semua gate atas ``target_dir``.
+
+    ``sandbox_runner`` (opsional, hanya untuk test) diteruskan ke tiap
+    gate; di produksi ``None`` = Docker asli. Tanpa Docker, tiap gate
+    mengembalikan ``passed=False`` / ``sandbox-unavailable``.
+    """
     results = []
     for name in _GATE_MODULES:
         try:
@@ -39,7 +47,10 @@ def run_all(target_dir) -> list[GateResult]:
             results.append(_failed_open(name, f"Gate {name} tidak dapat dimuat: {exc}"))
             continue
         try:
-            result = run(target_dir)
+            try:
+                result = run(target_dir, sandbox_runner=sandbox_runner)
+            except TypeError:
+                result = run(target_dir)
         except Exception as exc:  # gate raise -> gagal-terbuka
             results.append(_failed_open(name, f"Gate {name} gagal: {exc}"))
             continue
@@ -51,6 +62,8 @@ def run_all(target_dir) -> list[GateResult]:
                 and hasattr(result, "findings")):
             results.append(_failed_open(name, f"Gate {name} mengembalikan tipe tak dikenal."))
             continue
+        coverage = getattr(result, "coverage", None)
         results.append(GateResult(tool=str(result.tool), passed=bool(result.passed),
-                                  findings=list(result.findings)))
+                                  findings=list(result.findings),
+                                  coverage=coverage))
     return results
