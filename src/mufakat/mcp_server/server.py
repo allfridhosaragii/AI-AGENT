@@ -1,1 +1,153 @@
-IiIiU2VydmVyIE1DUCBNVUZBS0FUIOKAlCBTQVRVIHNlcnZlciBGYXN0TUNQIGJlcm5hbWEgYGBtdWZha2F0YGAgKGdhdGV3YXkpLgoKVHJhbnNwb3J0OiBzdGRpbyAoYGBtY3AucnVuKHRyYW5zcG9ydD0ic3RkaW8iKWBgIGRpIDpmdW5jOmBtYWluYCkuCgpTZW11YSB0b29sIGhpZHVwIGRpIDE1IG1vZHVsIGRvbWFpbiBkaQpgYG11ZmFrYXQubWNwX3NlcnZlci5kb21haW5zYGAgKENoYXRHUFQgwqc3KTogY29yZSwgY29tbXVuaWNhdGlvbiwKbWVldGluZywgdGFzaywgbWVtb3J5LCBwcm9qZWN0LCBnaXQsIGZpbGVzeXN0ZW0sIHRlcm1pbmFsLCB0ZXN0aW5nLApzZWN1cml0eSwgcmVzZWFyY2gsIGV2YWx1YXRpb24sIGFwcHJvdmFsLCBvYnNlcnZhYmlsaXR5LiBNb2R1bCBpbmkKaGFueWEgbWVtYnVhdCBzZXJ2ZXIsIG1lbmRhZnRhcmthbiBzZW11YSBkb21haW4sIGRhbiBtZW5nZWtzcG9yCmtlbWJhbGkgZnVuZ3NpLWZ1bmdzaSBsYW1hIGFnYXIgcGVtYW5nZ2lsIGxhbWEgKHRlc3QsIENMSSkgdGV0YXAKamFsYW4uIFRpZGFrIGFkYSBsb2dpa2EgdG9vbCBkaSBzaW5pLgoKS2VhbWFuYW46IHRvb2xzIHR1bGlzL2Vrc2VrdXNpL0dpdC9qYXJpbmdhbiBidXR1aCBwZXJtaXNzaW9uIGtldGF0CihsaWhhdCBgYENPTlRSQUNUU2BgIHRpYXAgZG9tYWluKSDigJQgcGVybWlzc2lvbiBpdHUgRElURUdBS0tBTiBvbGVoCmF1dGhvcml6YXRpb24gbGF5ZXIgKDptb2Q6YG11ZmFrYXQubWNwX3NlcnZlci5hdXRob3JpemF0aW9uYCkgU0VCRUxVTQp0b29sIGRpamFsYW5rYW4sIGJ1a2FuIHNla2FkYXIgbWV0YWRhdGEgKGF1ZGl0IHB1dGFyYW4gMiwgR1BUIDUpLgpgYHRlcm1pbmFsX3J1bmBgIGhhbnlhIGFsbG93bGlzdCAoYGBlY2hvYGAvYGBsc2BgLCB0YW5wYSBzaGVsbCwgdG9sYWsKbWV0YWthcmFrdGVyIOKAlCBweXRlc3QgaGFueWEgbGV3YXQgZ2F0ZSBzYW5kYm94KTsgYGBmaWxlc3lzdGVtX3JlYWRgYApoYW55YSBkaSBkYWxhbSByb290IHdvcmtzcGFjZSBla3NwbGlzaXQgZGFyaSBlbnYKYGBNVUZBS0FUX1dPUktTUEFDRV9ST09UU2BgICh3YWppYjsgSE9NRS9sZWx1aHVyIEhPTUUgZGl0b2xhayk7Cm9wZXJhc2kgR2l0IGhhbnlhIHVudHVrIHJlcG8gdGVyZGFmdGFyIGRpIHJlZ2lzdHJ5OyBzZWNyZXQgdGlkYWsKcGVybmFoIG1hc3VrIGxvZy9sYXBvcmFuLgoiIiIKCmZyb20gX19mdXR1cmVfXyBpbXBvcnQgYW5ub3RhdGlvbnMKCmZyb20gZmFzdG1jcCBpbXBvcnQgRmFzdE1DUAoKZnJvbSBtdWZha2F0Lm1jcF9zZXJ2ZXIuZG9tYWlucyBpbXBvcnQgY29udHJhY3RzLCByZWdpc3Rlcl9hbGwKZnJvbSBtdWZha2F0Lm1jcF9zZXJ2ZXIuZG9tYWlucy5hcHByb3ZhbCBpbXBvcnQgKAogICAgYXBwcm92YWxfZ2V0X3N0YXR1cywKICAgIGFwcHJvdmFsX3JlcXVlc3QsCikKZnJvbSBtdWZha2F0Lm1jcF9zZXJ2ZXIuZG9tYWlucy5jb21tdW5pY2F0aW9uIGltcG9ydCAoCiAgICBhZ2VudF9zZW5kX21lc3NhZ2UsCiAgICBtZXNzYWdlX2xpc3QsCikKZnJvbSBtdWZha2F0Lm1jcF9zZXJ2ZXIuZG9tYWlucy5jb3JlIGltcG9ydCAoCiAgICBhZ2VudF9nZXRfY2FwYWJpbGl0aWVzLAogICAgYWdlbnRfcmVnaXN0ZXIsCiAgICBjb3JlX2xpc3RfYWdlbnRzLAogICAgZGViYXRlX3N0YXJ0LAogICAgZGViYXRlX3N0YXR1cywKICAgIGdhdGVfcmVwb3J0LAogICAgcGlwZWxpbmVfcnVuLAopCmZyb20gbXVmYWthdC5tY3Bfc2VydmVyLmRvbWFpbnMuZXZhbHVhdGlvbiBpbXBvcnQgKAogICAgZXZhbHVhdGlvbl9zdWJtaXQsCiAgICByZXZpZXdfYXBwcm92ZSwKICAgIHJldmlld19saXN0LAogICAgcmV2aWV3X3N1Ym1pdCwKKQpmcm9tIG11ZmFrYXQubWNwX3NlcnZlci5kb21haW5zLmZpbGVzeXN0ZW0gaW1wb3J0ICgKICAgIGZpbGVzeXN0ZW1fcHJvcG9zZV9wYXRjaCwKICAgIGZpbGVzeXN0ZW1fcmVhZCwKKQpmcm9tIG11ZmFrYXQubWNwX3NlcnZlci5kb21haW5zLmdpdCBpbXBvcnQgKAogICAgZ2l0X2JyYW5jaCwKICAgIGdpdF9jb21taXQsCiAgICBnaXRfY3JlYXRlX3dvcmt0cmVlLAogICAgZ2l0X2RpZmYsCiAgICBnaXRfc3RhdHVzLAopCmZyb20gbXVmYWthdC5tY3Bfc2VydmVyLmRvbWFpbnMubWVldGluZyBpbXBvcnQgKAogICAgbWVldGluZ19jcmVhdGUsCiAgICBtZWV0aW5nX2dldCwKICAgIG1lZXRpbmdfcmVjb3JkX2RlY2lzaW9uLAogICAgbWVldGluZ19zdWJtaXRfYXJndW1lbnQsCiAgICBtZWV0aW5nX3N1Ym1pdF9jcml0aXF1ZSwKICAgIG1lZXRpbmdfc3VibWl0X3JlYnV0dGFsLAogICAgbWVldGluZ19zdWJtaXRfcmV2aXNpb24sCikKZnJvbSBtdWZha2F0Lm1jcF9zZXJ2ZXIuZG9tYWlucy5tZW1vcnkgaW1wb3J0ICgKICAgIG1lbW9yeV9saXN0LAogICAgbWVtb3J5X3JlYWQsCiAgICBtZW1vcnlfd3JpdGUsCikKZnJvbSBtdWZha2F0Lm1jcF9zZXJ2ZXIuZG9tYWlucy5vYnNlcnZhYmlsaXR5IGltcG9ydCAoCiAgICBvYnNlcnZhYmlsaXR5X2xpc3RfcnVucywKICAgIG9ic2VydmFiaWxpdHlfc3RhdHVzLAopCmZyb20gbXVmYWthdC5tY3Bfc2VydmVyLmRvbWFpbnMucHJvamVjdCBpbXBvcnQgKAogICAgcHJvamVjdF9jcmVhdGUsCiAgICBwcm9qZWN0X2NyZWF0ZV9hZHIsCiAgICBwcm9qZWN0X2dldF9jb250ZXh0LAopCmZyb20gbXVmYWthdC5tY3Bfc2VydmVyLmRvbWFpbnMucmVzZWFyY2ggaW1wb3J0ICgKICAgIHJlc2VhcmNoX2xpc3RfcmVmZXJlbmNlcywKICAgIHJlc2VhcmNoX3NhdmVfcmVmZXJlbmNlLAogICAgcmVzZWFyY2hfc2VhcmNoLAopCmZyb20gbXVmYWthdC5tY3Bfc2VydmVyLmRvbWFpbnMuc2VjdXJpdHkgaW1wb3J0ICgKICAgIHNlY3VyaXR5X2dldF9maW5kaW5ncywKICAgIHNlY3VyaXR5X3NjYW4sCiAgICBzZWN1cml0eV9zY2FuX2RlcGVuZGVuY2llcywKICAgIHNlY3VyaXR5X3NjYW5fc2VjcmV0cywKKQpmcm9tIG11ZmFrYXQubWNwX3NlcnZlci5kb21haW5zLnRhc2sgaW1wb3J0ICgKICAgIHRhc2tfYXNzaWduLAogICAgdGFza19jcmVhdGUsCiAgICB0YXNrX2dldCwKICAgIHRhc2tfZ2V0X2RlcGVuZGVuY2llcywKICAgIHRhc2tfdXBkYXRlX3N0YXR1cywKKQpmcm9tIG11ZmFrYXQubWNwX3NlcnZlci5kb21haW5zLnRlcm1pbmFsIGltcG9ydCB0ZXJtaW5hbF9ydW4KZnJvbSBtdWZha2F0Lm1jcF9zZXJ2ZXIuZG9tYWlucy50ZXN0aW5nIGltcG9ydCAoCiAgICB0ZXN0X2dldF9yZXN1bHRzLAogICAgdGVzdF9ydW5fZTJlLAogICAgdGVzdF9ydW5fdW5pdCwKICAgIHRlc3RpbmdfcnVuLAopCgptY3AgPSBGYXN0TUNQKCJtdWZha2F0IikKUkVHSVNURVJFRF9UT09MUyA9IHJlZ2lzdGVyX2FsbChtY3ApCgoKZGVmIGxpc3RfdG9vbF9jb250cmFjdHMoKSAtPiBsaXN0W2RpY3RdOgogICAgIiIiS29udHJhayBzZW11YSB0b29sOiBuYW1hLCBkb21haW4sIGRlc2tyaXBzaSwgcGVybWlzc2lvbiwgc2NvcGUuIiIiCiAgICByZXR1cm4gY29udHJhY3RzKCkKCgpkZWYgbWFpbigpIC0+IE5vbmU6CiAgICAiIiJFbnRyeSBwb2ludCBjb25zb2xlIHNjcmlwdCBgYG11ZmFrYXQtbWNwYGA6IGphbGFua2FuIHNlcnZlciB2aWEgc3RkaW8uIiIiCiAgICBtY3AucnVuKHRyYW5zcG9ydD0ic3RkaW8iKQoKCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICBtYWluKCkKCl9fYWxsX18gPSBbCiAgICAibWNwIiwgIlJFR0lTVEVSRURfVE9PTFMiLCAibGlzdF90b29sX2NvbnRyYWN0cyIsICJtYWluIiwKICAgICJkZWJhdGVfc3RhcnQiLCAiZGViYXRlX3N0YXR1cyIsICJwaXBlbGluZV9ydW4iLCAiZ2F0ZV9yZXBvcnQiLAogICAgImNvcmVfbGlzdF9hZ2VudHMiLCAiYWdlbnRfcmVnaXN0ZXIiLCAiYWdlbnRfZ2V0X2NhcGFiaWxpdGllcyIsCiAgICAiYWdlbnRfc2VuZF9tZXNzYWdlIiwgIm1lc3NhZ2VfbGlzdCIsCiAgICAibWVldGluZ19jcmVhdGUiLCAibWVldGluZ19zdWJtaXRfYXJndW1lbnQiLCAibWVldGluZ19zdWJtaXRfY3JpdGlxdWUiLAogICAgIm1lZXRpbmdfc3VibWl0X3JlYnV0dGFsIiwgIm1lZXRpbmdfc3VibWl0X3JldmlzaW9uIiwKICAgICJtZWV0aW5nX3JlY29yZF9kZWNpc2lvbiIsICJtZWV0aW5nX2dldCIsCiAgICAidGFza19jcmVhdGUiLCAidGFza19hc3NpZ24iLCAidGFza191cGRhdGVfc3RhdHVzIiwKICAgICJ0YXNrX2dldF9kZXBlbmRlbmNpZXMiLCAidGFza19nZXQiLAogICAgIm1lbW9yeV93cml0ZSIsICJtZW1vcnlfcmVhZCIsICJtZW1vcnlfbGlzdCIsCiAgICAicHJvamVjdF9jcmVhdGUiLCAicHJvamVjdF9nZXRfY29udGV4dCIsICJwcm9qZWN0X2NyZWF0ZV9hZHIiLAogICAgImdpdF9zdGF0dXMiLCAiZ2l0X2RpZmYiLCAiZ2l0X2JyYW5jaCIsICJnaXRfY3JlYXRlX3dvcmt0cmVlIiwKICAgICJnaXRfY29tbWl0IiwKICAgICJmaWxlc3lzdGVtX3JlYWQiLCAiZmlsZXN5c3RlbV9wcm9wb3NlX3BhdGNoIiwKICAgICJ0ZXJtaW5hbF9ydW4iLAogICAgInRlc3RpbmdfcnVuIiwgInRlc3RfcnVuX3VuaXQiLCAidGVzdF9ydW5fZTJlIiwgInRlc3RfZ2V0X3Jlc3VsdHMiLAogICAgInNlY3VyaXR5X3NjYW4iLCAic2VjdXJpdHlfc2Nhbl9zZWNyZXRzIiwgInNlY3VyaXR5X3NjYW5fZGVwZW5kZW5jaWVzIiwKICAgICJzZWN1cml0eV9nZXRfZmluZGluZ3MiLAogICAgInJlc2VhcmNoX3NlYXJjaCIsICJyZXNlYXJjaF9zYXZlX3JlZmVyZW5jZSIsICJyZXNlYXJjaF9saXN0X3JlZmVyZW5jZXMiLAogICAgImV2YWx1YXRpb25fc3VibWl0IiwgInJldmlld19zdWJtaXQiLCAicmV2aWV3X2FwcHJvdmUiLCAicmV2aWV3X2xpc3QiLAogICAgImFwcHJvdmFsX3JlcXVlc3QiLCAiYXBwcm92YWxfZ2V0X3N0YXR1cyIsCiAgICAib2JzZXJ2YWJpbGl0eV9zdGF0dXMiLCAib2JzZXJ2YWJpbGl0eV9saXN0X3J1bnMiLApdCg==
+"""Server MCP MUFAKAT — SATU server FastMCP bernama ``mufakat`` (gateway).
+
+Transport: stdio (``mcp.run(transport="stdio")`` di :func:`main`).
+
+Semua tool hidup di 15 modul domain di
+``mufakat.mcp_server.domains`` (ChatGPT §7): core, communication,
+meeting, task, memory, project, git, filesystem, terminal, testing,
+security, research, evaluation, approval, observability. Modul ini
+hanya membuat server, mendaftarkan semua domain, dan mengekspor
+kembali fungsi-fungsi lama agar pemanggil lama (test, CLI) tetap
+jalan. Tidak ada logika tool di sini.
+
+Keamanan: tools tulis/eksekusi/Git/jaringan butuh permission ketat
+(lihat ``CONTRACTS`` tiap domain) — permission itu DITEGAKKAN oleh
+authorization layer (:mod:`mufakat.mcp_server.authorization`) SEBELUM
+tool dijalankan, bukan sekadar metadata (audit putaran 2, GPT 5).
+``terminal_run`` hanya allowlist (``echo``/``ls``, tanpa shell, tolak
+metakarakter — pytest hanya lewat gate sandbox); ``filesystem_read``
+hanya di dalam root workspace eksplisit dari env
+``MUFAKAT_WORKSPACE_ROOTS`` (wajib; HOME/leluhur HOME ditolak);
+operasi Git hanya untuk repo terdaftar di registry; secret tidak
+pernah masuk log/laporan.
+"""
+
+from __future__ import annotations
+
+from fastmcp import FastMCP
+
+from mufakat.mcp_server.domains import contracts, register_all
+from mufakat.mcp_server.domains.approval import (
+    approval_get_status,
+    approval_request,
+)
+from mufakat.mcp_server.domains.communication import (
+    agent_send_message,
+    message_list,
+)
+from mufakat.mcp_server.domains.core import (
+    agent_get_capabilities,
+    agent_register,
+    core_list_agents,
+    debate_start,
+    debate_status,
+    gate_report,
+    pipeline_run,
+)
+from mufakat.mcp_server.domains.evaluation import (
+    evaluation_submit,
+    review_approve,
+    review_list,
+    review_submit,
+)
+from mufakat.mcp_server.domains.filesystem import (
+    filesystem_propose_patch,
+    filesystem_read,
+)
+from mufakat.mcp_server.domains.git import (
+    git_branch,
+    git_commit,
+    git_create_worktree,
+    git_diff,
+    git_status,
+)
+from mufakat.mcp_server.domains.meeting import (
+    meeting_create,
+    meeting_get,
+    meeting_record_decision,
+    meeting_submit_argument,
+    meeting_submit_critique,
+    meeting_submit_rebuttal,
+    meeting_submit_revision,
+)
+from mufakat.mcp_server.domains.memory import (
+    memory_list,
+    memory_read,
+    memory_write,
+)
+from mufakat.mcp_server.domains.observability import (
+    observability_list_runs,
+    observability_status,
+)
+from mufakat.mcp_server.domains.project import (
+    project_create,
+    project_create_adr,
+    project_get_context,
+)
+from mufakat.mcp_server.domains.research import (
+    research_list_references,
+    research_save_reference,
+    research_search,
+)
+from mufakat.mcp_server.domains.security import (
+    security_get_findings,
+    security_scan,
+    security_scan_dependencies,
+    security_scan_secrets,
+)
+from mufakat.mcp_server.domains.task import (
+    task_assign,
+    task_create,
+    task_get,
+    task_get_dependencies,
+    task_update_status,
+)
+from mufakat.mcp_server.domains.terminal import terminal_run
+from mufakat.mcp_server.domains.testing import (
+    test_get_results,
+    test_run_e2e,
+    test_run_unit,
+    testing_run,
+)
+
+mcp = FastMCP("mufakat")
+REGISTERED_TOOLS = register_all(mcp)
+
+
+def list_tool_contracts() -> list[dict]:
+    """Kontrak semua tool: nama, domain, deskripsi, permission, scope."""
+    return contracts()
+
+
+def main() -> None:
+    """Entry point console script ``mufakat-mcp``: jalankan server via stdio."""
+    mcp.run(transport="stdio")
+
+
+if __name__ == "__main__":
+    main()
+
+__all__ = [
+    "mcp", "REGISTERED_TOOLS", "list_tool_contracts", "main",
+    "debate_start", "debate_status", "pipeline_run", "gate_report",
+    "core_list_agents", "agent_register", "agent_get_capabilities",
+    "agent_send_message", "message_list",
+    "meeting_create", "meeting_submit_argument", "meeting_submit_critique",
+    "meeting_submit_rebuttal", "meeting_submit_revision",
+    "meeting_record_decision", "meeting_get",
+    "task_create", "task_assign", "task_update_status",
+    "task_get_dependencies", "task_get",
+    "memory_write", "memory_read", "memory_list",
+    "project_create", "project_get_context", "project_create_adr",
+    "git_status", "git_diff", "git_branch", "git_create_worktree",
+    "git_commit",
+    "filesystem_read", "filesystem_propose_patch",
+    "terminal_run",
+    "testing_run", "test_run_unit", "test_run_e2e", "test_get_results",
+    "security_scan", "security_scan_secrets", "security_scan_dependencies",
+    "security_get_findings",
+    "research_search", "research_save_reference", "research_list_references",
+    "evaluation_submit", "review_submit", "review_approve", "review_list",
+    "approval_request", "approval_get_status",
+    "observability_status", "observability_list_runs",
+]
