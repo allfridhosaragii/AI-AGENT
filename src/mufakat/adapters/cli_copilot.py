@@ -1,1 +1,30 @@
-IiIiTXVzZSBDTEkgYWRhcHRlciAoVDQpLiIiIgoKZnJvbSBfX2Z1dHVyZV9fIGltcG9ydCBhbm5vdGF0aW9ucwoKZnJvbSAuX2NsaSBpbXBvcnQgY2hlY2tfYmluYXJ5LCBydW5fY2xpCmZyb20gLmJhc2UgaW1wb3J0IEFkYXB0ZXIsIFJlcGx5CgoKY2xhc3MgQ29waWxvdEFkYXB0ZXIoQWRhcHRlcik6CiAgICAiIiJBZGFwdGVyIG92ZXIgdGhlIGBgY29waWxvdGBgIENMSSAoYGBjb3BpbG90IC1wIDxwcm9tcHQ+YGApLiIiIgoKICAgIG5hbWUgPSAiY29waWxvdCIKICAgIGZhbWlseSA9ICJjb3BpbG90IgoKICAgIGRlZiBfX2luaXRfXyhzZWxmLCBuYW1lOiBzdHIgPSAiY29waWxvdCIsIGZhbWlseTogc3RyID0gImNvcGlsb3QiKToKICAgICAgICBzZWxmLm5hbWUgPSBuYW1lCiAgICAgICAgc2VsZi5mYW1pbHkgPSBmYW1pbHkKCiAgICBkZWYgaXNfYXZhaWxhYmxlKHNlbGYpIC0+IGJvb2w6CiAgICAgICAgIyBCaW5hcnkgcHJlc2VudCArIGJlc3QtZWZmb3J0IHN0YXR1cyBwcm9iZTsgcHJvYmUgZmFpbHVyZSBpcyBub3QgZmF0YWwuCiAgICAgICAgdHJ5OgogICAgICAgICAgICByZXR1cm4gY2hlY2tfYmluYXJ5KCJjb3BpbG90IiwgWyJjb3BpbG90IiwgInN0YXR1cyJdLCB0aW1lb3V0PTUpCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbjoKICAgICAgICAgICAgcmV0dXJuIEZhbHNlCgogICAgYXN5bmMgZGVmIGFzayhzZWxmLCBwcm9tcHQ6IHN0ciwgc3lzdGVtOiBzdHIgPSAiIiwKICAgICAgICAgICAgICAgICAgY3R4OiBkaWN0IHwgTm9uZSA9IE5vbmUpIC0+IFJlcGx5OgogICAgICAgIGZ1bGxfcHJvbXB0ID0gZiJ7c3lzdGVtfVxuXG57cHJvbXB0fSIgaWYgc3lzdGVtIGVsc2UgcHJvbXB0CiAgICAgICAgcmV0dXJuIGF3YWl0IHJ1bl9jbGkoCiAgICAgICAgICAgIHNlbGYubmFtZSwgc2VsZi5mYW1pbHksIFsiY29waWxvdCIsICItcCIsICItLSIsIGZ1bGxfcHJvbXB0XSwgY3R4KQo=
+"""Muse CLI adapter (T4)."""
+
+from __future__ import annotations
+
+from ._cli import check_binary, run_cli
+from .base import Adapter, Reply
+
+
+class CopilotAdapter(Adapter):
+    """Adapter over the ``copilot`` CLI (``copilot -p <prompt>``)."""
+
+    name = "copilot"
+    family = "copilot"
+
+    def __init__(self, name: str = "copilot", family: str = "copilot"):
+        self.name = name
+        self.family = family
+
+    def is_available(self) -> bool:
+        # Binary present + best-effort status probe; probe failure is not fatal.
+        try:
+            return check_binary("copilot", ["copilot", "status"], timeout=5)
+        except Exception:
+            return False
+
+    async def ask(self, prompt: str, system: str = "",
+                  ctx: dict | None = None) -> Reply:
+        full_prompt = f"{system}\n\n{prompt}" if system else prompt
+        return await run_cli(
+            self.name, self.family, ["copilot", "-p", "--", full_prompt], ctx)
